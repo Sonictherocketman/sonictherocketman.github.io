@@ -1,0 +1,191 @@
+/*
+*
+* Begin Tag Styling
+*
+*/
+
+
+html {
+	height: 100%; /*required for all browsers*/ 
+}
+
+body {
+	font-family: 'Average Sans', sans-serif;
+	background-color:#F4F4F4;
+	line-height:1.7;
+	margin:auto;
+	min-width:600px;
+	font-weight:lighter;
+}
+
+img {border:none;}
+
+p {text-indent:20px;}
+
+h1, h2, h3 {
+	font-family:'Average', serif;
+	font-weight:300;
+}
+h1 {
+	font-size:24pt;
+}
+
+h2 {
+	font-size:18pt;
+}
+
+/*
+*
+* Begin ID Styling
+*
+*/
+
+#content {
+	margin:0px;
+	padding:0px;
+}
+
+#title-bar {
+	background-color: #454545;
+	color:#FFFFFF;
+	line-height:100px;
+	position:relative;
+	z-index: 100;
+}
+
+#post-list {
+	margin: auto;
+	max-width:825px;
+}
+
+#post, #first-post {
+	margin-top: -3px;
+	padding: 3%;
+	
+	border-right: 0px; /* Don't forget to modify to the right border. */
+	background-image: 
+	    -webkit-gradient(linear, 0 0, 0 100%, from(#4068B8), to(transparent));
+	background-image: 
+	    -webkit-linear-gradient(180deg, transparent, #4068B8, transparent);
+	background-image: 
+	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent),
+	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent);
+	background-image:
+	    -o-linear-gradient(180deg, transparent, #4068B8, transparent),
+	    -o-linear-gradient(180deg, transparent, #4068B8, transparent);
+	background-image: 
+   		linear-gradient(90deg, transparent, #4068B8, transparent),
+   		linear-gradient(90deg, transparent, #4068B8, transparent);
+	-moz-background-size: 80% 3px; /* This get flipped. */
+	background-size: 85% 3px; /* This get flipped. */
+	background-position: bottom; /* The last argument gets flipped. */
+	background-repeat: no-repeat;
+}
+
+#article-title {
+	text-align:center;
+}
+
+/*
+*
+* Begin Class Styling
+*
+*/
+
+.post {
+	margin-top: -3px;
+	padding: 3%;
+	
+	border-right: 0px; /* Don't forget to modify to the right border. */
+	background-image: 
+	    -webkit-gradient(linear, 0 0, 0 100%, from(#4068B8), to(transparent));
+	background-image: 
+	    -webkit-linear-gradient(180deg, transparent, #4068B8, transparent);
+	background-image: 
+	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent),
+	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent);
+	background-image:
+	    -o-linear-gradient(180deg, transparent, #4068B8, transparent),
+	    -o-linear-gradient(180deg, transparent, #4068B8, transparent);
+	background-image: 
+   		linear-gradient(90deg, transparent, #4068B8, transparent),
+   		linear-gradient(90deg, transparent, #4068B8, transparent);
+	-moz-background-size: 80% 3px; /* This get flipped. */
+	background-size: 85% 3px; /* This get flipped. */
+	background-position: bottom; /* The last argument gets flipped. */
+	background-repeat: no-repeat;
+}
+
+.article-title {
+	text-align:center;
+}
+
+.body-image-right{
+	float:right;
+	padding:1px;
+	margin:15px;
+}
+.body-image-left{
+	float:left;
+	border:1px solid gray;
+	padding:1px;
+	margin:15px;
+}
+.body-image-center {
+	border:1px solid gray;
+	padding:1px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.page-sectionTitle {
+	font-family:'Average', sans-serif;	
+	margin-right:auto; 
+	border-right:3px solid gray; 
+	border-bottom:1px solid gray; 
+	text-align:left; 
+	width:auto; 
+	padding:1%; 
+	font-size:26pt;
+}
+
+.menuBarItem {
+	position:relative;
+	display:inline;
+	padding-left:2%;
+	font-size:13.5pt;
+}
+
+.mobile-nav {
+	display:none;
+}
+
+/*
+* 
+* Begin Link Styling
+* 
+*/
+
+#title-bar a:link {color:white; text-decoration:none;}
+#title-bar a:visited {color:white; text-decoration:none;}
+#title-bar a:hover {color:#7EA5E0; text-decoration:none;}
+#title-bar a:active {color:#4068B8; text-decoration:none;}
+
+#article-content a:link {color:#4068B8; text-decoration:none;}
+#article-content a:visited {color:#4068B8; text-decoration:none;}
+#article-content a:hover {color:#4068B8; text-decoration:none;}
+#article-content a:active {color:#4068B8; text-decoration:none;}
+
+#article-title a:link {color:black; text-decoration:none;}
+#article-title a:visited {color:black; text-decoration:none;}
+#article-title a:hover {color:#4068B8; text-decoration:none;}
+#article-title a:active {color:#4068B8; text-decoration:none;}
+
+.article-title a:link {color:black; text-decoration:none;}
+.article-title a:visited {color:black; text-decoration:none;}
+.article-title a:hover {color:#4068B8; text-decoration:none;}
+.article-title a:active {color:#4068B8; text-decoration:none;}
+
+.article-content a:link {color:#4068B8; text-decoration:none;}
+.article-content a:visited {color:#4068B8; text-decoration:none;}
+.article-content a:hover {color:#4068B8; text-decoration:none;}
+.article-content a:active {color:#4068B8; text-decoration:none;}

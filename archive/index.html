@@ -1,0 +1,43 @@
+<?php
+$json_str = file_get_contents("metadata.json");
+$json = json_decode($json_str, true);
+$articles = $json['articles'];
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Archive - BiteofanApple</title>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+	</div>
+	<div id="post-list">
+		<div class="post">
+			<div id=article-title>
+				<h1>Articles</h1>
+			</div>
+			<div id="article-content">
+				<?php for($i = 0; $i < $articles; $i++) { ?>
+				<div>
+					<small style="font-style:italic;">
+					<?php
+						echo($json['published'.$i]);
+					?>
+					</small> &nbsp;-&nbsp; 
+					<?php 
+						echo("<a href=".$json['link'.$i].">");
+						echo($json['title'.$i]."</a>");
+					?>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+</div>
+<?php //include ($_SERVER['DOCUMENT_ROOT'] . "/main/bin/footer.html"); ?>
+</body>
+</html>

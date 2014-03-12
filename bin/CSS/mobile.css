@@ -1,0 +1,100 @@
+/*
+ * Phone styling
+ */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+/*
+* Begin Tag Styling
+*/
+
+body {
+	font-family: 'Average Sans', sans-serif;
+	background-color:#F4F4F4;
+	line-height:1.7;
+	margin:auto;
+	width:100%;
+	font-size:38pt;	
+	text-align:left;
+}
+
+p {text-indent:0px;}
+
+h1 {
+	font-size:58pt;
+}
+
+h2 {
+	font-size:48pt;
+}
+
+/*
+*
+* Begin ID Styling
+*
+*/
+
+#title-bar {
+	background-color: #454545;
+	color:#FFFFFF;
+	line-height:80pt;
+	position:relative;
+	z-index: 100;
+}
+
+#post, #first-post {
+	margin-top: -3px;
+	padding: 0%;
+}
+
+#article-title {
+	text-align:center;
+}
+
+/*
+*
+* Begin Class Styling
+*
+*/
+
+.post {
+	margin-top: -3px;
+	padding: 0%;
+}
+
+.article-title {
+	text-align:center;
+}
+
+.body-image-right{
+	float:right;
+	padding:1px;
+	margin:15px;
+}
+.body-image-left{
+	float:left;
+	padding:1px;
+	margin:15px;
+}
+.body-image-center {
+	padding:1px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.menuBarItem {
+	display:none;
+}
+
+.mobileMenuBarItem {
+	display:inline;
+	font-size:50pt;
+	text-align:center;
+	padding:15pt;
+}
+
+.mobile-nav {
+	display:block;
+}
+
+}

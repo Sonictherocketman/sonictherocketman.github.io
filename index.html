@@ -1,1 +1,47 @@
-Hello World
+<?php
+$json_str = file_get_contents("metadata.json");
+$json = json_decode($json_str, true);
+$articles = $json['articles'];
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Home - BiteofanApple</title>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+</head>
+
+<body>
+<div id="content">
+	<div id="title-bar">
+		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+	</div>	<!-- End title-bar -->
+	<div id="post-list">
+		<?php for($i = 0; $i < $articles; $i++) { ?>
+			<div class="post">
+				<div class="article-title">
+					<h1><?php echo "<a href=".$json['link'.$i].">" ?>
+					<?php
+						echo($json['title'.$i]);
+					?></a></h1>
+					<small style="font-style:italic;">
+					<?php
+						echo("Posted on ".$json['published'.$i]);
+					?></small>
+				</div> <!-- End article-title -->
+				<div class="article-content">
+					<?php 
+					 echo($json['content'.$i]);
+					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");	
+			    	?>
+		    	</div> <!-- End article-content-->
+			</div> <!-- End post -->
+		<?php } ?>
+		<div class="post">
+			<div class="article-title"><a href="/archive/"><h3>Archive<h3></a></div>
+		</div>
+	</div> <!-- End post-list -->
+</div> <!-- End content -->
+<?php //include ($_SERVER['DOCUMENT_ROOT'] . "/main/bin/footer.html"); ?>
+</body>
+</html>
