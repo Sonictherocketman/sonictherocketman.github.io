@@ -8,7 +8,7 @@
 			for($i = 0; $i < $num; $i++) {
 			  $articleJson = file_get_contents($json['link'.$i]."metadata.json");
 			  $artJs = json_decode($articleJson);
-			  $content = substr(strip_tags($articleJson['content']), 0, 20)
+			  $content = substr(strip_tags($articleJson['content']), 0, 20);
 			  echo "\t<item>\n
 			  <title>".$json['title'.$i]."</title>\n
 			  <link>".$json['link'.$i]."</link>\n
