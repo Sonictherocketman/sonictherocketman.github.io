@@ -21,7 +21,7 @@
 			  $xml .= "\t<item>\n
 			 	<title>".$json['title'.$i]."</title>\n
 			    <link>".$json['link'.$i]."</link>\n
-			  	"./*<pubDate>".$json['published'.$i]."</pubDate>*/."\n
+			  	"./*<pubDate>".$json['published'.$i]."</pubDate>*/ ""."\n
 			  	<description>"./*$content."..."*/ ""."</description>\n
 			  	<guid>".$json['link'.$i].$json['published']."</guid>\n
 			  	</item>\n";
