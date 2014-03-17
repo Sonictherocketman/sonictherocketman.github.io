@@ -1,5 +1,5 @@
   <?php
-  echo "<?xml type=\"application/rss+xml\" version=\"1.0\" encoding=\"UTF-8\" ?>\n";
+  echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
         //Outputs the RSS file for the site.
         $src = $_SERVER['DOCUMENT_ROOT'] . "/archive/metadata.json";
     	$json = json_decode(file_get_contents($src), true);
