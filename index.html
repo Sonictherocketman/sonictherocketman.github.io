@@ -17,7 +17,7 @@ $articles = $json['articles'];
 		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
 	</div>	<!-- End title-bar -->
 	<div id="post-list">
-		<?php for($i = 0; $i < $articles; $i++) { ?>
+		<?php for($i = $articles-1; $i > 0; $i--) { ?>
 			<div class="post">
 				<div class="article-title">
 					<h1><?php echo "<a href=".$json['link'.$i].">" ?>
