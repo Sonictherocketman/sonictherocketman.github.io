@@ -13,8 +13,8 @@
 			  <title>".$json['title'.$i]."</title>\n
 			  <link>".$json['link'.$i]."</link>\n
 			  <pubdate>".$json['published'.$i]."</pubdate>\n
-			  <description>".$content."...</description>\n
-			  <author>"./*$json['author'.$i]*/ ""."</author>\n
+			  <description>"./*$content."..."*/ ""."</description>\n
+			  <author>".$json['author'.$i]."</author>\n
 			  </item>\n";
 			 }
         echo "</channel>\n</rss>";
