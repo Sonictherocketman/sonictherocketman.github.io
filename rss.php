@@ -1,4 +1,5 @@
   <?php
+  header('Content-type: text/xml');
   echo "<!DOCTYPE rss>
 		<?xml version=\"1.0\" ?>\n";
         //Outputs the RSS file for the site.
