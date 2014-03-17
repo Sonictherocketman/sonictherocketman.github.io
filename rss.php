@@ -1,6 +1,6 @@
   <?php
-  echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n
-  		<!DOCTYPE rss";
+  echo "<!DOCTYPE rss>
+		<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
         //Outputs the RSS file for the site.
         $src = $_SERVER['DOCUMENT_ROOT'] . "/archive/metadata.json";
     	$json = json_decode(file_get_contents($src), true);
@@ -11,7 +11,7 @@
 				  <link>http://brianschrader.com</link>\n
 				  <desciption>A blog by Brian Schrader.</description>\n
 				  <language>en-us</language>\n
-				  <lastBuildDate>".$json['lastBuildDate']."</lastBuildDate>";
+				  <lastBuildDate>".$json['lastBuildDate']."</lastBuildDate>\n";
 			for($i = 0; $i < $num; $i++) {
 			  //$articleJson = file_get_contents($json['link'.$i]."metadata.json");
 			  //$artJs = json_decode($articleJson);
