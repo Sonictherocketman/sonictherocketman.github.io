@@ -14,7 +14,7 @@
 				  	 <link>http://brianschrader.com</link>\n
 				  	 <description>A blog by Brian Schrader.</description>\n
 				     <language>en-us</language>\n";
-			for($i = $num; $i > 0; $i--) {
+			for($i = $num-1; $i >= 0; $i--) {
 			  //$articleJson = file_get_contents($json['link'.$i]."metadata.json");
 			  //$artJs = json_decode($articleJson);
 			  //$content = substr(strip_tags($articleJson['content']), 0, 20);
