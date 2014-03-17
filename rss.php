@@ -8,7 +8,6 @@
 			for($i = 0; i < $i; $i++) {
 				$artdir."metadata.json";
 				 echo $artdir."\n";
-				  if (file_exists($artdir)){      
 				  var_dump($json);
 				  echo "\t<item>\n
 				  <title>".$json["title".$i]."</title>\n
