@@ -1,6 +1,6 @@
   <?php
   echo "<!DOCTYPE rss>
-		<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
+		<?xml version=\"1.0\" ?>\n";
         //Outputs the RSS file for the site.
         $src = $_SERVER['DOCUMENT_ROOT'] . "/archive/metadata.json";
     	$json = json_decode(file_get_contents($src), true);
