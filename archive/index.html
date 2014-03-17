@@ -21,7 +21,7 @@ $articles = $json['articles'];
 				<h1>Articles</h1>
 			</div>
 			<div id="article-content">
-				<?php for($i = 0; $i < $articles; $i++) { ?>
+				<?php for($i = $articles; $i > 0; $i--) { ?>
 				<div>
 					<small style="font-style:italic;">
 					<?php
