@@ -5,6 +5,7 @@
     	$num = $json["articles"];
     	var_dump($json);
     	if ($num != null and $num > 0) {
+    		echo $num;
 	        echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n\t<rss version=\"2.0\">\n<channel>\n";
 			for($i = 0; i < $i; $i++) {
 			  var_dump($json);
