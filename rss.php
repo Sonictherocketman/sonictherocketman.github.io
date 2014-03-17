@@ -8,7 +8,7 @@
 	        echo "<rss version=\"2.0\">\n<channel>\n";
 			echo "<title>BiteofanApple by Brian Schrader</title> \n
 				  <link>http://brianschrader.com</link>\n
-				  <desciption>A blog by Brian Schrader.</description>"
+				  <desciption>A blog by Brian Schrader.</description>";
 			for($i = 0; $i < $num; $i++) {
 			  //$articleJson = file_get_contents($json['link'.$i]."metadata.json");
 			  //$artJs = json_decode($articleJson);
