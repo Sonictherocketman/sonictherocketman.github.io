@@ -1,18 +1,18 @@
 <?php
 	header('Content-type: application/xml');
-	$xml = "<?xml version=\"1.0\" ?>\n
+	$xml = "<?xml version=\"1.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" ?>\n
 			<!DOCTYPE rss>\n";
         //Outputs the RSS file for the site.
         $src = $_SERVER['DOCUMENT_ROOT'] . "/archive/metadata.json";
     	$json = json_decode(file_get_contents($src), true);
     	$num = $json["articles"];
     	if ($num != null and $num > 0) {
-	        $xml .= "<rss version=\"2.0\">\n<channel>\n";
+	        $xml .= "<rss version=\"2.0\">\n<channel>\n
+	        		<atom:link href=\"http://brianschrader.com/rss.php\" rel=\"self\" type=\"application/rss+xml\" />";
 			$xml .= "<title>BiteofanApple by Brian Schrader</title> \n
 				  <link>http://brianschrader.com</link>\n
 				  <description>A blog by Brian Schrader.</description>\n
-				  <language>en-us</language>\n
-				  <lastBuildDate>".$json['lastBuildDate']."</lastBuildDate>\n";
+				  <language>en-us</language>\n";
 			for($i = 0; $i < $num; $i++) {
 			  //$articleJson = file_get_contents($json['link'.$i]."metadata.json");
 			  //$artJs = json_decode($articleJson);
