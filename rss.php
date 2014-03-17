@@ -10,7 +10,7 @@
 	        $xml .= "<rss version=\"2.0\">\n<channel>\n";
 			$xml .= "<title>BiteofanApple by Brian Schrader</title> \n
 				  <link>http://brianschrader.com</link>\n
-				  <desciption>A blog by Brian Schrader.</description>\n
+				  <description>A blog by Brian Schrader.</description>\n
 				  <language>en-us</language>\n
 				  <lastBuildDate>".$json['lastBuildDate']."</lastBuildDate>\n";
 			for($i = 0; $i < $num; $i++) {
