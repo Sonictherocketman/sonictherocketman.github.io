@@ -1,6 +1,6 @@
-  <?php
-  header('Content-type: text/xml');
-  $xml = "<!DOCTYPE rss>
+<?php
+	header('Content-type: application/xml');
+	$xml = "<!DOCTYPE rss>
 		<?xml version=\"1.0\" ?>\n";
         //Outputs the RSS file for the site.
         $src = $_SERVER['DOCUMENT_ROOT'] . "/archive/metadata.json";
