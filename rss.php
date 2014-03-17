@@ -11,9 +11,9 @@
 	        		<channel>\n
 	        		<atom:link href=\"http://brianschrader.com/rss.php\" rel=\"self\" type=\"application/rss+xml\" />";
 			$xml .= "<title>BiteofanApple by Brian Schrader</title> \n
-				  <link>http://brianschrader.com</link>\n
-				  <description>A blog by Brian Schrader.</description>\n
-				  <language>en-us</language>\n";
+				  	 <link>http://brianschrader.com</link>\n
+				  	 <description>A blog by Brian Schrader.</description>\n
+				     <language>en-us</language>\n";
 			for($i = 0; $i < $num; $i++) {
 			  //$articleJson = file_get_contents($json['link'.$i]."metadata.json");
 			  //$artJs = json_decode($articleJson);
@@ -21,7 +21,7 @@
 			  $xml .= "\t<item>\n
 			 	<title>".$json['title'.$i]."</title>\n
 			    <link>".$json['link'.$i]."</link>\n
-			  	<pubDate>".$json['published'.$i]."</pubDate>\n
+			  	"./*<pubDate>".$json['published'.$i]."</pubDate>*/."\n
 			  	<description>"./*$content."..."*/ ""."</description>\n
 			  	<guid>".$json['link'.$i].$json['published']."</guid>\n
 			  	</item>\n";
