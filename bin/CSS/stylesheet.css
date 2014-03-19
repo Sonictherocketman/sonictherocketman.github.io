@@ -119,7 +119,9 @@ h2 {
 .article-title {
 	text-align:center;
 }
-
+/*
+ * Depricated image styling. Use .image-center, .image-left, .image-right
+ */
 .body-image-right{
 	float:right;
 	padding:1px;
@@ -132,6 +134,34 @@ h2 {
 	margin:15px;
 }
 .body-image-center {
+	border:1px;
+	padding:1px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+/*
+ * Dynamic Image Styling
+ */
+.image-right, .image-left, .image-center {
+	max-width:700px;
+	max-height:600px;
+	width:40%;
+	height:auto;
+  }
+.image-right {
+	float:right;
+	padding:1px;
+	margin:15px;
+}
+.image-left { 
+	float:left;
+	padding:1px;
+	margin:15px;
+}
+.image-center {
 	border:1px;
 	padding:1px;
 	margin-top:10px;
