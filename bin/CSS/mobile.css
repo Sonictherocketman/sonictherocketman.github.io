@@ -92,6 +92,8 @@ h2 {
 }
 .image-center {
 	width:100%;
+	max-width:100%;
+	max-height:auto;
 }
 
 .menuBarItem {
