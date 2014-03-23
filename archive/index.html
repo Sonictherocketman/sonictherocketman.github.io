@@ -29,12 +29,12 @@ $articles = $json['articles'];
 				<div>
 					<small style="font-style:italic;">
 					<?php
-						echo($json['published']);
+						echo($articleJson['published']);
 					?>
 					</small> &nbsp;-&nbsp; 
 					<?php 
-						echo("<a href=".$json['link'].">");
-						echo($json['title']."</a>");
+						echo("<a href=".$articleJson['link'].">");
+						echo($articleJson['title']."</a>");
 					?>
 				</div>
 				<?php } ?>
