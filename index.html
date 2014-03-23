@@ -17,12 +17,13 @@ $articles = $json['articles'];
 		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
 	</div>	<!-- End title-bar -->
 	<div id="post-list">
-		<?php for($i = $articles-1; $i >= 0; $i--) { 
-			$path = $_SERVER['DOCUMENT_ROOT'] . $json['path'.$i] . "metadata.json";
-			$foo = file_get_contents($path);
-			$articleJson = json_decode($foo, true);
-		?>
+			<?php for($i = $articles-1; $i >= 0; $i--) { ?>
 			<div class="post">
+				<?php
+					$path = $_SERVER['DOCUMENT_ROOT'] . $json['path'.$i] . 	"metadata.json";
+					$foo = file_get_contents($path);
+					$articleJson = json_decode($foo, true);
+				?>
 				<div class="article-title">
 					<h1><?php echo "<a href=".$articleJson['link'].">" ?>
 					<?php
@@ -40,7 +41,7 @@ $articles = $json['articles'];
 			    	?>
 		    	</div> <!-- End article-content-->
 			</div> <!-- End post -->
-		<?php } ?>
+			<?php } ?>
 		<div class="post">
 			<div class="article-title"><a href="/archive/"><h3>Archive<h3></a></div>
 		</div>
