@@ -15,15 +15,18 @@
 				  	 <description>A blog by Brian Schrader.</description>\n
 				     <language>en-us</language>\n";
 			for($i = $num-1; $i >= 0; $i--) {
+				$path = $_SERVER['DOCUMENT_ROOT'] . $json['path'.$i] . "metadata.json";
+				$foo = file_get_contents($path);
+				$articleJson = json_decode($foo, true);
 			  //$articleJson = file_get_contents($json['link'.$i]."metadata.json");
 			  //$artJs = json_decode($articleJson);
 			  //$content = substr(strip_tags($articleJson['content']), 0, 20);
 			  $xml .= "\t<item>\n
-			 	<title>".$json['title'.$i]."</title>\n
-			    <link>".$json['link'.$i]."</link>\n
+			 	<title>".$articleJson['title']."</title>\n
+			    <link>".$articleJson['link']."</link>\n
 			  	"./*<pubDate>".$json['published'.$i]."</pubDate>*/ ""."\n
-			  	<description>"./*$content."..."*/ ""."</description>\n
-			  	<guid>".$json['link'.$i].$json['published']."</guid>\n
+			  	<description>".$articleJson['content']."</description>\n
+			  	<guid>".$articleJson['link'].$articleJson['published']."</guid>\n
 			  	</item>\n";
 			 }
         $xml .= "</channel>\n";
