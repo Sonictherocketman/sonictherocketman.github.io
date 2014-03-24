@@ -25,7 +25,7 @@
 			 	<title>".$articleJson['title']."</title>\n
 			    <link>".$articleJson['link']."</link>\n
 			  	"./*<pubDate>".$json['published'.$i]."</pubDate>*/ ""."\n
-			  	<description>".$articleJson['content']."</description>\n
+			  	<description>".""/*$articleJson['content']*/."</description>\n
 			  	<guid>".$articleJson['link'].$articleJson['published']."</guid>\n
 			  	</item>\n";
 			 }
