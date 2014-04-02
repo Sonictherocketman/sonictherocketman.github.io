@@ -145,6 +145,27 @@ h2 {
 /*
  * Dynamic Image Styling
  */
+ div.post>img {
+ 	/* 
+ 	 * Generic Image Styling. Unless something more detailed is needed,
+ 	 * this is the default image styling. 
+ 	 * Centered image that 'fills' the post width.
+ 	 */
+	/* Adaptive */
+ 	border:1px;
+	padding:1px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+ 	/* Max sizing */
+ 	max-width:700px;
+	max-height:600px;
+	width:80%;
+	height:auto;
+}
+ 
 .image-right, .image-left, .image-center {
 	max-width:700px;
 	max-height:600px;
