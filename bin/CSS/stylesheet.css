@@ -145,7 +145,7 @@ h2 {
 /*
  * Dynamic Image Styling
  */
- div.post>img, div#post>img {
+ div.post>img{
  	/* 
  	 * Generic Image Styling. Unless something more detailed is needed,
  	 * this is the default image styling. 
@@ -159,7 +159,6 @@ h2 {
 	margin-left:auto;
 	margin-right:auto;
 	display:block;
-	float:center;
  	/* Max sizing */
  	max-width:700px;
 	max-height:600px;
