@@ -122,7 +122,7 @@ h2 {
 /*
  * Dynamic Image Styling
  */
- #post img {
+ #post img, .post img {
  	/* 
  	 * Generic Image Styling. Unless something more detailed is needed,
  	 * this is the default image styling. 
