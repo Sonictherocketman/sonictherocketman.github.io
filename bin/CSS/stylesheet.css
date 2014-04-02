@@ -145,7 +145,7 @@ h2 {
 /*
  * Dynamic Image Styling
  */
- div.post>img {
+ div.post>img, div#post>img {
  	/* 
  	 * Generic Image Styling. Unless something more detailed is needed,
  	 * this is the default image styling. 
