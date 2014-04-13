@@ -57,6 +57,10 @@ h2 {
 *
 */
 
+.hide-on-mobile {
+	display:none;
+}
+
 .post {
 	margin-top: -3px;
 	padding: 0%;
