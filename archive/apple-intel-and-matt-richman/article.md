@@ -1,13 +1,13 @@
 title: Apple, Intel, and Matt Richman
 author: Brian Schrader
 slug: apple-intel-and-matt-richman
-status: publish
+status: draft
 
 [Matt Richman][1] brings up a great point. Apple is, in my layman's opinion, too
 dependent on their competitor for parts that are essential for its business
 (namely its A-series processors). There's been a lot of talk in the community
 about how beneficial it would be for Apple and Intel if they were to cooperate,
-and Matt points out a great starting point for their negotiatons. It'll be very
+and Matt points out a great starting point for their negotiations. It'll be very
 interesting to see if anything is announced at WWDC this year regarding a
 possible partnership.
 
