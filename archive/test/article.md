@@ -1,8 +1,15 @@
 title: something
 
-status: edited
+
+
+status: published
+
+
+
+
 
 
 
 
 THIS IS ANOTHER EDIT!~
+
