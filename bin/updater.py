@@ -38,7 +38,7 @@ import uuid
 import fileinput
 
 webroot = "http://brianschrader.com/"
-home = "/kunden/homepages/42/d433089861/htdocs/www/"
+userroot = "/Users/ifoundit/Dropbox/Sites/BrianSchrader.com/"
 
 # Parsing blog post markdown files.	
 def ParseArticleAtPath(path):
