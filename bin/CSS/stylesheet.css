@@ -121,6 +121,7 @@ h2 {
 }
 
 .link {
+	margin-left:1em;
 	background-color:#EEEEEE; /* Kind of a darker grey */
 	color:#484848; /* Dark gray */
 }
