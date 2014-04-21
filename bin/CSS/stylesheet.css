@@ -28,6 +28,7 @@ h1, h2, h3 {
 }
 h1 {
 	font-size:24pt;
+	margin-bottom:0px;
 }
 
 h2 {
