@@ -1,4 +1,4 @@
-title: OS X's Possible New Look
+title: OS X's New Look
 slug: os-x-new-look
 author: Brian Schrader	
 tags: mavericks, OS X, iOS 7
