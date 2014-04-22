@@ -148,6 +148,7 @@ h2 {
  	max-width:700px;
 	max-height:600px;
 	height:auto;
+	width:auto;
 }
  
 .image-right, .image-left, .image-center {
