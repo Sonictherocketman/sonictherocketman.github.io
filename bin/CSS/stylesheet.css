@@ -144,11 +144,11 @@ h2 {
 	margin-left:auto;
 	margin-right:auto;
 	display:block;
+	width:100%;
  	/* Max sizing */
  	max-width:700px;
 	max-height:600px;
 	height:auto;
-	width:auto;
 }
  
 .image-right, .image-left, .image-center {
