@@ -253,8 +253,8 @@ h2 {
 .article-content a:active {color:#4068B8; text-decoration:none;}
 
 ::selection {
-	background: #ffb7b7; /* Safari */
+	background: #4068B8; /* Safari */
 	}
 ::-moz-selection {
-	background: #ffb7b7; /* Firefox */
+	background: #4068B8; /* Firefox */
 }
