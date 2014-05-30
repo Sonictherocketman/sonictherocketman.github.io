@@ -45,6 +45,7 @@ h2 {
 #post, #first-post {
 	margin-top: -3px;
 	padding: 0%;
+	overflow:hidden;
 }
 
 #article-title {
