@@ -12,7 +12,6 @@ status: published
 WWDC is right around the corner. Its not a very long list, but here's my feature wish list for iOS 8 and a little on the iPhone 6:
 
 
-
 - [Actionable Notifications][1] (like in OS X Mavericks)
 
 - Maps travel time (_also_ like in OS X Mavericks)
