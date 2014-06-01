@@ -1,6 +1,6 @@
 {
 "lastBuildDate":"Sat, 29 May 2014 08:10:23 -0000",
-"articles":8,
+"articles":10,
 "title":"Views from the ISS",
 "about6":"A look at the Amazon River",
 "path6":"/images/collections/iss-pics/amazon-river2.jpg",
@@ -22,5 +22,12 @@
 "hi-res-path4":"/images/collections/iss-pics/look-down-at-the-pacific.PNG",
 "about5":"Another view of the Amazon River",
 "path5":"/images/collections/iss-pics/amazon-river.jpg",
-"hi-res-path5":"/images/collections/iss-pics/amazon-river.PNG"
+"hi-res-path5":"/images/collections/iss-pics/amazon-river.PNG",
+"about8":"Sunrise over Africa",
+"path8":"/images/collections/iss-pics/sunrise-over-africa.jpg",
+"hi-res-path8":"/images/collections/iss-pics/sunrise-over-africa.png",
+"about9":"The Sahara",
+"path9":"/images/collections/iss-pics/the-sahara.jpg",
+"hi-res-path9":"/images/collections/iss-pics/the-sahara.PNG"
+
 }
