@@ -51,9 +51,11 @@ $collections = $json['collections'];
 					foreach(array_keys($collections) as $key) {
 						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."/metadata.json"), true);
 				?>
-					<td>
-						<?php echo("<a href=\"".$_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."\">".$foo['title']."</a>"); ?>
-					</td>
+					<tr>
+						<td>
+							<?php echo("<a href=\"".$_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."\">".$foo['title']."</a>"); ?>
+						</td>
+					</tr>
 				<?php
 					}
 				?>
