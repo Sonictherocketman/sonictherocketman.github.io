@@ -46,7 +46,8 @@ $collections = $json['collections'];
 					</tr>
 				<?php } ?>
 				</table>
-				<table>
+				<h1>Collections</h1>
+				<table style="margin-right:auto; margin-left:auto;">
 				<?php
 					foreach(array_keys($collections) as $key) {
 						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."/metadata.json"), true);
