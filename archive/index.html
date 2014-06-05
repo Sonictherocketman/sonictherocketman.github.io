@@ -48,7 +48,7 @@ $collections = $json['collections'];
 				</table>
 				<table>
 				<?php
-					foreach($collections.array_keys() as $key) {
+					foreach(array_keys($collections) as $key) {
 						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$collections[$key]));
 				?>
 					<td>
