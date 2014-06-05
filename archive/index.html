@@ -49,7 +49,7 @@ $collections = $json['collections'];
 				<table>
 				<?php
 					foreach(array_keys($collections) as $key) {
-						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$collections[$key]));
+						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."metadata.json"));
 				?>
 					<td>
 						<?php echo("<a href=\"".$_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."\">".$foo['title']."</a>"); ?>
