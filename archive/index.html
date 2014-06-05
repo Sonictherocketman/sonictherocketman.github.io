@@ -2,6 +2,7 @@
 $json_str = file_get_contents("metadata.json");
 $json = json_decode($json_str, true);
 $articles = $json['articles'];
+$collections = $json['collections']
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -44,6 +45,18 @@ $articles = $json['articles'];
 						</td>
 					</tr>
 				<?php } ?>
+				</table>
+				<table>
+				<?php
+					for($collections.array_keys() as $key) {
+						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$collections[$key]));
+				?>
+					<td>
+						<?php echo("<a href=\"".$_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."\">".$foo['title']."</a>"); ?>
+					</td>
+				<?php
+					}
+				?>
 				</table>
 			</div>
 		</div>
