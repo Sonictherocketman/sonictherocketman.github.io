@@ -52,6 +52,12 @@ h2 {
 	line-height:100px;
 	/*position:relative;*/
 	z-index: 100;
+	
+	/* FIXING IT TO THE TOP */
+	position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
 }
 
 #post-list {
@@ -93,13 +99,6 @@ h2 {
 * Begin Class Styling
 *
 */
-
-.fixedElement {
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:100;
-}
 
 .post {
 	margin-top: -3px;
