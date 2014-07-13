@@ -50,7 +50,7 @@ h2 {
 	background-color: #454545;
 	color:#FFFFFF;
 	line-height:100px;
-	position:relative;
+	/*position:relative;*/
 	z-index: 100;
 }
 
