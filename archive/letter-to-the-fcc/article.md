@@ -1,6 +1,10 @@
 title: Letter to the FCC
 
+
+
 author: Brian Schrader
+
+
 
 status: published
 
@@ -13,19 +17,13 @@ My letter to the FCC today:
 
 >
 
->The internet is a beacon of the future of free information, of our societal progress, and of an ideal. It's one of the few things in our world that is so close to it's ideal. Would you forbid a book the rights to sit in a library based on its content? If so, this isn't a free country already. 
-
-Please don't do this. Please.
-
-Science and innovation have led us to this, don't let money take it away; not this time.
+>The internet is a beacon of the future of free information, of our societal progress, and of an ideal. It's one of the few things in our world that is so close to it's ideal. Would you forbid a book the rights to sit in a library based on its content? If so, this isn't a free country already. Please don't do this. Please.Science and innovation have led us to this, don't let money take it away; not this time.
 
 >
 
->Please make the right decision; please don't end net neutrality.
+>Please make the right decision; please don't end net neutrality.<br/>
 
-
-
-><br/>Brian Schrader <br />
+>Brian Schrader <br />
 
 >Software Developer, and hopeful U.S. Citizen
 
@@ -33,6 +31,13 @@ Science and innovation have led us to this, don't let money take it away; not th
 
 
 
+
+
+
+
 Please take some time today to sign [this petition][1] asking the FCC to not repeal net neutrality. I've asked before, and I'll ask again. The fight isn't over. 
 
+
+
 [1]:https://dearfcc.org
+
