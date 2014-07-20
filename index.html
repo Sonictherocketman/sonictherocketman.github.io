@@ -18,29 +18,31 @@ $articles = $json['articles'];
 	</div>	<!-- End title-bar -->
 	<div id="post-list">
 			<?php for($i = $articles-1; $i >= 0; $i--) { ?>
-				<div class="post">
-					<?php
-						$path = $_SERVER['DOCUMENT_ROOT'] . $json['path'.$i] . 		"metadata.json";
-						$foo = file_get_contents($path);
-						$articleJson = json_decode($foo, true);
-					?>
-					<div class="article-title">
-						<h1><?php echo "<a href=".$articleJson['link'].">" ?>
+				<article>
+					<div class="post">
 						<?php
-							echo($articleJson['title']);
-						?></a></h1>
-						<small style="font-style:italic;">
-						<?php
-							echo("Posted on ".$articleJson['published']);
-						?></small>
-					</div> <!-- End article-title -->
-					<div class="article-content">
-						<?php 
-						 echo($articleJson['content']);
-						 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");	
+							$path = $_SERVER['DOCUMENT_ROOT'] . $json['path'.$i] . 		"metadata.json";
+							$foo = file_get_contents($path);
+							$articleJson = json_decode($foo, true);
 						?>
-					</div> <!-- End article-content-->
-				</div> <!-- End post -->
+						<div class="article-title">
+							<h1><?php echo "<a href=".$articleJson['link'].">" ?>
+							<?php
+								echo($articleJson['title']);
+							?></a></h1>
+							<small style="font-style:italic;">
+							<?php
+								echo("Posted on ".$articleJson['published']);
+							?></small>
+						</div> <!-- End article-title -->
+						<div class="article-content">
+							<?php 
+							 echo($articleJson['content']);
+							 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");	
+							?>
+						</div> <!-- End article-content-->
+					</div> <!-- End post -->
+				</article>
 			<?php } ?>
 		<div class="post">
 			<div class="article-title"><a href="/archive/"><h3>Archive<h3></a></div>
