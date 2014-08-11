@@ -133,6 +133,8 @@ h2 {
 	background-color:#E6E6E6; /* Kind of a darker grey */
 	color:#484848; /* Dark gray */
 	font-style:italic;
+	padding-left:15pt;
+	padding-right:15pt;
 }
 /*
  * Dynamic Image Styling
