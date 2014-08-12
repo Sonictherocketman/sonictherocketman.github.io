@@ -25,7 +25,7 @@ Really it all comes down to search, now that I think about it. You can have ever
 
 [gruber]: https://twitter.com/gruber/status/1024766035
 
-![google](http://brianschrader.com/image/blog/gruber_tweet.png)!
+![google](http://brianschrader.com/image/blog/gruber_tweet.png)
 
 [googlelink]:[http://brianschrader.com/image/blog/gruber_tweet.png]
 
@@ -40,3 +40,4 @@ In the old days, we had bookshelves full of the things we'd read (magazines, boo
 
 
 <div id='ifttt' style='font-size:small;'>* <a href='https://ifttt.com/recipes/180542-save-links-in-your-favorite-tweets-to-instapaper'>IFTTT can save Favorited</a> and Retweeted links to Instapaper.</div>
+
