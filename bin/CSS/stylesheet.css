@@ -185,6 +185,12 @@ h2 {
 	margin-right:auto;
 	display:block;
 }
+
+.small {
+	max-width:400px;
+
+}
+
 /*
  * Depricated image styling. Use .image-center, .image-left, .image-right
  */
