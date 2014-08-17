@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	font-family: 'Average Sans', sans-serif;
+	font-family: 'Average', serif;
 	background-color:#F4F4F4;
 	line-height:1.7;
 	margin:auto;
@@ -23,7 +23,7 @@ img {border:none;}
 p {text-indent:20px;}
 
 h1, h2, h3 {
-	/* font-family:'Average Sans', serif; */
+	/* font-family:'Average', serif; */
 	font-weight:300;
 }
 h1 {
