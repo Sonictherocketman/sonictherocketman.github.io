@@ -15,7 +15,7 @@ body {
 	line-height:1.7;
 	margin:auto;
 	min-width:600px;
-	font-weight:lighter;
+	/*font-weight:lighter;*/
 }
 
 img {border:none;}
