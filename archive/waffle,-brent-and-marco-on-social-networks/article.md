@@ -18,3 +18,7 @@ I've been thinking about this [a lot](http://brianschrader.com/archive/twitter-a
 
 
 They're playing the long game.
+
+
+
+[Marco: Brent on the shifting sands of social platforms](http://www.marco.org/2014/08/27/brentwaffle)
