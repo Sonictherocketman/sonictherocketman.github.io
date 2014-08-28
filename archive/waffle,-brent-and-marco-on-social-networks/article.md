@@ -1,0 +1,11 @@
+title: Waffle, Brent and Marco on Social Networks
+author: Brian Schrader
+tags: social networks, open internet
+status: publish
+
+<div class='link'>What I do care about is that my blog isn't part of a system where its usefulness is just a hook to get me to use it. It works the way I want to, and the company running the servers (DreamHost) doesn't care one fig what I do...
+When Medium and Tumblr are gone, my blog will be here.</div>
+
+I've been thinking about this [a lot](http://brianschrader.com/) over the last few days. What would it mean to have a social network (like Dispora) that is decentralized, and independent of corporate ties? Could such a thing exist? Would it take off? Maybe. For now though Waffle, Brent and Marco are right. Social networks will rise and fall. Blogs, and RSS may never be as popular, but they don't have to be. 
+
+They're playing the long game.
