@@ -35,6 +35,11 @@ h2 {
 	font-size:18pt;
 }
 
+blockquote {
+	background-color:#E6E6E6; /* Kind of a darker grey */
+	font-style:italic;
+}
+
 /*
 *
 * Begin ID Styling
