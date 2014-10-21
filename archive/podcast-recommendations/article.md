@@ -55,7 +55,7 @@ I saw a few other people posting podcast recommendations and I thought they were
 
 
 
-.post ul {
+.post ul, #post ul {
 
 
 
@@ -79,7 +79,7 @@ list-style: none;
 
 
 
-.post img {
+.post img, #post img {
 
 
 
