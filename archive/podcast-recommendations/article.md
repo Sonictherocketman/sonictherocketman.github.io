@@ -2,7 +2,15 @@ title: Podcast Recommendations
 
 
 
+
+
+
+
 author: Brian Schrader
+
+
+
+
 
 
 
@@ -10,7 +18,15 @@ tags: podcasts
 
 
 
+
+
+
+
 status: published
+
+
+
+
 
 
 
@@ -23,11 +39,27 @@ I saw a few other people posting podcast recommendations and I thought they were
 
 
 
+
+
+
+
+
+
+
+
 <style type='text/css'>
 
 
 
-.ul_wrapper ul {
+
+
+
+
+.post ul {
+
+
+
+
 
 
 
@@ -35,7 +67,15 @@ list-style: none;
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -43,7 +83,15 @@ list-style: none;
 
 
 
+
+
+
+
 margin-left:0px;
+
+
+
+
 
 
 
@@ -51,7 +99,15 @@ display: inline;
 
 
 
+
+
+
+
 vertical-align: middle;
+
+
+
+
 
 
 
@@ -59,7 +115,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -67,7 +131,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![Analog(ue)](http://brianschrader.com/images/blog/analogue_icon.png) [Analog(ue)](http://relay.fm/analogue) with Myke Hurley and Casey Liss
+
+
+
+
 
 
 
@@ -75,7 +147,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![ATP](http://brianschrader.com/images/blog/atp_icon.png) [ATP](http://atp.fm) with Marco Arment, John Siracusa, and Casey Liss [*](#note)
+
+
+
+
 
 
 
@@ -83,7 +163,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![Connected](http://brianschrader.com/images/blog/connected_icon.png) [Connected](http://relay.fm/connected) with Myke Hurley, Stephen Hackett, and Federico Viticci
+
+
+
+
 
 
 
@@ -91,7 +179,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![Debug](http://brianschrader.com/images/blog/debug_icon.png) [Debug](http://www.imore.com/debug) with Guy English and Rene Ritchie
+
+
+
+
 
 
 
@@ -99,7 +195,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![Hardcore History](http://brianschrader.com/images/blog/hardcore_history_icon.png) [Hardcore History](http://www.dancarlin.com) with Dan Carlin
+
+
+
+
 
 
 
@@ -107,7 +211,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![Internet History Podcast](http://brianschrader.com/images/blog/internet_history_icon.png) [Internet History Podcast](http://www.internethistorypodcast.com) with Brian McCullough
+
+
+
+
 
 
 
@@ -115,7 +227,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![Pragmatic](http://brianschrader.com/images/blog/pragmatic_icon.png) [Pragmatic](http://techdistortion.com/podcasts/pragmatic) with John Chidgey
+
+
+
+
 
 
 
@@ -123,7 +243,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
 - ![The Talk Show](http://brianschrader.com/images/blog/talk_show_icon.png) [The Talk Show](http://daringfireball.net/thetalkshow/) with John Gruber
+
+
+
+
 
 
 
@@ -135,5 +263,15 @@ margin-right: 15px;
 
 
 
+
+
+
+
+
+
+
+
 I listen to a lot of podcasts...
+
+
 
