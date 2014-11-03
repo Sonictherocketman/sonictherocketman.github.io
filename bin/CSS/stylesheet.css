@@ -18,9 +18,9 @@ body {
 	font-weight:lighter;
 }
 
-img {border:none;}
+img { border:none; }
 
-p {text-indent:20px;}
+p { text-indent:20px; }
 
 h1, h2, h3 {
 	/* font-family:'Average', serif; */
@@ -109,8 +109,8 @@ blockquote {
 .post {
 	margin-top: -3px;
 	padding: 3%;
-	
-	border-right: 0px; /* Don't forget to modify to the right border. */
+	/*
+	border-right: 0px; /* Don't forget to modify to the right border. 
 	background-image: 
 	    -webkit-gradient(linear, 0 0, 0 100%, from(#4068B8), to(transparent));
 	background-image: 
@@ -126,8 +126,9 @@ blockquote {
    		linear-gradient(90deg, transparent, #4068B8, transparent);
 	-moz-background-size: 80% 3px; /* This get flipped. */
 	background-size: 85% 3px; /* This get flipped. */
-	background-position: bottom; /* The last argument gets flipped. */
+	background-position: bottom; /* The last argument gets flipped. 
 	background-repeat: no-repeat;
+	*/
 }
 
 .article-title {
@@ -142,6 +143,14 @@ blockquote {
 	padding-left:15pt;
 	padding-right:15pt;
 }
+
+.post-divider {
+	height:10pt;
+	background: url(http://itsinteresting.net/images/misc/horizontal-divider.png) no-repeat scroll center;
+	background-size:150pt, 30pt;
+	border:none;
+}
+
 /*
  * Dynamic Image Styling
  */
