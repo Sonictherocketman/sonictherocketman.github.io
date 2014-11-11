@@ -10,7 +10,7 @@
 	        $xml .= "<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" >\n
 	        		<channel>\n
 	        		<atom:link href=\"http://brianschrader.com/rss.php\" rel=\"self\" type=\"application/rss+xml\" />";
-			$xml .= "<title>BiteofanApple by Brian Schrader</title> \n
+			$xml .= "<title>BiteofanApple</title> \n
 				  	 <link>http://brianschrader.com</link>\n
 				  	 <description>A blog by Brian Schrader.</description>\n
 				     <language>en-us</language>\n";
@@ -32,6 +32,6 @@
 			 }
         $xml .= "</channel>\n";
 		}
-		$xml .= "</rss>"; 
+		$xml .= "</rss>";
 		echo $xml
  ?>
