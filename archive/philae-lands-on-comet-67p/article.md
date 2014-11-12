@@ -4,7 +4,7 @@ tags: space, philae
 type: post
 status: publish
 
-[Philae][1] detached from [Rosetta][4] landed on a [comet][2] the [the size of Manhattan][3] that's 321,908,000 miles away, moving at 40,000 mph, using an orbital approach that looks like this:
+[Philae][1] detached from [Rosetta][4], landed on a [comet][2] the [the size of Manhattan][3] that's 321,908,000 miles away and  moving at 40,000 mph, using an orbital approach that looks like this:
 
 ![Rosetta's approach trajectory](http://brianschrader.com/images/blog/philae_trajectory.png)
 
