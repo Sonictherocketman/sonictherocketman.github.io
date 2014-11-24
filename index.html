@@ -4,7 +4,7 @@ $json = json_decode($json_str, true);
 $articles = $json['articles'];
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Home - BiteofanApple</title>
@@ -46,7 +46,7 @@ $articles = $json['articles'];
 				<!--<hr class='post-divider'/> -->
 			<?php } ?>
 		<div class="post">
-			<div class="article-title"><a href="/archive/"><h3>Archive<h3></a></div>
+			<div class="article-title"><a href="/archive/"><h3>Archive</h3></a></div>
 		</div>
 		<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
 	</div> <!-- End post-list -->
