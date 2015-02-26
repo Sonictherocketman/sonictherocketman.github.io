@@ -69,6 +69,7 @@ blockquote {
 	margin: auto;
 	/*margin-top:100px;*/
 	max-width:825px;
+    overflow:hidden;
 }
 
 #post, #first-post {
