@@ -203,8 +203,12 @@ blockquote {
 
 .small {
 	width:400px;
-
 }
+
+.xsmall {
+	width:200px;
+}
+
 
 /*
  * Depricated image styling. Use .image-center, .image-left, .image-right
