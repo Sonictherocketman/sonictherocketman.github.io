@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!DOCTYPE rss>
+<rss version="2.0">
+	<channel>
+		<title>Adventures in Dungeons and Dragons - BiteofanApple</title> 
+		<link>http://brianschrader.com/archive/adventures_in_dnd</link>
+		<description>A transcription of the events that befall the players in our D&D 5e campaign. Updated after each session.</description>
+		<language>en-us</language>
+		<lastBuildDate>Sun, 08 Mar 2015 20:51:49 -0000</lastBuildDate>
+		<item>
+			<title>Our Heroes Emerge</title>
+			<guid>1234567890</guid>			
+			<link>http://brianschrader.com/archive/adventures_in_dnd/our_heroes_emerge/</link>
+			<pubDate>Mon, 03 Mar 2015 03:01:49 -0000</pubDate>
+			<description><![CDATA[Our journey begins not with a bang, but with a tangy, burning flesh kind of smell.]]></description>
+		</item>
+		<item>
+			<title>Kobold, and Cultists, and Dragons. Oh my!</title>
+			<guid>12323434545686</guid>			
+			<link>http://brianschrader.com/archive/adventures_in_dnd/kobolds_and_cultists_and_dragons_oh_my</link>
+			<pubDate>Sat, 07 Mar 2015 17:01:49 -0000</pubDate>
+			<description><![CDATA[The lucky contestants team up in a quest to save a nearby town from some Kobolds, their cultist masters, and some rats.]]></description>
+		</item>
+	</channel>
+</rss>
