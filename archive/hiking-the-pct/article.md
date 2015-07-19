@@ -16,45 +16,45 @@ I've always wanted to hike the [Pacific Crest Trail][1]. Last week, a part of th
 
 [lol]: https://www.youtube.com/watch?v=uT9MITGrcFk
 
-[![The Gang's All here!](http://brianschrader.com/images/collections/pct-hike/the-gangs-all-here-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/the-gangs-all-here.jpg)
+[![The Gang's All here!](/images/collections/pct-hike/the-gangs-all-here-comp.jpeg)](/images/collections/pct-hike/the-gangs-all-here.jpg)
 
 After being dropped off by the shuttle, we started hiking. 
 
-[![The Trailhead](http://brianschrader.com/images/collections/pct-hike/the-trailhead-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/the-trailhead.jpg)
+[![The Trailhead](/images/collections/pct-hike/the-trailhead-comp.jpeg)](/images/collections/pct-hike/the-trailhead.jpg)
 
 At the trailhead I found a walking stick that someone had left there. The tip was covered in charcoal and the handle was already worn; someone had used and loved that stick, and now I was its next holder. It served me well.
 
-[![Setting out](http://brianschrader.com/images/collections/pct-hike/setting-out-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/setting-out.jpg)
+[![Setting out](/images/collections/pct-hike/setting-out-comp.jpeg)](/images/collections/pct-hike/setting-out.jpg)
 
 Needless to say, the trail was gorgeous.
 
-[![Hiking Day 1!](http://brianschrader.com/images/collections/pct-hike/hiking-day-1-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/hiking-day-1.jpg)
+[![Hiking Day 1!](/images/collections/pct-hike/hiking-day-1-comp.jpeg)](/images/collections/pct-hike/hiking-day-1.jpg)
 
 About 3 miles into the hike we came across the first sign that we were actually on the right track. As we took a short break in the clearing, a hiker came up the trail from the south. He was about our age, on vacation from Germany, and had been hiking the trail since April. He told us that he'd been averaging 30 miles a day and that he planned to be done by July's end. He didn't stop long before setting back off again up the trail. We never saw him again.
 
-[![A sign!](http://brianschrader.com/images/collections/pct-hike/the-sign-on-the-trail-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/the-sign-on-the-trail.jpg)
+[![A sign!](/images/collections/pct-hike/the-sign-on-the-trail-comp.jpeg)](/images/collections/pct-hike/the-sign-on-the-trail.jpg)
 
 After 10.5 miles and at the end of a long day, we set up camp, and went to sleep. We were all exhausted.
 
-[![Day 1 Camp](http://brianschrader.com/images/collections/pct-hike/day-1-camp-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/day-1-camp.jpg)
+[![Day 1 Camp](/images/collections/pct-hike/day-1-camp-comp.jpeg)](/images/collections/pct-hike/day-1-camp.jpg)
 
 **Day 2** was filled with amazing vistas and high ridges. Early that morning, as we were breaking camp, another hiker approached from the south. She asked us if we'd seen a blonde, German guy. "We saw him yesterday," we said. 
 
 "What, yesterday?! I hiked with him for 2 days, but he said I was too slow and he went on without me," she replied. This was the first of many times that another hiker would ask about "the German guy". Apparently, he was a legend.
 
-[![The trail forested 1!](http://brianschrader.com/images/collections/pct-hike/the-trail-forested-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/the-trail-forested.jpg)
+[![The trail forested 1!](/images/collections/pct-hike/the-trail-forested-comp.jpeg)](/images/collections/pct-hike/the-trail-forested.jpg)
 
 As we climbed up the side of a ridge, we took a break and admired the scenery. As we climbed, the cover of trees broke and gave way to some really beautiful vistas.
 
-[![Resting on a ridge](http://brianschrader.com/images/collections/pct-hike/resting-ridge-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/resting-ridge.jpg)
+[![Resting on a ridge](/images/collections/pct-hike/resting-ridge-comp.jpeg)](/images/collections/pct-hike/resting-ridge.jpg)
 
 Surprisingly, we had cell service up here in the middle of the Oregon wilderness
 
-[![Ridge view](http://brianschrader.com/images/collections/pct-hike/ridge-view-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/ridge-view.jpg)
+[![Ridge view](/images/collections/pct-hike/ridge-view-comp.jpeg)](/images/collections/pct-hike/ridge-view.jpg)
 
 A bit further, we found a spectacular campsite at the top of the mountain.
 
-[![Day 2: Camp](http://brianschrader.com/images/collections/pct-hike/day-2-camp-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/day-2-camp.jpg)
+[![Day 2: Camp](/images/collections/pct-hike/day-2-camp-comp.jpeg)](/images/collections/pct-hike/day-2-camp.jpg)
 
 It had been a long, mosquito filled day. We cooked ourselves dinner, and, from our high perch, we watched the sun go down, mantling the mountains in the reddish-purple haze of evening light.
 
@@ -62,27 +62,27 @@ It had been a long, mosquito filled day. We cooked ourselves dinner, and, from o
 
 The day started off on an off note as we entered the what remained of the forest after a recent fire.
 
-[![Burned out forest](http://brianschrader.com/images/collections/pct-hike/burned-forested-trail-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/burned-forested-trail.jpg)
+[![Burned out forest](/images/collections/pct-hike/burned-forested-trail-comp.jpeg)](/images/collections/pct-hike/burned-forested-trail.jpg)
 
 Traversing such a breathtaking and scarred landscape was something none of us had ever done before, and it was an experience I recommend, if only for its wonder. The utter silence is, at the same time, both captivating, and deeply unsettling as no sound of birds, or buzzing of mosquitos broke the ever present silence.
 
 After the journey through the silent, dead swaths of burned out forest, we found ourselves on the top of a hill. A perfect retrospective of our progress thus far.
 
-[![Looking back](http://brianschrader.com/images/collections/pct-hike/lookback-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/lookback.jpg)
+[![Looking back](/images/collections/pct-hike/lookback-comp.jpeg)](/images/collections/pct-hike/lookback.jpg)
 
 That mountain in the back, Mt. McLoughlin, was where we started 2 days prior.
 
 After a short break, we found ourselves traversing some rocky ridges on the way to our highest high.
 
-[![Rocky ridge](http://brianschrader.com/images/collections/pct-hike/rocky-ridge-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/rocky-ridge.jpg)
+[![Rocky ridge](/images/collections/pct-hike/rocky-ridge-comp.jpeg)](/images/collections/pct-hike/rocky-ridge.jpg)
 
 At this point, we'd finally ascended Devil's Peak, 7,329ft above sea level, our highest high.
 
-[![Devil's Peak](http://brianschrader.com/images/collections/pct-hike/devils-peak-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/devils-peak.jpg)
+[![Devil's Peak](/images/collections/pct-hike/devils-peak-comp.jpeg)](/images/collections/pct-hike/devils-peak.jpg)
 
 As a bonus, the peak came stock with a most spectacular view to the west.
 
-[![view from the top](http://brianschrader.com/images/collections/pct-hike/the-view-from-the-top-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/the-view-from-the-top.jpg)
+[![view from the top](/images/collections/pct-hike/the-view-from-the-top-comp.jpeg)](/images/collections/pct-hike/the-view-from-the-top.jpg)
 
 The way back down would greet us with 5 water stops in the span of 2 miles, which we heartily enjoyed. Today had been our best day by far... at least until now. We had one mile left to go.
 
@@ -96,7 +96,7 @@ The trail took us over more ridges, through more burned, and scarred terrain, an
 
 I do have this picture though, taken just after the 3 of us arrived at Mazama, 12 hours of hiking, and after covering a total of 20 miles.
 
-[![At Mazama](http://brianschrader.com/images/collections/pct-hike/at-mazama-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/at-mazama.jpg)
+[![At Mazama](/images/collections/pct-hike/at-mazama-comp.jpeg)](/images/collections/pct-hike/at-mazama.jpg)
 
 We didn't last long that night after this. We showered, ate microwave burritos from the convenience store, and went to bed.
 
@@ -106,23 +106,23 @@ We didn't last long that night after this. We showered, ate microwave burritos f
 
 **Day 6 and 7:** For the next two days we bounced between Mazama and our final destination because of logistical reasons. I'm combining these days because, really we spent them in the same place, Crater Lake.
 
-[![Crater Lake](http://brianschrader.com/images/collections/pct-hike/crater-lake-pano-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/crater-lake-pano.jpg)
+[![Crater Lake](/images/collections/pct-hike/crater-lake-pano-comp.jpeg)](/images/collections/pct-hike/crater-lake-pano.jpg)
 
 There were other happenings during the day like how it rained on and off, or how we were left behind by the trolley and had to hike the 5 miles back to our camp site that evening, but really the majesty of Crater Lake blew all that out of the water.
 
-[![Crater Lake, again](http://brianschrader.com/images/collections/pct-hike/crater-lake-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/crater-lake.jpg)
+[![Crater Lake, again](/images/collections/pct-hike/crater-lake-comp.jpeg)](/images/collections/pct-hike/crater-lake.jpg)
 
-[![Crater Lake, again, again](http://brianschrader.com/images/collections/pct-hike/from-the-wall-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/from-the-wall.jpg)
+[![Crater Lake, again, again](/images/collections/pct-hike/from-the-wall-comp.jpeg)](/images/collections/pct-hike/from-the-wall.jpg)
 
 At the end of the day, we spent time at the lodge, and at the meadow next door overlooking Crater Lake and all its immense glory, but as these things usually go, it was soon time to get back on the shuttle and head home. 
 
 Before that, I needed to leave something behind. It was time to leave my walking stick in a place akin to where I'd found it, at a trail marker on the PCT.
 
-[![My hiking stick](http://brianschrader.com/images/collections/pct-hike/hiking-stick-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/hiking-stick.jpg)
+[![My hiking stick](/images/collections/pct-hike/hiking-stick-comp.jpeg)](/images/collections/pct-hike/hiking-stick.jpg)
 
 On the shuttle ride home I found myself in a somber mood. All of that awe-inspiring scenery, the grand wilderness, the epic feeling of exploration, and the grandeur of Crater Lake were all behind us now. We'd had an amazing time together, but it had come to an end, and now here we were, flying home to our respective lives, all right where we left off. 
 
-[![My hiking stick](http://brianschrader.com/images/collections/pct-hike/together-at-the-end-comp.jpeg)](http://brianschrader.com/images/collections/pct-hike/together-at-the-end.jpg)
+[![My hiking stick](/images/collections/pct-hike/together-at-the-end-comp.jpeg)](/images/collections/pct-hike/together-at-the-end.jpg)
 
 Until next time.
 
