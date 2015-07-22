@@ -1,4 +1,5 @@
 *.py
 _drafts/
 _admin/
+.dropbox
 microblog/microblog_spec.html
