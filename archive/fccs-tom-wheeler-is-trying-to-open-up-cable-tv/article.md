@@ -1,6 +1,6 @@
 slug: fccs-tom-wheeler-is-trying-to-open-up-cable-tv
 published: Sun, 02 Nov 2014 at 11:28 PM
-updated: Thu, 06 Aug 2015 at 05:05 PM
+updated: Sat, 08 Aug 2015 at 04:31 PM
 title: FCC's Tom Wheeler is trying to open up cable TV
 author: Brian Schrader
 tags: fcc

@@ -5,8 +5,8 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
 	<!--
 	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
 	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
@@ -28,10 +28,10 @@
 		<!-- Desktop Nav -->
 		<span>
 			<!-- Name and Author -->
-			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
 			<!-- Links -->
 			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
-			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
 			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
 			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
 			<br>
@@ -41,12 +41,12 @@
 		<div class="mobile-nav">
 			<!-- Name and Author -->
 			<div style="text-align:center; margin-top:-20pt;">
-				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
 			</div>
 			<!-- Links -->
 			<div style="margin-top:2%;">
-				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
-				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
 				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
 				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
 			</div>
@@ -56,7 +56,7 @@
 		<article>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="http://brianschrader.com/archive/multithreading-in-java/">Multithreading in Java</a></h1>
+					<h1><a href="/archive/multithreading-in-java/">Multithreading in Java</a></h1>
 					<small style="font-style:italic;">Posted on Fri, 30 May 2014 at 12:00 AM</small>
 				</div>
 				<div class="article-content">
@@ -66,7 +66,7 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 <p>I work as a Java Software Developer. That being the case, I know comparatively little about Java<a href="#note1">*</a>. I'm much more well-versed in Objective-C, Python, or even PHP, than in Java. As such I've had quite a few occasions I've needed to do some task or another and I'm at a loss for the "Java way", so I put together this handy-dandy little guide.  </p>
-<p><img src="http://brianschrader.com/images/blog/branches.png" class="image-center hide-on-mobile" style="width:70%;"></p>
+<p><img src="/images/blog/branches.png" class="image-center hide-on-mobile" style="width:70%;"></p>
 <p>Let's assume that I want to do some heavy processing, but not have it clog up the main thread, a pretty common task. In Objective-C we have Grand Central Dispatch.</p>
 <h2>GCD and Multithreading in Objective-C</h2>
 <pre><code class="objc">
@@ -113,7 +113,7 @@ new Thread(new Runnable() {
 
 </code></pre>
 
-<p><img src="http://brianschrader.com/images/blog/java.png" class="image-right hide-on-mobile" style="width:30%;"></p>
+<p><img src="/images/blog/java.png" class="image-right hide-on-mobile" style="width:30%;"></p>
 <p>This tells Java, literally, to make a new thread and execute this code on that new thread. Unlike in Objective-C where I'm handing some code off to a queue that might make a new thread, choose an existing one, or whatever. This also means that, in Java, the developer is tasked with maintaining that thread, and as far as I know, it isn't handled like regular system threads. As such, this is kind of frowned upon.</p>
 <p>The problem I encountered in testing this was 2-fold. First, the task was unable to give status updates or return to the main thread without considerably more code, and second, if the process encountered an Exception it went uncaught and you'd never know that anything happened. Obviously there are ways around both of those things, but they require significant changes to the source code, and I wanted an inline solution just like GCD in Objective-C. Let's try something else.</p>
 <h3>Using Executors (The Right Way)</h3>
@@ -194,7 +194,7 @@ System.out.println("future.get() = " + future.get());
 		</article>
 		<div style="text-align:center;">
 			<div class="article-content">
-				<span style="font-style:italic;">Subscribe to the <a href="http://brianschrader.com/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
 			</div>
 			<div class="article-content">
 				<span style="font-size:small;">

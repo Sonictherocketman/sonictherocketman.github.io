@@ -1,6 +1,6 @@
 slug: changing-app-behavior-server-side
 published: Sun, 17 Aug 2014 at 12:00 AM
-updated: Thu, 06 Aug 2015 at 05:05 PM
+updated: Sat, 08 Aug 2015 at 04:31 PM
 title: Changing App Behavior Server-Side
 
 author: Brian Schrader

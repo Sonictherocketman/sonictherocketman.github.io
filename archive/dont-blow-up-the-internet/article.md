@@ -1,6 +1,6 @@
 slug: dont-blow-up-the-internet
 published: Sat, 26 Apr 2014 at 09:40 PM
-updated: Thu, 06 Aug 2015 at 05:05 PM
+updated: Sat, 08 Aug 2015 at 04:31 PM
 title: Don't Blow Up the Internet
 
 

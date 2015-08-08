@@ -1,6 +1,6 @@
 slug: a-very-special-sweater
 published: Wed, 12 Dec 2012 at 02:35 AM
-updated: Thu, 06 Aug 2015 at 05:05 PM
+updated: Sat, 08 Aug 2015 at 04:31 PM
 title: A Very Special Sweater
 author: Brian Schrader
 status: publish
