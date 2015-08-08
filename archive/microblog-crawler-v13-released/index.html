@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Microblog Crawler v1.3 Released - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="http://brianschrader.com/archive/microblog-crawler-v13-released/">Microblog Crawler v1.3 Released</a></h1>
+					<small style="font-style:italic;">Posted on Sun, 08 Mar 2015 at 12:00 AM</small>
+				</div>
+				<div class="article-content">
+					<p>I'm pleased to announce that version 1.3 of the Microblog Crawler is now available on <a href="https://github.com/Sonictherocketman/microblog_crawler">GitHub</a> and <a href="https://pypi.python.org/pypi/MicroblogCrawler">PyPi</a>! </p>
+<p>To install use:</p>
+<p><code>pip install MicroblogCrawler</code>.</p>
+<h2>Release Notes</h2>
+<p>The big news: Version 1.3 is now multiprocessed!</p>
+<h3>Among other things, version 1.3 also includes a number of fixes and improvements.</h3>
+<ul>
+<li>
+<p>on_item callback now includes the feed information as the second parameter. This is a breaking change in the API.</p>
+</li>
+<li>
+<p>on_info callback now receives a dictionary response of all of the info fields in a given feed. Previous versions received a name, value tuple.</p>
+</li>
+<li>
+<p>Multiprocessing now allows the crawler to process 4 feeds (or more if you override the value) at once.</p>
+</li>
+<li>
+<p>Fixed a number of bugs that allowed duplicates.</p>
+</li>
+<li>
+<p>Fixed an issue where feed crawl times may be inaccurately reported.</p>
+</li>
+<li>
+<p>Fixed the timezone problem. Feeds without timezones are parsed according to their HTTP response timezone.</p>
+</li>
+</ul>
+<h3>Added a bunch of 'Good Citizen' features like:</h3>
+<ul>
+<li>
+<p>Added crawler user agent and proper subscriber count reporting to remote servers.</p>
+</li>
+<li>
+<p>Crawler is now HTTP status code aware and static files will not be parsed if they have not been modified (HTTP 304).</p>
+</li>
+<li>
+<p>Added automatic 301 redirection behavior and MAX_REDIRECTS</p>
+</li>
+<li>
+<p>Added support for returning specific error codes from other HTTP headers.</p>
+</li>
+</ul>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="http://brianschrader.com/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

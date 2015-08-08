@@ -1,6 +1,8 @@
+slug: multithreading-in-java
+published: Fri, 30 May 2014 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Multithreading in Java
 
-slug: multithreading-in-java
 
 author: Brian Schrader
 

@@ -1,3 +1,6 @@
+slug: the-results-of-spacexs-attempt-to-recover-falcon
+published: Thu, 15 Jan 2015 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: The Results of SpaceX's Attempt to Recover Falcon
 
 author: Brian Schrader

@@ -1,41 +1,85 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>If Only I had a Podcast - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
-	<div id="post">
-		<div id="article-title">
-			<h1><?php 
-			echo("<a href=\"".$json['link']."\"</a>");
-			echo($json['title']);
-			?></a></h1>
-			<small style="font-style:italic;"><?php
-			echo("Posted on ".$json['published']);
-			?></small>
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/if-only-i-had-a-podcast/">If Only I had a Podcast</a></h1>
+					<small style="font-style:italic;">Posted on Tue, 18 Mar 2014 at 09:35 AM</small>
+				</div>
+				<div class="article-content">
+					<p>Over the weekend I gathered up a mixer, mic and some cables and set to make myself a podcasting-like setup. The mixer is an old [Mackie 1202-VLZ Pro][http://www.mackie.com/pdf/1202vlzpro_ss.pdf], and the mic is an acquired [AKG C-3000][http://www.akg.com/C3000-1039.html?pid=1026]. All of this, including the cables and stand, was being thrown away by a local television station, and I picked it up for free. It took me a total of 5 hours between Sunday and today to get it working (There was a lot of wiring and rewiring as I reorganized and refactored my cable arrangement). Here's what the end result looks like: <img alt="my podcasting setup" src="/images/blog/podcast-setup.jpg" /></p>
+<p>Now if only I had a podcast so I could use all this stuff...</p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
 		</div>
-		<div class="article-content">
-			<?php 
-			 echo($json['content']);
-			 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-	    	?>
-	    </div>
 	</div>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
 </div>
 </body>
 </html>

@@ -1,5 +1,7 @@
-title: Pokemon
 slug: pokemon
+published: Mon, 21 Apr 2014 at 04:28 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
+title: Pokemon
 author: Brian Schrader
 tags: pokemon
 status: publish

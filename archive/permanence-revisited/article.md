@@ -1,3 +1,6 @@
+slug: permanence-revisited
+published: Tue, 12 Aug 2014 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Permanence Revisited
 
 author: Brian Schrader

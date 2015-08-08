@@ -1,3 +1,6 @@
+slug: letter-to-the-fcc
+published: Wed, 16 Jul 2014 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Letter to the FCC
 
 

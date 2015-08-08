@@ -1,41 +1,95 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Pokemon - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
-	<div id="post">
-		<div id="article-title">
-			<h1><?php 
-			echo("<a href=\"".$json['link']."\"</a>");
-			echo($json['title']);
-			?></a></h1>
-			<small style="font-style:italic;"><?php
-			echo("Posted on ".$json['published']);
-			?></small>
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/pokemon/">Pokemon</a></h1>
+					<small style="font-style:italic;">Posted on Mon, 21 Apr 2014 at 04:28 AM</small>
+				</div>
+				<div class="article-content">
+					<p><img alt="Pokemon, Gotta Catch 'em All!" src="/images/blog/pokemon.png" /></p>
+<p>Pokemon is 16 years old. That's 17 seasons, 827 episodes, and it's <em>still</em> airing new episodes. Wow, just wow. That blows my mind. Pokemon was such a huge part of my childhood, and to see it still going is amazing in the truest sense of the word. I watched some older episodes today, and they still look pretty good. Still though, I can't believe it's still on. I was 7 when it first aired in the U.S. and I'm 22 today (You might be thinking, "Wait, thats 15 years!" You're right, but it first aired in Japan a year earlier than here). </p>
+<p>I'm in awe by this; Pokemon, keep going strong. If you teach kids today what you did to me, keep going forever.</p>
+<p>P.S. Here's some of my favorite moments:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=4gol1SDDbx4">James, Turn Attack!</a></li>
+<li><a href="https://www.youtube.com/watch?v=fOsdy1ZsXUs">Viridian City</a></li>
+<li><a href="https://www.youtube.com/watch?v=fERhjPooumo">You and Me and Pokemon</a></li>
+<li><a href="https://www.youtube.com/watch?v=Bgeh81geivE">Pikachu's Goodbye</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZBnp3eEJld8">A Friend in Deed</a></li>
+<li>and of course <a href="https://www.youtube.com/watch?v=DqXlSwBIHFc">the theme song</a></li>
+</ul>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
 		</div>
-		<div class="article-content">
-			<?php 
-			 echo($json['content']);
-			 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-	    	?>
-	    </div>
 	</div>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
 </div>
 </body>
 </html>

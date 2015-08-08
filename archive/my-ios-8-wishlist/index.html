@@ -1,41 +1,116 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>My iOS 8 Wishlist - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
-	<div id="post">
-		<div id="article-title">
-			<h1><?php 
-			echo("<a href=\"".$json['link']."\"</a>");
-			echo($json['title']);
-			?></a></h1>
-			<small style="font-style:italic;"><?php
-			echo("Posted on ".$json['published']);
-			?></small>
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="http://brianschrader.com/archive/my-ios-8-wishlist/">My iOS 8 Wishlist</a></h1>
+					<small style="font-style:italic;">Posted on Wed, 16 Apr 2014 at 12:00 AM</small>
+				</div>
+				<div class="article-content">
+					<p>WWDC is right around the corner. Its not a very long list, but here's my feature wish list for iOS 8 and a little on the iPhone 6:</p>
+<ul>
+<li>
+<p><a href="http://www.imore.com/ios-7-wants-actionable-notifications-push-interface">Actionable Notifications</a> (like in OS X Mavericks)</p>
+</li>
+<li>
+<p>Maps travel time (<em>also</em> like in OS X Mavericks)</p>
+</li>
+<li>
+<p>Better Inter-App Communication (we've been asking for this for years now)</p>
+</li>
+<li>
+<p>That Siri API we've been wanting (<a href="http://www.techradar.com/us/news/phone-and-communications/mobile-phones/cortana-everything-you-need-to-know-about-microsoft-s-siri-rival-1183607">Cortana</a> and Google Now aren't getting worse).</p>
+</li>
+<li>
+<p>Offline Siri dictation (like in Mavericks...)</p>
+</li>
+<li>
+<p>Battery Shaming (like in Mavericks... you get the point?)</p>
+</li>
+<li>
+<p>Mac-iOS AirDrop compatibility</p>
+</li>
+<li>
+<p>A public <a href="http://stackoverflow.com/questions/19019031/how-can-an-ios-7-app-make-itself-transparent-to-see-a-users-home-screen-image">API for developers to see and use the home screen background </a>(Safari can do this, but its private)</p>
+</li>
+<li>
+<p>As for the iPhone 6 I have but one request: better battery life (I can dream can't I?).</p>
+</li>
+</ul>
+<p>It'll be interesting to see what Apple brings to the table this year. The feature request lists get shorter every year, and this year its really short. It would make me happy just to see the features in Mavericks that I love make their way to iOS. I'd be thrilled with just that, though I'm sure there's more.</p>
+<p>Really my biggest concern is if they'll announce any new retina Macbook Pros. I'll be in the market for one soon, and I don't want to get one if they are just about to refresh them.</p>
+<p><strong>Update:</strong> This is really more of an OS X thing, but I would love to be able to respond to text messages from my Mac (I know about the technical challenges, but its Apple and they could figure it out).</p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="http://brianschrader.com/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
 		</div>
-		<div class="article-content">
-			<?php 
-			 echo($json['content']);
-			 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-	    	?>
-	    </div>
 	</div>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
 </div>
 </body>
 </html>

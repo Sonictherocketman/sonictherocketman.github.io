@@ -1,3 +1,6 @@
+slug: so-i-went-flying-yesterday
+published: Wed, 04 Jun 2014 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: So I Went Flying Yesterday
 
 author: Brian Schrader

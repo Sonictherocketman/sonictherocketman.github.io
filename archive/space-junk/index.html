@@ -1,43 +1,92 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Space Junk - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
 		<article>
-			<div id="post">
-				<div id="article-title">
-					<h1><?php 
-					echo("<a href=\"".$json['link']."\"</a>");
-					echo($json['title']);
-					?></a></h1>
-					<small style="font-style:italic;"><?php
-					echo("Posted on ".$json['published']);
-					?></small>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/space-junk/">Space Junk</a></h1>
+					<small style="font-style:italic;">Posted on Sun, 14 Sep 2014 at 02:04 AM</small>
 				</div>
 				<div class="article-content">
-					<?php 
-					 echo($json['content']);
-					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-					?>
+					<p>In a break from our regularly scheduled developer-oriented topics, we're taking a break to talk about orbital space debris...</p>
+<p><img alt="Insert canned space junk image here" src="/images/blog/space_junk.jpeg" /></p>
+<p>The amount of <a href="http://en.wikipedia.org/wiki/Space_debris">debris in Earth orbit</a> is <a href="http://orbitaldebris.jsc.nasa.gov/faqs.html#5">growing every year</a>. Every launch we dump more things into orbit to float around aimlessly crowding an already crowded area. That junk hits other junk and breaks apart, good right?. No. <a href="http://orbitaldebris.jsc.nasa.gov/faqs.html#3">Smaller pieces</a>, often moving faster, are harder to track. Some of these pieces are fractions of inches big and are impossible to track. Combine this small size with the fact that the pieces move at a speed of around <a href="http://orbitaldebris.jsc.nasa.gov/faqs.html#7">7km/s</a> (per <em>second</em>) and that pebble-sized debris becomes <em>really</em> dangerous.</p>
+<p>Because of a lot of regulation and Cold War era crap cleaning up this space junk is a legal nightmare. Nations can only clean up the stuff they own, cleaning up another nation's junk immediately makes that nation in violation of a whole myriad of laws, and any private vendor who touches this debris immediately becomes a "<a href="http://en.wikipedia.org/wiki/Space_pirate">space pirate</a>" (awesome name, not-so-awesome ramifications).</p>
+<p>The amount of space debris is growing every year, and although there is a lot of collaboration to prevent the growth of such debris, the amount currently in orbit is already worrisome. <a href="http://orbitaldebris.jsc.nasa.gov/faqs.html#12">It doesn't go away either</a>.</p>
+<p>The problem is still unsolved and remains a <em>huge</em> economic and political challenge. The most harrowing fact about this debris is that if unchecked it may soon be very <a href="http://www.newscientist.com/article/dn18050-space-debris-threat-to-future-launches.html#.U_AtxEuzsgo">dangerous if not impossible to launch craft into orbit.</a></p>
+<p>I'm not trying to be a sandwich-board-wearing, doomsday-heralding, rambling, crazy-person here. I'm just bringing it up. We do need to find a solution. Its a serious problem.</p>
+<p><a href="http://orbitaldebris.jsc.nasa.gov/faqs.html">NASA's Space Debris FAQ</a></p>
+<p><a href="http://www.universetoday.com/113884/how-can-we-clean-up-that-space-junk/">How Can We Clean Up That Space Junk?</a></p>				
 				</div>
 			</div>
 		</article>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

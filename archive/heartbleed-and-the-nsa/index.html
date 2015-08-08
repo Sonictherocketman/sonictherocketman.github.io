@@ -1,41 +1,90 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>The NSA knew about and exploited the Heartbleed Bug - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
-	<div id="post">
-		<div id="article-title">
-			<h1><?php 
-			echo("<a href=\"".$json['link']."\"</a>");
-			echo($json['title']);
-			?></a></h1>
-			<small style="font-style:italic;"><?php
-			echo("Posted on ".$json['published']);
-			?></small>
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/heartbleed-and-the-nsa/">The NSA knew about and exploited the Heartbleed Bug</a></h1>
+					<small style="font-style:italic;">Posted on Sat, 12 Apr 2014 at 07:25 PM</small>
+				</div>
+				<div class="article-content">
+					<p>The <a href="http://www.cnet.com/news/heartbleed-bug-what-you-need-to-know-faq/">Heartbleed SSL</a> bug is <a href="http://time.com/59390/heartbleed-internet-security-routers/">no joke</a>. If you don't know, SSL is the security mechanism that websites use for HTTPS security. Your bank, your Facebook account, your mortgage lender, your online stores, your home router, everything uses HTTPS for encryption and this bug is something that compromises all of that, and its been there for 3 years! It was a bug that the developers, had they discovered it sooner, they would have patched it immediately, but they didn't know about it. Turns out the NSA did know about it, and they chose to keep it a secret, and worse to exploit it.</p>
+<p><a href="http://www.bloomberg.com/news/2014-04-11/nsa-said-to-have-used-heartbleed-bug-exposing-consumers.html">Reports claim</a> that the NSA not only knew, for years I might add, about this bug, but they exploited it to get our private information. Its almost hilarious how much they were able to acquire.</p>
+<p><a href="http://www.marco.org/2014/04/11/nsa-knew-of-heartbleed">Marco Arment</a> gave his input on this, and I mostly agree with him on this. The NSA exploits and undermines the security of major tech companies and infrastructures to steal information, to infringe on privacy, and to <a href="http://www.washingtonpost.com/wp-srv/special/national/black-budget/">sabotage the backbones of the internet</a> in order to get this information. To me, the worst thing about the NSA, <em>aside</em> from the fact that they maliciously steal our private data and take no heed as to what they steal, is that after all that, the NSA refuses to be helpful, they refuse to use their powers to do anything good.</p>
+<p>The NSA knew about this bug years ago, <em>years ago</em>, and did nothing. They took advantage of it instead of fixing it. Software, and security won't get better without the people who discover these vulnerabilities telling the developers about it so they can, wait for it, FIX IT! We don't know who <em>else</em> was able to steal data during those years and its bad enough that even the NSA did. Wouldn't we all be better off if they used their billions of dollars to help the world's security, and not compromise it? To me that's the real danger of the NSA. They spend billions and act just as maliciously as common hackers. They aren't doing the world any good, they're just assholes.</p>
+<p><span style="font-size:small;">
+Note: What's worse is that the bug has been out there so long and is in so many systems that it will be a long time before its fully patched, and your data is vulnerable the entire time that's the case.
+</span></p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
 		</div>
-		<div class="article-content">
-			<?php 
-			 echo($json['content']);
-			 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-	    	?>
-	    </div>
 	</div>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
 </div>
 </body>
 </html>

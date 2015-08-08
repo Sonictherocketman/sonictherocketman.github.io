@@ -1,3 +1,6 @@
+slug: clarifying-structure
+published: Thu, 26 Feb 2015 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Clarifying Structure
 
 author: Brian Schrader

@@ -1,98 +1,1013 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json = json_decode($json_str, true);
-$articles = $json['articles'];
-$collections = $json['collections'];
-$other = $json["other"];
-?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Archive - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Archive - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
 <body>
-<div id="content">
-	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+	<div id="content">
+		<div id="title-bar">
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+				<!-- Links -->
+				<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+				<span class="menuBarItem"><a href="/about/">About</a></span>
+				<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+				<br>
+				<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+			</span>	
+			<!-- Mobile Nav -->
+			<div class="mobile-nav">
+				<!-- Name and Author -->
+				<div style="text-align:center; margin-top:-20pt;">
+					<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+				</div>
+				<!-- Links -->
+				<div style="margin-top:2%;">
+					<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+					<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+					<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+					<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+				</div>
+			</div>	
+		</div>
+		<div id="post-list">
+			<div class="post">
+				<div class=article-title>
+					<h1>Articles</h1>
+				</div>
+				<div class="article-content">
+					<table style="margin-right:auto; margin-left:auto;">
+						<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 19 Jul 2015 at 10:59 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/hiking-the-pacific-crest-trail/">Hiking the Pacific Crest Trail</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 09 Jun 2015 at 02:56 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/wwdc-and-open-source-swift/">WWDC and Open Source Swift</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 25 May 2015 at 08:20 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/software-engineering/">Software 'Engineering'</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 28 Apr 2015 at 01:39 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/python-multiprocessing-and-unittest/">Python multiprocessing and unittest</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 25 Apr 2015 at 10:29 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblog-crawler-v141/">Microblog Crawler v1.4(.1)</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 08 Apr 2015 at 08:09 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/pep-484---type-hints-for-python/">PEP 484 - Type Hints for Python</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 31 Mar 2015 at 10:31 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/patreon/">Patreon</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 31 Mar 2015 at 10:09 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblog-crawler-diary-signals-follow-up/">Microblog Crawler Diary: Signals Follow Up</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 31 Mar 2015 at 09:49 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/priming-the-pump/">Priming the Pump</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 10 Mar 2015 at 05:26 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/roderick-on-the-line-space-exploration-is-human-nature/">Roderick on the Line: Space Exploration is Human Nature</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 08 Mar 2015 at 08:01 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/why-everyone-was-wrong-about-net-neutrality/">Why Everyone Was Wrong About Net Neutrality</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 08 Mar 2015 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblog-crawler-v13-released/">Microblog Crawler v1.3 Released</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 26 Feb 2015 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/clarifying-structure/">Clarifying Structure</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 24 Feb 2015 at 03:07 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblog-crawler-diary-signals/">Microblog Crawler Diary: Signals</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 22 Feb 2015 at 11:20 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblog-crawler-diary-timezones/">Microblog Crawler Diary: Timezones</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 20 Jan 2015 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/elon-musk-is-crazy/">Elon Musk is Crazy</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 15 Jan 2015 at 05:53 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/fight-for-space---why-space/">Fight for Space - Why Space?</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 15 Jan 2015 at 05:28 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/what-if-pools-on-the-moon/">What-If: Pools on the Moon</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 15 Jan 2015 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-results-of-spacexs-attempt-to-recover-falcon/">The Results of SpaceX's Attempt to Recover Falcon</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 02 Jan 2015 at 07:02 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/time-machine-transfer-trouble-resolved/">Time Machine Transfer Trouble Resolved</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 31 Dec 2014 at 04:31 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblogger-wiki-and-issues-are-live/">Microblogger Wiki and Issues are Live!</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 31 Dec 2014 at 03:36 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/time-machine-transfer-trouble/">Time Machine Transfer Trouble</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 13 Dec 2014 at 07:16 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblogger-status-updates-and-more/">Microblogger status updates and more</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 04 Dec 2014 at 08:56 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/what-if-sending-money-was-as-easy-as-airdrop/">What if sending money was as easy as AirDrop</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 03 Dec 2014 at 11:47 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/hypervelocity-stars/">Hypervelocity Stars</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 03 Dec 2014 at 11:11 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/dave-winer-on-donating-to-wikipedia/">Dave Winer on Donating to Wikipedia</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 29 Nov 2014 at 08:35 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microblog-crawler-v10-released/">Microblog Crawler v1.0 Released</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 28 Nov 2014 at 06:04 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/star-wars-vii-teaser-and-thoughts-on-the-new-lightsabers/">Star Wars VII Teaser (and thoughts on the new lightsabers)</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 24 Nov 2014 at 02:31 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/iss-livestream-now-in-720p-hd/">ISS Livestream now in 720p HD</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 23 Nov 2014 at 06:51 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/ursula-k-le-guin-at-the-national-book-awards/">Ursula K. Le Guin At The National Book Awards</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 16 Nov 2014 at 06:11 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/philae-breaks-our-hearts/">Philae Breaks our Hearts</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 12 Nov 2014 at 07:39 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/philae-lands-on-comet-67p/">Philae Lands on Comet 67P</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 10 Nov 2014 at 08:34 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/obama-urges-fcc-to-reclassify-isps-as-utilities/">Obama "urges" FCC to reclassify ISPs as Utilities</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 09 Nov 2014 at 07:30 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-mac-mini-server-configuration-is-dead/">The Mac Mini Server Configuration is Dead</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 04 Nov 2014 at 09:19 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/new-parallel-universe-theory-proposed/">New Parallel Universe Theory Proposed</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 02 Nov 2014 at 11:28 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/fccs-tom-wheeler-is-trying-to-open-up-cable-tv/">FCC's Tom Wheeler is trying to open up cable TV</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 02 Nov 2014 at 10:22 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/what-is-your-blog-about/">What is your blog about?</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 02 Nov 2014 at 10:03 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/short-form-blogging/">Short-form blogging</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 02 Nov 2014 at 09:41 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/twitter-is-not-a-replacement-for-blogs/">Twitter is not a replacement for blogs</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 24 Oct 2014 at 09:09 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-professional-sharer/">The Professional Sharer</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 24 Oct 2014 at 08:29 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/att-and-apple-sim/">AT&T and Apple SIM</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 21 Oct 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/podcast-recommendations/">Podcast Recommendations</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 20 Oct 2014 at 08:30 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/twitters-peace-offering-to-developers-is-meaningless/">Twitter's "peace offering" to developers is meaningless</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 19 Oct 2014 at 11:32 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/making-rss-real-time/">Making RSS Real-Time</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 14 Oct 2014 at 06:37 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/site-transferred-email-is-next/">Site transferred. Email is next</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 12 Oct 2014 at 09:32 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/some-advice-on-programming/">Some advice on programming</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 11 Oct 2014 at 10:04 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/thinking-about-redoing-my-blog-engine/">Thinking about redoing my blog engine</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 11 Oct 2014 at 09:42 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-unremarkable-yesterday/">The unremarkable yesterday</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 07 Oct 2014 at 03:22 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/balancing-work-fun-and-work-fun/">Balancing Work, Fun, and Work-Fun</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 02 Oct 2014 at 02:41 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/backblaze-hard-drive-reliability-report/">Backblaze Hard Drive Reliability Report</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 29 Sep 2014 at 12:16 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-open-microblog-standard/">The Open Microblog Standard</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 28 Sep 2014 at 10:34 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/thoughts-on-the-iphone-6/">Thoughts on the iPhone 6</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 14 Sep 2014 at 08:01 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-trouble-with-harvard/">The Trouble With Harvard</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 14 Sep 2014 at 02:04 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/space-junk/">Space Junk</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 07 Sep 2014 at 02:34 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/chris-radcliff-on-twitters-timeline-changes/">Chris Radcliff on Twitter's Timeline Changes</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 06 Sep 2014 at 10:20 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/casey-liss-on-womens-experience-in-gaming/">Casey Liss on Women's Experience in Gaming</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 31 Aug 2014 at 09:53 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/how-to-stimulate-the-open-web/">How to stimulate the open web</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 31 Aug 2014 at 01:45 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/why-its-impossible-to-make-plans-anymore/">Why It's Impossible to Make Plans Anymore</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 31 Aug 2014 at 01:31 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/brent-simmons-on-app-performance-tuning/">Brent Simmons on App Performance Tuning</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 30 Aug 2014 at 11:10 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/numba-compiling-python-using-llvm-the-way-webkit-compiles-javascript/">Numba: Compiling Python Using LLVM the way WebKit Compiles JavaScript</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 28 Aug 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/waffle-brent-and-marco-on-social-networks/">Waffle, Brent and Marco on Social Networks</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 25 Aug 2014 at 12:01 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/twitter-and-the-open-web/">Twitter and the Open Web</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 24 Aug 2014 at 04:53 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/roderick-on-the-line/">Roderick on the Line</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 18 Aug 2014 at 01:45 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/notifications/">Notifications</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 17 Aug 2014 at 09:50 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/book-recommendation-the-stormlight-archive/">Book Recommendation: The Stormlight Archive</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 17 Aug 2014 at 01:27 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/10-years-of-podcasts/">10 Years of Podcasts</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 17 Aug 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/changing-app-behavior-server-side/">Changing App Behavior Server-Side</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 16 Aug 2014 at 08:32 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/humans-need-not-apply/">Humans Need Not Apply</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 12 Aug 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/permanence-revisited/">Permanence Revisited</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 11 Aug 2014 at 06:39 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/how-the-other-half-works-an-adventure-in-the-low-status-of-software-engineers/">How the Other Half Works: an Adventure in the Low Status of Software Engineers</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 11 Aug 2014 at 06:08 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/first-person-hyperlapse-videos-by-microsoft/">First Person Hyperlapse Videos by Microsoft</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 05 Aug 2014 at 01:54 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/into-the-depths-of-python/">Into the Depths of Python</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 25 Jul 2014 at 05:29 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/you-need-math-to-program/">You need math to program</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 16 Jul 2014 at 02:46 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/forest-through-the-trees/">Forest Through the Trees</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 16 Jul 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/letter-to-the-fcc/">Letter to the FCC</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 15 Jul 2014 at 06:19 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/re-permanence/">Re: Permanence</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 15 Jul 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-internets-own-boy/">The Internet's Own Boy</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 22 Jun 2014 at 05:05 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/its-just-a-phone/">It's just a Phone</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 05 Jun 2014 at 05:32 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/harrys-razors-review/">Harry's Razors Review</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 04 Jun 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/so-i-went-flying-yesterday/">So I Went Flying Yesterday</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 30 May 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/multithreading-in-java/">Multithreading in Java</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 10 May 2014 at 06:39 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/nasa-streams-the-iss-view-of-earth-24-7/">NASA Streams the ISS View of Earth 24/7</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 05 May 2014 at 11:51 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/rocketsim/">Rocket Simulation</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 02 May 2014 at 03:43 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/programming-sucks/">Programming Sucks</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 01 May 2014 at 09:11 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/csu-tuition/">CSU Tuition</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 26 Apr 2014 at 09:40 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/dont-blow-up-the-internet/">Don't Blow Up the Internet</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Fri, 25 Apr 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/help-protect-the-internet/">Help Protect the Internet</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 21 Apr 2014 at 09:23 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/os-x-new-look/">OS X's New Look</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 21 Apr 2014 at 04:28 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/pokemon/">Pokemon</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 20 Apr 2014 at 04:56 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/roman-food/">Roman Food</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 16 Apr 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/my-ios-8-wishlist/">My iOS 8 Wishlist</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 15 Apr 2014 at 07:33 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/bloodmoon-eclipse/">BloodMoon Eclipse Photos</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 15 Apr 2014 at 05:09 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/apple-intel-and-matt-richman/">Apple, Intel, and Matt Richman</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sat, 12 Apr 2014 at 07:25 PM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/heartbleed-and-the-nsa/">The NSA knew about and exploited the Heartbleed Bug</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Mon, 24 Mar 2014 at 02:43 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/the-new-new-cms/">The <i>New</i> New CMS</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 18 Mar 2014 at 09:35 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/if-only-i-had-a-podcast/">If Only I had a Podcast</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Tue, 11 Feb 2014 at 12:00 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/microsoft-and-a-unix-based-windows/">Microsoft and a Unix-based Windows</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Thu, 19 Sep 2013 at 02:35 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/markdown-syntax-request-math-syntax/">MarkDown Syntax Feature Request: Math Syntax</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 07 Jul 2013 at 02:35 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/photoStream-apples-beautiful-convoluted-dream/">PhotoStream: Apple's beautiful, convoluted dream</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 07 Jul 2013 at 02:35 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/re-comic-con/">Re: Comic-Con</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Sun, 07 Jul 2013 at 02:35 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/writing-for-a-website-you-built-from-scratch/">Writing for a website you built from scratch</a>
+	</td>
+</tr>
+<tr>
+	<td>
+		<small style="font-style:italic;">Wed, 12 Dec 2012 at 02:35 AM</small>
+	</td>
+	<td>&nbsp;&nbsp;</td>
+	<td>
+		<a href="/archive/a-very-special-sweater/">A Very Special Sweater</a>
+	</td>
+</tr>
+					</table>
+				</div>
+			</div>
+		<div class="post">
+			<div class=article-title>
+				<h1>Other Projects</h1>
+			</div>
+			<div class="article-content">
+				<table style="margin-right:auto; margin-left:auto;">
+					<tr>
+						<td>
+							<a href="/other-projects/adventures_in_dnd">Adventures in Dungeons and Dragons</a>						
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>			
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
 	</div>
-	<div id="post-list">
-		<div class="post">
-			<div class=article-title>
-				<h1>Articles</h1>
-			</div>
-			<div class="article-content">
-				<table style="margin-right:auto; margin-left:auto;">
-				<?php for($i = $articles-1; $i >= 0; $i--) { 
-					$path = $_SERVER['DOCUMENT_ROOT'] . $json['path'.$i] . "metadata.json";
-					$foo = file_get_contents($path);
-					$articleJson = json_decode($foo, true);
-				?>
-					<tr>
-						<td>
-							<small style="font-style:italic;">
-							<?php
-								echo($articleJson['published']);
-							?>
-							</small>
-						</td>
-						<td>&nbsp;&nbsp;</td>
-						<td> 
-							<?php 
-								echo("<a href=".$articleJson['link'].">");
-								echo($articleJson['title']."</a>");
-							?>
-						</td>
-					</tr>
-				<?php } ?>
-				</table>
-			</div>
-		</div>
-		<div class="post">
-			<div class=article-title>
-				<h1>Image Collections</h1>
-			</div>
-			<div class="article-content">
-				<table style="margin-right:auto; margin-left:auto;">
-				<?php
-					foreach(array_keys($collections) as $key) {
-						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/".$collections[$key]."/metadata.json"), true);
-				?>
-					<tr>
-						<td>
-							<?php echo("<a href=\"http://brianschrader.com/".$collections[$key]."\">".$foo['title']."</a>"); ?>
-						</td>
-					</tr>
-				<?php
-					}
-				?>
-				</table>
-			</div>
-		</div>
-		<div class="post">
-			<div class=article-title>
-				<h1>Other Things</h1>
-			</div>
-			<div class="article-content">
-				<table style="margin-right:auto; margin-left:auto;">
-				<?php
-					foreach($other as $post) {
-						$foo = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'].$post."/metadata.json"), true);
-				?>
-					<tr>
-						<td>
-							<?php echo("<a href=\"".$post."\">".$foo['title']."</a>"); ?>
-						</td>
-					</tr>
-				<?php
-					}
-				?>
-				</table>
-			</div>
-		</div>
-		<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-	</div>
-</div>
 </body>
 </html>

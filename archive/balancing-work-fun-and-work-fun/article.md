@@ -1,3 +1,6 @@
+slug: balancing-work-fun-and-work-fun
+published: Tue, 07 Oct 2014 at 03:22 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Balancing Work, Fun, and Work-Fun
 author: Brian Schrader
 tags: work, lifestyle

@@ -1,43 +1,94 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>The Open Microblog Standard - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
 		<article>
-			<div id="post">
-				<div id="article-title">
-					<h1><?php 
-					echo("<a href=\"".$json['link']."\"</a>");
-					echo($json['title']);
-					?></a></h1>
-					<small style="font-style:italic;"><?php
-					echo("Posted on ".$json['published']);
-					?></small>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/the-open-microblog-standard/">The Open Microblog Standard</a></h1>
+					<small style="font-style:italic;">Posted on Mon, 29 Sep 2014 at 12:16 AM</small>
 				</div>
 				<div class="article-content">
-					<?php 
-					 echo($json['content']);
-					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-					?>
+					<p>A few weeks ago I began drafting a new standard for open, platform independent communication service. You can think of it as Twitter meets RSS. Today I'm making it public (the GitHub repo has been public for almost a week now, but I haven't told anyone). </p>
+<p>Twitter, in my eyes <a href="http://globalspin.com/2014/09/communication-news-entertainment/">and in the eyes of others</a> is <strong>not</strong> a social network, its a communications service (like the phone company). With Twitter announcing that it will soon become like Facebook, in that it shows you what it wants rather than what you want, I thought the time was perfect to begin looking for alternatives. So far few exist, and those few that do are just lined up to be another Twitter or Facebook. This led me to try coming up with my own solution.</p>
+<p>The Open Microblog standard is an outline for a potential service(s) that provide features similar to Twitter, but in a way that is not controlled by a central entity. Its based on RSS and, excluding some additional information, should work with most RSS readers already. It adds the ability to reply to, message, and converse with people using a simple format. A user's data is 100% public, and users can migrate to any open microblog service provider if their current choice no longer fits their needs or goals all without losing followers, their block list, or the ability to talk with their friends. </p>
+<p>Here's an excerpt from the Open Microblog Spec:</p>
+<blockquote>
+<p>In recent years our internet communication has been increasingly controlled by single private companies. Facebook and Twitter account for an enormous percentage of online communication... </p>
+<p>The Open Microblog is a proposed standard for an open and easy to implement internet communication mechanism. It is based on the success of RSS and is platform independent. It allows for most of the features that services like Twitter and Facebook provide but in an open way.</p>
+</blockquote>
+<p>I encourage any developers reading this to please check out the spec, read through it, submit pull requests, etc. The spec is still technically in development and I'd love your feedback.</p>
+<p>The first Open Microblog provider is in development, and any developers looking to implement a provider themselves, please <a href="/about">get in contact with me</a>. You don't have to since I don't control anything, but I'd love to hear your plans so that we can work together to create a better, more open web for everyone.</p>
+<p><a href="https://github.com/Sonictherocketman/Open-Microblog">The Open Microblog Spec &#8594;</a></p>				
 				</div>
 			</div>
 		</article>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

@@ -1,43 +1,106 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str);
-$json = json_decode($json_str, true);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Microblog Crawler Diary: Timezones - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
 		<article>
 			<div class="post">
 				<div class="article-title">
-					<h1><?php
-					echo("<a href=\"".$json['link']."\"</a>");
-					echo($json['title']);
-					?></a></h1>
-					<small style="font-style:italic;"><?php
-					echo("Posted on ".$json['published']);
-					?></small>
+					<h1><a href="/archive/microblog-crawler-diary-timezones/">Microblog Crawler Diary: Timezones</a></h1>
+					<small style="font-style:italic;">Posted on Sun, 22 Feb 2015 at 11:20 PM</small>
 				</div>
 				<div class="article-content">
-					<?php
-					 echo($json['content']);
-					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-					?>
+					<p>Akin to <a href="http://inessential.com/vespersyncdiary">Brent Simmons' Vesper Sync Diary</a> I think I'm gonna start posting updates and concerns that I have as I continue to develop the various parts of Microblogger. </p>
+<p>So far, my biggest issue, aside from learning <a href="http://flask.pocoo.org">Flask</a>, has been constructing the user's home timeline. For those who are unfamiliar with Microblogger, basically the home timeline looks just like Twitter's timeline. It consists of a reverse chronological list of posts by people that the user follows. Since Microblogger has to construct this timeline from disparate XML feeds, I have to account for future developers not including timezones in their <code>pubdate</code> strings. </p>
+<p>Here's the basic problem. Consider that I have a correctly formatted microblog post:</p>
+<pre><code>&lt;item&gt;
+    &lt;guid&gt;{some guid}&lt;/guid&gt;
+    &lt;description&gt;Hi!&lt;/description&gt;
+    &lt;pubdate&gt;Wed, Feb 28 2014 08:00:00 EST&lt;/pubdate&gt;
+&lt;/item&gt;
+</code></pre>
+<p>Now consider that I have an incorrectly formatted one:</p>
+<pre><code>&lt;item&gt;
+    &lt;guid&gt;{some guid}&lt;/guid&gt;
+    &lt;description&gt;Hi!&lt;/description&gt;
+    &lt;pubdate&gt;Wed, Feb 28 2014 05:01:00&lt;/pubdate&gt;
+&lt;/item&gt;
+</code></pre>
+<p>Which post comes first? Initially you would think the top one would come first since it was posted after the second. However if we know that the second was posted in Pacific Standard Time, then it should actually come first, and not 3 hours behind. Accounting for bad formatting is arguably something I should hold off on doing until I encounter it, and I've thought about that a lot. However, I think I've come up with a very simple way to work around this problem for a large percentage of cases where this happens.</p>
+<p>My workaround is to use the timezone present in the HTTP response timestamp. </p>
+<pre><code>HTTP/1.1 GET
+Date: Wed, Feb 28 2014 08:31:00 EST
+</code></pre>
+<p>This will tell me the timezone that the server is in, and from there I can assume the most likely timezone for the <code>pubdate</code> is the same.</p>
+<p>So that's how I'm proceeding: If there is no timezone present in the <code>pubdate</code>, then use the timezone from the HTTP response header. </p>				
 				</div>
 			</div>
 		</article>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

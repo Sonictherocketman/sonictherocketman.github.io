@@ -1,7 +1,9 @@
+slug: csu-tuition
+published: Thu, 01 May 2014 at 09:11 PM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: CSU Tuition 
 author: Brian Schrader
 tags: tuition, college
-slug: csu-tuition
 status: publish
 
 I was doing some quick research, and I found this interesting.

@@ -1,40 +1,100 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json = json_decode($json_str, true);
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>PhotoStream: Apple's beautiful, convoluted dream - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
-	<div id="post">
-		<div id="article-title">
-			<h1><?php 
-			echo("<a href=\"".$json['link']."\"</a>");
-			echo($json['title']);
-			?></a></h1>
-			<small style="font-style:italic;"><?php
-			echo("Posted on ".$json['published']);
-			?></small>
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/photoStream-apples-beautiful-convoluted-dream/">PhotoStream: Apple's beautiful, convoluted dream</a></h1>
+					<small style="font-style:italic;">Posted on Sun, 07 Jul 2013 at 02:35 AM</small>
+				</div>
+				<div class="article-content">
+					<p>All the yearly hype before WWDC has gotten me thinking. What do we want from iOS this year? What do we want Apple to fix? There's been a lot of interesting talk about this topical ready. Marco Arment talked about it on his show <a href="http://atp.fm">Accidental Tech Podcast</a> and <a href="http://imore.com">iMore</a>has talked about the "iOS 7 Wish List" already too, but I wanted to give my take on the whole thing, specifically in regards to PhotoStream.</p>
+<p>PhotoStream has been with us now since iOS 5 (2011) and I think I'm right when I say that everyone was thrilled when they heard Steve announce the feature, but once it arrived, it kind of fell out with a lot of users. Why? Because its confusing. The consumer has a very difficult time grasping PhotoStream, and, since iOS 6, Apple confused people even more with the whole "Shared PhotoStream" thing. This whole mess has spiraled into chaos as Apple added features to a core that wasn't finished yet.</p></p>
+<h2><u>What's Wrong?</u></h2>
+
+<p><img class="body-image-right" width="30%" src="http://images.biteofanapple.com/blog/photostream-ios6.png" title="What PhotoStream looks like now.">Other than having to <a href="http://www.imore.com/photo-stream-why-so-complicated">deal with iPhoto</a>,(which is a whole other issue that I won't delve into)PhotoStream's main problems are in its presentation. As far as I seeit, there is nothing drastically wrong with PhotoStream internally, it's only confusing in the way that it is presented to the user.</p><p>The goal of PhotoStream is simple. Take a picture and PhotoStream will put that picture on all of your other devices. It's beautiful really. Majestically simplistic. If only it were presented that way. Instead, anyone opening up Photos.app on their iPhone  see's the PhotoStream tab at the bottom, and the Albums tab right next to it. This is a nightmare for most users. What is the difference between the tabs? Why are some of my pictures there and some aren't? What are Shared PhotoStreams? Why are those different from Albums? Don't both of these tabs do the same thing? This whole mess could be eliminated if the PhotoStream and Albums tabs were combined,not just in a mash up, but in a little more elegant of a way. We all know how PhotoStream looks, so I won't take any more time explaining it, let's just leave it at "confusing", and "not elegant".</p><p>Another great feature of PhotoStream is the "Shared PhotoStream" feature. This lets you organize your photos in "Streams" and share them with other people, or publish them to a private website. I personally love this feature and my family uses it all the time to share photos. My biggest complaint is that if I have this awesome shared stream, why do I still need the "Albums" tab? (I know that this is mostly for iTunes sync reasons, as pictures synced from iTunes go there, but there is no reason for this anymore). Shared PhotoStreams and Albums do the same thing: Organize photos! Why can't they just be on the same tab?</p><h2><u>A Truly Elegant Solution</u></h2><img class="body-image-right" width="30%" src="http://images.biteofanapple.com/blog/photostream-ios7-concept2"title="How PhotoStream could look if it was part of the Camera Roll in iOS 7. Notice the little clouds."><p>Let's boil PhotoStream down to its essence, what does it do? It syncs camera roll photos between devices. Ok, so why not integrate PhotoStream with the Camera Roll? Lets look at an ideal Photos experience.</p>
+<p><u><b>PhotoStream in iOS 7</b></u><br>Instead of a confusing second tab, that for some reason is out of sync with the first one,lets look at a concept like the one here. Instead of two tabs, we have the plain camera roll but with a little cloud, similar to what iTunes does with music. The pictures with a cloud are in the cloud (simple enough)! Photos would be uploaded to the cloud just like they are now and until they are fully uploaded, they would remain cloud-less. These photos would be organizable in shared photo streams and be instantly sharable with others. </p>
+<p>Also, since this is our idealized version, we changed the main tabs too! Gone are the old Photostream, and Albums tabs. Now they are combined into on beautiful Photos tab.Shared Photostreams are treated just like albums and can be shared just as they can be now. Pictures taken in the Camera Roll are uploaded to the cloud and can be organized into these streams.Gone is the old 3 different screen malarky, and in its place is one screen, one simple screenwith all the previous information bundled up nicely. Albums are PhotoStreams and PhotoStreams are Albums.</p>
+<p><img class="body-image-right" width="30%" src="http://images.biteofanapple.com/blog/photosapp-ios7-concept2"title="What the new Albums tab could look like in iOS 7."></p>
+<h2><u>The Wrap Up</u></h2>
+
+<p>Apple announced PhotoStream in the same manor as they did iCloud, as a background service that you knew was there, but didn't have to worry about. It just worked. I think they pulled it off well in certain aspects like iCloud Backup which runs every night and you'll never need to worry about. PhotoStream was supposed to be the same way, instead though, we got an addition to the Photos app that only confused the majority of users. In our concept though, we have removed the additional tabs, and replaced it with a simple UI tweak that lets the user know whats going on without confusing them. We have eliminated the confusion between Albums and PhotoStreams, we have done what Apple prizes most; we made it simpler.
+
+<u><b>Update:</b></u>
+
+It looks like the ideal Photos.app experience is already present in iOS. Its part of the photo picker for 3rd party apps. Hopefully, they can expand on this to make the whole photos experience a lot smoother. </p>
+
+<p><small>TL;DR: PhotoStream looks bad, I thought of how to fix it. Go look at the pictures to see how.</small></p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
 		</div>
-		<div class="article-content">
-			<?php 
-			 echo($json['content']);
-			 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-	    	?>
-	    </div>
 	</div>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
 </div>
 </body>
 </html>

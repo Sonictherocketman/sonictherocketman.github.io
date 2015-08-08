@@ -1,43 +1,87 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Changing App Behavior Server-Side - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
 		<article>
-			<div id="post">
-				<div id="article-title">
-					<h1><?php 
-					echo("<a href=\"".$json['link']."\"</a>");
-					echo($json['title']);
-					?></a></h1>
-					<small style="font-style:italic;"><?php
-					echo("Posted on ".$json['published']);
-					?></small>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="http://brianschrader.com/archive/changing-app-behavior-server-side/">Changing App Behavior Server-Side</a></h1>
+					<small style="font-style:italic;">Posted on Sun, 17 Aug 2014 at 12:00 AM</small>
 				</div>
 				<div class="article-content">
-					<?php 
-					 echo($json['content']);
-					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-					?>
+					<p>We've all been there: you ship your app, it passes Apple's App Review, then it's in the Store... and <em>then</em> you find a bug. A small bug, but one you should fix ASAP. Whether it's some issue with download behavior, the color of some box, the font somewhere is too small, or your French localization of some text is overflowing some button (like what <a href="http://www.red-sweater.com">Daniel Jalkut</a> talked about on <a href="http://www.coreint.org">Core Intuition</a> this week), either way, it's a pain. You fix the problem locally, and submit a new build, but Apple still takes a week to review it. Meanwhile your users are having to deal with a bug that you've already solved. It's a common, frustrating and often a sales affecting problem.</p>
+<p>On a <a href="http://atp.fm/episodes/74">recent episode of ATP</a>, <a href="http://www.marco.org">Marco</a> mentioned that he could change quite a few features of the app from the server-side. Combine this with <a href="http://inessential.com">Brent Simmons'</a> way of building <a href="http://vesperapp.co">Vesper</a> (i.e. using plists to configure colors, fonts, item sizes, etc) and it seems to me that it should be entirely possible to make iOS apps that are mostly configurable from the server-side. This got me thinking. Why not build the app to download it's configuration file (i.e. plist, or Localization.strings file) remotely? Sure it's not as convenient as Apple's built in frameworks sometimes, but it would allow developers to fix features, colors, themes, and localization issues all remotely, and instantly.</p>
+<p>I haven't looked into the technical issues with this, and there is an argument to be made that not all iOS devs want to run a server just to host their .strings files, but if you're already running a server for some other functionality in your app, it's basically cost free and avoids quite a few small but irritating problems.</p>
+<p>My motto: If it can be on the server, it should be on the server. The client doesn't need to worry about it, it just needs to display it.</p>				
 				</div>
 			</div>
 		</article>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="http://brianschrader.com/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

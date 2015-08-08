@@ -1,43 +1,92 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str);
-$json = json_decode($json_str, true);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Software 'Engineering' - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
 		<article>
 			<div class="post">
 				<div class="article-title">
-					<h1><?php
-					echo("<a href=\"".$json['link']."\"</a>");
-					echo($json['title']);
-					?></a></h1>
-					<small style="font-style:italic;"><?php
-					echo("Posted on ".$json['published']);
-					?></small>
+					<h1><a href="/archive/software-engineering/">Software 'Engineering'</a></h1>
+					<small style="font-style:italic;">Posted on Mon, 25 May 2015 at 08:20 PM</small>
 				</div>
 				<div class="article-content">
-					<?php
-					 echo($json['content']);
-					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-					?>
+					<p><a href="http://benlog.com/author/benadida/">Ben Adida:</a></p>
+<blockquote>
+<p>...most people have a pretty good idea of the trust they're placing in their doctor, while they have almost no idea that every time they install an app, enter some personal data, or share a private thought in a private electronic conversation, they're trusting a set of software engineers who have very little in the form of ethical guidelines.</p>
+<p>Where's our Hippocratic Oath, our "First, Do No Harm?"</p>
+</blockquote>
+<p>I've <a href="https://twitter.com/sonicrocketman/status/572466355682689024">talked about this before</a>. Software Engineering is unlike any other field that calls itself 'Engineering'. Unlike licensed engineers in other fields, there's no code that binds Software Engineers to a strict set of ethics, and no state certification to revoke when Software Engineers are found malpracticing. This kind of lax attitude toward development has indeed helped the industry boom the way it has, but <a href="https://www.youtube.com/watch?v=k2h2lvhzMDc">success hides problems</a>.</p>
+<p>It's shocking really, coming from an education in Aerospace Engineering, the lack of precautions that a lot of software engineers take when designing their systems. In school, from the beginning, we had concepts like "factors of safety", "margins of error", and "graceful failure" drilled into us. Included in our final project &#151;creating a design for a supersonic business jet&#151; was the requirement that it be able to complete its entire mission with One Engine Inoperable (OEI). If one of the two engines burst into flames at takeoff, the plane still had to be able to fly. It's these kinds of regulations (FAA in this case) that enable commercial airlines to have the amazing safety record they do; people's lives are at stake. A professor one told my class, "These calculations are important. If your numbers aren't right, someone could die." </p>
+<p>Personal data is extremely valuable, and precious to the person it belongs to. Although their life may not be at stake, their finances, their livelihood, and their personal affairs might be. Software has reached a level of pervasiveness (and arguably did so years ago) that an engineer's decision (or lack thereof) can affect millions of people. If any other branch of Engineering tried to design and build a something that would affect that many people (their data or their wellbeing) you'd bet they'd be licensed. </p>
+<p><a href="http://benlog.com/2015/05/23/the-responsibility-we-have-as-software-engineers/">the responsibility we have as software engineers &#8594;</a></p>				
 				</div>
 			</div>
 		</article>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

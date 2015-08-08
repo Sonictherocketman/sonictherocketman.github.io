@@ -1,5 +1,7 @@
-title: Roman Food
 slug: roman-food
+published: Sun, 20 Apr 2014 at 04:56 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
+title: Roman Food
 author: Brian Schrader
 status: publish
 

@@ -1,39 +1,88 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json = json_decode($json_str, true);
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Microsoft and a Unix-based Windows - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
-	<div id="post">
-		<div id="article-title">
-			<h1><?php 
-			echo("<a href=\"".$json['link']."\"</a>");
-			echo($json['title']);
-			?></a></h1>
-			<small style="font-style:italic;"><?php
-			echo("Posted on ".$json['published']);
-			?></small>
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/microsoft-and-a-unix-based-windows/">Microsoft and a Unix-based Windows</a></h1>
+					<small style="font-style:italic;">Posted on Tue, 11 Feb 2014 at 12:00 AM</small>
+				</div>
+				<div class="article-content">
+					<p>Does it make sense for Microsoft to develop, and ship a future Windows OS that is Unix based? To date, Microsoft is the only major player in the Operating System game to have a non-Unix based system. I don&#39;t think that such a switch would help Microsoft in any immediate way, and it would definitely kill compatibility and enterprise support, destroying a lot of Microsoft&#39;s core business. </p>
+<p>In truth, I&#39;m not trying to draw a parallel to Apple&#39;s Unix switch, now almost a decade and a half behind us, but I am trying to look at the future of the computer industry as a whole. Are there any substantial benefits from having the same &quot;core&quot; in every major computing system? The implementations of these systems would be drastically different surely, and there would be no cross compatibility as a result, but I&#39;m not sure that&#39;s the point. </p>
+<p>Computers are very mature now. Their early days were filled with turmoil and garage-based teams building entire consumer computers from the ground up. This, obviously, led to an enormously diverse implementation between any major competitor and its rivals, but now &quot;the world runs on Unix&quot;<a href='#note'>*</a>, or at least the non-Windows majority does. Is it time for Microsoft, and the industry as a whole to decree a common ancestor and build on that, or should Microsoft continue to develop their own system for the foreseeable future?</p>
+<p>Microsoft has spent decades building  their development environment, and indeed their entire ecosystem around their Windows OS[&#39;s] and their current system is well evolved and supported, and I realize that this move, however hypothetical it may be, would destroy their decades of work and their business. I just feel that since the whole world has gone Unix, Microsoft could be on the losing side if they stay the course, it may lead them into dangerous waters.</p>
+<p><b>Update:</b> After some more thought, I realize that using Unix as the common ancestor of the modern computer OS does make the entire industry subscribe to the shortfalls of Unix as well, something John Siracusa would point out to anyone in depth, but it still seems to me, in my gut at least, as a positive step. It would be like an OS standard.</p>
+<div><span id='note' style='font-size:70%;'>* This is a quote from Gruber on this week&#39;s episode of The Talk Show. He discusses the fact that the server world and indeed most of the consumer computing market (i.e. phones, tablets, and some PCs) are running some flavor of Unix (Mac OS X, iOS, Android, Linux, etc). Microsoft holds a huge market share in the traditional PC market, but that&#39;s really the only place where a non-Unix OS still hold majority stake. Linux won the server market, and iOS/Android won the mobile market. </span></div>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
 		</div>
-		<div class="article-content">
-			<?php 
-			 echo($json['content']);
-			 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-	    	?>
-	    </div>
-	</div>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
 	</div>
 </div>
 </body>

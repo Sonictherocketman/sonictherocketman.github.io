@@ -1,3 +1,6 @@
+slug: elon-musk-is-crazy
+published: Tue, 20 Jan 2015 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Elon Musk is Crazy
 author: Brian Schrader
 tags: spacex, elon musk, mars, internet

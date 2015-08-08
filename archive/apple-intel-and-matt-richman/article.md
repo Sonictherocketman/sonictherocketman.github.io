@@ -1,6 +1,8 @@
+slug: apple-intel-and-matt-richman
+published: Tue, 15 Apr 2014 at 05:09 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Apple, Intel, and Matt Richman
 author: Brian Schrader
-slug: apple-intel-and-matt-richman
 status: draft
 
 [Matt Richman][1] brings up a great point. Apple is, in my layman's opinion, too

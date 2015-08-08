@@ -1,41 +1,113 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>So I Went Flying Yesterday - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
-	<div id="post">
-		<div id="article-title">
-			<h1><?php 
-			echo("<a href=\"".$json['link']."\"</a>");
-			echo($json['title']);
-			?></a></h1>
-			<small style="font-style:italic;"><?php
-			echo("Posted on ".$json['published']);
-			?></small>
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="http://brianschrader.com/archive/so-i-went-flying-yesterday/">So I Went Flying Yesterday</a></h1>
+					<small style="font-style:italic;">Posted on Wed, 04 Jun 2014 at 12:00 AM</small>
+				</div>
+				<div class="article-content">
+					<p>Yesterday I went flying, and it was amazing. </p>
+<p>About a week ago, my neighbor, a retired Navy and Airline pilot, knocked on my door and told me he wanted to take me flying. I said sure, but didn't really know what to expect. I knew that he had a small plane at his disposal that he flies when he can, but really nothing more than that. I'd flown in small 15 passenger planes before, but just as a passenger. What I got was something out of this world<a href="#note">*</a>.</p>
+<p><img alt="This was our plane." src="http://brianschrader.com/images/collections/flying-pics/the-plane.jpg" /></p>
+<p>The plane, first off, was much smaller than anything I'd ever flown in before. It was a 1960's Cherokee, 4 seats, and the size of my Subaru. Before we set off the only thought going through my head was, "This is going to be awesome." We did some preflight checks, and packed ourselves in. As we taxied down the runway, my pilot handed me a pre-takeoff checklist. The engine noise now too loud to hear one another, despite being less than a foot apart. We donned headsets and checked off the items on the list one by one. It was almost surreal.</p>
+<p><br /> <br /></p>
+<p><em>ksh</em> "Mags ON?" <em>ksh</em> <br /></p>
+<p><em>ksh</em> "ON. Check." <em>ksh</em> <br /></p>
+<p><em>ksh</em> "Engine at 2000RPM?" <em>ksh</em> <br /></p>
+<p><em>ksh</em> "Check." <em>ksh</em> <br /></p>
+<p><em>ksh</em> "Flaps up?" <em>ksh</em> <br /></p>
+<p><em>ksh</em> "Flaps up. Check." <em>ksh</em> <br /></p>
+<p>A smooth takeoff put us high above the city. The view from the plane was awesome, but there were much better views to come.</p>
+<p>We started off on a leisurely journey from the airfield, and headed north-east, into the mountains, and the views got better and better. We flew high above peaks that I'd hiked. What took me five hours to hike took us five minutes to fly over. Its a strange feeling seeing mountains from above. What made it even more amazing was that we weren't that high above them. At the time, our altitude was ~5,000 ft and climbing. With a quick google search, I can tell you that the peak we passed, the one I'd hiked, is 3,675 ft tall. Passing just 1,325 ft above the peak, I felt like I could almost touch it, like I was looking at a model railroad.</p>
+<p>From there, we headed north. At this point I moved beyond the role of passenger, and closely guarded, into the role of pilot. </p>
+<p><br /><br /></p>
+<p>"Why don't you steer for a bit?"<br /></p>
+<p>"Umm... sure, I guess."<br /></p>
+<p><br /></p>
+<p>My heart was pounding now, and carefully I grabbed hold of the controls, put my hands on the pedals, and took control. I could hear my heart pounding in my ears as I nudged the plane into a 15&deg; turn. Before long, and at my, probably terrified sounding, request he took control once again, and we continued north.</p>
+<p>From our lofty position we saw so many things, it would be silly to list them all. Needless to say, it was beautiful. The weather was perfect, not a cloud for miles. The ride, smooth and calming. The only discomfort was the temperature. These little planes don't have air conditioning and the cabin is cooled by a little vent on the outside of the plane that feeds inward. The air was forceful, but not, by any means, cool. With the sun beating down and warm air rushing through the vents, the cabin got really warm.</p>
+<p>Near the end of our outward journey we flew past Palomar Mountain. It was the greenest thing for miles and stuck out like a jagged spike from the relatively flat valley around it. </p>
+<p><img alt="Palomar Mt." src="http://brianschrader.com/images/collections/flying-pics/palomar.jpg" /></p>
+<p>We landed on an airstrip close by, and had lunch before heading back along the western edge of the valley. </p>
+<p>The way back was a little bumpier than before, but nothing my expert pilot couldn't handle. I always knew thermals were a main cause of turbulence, but I'd never thought that it would be caused by the different colors of the various farmlands below.</p>
+<p>We landed smoothly, and taxied in. The journey was over, and it was barely noon. </p>
+<p>My little three hour adventure was over, and that makes me a bit sad. It was so amazing, and now I have to do it again.</p>
+<p>Thank you neighbor. It was amazing.</p>
+<p><span id="note" style="font-size:small;"></p>
+<p>The full collection of photos are available <a href="http://brianschrader.com/images/collections/flying-pics/">here</a></p>
+<p></span></p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="http://brianschrader.com/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
 		</div>
-		<div class="article-content">
-			<?php 
-			 echo($json['content']);
-			 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-	    	?>
-	    </div>
 	</div>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
 </div>
 </body>
 </html>

@@ -1,43 +1,217 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str); 
-$json = json_decode($json_str, true);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>Podcast Recommendations - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
 		<article>
-			<div id="post">
-				<div id="article-title">
-					<h1><?php 
-					echo("<a href=\"".$json['link']."\"</a>");
-					echo($json['title']);
-					?></a></h1>
-					<small style="font-style:italic;"><?php
-					echo("Posted on ".$json['published']);
-					?></small>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="http://brianschrader.com/archive/podcast-recommendations/">Podcast Recommendations</a></h1>
+					<small style="font-style:italic;">Posted on Tue, 21 Oct 2014 at 12:00 AM</small>
 				</div>
 				<div class="article-content">
-					<?php 
-					 echo($json['content']);
-					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-					?>
+					<p>I saw a few other people posting podcast recommendations and I thought they were lacking a few crucial entries. Here's my list:</p>
+<style type='text/css'>
+
+
+
+
+
+
+
+.post ul, #post ul {
+
+
+
+
+
+
+
+list-style: none;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+.post img, #post img {
+
+
+
+
+
+
+
+margin-left:0px;
+
+
+
+
+
+
+
+display: inline;
+
+
+
+
+
+
+
+vertical-align: middle;
+
+
+
+
+
+
+
+margin-right: 15px;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</style>
+
+<ul>
+<li>
+<p><img alt="Analog(ue)" src="http://brianschrader.com/images/blog/analogue_icon.png" /> <a href="http://relay.fm/analogue">Analog(ue)</a> with Myke Hurley and Casey Liss</p>
+</li>
+<li>
+<p><img alt="Astronomy 162 - Stars, Galaxies, &amp; the Universe" src="http://brianschrader.com/images/blog/astr_162_icon.png" /> <a href="http://www.astronomy.ohio-state.edu/~pogge/Ast162/">Astronomy 162 - Stars, Galaxies, &amp; the Universe</a> with Professor Richard Pogge <a href="#note">*</a></p>
+</li>
+<li>
+<p><img alt="ATP" src="http://brianschrader.com/images/blog/atp_icon.png" /> <a href="http://atp.fm">ATP</a> with Marco Arment, John Siracusa, and Casey Liss <a href="#note">*</a></p>
+</li>
+<li>
+<p><img alt="Back to Work" src="http://brianschrader.com/images/blog/back_to_work_icon.png" /> <a href="http://5by5.tv/b2w">Back to Work</a> with Merlin Mann and Dan Benjamin</p>
+</li>
+<li>
+<p><img alt="Connected" src="http://brianschrader.com/images/blog/connected_icon.png" /> <a href="http://relay.fm/connected">Connected</a> with Myke Hurley, Stephen Hackett, and Federico Viticci</p>
+</li>
+<li>
+<p><img alt="Core Intuition" src="http://brianschrader.com/images/blog/core_int_icon.png" /> <a href="http://www.coreint.org">Core Intuition</a> with Daniel Jalkut and Manton Reece</p>
+</li>
+<li>
+<p><img alt="Debug" src="http://brianschrader.com/images/blog/debug_icon.png" /> <a href="http://www.imore.com/debug">Debug</a> with Guy English and Rene Ritchie</p>
+</li>
+<li>
+<p><img alt="Edge Cases" src="http://brianschrader.com/images/blog/edge_cases_icon.png" /> <a href="http://edgecasesshow.com">Edge Cases</a> with Andrew Pontious and Wolf Rentzsch <a href="#note">*</a></p>
+</li>
+<li>
+<p><img alt="Hardcore History" src="http://brianschrader.com/images/blog/hardcore_history_icon.png" /> <a href="http://www.dancarlin.com">Hardcore History</a> with Dan Carlin</p>
+</li>
+<li>
+<p><img alt="Hello Internet" src="http://brianschrader.com/images/blog/hi_icon.png" /> <a href="http://www.hellointernet.fm">Hello Internet</a> with CGP Grey and Brady Haran</p>
+</li>
+<li>
+<p><img alt="Internet History Podcast" src="http://brianschrader.com/images/blog/internet_history_icon.png" /> <a href="http://www.internethistorypodcast.com">Internet History Podcast</a> with Brian McCullough</p>
+</li>
+<li>
+<p><img alt="Melton" src="http://brianschrader.com/images/blog/melton_icon.png" /> <a href="http://www.imore.com/introducing-new-don-melton-podcast">Melton</a> with Don Melton and Rene Ritchie</p>
+</li>
+<li>
+<p><img alt="Pragmatic" src="http://brianschrader.com/images/blog/pragmatic_icon.png" /> <a href="http://techdistortion.com/podcasts/pragmatic">Pragmatic</a> with John Chidgey</p>
+</li>
+<li>
+<p><img alt="Roderick on the Line" src="http://brianschrader.com/images/blog/rotl_icon.png" /> <a href="http://www.merlinmann.com/roderick/">Roderick on the Line</a> with John Roderick and Merlin Mann <a href="#note">*</a></p>
+</li>
+<li>
+<p><img alt="The Talk Show" src="http://brianschrader.com/images/blog/talk_show_icon.png" /> <a href="http://daringfireball.net/thetalkshow/">The Talk Show</a> with John Gruber</p>
+</li>
+<li>
+<p><div id='note'>* <i>Highly</i> recommended</div></p>
+</li>
+</ul>
+<p>I listen to a lot of podcasts...</p>				
 				</div>
 			</div>
 		</article>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="http://brianschrader.com/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

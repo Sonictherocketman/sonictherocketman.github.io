@@ -1,7 +1,9 @@
+slug: rocketsim
+published: Mon, 05 May 2014 at 11:51 PM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Rocket Simulation
 author: Brian Schrader
 tags: rocketsim 
-slug: rocketsim
 status: publish
 
 The final project for my rocket propulsion class was to build a simulation of a water-air composite structure rocket (basically a bottle rocket on steroids). The goal of the assignment was to design a rocket to beat the [world record][record] (at time of writing it was 663 meters). 

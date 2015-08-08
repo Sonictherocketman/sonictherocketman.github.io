@@ -1,43 +1,87 @@
-<?php
-$json_str = file_get_contents("metadata.json");
-$json_str = utf8_encode($json_str);
-$json = json_decode($json_str, true);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($json['title']);?> - BiteofanApple</title>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/header-template.html"); ?>
+	<title>WWDC and Open Source Swift - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
-
 <body>
 <div id="content">
 	<div id="title-bar">
-		<?php include($_SERVER['DOCUMENT_ROOT'] . "/bin/title-bar-template.html"); ?>
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
 	</div>
 	<div id="post-list">
 		<article>
 			<div class="post">
 				<div class="article-title">
-					<h1><?php
-					echo("<a href=\"".$json['link']."\"</a>");
-					echo($json['title']);
-					?></a></h1>
-					<small style="font-style:italic;"><?php
-					echo("Posted on ".$json['published']);
-					?></small>
+					<h1><a href="/archive/wwdc-and-open-source-swift/">WWDC and Open Source Swift</a></h1>
+					<small style="font-style:italic;">Posted on Tue, 09 Jun 2015 at 02:56 PM</small>
 				</div>
 				<div class="article-content">
-					<?php
-					 echo($json['content']);
-					 include ($_SERVER['DOCUMENT_ROOT'] . "/bin/signature.html");
-					?>
+					<p>I'm pretty happy with yesterday's announcement (excluding the "One more thing..." part). OS X got a very understated release, but that's because, I suspect, that it seems to be mostly bug fixes, and that's great news. I'm mostly excited about the bug fixes and performance enhancements, but there were some solid updates to Safari, and Maps as well (transit isn't available for San Diego yet, but hopefully it will be soon).</p>
+<p>On the iOS front, the iPad got all the love, and that's long overdue. The "new" (Surface Pro style) multitasking is nice, and the popovers look cool (Netflix <em>and</em> Twitter at the <strong>same time</strong>!). I'm also a fan of the new battery improvements and the Spotlight search API (Finally). </p>
+<p>To me though, the biggest news of the whole conference was the announcement that Swift will be Open Source<a href="#1"><sup>1</sup></a>. For Apple, this means that Swift will be placed alongside <a href="http://golang.org">Go</a> and <a href="http://www.rust-lang.org">Rust</a> in the new, hot systems programming language category. Chris Latner expressed his desire for Swift to be open source last year at WWDC, and I'm glad he was able to convince the higher ups. Making Swift open source allows it to be a real alternative (and competitor) to Rust and Go, and I can't wait to see what people do with it. Swift interoperability with Python is also something I look forward to hearing about since Python already <a href="https://siciarz.net/24-days-of-rust-calling-rust-from-other-languages/">interfaces with Rust quite nicely</a> (<a href="https://github.com/alexcrichton/rust-ffi-examples/tree/master/python-to-rust/src">examples</a>). Using Swift, Rust, or Go as your low level language instead of C has a lot of advantages, and its great to see Apple keep pace with the outside world. More competition and choice in the systems programming language world is always good, and there will shortly be 3 great options to choose from.</p>
+<div id='1' style='font-size:small;'>1. Yes I'm aware that Apple said, "later this year." Yes, I am also aware that FaceTime was supposed to be an Open Standard. I contrast with this: ResearchKit is on GitHub; this is a new Apple.</div>				
 				</div>
 			</div>
 		</article>
-	<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
-</div>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

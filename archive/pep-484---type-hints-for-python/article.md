@@ -1,3 +1,6 @@
+slug: pep-484---type-hints-for-python
+published: Wed, 08 Apr 2015 at 08:09 PM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: PEP 484 - Type Hints for Python
 
 author: Brian Schrader

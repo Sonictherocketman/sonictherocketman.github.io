@@ -1,3 +1,6 @@
+slug: podcast-recommendations
+published: Tue, 21 Oct 2014 at 12:00 AM
+updated: Thu, 06 Aug 2015 at 05:05 PM
 title: Podcast Recommendations
 
 
