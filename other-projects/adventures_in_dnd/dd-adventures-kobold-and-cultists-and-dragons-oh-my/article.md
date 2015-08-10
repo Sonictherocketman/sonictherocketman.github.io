@@ -1,6 +1,6 @@
 slug: dd-adventures-kobold-and-cultists-and-dragons-oh-my
 published: Thu, 06 Aug 2015 at 05:09 PM
-updated: Thu, 06 Aug 2015 at 05:09 PM
+updated: Sat, 08 Aug 2015 at 09:04 PM
 title: D&D Adventures: Kobold, and Cultists, and Dragons. Oh my!
 author: Brian Schrader
 tags: D&D

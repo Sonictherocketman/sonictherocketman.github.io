@@ -1,6 +1,6 @@
 slug: dd-adventures-our-heroes-emerge
 published: Thu, 06 Aug 2015 at 05:09 PM
-updated: Thu, 06 Aug 2015 at 05:09 PM
+updated: Sat, 08 Aug 2015 at 09:04 PM
 title: D&D Adventures: Our Heroes Emerge
 author: Brian Schrader
 tags: D&D

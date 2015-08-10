@@ -59,6 +59,21 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/rewritten/">
+					Rewritten
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 10 Aug 2015 at 01:16 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>Yesterday I published a new version of this site, and hopefully you didn't notice a thing.</p>
+<p>One of the things that this rewrite allowed me to do was finally turn off PHP entirely. As of now, there is no more PHP or Python code that executes when you request a page from this site. It's completely static.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/hiking-the-pacific-crest-trail/">
 					Hiking the Pacific Crest Trail
 				</a>
@@ -246,29 +261,6 @@
 <p><link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
 <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/microblog-crawler-v141/">
-					Microblog Crawler v1.4(.1)
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Sat, 25 Apr 2015 at 10:29 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Version 1.4.1 of my MicroblogCrawler is out on <a href="https://pypi.python.org/pypi/MicroblogCrawler/1.4.1">PyPi</a>! Technically v1.4 was out last week but it had a fairly large bug that needed fixing. 1.4.1 has patched it and it's ready for prime time.</p>
-<p>v1.4.1 is full of enhancements, a few of which are listed here:</p>
-<ul>
-<li>Calling stop now actually stops the crawler. This bug was due to a nasty bug in Python's multiprocessing module (9400). The crawler now alerts you when such a problem arises by outputting it through the on_error callback.</li>
-<li>Fixed a bug that would cause feeds to throw errors if no <code>pubdate</code> element was found. Elements are not parsed but are discarded, and on_error is called.</li>
-<li>Fixed a major bug when attempting to stop the crawler immediately.</li>
-</ul>
-<p><a href="https://github.com/Sonictherocketman/microblog_crawler">The full version notes are available here.</a></p>
-<p>The major enhancement in this version (besides the graceful exiting) was the addition of a workaround for a <a href="http://bugs.python.org/issue9400">bug in Python's multiprocessing module</a>. The bug has to do with what happens to exceptions raised in child processes. When they are raised, they are pickled and sent back to the parent process. The problem arises when an exception is not pickleable. The child process hangs and never exits. The interesting thing is that the bug was first reported in 2010 and affects all versions of Python since 2010 (i.e. 2.7, 3.2, 3.3, 3.4). This bug has been baffling me since I started converting the crawler to be multiprocessed, and its nice to finally have a workaround. </p>
-<p>If anyone out there is using MicroblogCrawler, I'd love to hear from you, and pull requests are very welcome!</p>
 		</div>
 	</div>
 </article>	
