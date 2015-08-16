@@ -1,6 +1,6 @@
 slug: the-mac-mini-server-configuration-is-dead
 published: Sun, 09 Nov 2014 at 07:30 PM
-updated: Sat, 08 Aug 2015 at 04:31 PM
+updated: Sun, 16 Aug 2015 at 04:38 PM
 title: The Mac Mini Server Configuration is Dead
 author: Brian Schrader
 tags: mac mini

@@ -1,6 +1,6 @@
 slug: blogdown
 published: Fri, 14 Aug 2015 at 09:09 PM
-updated: Fri, 14 Aug 2015 at 09:09 PM
+updated: Sun, 16 Aug 2015 at 04:38 PM
 title: Blogdown
 author: Brian Schrader
 tags: blogging
