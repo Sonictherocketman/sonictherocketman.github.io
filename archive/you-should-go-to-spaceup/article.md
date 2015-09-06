@@ -4,7 +4,7 @@ updated: Sat, 05 Sep 2015 at 07:44 PM
 title: You should go to SpaceUp
 author: Brian Schrader
 tags: spaceup
-status: updated 
+status: published 
 
 SpaceUp is an [unconference][1] for space enthusuasts, and [SpaceUp San
 Diego][2] is rolling around again. If you're in San Diego the weekend of October 31st, you should [register][3] now. 
@@ -12,6 +12,8 @@ Diego][2] is rolling around again. If you're in San Diego the weekend of October
 [1]: http://spaceup.org
 [2]: http://spaceup.org/near-you/san-diego/
 [3]: http://spaceup.org/near-you/san-diego/
+
+![Space Up Logo](http://brianschrader.com/images/blog/spaceup-logo.png)
 
 I've been going to SpaceUps since the very first one in 2010, and every time it's a fantastic experience. People come from all different walks of life: space bloggers, professors, SpaceX and Xcor employees, and students, to talk about Faster Than Light (FTL) travel, colonizing Mars, NASA's current political situation, and designing Rocket Refuling Stations supplied by an ocean based gas canon (seriously).
 
