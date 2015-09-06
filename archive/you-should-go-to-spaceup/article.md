@@ -25,5 +25,7 @@ to SpaceUp. If you aren't in San Diego (which is unfortunate for a whole
 other set of reasons &#128526;) then there's a [whole suite of SpaceUps all over
 the world][5] so you'll have no excuse.
 
+[Space Up San Diego &#8594;](http://spaceup.org)
+
 [4]: https://en.wikipedia.org/wiki/BarCamp
 [5]: http://spaceup.org/near-you/
