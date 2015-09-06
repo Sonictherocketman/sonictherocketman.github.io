@@ -4,7 +4,7 @@ updated: Sat, 05 Sep 2015 at 07:44 PM
 title: You should go to SpaceUp
 author: Brian Schrader
 tags: spaceup
-status: publish
+status: updated 
 
 SpaceUp is an [unconference][1] for space enthusuasts, and [SpaceUp San
 Diego][2] is rolling around again. If you're in San Diego the weekend of October 31st, you should [register][3] now. 
