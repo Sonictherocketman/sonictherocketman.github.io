@@ -1,12 +1,12 @@
 slug: airplane-mode
 published: Sun, 13 Sep 2015 at 10:53 PM
-updated: Sun, 13 Sep 2015 at 10:55 PM
+updated: Sun, 13 Sep 2015 at 10:56 PM
 title: Airplane Mode
 author: Brian Schrader
 tags: music
 status: publish
 
-I don't know what rock I've been hiding under, but I just found out about [Dave Wiskus's][1] new band. As of last week, their music is officially part of my drive home playlist. 
+I don't know what rock I've been hiding under, but I just found out about [Dave Wiskus'][1] new band. As of last week, their music is officially part of my drive home playlist. 
 
 [1]: https://twitter.com/dwiskus
 
