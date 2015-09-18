@@ -1,5 +1,146 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Sun, 13 Sep 2015 22:56:40 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Airplane Mode</title><link>http://brianschrader.com/archive/airplane-mode/</link><description>&lt;p&gt;I don't know what rock I've been hiding under, but I just found out about &lt;a href="https://twitter.com/dwiskus"&gt;Dave Wiskus'&lt;/a&gt; new band. As of last week, their music is officially part of my drive home playlist. &lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Fri, 18 Sep 2015 08:19:10 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python 3.5 and multitasking</title><link>http://brianschrader.com/archive/python-35-and-multitasking/</link><description>&lt;p&gt;Python has a long and complicated history with multitasking. Strictly speaking
+the &lt;a href="http://www.dabeaz.com/GIL/"&gt;GIL&lt;/a&gt; prevents a lot of classical attempts at multithreading for
+arguably simpler application implementation. Therefore true multitasking in Python 
+is available with multiprocessing, but the community tends to avoid it like the 
+plague (for not undeserved reasons). With the release of Python 3.5, the community 
+has very firmly cemented it's stance that multitasking should be done cooperatively 
+using coroutines and generators, but as of yet the actual process of writing
+multitasking code is still very complicated and I don't really understand why.&lt;/p&gt;
+&lt;p&gt;Back when I was doing iOS development, I got quite familiar with
+Apple's &lt;a href="https://en.wikipedia.org/wiki/Grand_Central_Dispatch"&gt;Grand Central Dispatch&lt;/a&gt; API and I guess it spoiled me. The syntax
+for kicking off calculations to separate threads, or returning to the main
+thread for come quick UI updates is so simple. By comparison, Python's approach
+seems overly complex. Granted, the two languages/environments are used
+for different things. &lt;/p&gt;
+&lt;p&gt;Regardless, the newest version of Python (v3.5) adds support for a new
+asynchronous function syntax. In short, this means that the old Python 
+generator-based coroutines have been codified into a full on language feature. 
+If you're like me, then you probably aren't to familiar with generator-based
+coroutines, so this new syntax brings with it a host of new concepts to grok.&lt;/p&gt;
+&lt;p&gt;&lt;code class='python'&gt;&lt;pre&gt;
+    async def some_function():
+        pass
+&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;With the new release, I thought I'd do some testing to see, not only how the
+new syntax works, but how well these new coroutines perform various tasks. At
+work I need to manipulate fairly large files (~2-5GB of text) and I thought 
+that I might be able to get some performance improvements by switching to using 
+coroutines in Python 3.5. Currently, most of my code is plain-old sequential,
+but I do have some auxiliary files that I generate during my analysis, and I'd 
+like to be able to write out without stopping the main set of calculations to
+wait for a slow-ass disk. At my first glance, coroutines seemed perfect.&lt;/p&gt;
+&lt;h2&gt;Time to test the new thing&lt;/h2&gt;
+&lt;p&gt;Right off the bat, the new syntax threw me into a torrent of confusion. I won't
+get into my issues here, but suffice to say that having a coroutine
+await some other coroutine which awaits some other coroutine is likely a way to 
+get yourself confused fairly quickly.&lt;/p&gt;
+&lt;p&gt;One thing I wanted was to be able to use the new &lt;code&gt;async/await&lt;/code&gt; syntax without
+using &lt;code&gt;asyncio&lt;/code&gt;. In my mind I shouldn't have to use a library to make the basic
+syntax work, but that doesn't seem to be the case, and in the end I ended up having 
+to use the event loop functions to get my code working. Once I discovered the 
+secret of coroutines hidden in the documentation (and hidden quite well I'd say), 
+I had some code that could finally be run asynchronously. &lt;/p&gt;
+&lt;p&gt;My goal was to have a few long-running tasks that would normally block, and
+kick them off into a coroutine that would spin away while I did other things.
+This is not how Python's coroutines work, and that becomes clear right away.&lt;/p&gt;
+&lt;p&gt;In short: Everything is asynchronous, or nothing is.&lt;/p&gt;
+&lt;p&gt;This mantra makes it really difficult to make Python code simple and serial and
+still kick side work off to the coroutines. I understand that Python can only
+do one thing at once, but the design of the &lt;code&gt;async/await&lt;/code&gt; system seems really
+punishing for little gain. &lt;/p&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;p&gt;Once I finally got the whole thing working, I devised some performance tests.
+My 3 sets of test covered CPU bound, I/O bound, and a mix of CPU and I/O bound
+computations, and each test would attempt all 5 of the usual Python
+multitasking techniques: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Serial execution (as a control)&lt;/li&gt;
+&lt;li&gt;Classical multithreading (which Python's GIL basically kills)&lt;/li&gt;
+&lt;li&gt;Classical multiprocessing&lt;/li&gt;
+&lt;li&gt;Python 3.5 Coroutines (with a threading pool, the default)&lt;/li&gt;
+&lt;li&gt;Python 3.5 Coroutines (with a process pool)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I've published the test suite I used over &lt;a href="https://github.com/Sonictherocketman/python3.5_coro_testing"&gt;on GitHub&lt;/a&gt; if you want to check
+it out for yourself. Overall, the results were really surprising.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+    &lt;style type="text/css" scoped&gt;td,th {text-align: center;}&lt;/style&gt;
+    &lt;table cellspacing='12'&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;/th&gt;
+            &lt;th&gt;CPU bound&lt;/th&gt;
+            &lt;th&gt;I/O bound&lt;/th&gt;
+            &lt;th&gt;Both CPU/IO bound&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Test&lt;/th&gt;
+            &lt;th&gt;Time&lt;/th&gt;
+            &lt;th&gt;Time&lt;/th&gt;
+            &lt;th&gt;Time&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Serial&lt;/td&gt;
+            &lt;td&gt;7.804&lt;/td&gt;
+            &lt;td&gt;1.924s&lt;/td&gt;
+            &lt;td&gt;4.789s&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Coro Multi&lt;/td&gt;
+            &lt;td&gt;4.739s&lt;/td&gt;
+            &lt;td&gt;0.951s&lt;/td&gt;
+            &lt;td&gt;13.574s&lt;/td&gt;
+        &lt;/tr&gt;
+            &lt;td&gt;Coro Thread&lt;/td&gt;
+            &lt;td&gt;8.221s&lt;/td&gt;
+            &lt;td&gt;1.97s&lt;/td&gt;
+            &lt;td&gt;7.724s&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Multiprocess&lt;/td&gt;
+            &lt;td&gt;4.488s&lt;/td&gt;
+            &lt;td&gt;1.320s&lt;/td&gt;
+            &lt;td&gt;4.513s&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Threading&lt;/td&gt;
+            &lt;td&gt;8.251s&lt;/td&gt;
+            &lt;td&gt;1.807s&lt;/td&gt;
+            &lt;td&gt;4.976s&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;While for I/O bound computations the coroutines improved performance quite
+nicely with a multiprocessing pool behind it (even over conventional
+multiprocessing), the moment you introduce CPU bound operations into the mix
+everything goes to hell. In the case of using threading (which because of the
+GIL was doomed before it began) it made the test ~9% slower. While the pure CPU
+bound case did actually get somewhat faster (~40%) this is an unrealistic
+benchmark since eventually you'd need to write something to disk. Once CPU 
+and I/O operations get mixed together, for some reason, the execution time went 
+&lt;em&gt;up&lt;/em&gt; ~300%. This is certainly not the kind of behavior that I was expecting and 
+it made me rethink my tests. On a second look everything seemed to be in order, 
+but if you see something glaring out, please let me know.&lt;/p&gt;
+&lt;p&gt;One of the flaws that I see with my tests is that they don't use &lt;a href="https://docs.python.org/3.5/library/asyncio.html"&gt;&lt;code&gt;asyncio&lt;/code&gt;&lt;/a&gt;'s
+native IO lib to write to the files, instead they wrap the synchronous &lt;code&gt;open&lt;/code&gt;
+and &lt;code&gt;write&lt;/code&gt; calls from the standard library. I did this for two reasons, the
+first being that I cannot, for the life of me, figure out how to use &lt;code&gt;asyncio&lt;/code&gt;
+to do local file IO and not a network request, but maybe &lt;a href="https://twitter.com/sonicrocketman/status/471673517465800704"&gt;I'm just an idiot&lt;/a&gt;. 
+The second reason was because that's not how I'd imagine that I'd have to write
+my code if I wanted to use this new functionality. I wrote this code how I
+would expect that I would have to in Python. To me, this is an important reason
+why I use Python. It's simple and expressive. I'd argue that, while &lt;code&gt;asyncio&lt;/code&gt;
+is amazingly powerful, simple and expressive it isn't. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.5/library/asyncio.html"&gt;&lt;code&gt;asyncio&lt;/code&gt;&lt;/a&gt; and the new syntax in Python 3.5 have all of the pieces needed for 
+very simple multitasking, but they both stop short of making them easy to use for 
+newcomers and typical users. Actually, thinking about it, they both feel a lot 
+like  &lt;code&gt;urllib&lt;/code&gt;: extremely powerful, but fairly complex for most use cases. Maybe, 
+with  Python 3.5, it'll finally be time for &lt;a href="http://docs.python-requests.org/en/latest/"&gt;&lt;code&gt;Async for humans&lt;/code&gt;.&lt;/a&gt; &lt;/p&gt;
+&lt;script src="http://brianschrader.com/bin/highlight.min.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;link rel="stylesheet" href="http://brianschrader.com/bin/highlight.default.min.css"&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Sonictherocketman/python3.5_coro_testing"&gt;Checkout my tests for yourself
+&amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/python-35-and-multitasking</guid><pubDate>Fri, 18 Sep 2015 08:19:00 -0800</pubDate></item><item><title>Airplane Mode</title><link>http://brianschrader.com/archive/airplane-mode/</link><description>&lt;p&gt;I don't know what rock I've been hiding under, but I just found out about &lt;a href="https://twitter.com/dwiskus"&gt;Dave Wiskus'&lt;/a&gt; new band. As of last week, their music is officially part of my drive home playlist. &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://airplanemo.de/music/"&gt;Airplane Mode &amp;#8594;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;p.s. the music video has copious amounts of &lt;a href="https://twitter.com/songadaymann"&gt;@songadaymann&lt;/a&gt;, so you know
 it's good.&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/airplane-mode</guid><pubDate>Sun, 13 Sep 2015 22:53:00 -0800</pubDate></item><item><title>Python 3.5.0 has been released</title><link>http://brianschrader.com/archive/python-350-has-been-released/</link><description>&lt;p&gt;It's official, the long awaited Python version 3.5.0 has been released. I can't wait to play around with the new async features as soon as I get it installed. &lt;/p&gt;
