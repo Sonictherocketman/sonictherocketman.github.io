@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Sun, 20 Sep 2015 15:31:29 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More Pluto images</title><link>http://brianschrader.com/archive/more-pluto-images/</link><description>&lt;p&gt;NASA has released some new photos from New Horizons, and they're awsome. &lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Sun, 20 Sep 2015 15:48:02 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A mirror for posterity</title><link>http://brianschrader.com/archive/a-mirror-for-posterity/</link><description>&lt;p&gt;&lt;a href="http://www.manton.org/2015/09/complete-mirror-of-this-blog.html"&gt;Manton Reese&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The default outcome for any site that isn&#8217;t maintained &#8212; including the one
+you&#8217;re reading right now &#8212; is for it to vanish. Permanence doesn&#8217;t exist on
+the web.&lt;/p&gt;
+&lt;p&gt;Only 2 companies keep coming to mind: WordPress.com and GitHub. I believe
+both will last for decades, maybe even 100 years, and both embrace the open
+web in a way that most other centralized web sites do not.&lt;/p&gt;
+&lt;p&gt;Even though I self-host this weblog on WordPress, I&#8217;ve chosen to mirror to
+GitHub because of their focus on simple, static publishing via GitHub Pages.
+It has the best chance of running for a long time without intervention.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is a really cool idea. I've never thought about mirroring my site, and 
+since I already use Git to push updates, adding a mirror is just adding another remote. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.manton.org/2015/09/complete-mirror-of-this-blog.html"&gt;Complete mirror of this blog &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/a-mirror-for-posterity</guid><pubDate>Sun, 20 Sep 2015 15:47:00 -0800</pubDate></item><item><title>More Pluto images</title><link>http://brianschrader.com/archive/more-pluto-images/</link><description>&lt;p&gt;NASA has released some new photos from New Horizons, and they're awsome. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="A new backlit photo of Pluto from New Horizons" src="http://brianschrader.com/images/blog/nasa-pluto-backlit.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.nasa.gov/feature/pluto-wows-in-spectacular-new-backlit-panorama"&gt;Pluto &#8216;Wows&#8217; in Spectacular New Backlit Panorama &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/more-pluto-images</guid><pubDate>Sun, 20 Sep 2015 15:31:00 -0800</pubDate></item><item><title>Python 3.5 and multitasking</title><link>http://brianschrader.com/archive/python-35-and-multitasking/</link><description>&lt;p&gt;Python has a long and complicated history with multitasking. Strictly speaking
 the &lt;a href="http://www.dabeaz.com/GIL/"&gt;GIL&lt;/a&gt; prevents a lot of classical attempts at multithreading for
