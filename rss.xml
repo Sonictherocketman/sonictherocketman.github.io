@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Sun, 20 Sep 2015 16:53:31 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A mirror for posterity</title><link>http://brianschrader.com/archive/a-mirror-for-posterity/</link><description>&lt;p&gt;&lt;a href="http://www.manton.org/2015/09/complete-mirror-of-this-blog.html"&gt;Manton Reese&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Sun, 20 Sep 2015 17:28:16 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A full size mirror</title><link>http://brianschrader.com/archive/a-full-size-mirror/</link><description>&lt;p&gt;Well &lt;a href="http://brianschrader.com/archive/a-mirror-for-posterity/"&gt;it is done&lt;/a&gt;. A fully functioning &lt;a href="http://mirror.brianschrader.com"&gt;mirror&lt;/a&gt; of this site is available
+over at &lt;em&gt;mirror.brianschrader.com&lt;/em&gt;, and it's hosted by GitHub Pages, so it's
+really fast.&lt;/p&gt;
+&lt;p&gt;Getting the mirror going was simple, because as I mentioned I alredy use Git 
+for managing this site. Simply adding a new destination to publish to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add remote mirror &amp;lt;url&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and adding that destination to my deployment script was all I needed to do.
+Yay Git! &lt;/p&gt;
+&lt;p&gt;Thanks &lt;a href="http://www.manton.org/2015/09/complete-mirror-of-this-blog.html"&gt;Manton for the awesome suggestion&lt;/a&gt;. It's important that we, as a
+community, try to persist our work. The web right now it ephemeral, so
+individuals need to take the steps make sure their work is preserved.&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/a-full-size-mirror</guid><pubDate>Sun, 20 Sep 2015 17:28:00 -0800</pubDate></item><item><title>A mirror for posterity</title><link>http://brianschrader.com/archive/a-mirror-for-posterity/</link><description>&lt;p&gt;&lt;a href="http://www.manton.org/2015/09/complete-mirror-of-this-blog.html"&gt;Manton Reese&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The default outcome for any site that isn&#8217;t maintained &#8212; including the one
 you&#8217;re reading right now &#8212; is for it to vanish. Permanence doesn&#8217;t exist on
