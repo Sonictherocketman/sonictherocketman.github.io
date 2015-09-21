@@ -1,12 +1,12 @@
 slug: a-mirror-for-posterity
 published: Sun, 20 Sep 2015 at 03:47 PM
-updated: Sun, 20 Sep 2015 at 03:47 PM
+updated: Sun, 20 Sep 2015 at 08:32 PM
 title: A mirror for posterity
 author: Brian Schrader
 tags: open web
 status: publish
 
-[Manton Reese][1]
+[Manton Reece][1]
 
 > The default outcome for any site that isn’t maintained — including the one
 > you’re reading right now — is for it to vanish. Permanence doesn’t exist on
