@@ -151,6 +151,10 @@ blockquote {
 	border:none;
 }
 
+.footnote {
+  font-size:small;
+}
+
 /*
  * Dynamic Image Styling
  */
