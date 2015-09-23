@@ -57,6 +57,10 @@ blockquote {
 	padding:7px;
 }
 
+ul p {
+  text-indent:0px;
+}
+
 /*
 *
 * Begin ID Styling
