@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Thu, 24 Sep 2015 16:55:03 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to save your team from the evil testing demons</title><link>http://brianschrader.com/archive/how-to-save-your-team-from-the-evil-testing-demons/</link><description>&lt;p&gt;So your team has succumb to the evil testing overlords. They constantly talk 
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 05 Oct 2015 23:50:42 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Software Correctness and Software Engineering</title><link>http://brianschrader.com/archive/software-correctness-and-software-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/"&gt;David R. MacIver:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You have probably never written a significant piece of correct software.&lt;/p&gt;
+&lt;p&gt;...the chances of having written whole programs which are [bug free] are 
+tantamount to zero.&lt;/p&gt;
+&lt;p&gt;It&#8217;s not because we don&#8217;t know how to write correct software. We&#8217;ve known how
+to write software that is more or less correct (or at least vastly closer to
+correct than the norm) for a while now. If you look at the NASA development
+process they&#8217;re pretty much doing it.&lt;/p&gt;
+&lt;p&gt;The problem is not that we don&#8217;t know how to write correct software. The
+problem is that correct software is too expensive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;David's post covers quite a few very important points, and while I've &lt;a href="http://brianschrader.com/archive/software-engineering/"&gt;covered 
+this issue before&lt;/a&gt;, I think it bears diving back into. &lt;/p&gt;
+&lt;p&gt;Software Engineering isn't like any other form of engineering. It has nowhere
+near the maturity of the classical engineering fields, and it's poisoned by a
+"shipping culture" wherein getting software into the user's hands is more
+important than that software actually working properly. Now, this isn't to say
+that product companies and start-ups are wrong, but this culture
+has soured our mental model of how engineering works. Engineering is the
+process of designing, developing, maintaining, and predicting the behavior of
+some device or structure. According to the American Engineer's Council for
+Professional Development, the &lt;a href="https://en.wikipedia.org/wiki/Engineering#Definition"&gt;definition of engineering&lt;/a&gt; is (emphasis mine): &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The creative application of scientific principles to design or develop
+structures, machines, apparatus, or manufacturing processes, or works
+utilizing them singly or in combination; or to construct or operate the same
+with full cognizance of their design; or &lt;strong&gt;to forecast their behavior under
+specific operating conditions; all as respects an intended function,
+economics of operation or safety to life and property.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That last part is important when it comes to Software Engineering. Forcasting
+the behavior of a system and being able to say it respects the user's safety to 
+life and property is something that most developers don't consider when
+building their software. Why?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The rest of us aren&#8217;t writing safety critical software, and as a result
+people aren&#8217;t willing to pay for that level of correctness.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is in stark contrast to, for example, the way that NASA develops software.
+At NASA, software is treated as just another branch of engineering/development.
+It's design goes through the same rigorous review that their rocket engines,
+and safety harnesses do. Why? Because a failure in software could cost
+&lt;em&gt;billions&lt;/em&gt; of dollars, and possibly kill people. These are stakes that software
+like Twitter and iTunes will never have to face, thankfully (iTunes would kill
+us all).&lt;/p&gt;
+&lt;p&gt;David links to an article, originally from the mid-90s, detailing NASA's
+software development process. Their process is extremely boring, and has tons 
+of overhead. The code is designed, &lt;strong&gt;line by line&lt;/strong&gt; in psudo-code before ever 
+being typed into an editor. Engineers then just write the code exactly as it's 
+outlined in 3,000+ line blueprints. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.fastcompany.com/28121/they-write-right-stuff"&gt;Charles Fishman:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;That's the culture: the on-board shuttle group produces grown-up software,
+and the way they do it is by being grown-ups. It may not be sexy, it may not
+be a coding ego-trip &#8212; but it is the future of software. When you're ready to
+take the next step &#8212; when you have to write perfect software instead of
+software that's just good enough &#8212; then it's time to grow up.&lt;/p&gt;
+&lt;p&gt;It's the process that allows them to live normal lives, to set deadlines they
+actually meet, to stay on budget, to deliver software that does exactly what
+it promises. It's the process that defines what these coders in the flat
+plains of southeast suburban Houston know that everyone else in the software
+world is still groping for. It's the process that offers a template for any
+creative enterprise that's looking for a method to produce consistent - and
+consistently improving &#8212; quality.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This sounds, fankly, crazy, and no software focused company would want to adopt
+a system like this, and I can't blame them. It does not sound like fun, but it 
+does sound like the code will be correct and largely error free. Obviously this 
+method doesn't work for a lot of use cases in the world of Software Development,
+and that's ok. One of the bonuses of writing non-critical software is that it
+doesn't have to be 100% correct, it can have bugs and fix them over time. I
+think one of the best moments for a piece of software, though, is after it
+becomes fairly successful, and it decided to grow-up and start focusing on
+stability, consistancy, and correctness. We see these waves of new features and
+lulls of stability releases in a lot of consumer software these days; Mac OS X
+is a notable example. &lt;/p&gt;
+&lt;p&gt;In my mind though, developers should take a page out of NASA's book, and take
+their products more seriously. Engineering software is a time consuming,
+precise operation, and it should be given the respect and care it deserves.  &lt;/p&gt;
+&lt;p&gt;NASA is able to send a probe to Pluto, on a 15 year journey, collect the first 
+ever pictures of the dwarf planet, and send them back to earth &lt;em&gt;automatically&lt;/em&gt; 
+with code written &lt;em&gt;2 decades ago&lt;/em&gt; that hasn't needed to be updated since it 
+launched. That's damn near perfect software; that's real Software Engineering.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/"&gt;The economics of software correctness &amp;#8594;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.fastcompany.com/28121/they-write-right-stuff"&gt;They Write the Right Stuff
+&amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/software-correctness-and-software-engineering</guid><pubDate>Mon, 05 Oct 2015 16:50:00 -0800</pubDate></item><item><title>How to save your team from the evil testing demons</title><link>http://brianschrader.com/archive/how-to-save-your-team-from-the-evil-testing-demons/</link><description>&lt;p&gt;So your team has succumb to the evil testing overlords. They constantly talk 
 about Unit Tests, Continuous Integration, and Code Coverage. How is programming 
 supposed to be fun if the code does the same thing every time? Where's the 
 sense of adventure? Fear not, the art of cowboy coding is not dead. You can 

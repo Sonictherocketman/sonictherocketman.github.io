@@ -1,5 +1,6 @@
 *.py
 _drafts/
+_reports/
 _admin/
 .dropbox
 catalog.json
