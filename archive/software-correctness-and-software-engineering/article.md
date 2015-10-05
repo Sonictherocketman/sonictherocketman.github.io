@@ -1,6 +1,6 @@
 slug: software-correctness-and-software-engineering
 published: Mon, 05 Oct 2015 at 04:50 PM
-updated: Mon, 05 Oct 2015 at 04:50 PM
+updated: Mon, 05 Oct 2015 at 04:52 PM
 title: Software Correctness and Software Engineering 
 author: Brian Schrader
 tags: software development
@@ -47,7 +47,7 @@ Professional Development, the [definition of engineering][3] is (emphasis mine):
 > specific operating conditions; all as respects an intended function,
 > economics of operation or safety to life and property.**
 
-That last part is important when it comes to Software Engineering. Forcasting
+That last part is important when it comes to Software Engineering. Forecasting
 the behavior of a system and being able to say it respects the user's safety to 
 life and property is something that most developers don't consider when
 building their software. Why?
@@ -65,7 +65,7 @@ us all).
 
 David links to an article, originally from the mid-90s, detailing NASA's
 software development process. Their process is extremely boring, and has tons 
-of overhead. The code is designed, **line by line** in psudo-code before ever 
+of overhead. The code is designed, **line by line** in pseudo-code before ever 
 being typed into an editor. Engineers then just write the code exactly as it's 
 outlined in 3,000+ line blueprints. 
 
@@ -85,7 +85,7 @@ outlined in 3,000+ line blueprints.
 > creative enterprise that's looking for a method to produce consistent - and
 > consistently improving — quality.
 
-This sounds, fankly, crazy, and no software focused company would want to adopt
+This sounds, frankly, crazy, and no software focused company would want to adopt
 a system like this, and I can't blame them. It does not sound like fun, but it 
 does sound like the code will be correct and largely error free. Obviously this 
 method doesn't work for a lot of use cases in the world of Software Development,
@@ -93,7 +93,7 @@ and that's ok. One of the bonuses of writing non-critical software is that it
 doesn't have to be 100% correct, it can have bugs and fix them over time. I
 think one of the best moments for a piece of software, though, is after it
 becomes fairly successful, and it decided to grow-up and start focusing on
-stability, consistancy, and correctness. We see these waves of new features and
+stability, consistency, and correctness. We see these waves of new features and
 lulls of stability releases in a lot of consumer software these days; Mac OS X
 is a notable example. 
 

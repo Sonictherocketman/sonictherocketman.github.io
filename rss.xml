@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 05 Oct 2015 23:50:42 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Software Correctness and Software Engineering</title><link>http://brianschrader.com/archive/software-correctness-and-software-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/"&gt;David R. MacIver:&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 05 Oct 2015 23:52:07 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Software Correctness and Software Engineering</title><link>http://brianschrader.com/archive/software-correctness-and-software-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/"&gt;David R. MacIver:&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have probably never written a significant piece of correct software.&lt;/p&gt;
 &lt;p&gt;...the chances of having written whole programs which are [bug free] are 
@@ -30,7 +30,7 @@ with full cognizance of their design; or &lt;strong&gt;to forecast their behavio
 specific operating conditions; all as respects an intended function,
 economics of operation or safety to life and property.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;That last part is important when it comes to Software Engineering. Forcasting
+&lt;p&gt;That last part is important when it comes to Software Engineering. Forecasting
 the behavior of a system and being able to say it respects the user's safety to 
 life and property is something that most developers don't consider when
 building their software. Why?&lt;/p&gt;
@@ -47,7 +47,7 @@ like Twitter and iTunes will never have to face, thankfully (iTunes would kill
 us all).&lt;/p&gt;
 &lt;p&gt;David links to an article, originally from the mid-90s, detailing NASA's
 software development process. Their process is extremely boring, and has tons 
-of overhead. The code is designed, &lt;strong&gt;line by line&lt;/strong&gt; in psudo-code before ever 
+of overhead. The code is designed, &lt;strong&gt;line by line&lt;/strong&gt; in pseudo-code before ever 
 being typed into an editor. Engineers then just write the code exactly as it's 
 outlined in 3,000+ line blueprints. &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.fastcompany.com/28121/they-write-right-stuff"&gt;Charles Fishman:&lt;/a&gt;&lt;/p&gt;
@@ -65,7 +65,7 @@ world is still groping for. It's the process that offers a template for any
 creative enterprise that's looking for a method to produce consistent - and
 consistently improving &#8212; quality.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;This sounds, fankly, crazy, and no software focused company would want to adopt
+&lt;p&gt;This sounds, frankly, crazy, and no software focused company would want to adopt
 a system like this, and I can't blame them. It does not sound like fun, but it 
 does sound like the code will be correct and largely error free. Obviously this 
 method doesn't work for a lot of use cases in the world of Software Development,
@@ -73,7 +73,7 @@ and that's ok. One of the bonuses of writing non-critical software is that it
 doesn't have to be 100% correct, it can have bugs and fix them over time. I
 think one of the best moments for a piece of software, though, is after it
 becomes fairly successful, and it decided to grow-up and start focusing on
-stability, consistancy, and correctness. We see these waves of new features and
+stability, consistency, and correctness. We see these waves of new features and
 lulls of stability releases in a lot of consumer software these days; Mac OS X
 is a notable example. &lt;/p&gt;
 &lt;p&gt;In my mind though, developers should take a page out of NASA's book, and take
