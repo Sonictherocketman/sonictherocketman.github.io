@@ -1,12 +1,12 @@
 slug: disable-shake-to-find-cursor-in-el-capitan
 published: Mon, 12 Oct 2015 at 11:35 AM
-updated: Mon, 12 Oct 2015 at 11:35 AM
+updated: Mon, 12 Oct 2015 at 12:24 PM
 title: Disable "shake to find cursor" in El Capitan
 author: Brian Schrader
 tags: mac
 status: publish
 
-I've been using Mac OX 10.10, El Capitan for a few days now, and it's been
+I've been using Mac OX 10.10 El Capitan for a few days now, and it's been
 fairly solid for me. I've encountered some minor bugs, but overall it's a solid
 point-oh release.
 
