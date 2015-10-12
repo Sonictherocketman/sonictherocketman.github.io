@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disable "shake to find cursor" in El Capitan - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<meta property="og:title" content="Disable "shake to find cursor" in El Capitan" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/disable-shake-to-find-cursor-in-el-capitan/" />	
+	<script type="text/javascript" src="http://brianschrader.com/bin/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="http://brianschrader.com/archive/disable-shake-to-find-cursor-in-el-capitan/">Disable "shake to find cursor" in El Capitan</a></h1>
+					<small style="font-style:italic;">Posted on Mon, 12 Oct 2015 at 11:35 AM</small>
+				</div>
+				<div class="article-content">
+					<p>I've been using Mac OX 10.10, El Capitan for a few days now, and it's been
+fairly solid for me. I've encountered some minor bugs, but overall it's a solid
+point-oh release.</p>
+<p>One new feature that I'm not too fond of, however, is the new "shake to find your
+cursor" thing. I really don't know why it bugs me, but it does. So I went
+looking for a way to disable it.</p>
+<p>The solution is pretty simple. Run the following command in Terminal, and
+reboot your machine. </p>
+<pre><code>defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool YES
+</code></pre>
+<p><a href="http://forums.macrumors.com/threads/disabling-shake-to-find-cursor.1892341/">Original Post &#8594;</a></p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="http://brianschrader.com/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="http://brianschrader.com/images/misc/cc-license.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

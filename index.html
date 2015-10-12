@@ -61,6 +61,30 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/disable-shake-to-find-cursor-in-el-capitan/">
+					Disable "shake to find cursor" in El Capitan
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 12 Oct 2015 at 11:35 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>I've been using Mac OX 10.10, El Capitan for a few days now, and it's been
+fairly solid for me. I've encountered some minor bugs, but overall it's a solid
+point-oh release.</p>
+<p>One new feature that I'm not too fond of, however, is the new "shake to find your
+cursor" thing. I really don't know why it bugs me, but it does. So I went
+looking for a way to disable it.</p>
+<p>The solution is pretty simple. Run the following command in Terminal, and
+reboot your machine. </p>
+<pre><code>defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool YES
+</code></pre>
+<p><a href="http://forums.macrumors.com/threads/disabling-shake-to-find-cursor.1892341/">Original Post &#8594;</a></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/software-correctness-and-software-engineering/">
 					Software Correctness and Software Engineering
 				</a>
@@ -359,22 +383,6 @@ It has the best chance of running for a long time without intervention.</p>
 <p>This is a really cool idea. I've never thought about mirroring my site, and 
 since I already use Git to push updates, adding a mirror is just adding another remote. </p>
 <p><a href="http://www.manton.org/2015/09/complete-mirror-of-this-blog.html">Complete mirror of this blog &#8594;</a></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/more-pluto-images/">
-					More Pluto images
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Sun, 20 Sep 2015 at 03:31 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>NASA has released some new photos from New Horizons, and they're awsome. </p>
-<p><img alt="A new backlit photo of Pluto from New Horizons" src="/images/blog/nasa-pluto-backlit.png" /></p>
-<p><a href="https://www.nasa.gov/feature/pluto-wows-in-spectacular-new-backlit-panorama">Pluto ‘Wows’ in Spectacular New Backlit Panorama &#8594;</a></p>
 		</div>
 	</div>
 </article>	

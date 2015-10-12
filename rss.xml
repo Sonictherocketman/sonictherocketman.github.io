@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 05 Oct 2015 23:52:07 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Software Correctness and Software Engineering</title><link>http://brianschrader.com/archive/software-correctness-and-software-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/"&gt;David R. MacIver:&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 12 Oct 2015 18:35:58 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Disable "shake to find cursor" in El Capitan</title><link>http://brianschrader.com/archive/disable-shake-to-find-cursor-in-el-capitan/</link><description>&lt;p&gt;I've been using Mac OX 10.10, El Capitan for a few days now, and it's been
+fairly solid for me. I've encountered some minor bugs, but overall it's a solid
+point-oh release.&lt;/p&gt;
+&lt;p&gt;One new feature that I'm not too fond of, however, is the new "shake to find your
+cursor" thing. I really don't know why it bugs me, but it does. So I went
+looking for a way to disable it.&lt;/p&gt;
+&lt;p&gt;The solution is pretty simple. Run the following command in Terminal, and
+reboot your machine. &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool YES
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href="http://forums.macrumors.com/threads/disabling-shake-to-find-cursor.1892341/"&gt;Original Post &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/disable-shake-to-find-cursor-in-el-capitan</guid><pubDate>Mon, 12 Oct 2015 11:35:00 -0800</pubDate></item><item><title>Software Correctness and Software Engineering</title><link>http://brianschrader.com/archive/software-correctness-and-software-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/"&gt;David R. MacIver:&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have probably never written a significant piece of correct software.&lt;/p&gt;
 &lt;p&gt;...the chances of having written whole programs which are [bug free] are 
