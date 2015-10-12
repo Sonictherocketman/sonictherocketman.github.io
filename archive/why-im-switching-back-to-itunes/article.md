@@ -1,6 +1,6 @@
 slug: why-im-switching-back-to-itunes
 published: Mon, 12 Oct 2015 at 02:55 PM
-updated: Mon, 12 Oct 2015 at 02:59 PM
+updated: Mon, 12 Oct 2015 at 03:01 PM
 title: Why I'm switching back to iTunes
 author: Brian Schrader
 tags: music, drm
@@ -34,15 +34,7 @@ decided to resurrect my old music library, [give iTunes a new icon][3], purchase
 the music I wanted outright, and cancel Spotify.
 <sup>1</sup>
 
-<center>
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Anyone have
-a good alternate iTunes logo? <a
-href="https://twitter.com/doney">@doney</a></p>&mdash; brian schrader
-(@sonicrocketman) <a
-href="https://twitter.com/sonicrocketman/status/651874066702319616">October 7,
-2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js"
-charset="utf-8"></script>
-</center>
+![Getting a new icon](http://brianschrader.com/images/blog/new-itunes-icon.png)
 
 [1]: http://www.audible.com
 [2]: https://osmc.tv
