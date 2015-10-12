@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 12 Oct 2015 19:24:56 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Disable "shake to find cursor" in El Capitan</title><link>http://brianschrader.com/archive/disable-shake-to-find-cursor-in-el-capitan/</link><description>&lt;p&gt;I've been using Mac OX 10.10 El Capitan for a few days now, and it's been
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 12 Oct 2015 21:55:11 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Why I'm switching back to iTunes</title><link>http://brianschrader.com/archive/why-im-switching-back-to-itunes/</link><description>&lt;p&gt;Last week I decided to leave Spotify. I've been using the
+service for almost 2 years now, and overall I've really liked it. Their
+selection is great, their ability to stream audio over even the slowest
+connection is constantly impressive, and while the app's UI isn't perfect, it
+has gotten much better. As I said, I've really liked having Spotify, so why 
+am I leaving?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Cancelling spotify" src="http://brianschrader.com/images/blog/cancel-spotify.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Like &lt;a href="http://www.audible.com"&gt;another service that I used to pay for but just cancelled&lt;/a&gt;, Spotify
+hasn't sat well with me over the last few months. It's hard to explain why, but
+I guess I feel apprehensive about Spotify being in control of how and where I
+listen to music in ways I haven't been before. An example of my frustration 
+happened last week when I was trying to AirPlay some music from the Spotify app 
+on my iPhone to my media center running &lt;a href="https://osmc.tv"&gt;OSMC&lt;/a&gt;. When I went looking in the 
+AirPlay settings for a destination, my media center showed up, but it wasn't playing.
+Originally I thought it might be a bug between OSMC's AirPlay implementation and 
+iOS 9, but when I tried streaming from the music app it worked fine. It also
+worked fine from iTunes on my Mac, but not from Spotify.
+This was extremely frustrating at the time, and it helped me reconcile the
+feelings that I'd been having toward Spotify in the recent months. Spotify is a
+great service, but like all proprietary services, it gets to decide
+how/why/where you can use it's material. This wasn't the first time I'd felt
+stuck because of Spotify's imposed limitations, it was just the last straw. I 
+decided to resurrect my old music library, &lt;a href="https://twitter.com/sonicrocketman/status/651874066702319616"&gt;give iTunes a new icon&lt;/a&gt;, purchase 
+the music I wanted outright, and cancel Spotify.
+&lt;sup&gt;1&lt;/sup&gt;&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Anyone have
+a good alternate iTunes logo? &lt;a
+href="https://twitter.com/doney"&gt;@doney&lt;/a&gt;&lt;/p&gt;&amp;mdash; brian schrader
+(@sonicrocketman) &lt;a
+href="https://twitter.com/sonicrocketman/status/651874066702319616"&gt;October 7,
+2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Now I know that iTunes is proprietary software with it's own set of limitations
+and hurdles, but the music I've purchased from it is mine. I have access to the
+raw audio files, and I can convert, burn, and AirPlay them anywhere I want. As
+long as it is technically possible to AirPlay to a device it should work, and 
+that's becoming more and more important to me. &lt;/p&gt;
+&lt;p&gt;iTunes is not a great piece of software; it's overcrowded with features, and
+begging for a redesign and simplification, but with it's latest release it has
+gotten better. Once I cleaned out my old music library and basically started
+from scratch, I've really enjoyed using it, and with iCloud music library, I 
+get the my-music-is-always-on-whatever-device-I'm-using benefit of a streaming 
+service. Although I now have to go back and purchase my favorite albums
+again, overall I'm happy with my decision. &lt;/p&gt;
+&lt;div class="footnote"&gt;
+
+1. Another reason I've wanted to switch away from Spotify that is less relevant to
+this discussion is that since I don't usually listen to a new album every
+month, the cost of paying for a streaming service monthly is a little hard to
+justify.
+
+&lt;/div&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/why-im-switching-back-to-itunes</guid><pubDate>Mon, 12 Oct 2015 14:55:00 -0800</pubDate></item><item><title>Disable "shake to find cursor" in El Capitan</title><link>http://brianschrader.com/archive/disable-shake-to-find-cursor-in-el-capitan/</link><description>&lt;p&gt;I've been using Mac OX 10.10 El Capitan for a few days now, and it's been
 fairly solid for me. I've encountered some minor bugs, but overall it's a solid
 point-oh release.&lt;/p&gt;
 &lt;p&gt;One new feature that I'm not too fond of, however, is the new "shake to find your
