@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 12 Oct 2015 22:02:05 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Why I'm switching back to iTunes</title><link>http://brianschrader.com/archive/why-im-switching-back-to-itunes/</link><description>&lt;p&gt;Last week I decided to leave Spotify. I've been using the
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 09 Nov 2015 21:11:46 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Even more re: software and engineering</title><link>http://brianschrader.com/archive/even-more-re-software-and-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.leancrew.com/all-this/"&gt;Dr. Drang:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;...the difference between hacking and software engineering is like the
+ difference between carpentry and structural engineering. The carpenter takes
+ lumber and nails it together in a way that seems right, while the structural
+ engineer sizes and spaces the lumber using a rational approach based on the
+ applied loads and the strength of the material... &lt;/p&gt;
+&lt;p&gt;But there&#8217;s a place for carpentry. If you&#8217;re building a shed in your backyard,
+there&#8217;s no need for a structural engineer. The rules of thumb of
+carpentry&#8212;which can be shown to have rational bases, even though the carpenter
+may not know them&#8212;are perfectly adequate to build a strong and durable shed.
+The trick is to know when you need structural engineering and when you can get
+by with carpentry.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://www.theatlantic.com/technology/archive/2015/11/programmers-should-not-call-themselves-engineers/414271/?single_page=true#article-comments"&gt;Ian Bogost&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The term is probably a shortening of &#8220;software engineer,&#8221; but its use betrays
+a secret: &#8220;Engineer&#8221; is an aspirational title in software development.
+Traditional engineers are regulated, certified, and subject to apprenticeship
+and continuing education. Engineering claims an explicit responsibility to
+public safety and reliability, even if it doesn&#8217;t always deliver.&lt;/p&gt;
+&lt;p&gt;The title &#8220;engineer&#8221; is cheapened by the tech industry...&lt;/p&gt;
+&lt;p&gt;The traditional disciplines of engineering&#8212;civil, mechanical, aerospace,
+chemical, electrical, environmental&#8212;are civic professions as much as
+technical ones. Engineers orchestrate the erection of bridges and buildings;
+they design vehicles and heavy machinery; they invent and realize the energy
+systems that drive this equipment; and they contrive methods for connecting
+all of these systems together...&lt;/p&gt;
+&lt;p&gt;It&#8217;s no accident that the most truly engineered of software-engineering
+projects extend well beyond the computer. Autonomous-vehicle design offers
+the most obvious contemporary example. Autonomous vehicles share the roads 
+with human-driven cars, pedestrians, and bicyclists. Those roads are managed, 
+maintained, and regulated. 
+Engineering addresses complex, large-scale systems...&lt;/p&gt;
+&lt;p&gt;Other engineering disciplines are subject to certification and licensure... &lt;/p&gt;
+&lt;p&gt;Licensing processes vary by state, but
+Professional Engineers generally need to hold a 4-year degree from an
+accredited program in their discipline, pass one or more exams, and possess 4
+or more years of professional experience under the supervision of a licensed
+engineer. Not all working engineers are or need to be Professional Engineers,
+but... to claim that one is an &#8220;engineer&#8221; in a formal context, licensure is 
+usually required...&lt;/p&gt;
+&lt;p&gt;Engineers bear a burden to the public, and their specific expertise as
+designers and builders of bridges or buildings&#8212;or software&#8212;emanates from that
+responsibility.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;These two posts sum up my feelings pretty well.  &lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/even-more-re-software-and-engineering</guid><pubDate>Mon, 09 Nov 2015 13:11:00 -0800</pubDate></item><item><title>Why I'm switching back to iTunes</title><link>http://brianschrader.com/archive/why-im-switching-back-to-itunes/</link><description>&lt;p&gt;Last week I decided to leave Spotify. I've been using the
 service for almost 2 years now, and overall I've really liked it. Their
 selection is great, their ability to stream audio over even the slowest
 connection is constantly impressive, and while the app's UI isn't perfect, it
