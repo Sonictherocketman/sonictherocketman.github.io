@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Wed, 11 Nov 2015 21:27:43 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Even more re: software and engineering</title><link>http://brianschrader.com/archive/even-more-re-software-and-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.leancrew.com/all-this/"&gt;Dr. Drang:&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Thu, 12 Nov 2015 22:30:51 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ad tracking company using audio to identify users</title><link>http://brianschrader.com/archive/ad-tracking-company-using-audio-to-identify-users/</link><description>&lt;p&gt;&lt;a href="http://www.steamfeed.com/silverpush-launches-cross-device-ad-targeting-with-unique-audio-beacon-technology/"&gt;SteamFeed Admin:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It works like this: on the desktop side, SilverPush drops a cookie along with
+playing an inaudible audio, using speakers as audio beacons. The inaudible
+code is received and recognized on the mobile device by the software
+development kit that&#8217;s on the phone. This creates an immediate and accurate
+association between the desktop cookie and mobile device.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That's absolutely brilliant... and completely terrifying. It's just another
+example of what ad tracking companies will do given the technology.&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/ad-tracking-company-using-audio-to-identify-users</guid><pubDate>Thu, 12 Nov 2015 14:30:00 -0800</pubDate></item><item><title>Even more re: software and engineering</title><link>http://brianschrader.com/archive/even-more-re-software-and-engineering/</link><description>&lt;p&gt;&lt;a href="http://www.leancrew.com/all-this/"&gt;Dr. Drang:&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;...the difference between hacking and software engineering is like the
  difference between carpentry and structural engineering. The carpenter takes
