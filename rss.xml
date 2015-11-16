@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Thu, 12 Nov 2015 22:30:51 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ad tracking company using audio to identify users</title><link>http://brianschrader.com/archive/ad-tracking-company-using-audio-to-identify-users/</link><description>&lt;p&gt;&lt;a href="http://www.steamfeed.com/silverpush-launches-cross-device-ad-targeting-with-unique-audio-beacon-technology/"&gt;SteamFeed Admin:&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Mon, 16 Nov 2015 18:03:23 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Software performance in an ASM.js world</title><link>http://brianschrader.com/archive/software-performance-in-an-asmjs-world/</link><description>&lt;p&gt;There's been &lt;a href="http://talkpython.fm/episodes/show/32/pypy.js-pypy-python-in-your-browser"&gt;a lot&lt;/a&gt; of talk &lt;a href="https://www.youtube.com/watch?v=PiBfOFqDIAI"&gt;recently&lt;/a&gt; about using &lt;a href="http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx"&gt;Javascript as the
+assembly language of the web&lt;/a&gt;, and tools like &lt;a href="https://en.wikipedia.org/wiki/Asm.js"&gt;ASM.js&lt;/a&gt; 
+allow developers to write code in any language they want and compile it,
+instead of to a native binary, into a subset of Javascript that can be run very
+efficiently in the browser. In fact, in testing Mozilla and Unreal were able to
+cross compile a few modern video games in to Javascript from C and the games 
+played at &lt;a href="https://www.youtube.com/watch?v=cWIRUaR9G4w"&gt;half native speed!&lt;/a&gt; Frankly, that's amazing. &lt;/p&gt;
+&lt;h2&gt;The Benefits of PyPy.js and ASM.js&lt;/h2&gt;
+&lt;p&gt;If you've ever seen Gary Bernhart's talk, &lt;a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript"&gt;&lt;em&gt;The Birth and Death of
+Javascript&lt;/em&gt;&lt;/a&gt;
+then you've seen this kind of thing before. One really cool project involving 
+ASM.js is &lt;a href="http://pypyjs.org"&gt;PyPy.js by Ryan Kelly&lt;/a&gt; which aims to be a fully compliant PyPy 
+implementation running in the browser. One of the big issues with compiling a
+language to Javascript has always been how to make it fast, but during 
+his PyCon 2015 talk Ryan demonstrated that although the PyPy.js version was 
+indeed &lt;a href="https://youtu.be/PiBfOFqDIAI?t=16m19s"&gt;10x slower than the native PyPy interpreter, it was over 1.2x &lt;em&gt;faster&lt;/em&gt; 
+than the native CPython interpreter&lt;/a&gt; which is the version of Python that
+most of us are actually using. While that may be a testament to just how good 
+the PyPy interpreter and JIT compiler are, it does have some interesting 
+implications for Python on the web.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;script type="text/python" src="main.py"&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Ryan has &lt;a href="http://talkpython.fm/episodes/show/32/pypy.js-pypy-python-in-your-browser"&gt;gone on to say&lt;/a&gt; that, in his opinion, one of the major issues with
+using his PyPy.js in real world cases is that in order to begin running your
+code in Python on the web, each page has to download the PyPy.js
+interpreter, and it's not a small download. Currently, he says that the
+interpreter weighs in around 5MB when compressed. Once it's loaded however,
+the browser can cache the interpreter locally and avoid that cost in the
+future. To me, initial startup time is not really the big issue though, and
+while it's true that 5MB is a crazy big file to be transmitting over the web,
+most sites already force users to download that &lt;a href="http://brianschrader.com/archive/re-the-ethics-of-modern-web-ad-blocking/"&gt;much data in ad tracking code 
+alone&lt;/a&gt;. &lt;/p&gt;
+&lt;h2&gt;What's the problem then?&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="An example of web site memory usage" class="body-image-right" src="http://brianschrader.com/images/blog/act-mon-safari-3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;In my mind, the issues facing developers using this new toolchain are not
+initial file downloads or startup time costs. These are one-time costs if
+developers leverage the new HTML 5 caching APIs like AppCaching and
+LocalStorage. Users are already accustomed to "Installing" software and moving
+that process to the web is something I'm confident designers and developers can
+do well. My concern has far more to do with runtime performance, specifically
+memory usage. In a world where most sites running lots of Javascript already
+use &lt;strong&gt;hundreds of megabytes&lt;/strong&gt;, full ports of the PyPy interpreter on top of
+fully fledged applications are just going to make performance worse.&lt;/p&gt;
+&lt;p&gt;Web applications are immense resource hogs. What typically takes kilobytes of
+memory in a native application takes megabytes on the web. Frankly, that kind
+of usage is pretty unacceptable as is, and bolting an interpreter on top of
+that will only make the problem worse. &lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;X, my window
+manager (dwm), terminal (xterm), shells (zsh), etc. add up to about 80 MB of
+RAM. Chrome is using 4 GB of RAM. 50 times more.&lt;/p&gt;&amp;mdash; Gary Bernhardt
+(@garybernhardt) &lt;a
+href="https://twitter.com/garybernhardt/status/664577127094681600"&gt;November 11,
+2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;h2&gt;What's the solution?&lt;/h2&gt;
+&lt;p&gt;Looking at the history of programming languages and performance, you could make
+the argument that this is just the next step. You could, for example, argue
+that the jump from native code to interpreted languages like Python had a
+similar cost in speed and performance, and I'd grant you that point. It
+certainly could be that the web is the single most important and viable
+development platform and that the performance costs will be worth it. &lt;/p&gt;
+&lt;p&gt;The jump to using the web as the virtual machine in which we run the software of 
+tomorrow should be one we take with caution. The speed penalties aren't large, 
+and I'm happy that that's true, but with most desktop  users still having less 
+than 6GB of memory and mobile users teetering around a third of that, developers 
+will have to be careful not to try too much at once. Games can allocate gigabytes 
+of memory and get away with it, but when a user's entire application suite is in 
+the cloud, memory will be, as it almost always has been, a precious resource.&lt;/p&gt;
+&lt;script src="http://brianschrader.com/bin/highlight.min.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;link rel="stylesheet"
+href="http://brianschrader.com/bin/highlight.default.min.css"&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><guid isPermaLink="true">http://brianschrader.com/archive/software-performance-in-an-asmjs-world</guid><pubDate>Mon, 16 Nov 2015 10:03:00 -0800</pubDate></item><item><title>Ad tracking company using audio to identify users</title><link>http://brianschrader.com/archive/ad-tracking-company-using-audio-to-identify-users/</link><description>&lt;p&gt;&lt;a href="http://www.steamfeed.com/silverpush-launches-cross-device-ad-targeting-with-unique-audio-beacon-technology/"&gt;SteamFeed Admin:&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;It works like this: on the desktop side, SilverPush drops a cookie along with
 playing an inaudible audio, using speakers as audio beacons. The inaudible

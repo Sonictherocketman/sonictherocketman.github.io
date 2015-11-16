@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Software performance in an ASM.js world - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<meta property="og:title" content="Software performance in an ASM.js world" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/software-performance-in-an-asmjs-world/" />	
+	<script type="text/javascript" src="/bin/jquery-1.9.1.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-48095792-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/software-performance-in-an-asmjs-world/">Software performance in an ASM.js world</a></h1>
+					<small style="font-style:italic;">Posted on Mon, 16 Nov 2015 at 10:03 AM</small>
+				</div>
+				<div class="article-content">
+					<p>There's been <a href="http://talkpython.fm/episodes/show/32/pypy.js-pypy-python-in-your-browser">a lot</a> of talk <a href="https://www.youtube.com/watch?v=PiBfOFqDIAI">recently</a> about using <a href="http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx">Javascript as the
+assembly language of the web</a>, and tools like <a href="https://en.wikipedia.org/wiki/Asm.js">ASM.js</a> 
+allow developers to write code in any language they want and compile it,
+instead of to a native binary, into a subset of Javascript that can be run very
+efficiently in the browser. In fact, in testing Mozilla and Unreal were able to
+cross compile a few modern video games in to Javascript from C and the games 
+played at <a href="https://www.youtube.com/watch?v=cWIRUaR9G4w">half native speed!</a> Frankly, that's amazing. </p>
+<h2>The Benefits of PyPy.js and ASM.js</h2>
+<p>If you've ever seen Gary Bernhart's talk, <a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript"><em>The Birth and Death of
+Javascript</em></a>
+then you've seen this kind of thing before. One really cool project involving 
+ASM.js is <a href="http://pypyjs.org">PyPy.js by Ryan Kelly</a> which aims to be a fully compliant PyPy 
+implementation running in the browser. One of the big issues with compiling a
+language to Javascript has always been how to make it fast, but during 
+his PyCon 2015 talk Ryan demonstrated that although the PyPy.js version was 
+indeed <a href="https://youtu.be/PiBfOFqDIAI?t=16m19s">10x slower than the native PyPy interpreter, it was over 1.2x <em>faster</em> 
+than the native CPython interpreter</a> which is the version of Python that
+most of us are actually using. While that may be a testament to just how good 
+the PyPy interpreter and JIT compiler are, it does have some interesting 
+implications for Python on the web.</p>
+<p><center><pre><code class="html">&lt;script type="text/python" src="main.py"&gt;&lt;/script&gt;
+</code></pre></center></p>
+<p>Ryan has <a href="http://talkpython.fm/episodes/show/32/pypy.js-pypy-python-in-your-browser">gone on to say</a> that, in his opinion, one of the major issues with
+using his PyPy.js in real world cases is that in order to begin running your
+code in Python on the web, each page has to download the PyPy.js
+interpreter, and it's not a small download. Currently, he says that the
+interpreter weighs in around 5MB when compressed. Once it's loaded however,
+the browser can cache the interpreter locally and avoid that cost in the
+future. To me, initial startup time is not really the big issue though, and
+while it's true that 5MB is a crazy big file to be transmitting over the web,
+most sites already force users to download that <a href="/archive/re-the-ethics-of-modern-web-ad-blocking/">much data in ad tracking code 
+alone</a>. </p>
+<h2>What's the problem then?</h2>
+<p><img alt="An example of web site memory usage" class="body-image-right" src="/images/blog/act-mon-safari-3.png" /></p>
+<p>In my mind, the issues facing developers using this new toolchain are not
+initial file downloads or startup time costs. These are one-time costs if
+developers leverage the new HTML 5 caching APIs like AppCaching and
+LocalStorage. Users are already accustomed to "Installing" software and moving
+that process to the web is something I'm confident designers and developers can
+do well. My concern has far more to do with runtime performance, specifically
+memory usage. In a world where most sites running lots of Javascript already
+use <strong>hundreds of megabytes</strong>, full ports of the PyPy interpreter on top of
+fully fledged applications are just going to make performance worse.</p>
+<p>Web applications are immense resource hogs. What typically takes kilobytes of
+memory in a native application takes megabytes on the web. Frankly, that kind
+of usage is pretty unacceptable as is, and bolting an interpreter on top of
+that will only make the problem worse. </p>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">X, my window
+manager (dwm), terminal (xterm), shells (zsh), etc. add up to about 80 MB of
+RAM. Chrome is using 4 GB of RAM. 50 times more.</p>&mdash; Gary Bernhardt
+(@garybernhardt) <a
+href="https://twitter.com/garybernhardt/status/664577127094681600">November 11,
+2015</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+<h2>What's the solution?</h2>
+<p>Looking at the history of programming languages and performance, you could make
+the argument that this is just the next step. You could, for example, argue
+that the jump from native code to interpreted languages like Python had a
+similar cost in speed and performance, and I'd grant you that point. It
+certainly could be that the web is the single most important and viable
+development platform and that the performance costs will be worth it. </p>
+<p>The jump to using the web as the virtual machine in which we run the software of 
+tomorrow should be one we take with caution. The speed penalties aren't large, 
+and I'm happy that that's true, but with most desktop  users still having less 
+than 6GB of memory and mobile users teetering around a third of that, developers 
+will have to be careful not to try too much at once. Games can allocate gigabytes 
+of memory and get away with it, but when a user's entire application suite is in 
+the cloud, memory will be, as it almost always has been, a precious resource.</p>
+<script src="/bin/highlight.min.js"></script>
+
+<p><link rel="stylesheet"
+href="/bin/highlight.default.min.css">
+<script>hljs.initHighlightingOnLoad();</script></p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

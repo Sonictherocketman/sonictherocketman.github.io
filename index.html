@@ -61,6 +61,95 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/software-performance-in-an-asmjs-world/">
+					Software performance in an ASM.js world
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 16 Nov 2015 at 10:03 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>There's been <a href="http://talkpython.fm/episodes/show/32/pypy.js-pypy-python-in-your-browser">a lot</a> of talk <a href="https://www.youtube.com/watch?v=PiBfOFqDIAI">recently</a> about using <a href="http://www.hanselman.com/blog/JavaScriptIsAssemblyLanguageForTheWebSematicMarkupIsDeadCleanVsMachinecodedHTML.aspx">Javascript as the
+assembly language of the web</a>, and tools like <a href="https://en.wikipedia.org/wiki/Asm.js">ASM.js</a> 
+allow developers to write code in any language they want and compile it,
+instead of to a native binary, into a subset of Javascript that can be run very
+efficiently in the browser. In fact, in testing Mozilla and Unreal were able to
+cross compile a few modern video games in to Javascript from C and the games 
+played at <a href="https://www.youtube.com/watch?v=cWIRUaR9G4w">half native speed!</a> Frankly, that's amazing. </p>
+<h2>The Benefits of PyPy.js and ASM.js</h2>
+<p>If you've ever seen Gary Bernhart's talk, <a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript"><em>The Birth and Death of
+Javascript</em></a>
+then you've seen this kind of thing before. One really cool project involving 
+ASM.js is <a href="http://pypyjs.org">PyPy.js by Ryan Kelly</a> which aims to be a fully compliant PyPy 
+implementation running in the browser. One of the big issues with compiling a
+language to Javascript has always been how to make it fast, but during 
+his PyCon 2015 talk Ryan demonstrated that although the PyPy.js version was 
+indeed <a href="https://youtu.be/PiBfOFqDIAI?t=16m19s">10x slower than the native PyPy interpreter, it was over 1.2x <em>faster</em> 
+than the native CPython interpreter</a> which is the version of Python that
+most of us are actually using. While that may be a testament to just how good 
+the PyPy interpreter and JIT compiler are, it does have some interesting 
+implications for Python on the web.</p>
+<p><center><pre><code class="html">&lt;script type="text/python" src="main.py"&gt;&lt;/script&gt;
+</code></pre></center></p>
+<p>Ryan has <a href="http://talkpython.fm/episodes/show/32/pypy.js-pypy-python-in-your-browser">gone on to say</a> that, in his opinion, one of the major issues with
+using his PyPy.js in real world cases is that in order to begin running your
+code in Python on the web, each page has to download the PyPy.js
+interpreter, and it's not a small download. Currently, he says that the
+interpreter weighs in around 5MB when compressed. Once it's loaded however,
+the browser can cache the interpreter locally and avoid that cost in the
+future. To me, initial startup time is not really the big issue though, and
+while it's true that 5MB is a crazy big file to be transmitting over the web,
+most sites already force users to download that <a href="/archive/re-the-ethics-of-modern-web-ad-blocking/">much data in ad tracking code 
+alone</a>. </p>
+<h2>What's the problem then?</h2>
+<p><img alt="An example of web site memory usage" class="body-image-right" src="/images/blog/act-mon-safari-3.png" /></p>
+<p>In my mind, the issues facing developers using this new toolchain are not
+initial file downloads or startup time costs. These are one-time costs if
+developers leverage the new HTML 5 caching APIs like AppCaching and
+LocalStorage. Users are already accustomed to "Installing" software and moving
+that process to the web is something I'm confident designers and developers can
+do well. My concern has far more to do with runtime performance, specifically
+memory usage. In a world where most sites running lots of Javascript already
+use <strong>hundreds of megabytes</strong>, full ports of the PyPy interpreter on top of
+fully fledged applications are just going to make performance worse.</p>
+<p>Web applications are immense resource hogs. What typically takes kilobytes of
+memory in a native application takes megabytes on the web. Frankly, that kind
+of usage is pretty unacceptable as is, and bolting an interpreter on top of
+that will only make the problem worse. </p>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">X, my window
+manager (dwm), terminal (xterm), shells (zsh), etc. add up to about 80 MB of
+RAM. Chrome is using 4 GB of RAM. 50 times more.</p>&mdash; Gary Bernhardt
+(@garybernhardt) <a
+href="https://twitter.com/garybernhardt/status/664577127094681600">November 11,
+2015</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
+
+<h2>What's the solution?</h2>
+<p>Looking at the history of programming languages and performance, you could make
+the argument that this is just the next step. You could, for example, argue
+that the jump from native code to interpreted languages like Python had a
+similar cost in speed and performance, and I'd grant you that point. It
+certainly could be that the web is the single most important and viable
+development platform and that the performance costs will be worth it. </p>
+<p>The jump to using the web as the virtual machine in which we run the software of 
+tomorrow should be one we take with caution. The speed penalties aren't large, 
+and I'm happy that that's true, but with most desktop  users still having less 
+than 6GB of memory and mobile users teetering around a third of that, developers 
+will have to be careful not to try too much at once. Games can allocate gigabytes 
+of memory and get away with it, but when a user's entire application suite is in 
+the cloud, memory will be, as it almost always has been, a precious resource.</p>
+<script src="/bin/highlight.min.js"></script>
+
+<p><link rel="stylesheet"
+href="/bin/highlight.default.min.css">
+<script>hljs.initHighlightingOnLoad();</script></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/ad-tracking-company-using-audio-to-identify-users/">
 					Ad tracking company using audio to identify users
 				</a>
@@ -221,106 +310,6 @@ reboot your machine. </p>
 <pre><code>defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool YES
 </code></pre>
 <p><a href="http://forums.macrumors.com/threads/disabling-shake-to-find-cursor.1892341/">Original Post &#8594;</a></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/software-correctness-and-software-engineering/">
-					Software Correctness and Software Engineering
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Mon, 05 Oct 2015 at 04:50 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p><a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/">David R. MacIver:</a></p>
-<blockquote>
-<p>You have probably never written a significant piece of correct software.</p>
-<p>...the chances of having written whole programs which are [bug free] are 
-tantamount to zero.</p>
-<p>It’s not because we don’t know how to write correct software. We’ve known how
-to write software that is more or less correct (or at least vastly closer to
-correct than the norm) for a while now. If you look at the NASA development
-process they’re pretty much doing it.</p>
-<p>The problem is not that we don’t know how to write correct software. The
-problem is that correct software is too expensive.</p>
-</blockquote>
-<p>David's post covers quite a few very important points, and while I've <a href="/archive/software-engineering/">covered 
-this issue before</a>, I think it bears diving back into. </p>
-<p>Software Engineering isn't like any other form of engineering. It has nowhere
-near the maturity of the classical engineering fields, and it's poisoned by a
-"shipping culture" wherein getting software into the user's hands is more
-important than that software actually working properly. Now, this isn't to say
-that product companies and start-ups are wrong, but this culture
-has soured our mental model of how engineering works. Engineering is the
-process of designing, developing, maintaining, and predicting the behavior of
-some device or structure. According to the American Engineer's Council for
-Professional Development, the <a href="https://en.wikipedia.org/wiki/Engineering#Definition">definition of engineering</a> is (emphasis mine): </p>
-<blockquote>
-<p>The creative application of scientific principles to design or develop
-structures, machines, apparatus, or manufacturing processes, or works
-utilizing them singly or in combination; or to construct or operate the same
-with full cognizance of their design; or <strong>to forecast their behavior under
-specific operating conditions; all as respects an intended function,
-economics of operation or safety to life and property.</strong></p>
-</blockquote>
-<p>That last part is important when it comes to Software Engineering. Forecasting
-the behavior of a system and being able to say it respects the user's safety to 
-life and property is something that most developers don't consider when
-building their software. Why?</p>
-<blockquote>
-<p>The rest of us aren’t writing safety critical software, and as a result
-people aren’t willing to pay for that level of correctness.</p>
-</blockquote>
-<p>This is in stark contrast to, for example, the way that NASA develops software.
-At NASA, software is treated as just another branch of engineering/development.
-It's design goes through the same rigorous review that their rocket engines,
-and safety harnesses do. Why? Because a failure in software could cost
-<em>billions</em> of dollars, and possibly kill people. These are stakes that software
-like Twitter and iTunes will never have to face, thankfully (iTunes would kill
-us all).</p>
-<p>David links to an article, originally from the mid-90s, detailing NASA's
-software development process. Their process is extremely boring, and has tons 
-of overhead. The code is designed, <strong>line by line</strong> in pseudo-code before ever 
-being typed into an editor. Engineers then just write the code exactly as it's 
-outlined in 3,000+ line blueprints. </p>
-<p><a href="http://www.fastcompany.com/28121/they-write-right-stuff">Charles Fishman:</a></p>
-<blockquote>
-<p>That's the culture: the on-board shuttle group produces grown-up software,
-and the way they do it is by being grown-ups. It may not be sexy, it may not
-be a coding ego-trip — but it is the future of software. When you're ready to
-take the next step — when you have to write perfect software instead of
-software that's just good enough — then it's time to grow up.</p>
-<p>It's the process that allows them to live normal lives, to set deadlines they
-actually meet, to stay on budget, to deliver software that does exactly what
-it promises. It's the process that defines what these coders in the flat
-plains of southeast suburban Houston know that everyone else in the software
-world is still groping for. It's the process that offers a template for any
-creative enterprise that's looking for a method to produce consistent - and
-consistently improving — quality.</p>
-</blockquote>
-<p>This sounds, frankly, crazy, and no software focused company would want to adopt
-a system like this, and I can't blame them. It does not sound like fun, but it 
-does sound like the code will be correct and largely error free. Obviously this 
-method doesn't work for a lot of use cases in the world of Software Development,
-and that's ok. One of the bonuses of writing non-critical software is that it
-doesn't have to be 100% correct, it can have bugs and fix them over time. I
-think one of the best moments for a piece of software, though, is after it
-becomes fairly successful, and it decided to grow-up and start focusing on
-stability, consistency, and correctness. We see these waves of new features and
-lulls of stability releases in a lot of consumer software these days; Mac OS X
-is a notable example. </p>
-<p>In my mind though, developers should take a page out of NASA's book, and take
-their products more seriously. Engineering software is a time consuming,
-precise operation, and it should be given the respect and care it deserves.  </p>
-<p>NASA is able to send a probe to Pluto, on a 15 year journey, collect the first 
-ever pictures of the dwarf planet, and send them back to earth <em>automatically</em> 
-with code written <em>2 decades ago</em> that hasn't needed to be updated since it 
-launched. That's damn near perfect software; that's real Software Engineering.</p>
-<p><a href="http://www.drmaciver.com/2015/10/the-economics-of-software-correctness/">The economics of software correctness &#8594;</a></p>
-<p><a href="http://www.fastcompany.com/28121/they-write-right-stuff">They Write the Right Stuff
-&#8594;</a></p>
 		</div>
 	</div>
 </article>	
