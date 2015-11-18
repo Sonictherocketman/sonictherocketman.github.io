@@ -6,9 +6,8 @@ status: draft
 
 <img src="http://brianschrader.com/images/misc/profile-pic.jpg" class="image-right" style="width:40%;padding:3%;">
 
-My name is Brian Schrader. I'm a bioinformatician and software developer, living in San Diego, CA. This site is my little home on the internet; it was built from scratch with TextWrangler and Terminal.
+My name is Brian Schrader. I'm a bioinformatician and software developer living in San Diego, CA. This site is my little home on the internet where I go on (and on) about things that are important to me. 
 
-All posts are written in Markdown. If you want to see the original markdown text, just add "article.md" after the "/" in the URL.
 
 ## Contact Me
 You can contact me either by email at [brian@brianschrader.com][email], though I tend to be slow at responding to email, or on Twitter [@sonicrocketman][tw] where I'm usually pretty active.
