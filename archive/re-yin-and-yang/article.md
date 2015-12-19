@@ -1,6 +1,6 @@
 slug: re-yin-and-yang
 published: Fri, 28 Aug 2015 at 08:59 AM
-updated: Fri, 28 Aug 2015 at 08:59 AM
+updated: Sat, 19 Dec 2015 at 03:05 PM
 title: Re: Yin and Yang
 author: Brian Schrader
 status: publish

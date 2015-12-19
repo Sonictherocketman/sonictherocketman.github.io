@@ -1,6 +1,6 @@
 slug: microsoft-and-a-unix-based-windows
 published: Tue, 11 Feb 2014 at 12:00 AM
-updated: Sun, 16 Aug 2015 at 04:38 PM
+updated: Sat, 19 Dec 2015 at 03:05 PM
 title: Microsoft and a Unix-based Windows
 author: Brian Schrader
 status: publish

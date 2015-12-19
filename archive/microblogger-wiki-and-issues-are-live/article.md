@@ -1,6 +1,6 @@
 slug: microblogger-wiki-and-issues-are-live
 published: Wed, 31 Dec 2014 at 04:31 AM
-updated: Sun, 16 Aug 2015 at 04:38 PM
+updated: Sat, 19 Dec 2015 at 03:05 PM
 title: Microblogger Wiki and Issues are Live!
 author: Brian Schrader
 tags: microblogger, github

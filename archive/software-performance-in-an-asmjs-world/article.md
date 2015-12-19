@@ -1,6 +1,6 @@
 slug: software-performance-in-an-asmjs-world
 published: Mon, 16 Nov 2015 at 10:03 AM
-updated: Mon, 16 Nov 2015 at 10:03 AM
+updated: Sat, 19 Dec 2015 at 03:05 PM
 title: Software performance in an ASM.js world
 author: Brian Schrader
 tags: web, js
