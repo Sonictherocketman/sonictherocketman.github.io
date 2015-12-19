@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Removing Google Analytics - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<meta property="og:title" content="Removing Google Analytics" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/removing-google-analytics/" />	
+	<script type="text/javascript" src="/bin/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/removing-google-analytics/">Removing Google Analytics</a></h1>
+					<small style="font-style:italic;">Posted on Sat, 19 Dec 2015 at 03:37 PM</small>
+				</div>
+				<div class="article-content">
+					<p>Today, I removed Google Analytics from this site. I've been
+debating this for a while now, ever since the <a href="/archive/re-the-ethics-of-modern-web-ad-blocking/">discussion of ad tracking that
+came with the release of iOS 9</a>. I think it's unfair that I use Google 
+Analytics to track visitors to this site but that I also block GA on my
+machine.</p>
+<p>During that whole discussion, I went looking for alternatives, and I've been
+using <a href="http://goaccess.io">GoAccess</a> for a few months now in parallel with Google Analytics. 
+Overall I'd say the results are vaguely comparable. GoAccess gives me higher 
+overall numbers for pageviews and visitor counts, but that's a consequence of it
+running on the server and seeing the effects of browser pre-fetching. </p>
+<p><img alt="My reports" src="../../images/blog/_reports.png" /></p>
+<p>Every night a custom script runs the numbers and spits out a directory with a 
+few different reports for that day, and that week so far. It's a good system, 
+and although it doesn't have the cool real-time features of Google Analytics, 
+I found that that actually keeps me from constantly checking the traffic when 
+I'm supposed to be doing something else. Although, GoAccess does have a live 
+traffic CLI interface if I really need it.</p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
