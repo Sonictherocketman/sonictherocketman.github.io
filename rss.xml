@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Sat, 19 Dec 2015 23:06:19 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GitBook</title><link>http://brianschrader.com/archive/gitbook/</link><description>&lt;p&gt;If you haven't heard, you should check out &lt;a href="https://www.gitbook.com"&gt;GitBook&lt;/a&gt;; it's really
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description></description><lastBuildDate>Sat, 19 Dec 2015 23:06:31 +0000</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GitBook</title><link>http://brianschrader.com/archive/gitbook/</link><description>&lt;p&gt;If you haven't heard, you should check out &lt;a href="https://www.gitbook.com"&gt;GitBook&lt;/a&gt;; it's really
 cool. As a developer, writing in GitBook feels really natural, and their
 styling options will make your content look great. If you want to go deeper, 
 you can write your book in Markdown locally, and push it to GitBook just as 
