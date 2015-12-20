@@ -51,6 +51,25 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/mvvm-is-not-very-good/">
+					MVVM is not very good
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Sun, 20 Dec 2015 at 01:45 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p><a href="http://khanlou.com/2015/12/mvvm-is-not-very-good/">Soroush Khanlou:</a> <em>(emphasis mine)</em></p>
+<blockquote>
+<p>The lack of concrete naming makes this class's responsiblities grow endlessly. What functions should go in a view model? Nobody knows! Just do whatever.</p>
+<p>The most charitable thing that I can say about this pattern is that <strong>it changes your kitchen sink from a view controller</strong>, which is not an object that you own (because it's a subclass of an Apple class), to a view model, an object that you do own. The view controller is now free to focus on view-lifecycle events, and is simpler for it. <strong>Still, though, we have a kitchen sink. It's just been moved</strong>.</p>
+</blockquote>
+<p>One of my current projects is a Knockout MVVM project and I agree with everything Soroush is saying. We've pretty much decided that we are just going to use good-old MVC for our project instead of MVVM because of it's needless complexity. I'm reminded of a Gary Berndhart talk, <a href="https://www.youtube.com/watch?v=yTkzNHF6rMs"><em>Boundaries</em></a> in which he talks about the Ruby community's struggle with where to put their <a href="https://en.wikipedia.org/wiki/Big_ball_of_mud">big balls of mud</a>.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/no-we-are-romans/">
 					No, We are Romans
 				</a>
@@ -209,29 +228,6 @@ the cloud, memory will be, as it almost always has been, a precious resource.</p
 <p><link rel="stylesheet"
 href="/bin/highlight.default.min.css">
 <script>hljs.initHighlightingOnLoad();</script></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/ad-tracking-company-using-audio-to-identify-users/">
-					Ad tracking company using audio to identify users
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Thu, 12 Nov 2015 at 02:30 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p><a href="http://www.steamfeed.com/silverpush-launches-cross-device-ad-targeting-with-unique-audio-beacon-technology/">SteamFeed Admin:</a></p>
-<blockquote>
-<p>It works like this: on the desktop side, SilverPush drops a cookie along with
-playing an inaudible audio, using speakers as audio beacons. The inaudible
-code is received and recognized on the mobile device by the software
-development kit that’s on the phone. This creates an immediate and accurate
-association between the desktop cookie and mobile device.</p>
-</blockquote>
-<p>That's absolutely brilliant... and completely terrifying. It's just another
-example of what ad tracking companies will do given the technology.</p>
 		</div>
 	</div>
 </article>	

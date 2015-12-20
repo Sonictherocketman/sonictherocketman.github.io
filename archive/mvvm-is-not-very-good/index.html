@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MVVM is not very good - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+	<!--
+	<link rel="shortcut icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="icon" href="http://images.biteofanapple.com/misc/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="http://images.biteofanapple.com/misc/apple-touch-icon-precomposed.png"/>  
+	-->
+	<meta property="og:title" content="MVVM is not very good" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/mvvm-is-not-very-good/" />	
+	<script type="text/javascript" src="/bin/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>	
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+				<span class="mobileMenuBarItem"><a href="http://www.twitter.com/SonicRocketman/">Twitter</a></span>
+			</div>
+		</div>	
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/mvvm-is-not-very-good/">MVVM is not very good</a></h1>
+					<small style="font-style:italic;">Posted on Sun, 20 Dec 2015 at 01:45 PM</small>
+				</div>
+				<div class="article-content">
+					<p><a href="http://khanlou.com/2015/12/mvvm-is-not-very-good/">Soroush Khanlou:</a> <em>(emphasis mine)</em></p>
+<blockquote>
+<p>The lack of concrete naming makes this class's responsiblities grow endlessly. What functions should go in a view model? Nobody knows! Just do whatever.</p>
+<p>The most charitable thing that I can say about this pattern is that <strong>it changes your kitchen sink from a view controller</strong>, which is not an object that you own (because it's a subclass of an Apple class), to a view model, an object that you do own. The view controller is now free to focus on view-lifecycle events, and is simpler for it. <strong>Still, though, we have a kitchen sink. It's just been moved</strong>.</p>
+</blockquote>
+<p>One of my current projects is a Knockout MVVM project and I agree with everything Soroush is saying. We've pretty much decided that we are just going to use good-old MVC for our project instead of MVVM because of it's needless complexity. I'm reminded of a Gary Berndhart talk, <a href="https://www.youtube.com/watch?v=yTkzNHF6rMs"><em>Boundaries</em></a> in which he talks about the Ruby community's struggle with where to put their <a href="https://en.wikipedia.org/wiki/Big_ball_of_mud">big balls of mud</a>.</p>				
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-style:italic;">Subscribe to the <a href="/rss">RSS Feed</a>. Check out my code on <a href="http://github.com/sonictherocketman/">GitHub</a></span>
+			</div>
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+				<br />
+				<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BiteofanApple</span> is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
