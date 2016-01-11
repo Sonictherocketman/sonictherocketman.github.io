@@ -1,6 +1,6 @@
 slug: dave-winer-on-donating-to-wikipedia
 published: Wed, 03 Dec 2014 at 11:11 PM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: Dave Winer on Donating to Wikipedia
 author: Brian Schrader
 tags: dave winer

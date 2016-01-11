@@ -1,6 +1,6 @@
 slug: the-professional-sharer
 published: Fri, 24 Oct 2014 at 09:09 PM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: The Professional Sharer
 author: Brian Schrader
 tags: open web, email, cgp grey

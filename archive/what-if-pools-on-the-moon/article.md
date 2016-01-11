@@ -1,6 +1,6 @@
 slug: what-if-pools-on-the-moon
 published: Thu, 15 Jan 2015 at 05:28 AM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: What-If: Pools on the Moon
 author: Brian Schrader
 tags: xkcd

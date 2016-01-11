@@ -1,6 +1,6 @@
 slug: hiking-the-pacific-crest-trail
 published: Sun, 19 Jul 2015 at 10:59 PM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: Hiking the Pacific Crest Trail
 author: Brian Schrader
 tags: hiking, pct, section c

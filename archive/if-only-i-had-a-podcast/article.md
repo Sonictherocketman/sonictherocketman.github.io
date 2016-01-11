@@ -1,6 +1,6 @@
 slug: if-only-i-had-a-podcast
 published: Tue, 18 Mar 2014 at 09:35 AM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: If Only I had a Podcast 
 status: publish
 tags: podcasting

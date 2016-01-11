@@ -1,6 +1,6 @@
 slug: even-more-re-software-and-engineering
 published: Mon, 09 Nov 2015 at 01:11 PM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: Even more re: software and engineering
 author: Brian Schrader
 tags: engineering

@@ -10,7 +10,7 @@ My name is Brian Schrader. I'm a bioinformatician and software developer living 
 
 
 ## Contact Me
-You can contact me either by email at [brian@brianschrader.com][email], though I tend to be slow at responding to email, or on Twitter [@sonicrocketman][tw] where I'm usually pretty active.
+You can contact me either by email at [brian@brianschrader.com][email], but I might take a while to respond.
 
 [email]: mailto:brian@brianschrader.com
 [tw]: http://twitter.com/sonicrocketman

@@ -1,6 +1,6 @@
 slug: nasa-streams-the-iss-view-of-earth-24-7
 published: Sat, 10 May 2014 at 06:39 AM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: NASA Streams the ISS View of Earth 24/7
 author: Brian Schrader
 tags: nasa

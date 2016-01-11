@@ -1,6 +1,6 @@
 slug: book-recommendation-the-stormlight-archive
 published: Sun, 17 Aug 2014 at 09:50 PM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: Book Recommendation: The Stormlight Archive
 author: Brian Schrader
 tags: brandon sanderson, the stormlight archive

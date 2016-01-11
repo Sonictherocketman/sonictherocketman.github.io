@@ -1,6 +1,6 @@
 slug: more-pluto-images
 published: Sun, 20 Sep 2015 at 03:31 PM
-updated: Sat, 19 Dec 2015 at 03:05 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: More Pluto images
 author: Brian Schrader
 tags: new horizons, pluto, images

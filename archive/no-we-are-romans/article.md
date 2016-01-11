@@ -1,6 +1,6 @@
 slug: no-we-are-romans
 published: Sun, 20 Dec 2015 at 12:40 PM
-updated: Sun, 20 Dec 2015 at 12:40 PM
+updated: Mon, 11 Jan 2016 at 11:10 AM
 title: No, We are Romans
 author: Brian Schrader
 tags: history, roman 
