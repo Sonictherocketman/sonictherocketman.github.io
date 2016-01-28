@@ -1,6 +1,6 @@
 slug: python-multiprocessing-and-unittest
 published: Tue, 28 Apr 2015 at 01:39 AM
-updated: Mon, 18 Jan 2016 at 12:55 PM
+updated: Thu, 28 Jan 2016 at 09:33 AM
 title: Python multiprocessing and unittest
 author: Brian Schrader
 tags: python, bugs

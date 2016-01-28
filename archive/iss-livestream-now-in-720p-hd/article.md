@@ -1,6 +1,6 @@
 slug: iss-livestream-now-in-720p-hd
 published: Mon, 24 Nov 2014 at 02:31 AM
-updated: Mon, 18 Jan 2016 at 12:55 PM
+updated: Thu, 28 Jan 2016 at 09:33 AM
 title: ISS Livestream now in 720p HD
 author: Brian Schrader
 tags: iss

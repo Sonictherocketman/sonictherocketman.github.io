@@ -1,6 +1,6 @@
 slug: removing-google-analytics
 published: Sat, 19 Dec 2015 at 03:37 PM
-updated: Mon, 18 Jan 2016 at 12:55 PM
+updated: Thu, 28 Jan 2016 at 09:33 AM
 title: Removing Google Analytics
 author: Brian Schrader
 tags: google analytics

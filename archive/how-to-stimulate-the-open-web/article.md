@@ -1,6 +1,6 @@
 slug: how-to-stimulate-the-open-web
 published: Sun, 31 Aug 2014 at 09:53 PM
-updated: Mon, 18 Jan 2016 at 12:55 PM
+updated: Thu, 28 Jan 2016 at 09:33 AM
 title: How to stimulate the open web
 author: Brian Schrader
 tags: open web

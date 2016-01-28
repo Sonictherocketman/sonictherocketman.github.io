@@ -1,6 +1,6 @@
 slug: photoStream-apples-beautiful-convoluted-dream
 published: Sun, 07 Jul 2013 at 02:35 AM
-updated: Mon, 18 Jan 2016 at 12:55 PM
+updated: Thu, 28 Jan 2016 at 09:33 AM
 title: PhotoStream: Apple's beautiful, convoluted dream
 author: Brian Schrader
 status: publish
