@@ -1,6 +1,6 @@
 slug: horizontal-history
 published: Fri, 15 Jan 2016 at 02:50 PM
-updated: Mon, 01 Feb 2016 at 11:11 AM
+updated: Mon, 01 Feb 2016 at 12:04 PM
 title: Horizontal History
 author: Brian Schrader
 status: publish
@@ -21,7 +21,7 @@ Tim put together an amazing (and huge) image of various historical figures and t
 
 
 [1]: http://waitbutwhy.com/2016/01/horizontal-history.html
-[2]: /images/blog/horiz-history-1.png
+[2]: /images/blog/horiz-history-1.jpg
 [3]: http://28oa9i1t08037ue3m1l0i861.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/Horizontal-History-Generations-4.jpg
 
 One section of the picture that I found super interesting, highlights the relationships between a few famous Romans. In this picture you can see the newly minted Roman Empire, with Augustus as it's first [Princeps][5], grow to it's greatest extend and power, through Trajan and Hadrian, and begin to fall apart, during the time of Marcus Aurelius. It's almost 200 years of history, but only 7 generations.
