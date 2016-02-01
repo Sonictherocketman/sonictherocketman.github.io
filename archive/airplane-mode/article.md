@@ -1,6 +1,6 @@
 slug: airplane-mode
 published: Sun, 13 Sep 2015 at 10:53 PM
-updated: Thu, 28 Jan 2016 at 09:33 AM
+updated: Mon, 01 Feb 2016 at 11:08 AM
 title: Airplane Mode
 author: Brian Schrader
 tags: music

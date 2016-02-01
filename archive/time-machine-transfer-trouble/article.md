@@ -1,6 +1,6 @@
 slug: time-machine-transfer-trouble
 published: Wed, 31 Dec 2014 at 03:36 AM
-updated: Thu, 28 Jan 2016 at 09:33 AM
+updated: Mon, 01 Feb 2016 at 11:08 AM
 title: Time Machine Transfer Trouble
 author: Brian Schrader
 tags: time machine, backups

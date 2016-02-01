@@ -1,6 +1,6 @@
 slug: the-race-for-space
 published: Sun, 06 Sep 2015 at 10:22 PM
-updated: Thu, 28 Jan 2016 at 09:33 AM
+updated: Mon, 01 Feb 2016 at 11:08 AM
 title: The Race for Space
 author: Brian Schrader
 tags: music, space

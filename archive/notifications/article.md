@@ -1,6 +1,6 @@
 slug: notifications
 published: Mon, 18 Aug 2014 at 01:45 AM
-updated: Thu, 28 Jan 2016 at 09:33 AM
+updated: Mon, 01 Feb 2016 at 11:08 AM
 title: Notifications
 author: Brian Schrader
 status: publish
