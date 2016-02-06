@@ -1,6 +1,6 @@
 slug: the-new-new-cms
 published: Mon, 24 Mar 2014 at 02:43 AM
-updated: Mon, 01 Feb 2016 at 11:11 AM
+updated: Fri, 05 Feb 2016 at 05:12 PM
 title: The <i>New</i> New CMS
 author: Brian Schrader
 tags: websites, cms, blogging
@@ -14,7 +14,7 @@ The CMS is actually just a set of *mostly* static pages that pull their data fro
 
 Writing the articles is the easiest part, as it should be. It's really simple; write a Markdown file and put five lines of metadata at the top: title, author, slug (optional), tags, and status. The status tells the Python script whether the article is a draft meant for previewing, or a ready-to-publish article. That's it. Run the Python script, look at the preview, change the status to "publish", commit the changes and publish to the server. The rest is taken care of by PHP snippets, Python scripts, and Git's magic.
 
-<img class="image-center" src="http://brianschrader.com/images/markdown-cms-preview.jpg" alt="A look at a typical Markdown article">
+<img class="image-center" src="http://brianschrader.com/images/blog/markdown-cms-preview.jpg" alt="A look at a typical Markdown article">
 
 When I started out with this refactor, I had my sights set on using PHP for everything, like I had before. I'm no expert in PHP (I've probably written less than 2000 lines of it ever) but I don't particularly like it as a language, so I went with Python. I hadn't written Python in over a year, but it was easy enough to relearn, and over the time I've spent rewriting the CMS, I've fallen for Python as my preferred scripting language. In fact, I've come up with a project using Python's cool feature to integrate with C, but more on that later.
 
