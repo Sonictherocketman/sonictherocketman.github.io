@@ -28,7 +28,7 @@ Really it all comes down to search, now that I think about it. You can have ever
 
 [gruber]: https://twitter.com/gruber/status/1024766035
 
-![google](http://brianschrader.com/image/blog/gruber_tweet.png)
+![google](http://brianschrader.com/images/blog/gruber_tweet.png)
 
 [googlelink]:[http://brianschrader.com/image/blog/gruber_tweet.png]
 
