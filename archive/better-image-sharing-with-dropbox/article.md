@@ -1,6 +1,6 @@
 slug: better-image-sharing-with-dropbox
 published: Fri, 05 Feb 2016 at 02:38 PM
-updated: Fri, 05 Feb 2016 at 02:38 PM
+updated: Wed, 10 Feb 2016 at 02:48 PM
 title: Better Image Sharing with Dropbox
 author: Brian Schrader
 tags: dropbox, images, sharing
@@ -8,7 +8,7 @@ status: publish
 
 I share a lot of pictures and even more screenshots. Until now, I've been using Dropbox's built-in "Share Screen Shots" feature. It's super convenient because it captures the screenshots automatically and puts a Dropbox link in your clipboard. It might sound silly, but once you've gotten used to it, there's no going back.
 
-![Dropbox screen share](https://dl.dropboxusercontent.com/s/ju23ajggmn0xuqt/Screenshot%202016-02-05%2014.05.54.png?dl=0)
+![Dropbox screen share](../../images/blog/dropbox_ss.png)
 
 
 ## What's Wrong?
@@ -16,7 +16,7 @@ I share a lot of pictures and even more screenshots. Until now, I've been using 
 There are a number of problems with sharing these links over social media. If you aren't logged into Dropbox, it put's up a lovely sign-up form instead of the picture, many apps can't show the image inline because they don't know how to scrape the Dropbox page, and the page can sometimes be extremely slow to load. It's super convenient for the poster, but not for the reader.
 
 
-![Before and after](https://dl.dropboxusercontent.com/s/44hqsz8hhyvqx3d/Screenshot%202016-02-05%2014.34.20.png?dl=0)
+![Before and after](../../images/blog/tw_ss.jpg)
 
 ## Enter Alfred
 
@@ -28,7 +28,7 @@ There are a number of problems with sharing these links over social media. If yo
 [tw]: http://brianschrader.com/archive/breaking-up-is-hard-to-do/
 [alfred]: https://www.alfredapp.com
 [workflow]: https://dl.dropboxusercontent.com/s/cphwp7brw14r0lo/Convert%20Dropbox%20Share%20Link%20to%20Raw%20Image%20URL.alfredworkflow?dl=0
-[window]: https://dl.dropboxusercontent.com/s/7zxng5618y88q4r/Screenshot%202016-02-05%2013.10.03.png?dl=0
+[window]: ../../images/blog/alfred.jp2
 
 I now have a simple 2 step macro that takes any Dropbox link and converts it to the raw file URL, and puts it in the clipboard. The only downside is that my screenshot-sharing-workflow is now 2 keystrokes instead of 1, but that's something I think I can live with.<sup>1</sup>
 
