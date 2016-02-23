@@ -5,10 +5,11 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
 
 	<meta property="og:title" content="Microblog Crawler Diary: Signals" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://brianschrader.com/archive/microblog-crawler-diary-signals/" />	
+	<meta property="og:url" content="http://brianschrader.com/archive/microblog-crawler-diary-signals/" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
 </head>
 <body>
@@ -25,7 +26,7 @@
 			<span class="menuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
 			<br>
 			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
-		</span>	
+		</span>
 		<!-- Mobile Nav -->
 		<div class="mobile-nav">
 			<!-- Name and Author -->
@@ -39,7 +40,7 @@
 				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
 			  <span class="mobileMenuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
 			</div>
-		</div>	
+		</div>
 	</div>
 	<div id="post-list">
 		<article>
@@ -54,7 +55,7 @@
 <p>The crawler will have a handler for that signal that will then pause the crawling, (if it is being done) read in the link that is supposed to be crawled, and do so. Once it is done crawling, it records the link, and inserts the new post into the cache. The crawler then resumes its job of crawling the list of links, and if that link is the same as the link recorded in the signal handler, then it moves on without processing it (since it has already done so). </p>
 <p>It does seem a bit primitive, but it should be straight forward to implement. With this implemented, the crawler can increase its default crawling interval and fall back to just being notified if anything new comes along.</p>
 <hr />
-<p><strong>Side note:</strong> I will have to be careful what signals are allowed to pass to the crawler. If unchecked, spammers could easily stop the crawler dead in its tracks (since I would be essentially sending OS interrupts for every message received). To mitigate this, the web-app will keep a whitelist of servers it has requested updates from and only accept messages from those servers. </p>				
+<p><strong>Side note:</strong> I will have to be careful what signals are allowed to pass to the crawler. If unchecked, spammers could easily stop the crawler dead in its tracks (since I would be essentially sending OS interrupts for every message received). To mitigate this, the web-app will keep a whitelist of servers it has requested updates from and only accept messages from those servers. </p>
 				</div>
 			</div>
 		</article>

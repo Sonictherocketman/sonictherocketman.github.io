@@ -1,6 +1,6 @@
 slug: why-its-impossible-to-make-plans-anymore
 published: Sun, 31 Aug 2014 at 01:45 AM
-updated: Mon, 01 Feb 2016 at 11:11 AM
+updated: Mon, 22 Feb 2016 at 05:26 PM
 title: Why It's Impossible to Make Plans Anymore
 author: Brian Schrader
 status: publish

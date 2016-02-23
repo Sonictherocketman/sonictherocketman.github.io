@@ -5,10 +5,11 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
 
 	<meta property="og:title" content="Microblog Crawler v1.4(.1)" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://brianschrader.com/archive/microblog-crawler-v141/" />	
+	<meta property="og:url" content="http://brianschrader.com/archive/microblog-crawler-v141/" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
 </head>
 <body>
@@ -25,7 +26,7 @@
 			<span class="menuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
 			<br>
 			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
-		</span>	
+		</span>
 		<!-- Mobile Nav -->
 		<div class="mobile-nav">
 			<!-- Name and Author -->
@@ -39,7 +40,7 @@
 				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
 			  <span class="mobileMenuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
 			</div>
-		</div>	
+		</div>
 	</div>
 	<div id="post-list">
 		<article>
@@ -58,7 +59,7 @@
 </ul>
 <p><a href="https://github.com/Sonictherocketman/microblog_crawler">The full version notes are available here.</a></p>
 <p>The major enhancement in this version (besides the graceful exiting) was the addition of a workaround for a <a href="http://bugs.python.org/issue9400">bug in Python's multiprocessing module</a>. The bug has to do with what happens to exceptions raised in child processes. When they are raised, they are pickled and sent back to the parent process. The problem arises when an exception is not pickleable. The child process hangs and never exits. The interesting thing is that the bug was first reported in 2010 and affects all versions of Python since 2010 (i.e. 2.7, 3.2, 3.3, 3.4). This bug has been baffling me since I started converting the crawler to be multiprocessed, and its nice to finally have a workaround. </p>
-<p>If anyone out there is using MicroblogCrawler, I'd love to hear from you, and pull requests are very welcome!</p>				
+<p>If anyone out there is using MicroblogCrawler, I'd love to hear from you, and pull requests are very welcome!</p>
 				</div>
 			</div>
 		</article>

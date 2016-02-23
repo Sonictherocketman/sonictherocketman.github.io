@@ -1,6 +1,6 @@
 slug: what-ancient-greek-music-sounded-like
 published: Tue, 02 Feb 2016 at 10:00 AM
-updated: Tue, 02 Feb 2016 at 10:00 AM
+updated: Mon, 22 Feb 2016 at 05:26 PM
 title: What Ancient Greek Music Sounded Like
 author: Brian Schrader
 tags: music, history
