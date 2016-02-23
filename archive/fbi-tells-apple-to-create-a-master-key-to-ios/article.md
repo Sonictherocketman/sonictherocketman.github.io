@@ -1,6 +1,6 @@
 slug: fbi-tells-apple-to-create-a-master-key-to-ios
 published: Wed, 17 Feb 2016 at 11:05 AM
-updated: Mon, 22 Feb 2016 at 05:26 PM
+updated: Tue, 23 Feb 2016 at 10:38 AM
 title: FBI tells Apple to Create a Master Key to iOS
 author: Brian Schrader
 tags: apple, technology, encryption
@@ -28,6 +28,13 @@ Soon after Apple released this statement, the [EFF said that they will file in s
 
 More info [here][mj] and [here][hn].
 
+---
+
+**Update (Feb-23):** Apple has [posted a FAQ][faq] to help answer a few common questions and to further the discussion. Here's an excerpt that sums up the point really well:
+
+> The only way to guarantee that such a powerful tool isn’t abused and doesn’t fall into the wrong hands is to never create it.
+
+[faq]: http://www.apple.com/customer-letter/answers/
 [cook]: http://www.apple.com/customer-letter/
 [marco]: https://marco.org/2016/02/17/not-about-this-5c
 [eff]: https://www.eff.org/deeplinks/2016/02/eff-support-apple-encryption-battle
