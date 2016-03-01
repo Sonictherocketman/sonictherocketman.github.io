@@ -45,6 +45,26 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/hosting-a-minecraft-server-on-linode/">
+					Hosting a Minecraft Server on Linode
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Tue, 01 Mar 2016 at 10:11 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>The planets have aligned again, and I've returned to Minecraft. Every once and a while I get the urge to call up some friends, spin up a server, and spend a few hours a week building crazy things and fighting for survival in a blocky world. Usually, I host the server on my laptop, but this time I wanted to try something different (read: more complicated). I'm a developer, and I have the power of the cloud at my fingertips, so why not spin up a Linode instance and host the server there?</p>
+<p><img alt="A tower on the hill" class="image-right" style="padding-left:5px;"
+    src="/images/blog/mc-tower.jpg"></p>
+<p>The first night, I made the terrible mistake of trying to use my existing Linode instance to host the server. A paltry 1 core, 1GB memory machine can run a nice static website, but it's terrible at running a gaming server. If you want the server to constantly crash, and run out of memory, then that's the method you should try</p>
+<p>If you actually want to play the game, I recommend using Linode's 4 core, 4GB memory instances. Unless you plan on having tens of people on the server at once, its going to be more that enough. The best part is that those instances are $0.06/hr. Last night I played with a friend for 4 hours, and it cost me a whole 24¢.</p>
+<p>I've written a little <a href="https://gist.github.com/Sonictherocketman/221c6fad8ea76657d2b2">shell script</a> to do the installation automatically, and even sign the EULA. So now, whenever I want to play with some friends, I can click a whole three buttons in Linode's admin panel, SSH into the server, run my script and start playing. Then when we're done I can copy the world onto my Mac via FTP, and shut down the instance. Super simple, cheap, and fast.</p>
+<p>The cloud is pretty awesome sometimes.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/fbi-tells-apple-to-create-a-master-key-to-ios/">
 					FBI tells Apple to Create a Master Key to iOS
 				</a>
@@ -133,25 +153,6 @@
 			<p>Text files are really small, and blog posts are just text files. Web pages are getting bigger and bigger over time. <a href="http://idlewords.com/talks/website_obesity.htm">Maciej Cegłowski</a> calls it the "The Website Obesity Crisis" (and you should watch his talk). In response to this, I've removed some assets from this site that I wasn't using. Individual articles are now ~12KB plus images, as they should be. </p>
 <hr />
 <p><small>I guess I never realized that jQuery was ~90KB.</small></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/more-secure-pastures/">
-					More Secure Pastures
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Wed, 27 Jan 2016 at 09:13 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Well, I finally did it; I finally upgraded this site to use https. I've wanted to do this for a while, and I know that I should have done it years ago, but the thought of having to upgrade Apache, even after all these years, still puts a chill down my spine. Regardless, this site is now certified by <a href="https://letsencrypt.org">Let's Encrypt</a>, and my thanks to them for making free SSL certificates a possibility. </p>
-<p>I encountered a few troubles while upgrading, and I hope no one noticed, but for anyone looking to do the same thing, here's a few links that helped me through the process:</p>
-<ul>
-<li><a href="https://community.letsencrypt.org/t/a-tutorial-to-start-with-centos-6-5/3755/7">Configuring Let's Encrypt w/ Apache 2.4 on CentOS 6 &#8594;</a></li>
-<li><a href="https://wiki.apache.org/httpd/RedirectSSL#Using_virtual_hosts_.28using_redirect.29">Redirecting HTTP to HTTPS &#8594;</a></li>
-</ul>
 		</div>
 	</div>
 </article>
