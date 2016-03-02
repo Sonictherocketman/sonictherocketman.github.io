@@ -22,7 +22,7 @@
 
 
 html {
-	height: 100%; /*required for all browsers*/ 
+	height: 100%; /*required for all browsers*/
 }
 
 body {
@@ -55,7 +55,7 @@ blockquote {
 	margin: 1em 3em;
 	color: #585858;
 	border-left: 2px solid #999;
-	padding-left: 1em; 
+	padding-left: 1em;
 }
 
 ul p {
@@ -79,7 +79,7 @@ ul p {
 	line-height:100px;
 	position:relative;
 	z-index: 100;
-	
+
 	/* FIXING IT TO THE TOP */
 	/* position:fixed;
     top:0; */
@@ -96,19 +96,19 @@ ul p {
 #post, #first-post {
 	margin-top: -3px;
 	padding: 3%;
-	
+
 	border-right: 0px; /* Don't forget to modify to the right border. */
-	background-image: 
+	background-image:
 	    -webkit-gradient(linear, 0 0, 0 100%, from(#4068B8), to(transparent));
-	background-image: 
+	background-image:
 	    -webkit-linear-gradient(180deg, transparent, #4068B8, transparent);
-	background-image: 
+	background-image:
 	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent),
 	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent);
 	background-image:
 	    -o-linear-gradient(180deg, transparent, #4068B8, transparent),
 	    -o-linear-gradient(180deg, transparent, #4068B8, transparent);
-	background-image: 
+	background-image:
    		linear-gradient(90deg, transparent, #4068B8, transparent),
    		linear-gradient(90deg, transparent, #4068B8, transparent);
 	-moz-background-size: 80% 3px; /* This get flipped. */
@@ -131,23 +131,23 @@ ul p {
 	margin-top: -3px;
 	padding: 3%;
 	/*
-	border-right: 0px; /* Don't forget to modify to the right border. 
-	background-image: 
+	border-right: 0px; /* Don't forget to modify to the right border.
+	background-image:
 	    -webkit-gradient(linear, 0 0, 0 100%, from(#4068B8), to(transparent));
-	background-image: 
+	background-image:
 	    -webkit-linear-gradient(180deg, transparent, #4068B8, transparent);
-	background-image: 
+	background-image:
 	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent),
 	    -moz-linear-gradient(180deg, transparent, #4068B8, transparent);
 	background-image:
 	    -o-linear-gradient(180deg, transparent, #4068B8, transparent),
 	    -o-linear-gradient(180deg, transparent, #4068B8, transparent);
-	background-image: 
+	background-image:
    		linear-gradient(90deg, transparent, #4068B8, transparent),
    		linear-gradient(90deg, transparent, #4068B8, transparent);
 	-moz-background-size: 80% 3px; /* This get flipped. */
 	background-size: 85% 3px; /* This get flipped. */
-	background-position: bottom; /* The last argument gets flipped. 
+	background-position: bottom; /* The last argument gets flipped.
 	background-repeat: no-repeat;
 	*/
 }
@@ -180,9 +180,9 @@ ul p {
  * Dynamic Image Styling
  */
  #post img, .post img {
- 	/* 
+ 	/*
  	 * Generic Image Styling. Unless something more detailed is needed,
- 	 * this is the default image styling. 
+ 	 * this is the default image styling.
  	 * Centered image that 'fills' the post width.
  	 */
 	/* Adaptive */
@@ -199,7 +199,7 @@ ul p {
  	max-width:90%;
 	/*max-height:600px;*/
 }
- 
+
 .image-right, .image-left, .image-center {
 	max-width:700px;
 	max-height:600px;
@@ -211,7 +211,7 @@ ul p {
 	padding:1px;
 	margin:15px;
 }
-.image-left { 
+.image-left {
 	float:left;
 	padding:1px;
 	margin:15px;
@@ -224,6 +224,16 @@ ul p {
 	margin-left:auto;
 	margin-right:auto;
 	display:block;
+}
+
+.image-container {
+  float:right;
+  padding-left:5px;
+  text-align:center;
+}
+
+.image-container caption {
+  font-style:italic;
 }
 
 .small {
@@ -259,13 +269,13 @@ ul p {
 	display:block;
 }
 .page-sectionTitle {
-	font-family:'Average', sans-serif;	
-	margin-right:auto; 
-	border-right:3px solid gray; 
-	border-bottom:1px solid gray; 
-	text-align:left; 
-	width:auto; 
-	padding:1%; 
+	font-family:'Average', sans-serif;
+	margin-right:auto;
+	border-right:3px solid gray;
+	border-bottom:1px solid gray;
+	text-align:left;
+	width:auto;
+	padding:1%;
 	font-size:26pt;
 }
 
@@ -281,9 +291,9 @@ ul p {
 }
 
 /*
-* 
+*
 * Begin Link Styling
-* 
+*
 */
 
 #title-bar a:link {color:white; text-decoration:none;}
