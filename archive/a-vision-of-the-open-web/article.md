@@ -1,6 +1,6 @@
 slug: a-vision-of-the-open-web
 published: Tue, 08 Mar 2016 at 09:31 AM
-updated: Tue, 08 Mar 2016 at 09:31 AM
+updated: Tue, 08 Mar 2016 at 11:15 AM
 title: A Vision of the Open Web
 author: Brian Schrader
 tags: open web, technology
@@ -44,7 +44,7 @@ If a given social network focuses more on private communication, then building i
 If your network is more like Slack or HipChat, then IRC is what you want. Once again, err on the side of caution when showing chats from unidentified users, encrypt your messages, keep and sync the user's messages between devices, try sending HTML instead of plaintext, and make the UI more like Facebook Messenger or WhatsApp. Anyone can talk to anyone on any IRC service, it's our job as Application developers to make it look and feel good to use.
 
 [am]: https://9to5mac.files.wordpress.com/2014/09/ios-8-continuity-sms.png
-[snip]: http://snippets.today/about
+[snip]: http://snippets.today/
 [mr]: http://www.manton.org
 [iwc]: http://indiewebcamp.com
 [img]: http://cyber.law.harvard.edu/rss/rss.html#ltimagegtSubelementOfLtchannelgt
