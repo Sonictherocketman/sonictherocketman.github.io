@@ -1,6 +1,6 @@
 slug: a-vision-of-the-open-web
 published: Tue, 08 Mar 2016 at 09:31 AM
-updated: Tue, 08 Mar 2016 at 11:15 AM
+updated: Tue, 08 Mar 2016 at 11:17 AM
 title: A Vision of the Open Web
 author: Brian Schrader
 tags: open web, technology
@@ -35,7 +35,7 @@ Services like [Manton Reeces'][mr] [Snippets.today][snip] are working to bring t
 
 RSS feeds are extremely powerful, and they already possess standard support for things like [profile pictures][img], comments threads, and [new post notification subscriptions][cloud]. I propose using the channel `<image>` tag of the RSS feed as the user's profile image (preferably a [Gravatar URL][gr]). This way, a user's profile pictures are independent of the microblogging service they use. I imagine that microblog RSS feeds will be person-centric rather than site-centric. The feed's `<title>` should be the person's name, not the service's, and the `<image>` should be their image. Hashtags are here to stay, put them in the RSS item's `<category>` fields. Services implementing this new feature-set should be on the lookout for replies coming from WebMentions, and a specific WebMentions URL should be present in the feeds for alerting a user of a reply and services should show these replies to the user.
 
-If a given social network focuses more on private communication, then building it on top of the Email standard might be more apt. Remove the subject field in your client (you can even use it for your own tagging purposes if you need). Structure the email's UI more like a chat or threaded comment system. Group chat is built in to email so there's nothing you need to do. Stick [MailRoute][mr] in front of your service to filter spam, and err on the side of caution when showing the user a message from some "rando" they don't follow. Hide the emails of the users and just show their Gravatar profile images and usernames. Email is designed for decentralized messaging, use that to your advantage. Allow users to chat with anyone, including rival email-based messaging services (but don't make it like conventional email). Most of Facebook could easily be built using this kind of system.
+If a given social network focuses more on private communication, then building it on top of the Email standard might be more apt. Remove the subject field in your client (you can even use it for your own tagging purposes if you need). Structure the email's UI more like a chat or threaded comment system. Group chat is built in to email so there's nothing you need to do. Stick [MailRoute][mail] in front of your service to filter spam, and err on the side of caution when showing the user a message from some "rando" they don't follow. Hide the emails of the users and just show their Gravatar profile images and usernames. Email is designed for decentralized messaging, use that to your advantage. Allow users to chat with anyone, including rival email-based messaging services (but don't make it like conventional email). Most of Facebook could easily be built using this kind of system.
 
 <div class="image-container" style="width:350px;">
 <img src="https://brianschrader.com/images/blog/textual.jp2" alt="Textual IRC app" />
@@ -50,7 +50,7 @@ If your network is more like Slack or HipChat, then IRC is what you want. Once a
 [img]: http://cyber.law.harvard.edu/rss/rss.html#ltimagegtSubelementOfLtchannelgt
 [cloud]: http://cyber.law.harvard.edu/rss/rss.html#ltcloudgtSubelementOfLtchannelgt
 [gr]: http://sonicrocketman.snippets.xyz/2016/02/23/f2c3.html
-[mr]: http://mailroute.net
+[mail]: http://mailroute.net
 
 
 ## Ecosystem, ecosystem, ecosystem
