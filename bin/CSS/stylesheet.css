@@ -5,13 +5,13 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://brianschrader.com/bin/open-sans.ttf) format('truetype');
+  src: local('Open Sans'), local('OpenSans'), url(https://brianschrader.com/bin/open-sans.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Average';
   font-style: normal;
   font-weight: 400;
-  src: local('Average'), local('Average-Regular'), url(http://brianschrader.com/bin/average.ttf) format('truetype');
+  src: local('Average'), local('Average-Regular'), url(https://brianschrader.com/bin/average.ttf) format('truetype');
 }
 
 /*
