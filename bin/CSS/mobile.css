@@ -14,7 +14,7 @@ body {
 	line-height:1.7;
 	margin:auto;
 	width:100%;
-	font-size:38pt;	
+	font-size:38pt;
 	text-align:left;
 }
 
@@ -26,6 +26,11 @@ h1 {
 
 h2 {
 	font-size:48pt;
+}
+
+blockquote {
+	/**margin: 1em 3em;**/
+	padding-left: 0em;
 }
 
 /*
