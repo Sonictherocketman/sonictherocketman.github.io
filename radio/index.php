@@ -57,21 +57,20 @@ function onAirTest($ipaddress, $port)
       return true;
    }
 
-<p>else
+else
    {
       return false;
    }
 }
 function getStatus() {
     if (onAirTest()) {
-        return "LIVE";
+        return "Live";
     } else {
         return "Off Air";
     }
-}</p>
-<blockquote></blockquote>
+} ?>
 <p><center>
-Status: &lt;?php echo(getStatus()); &gt;</p>
+Status: <?php echo(getStatus()); ?></p>
 <p><audio controls autoplay
     src="http://brianschrader.com:8000/radio"></audio>
 </center></p>
