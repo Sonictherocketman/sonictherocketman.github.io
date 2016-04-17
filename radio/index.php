@@ -65,7 +65,7 @@ else
    }
 }
 function getStatus() {
-    if (onAirTest()) {
+    if (onAirTest() == true) {
         return "Live";
     } else {
         return "Off Air";
