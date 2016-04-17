@@ -53,15 +53,7 @@
 					<?php
 function onAirTest()
 {
-   if (strstr(get_headers("http://brianschrader.com:8000/radio")[0], "200 OK"))
-   {
-      return true;
-   }
-
-else
-   {
-      return false;
-   }
+   return strstr(get_headers("http://brianschrader.com:8000/radio")[0], "200 OK");
 }
 function getStatus() {
     if (onAirTest() == true) {
