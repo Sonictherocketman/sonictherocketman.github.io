@@ -3,9 +3,10 @@
 <head>
 	<title>Radio - BiteofanApple</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
 
- 	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="http://brianschrader.com/bin/CSS/mobile.css">
 	<meta property="og:title" content="Radio" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="http://brianschrader.com/archive/radio/" />
@@ -19,8 +20,8 @@
 			<!-- Name and Author -->
 			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
 			<!-- Links -->
-			<span class="menuBarItem" style="margin-left: 30px;"><a href="/archive/">Archive</a></span>
-			<span class="menuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
 			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
 			<span class="menuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
 			  <span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
@@ -31,12 +32,13 @@
 		<div class="mobile-nav">
 			<!-- Name and Author -->
 			<div style="text-align:center; margin-top:-20pt;">
-				<span class="" style="font-size:2em;"><a href="http://brianschrader.com/">BiteofanApple</a></span>
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
 			</div>
 			<!-- Links -->
 			<div style="margin-top:2%;">
-				<span class="mobileMenuBarItem" style=""><a href="http://brianschrader.com/archive/">Archive</a></span>
-				<span class="mobileMenuBarItem"><a href="http://brianschrader.com/about/">About</a></span>
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
 			  <span class="mobileMenuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
 			</div>
 		</div>
@@ -45,7 +47,7 @@
 		<article>
 			<div class="post">
 				<div class="article-title">
-					<h1>Radio</h1>
+					<h1><a href="/radio/">Radio</a></h1>
 				</div>
 				<div class="article-content">
 					<?php
@@ -77,6 +79,14 @@ Status: <?php echo(getStatus()); ?></p>
 				</div>
 			</div>
 		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
 	</div>
 </div>
 </body>
