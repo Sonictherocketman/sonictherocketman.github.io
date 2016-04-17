@@ -51,11 +51,10 @@
 				</div>
 				<div class="article-content">
 					<?php
-function onAirTest($ipaddress, $port)
+function onAirTest()
 {
-   if ($ret = @fsockopen("173.230.144.251", 8080, $errno, $errstr, 1))
+   if (strstr(get_headers("http://brianschrader.com:8000/radio")[0], "200 OK"))
    {
-      fclose($ret);
       return true;
    }
 
