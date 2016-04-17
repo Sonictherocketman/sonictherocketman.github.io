@@ -53,7 +53,7 @@
 					<?php
 function onAirTest($ipaddress, $port)
 {
-   if ($ret = @fsockopen($ipaddress, $port, $errno, $errstr, 1))
+   if ($ret = @fsockopen("173.230.144.251", 8080, $errno, $errstr, 1))
    {
       fclose($ret);
       return true;
