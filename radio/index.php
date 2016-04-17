@@ -51,9 +51,15 @@
 				</div>
 				<div class="article-content">
 					<?php
+
+function get_http_response_code($theURL) {
+    $headers = get_headers($theURL);
+    return substr($headers[0], 9, 3);
+}
+
 function onAirTest()
 {
-   return strstr(get_headers("http://brianschrader.com:8000/radio")[0], "200 OK");
+	return get_http_response_code("http://brianschrader.com:8000/radio") == "200";
 }
 function getStatus() {
     if (onAirTest() == true) {
