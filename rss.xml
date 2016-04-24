@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sat, 16 Apr 2016 20:29:03 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Re: Voting Systems</title><link>http://brianschrader.com/archive/re-voting-systems/</link><description>&lt;p&gt;This being an election year in the U.S., I've had a lot of conversations with friends and coworkers about various parts of the political process, voting, and of course the candidates. During these conversations I inevitably mention some point from CGP Grey's fantastic voting systems videos. If you haven't seen them already (links below), Grey explains how some of the weird quirks and pitfalls in our modern political systems are actually not at all related to the representatives or candidates, but to the underlying method that we use to elect them.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sun, 24 Apr 2016 17:29:15 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>iMessage Security</title><link>http://brianschrader.com/archive/imessage-security/</link><description>&lt;p&gt;For a recent post, Rich Mogull talked with Apple about iMessage and security. I
+always love to hear about cool engineering designs, and iMessage is
+full them. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here&#8217;s a simplified overview of how iMessage security works:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each device tied to your iCloud account generates its own public/private key
+pair, and sends the public key to an Apple directory server. The private key
+never leaves the device, and is protected by the device&#8217;s Data Protection
+encryption scheme (the one getting all the attention lately).&lt;/li&gt;
+&lt;li&gt;When you send an iMessage, your device checks Apple&#8217;s directory server for the public keys of all the recipients (across all their devices) based on their
+Apple ID (iCloud user ID) and phone number.&lt;/li&gt;
+&lt;li&gt;Your phone encrypts a copy of the message to each recipient device, using its
+public key. I currently have five or six devices tied to my iCloud account,
+which means if you send me a message, your phone actually creates five or six
+copies, each encrypted with the public key for one device.&lt;/li&gt;
+&lt;li&gt;For you non-security readers, a public/private keypair means that if you
+encrypt something with the public key, it can only be decrypted with the
+private key (and vice-versa). I never share my private key, so I can make my
+public key&#8230; very public. Then people can encrypt things which only I can read
+using my public key, knowing nobody else has my private keys.&lt;/li&gt;
+&lt;li&gt;Apple&#8217;s Push Notification Service (APN) then sends each message to its
+destination device.&lt;/li&gt;
+&lt;li&gt;If you have multiple devices, you also encrypt and send copies to all your own devices, so each shows what you sent in the thread.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://securosis.com/blog/how-imessage-distributes-security-to-block-phantom-devices"&gt;How iMessage distributes security to block &#8220;phantom devices&#8221;
+&amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>imessage</category><category> apple</category><category> security</category><guid isPermaLink="true">http://brianschrader.com/archive/imessage-security</guid><pubDate>Sun, 24 Apr 2016 10:29:00 -0800</pubDate></item><item><title>Re: Voting Systems</title><link>http://brianschrader.com/archive/re-voting-systems/</link><description>&lt;p&gt;This being an election year in the U.S., I've had a lot of conversations with friends and coworkers about various parts of the political process, voting, and of course the candidates. During these conversations I inevitably mention some point from CGP Grey's fantastic voting systems videos. If you haven't seen them already (links below), Grey explains how some of the weird quirks and pitfalls in our modern political systems are actually not at all related to the representatives or candidates, but to the underlying method that we use to elect them.&lt;/p&gt;
 &lt;p&gt;Politics and Law are always interesting because their results are so heavily
 influenced by the way they are developed and enacted. The legal system, for example is not about the specific intent of any given law, but about how that law can be used to enact future laws and the precedent it sets. Politics works in the same way: The method we use to elect our officials affects how the officials run for office and what issues they bring up. The voting system is the lens through which we see and conduct our democracy, and, like every lens, it's not perfect.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.youtube.com/playlist?list=PL7679C7ACE93A5638"&gt;CGP Grey: Politics in the Animal

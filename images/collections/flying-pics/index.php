@@ -22,7 +22,7 @@ $articles = $json['articles'];
 			</div>
 			<div class="article-content">
 				<table style="margin-right:auto; margin-left:auto;">
-				<?php for($i = $articles-1; $i >= 0; $i--) { 
+				<?php for($i = $articles-1; $i >= 0; $i--) {
 				$path = "http://brianschrader.com" . $json['path'.$i];
 				if ($json['hi-res-path'.$i] != null) {
 					$hiresPath = "http://brianschrader.com" . $json['hi-res-path'.$i];
@@ -34,8 +34,8 @@ $articles = $json['articles'];
 				?>
 					<tr>
 						<td>&nbsp;&nbsp;</td>
-						<td> 
-							<?php 
+						<td>
+							<?php
 							echo("<a href=".$hiresPath.">
 								<img src=".$path."></a>");
 							?>
@@ -52,7 +52,6 @@ $articles = $json['articles'];
 				</table>
 			</div>
 		</div>
-		<?php include ($_SERVER['DOCUMENT_ROOT'] . "/bin/footer.html");?>
 	</div>
 </div>
 </body>
