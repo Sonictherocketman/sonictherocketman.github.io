@@ -45,6 +45,61 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/mvc-n-and-services/">
+					MVC-N and Services
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Tue, 24 May 2016 at 10:40 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>In a recent talk, <a href="https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/">Marcus Zarra</a> proposed a new addition to the
+Model-View-Controller paradigm, which he calls the Network Controller (MVC-N):</p>
+<blockquote>
+<p>We have a network controller: it talks to the internet, your local network,
+or even be a flat file system. It then pushes data into your cache, into your
+persistence engine. Here comes the exciting part: your entire view layer
+talks to the cache only. It does not get data from the internet directly. The
+ViewController’s job is to display or update that data, not to do networking
+code.</p>
+<p><em>Note: if you do not like the word “controller”, then “manager”, “handler”, or anything else works fine. The point is that it is a controller object, because it is not a view and not a model.</em></p>
+</blockquote>
+<p>I use this pattern all the time in my code, but I don't like calling it a
+controller. I've started using the term <code>Service</code> to denote any class or set of
+code that provides an abstraction for my View Controllers.<sup>1</sup> </p>
+<p>In my code, I will typically have classes like <code>NetworkService</code>,
+<code>DropboxService</code>, <code>ChatService</code>, <code>NotificationService</code>, etc. These services abstract their underlying protocols, data stores, and logic away from the View Controllers and allow for cleaner VC code.</p>
+<p>I'm no where near as experienced in iOS development as Marcus is, but I like to
+think of any Cocoa class that uses the <code>.shared()</code> or <code>.default()</code> paradigm as a built-in service.</p>
+<pre><code class="c">
+// This is a service. It abstracts the process of sending 
+// notifications, and itself is not a view controller.
+NSNotificationCenter.defaultCenter()
+// So is this.
+UIApplication.sharedApplication()
+</code></pre>
+
+<p>I've heard these kinds of classes called <code>Utility</code> classes, but I think that's
+a big misnomer. Utility classes are little convenience
+classes or functions that provide esoteric and unique functionality, while a
+service abstracts some underlying, logically distinct functionality away from the View Controllers.</p>
+<p><a href="https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/">MVC-N: Isolating network calls from View Controllers &#8594;</a></p>
+<hr />
+<div class="footnote">
+<sup>1</sup> Services in this sense come from the Angular term for non-view
+controller related logic that handles some background communication with the
+network.
+</div>
+
+<p><link rel="stylesheet"
+href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/imessage-security/">
 					iMessage Security
 				</a>
@@ -142,30 +197,6 @@ videos about the iPhone encryption debate.</small></p>
 <p>When you disagree, that’s what you should write about, and you should post it to your blog. 140 characters thrown against wave after wave of mainstream opinion tweets will be drowned out. <strong>A blog post isn’t a cheap opinion; it’s a statement that what you think matters.</strong></p>
 </blockquote>
 <p><a href="http://www.manton.org/2016/03/blog-when-you-disagree.html">Blog when you disagree &#8594;</a></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/overcast-25-update/">
-					Overcast 2.5 Update
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Mon, 14 Mar 2016 at 07:51 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>A much appreciated update to my favorite podcast player. Marco has spent a lot of time on the various battery improvements and fine tuning the features that make Overcast special. My favorite new feature: dark mode.</p>
-<blockquote>
-<p>A dark theme has been Overcast’s most requested feature since 2.0 knocked streaming off the list. I also wanted to offer patrons something special for supporting Overcast...</p>
-<p>It features Apple’s new San Francisco font and a modern blue accent color for a fresh new look that’s still distinctly Overcast.</p>
-</blockquote>
-<p>Another feature I'm looking forward to trying out is the new private uploads feature.</p>
-<blockquote>
-<p>I also often get requests for Overcast to play files outside of podcast feeds, such as lecture recordings, audiobooks, and privately distributed podcasts.</p>
-</blockquote>
-<p>I can't wait to have my audiobooks in Overcast as well.</p>
-<p><a href="https://marco.org/2016/03/14/overcast25">Overcast 2.5 &#8594;</a></p>
 		</div>
 	</div>
 </article>
