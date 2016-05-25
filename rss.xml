@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 24 May 2016 17:41:18 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>MVC-N and Services</title><link>http://brianschrader.com/archive/mvc-n-and-services/</link><description>&lt;p&gt;In a recent talk, &lt;a href="https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/"&gt;Marcus Zarra&lt;/a&gt; proposed a new addition to the
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Wed, 25 May 2016 22:25:31 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Python-like Context Managers in Swift</title><link>http://brianschrader.com/archive/python-like-context-managers-in-swift/</link><description>&lt;p&gt;One of the most expressive concepts in Python is the context manager, and their
+simplest use case is reading and writing files.&lt;/p&gt;
+&lt;p&gt;&lt;code class="python"&gt;&lt;pre&gt;
+with open('path/to/my/file') as f:
+    f.write(some_data)
+&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;All of the logic that handles opening the file, checking for errors, and
+closing the file is handled automatically by the &lt;code&gt;with&lt;/code&gt; statement. This allows
+developers to write cleaner, more expressive code without worrying about the
+nitty gritty details of opening/closing files, and Python allows you to write
+your own context managers. This makes it easy to clean up any code that needs
+to execute in a given, safe context.&lt;/p&gt;
+&lt;h2&gt;Enter Swift&lt;/h2&gt;
+&lt;p&gt;Swift doesn't have the concept of a context manager, but they can still be easily implemented using Swift's clean and clear closure syntax.&lt;/p&gt;
+&lt;p&gt;One of the most helpful use-cases for a context manager in Cocoa is in a custom view's &lt;code&gt;drawRect&lt;/code&gt; function. CGContexts can get confusing
+if you're having to deal with them yourself. If only we had some sort of
+manager for these contexts. &lt;/p&gt;
+&lt;pre&gt;&lt;code class="swift"&gt;
+// First let's define our context manager function.
+func drawBlockInSafeContext(block: (context: CGContext?) -&gt; ()) {
+    let context = UIGraphicsGetCurrentContext()
+    CGContextSaveGState(context)
+    block(context: context)
+    CGContextRestoreGState(context)
+}
+class MyView: UIView {
+    //...
+    func drawRect(rect: CGRect) {
+        drawBlockInSafeContext { context in
+            // Now we can draw our view 
+            // without polluting the root context 
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Context Managers are one of my favorite features of Python and I'd love to see
+the concept carried over to Swift. For the record: Omar Abdelhafith has a great tutorial on making more advanced, and more &lt;a href="https://medium.com/ios-os-x-development/swift-context-manager-implementing-python-context-manager-in-swift-f327b2b4a7d7#.oys53xm0u"&gt;Pythonic Swift Context
+Managers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet"
+href="http://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;
+&lt;script src="http://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>programming</category><category> python</category><category> swift</category><guid isPermaLink="true">http://brianschrader.com/archive/python-like-context-managers-in-swift</guid><pubDate>Wed, 25 May 2016 15:25:00 -0800</pubDate></item><item><title>MVC-N and Services</title><link>http://brianschrader.com/archive/mvc-n-and-services/</link><description>&lt;p&gt;In a recent talk, &lt;a href="https://realm.io/news/slug-marcus-zarra-exploring-mvcn-swift/"&gt;Marcus Zarra&lt;/a&gt; proposed a new addition to the
 Model-View-Controller paradigm, which he calls the Network Controller (MVC-N):&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;We have a network controller: it talks to the internet, your local network,

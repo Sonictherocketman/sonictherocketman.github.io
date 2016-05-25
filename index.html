@@ -45,6 +45,61 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/python-like-context-managers-in-swift/">
+					Python-like Context Managers in Swift
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Wed, 25 May 2016 at 03:25 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>One of the most expressive concepts in Python is the context manager, and their
+simplest use case is reading and writing files.</p>
+<p><code class="python"><pre>
+with open('path/to/my/file') as f:
+    f.write(some_data)
+</pre></code></p>
+<p>All of the logic that handles opening the file, checking for errors, and
+closing the file is handled automatically by the <code>with</code> statement. This allows
+developers to write cleaner, more expressive code without worrying about the
+nitty gritty details of opening/closing files, and Python allows you to write
+your own context managers. This makes it easy to clean up any code that needs
+to execute in a given, safe context.</p>
+<h2>Enter Swift</h2>
+<p>Swift doesn't have the concept of a context manager, but they can still be easily implemented using Swift's clean and clear closure syntax.</p>
+<p>One of the most helpful use-cases for a context manager in Cocoa is in a custom view's <code>drawRect</code> function. CGContexts can get confusing
+if you're having to deal with them yourself. If only we had some sort of
+manager for these contexts. </p>
+<pre><code class="swift">
+// First let's define our context manager function.
+func drawBlockInSafeContext(block: (context: CGContext?) -> ()) {
+    let context = UIGraphicsGetCurrentContext()
+    CGContextSaveGState(context)
+    block(context: context)
+    CGContextRestoreGState(context)
+}
+class MyView: UIView {
+    //...
+    func drawRect(rect: CGRect) {
+        drawBlockInSafeContext { context in
+            // Now we can draw our view 
+            // without polluting the root context 
+        }
+    }
+}</code></pre>
+
+<p>Context Managers are one of my favorite features of Python and I'd love to see
+the concept carried over to Swift. For the record: Omar Abdelhafith has a great tutorial on making more advanced, and more <a href="https://medium.com/ios-os-x-development/swift-context-manager-implementing-python-context-manager-in-swift-f327b2b4a7d7#.oys53xm0u">Pythonic Swift Context
+Managers</a>.</p>
+<p><link rel="stylesheet"
+href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/mvc-n-and-services/">
 					MVC-N and Services
 				</a>
@@ -179,24 +234,6 @@ videos about the iPhone encryption debate.</small></p>
 </blockquote>
 <p>Just my initial thoughts, but I like the idea of having some agency oversee these large corporate algorithms. They play such a huge roll in our lives, and there's a large incentive for companies to manipulate their users to their own benefit. Facebook and Google especially have proven that they can do this extremely effectively, and like Dries' says, "without their knowledge". If we're going to allow these kinds of algorithms to be such a huge part of our lives, which I don't believe is necessarily a bad thing, then they should at least be subject to some sort oversight. At the very least, we could enforce a sort of <a href="/archive/software-engineering/">Programmer's Hypocratic Oath</a> or something.</p>
 <p><a href="http://buytaert.net/can-we-save-the-open-web">Can we save the open web? &#8594;</a></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/blog-when-you-disagree/">
-					Blog when you disagree
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Mon, 14 Mar 2016 at 07:57 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p><a href="http://www.manton.org/2016/03/blog-when-you-disagree.html">Manton Reece</a> (emphasis mine):</p>
-<blockquote>
-<p>When you disagree, that’s what you should write about, and you should post it to your blog. 140 characters thrown against wave after wave of mainstream opinion tweets will be drowned out. <strong>A blog post isn’t a cheap opinion; it’s a statement that what you think matters.</strong></p>
-</blockquote>
-<p><a href="http://www.manton.org/2016/03/blog-when-you-disagree.html">Blog when you disagree &#8594;</a></p>
 		</div>
 	</div>
 </article>

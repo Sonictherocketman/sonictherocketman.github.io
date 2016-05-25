@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python-like Context Managers in Swift - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+
+	<meta property="og:title" content="Python-like Context Managers in Swift" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/python-like-context-managers-in-swift/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
+			  <span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			  <span class="mobileMenuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
+			</div>
+		</div>
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/python-like-context-managers-in-swift/">Python-like Context Managers in Swift</a></h1>
+					<small style="font-style:italic;">Posted on Wed, 25 May 2016 at 03:25 PM</small>
+				</div>
+				<div class="article-content">
+					<p>One of the most expressive concepts in Python is the context manager, and their
+simplest use case is reading and writing files.</p>
+<p><code class="python"><pre>
+with open('path/to/my/file') as f:
+    f.write(some_data)
+</pre></code></p>
+<p>All of the logic that handles opening the file, checking for errors, and
+closing the file is handled automatically by the <code>with</code> statement. This allows
+developers to write cleaner, more expressive code without worrying about the
+nitty gritty details of opening/closing files, and Python allows you to write
+your own context managers. This makes it easy to clean up any code that needs
+to execute in a given, safe context.</p>
+<h2>Enter Swift</h2>
+<p>Swift doesn't have the concept of a context manager, but they can still be easily implemented using Swift's clean and clear closure syntax.</p>
+<p>One of the most helpful use-cases for a context manager in Cocoa is in a custom view's <code>drawRect</code> function. CGContexts can get confusing
+if you're having to deal with them yourself. If only we had some sort of
+manager for these contexts. </p>
+<pre><code class="swift">
+// First let's define our context manager function.
+func drawBlockInSafeContext(block: (context: CGContext?) -> ()) {
+    let context = UIGraphicsGetCurrentContext()
+    CGContextSaveGState(context)
+    block(context: context)
+    CGContextRestoreGState(context)
+}
+class MyView: UIView {
+    //...
+    func drawRect(rect: CGRect) {
+        drawBlockInSafeContext { context in
+            // Now we can draw our view 
+            // without polluting the root context 
+        }
+    }
+}</code></pre>
+
+<p>Context Managers are one of my favorite features of Python and I'd love to see
+the concept carried over to Swift. For the record: Omar Abdelhafith has a great tutorial on making more advanced, and more <a href="https://medium.com/ios-os-x-development/swift-context-manager-implementing-python-context-manager-in-swift-f327b2b4a7d7#.oys53xm0u">Pythonic Swift Context
+Managers</a>.</p>
+<p><link rel="stylesheet"
+href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></p>
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
