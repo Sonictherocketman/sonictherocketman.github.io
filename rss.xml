@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Wed, 25 May 2016 22:25:31 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Python-like Context Managers in Swift</title><link>http://brianschrader.com/archive/python-like-context-managers-in-swift/</link><description>&lt;p&gt;One of the most expressive concepts in Python is the context manager, and their
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 31 May 2016 03:53:58 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Swift Dynamism</title><link>http://brianschrader.com/archive/swift-dynamism/</link><description>&lt;p&gt;There's been a lot of talk lately about Swift's relationship with dynamic runtime features. Since I've been developing in Swift for almost two months, I'm perfectly qualified to comment on it in depth, and that's what I'm now going to do (sorry).&lt;/p&gt;
+&lt;p&gt;First off, I like Swift's syntax a lot. Trailing closures are a thing
+I didn't know I needed, and while I have a few nitpicks about the language,
+overall I'm really enjoying using it.&lt;sup&gt;1&lt;/sup&gt; That said, I've found myself
+adopting a few strange habits when writing Swift that I'm not sure are good best
+practices, but they do seem to be the way that Apple wants Swift to be written. The biggest offender, and my least favorite feature: &lt;code&gt;switch-case&lt;/code&gt; statements.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://inessential.com/2016/05/25/oldie_complains_about_the_old_old_ways"&gt;Brent Simmons:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[In the old days] There were lots of switch statements. To add, for instance, a copy (or
+whatever) implementation to a particular view, you&#8217;d have to edit your event
+dispatcher to know about that particular view and its copy function. Making
+changes required making changes in various places. &lt;/p&gt;
+&lt;p&gt;- Oldie Complains About the Old Old Ways&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Swift's &lt;code&gt;enums&lt;/code&gt; are very powerful, but Apple's sample code uses them for so many things.&lt;sup&gt;2&lt;/sup&gt; I've found myself &lt;code&gt;switch-case&lt;/code&gt;-ing through &lt;code&gt;enums&lt;/code&gt; in most of my ViewControllers. It not only looks ugly, but just feels wrong. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript"&gt;Gary Bernhardt:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Some apologists... [would say] that
+it's the programmer's fault for using it in this way... My own view is that 
+the behavior that you see a tool being used for is the behavior that that 
+tool encourages.&lt;/p&gt;
+&lt;p&gt;- The Birth and Death of Javascript (~3:30) &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Brent, and many others, seem concerned about Swift's current relationship with
+dynamic features. While I don't dismiss the "old guy complaining about the
+new ways" effect, I never like to discount the opinions of long-time, seasoned platform developers. They've seen these kinds of things play out before. I haven't run into most of the other issues and concerns that Brent has brought up, but I have had to write more than a few &lt;code&gt;switch-case&lt;/code&gt; statements, which is more than a few too many. &lt;/p&gt;
+&lt;hr /&gt;
+&lt;div class="footnote"&gt;
+&lt;sup&gt;1&lt;/sup&gt; When Swift came out, it was a hardcore &lt;a href="http://www.oranlooney.com/lbyl-vs-eafp/"&gt;LBYL&lt;/a&gt; language. Now that it has &lt;code&gt;try&lt;/code&gt; statements, the language feels confused. I don't know which is more "Swifty".
+&lt;br /&gt;
+&lt;sup&gt;2&lt;/sup&gt; In Python, the community has strong opinions about what's "Pythonic". The way Apple recommends developers write Swift will have a huge influence on what becomes the "Swifty" style.</description><category>swift</category><category> programming</category><guid isPermaLink="true">http://brianschrader.com/archive/swift-dynamism</guid><pubDate>Mon, 30 May 2016 20:53:00 -0800</pubDate></item><item><title>Python-like Context Managers in Swift</title><link>http://brianschrader.com/archive/python-like-context-managers-in-swift/</link><description>&lt;p&gt;One of the most expressive concepts in Python is the context manager, and their
 simplest use case is reading and writing files.&lt;/p&gt;
 &lt;p&gt;&lt;code class="python"&gt;&lt;pre&gt;
 with open('path/to/my/file') as f:

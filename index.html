@@ -45,6 +45,50 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/swift-dynamism/">
+					Swift Dynamism
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 30 May 2016 at 08:53 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>There's been a lot of talk lately about Swift's relationship with dynamic runtime features. Since I've been developing in Swift for almost two months, I'm perfectly qualified to comment on it in depth, and that's what I'm now going to do (sorry).</p>
+<p>First off, I like Swift's syntax a lot. Trailing closures are a thing
+I didn't know I needed, and while I have a few nitpicks about the language,
+overall I'm really enjoying using it.<sup>1</sup> That said, I've found myself
+adopting a few strange habits when writing Swift that I'm not sure are good best
+practices, but they do seem to be the way that Apple wants Swift to be written. The biggest offender, and my least favorite feature: <code>switch-case</code> statements.</p>
+<p><a href="http://inessential.com/2016/05/25/oldie_complains_about_the_old_old_ways">Brent Simmons:</a></p>
+<blockquote>
+<p>[In the old days] There were lots of switch statements. To add, for instance, a copy (or
+whatever) implementation to a particular view, you’d have to edit your event
+dispatcher to know about that particular view and its copy function. Making
+changes required making changes in various places. </p>
+<p>- Oldie Complains About the Old Old Ways</p>
+</blockquote>
+<p>Swift's <code>enums</code> are very powerful, but Apple's sample code uses them for so many things.<sup>2</sup> I've found myself <code>switch-case</code>-ing through <code>enums</code> in most of my ViewControllers. It not only looks ugly, but just feels wrong. </p>
+<p><a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript">Gary Bernhardt:</a></p>
+<blockquote>
+<p>Some apologists... [would say] that
+it's the programmer's fault for using it in this way... My own view is that 
+the behavior that you see a tool being used for is the behavior that that 
+tool encourages.</p>
+<p>- The Birth and Death of Javascript (~3:30) </p>
+</blockquote>
+<p>Brent, and many others, seem concerned about Swift's current relationship with
+dynamic features. While I don't dismiss the "old guy complaining about the
+new ways" effect, I never like to discount the opinions of long-time, seasoned platform developers. They've seen these kinds of things play out before. I haven't run into most of the other issues and concerns that Brent has brought up, but I have had to write more than a few <code>switch-case</code> statements, which is more than a few too many. </p>
+<hr />
+<div class="footnote">
+<sup>1</sup> When Swift came out, it was a hardcore <a href="http://www.oranlooney.com/lbyl-vs-eafp/">LBYL</a> language. Now that it has <code>try</code> statements, the language feels confused. I don't know which is more "Swifty".
+<br />
+<sup>2</sup> In Python, the community has strong opinions about what's "Pythonic". The way Apple recommends developers write Swift will have a huge influence on what becomes the "Swifty" style.
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/python-like-context-managers-in-swift/">
 					Python-like Context Managers in Swift
 				</a>
@@ -213,27 +257,6 @@ Phone &#8594;</a></p>
 <hr />
 <p><small>I'm also happy to see that Grey, against his reservations, published his
 videos about the iPhone encryption debate.</small></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/can-we-save-the-open-web/">
-					Can we save the open web?
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Sat, 19 Mar 2016 at 02:26 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p><a href="http://buytaert.net/can-we-save-the-open-web">Dries Buytaert</a> on the dominance of large corporations and their algorithms:</p>
-<blockquote>
-<p>[T]he internet has changed drastically over the last decade. It's become a more closed web. Rather than a decentralized and open landscape, many people today primarily interact with a handful of large platform companies online, such as Google or Facebook. To many users, Facebook and Google aren't part of the internet -- they are the internet.</p>
-<p>According to a recent study from the American Institute for Behavioral Research and Technology, information displayed in Google could shift voting preferences for undecided voters by 20 percent or more -- all without their knowledge...</p>
-<p>It's possible that we're reaching the point where we need oversight for consumer-facing algorithms. Perhaps it's time to consider creating an oversight committee. Similar to how the FDA monitors the quality and safety of food and drugs, this regulatory body could audit algorithms.</p>
-</blockquote>
-<p>Just my initial thoughts, but I like the idea of having some agency oversee these large corporate algorithms. They play such a huge roll in our lives, and there's a large incentive for companies to manipulate their users to their own benefit. Facebook and Google especially have proven that they can do this extremely effectively, and like Dries' says, "without their knowledge". If we're going to allow these kinds of algorithms to be such a huge part of our lives, which I don't believe is necessarily a bad thing, then they should at least be subject to some sort oversight. At the very least, we could enforce a sort of <a href="/archive/software-engineering/">Programmer's Hypocratic Oath</a> or something.</p>
-<p><a href="http://buytaert.net/can-we-save-the-open-web">Can we save the open web? &#8594;</a></p>
 		</div>
 	</div>
 </article>
