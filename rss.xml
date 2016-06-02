@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 31 May 2016 03:53:58 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Swift Dynamism</title><link>http://brianschrader.com/archive/swift-dynamism/</link><description>&lt;p&gt;There's been a lot of talk lately about Swift's relationship with dynamic runtime features. Since I've been developing in Swift for almost two months, I'm perfectly qualified to comment on it in depth, and that's what I'm now going to do (sorry).&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 02 Jun 2016 19:34:23 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Siri is a blogging tool</title><link>http://brianschrader.com/archive/siri-is-a-blogging-tool/</link><description>&lt;p&gt;Editing is difficult; especially difficult when it's your own work.
+Professional writers will often advise reading your writing aloud. This helps
+you find errors with narrative flow, voice, and sentence structure, but I'm
+usually writing in public (i.e. at a coffee shop), so that's not normally an
+option. &lt;/p&gt;
+&lt;p&gt;Siri is a great editing tool, and now I can't imagine writing a
+post with out it. When a blog post is in the editing
+phase, I'll plug in some headphones and listen to Siri read the post to me. The
+first time I'll listen intently, and fix glaring flaws. Each time afterward, I
+listen less and less attentively, only fixing what pops out at me. Sometimes I'll even go for a walk while I listen. Being outside and moving around seems to help me untangle particularly pesky prose.&lt;/p&gt;
+&lt;p&gt;Hearing your wording aloud and with someone else's voice, inflection, and tone can really help you fine tune things like punctuation, voice, and structure. Generally, with Siri, my writing is better, clearer, cleaner, and more concise.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div class="footnote"&gt;
+&lt;sup&gt;1&lt;/sup&gt; A great side-effect of using Siri to edit your writing is
+that you'll actually know what it sounds like to people who use Siri for
+Accessibility reasons. This can help you find and eliminate HTML artifacts or
+missing alt-text.
+&lt;br /&gt;
+&lt;sup&gt;2&lt;/sup&gt; This post is partially inspired by Jesse Jiryu Davis's &lt;a href=https://emptysqua.re/blog/the-write-an-excellent-programming-blog-page/"&gt;excellent talk&lt;/a&gt; at PyCon
+2016.
+&lt;/div&gt;</description><category>blog</category><category> writing</category><guid isPermaLink="true">http://brianschrader.com/archive/siri-is-a-blogging-tool</guid><pubDate>Thu, 02 Jun 2016 12:34:00 -0800</pubDate></item><item><title>Swift Dynamism</title><link>http://brianschrader.com/archive/swift-dynamism/</link><description>&lt;p&gt;There's been a lot of talk lately about Swift's relationship with dynamic runtime features. Since I've been developing in Swift for almost two months, I'm perfectly qualified to comment on it in depth, and that's what I'm now going to do (sorry).&lt;/p&gt;
 &lt;p&gt;First off, I like Swift's syntax a lot. Trailing closures are a thing
 I didn't know I needed, and while I have a few nitpicks about the language,
 overall I'm really enjoying using it.&lt;sup&gt;1&lt;/sup&gt; That said, I've found myself
