@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 02 Jun 2016 19:34:23 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Siri is a blogging tool</title><link>http://brianschrader.com/archive/siri-is-a-blogging-tool/</link><description>&lt;p&gt;Editing is difficult; especially difficult when it's your own work.
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 16 Jun 2016 20:28:31 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Linode's 13th Birthday</title><link>http://brianschrader.com/archive/linodes-13th-birthday/</link><description>&lt;p&gt;&lt;a href="https://blog.linode.com/2016/06/16/linodes-13th-birthday-gifts-for-all/"&gt;Linode Blog:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;13 years later, it&#8217;s amazing how much we&#8217;ve grown. According to a study by
+CloudHarmony, Linode is the 4th largest cloud provider to the top 10,000
+Alexa websites, following only Amazon, Rackspace, and IBM. Not bad. We have
+helped over half a million customers, launched nearly 12 million Linode
+servers, and now have more than 100 employees, all while remaining
+independent and privately owned.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I've been using Linode as my host of choice for a few years now, and I have
+absolutely no complaints. They've been great to me.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As a token of our gratitude, we&#8217;re announcing free RAM upgrades for both new
+ and existing customers. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It's a non-trivial upgrade; even though I only use the cheapest instances, I'm
+still getting 100% more RAM. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.linode.com/2016/06/16/linodes-13th-birthday-gifts-for-all/"&gt;Linode&#8217;s 13th Birthday &#8211; Gifts for All! &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>linode</category><guid isPermaLink="true">http://brianschrader.com/archive/linodes-13th-birthday</guid><pubDate>Thu, 16 Jun 2016 13:28:00 -0800</pubDate></item><item><title>Siri is a blogging tool</title><link>http://brianschrader.com/archive/siri-is-a-blogging-tool/</link><description>&lt;p&gt;Editing is difficult; especially difficult when it's your own work.
 Professional writers will often advise reading your writing aloud. This helps
 you find errors with narrative flow, voice, and sentence structure, but I'm
 usually writing in public (i.e. at a coffee shop), so that's not normally an
