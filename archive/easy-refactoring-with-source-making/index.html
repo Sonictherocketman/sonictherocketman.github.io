@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Easy Refactoring with Source Making - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+
+	<meta property="og:title" content="Easy Refactoring with Source Making" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/easy-refactoring-with-source-making/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
+			  <span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			  <span class="mobileMenuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
+			</div>
+		</div>
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/easy-refactoring-with-source-making/">Easy Refactoring with Source Making</a></h1>
+					<small style="font-style:italic;">Posted on Tue, 19 Jul 2016 at 11:58 AM</small>
+				</div>
+				<div class="article-content">
+					<p>If you haven't heard of <a href="https://sourcemaking.com">Source Making</a>, you should check them out. They
+have a lot of really great and simple tips and tricks to help developers write
+good code and refactor bad code, and they have lots of practical examples for
+each of their techniques.</p>
+<p>Here's two of my favorite tips: </p>
+<p><a href="https://sourcemaking.com/refactoring/replace-conditional-with-polymorphism">Replace Conditional with Polymorphism</a></p>
+<blockquote>
+<ul>
+<li>
+<p>This technique adheres to the Tell-Don't-Ask principle: instead of asking an
+object about its state and then performing actions based on this, it is much
+easier to simply tell the object what it needs to do and let it decide for
+itself how to do that.</p>
+</li>
+<li>
+<p>Removes duplicate code. You get rid of many almost identical conditionals.</p>
+</li>
+<li>
+<p>If you need to add a new execution variant, all you need to do is add a new
+subclass without touching the existing code (Open/Closed Principle). </p>
+</li>
+</ul>
+</blockquote>
+<p><a href="https://sourcemaking.com/refactoring/replace-nested-conditional-with-guard-clauses">Replace Nested Conditional with Guard Clauses</a></p>
+<blockquote>
+<p><strong>Problem</strong>
+You have a group of nested conditionals and it is hard to determine the normal
+flow of code execution.</p>
+<p><strong>Solution</strong>
+Isolate all special checks and edge cases into separate clauses and place them
+before the main checks. Ideally, you should have a "flat" list of conditionals,
+one after the other.</p>
+</blockquote>
+<p>In regards to the first tip, I find myself falling into the trap of if/elsing
+though a list of cases just to determine what to do next, or what state to
+alter. Unfortunately, a lot of Python libraries are guilty of this practice. 
+Replacing each of the cases with concrete subclasses would definitely help 
+developers keep track of the various code paths, all while making the code cleaner. </p>
+<p>In keeping with the second tip, one of my favorite features of Swift is its <a href="https://thatthinginswift.com/guard-statement-swift/">Guard</a> statement. It keeps the normal execution logic clean, while still allowing the developer to handle rare, or extraordinary cases easily. </p>
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
