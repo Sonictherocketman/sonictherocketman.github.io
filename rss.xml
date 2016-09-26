@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Mon, 15 Aug 2016 20:01:20 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>More Efficient VBR MP3s and Podcasting</title><link>http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting/</link><description>&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Marco Arment&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Mon, 26 Sep 2016 22:38:05 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>More Efficient VBR MP3s and Podcasting</title><link>http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting/</link><description>&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Marco Arment&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I explained how MP3s work, and why this is a problem, on Accidental Tech Podcast last week...&lt;/p&gt;
 &lt;p&gt;See for yourself: here&#8217;s that same podcast in VBR. Note that the file is 25% smaller and the theme song (at 1:22:47 in the original file) sounds way nicer in the VBR version. But if you seek to the same timestamp as the above share link &#8212; 1:24:30 &#8212; you&#8217;ll hear the wrong audio. The player will say 1:24:30, but you&#8217;re actually hearing the audio at 1:25:16.&lt;/p&gt;
@@ -64,4 +64,121 @@ though a list of cases just to determine what to do next, or what state to
 alter. Unfortunately, a lot of Python libraries are guilty of this practice. 
 Replacing each of the cases with concrete subclasses would definitely help 
 developers keep track of the various code paths, all while making the code cleaner. &lt;/p&gt;
-&lt;p&gt;In keeping with the second tip, one of my favorite features of Swift is its &lt;a href="https://thatthinginswift.com/guard-statement-swift/"&gt;Guard&lt;/a&gt; statement. It keeps the normal execution logic clean, while still allowing the developer to handle rare, or extraordinary cases easily. &lt;/p&gt;</description><category>refactoring</category><category> programming</category><guid isPermaLink="true">http://brianschrader.com/archive/easy-refactoring-with-source-making</guid><pubDate>Tue, 19 Jul 2016 11:58:00 -0800</pubDate></item></channel></rss>
+&lt;p&gt;In keeping with the second tip, one of my favorite features of Swift is its &lt;a href="https://thatthinginswift.com/guard-statement-swift/"&gt;Guard&lt;/a&gt; statement. It keeps the normal execution logic clean, while still allowing the developer to handle rare, or extraordinary cases easily. &lt;/p&gt;</description><category>refactoring</category><category> programming</category><guid isPermaLink="true">http://brianschrader.com/archive/easy-refactoring-with-source-making</guid><pubDate>Tue, 19 Jul 2016 11:58:00 -0800</pubDate></item><item><title>Latest Project: Log Linker</title><link>http://brianschrader.com/archive/latest-project-log-linker/</link><description>&lt;p&gt;Earlier this week I wrote up a simple script to strip out links in log files 
+and add them to an RSS feed. Up till now I've been having it monitor a few 
+IRC channels and pull out the links in real-time, but I have an idea to use 
+this script as a sort of "instant link blogging" tool which I'll hopefully 
+get going really soon. &lt;/p&gt;
+&lt;p&gt;The script can parse most generic log formats, but by default it only parses
+&lt;a href="https://textualapp.com"&gt;Textual's&lt;/a&gt; logs. Currently the script has to be rerun to check for
+changes, but that's going to be fixed (hopefully right after this post goes
+up). &lt;/p&gt;
+&lt;p&gt;Check it out. It's &lt;a href="https://github.com/Sonictherocketman/link-feed-generator"&gt;hosted, as usual, on GitHub &amp;#8594;&lt;/a&gt; &lt;/p&gt;</description><category>python</category><category> irc</category><category> rss</category><guid isPermaLink="true">http://brianschrader.com/archive/latest-project-log-linker</guid><pubDate>Thu, 14 Jul 2016 22:17:00 -0800</pubDate></item><item><title>Linode's 13th Birthday</title><link>http://brianschrader.com/archive/linodes-13th-birthday/</link><description>&lt;p&gt;&lt;a href="https://blog.linode.com/2016/06/16/linodes-13th-birthday-gifts-for-all/"&gt;Linode Blog:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;13 years later, it&#8217;s amazing how much we&#8217;ve grown. According to a study by
+CloudHarmony, Linode is the 4th largest cloud provider to the top 10,000
+Alexa websites, following only Amazon, Rackspace, and IBM. Not bad. We have
+helped over half a million customers, launched nearly 12 million Linode
+servers, and now have more than 100 employees, all while remaining
+independent and privately owned.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I've been using Linode as my host of choice for a few years now, and I have
+absolutely no complaints. They've been great to me.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As a token of our gratitude, we&#8217;re announcing free RAM upgrades for both new
+ and existing customers. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It's a non-trivial upgrade; even though I only use the cheapest instances, I'm
+still getting 100% more RAM. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://blog.linode.com/2016/06/16/linodes-13th-birthday-gifts-for-all/"&gt;Linode&#8217;s 13th Birthday &#8211; Gifts for All! &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>linode</category><guid isPermaLink="true">http://brianschrader.com/archive/linodes-13th-birthday</guid><pubDate>Thu, 16 Jun 2016 13:28:00 -0800</pubDate></item><item><title>Siri is a blogging tool</title><link>http://brianschrader.com/archive/siri-is-a-blogging-tool/</link><description>&lt;p&gt;Editing is difficult; especially difficult when it's your own work.
+Professional writers will often advise reading your writing aloud. This helps
+you find errors with narrative flow, voice, and sentence structure, but I'm
+usually writing in public (i.e. at a coffee shop), so that's not normally an
+option. &lt;/p&gt;
+&lt;p&gt;Siri is a great editing tool, and now I can't imagine writing a
+post with out it. When a blog post is in the editing
+phase, I'll plug in some headphones and listen to Siri read the post to me. The
+first time I'll listen intently, and fix glaring flaws. Each time afterward, I
+listen less and less attentively, only fixing what pops out at me. Sometimes I'll even go for a walk while I listen. Being outside and moving around seems to help me untangle particularly pesky prose.&lt;/p&gt;
+&lt;p&gt;Hearing your wording aloud and with someone else's voice, inflection, and tone can really help you fine tune things like punctuation, voice, and structure. Generally, with Siri, my writing is better, clearer, cleaner, and more concise.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div class="footnote"&gt;
+&lt;sup&gt;1&lt;/sup&gt; A great side-effect of using Siri to edit your writing is
+that you'll actually know what it sounds like to people who use Siri for
+Accessibility reasons. This can help you find and eliminate HTML artifacts or
+missing alt-text.
+&lt;br /&gt;
+&lt;sup&gt;2&lt;/sup&gt; This post is partially inspired by Jesse Jiryu Davis's &lt;a href=https://emptysqua.re/blog/the-write-an-excellent-programming-blog-page/"&gt;excellent talk&lt;/a&gt; at PyCon
+2016.
+&lt;/div&gt;</description><category>blog</category><category> writing</category><guid isPermaLink="true">http://brianschrader.com/archive/siri-is-a-blogging-tool</guid><pubDate>Thu, 02 Jun 2016 12:34:00 -0800</pubDate></item><item><title>Swift Dynamism</title><link>http://brianschrader.com/archive/swift-dynamism/</link><description>&lt;p&gt;There's been a lot of talk lately about Swift's relationship with dynamic runtime features. Since I've been developing in Swift for almost two months, I'm perfectly qualified to comment on it in depth, and that's what I'm now going to do (sorry).&lt;/p&gt;
+&lt;p&gt;First off, I like Swift's syntax a lot. Trailing closures are a thing
+I didn't know I needed, and while I have a few nitpicks about the language,
+overall I'm really enjoying using it.&lt;sup&gt;1&lt;/sup&gt; That said, I've found myself
+adopting a few strange habits when writing Swift that I'm not sure are good best
+practices, but they do seem to be the way that Apple wants Swift to be written. The biggest offender, and my least favorite feature: &lt;code&gt;switch-case&lt;/code&gt; statements.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://inessential.com/2016/05/25/oldie_complains_about_the_old_old_ways"&gt;Brent Simmons:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[In the old days] There were lots of switch statements. To add, for instance, a copy (or
+whatever) implementation to a particular view, you&#8217;d have to edit your event
+dispatcher to know about that particular view and its copy function. Making
+changes required making changes in various places. &lt;/p&gt;
+&lt;p&gt;- Oldie Complains About the Old Old Ways&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Swift's &lt;code&gt;enums&lt;/code&gt; are very powerful, but Apple's sample code uses them for so many things.&lt;sup&gt;2&lt;/sup&gt; I've found myself &lt;code&gt;switch-case&lt;/code&gt;-ing through &lt;code&gt;enums&lt;/code&gt; in most of my ViewControllers. It not only looks ugly, but just feels wrong. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript"&gt;Gary Bernhardt:&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Some apologists... [would say] that
+it's the programmer's fault for using it in this way... My own view is that 
+the behavior that you see a tool being used for is the behavior that that 
+tool encourages.&lt;/p&gt;
+&lt;p&gt;- The Birth and Death of Javascript (~3:30) &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Brent, and many others, seem concerned about Swift's current relationship with
+dynamic features. While I don't dismiss the "old guy complaining about the
+new ways" effect, I never like to discount the opinions of long-time, seasoned platform developers. They've seen these kinds of things play out before. I haven't run into most of the other issues and concerns that Brent has brought up, but I have had to write more than a few &lt;code&gt;switch-case&lt;/code&gt; statements, which is more than a few too many. &lt;/p&gt;
+&lt;hr /&gt;
+&lt;div class="footnote"&gt;
+&lt;sup&gt;1&lt;/sup&gt; When Swift came out, it was a hardcore &lt;a href="http://www.oranlooney.com/lbyl-vs-eafp/"&gt;LBYL&lt;/a&gt; language. Now that it has &lt;code&gt;try&lt;/code&gt; statements, the language feels confused. I don't know which is more "Swifty".
+&lt;br /&gt;
+&lt;sup&gt;2&lt;/sup&gt; In Python, the community has strong opinions about what's "Pythonic". The way Apple recommends developers write Swift will have a huge influence on what becomes the "Swifty" style.</description><category>swift</category><category> programming</category><guid isPermaLink="true">http://brianschrader.com/archive/swift-dynamism</guid><pubDate>Mon, 30 May 2016 20:53:00 -0800</pubDate></item><item><title>Python-like Context Managers in Swift</title><link>http://brianschrader.com/archive/python-like-context-managers-in-swift/</link><description>&lt;p&gt;One of the most expressive concepts in Python is the context manager, and their
+simplest use case is reading and writing files.&lt;/p&gt;
+&lt;p&gt;&lt;code class="python"&gt;&lt;pre&gt;
+with open('path/to/my/file') as f:
+    f.write(some_data)
+&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;All of the logic that handles opening the file, checking for errors, and
+closing the file is handled automatically by the &lt;code&gt;with&lt;/code&gt; statement. This allows
+developers to write cleaner, more expressive code without worrying about the
+nitty gritty details of opening/closing files, and Python allows you to write
+your own context managers. This makes it easy to clean up any code that needs
+to execute in a given, safe context.&lt;/p&gt;
+&lt;h2&gt;Enter Swift&lt;/h2&gt;
+&lt;p&gt;Swift doesn't have the concept of a context manager, but they can still be easily implemented using Swift's clean and clear closure syntax.&lt;/p&gt;
+&lt;p&gt;One of the most helpful use-cases for a context manager in Cocoa is in a custom view's &lt;code&gt;drawRect&lt;/code&gt; function. CGContexts can get confusing
+if you're having to deal with them yourself. If only we had some sort of
+manager for these contexts. &lt;/p&gt;
+&lt;pre&gt;&lt;code class="swift"&gt;
+// First let's define our context manager function.
+func drawBlockInSafeContext(block: (context: CGContext?) -&gt; ()) {
+    let context = UIGraphicsGetCurrentContext()
+    CGContextSaveGState(context)
+    block(context: context)
+    CGContextRestoreGState(context)
+}
+class MyView: UIView {
+    //...
+    func drawRect(rect: CGRect) {
+        drawBlockInSafeContext { context in
+            // Now we can draw our view 
+            // without polluting the root context 
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Context Managers are one of my favorite features of Python and I'd love to see
+the concept carried over to Swift. For the record: Omar Abdelhafith has a great tutorial on making more advanced, and more &lt;a href="https://medium.com/ios-os-x-development/swift-context-manager-implementing-python-context-manager-in-swift-f327b2b4a7d7#.oys53xm0u"&gt;Pythonic Swift Context
+Managers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet"
+href="http://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;
+&lt;script src="http://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>programming</category><category> python</category><category> swift</category><guid isPermaLink="true">http://brianschrader.com/archive/python-like-context-managers-in-swift</guid><pubDate>Wed, 25 May 2016 15:25:00 -0800</pubDate></item></channel></rss>

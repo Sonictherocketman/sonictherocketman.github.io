@@ -1,6 +1,6 @@
 slug: a-full-size-mirror
 published: Sun, 20 Sep 2015 at 05:28 PM
-updated: Sat, 19 Mar 2016 at 08:41 PM
+updated: Mon, 26 Sep 2016 at 03:37 PM
 title: A full size mirror
 author: Brian Schrader
 tags: open web, mirror

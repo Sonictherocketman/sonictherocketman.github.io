@@ -23,6 +23,7 @@
 				<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
 			  <span class="menuBarItem"><a href="http://sonicrocketman.snippets.xyz">Microblog</a></span>
 			  <span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+			  <span class="menuBarItem"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></span>
 				<br>
 				<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
 			</span>
@@ -174,6 +175,193 @@ alter. Unfortunately, a lot of Python libraries are guilty of this practice.
 Replacing each of the cases with concrete subclasses would definitely help 
 developers keep track of the various code paths, all while making the code cleaner. </p>
 <p>In keeping with the second tip, one of my favorite features of Swift is its <a href="https://thatthinginswift.com/guard-statement-swift/">Guard</a> statement. It keeps the normal execution logic clean, while still allowing the developer to handle rare, or extraordinary cases easily. </p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
+			<h1><a href="/archive/latest-project-log-linker/">
+					Latest Project: Log Linker
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Thu, 14 Jul 2016 at 10:17 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>Earlier this week I wrote up a simple script to strip out links in log files 
+and add them to an RSS feed. Up till now I've been having it monitor a few 
+IRC channels and pull out the links in real-time, but I have an idea to use 
+this script as a sort of "instant link blogging" tool which I'll hopefully 
+get going really soon. </p>
+<p>The script can parse most generic log formats, but by default it only parses
+<a href="https://textualapp.com">Textual's</a> logs. Currently the script has to be rerun to check for
+changes, but that's going to be fixed (hopefully right after this post goes
+up). </p>
+<p>Check it out. It's <a href="https://github.com/Sonictherocketman/link-feed-generator">hosted, as usual, on GitHub &#8594;</a> </p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
+			<h1><a href="/archive/linodes-13th-birthday/">
+					Linode's 13th Birthday
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Thu, 16 Jun 2016 at 01:28 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p><a href="https://blog.linode.com/2016/06/16/linodes-13th-birthday-gifts-for-all/">Linode Blog:</a></p>
+<blockquote>
+<p>13 years later, it’s amazing how much we’ve grown. According to a study by
+CloudHarmony, Linode is the 4th largest cloud provider to the top 10,000
+Alexa websites, following only Amazon, Rackspace, and IBM. Not bad. We have
+helped over half a million customers, launched nearly 12 million Linode
+servers, and now have more than 100 employees, all while remaining
+independent and privately owned.</p>
+</blockquote>
+<p>I've been using Linode as my host of choice for a few years now, and I have
+absolutely no complaints. They've been great to me.</p>
+<blockquote>
+<p>As a token of our gratitude, we’re announcing free RAM upgrades for both new
+ and existing customers. </p>
+</blockquote>
+<p>It's a non-trivial upgrade; even though I only use the cheapest instances, I'm
+still getting 100% more RAM. </p>
+<p><a href="https://blog.linode.com/2016/06/16/linodes-13th-birthday-gifts-for-all/">Linode’s 13th Birthday – Gifts for All! &#8594;</a></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
+			<h1><a href="/archive/siri-is-a-blogging-tool/">
+					Siri is a blogging tool
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Thu, 02 Jun 2016 at 12:34 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>Editing is difficult; especially difficult when it's your own work.
+Professional writers will often advise reading your writing aloud. This helps
+you find errors with narrative flow, voice, and sentence structure, but I'm
+usually writing in public (i.e. at a coffee shop), so that's not normally an
+option. </p>
+<p>Siri is a great editing tool, and now I can't imagine writing a
+post with out it. When a blog post is in the editing
+phase, I'll plug in some headphones and listen to Siri read the post to me. The
+first time I'll listen intently, and fix glaring flaws. Each time afterward, I
+listen less and less attentively, only fixing what pops out at me. Sometimes I'll even go for a walk while I listen. Being outside and moving around seems to help me untangle particularly pesky prose.</p>
+<p>Hearing your wording aloud and with someone else's voice, inflection, and tone can really help you fine tune things like punctuation, voice, and structure. Generally, with Siri, my writing is better, clearer, cleaner, and more concise.</p>
+<hr />
+<div class="footnote">
+<sup>1</sup> A great side-effect of using Siri to edit your writing is
+that you'll actually know what it sounds like to people who use Siri for
+Accessibility reasons. This can help you find and eliminate HTML artifacts or
+missing alt-text.
+<br />
+<sup>2</sup> This post is partially inspired by Jesse Jiryu Davis's <a href=https://emptysqua.re/blog/the-write-an-excellent-programming-blog-page/">excellent talk</a> at PyCon
+2016.
+</div>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
+			<h1><a href="/archive/swift-dynamism/">
+					Swift Dynamism
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 30 May 2016 at 08:53 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>There's been a lot of talk lately about Swift's relationship with dynamic runtime features. Since I've been developing in Swift for almost two months, I'm perfectly qualified to comment on it in depth, and that's what I'm now going to do (sorry).</p>
+<p>First off, I like Swift's syntax a lot. Trailing closures are a thing
+I didn't know I needed, and while I have a few nitpicks about the language,
+overall I'm really enjoying using it.<sup>1</sup> That said, I've found myself
+adopting a few strange habits when writing Swift that I'm not sure are good best
+practices, but they do seem to be the way that Apple wants Swift to be written. The biggest offender, and my least favorite feature: <code>switch-case</code> statements.</p>
+<p><a href="http://inessential.com/2016/05/25/oldie_complains_about_the_old_old_ways">Brent Simmons:</a></p>
+<blockquote>
+<p>[In the old days] There were lots of switch statements. To add, for instance, a copy (or
+whatever) implementation to a particular view, you’d have to edit your event
+dispatcher to know about that particular view and its copy function. Making
+changes required making changes in various places. </p>
+<p>- Oldie Complains About the Old Old Ways</p>
+</blockquote>
+<p>Swift's <code>enums</code> are very powerful, but Apple's sample code uses them for so many things.<sup>2</sup> I've found myself <code>switch-case</code>-ing through <code>enums</code> in most of my ViewControllers. It not only looks ugly, but just feels wrong. </p>
+<p><a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript">Gary Bernhardt:</a></p>
+<blockquote>
+<p>Some apologists... [would say] that
+it's the programmer's fault for using it in this way... My own view is that 
+the behavior that you see a tool being used for is the behavior that that 
+tool encourages.</p>
+<p>- The Birth and Death of Javascript (~3:30) </p>
+</blockquote>
+<p>Brent, and many others, seem concerned about Swift's current relationship with
+dynamic features. While I don't dismiss the "old guy complaining about the
+new ways" effect, I never like to discount the opinions of long-time, seasoned platform developers. They've seen these kinds of things play out before. I haven't run into most of the other issues and concerns that Brent has brought up, but I have had to write more than a few <code>switch-case</code> statements, which is more than a few too many. </p>
+<hr />
+<div class="footnote">
+<sup>1</sup> When Swift came out, it was a hardcore <a href="http://www.oranlooney.com/lbyl-vs-eafp/">LBYL</a> language. Now that it has <code>try</code> statements, the language feels confused. I don't know which is more "Swifty".
+<br />
+<sup>2</sup> In Python, the community has strong opinions about what's "Pythonic". The way Apple recommends developers write Swift will have a huge influence on what becomes the "Swifty" style.
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
+			<h1><a href="/archive/python-like-context-managers-in-swift/">
+					Python-like Context Managers in Swift
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Wed, 25 May 2016 at 03:25 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>One of the most expressive concepts in Python is the context manager, and their
+simplest use case is reading and writing files.</p>
+<p><code class="python"><pre>
+with open('path/to/my/file') as f:
+    f.write(some_data)
+</pre></code></p>
+<p>All of the logic that handles opening the file, checking for errors, and
+closing the file is handled automatically by the <code>with</code> statement. This allows
+developers to write cleaner, more expressive code without worrying about the
+nitty gritty details of opening/closing files, and Python allows you to write
+your own context managers. This makes it easy to clean up any code that needs
+to execute in a given, safe context.</p>
+<h2>Enter Swift</h2>
+<p>Swift doesn't have the concept of a context manager, but they can still be easily implemented using Swift's clean and clear closure syntax.</p>
+<p>One of the most helpful use-cases for a context manager in Cocoa is in a custom view's <code>drawRect</code> function. CGContexts can get confusing
+if you're having to deal with them yourself. If only we had some sort of
+manager for these contexts. </p>
+<pre><code class="swift">
+// First let's define our context manager function.
+func drawBlockInSafeContext(block: (context: CGContext?) -> ()) {
+    let context = UIGraphicsGetCurrentContext()
+    CGContextSaveGState(context)
+    block(context: context)
+    CGContextRestoreGState(context)
+}
+class MyView: UIView {
+    //...
+    func drawRect(rect: CGRect) {
+        drawBlockInSafeContext { context in
+            // Now we can draw our view 
+            // without polluting the root context 
+        }
+    }
+}</code></pre>
+
+<p>Context Managers are one of my favorite features of Python and I'd love to see
+the concept carried over to Swift. For the record: Omar Abdelhafith has a great tutorial on making more advanced, and more <a href="https://medium.com/ios-os-x-development/swift-context-manager-implementing-python-context-manager-in-swift-f327b2b4a7d7#.oys53xm0u">Pythonic Swift Context
+Managers</a>.</p>
+<p><link rel="stylesheet"
+href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></p>
 		</div>
 	</div>
 </article>
