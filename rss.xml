@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Mon, 26 Sep 2016 23:08:14 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>More Efficient VBR MP3s and Podcasting</title><link>http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting/</link><description>&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Marco Arment&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 15 Nov 2016 03:49:34 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>YouTube has (apparently) reinstated RSS feeds</title><link>http://brianschrader.com/archive/youtube-has-apparently-reinstated-rss-feeds/</link><description>&lt;p&gt;Well if there's something I wasn't expecting to find tonight, it was that apparently YouTube has decided to allow users to &lt;a href="https://support.google.com/youtube/answer/6224202?hl=en"&gt;follow channels via RSS again&lt;/a&gt;, and unlike the last few years, this time it actually looks to be officially supported!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Get RSS updates for a single channel
+To get an RSS feed of a single channel&#8217;s uploads, paste the channel URL into your RSS reader.&lt;/p&gt;
+&lt;p&gt;Get RSS updates for all subscriptions
+To import all your YouTube subscriptions to your RSS reader, you can use our OPML file download feature...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I have no idea when this feature was added, but it's the first time I've seen it.&lt;sup&gt;1&lt;/sup&gt; Most articles about YouTube's RSS feeds are either hacks or from &lt;a href="http://lifehacker.com/google-reader-is-shutting-down-here-are-the-best-alter-5990456"&gt;ancient history&lt;/a&gt;. I don't know what mad(wo)man is behind this, but I love them.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The new export button" src="/images/blog/youtube-rss-export.png" /&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;sup&gt;1&lt;/sup&gt; Hopefully this isn't just some short-lived A/B testing or worse.
+&lt;/div&gt;</description><category>rss</category><category> open web</category><category> youtube</category><guid isPermaLink="true">http://brianschrader.com/archive/youtube-has-apparently-reinstated-rss-feeds</guid><pubDate>Mon, 14 Nov 2016 19:49:00 -0800</pubDate></item><item><title>More Efficient VBR MP3s and Podcasting</title><link>http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting/</link><description>&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Marco Arment&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I explained how MP3s work, and why this is a problem, on Accidental Tech Podcast last week...&lt;/p&gt;
 &lt;p&gt;See for yourself: here&#8217;s that same podcast in VBR. Note that the file is 25% smaller and the theme song (at 1:22:47 in the original file) sounds way nicer in the VBR version. But if you seek to the same timestamp as the above share link &#8212; 1:24:30 &#8212; you&#8217;ll hear the wrong audio. The player will say 1:24:30, but you&#8217;re actually hearing the audio at 1:25:16.&lt;/p&gt;
@@ -140,45 +151,4 @@ new ways" effect, I never like to discount the opinions of long-time, seasoned p
 &lt;div class="footnote"&gt;
 &lt;sup&gt;1&lt;/sup&gt; When Swift came out, it was a hardcore &lt;a href="http://www.oranlooney.com/lbyl-vs-eafp/"&gt;LBYL&lt;/a&gt; language. Now that it has &lt;code&gt;try&lt;/code&gt; statements, the language feels confused. I don't know which is more "Swifty".
 &lt;br /&gt;
-&lt;sup&gt;2&lt;/sup&gt; In Python, the community has strong opinions about what's "Pythonic". The way Apple recommends developers write Swift will have a huge influence on what becomes the "Swifty" style.</description><category>swift</category><category> programming</category><guid isPermaLink="true">http://brianschrader.com/archive/swift-dynamism</guid><pubDate>Mon, 30 May 2016 20:53:00 -0800</pubDate></item><item><title>Python-like Context Managers in Swift</title><link>http://brianschrader.com/archive/python-like-context-managers-in-swift/</link><description>&lt;p&gt;One of the most expressive concepts in Python is the context manager, and their
-simplest use case is reading and writing files.&lt;/p&gt;
-&lt;p&gt;&lt;code class="python"&gt;&lt;pre&gt;
-with open('path/to/my/file') as f:
-    f.write(some_data)
-&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;All of the logic that handles opening the file, checking for errors, and
-closing the file is handled automatically by the &lt;code&gt;with&lt;/code&gt; statement. This allows
-developers to write cleaner, more expressive code without worrying about the
-nitty gritty details of opening/closing files, and Python allows you to write
-your own context managers. This makes it easy to clean up any code that needs
-to execute in a given, safe context.&lt;/p&gt;
-&lt;h2&gt;Enter Swift&lt;/h2&gt;
-&lt;p&gt;Swift doesn't have the concept of a context manager, but they can still be easily implemented using Swift's clean and clear closure syntax.&lt;/p&gt;
-&lt;p&gt;One of the most helpful use-cases for a context manager in Cocoa is in a custom view's &lt;code&gt;drawRect&lt;/code&gt; function. CGContexts can get confusing
-if you're having to deal with them yourself. If only we had some sort of
-manager for these contexts. &lt;/p&gt;
-&lt;pre&gt;&lt;code class="swift"&gt;
-// First let's define our context manager function.
-func drawBlockInSafeContext(block: (context: CGContext?) -&gt; ()) {
-    let context = UIGraphicsGetCurrentContext()
-    CGContextSaveGState(context)
-    block(context: context)
-    CGContextRestoreGState(context)
-}
-class MyView: UIView {
-    //...
-    func drawRect(rect: CGRect) {
-        drawBlockInSafeContext { context in
-            // Now we can draw our view 
-            // without polluting the root context 
-        }
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Context Managers are one of my favorite features of Python and I'd love to see
-the concept carried over to Swift. For the record: Omar Abdelhafith has a great tutorial on making more advanced, and more &lt;a href="https://medium.com/ios-os-x-development/swift-context-manager-implementing-python-context-manager-in-swift-f327b2b4a7d7#.oys53xm0u"&gt;Pythonic Swift Context
-Managers&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;link rel="stylesheet"
-href="http://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;
-&lt;script src="http://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>programming</category><category> python</category><category> swift</category><guid isPermaLink="true">http://brianschrader.com/archive/python-like-context-managers-in-swift</guid><pubDate>Wed, 25 May 2016 15:25:00 -0800</pubDate></item></channel></rss>
+&lt;sup&gt;2&lt;/sup&gt; In Python, the community has strong opinions about what's "Pythonic". The way Apple recommends developers write Swift will have a huge influence on what becomes the "Swifty" style.</description><category>swift</category><category> programming</category><guid isPermaLink="true">http://brianschrader.com/archive/swift-dynamism</guid><pubDate>Mon, 30 May 2016 20:53:00 -0800</pubDate></item></channel></rss>

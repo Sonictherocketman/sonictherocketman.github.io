@@ -46,6 +46,31 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/youtube-has-apparently-reinstated-rss-feeds/">
+					YouTube has (apparently) reinstated RSS feeds
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 14 Nov 2016 at 07:49 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>Well if there's something I wasn't expecting to find tonight, it was that apparently YouTube has decided to allow users to <a href="https://support.google.com/youtube/answer/6224202?hl=en">follow channels via RSS again</a>, and unlike the last few years, this time it actually looks to be officially supported!</p>
+<blockquote>
+<p>Get RSS updates for a single channel
+To get an RSS feed of a single channel’s uploads, paste the channel URL into your RSS reader.</p>
+<p>Get RSS updates for all subscriptions
+To import all your YouTube subscriptions to your RSS reader, you can use our OPML file download feature...</p>
+</blockquote>
+<p>I have no idea when this feature was added, but it's the first time I've seen it.<sup>1</sup> Most articles about YouTube's RSS feeds are either hacks or from <a href="http://lifehacker.com/google-reader-is-shutting-down-here-are-the-best-alter-5990456">ancient history</a>. I don't know what mad(wo)man is behind this, but I love them.</p>
+<p><img alt="The new export button" src="/images/blog/youtube-rss-export.png" /></p>
+<div class="footnote">
+<sup>1</sup> Hopefully this isn't just some short-lived A/B testing or worse.
+</div>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/more-efficient-vbr-mp3s-and-podcasting/">
 					More Efficient VBR MP3s and Podcasting
 				</a>
@@ -307,61 +332,6 @@ new ways" effect, I never like to discount the opinions of long-time, seasoned p
 <sup>1</sup> When Swift came out, it was a hardcore <a href="http://www.oranlooney.com/lbyl-vs-eafp/">LBYL</a> language. Now that it has <code>try</code> statements, the language feels confused. I don't know which is more "Swifty".
 <br />
 <sup>2</sup> In Python, the community has strong opinions about what's "Pythonic". The way Apple recommends developers write Swift will have a huge influence on what becomes the "Swifty" style.
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/python-like-context-managers-in-swift/">
-					Python-like Context Managers in Swift
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Wed, 25 May 2016 at 03:25 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>One of the most expressive concepts in Python is the context manager, and their
-simplest use case is reading and writing files.</p>
-<p><code class="python"><pre>
-with open('path/to/my/file') as f:
-    f.write(some_data)
-</pre></code></p>
-<p>All of the logic that handles opening the file, checking for errors, and
-closing the file is handled automatically by the <code>with</code> statement. This allows
-developers to write cleaner, more expressive code without worrying about the
-nitty gritty details of opening/closing files, and Python allows you to write
-your own context managers. This makes it easy to clean up any code that needs
-to execute in a given, safe context.</p>
-<h2>Enter Swift</h2>
-<p>Swift doesn't have the concept of a context manager, but they can still be easily implemented using Swift's clean and clear closure syntax.</p>
-<p>One of the most helpful use-cases for a context manager in Cocoa is in a custom view's <code>drawRect</code> function. CGContexts can get confusing
-if you're having to deal with them yourself. If only we had some sort of
-manager for these contexts. </p>
-<pre><code class="swift">
-// First let's define our context manager function.
-func drawBlockInSafeContext(block: (context: CGContext?) -> ()) {
-    let context = UIGraphicsGetCurrentContext()
-    CGContextSaveGState(context)
-    block(context: context)
-    CGContextRestoreGState(context)
-}
-class MyView: UIView {
-    //...
-    func drawRect(rect: CGRect) {
-        drawBlockInSafeContext { context in
-            // Now we can draw our view 
-            // without polluting the root context 
-        }
-    }
-}</code></pre>
-
-<p>Context Managers are one of my favorite features of Python and I'd love to see
-the concept carried over to Swift. For the record: Omar Abdelhafith has a great tutorial on making more advanced, and more <a href="https://medium.com/ios-os-x-development/swift-context-manager-implementing-python-context-manager-in-swift-f327b2b4a7d7#.oys53xm0u">Pythonic Swift Context
-Managers</a>.</p>
-<p><link rel="stylesheet"
-href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
-<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script></p>
 		</div>
 	</div>
 </article>
