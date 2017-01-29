@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sun, 29 Jan 2017 01:08:40 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>A Slight Modification to Gordon Ramsey's Scramled Eggs</title><link>http://brianschrader.com/archive/a-slight-modification-to-gordon-ramseys-scramled-eggs/</link><description>&lt;p&gt;If you haven't seen &lt;a href="https://www.youtube.com/watch?v=PUP7U5vTMM0"&gt;Gordon Ramsey's scrambled egg video&lt;/a&gt;, you should. It's been out for years now, but good cooking tips are always useful. Being in Southern California though, I make one slight modification: I use Sour cream instead of Crème fraîche. Originally I started doing this because I almost always have Sour cream on hand (again because Southern California) and while there's certainly a difference in flavor, it's a great substitute.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sun, 29 Jan 2017 01:09:59 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>The Internet Won't Forget Climate Change</title><link>http://brianschrader.com/archive/the-internet-wont-forget-climate-change/</link><description>&lt;p&gt;A lot of you might have seen this post on Thursday.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The tweet about NOAA" src="//aftp-cmdl-noaa-gov.brianschrader.com/theme/tweet.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I did, though I didn't put it in with my baby pictures, &lt;a href="//aftp-cmdl-noaa-gov.brianschrader.com"&gt;I put it here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;At &lt;a href="//aftp-cmdl-noaa-gov.brianschrader.com"&gt;aftp-cmdl-noaa-gov.brianschrader.com&lt;/a&gt; is a full mirror of the contents of that FTP site. It has all of the CO2 and Aerosol data that NOAA has made available (all the way back to 1976). If you find this data useful, I'd love to hear from you.&lt;/p&gt;
+&lt;p&gt;If you're looking for other climate change related data sets, &lt;a href="//climate.daknob.net"&gt;The Climate Mirror Project&lt;/a&gt; has lots of mirrors of NASA, NOAA, and other organizations. We will not allow this data to be forgotten. Climate change is real, it's a problem, and it's getting worse. &lt;a href="//www.nytimes.com/2017/01/20/us/politics/trump-white-house-website.html?_r=0"&gt;Ignoring it cannot be the solution&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Internet should not forget; we can't let it forget something this important.&lt;/p&gt;</description><category>politics</category><category> trump</category><category> open data</category><category> climate change</category><guid isPermaLink="true">http://brianschrader.com/archive/the-internet-wont-forget-climate-change</guid><pubDate>Sat, 28 Jan 2017 17:09:00 -0800</pubDate></item><item><title>A Slight Modification to Gordon Ramsey's Scramled Eggs</title><link>http://brianschrader.com/archive/a-slight-modification-to-gordon-ramseys-scramled-eggs/</link><description>&lt;p&gt;If you haven't seen &lt;a href="https://www.youtube.com/watch?v=PUP7U5vTMM0"&gt;Gordon Ramsey's scrambled egg video&lt;/a&gt;, you should. It's been out for years now, but good cooking tips are always useful. Being in Southern California though, I make one slight modification: I use Sour cream instead of Crème fraîche. Originally I started doing this because I almost always have Sour cream on hand (again because Southern California) and while there's certainly a difference in flavor, it's a great substitute.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Scrambled Eggs" src="/images/blog/scrambled_eggs.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=PUP7U5vTMM0"&gt;Gordon Ramsay's Scrambled Eggs &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>cooking</category><category> eggs</category><guid isPermaLink="true">http://brianschrader.com/archive/a-slight-modification-to-gordon-ramseys-scramled-eggs</guid><pubDate>Tue, 10 Jan 2017 10:01:00 -0800</pubDate></item><item><title>Manton's Micro.blog</title><link>http://brianschrader.com/archive/mantons-microblog/</link><description>&lt;p&gt;Like &lt;a href="http://inessential.com/2017/01/06/mantons_thing"&gt;lots&lt;/a&gt; of &lt;a href="http://beckyhansmeyer.com/2017/01/08/in-support-of-microblogging/"&gt;other&lt;/a&gt; &lt;a href="https://marco.org/2017/01/07/indie-microblogging-kickstarter"&gt;people&lt;/a&gt; have said, &lt;a href="http://www.manton.org"&gt;Manton Reece&lt;/a&gt; has &lt;a href="https://www.kickstarter.com/projects/manton/indie-microblogging-owning-your-short-form-writing"&gt;started a Kickstarter&lt;/a&gt; for his &lt;a href="http://micro.blog"&gt;Micro.blog&lt;/a&gt; microblogging platform. I've been on the beta for a while, and I've mentioned it before. What Manton is doing is really important, and not only should you support his work, but spread the word.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -99,42 +104,4 @@ things (well, that and &lt;a href="https://primitivetechnology.wordpress.com"&gt
 &lt;p&gt;&lt;center&gt;&lt;iframe width="560" height="315"
     src="https://www.youtube.com/embed/GsyjNef2ydQ" 
     frameborder="0" allowfullscreen&gt;
-&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;</description><category>youtube</category><category> cooking</category><category> history</category><guid isPermaLink="true">http://brianschrader.com/archive/18th-century-cooking</guid><pubDate>Fri, 22 Jul 2016 21:31:00 -0800</pubDate></item><item><title>Easy Refactoring with Source Making</title><link>http://brianschrader.com/archive/easy-refactoring-with-source-making/</link><description>&lt;p&gt;If you haven't heard of &lt;a href="https://sourcemaking.com"&gt;Source Making&lt;/a&gt;, you should check them out. They
-have a lot of really great and simple tips and tricks to help developers write
-good code and refactor bad code, and they have lots of practical examples for
-each of their techniques.&lt;/p&gt;
-&lt;p&gt;Here's two of my favorite tips: &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://sourcemaking.com/refactoring/replace-conditional-with-polymorphism"&gt;Replace Conditional with Polymorphism&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;This technique adheres to the Tell-Don't-Ask principle: instead of asking an
-object about its state and then performing actions based on this, it is much
-easier to simply tell the object what it needs to do and let it decide for
-itself how to do that.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Removes duplicate code. You get rid of many almost identical conditionals.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you need to add a new execution variant, all you need to do is add a new
-subclass without touching the existing code (Open/Closed Principle). &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://sourcemaking.com/refactoring/replace-nested-conditional-with-guard-clauses"&gt;Replace Nested Conditional with Guard Clauses&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;
-You have a group of nested conditionals and it is hard to determine the normal
-flow of code execution.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;
-Isolate all special checks and edge cases into separate clauses and place them
-before the main checks. Ideally, you should have a "flat" list of conditionals,
-one after the other.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;In regards to the first tip, I find myself falling into the trap of if/elsing
-though a list of cases just to determine what to do next, or what state to
-alter. Unfortunately, a lot of Python libraries are guilty of this practice. 
-Replacing each of the cases with concrete subclasses would definitely help 
-developers keep track of the various code paths, all while making the code cleaner. &lt;/p&gt;
-&lt;p&gt;In keeping with the second tip, one of my favorite features of Swift is its &lt;a href="https://thatthinginswift.com/guard-statement-swift/"&gt;Guard&lt;/a&gt; statement. It keeps the normal execution logic clean, while still allowing the developer to handle rare, or extraordinary cases easily. &lt;/p&gt;</description><category>refactoring</category><category> programming</category><guid isPermaLink="true">http://brianschrader.com/archive/easy-refactoring-with-source-making</guid><pubDate>Tue, 19 Jul 2016 11:58:00 -0800</pubDate></item></channel></rss>
+&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;</description><category>youtube</category><category> cooking</category><category> history</category><guid isPermaLink="true">http://brianschrader.com/archive/18th-century-cooking</guid><pubDate>Fri, 22 Jul 2016 21:31:00 -0800</pubDate></item></channel></rss>
