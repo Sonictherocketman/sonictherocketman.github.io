@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sun, 05 Feb 2017 18:04:02 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>An Ode to the 13 Inch MacBook Pro</title><link>http://brianschrader.com/archive/an-ode-to-the-13-inch-macbook-pro/</link><description>&lt;p&gt;I got my first Mac in 2010: A &lt;a href="https://support.apple.com/kb/SP583?locale=en_US"&gt;base model 13" Macbook Pro&lt;/a&gt;. Like lots of people I got it in my first year of college with Apple's Education Discount. I had it all the way through college until 2015 when I got my current &lt;a href="https://support.apple.com/kb/SP715?locale=en_US"&gt;13" Retina Macbook Pro&lt;/a&gt;. In that time, I'd dropped it, fixed it, swapped out the spinning platter for an SSD, added RAM, and made it my own. I learned to program on it, I played PC games with it, and &lt;a href="/archive/writing-for-a-website-you-built-from-scratch/"&gt;I built this website with it&lt;/a&gt;. I used every ounce of power that 2.4GHz Core2-Duo could spare.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 07 Feb 2017 03:58:53 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>So Many Words Written, So Many More to Come</title><link>http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come/</link><description>&lt;p&gt;Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts&lt;sup&gt;1&lt;/sup&gt;. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ find archive/ -name "*.md"|xargs -I {} cat {} | wc -w
+   49764
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now curious, I did some more digging to see what I could learn; here's a few different statistics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Longest post:&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/a-vision-of-the-open-web/"&gt;A Vision of the Open Web&lt;/a&gt; - 1574 words&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shortest post:&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/bloodmoon-eclipse/"&gt;BloodMoon Eclipse Photos&lt;/a&gt; - 6 words&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Most average length post:&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/can-we-save-the-open-web/"&gt;Can we save the open web?&lt;/a&gt; - 309 words&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If we count all the drafts I've never published (but still have) the grand total goes up to 64,088 words.&lt;ul&gt;
+&lt;li&gt;That's 14,324 words unpublished.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;154 different tags used on posts&lt;/li&gt;
+&lt;li&gt;Most used tags:&lt;ul&gt;
+&lt;li&gt;blog: 21 times&lt;/li&gt;
+&lt;li&gt;web: 14 times&lt;/li&gt;
+&lt;li&gt;space: 10 times&lt;/li&gt;
+&lt;li&gt;open web: 10 times&lt;/li&gt;
+&lt;li&gt;blogging: 10 times&lt;/li&gt;
+&lt;li&gt;python: 8 times&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Least used tags:&lt;ul&gt;
+&lt;li&gt;D&amp;amp;D, FCC, OS X, alternatives, angular... (and 105 more)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Just for the occasion, I made up a pretty graph.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A graph of word count." src="/images/blog/post-word-count-50k-words.png" /&gt;&lt;/p&gt;
+&lt;p&gt;It's hard to believe that I've been blogging for almost 5 years on this site, and if you count my two blogs before this one, then it's been almost 6 years.&lt;/p&gt;
+&lt;p&gt;And in case you're wondering: yes, this post is just over 236 words. &#127881;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;sup&gt;1&lt;/sup&gt; Technically that 50,000 word count includes handcrafted HTML inside a post's markdown. It's not &lt;i&gt;that much&lt;/i&gt; of a factor and I'm defending my claim because technically I wrote that HTML so there.
+&lt;/div&gt;</description><category>blog</category><category> stats</category><category> metablogging</category><guid isPermaLink="true">http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come</guid><pubDate>Mon, 06 Feb 2017 19:58:00 -0800</pubDate></item><item><title>An Ode to the 13 Inch MacBook Pro</title><link>http://brianschrader.com/archive/an-ode-to-the-13-inch-macbook-pro/</link><description>&lt;p&gt;I got my first Mac in 2010: A &lt;a href="https://support.apple.com/kb/SP583?locale=en_US"&gt;base model 13" Macbook Pro&lt;/a&gt;. Like lots of people I got it in my first year of college with Apple's Education Discount. I had it all the way through college until 2015 when I got my current &lt;a href="https://support.apple.com/kb/SP715?locale=en_US"&gt;13" Retina Macbook Pro&lt;/a&gt;. In that time, I'd dropped it, fixed it, swapped out the spinning platter for an SSD, added RAM, and made it my own. I learned to program on it, I played PC games with it, and &lt;a href="/archive/writing-for-a-website-you-built-from-scratch/"&gt;I built this website with it&lt;/a&gt;. I used every ounce of power that 2.4GHz Core2-Duo could spare.&lt;/p&gt;
 &lt;p&gt;In short: I loved that machine.&lt;/p&gt;
 &lt;p&gt;That Macbook Pro turned me into a Mac person. I justified buying it by saying that I'd build iPhone apps with it, but that never really came to pass. I did learn about Unix and Bash though, and that knowledge changed how I used computers forever. Back then I looked forward to 2 things every year: the new iPhone OS announcement and the Mac OS X announcement. I even took time off work one year to stay home and watch WWDC talks in a time before I'd ever worked on iOS apps professionally.&lt;/p&gt;
 &lt;p&gt;In short: I found what I wanted to do because of that Mac and it changed me forever.&lt;/p&gt;
@@ -110,9 +153,4 @@ To import all your YouTube subscriptions to your RSS reader, you can use our OPM
 &lt;/blockquote&gt;
 &lt;p&gt;This post is direct follow up to his &lt;a href="https://overcast.fm/+CdTym-vo/1:23:49"&gt;really awesome discussion on ATP&lt;/a&gt; this week about &lt;a href="https://en.wikipedia.org/wiki/Variable_bitrate"&gt;Variable BitRate (VBR)&lt;/a&gt; MP3s and why they're more space-efficient, better sounding, and yet no one uses them. It's a really interesting topic, and as usual, Marco does a great job illustrating the problem and the many possible solutions.&lt;/p&gt;
 &lt;p&gt;As with so many things in software, the solutions are rarely limited by technology, they're limited by the standards we use (or don't use).&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Why don&#8217;t podcasts use VBR MP3s? Because iOS and macOS don&#8217;t accurately seek them &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>mp3</category><category> podcast</category><guid isPermaLink="true">http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting</guid><pubDate>Mon, 15 Aug 2016 12:30:00 -0800</pubDate></item><item><title>Tabletop Audio</title><link>http://brianschrader.com/archive/tabletop-audio/</link><description>&lt;p&gt;I really like &lt;a href="http://www.tabletopaudio.com"&gt;Tabletop Audio&lt;/a&gt;. It's a great tool for anyone who's running a Tabletop RPG, or for writers who're looking for atmospheric background music. There's lots of different genres represented (much more than typical fantasy stuff). I've been using the site for a while, but I just discovered the new SoundPad feature.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;SoundPad was designed for those of you who wanted more control over your sonic environments. Instead of fire-and-forget 10 minute ambiences, each SoundPad is made up of a few dozen sounds, divided into categories.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I've spent a bit of time today playing with SoundPad, and it's really cool. Instead of hunting for just the right atmospheric music, or just defaulting to the &lt;a href="https://itunes.apple.com/us/album/elder-scrolls-v-skyrim-original/id596951310"&gt;Skyrim soundtrack&lt;/a&gt;, I can tweak and tune the music, and sound-effects in the game. One of the coolest features of SoundPads, and playlists, is the ability to send live links to the music/sounds you're mixing.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.tabletopaudio.com"&gt;Tabletop Audio &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>tabletop rpg</category><category> D&amp;D</category><category> audio</category><guid isPermaLink="true">http://brianschrader.com/archive/tabletop-audio</guid><pubDate>Sun, 07 Aug 2016 17:27:00 -0800</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Why don&#8217;t podcasts use VBR MP3s? Because iOS and macOS don&#8217;t accurately seek them &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>mp3</category><category> podcast</category><guid isPermaLink="true">http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting</guid><pubDate>Mon, 15 Aug 2016 12:30:00 -0800</pubDate></item></channel></rss>
