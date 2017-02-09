@@ -1,6 +1,6 @@
 slug: comments-with-cited-references
 published: Thu, 09 Feb 2017 at 12:29 PM
-updated: Thu, 09 Feb 2017 at 12:29 PM
+updated: Thu, 09 Feb 2017 at 12:33 PM
 title: Comments with Cited References
 author: Brian Schrader
 tags: code, links,
@@ -41,5 +41,6 @@ This way if anyone (future me included) needs to go back to fix that section of 
 </div>
 
 <!-- Begin Syntax Stylesheet -->
-<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css"><script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script></p>
+<link rel="stylesheet" href="/bin/highlight.default.min.css">
+<script src="/bin/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
