@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 07 Feb 2017 03:58:53 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>So Many Words Written, So Many More to Come</title><link>http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come/</link><description>&lt;p&gt;Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts&lt;sup&gt;1&lt;/sup&gt;. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 09 Feb 2017 20:29:13 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Comments with Cited References</title><link>http://brianschrader.com/archive/comments-with-cited-references/</link><description>&lt;p&gt;A while back I got into the habit of adding links to any source code that I copy from the web. It's a small addition but it's helped me a lot when I need to go back and fix bugs long after I've forgotten what I did or why.&lt;/p&gt;
+&lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
+// From: http://bit.ly/2ltsDF6
+extension Data {
+    /// Create hexadecimal string representation of &lt;code&gt;Data&lt;/code&gt; object.
+    ///
+    /// - returns: &lt;code&gt;String&lt;/code&gt; representation of this &lt;code&gt;Data&lt;/code&gt; object.
+    func hexadecimal() -&amp;gt; String {
+        return map { String(format: "%02x", $0) }
+            .joined(separator: "")
+    }
+}
+&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This technique is also really useful if you encounter unsupported or buggy behavior in some framework or library and you write a weird workaround or unconventional solution. In those cases I don't just document that it &lt;em&gt;is&lt;/em&gt; a workaround, I try to link to a place that explains or tracks the bug (like the GitHub Issue or Stack Overflow page).&lt;/p&gt;
+&lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
+switch identifier {
+case "SpecialWaitStep", "OtherSpecialWaitStep":
+    // Wait steps aren't backward navigable.
+    // https://github.com/ResearchKit/ResearchKit/issues/914
+    return nil
+default:
+    return getStep("...")
+}
+&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This way if anyone (future me included) needs to go back to fix that section of code, they'll at least know why that hack is there.&lt;sup&gt;1&lt;/sup&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;sup&gt;1.&lt;/sup&gt; Hell, maybe by then the issue has been solved and they can even remove your hacky code.
+&lt;/div&gt;
+
+&lt;!-- Begin Syntax Stylesheet --&gt;
+
+&lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;&lt;script src="http://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</description><category>code</category><category> links</category><category></category><guid isPermaLink="true">http://brianschrader.com/archive/comments-with-cited-references</guid><pubDate>Thu, 09 Feb 2017 12:29:00 -0800</pubDate></item><item><title>So Many Words Written, So Many More to Come</title><link>http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come/</link><description>&lt;p&gt;Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts&lt;sup&gt;1&lt;/sup&gt;. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ find archive/ -name "*.md"|xargs -I {} cat {} | wc -w
    49764
 &lt;/code&gt;&lt;/pre&gt;
@@ -146,11 +178,4 @@ To import all your YouTube subscriptions to your RSS reader, you can use our OPM
 &lt;p&gt;&lt;img alt="The new export button" src="/images/blog/youtube-rss-export.png" /&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;sup&gt;1&lt;/sup&gt; Hopefully this isn't just some short-lived A/B testing or worse.
-&lt;/div&gt;</description><category>rss</category><category> open web</category><category> youtube</category><guid isPermaLink="true">http://brianschrader.com/archive/youtube-has-apparently-reinstated-rss-feeds</guid><pubDate>Mon, 14 Nov 2016 19:49:00 -0800</pubDate></item><item><title>More Efficient VBR MP3s and Podcasting</title><link>http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting/</link><description>&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Marco Arment&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I explained how MP3s work, and why this is a problem, on Accidental Tech Podcast last week...&lt;/p&gt;
-&lt;p&gt;See for yourself: here&#8217;s that same podcast in VBR. Note that the file is 25% smaller and the theme song (at 1:22:47 in the original file) sounds way nicer in the VBR version. But if you seek to the same timestamp as the above share link &#8212; 1:24:30 &#8212; you&#8217;ll hear the wrong audio. The player will say 1:24:30, but you&#8217;re actually hearing the audio at 1:25:16.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This post is direct follow up to his &lt;a href="https://overcast.fm/+CdTym-vo/1:23:49"&gt;really awesome discussion on ATP&lt;/a&gt; this week about &lt;a href="https://en.wikipedia.org/wiki/Variable_bitrate"&gt;Variable BitRate (VBR)&lt;/a&gt; MP3s and why they're more space-efficient, better sounding, and yet no one uses them. It's a really interesting topic, and as usual, Marco does a great job illustrating the problem and the many possible solutions.&lt;/p&gt;
-&lt;p&gt;As with so many things in software, the solutions are rarely limited by technology, they're limited by the standards we use (or don't use).&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://marco.org/2016/08/15/vbr-mp3-plea"&gt;Why don&#8217;t podcasts use VBR MP3s? Because iOS and macOS don&#8217;t accurately seek them &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>mp3</category><category> podcast</category><guid isPermaLink="true">http://brianschrader.com/archive/more-efficient-vbr-mp3s-and-podcasting</guid><pubDate>Mon, 15 Aug 2016 12:30:00 -0800</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>rss</category><category> open web</category><category> youtube</category><guid isPermaLink="true">http://brianschrader.com/archive/youtube-has-apparently-reinstated-rss-feeds</guid><pubDate>Mon, 14 Nov 2016 19:49:00 -0800</pubDate></item></channel></rss>
