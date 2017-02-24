@@ -46,6 +46,40 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/the-cloudbleed-bug-an-overview/">
+					The Cloudbleed Bug: An Overview
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Fri, 24 Feb 2017 at 11:06 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1139">Tavis Ormandy (Chromium Bug Tracker) &#8594;</a></p>
+<blockquote>
+<p>It became clear after a while we were looking at chunks of uninitialized memory interspersed with valid data. The program that this uninitialized data was coming from just happened to have the data I wanted in memory at the time...</p>
+<p>A while later, we figured out how to reproduce the problem. It looked like that if an html page hosted behind cloudflare had a specific combination of unbalanced tags, the proxy would intersperse pages of uninitialized memory into the output...</p>
+<p>We fetched a few live samples, and we observed encryption keys, cookies, passwords, chunks of POST data and even HTTPS requests for other major cloudflare-hosted sites from other users. Once we understood what we were seeing and the implications, we immediately stopped and contacted cloudflare security.</p>
+</blockquote>
+<p><img alt="A tweet you never want to see." src="/images/blog/the-tweet-to-end-it-all.png" /></p>
+<p>Never a tweet you want to see.</p>
+<p><a href="https://news.ycombinator.com/item?id=13718810">tptacek (Hacker News) &#8594;</a></p>
+<blockquote>
+<p>The crazy thing here is that the Project Zero people were joking last night about a disclosure that was going to keep everyone at work late today. And, this morning, Google announced the SHA-1 collision, which everyone (including the insiders who leaked that the SHA-1 collision was coming) thought was the big announcement.
+Nope. A SHA-1 collision, it turns out, is the minor security news of the day.</p>
+</blockquote>
+<p><a href="https://blog.cloudflare.com/incident-report-on-memory-leak-caused-by-cloudflare-parser-bug/">Cloudflare Blog &#8594;</a></p>
+<blockquote>
+<p>The bug was serious because the leaked memory could contain private information and because it had been cached by search engines. We have also not discovered any evidence of malicious exploits of the bug or other reports of its existence...</p>
+<p>We are grateful that it was found by one of the world’s top security research teams and reported to us.</p>
+</blockquote>
+<p>This broke late last night PST, and while Travis Ormandy and the hardworking team at Cloudflare have resolved the situation, the consequences of this bug are not small. Cloudflare is a very large CDN that sits in front of tens of thousands of sites and all of them are potentially affected.</p>
+<p><img alt="My report" src="/images/blog/ac-cloudbleed-report.png" /></p>
+<p><a href="https://github.com/pirate/sites-using-cloudflare/blob/master/README.md">List of sites affected by Cloudbleed &#8594;</a></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/comments-with-cited-references/">
 					Comments with Cited References
 				</a>
@@ -84,8 +118,9 @@ default:
 
 <!-- Begin Syntax Stylesheet -->
 
-<p><link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css"><script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script></p></p>
+<p><link rel="stylesheet" href="/bin/highlight.default.min.css">
+<script src="/bin/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></p>
 		</div>
 	</div>
 </article>
@@ -333,31 +368,6 @@ default:
 <p>I'm not an audiophile, but I can say that my Audio Techinicas are better sounding headphones, (and more accurate) but the Sonys are hundreds of times more comfortable, and since they're wireless, I'm fine with that tradeoff.</p>
 <div class="footnote">
 <sup>1</sup> Having never used my Mac with Bluetooth headphones, I have no good baseline for comparison, but iTunes seems to be really buggy when playing over Bluetooth. Occasionally it will refuse to play music after the connection is established, and I have to quit and relaunch. It's ok, it's not like it's 2016 or anything.
-</div>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/youtube-has-apparently-reinstated-rss-feeds/">
-					YouTube has (apparently) reinstated RSS feeds
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Mon, 14 Nov 2016 at 07:49 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Well if there's something I wasn't expecting to find tonight, it was that apparently YouTube has decided to allow users to <a href="https://support.google.com/youtube/answer/6224202?hl=en">follow channels via RSS again</a>, and unlike the last few years, this time it actually looks to be officially supported!</p>
-<blockquote>
-<p>Get RSS updates for a single channel
-To get an RSS feed of a single channel’s uploads, paste the channel URL into your RSS reader.</p>
-<p>Get RSS updates for all subscriptions
-To import all your YouTube subscriptions to your RSS reader, you can use our OPML file download feature...</p>
-</blockquote>
-<p>I have no idea when this feature was added, but it's the first time I've seen it.<sup>1</sup> Most articles about YouTube's RSS feeds are either hacks or from <a href="http://lifehacker.com/google-reader-is-shutting-down-here-are-the-best-alter-5990456">ancient history</a>. I don't know what mad(wo)man is behind this, but I love them.</p>
-<p><img alt="The new export button" src="/images/blog/youtube-rss-export.png" /></p>
-<div class="footnote">
-<sup>1</sup> Hopefully this isn't just some short-lived A/B testing or worse.
 </div>
 		</div>
 	</div>

@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 09 Feb 2017 20:29:13 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Comments with Cited References</title><link>http://brianschrader.com/archive/comments-with-cited-references/</link><description>&lt;p&gt;A while back I got into the habit of adding links to any source code that I copy from the web. It's a small addition but it's helped me a lot when I need to go back and fix bugs long after I've forgotten what I did or why.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Fri, 24 Feb 2017 19:06:20 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>The Cloudbleed Bug: An Overview</title><link>http://brianschrader.com/archive/the-cloudbleed-bug-an-overview/</link><description>&lt;p&gt;&lt;a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1139"&gt;Tavis Ormandy (Chromium Bug Tracker) &amp;#8594;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It became clear after a while we were looking at chunks of uninitialized memory interspersed with valid data. The program that this uninitialized data was coming from just happened to have the data I wanted in memory at the time...&lt;/p&gt;
+&lt;p&gt;A while later, we figured out how to reproduce the problem. It looked like that if an html page hosted behind cloudflare had a specific combination of unbalanced tags, the proxy would intersperse pages of uninitialized memory into the output...&lt;/p&gt;
+&lt;p&gt;We fetched a few live samples, and we observed encryption keys, cookies, passwords, chunks of POST data and even HTTPS requests for other major cloudflare-hosted sites from other users. Once we understood what we were seeing and the implications, we immediately stopped and contacted cloudflare security.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img alt="A tweet you never want to see." src="/images/blog/the-tweet-to-end-it-all.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Never a tweet you want to see.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://news.ycombinator.com/item?id=13718810"&gt;tptacek (Hacker News) &amp;#8594;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The crazy thing here is that the Project Zero people were joking last night about a disclosure that was going to keep everyone at work late today. And, this morning, Google announced the SHA-1 collision, which everyone (including the insiders who leaked that the SHA-1 collision was coming) thought was the big announcement.
+Nope. A SHA-1 collision, it turns out, is the minor security news of the day.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://blog.cloudflare.com/incident-report-on-memory-leak-caused-by-cloudflare-parser-bug/"&gt;Cloudflare Blog &amp;#8594;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The bug was serious because the leaked memory could contain private information and because it had been cached by search engines. We have also not discovered any evidence of malicious exploits of the bug or other reports of its existence...&lt;/p&gt;
+&lt;p&gt;We are grateful that it was found by one of the world&#8217;s top security research teams and reported to us.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This broke late last night PST, and while Travis Ormandy and the hardworking team at Cloudflare have resolved the situation, the consequences of this bug are not small. Cloudflare is a very large CDN that sits in front of tens of thousands of sites and all of them are potentially affected.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My report" src="/images/blog/ac-cloudbleed-report.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/pirate/sites-using-cloudflare/blob/master/README.md"&gt;List of sites affected by Cloudbleed &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>security</category><category> ssl</category><category> encryption</category><category> heartbleed</category><guid isPermaLink="true">http://brianschrader.com/archive/the-cloudbleed-bug-an-overview</guid><pubDate>Fri, 24 Feb 2017 11:06:00 -0800</pubDate></item><item><title>Comments with Cited References</title><link>http://brianschrader.com/archive/comments-with-cited-references/</link><description>&lt;p&gt;A while back I got into the habit of adding links to any source code that I copy from the web. It's a small addition but it's helped me a lot when I need to go back and fix bugs long after I've forgotten what I did or why.&lt;/p&gt;
 &lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
 // From: http://bit.ly/2ltsDF6
 extension Data {
@@ -30,8 +50,9 @@ default:
 
 &lt;!-- Begin Syntax Stylesheet --&gt;
 
-&lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;&lt;script src="http://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</description><category>code</category><category> links</category><category></category><guid isPermaLink="true">http://brianschrader.com/archive/comments-with-cited-references</guid><pubDate>Thu, 09 Feb 2017 12:29:00 -0800</pubDate></item><item><title>So Many Words Written, So Many More to Come</title><link>http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come/</link><description>&lt;p&gt;Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts&lt;sup&gt;1&lt;/sup&gt;. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet" href="/bin/highlight.default.min.css"&gt;
+&lt;script src="/bin/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>code</category><category> links</category><category></category><guid isPermaLink="true">http://brianschrader.com/archive/comments-with-cited-references</guid><pubDate>Thu, 09 Feb 2017 12:29:00 -0800</pubDate></item><item><title>So Many Words Written, So Many More to Come</title><link>http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come/</link><description>&lt;p&gt;Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts&lt;sup&gt;1&lt;/sup&gt;. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ find archive/ -name "*.md"|xargs -I {} cat {} | wc -w
    49764
 &lt;/code&gt;&lt;/pre&gt;
@@ -167,15 +188,4 @@ default:
 &lt;p&gt;I'm not an audiophile, but I can say that my Audio Techinicas are better sounding headphones, (and more accurate) but the Sonys are hundreds of times more comfortable, and since they're wireless, I'm fine with that tradeoff.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;sup&gt;1&lt;/sup&gt; Having never used my Mac with Bluetooth headphones, I have no good baseline for comparison, but iTunes seems to be really buggy when playing over Bluetooth. Occasionally it will refuse to play music after the connection is established, and I have to quit and relaunch. It's ok, it's not like it's 2016 or anything.
-&lt;/div&gt;</description><category>review</category><category> headphones</category><guid isPermaLink="true">http://brianschrader.com/archive/sony-mdr-extra-bass-bluetooth-headphones-review</guid><pubDate>Thu, 01 Dec 2016 11:12:00 -0800</pubDate></item><item><title>YouTube has (apparently) reinstated RSS feeds</title><link>http://brianschrader.com/archive/youtube-has-apparently-reinstated-rss-feeds/</link><description>&lt;p&gt;Well if there's something I wasn't expecting to find tonight, it was that apparently YouTube has decided to allow users to &lt;a href="https://support.google.com/youtube/answer/6224202?hl=en"&gt;follow channels via RSS again&lt;/a&gt;, and unlike the last few years, this time it actually looks to be officially supported!&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Get RSS updates for a single channel
-To get an RSS feed of a single channel&#8217;s uploads, paste the channel URL into your RSS reader.&lt;/p&gt;
-&lt;p&gt;Get RSS updates for all subscriptions
-To import all your YouTube subscriptions to your RSS reader, you can use our OPML file download feature...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I have no idea when this feature was added, but it's the first time I've seen it.&lt;sup&gt;1&lt;/sup&gt; Most articles about YouTube's RSS feeds are either hacks or from &lt;a href="http://lifehacker.com/google-reader-is-shutting-down-here-are-the-best-alter-5990456"&gt;ancient history&lt;/a&gt;. I don't know what mad(wo)man is behind this, but I love them.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="The new export button" src="/images/blog/youtube-rss-export.png" /&gt;&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;sup&gt;1&lt;/sup&gt; Hopefully this isn't just some short-lived A/B testing or worse.
-&lt;/div&gt;</description><category>rss</category><category> open web</category><category> youtube</category><guid isPermaLink="true">http://brianschrader.com/archive/youtube-has-apparently-reinstated-rss-feeds</guid><pubDate>Mon, 14 Nov 2016 19:49:00 -0800</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>review</category><category> headphones</category><guid isPermaLink="true">http://brianschrader.com/archive/sony-mdr-extra-bass-bluetooth-headphones-review</guid><pubDate>Thu, 01 Dec 2016 11:12:00 -0800</pubDate></item></channel></rss>
