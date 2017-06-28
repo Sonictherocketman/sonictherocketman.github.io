@@ -2,16 +2,12 @@
  * Custom Fonts
  */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Avenir', 'Average';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(https://brianschrader.com/bin/open-sans.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Average';
-  font-style: normal;
-  font-weight: 400;
+/*
   src: local('Average'), local('Average-Regular'), url(https://brianschrader.com/bin/average.ttf) format('truetype');
+ */
 }
 
 /*
@@ -26,11 +22,10 @@ html {
 }
 
 body {
-	font-family: 'Average', serif;
+	font-family: 'Avenir', 'Helvetica', 'Average', serif;
 	background-color:#F4F4F4;
 	line-height:1.7;
 	margin:auto;
-	min-width:600px;
 	font-weight:lighter;
 }
 
