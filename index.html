@@ -46,6 +46,32 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/adventurers-codex-the-stack/">
+					Adventurer's Codex: The Stack
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Thu, 06 Jul 2017 at 05:28 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>I figure that if I'm going to write a series of posts about how and why <a href="https://adventurerscodex.com">Adventurer's Codex</a> works the way it does, it might be good to first talk about what's actually powering it. It's time to talk about our "stack".</p>
+<p>People like to think that a project's internal technologies are chosen by seasoned professionals who carefully weighed the differences between competing options over the course of months, but from what I've seen it's usually just whatever the first developers on the project liked or already knew how to use and <a href="https://adventurerscodex.com">Adventurer's Codex</a> is no different. Before we started we asked around for suggestions on frameworks to use, and when in doubt we used what we'd learned at work. We were not seasoned architects and we didn't spend months deciding, we were (are) anxious developers trying to bring our dream to life.</p>
+<h2>The Stack</h2>
+<p>On the client-side, we went with <a href="http://knockoutjs.com">KnockoutJS</a><sup>1</sup> and a ton of additional libraries. The trouble with the front-end world is that you essentially have to build up your own OS in the browser. Need notifications, persistence, url parsing, OAuth compatibility, or master-detail view hierarchies? Either you find one, or you build one. In our case, we built a lot. Why we chose to build out so many of our own custom libraries is a story for another time, but we do try to use existing libraries, like <a href="https://github.com/millermedeiros/js-signals">Signals.js</a>, <a href="http://strophe.im">Strophe.js</a>, and more as often as we can. But when it came to a few crucial things like Persistence and MVC structure, we went our own way.</p>
+<p>The server-side came a lot later in the timeline<sup>2</sup>, and collectively we have far more experience with the kinds of tech involved. We took the Marco Arment strategy: use the most boring, proven software you can find. We went with <a href="http://www.django-rest-framework.org">Django REST</a>, <a href="http://gunicorn-docs.readthedocs.io/en/stable/">Gunicorn</a>, <a href="https://github.com/jwilder/nginx-proxy">Nginx</a>, <a href="https://www.postgresql.org">Postgres</a>, and <a href="http://ejabberd.im">Ejabberd</a>, all  inside of <a href="https://www.docker.com">Docker</a>, on <a href="https://www.centos.org">CentOS</a>, on <a href="https://www.linode.com">Linode</a>. Nothing exciting there (except arguably Django REST) which is good.</p>
+<p>Of course, if I could go back in time, there's a <a href="http://knockoutjs.com">few things I'd change about our client-side tech stack</a>, but knowing what we did back then, I think we made decent choices.</p>
+<ul>
+<li><a href="/archive/adventurers-codex-behind-the-curtain/">Part 1: Behind the Curtain &#8594;</a></li>
+</ul>
+<div class="footnote">
+<sup>1.</sup> Don't email me. I know "Knockout is Dead". <br />
+<sup>2.</sup> Until version 1.4, we could get away with hosting on GitHub pages because we had no backend. The app, including it's datastorage, was (and is at time of writing) all done in-browser. More on that in another post.
+</div>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/measuring-sticks/">
 					Measuring Sticks
 				</a>
@@ -323,28 +349,6 @@ default:
 			<p>If you haven't seen <a href="https://www.youtube.com/watch?v=PUP7U5vTMM0">Gordon Ramsey's scrambled egg video</a>, you should. It's been out for years now, but good cooking tips are always useful. Being in Southern California though, I make one slight modification: I use Sour cream instead of Crème fraîche. Originally I started doing this because I almost always have Sour cream on hand (again because Southern California) and while there's certainly a difference in flavor, it's a great substitute.</p>
 <p><img alt="Scrambled Eggs" src="/images/blog/scrambled_eggs.jpg" /></p>
 <p><a href="https://www.youtube.com/watch?v=PUP7U5vTMM0">Gordon Ramsay's Scrambled Eggs &#8594;</a></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/mantons-microblog/">
-					Manton's Micro.blog
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Mon, 09 Jan 2017 at 04:57 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Like <a href="http://inessential.com/2017/01/06/mantons_thing">lots</a> of <a href="http://beckyhansmeyer.com/2017/01/08/in-support-of-microblogging/">other</a> <a href="https://marco.org/2017/01/07/indie-microblogging-kickstarter">people</a> have said, <a href="http://www.manton.org">Manton Reece</a> has <a href="https://www.kickstarter.com/projects/manton/indie-microblogging-owning-your-short-form-writing">started a Kickstarter</a> for his <a href="http://micro.blog">Micro.blog</a> microblogging platform. I've been on the beta for a while, and I've mentioned it before. What Manton is doing is really important, and not only should you support his work, but spread the word.</p>
-<blockquote>
-<p>Do you remember how the web used to work? How the web was supposed to work?</p>
-<p>In the earlier days of the web, we always published to our own web site. If you weren’t happy with your web host, or they went out of business, you could move your files and your domain name, and nothing would break.</p>
-<p>Today, most writing instead goes into a small number of centralized social networking sites, where you can’t move your content, advertisements and fake news are everywhere, and if one of these sites fails, your content disappears from the internet. Too many sites have gone away and taken our posts and photos with them.</p>
-<p>I want to encourage more independent writing. To do that, we need better tools that embrace microblogs and the advantages of the open web. We need to learn from the success and user experience of social networking, but applied to the full scope of the web.</p>
-</blockquote>
-<p><a href="https://www.kickstarter.com/projects/manton/indie-microblogging-owning-your-short-form-writing">Indie Microblogging: owning your short-form writing &#8594;</a></p>
-<p>I've written lots of stuff about services like Manton's, and the Open Web in general. It's really important that we preserve not just the way the Web used to work, but as Manton says: the way it <strong>should work</strong>.</p>
 		</div>
 	</div>
 </article>
