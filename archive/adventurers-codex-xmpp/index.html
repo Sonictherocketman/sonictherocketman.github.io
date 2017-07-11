@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adventurer's Codex: XMPP - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+
+	<meta property="og:title" content="Adventurer's Codex: XMPP" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/adventurers-codex-xmpp/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			<span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+		  <span class="menuBarItem"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			  <span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			</div>
+		</div>
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/adventurers-codex-xmpp/">Adventurer's Codex: XMPP</a></h1>
+					<small style="font-style:italic;">Posted on Tue, 11 Jul 2017 at 01:12 PM</small>
+				</div>
+				<div class="article-content">
+					<p>You might have noticed in my <a href="/archive/adventurers-codex-the-stack/">last post in this series</a> that I mentioned Adventurer's Codex using <a href="http://ejabberd.im">Ejabberd</a>. A few of you might even be a little abhorred by the idea that a modern piece of software has even a line of XML running through it, but it's true.</p>
+<h2>But it's XML!</h2>
+<p>XMPP is an old standard these days, and I think it's safe to say that it's earned a reputation for being a very complex and stateful XML-based protocol. But XMPP has also had years of industry giants testing its limits and adding new and improved functionality to the spec. All of that means that the XMPP spec has tons of recommendations and countless extensions which can make it difficult to approach as a newbie, but it also means that nearly anything you need to do with XMPP has already been done.</p>
+<p>In building <a href="https://adventurerscodex.com">Adventurer's Codex</a> we wanted to leverage as many server technologies as possible with as little custom logic as we could manage. Nobody on the team wanted to write chat or pubsub functionality, or handle scaling the system with multiple nodes, and we wanted the system to be built on open technologies that support the idea of a standards based Open Web and all of the inter-compatibility that such a web entails. We looked around, and here was this perfectly good, time-tested standard just lying there, waiting for us.</p>
+<p><a href="http://ejabberd.im">Ejabberd</a> has lots of great resources and chat rooms out there filled with people that can help you and the majority of commonly used specs like <a href="https://xmpp.org/extensions/xep-0045.html">Multi-User Chat</a> and <a href="https://xmpp.org/extensions/xep-0060.html">PubSub</a> are very well documented. The server software is robust and adaptable, and the defaults are already pretty good at getting you up and running. Perhaps most importantly, the client-side support for XMPP is really good: The web has <a href="http://strophe.im">Strophe.js</a> and all of the native platforms have either built in support or a wealth of Open Source options for speaking XMPP, so expanding support is easy. All of these things came together to make XMPP a worthwhile choice for our needs... even if it's XML.</p>
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -10,6 +10,7 @@ My name is Brian Schrader. I'm a software developer and bioinformatician living 
 
 
 ## Contact Me
+
 Shoot me an email at [brian@brianschrader.com][email], but I might take a while to respond.
 
 [email]: mailto:brian@brianschrader.com
