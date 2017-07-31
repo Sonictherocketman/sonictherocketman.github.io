@@ -1,6 +1,6 @@
 slug: todos-as-a-templating-system
 published: Mon, 31 Jul 2017 at 03:24 PM
-updated: Mon, 31 Jul 2017 at 03:24 PM
+updated: Mon, 31 Jul 2017 at 03:26 PM
 title: TODOs as a Templating System
 author: Brian Schrader
 tags: software development, programming, thought technology
@@ -65,7 +65,7 @@ Slowly the code is coming together. I've written the background task and updated
 
 Now that we're done, it's clear that the `TODO` comments were hiding quite a bit of complexity, but the overall structure is the same. Just because our code is read by the computer from top to bottom doesn't mean we have to write it that way. Sometimes it helps to start with a rough outline of the whole picture, and slowly color it in bit by bit.
 
-<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
-<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
