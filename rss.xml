@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sat, 22 Jul 2017 22:23:00 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Climate Change and Guns, Germs, and Steel</title><link>http://brianschrader.com/archive/climate-change-and-guns-germs-and-steel/</link><description>&lt;p&gt;I've been slowly working my way through &lt;a href="https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"&gt;Guns, Germs, and Steel&lt;/a&gt; for a while now. It's an interesting read overall, but this one section really got me thinking.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Mon, 31 Jul 2017 22:24:49 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>TODOs as a Templating System</title><link>http://brianschrader.com/archive/todos-as-a-templating-system/</link><description>&lt;p&gt;When I sit down to start a new feature or project the blank page or empty function can be extremely intimidating; a void of infinite complexity. I'm sure lots of developers do this, and maybe most don't realize it, but I've found that &lt;code&gt;TODO&lt;/code&gt; comments are super useful in helping to abstract away nitpicky details and focus on the overall purpose of the code as I'm writing it. Let's say that we want to validate some parameters from an HTTP request and kick off a background task to send an email to a list of requested users. First off, we need to handle the request and kick off the task, but there's a bunch of validation and database queries we need to make before we can do that, and we haven't even written the task function yet, that's where &lt;code&gt;TODOs&lt;/code&gt; come in.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class MassEmailView(APIView)
+    # TODO: check if user has permission to send mass mail
+    def post(self, request):
+        # TODO: Get users from the request
+        users = []
+        for user in users:
+            # TODO: send the message
+            pass
+        return Response(None, status=200)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Right off the bat I know that I need to get a list of users and do something with each of them. In a lot of ways I'm basically writing pseudo-code and slowly filling in the blanks with real code. Next, let's say we write the background task.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# ---- tasks.py ----
+@shared_task
+def send_email(user, subject, message_text):
+    email.send(user.email, subject, text=message_text)
+
+# ---- views.py ----
+class MassEmailView(APIView)
+    # TODO: check if user has permission to mass send mail
+    def post(self, request):
+        # TODO: Get users, subject, and text from the request
+        users = []
+        subject = ''
+        text = ''
+        for user in users:
+            tasks.send_email.delay(user, subject, text)
+        return Response(None, status=200)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Slowly the code is coming together. I've written the background task and updated my view. The basic structure is there, but I haven't done the work of parsing the request or any error handling, so let's move on to that.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# ---- tasks.py ----
+@shared_task
+def send_email(user, subject, message_text):
+    email.send(user.email, subject, text=message_text)
+
+# ---- views.py ----
+class MassEmailView(APIView)
+    @authentication_classes((SessionAuthetication,))
+    @permission_classes((IsAdmin,))
+    def post(self, request):
+        try:
+            users = [
+                User.objects.get(username=username)
+                for username in request.POST['users'].split(',')
+            ]
+        except ObjectDoesNotExist:
+            return Response(INVALID_USER_RESPONSE, status=400)
+
+        subject = request.POST['message_text']
+        text = request.POST['message_text']
+        for user in users:
+            tasks.send_email.delay(user, subject, text)
+        return Response(None, status=200)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we're done, it's clear that the &lt;code&gt;TODO&lt;/code&gt; comments were hiding quite a bit of complexity, but the overall structure is the same. Just because our code is read by the computer from top to bottom doesn't mean we have to write it that way. Sometimes it helps to start with a rough outline of the whole picture, and slowly color it in bit by bit.&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;
+&lt;script src="http://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>software development</category><category> programming</category><category> thought technology</category><guid isPermaLink="true">http://brianschrader.com/archive/todos-as-a-templating-system</guid><pubDate>Mon, 31 Jul 2017 15:24:00 -0800</pubDate></item><item><title>Climate Change and Guns, Germs, and Steel</title><link>http://brianschrader.com/archive/climate-change-and-guns-germs-and-steel/</link><description>&lt;p&gt;I've been slowly working my way through &lt;a href="https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"&gt;Guns, Germs, and Steel&lt;/a&gt; for a while now. It's an interesting read overall, but this one section really got me thinking.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;What were the factors that tipped the competetive advantage away from [hunting-gathering] and towards [farming]? ...five main contributing factors can still be identified; the controversies revolve mainly around their relative importance.&lt;/p&gt;
 &lt;p&gt;One factor is the decline in the availability of wild foods. The lifestyle of hunter-gatherers has become increasingly less rewarding over the past 13,000 years, as resources on which they depended have become less abundant of even disappeared... most large mammal species became extinct in North and South  America at the end of the Pleistocene, and some became extinct in Eurasia and Africa, either because of climate changes or because of the rise on skill and numbers of human hunters.&lt;/p&gt;
@@ -163,14 +220,4 @@ default:
 &lt;p&gt;That old MacBook is till alive; it's my mom's laptop now. It's worked well for her until this year: she got a GoPro and needs to edit the video. That MacBook can do a lot of things, but rendering 1080p and 4K video comfortably isn't one of them. If and when she gets a new computer, I'll probably ask for that MacBook back. There's not much I can use it for, but just like my old iPhones, it'll be a nice thing to keep around for the memories.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;sup&gt;1.&lt;/sup&gt; I also experimented with Linux in college, but that went from recreational use to professional use.
-&lt;/div&gt;</description><category>apple</category><category> macbook pro</category><guid isPermaLink="true">http://brianschrader.com/archive/an-ode-to-the-13-inch-macbook-pro</guid><pubDate>Sat, 04 Feb 2017 13:25:00 -0800</pubDate></item><item><title>California Bills to Safeguard Privacy from the Federal Government Advance</title><link>http://brianschrader.com/archive/california-bills-to-safeguard-privacy-from-the-federal-government-advance/</link><description>&lt;p&gt;&lt;a href="https://www.eff.org/deeplinks/2017/02/california-bills-safeguard-privacy-federal-government-pass-committee"&gt;Rainey Reitman for the EFF&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;New state bills that would create a database firewall between California and the federal government passed out of their respective Senate committees on Tuesday. Both are headed to the Appropriations Committee and then could soon see votes by the full California Senate. If passed, these critical bills would help prevent Muslim registries and mass deportations in California and would send a strong message to the Trump administration that Californians will resist his attacks on digital liberty.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This is some much needed positive Government-related news. I have no idea how legal it is for California to directly oppose Trump's ideas, but I'm all for them. California is the most powerful state in the U.S. by economy and population; let's see what happens when that power gets put to use.&lt;/p&gt;
-&lt;p&gt;I don't know how much control California has over Silicon Valley companies and their databases, but those are arguably the most important stores of personal data in the world.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Importantly, these pro-privacy policies will outlast President Trump. Once baked into California law, they&#8217;ll safeguard the over 38 million residents of California for generations to come.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;At the bottom of the EFF blog post there's ways to contact your representatives and tell them you support this measure.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.eff.org/deeplinks/2017/02/california-bills-safeguard-privacy-federal-government-pass-committee"&gt;California Bills to Safeguard Privacy from the Federal Government Advance &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>eff</category><category> trump</category><category> digital rights</category><category> nobannowall</category><guid isPermaLink="true">http://brianschrader.com/archive/california-bills-to-safeguard-privacy-from-the-federal-government-advance</guid><pubDate>Thu, 02 Feb 2017 14:07:00 -0800</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>apple</category><category> macbook pro</category><guid isPermaLink="true">http://brianschrader.com/archive/an-ode-to-the-13-inch-macbook-pro</guid><pubDate>Sat, 04 Feb 2017 13:25:00 -0800</pubDate></item></channel></rss>

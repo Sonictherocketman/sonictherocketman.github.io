@@ -47,6 +47,77 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/todos-as-a-templating-system/">
+					TODOs as a Templating System
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 31 Jul 2017 at 03:24 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>When I sit down to start a new feature or project the blank page or empty function can be extremely intimidating; a void of infinite complexity. I'm sure lots of developers do this, and maybe most don't realize it, but I've found that <code>TODO</code> comments are super useful in helping to abstract away nitpicky details and focus on the overall purpose of the code as I'm writing it. Let's say that we want to validate some parameters from an HTTP request and kick off a background task to send an email to a list of requested users. First off, we need to handle the request and kick off the task, but there's a bunch of validation and database queries we need to make before we can do that, and we haven't even written the task function yet, that's where <code>TODOs</code> come in.</p>
+<pre><code>class MassEmailView(APIView)
+    # TODO: check if user has permission to send mass mail
+    def post(self, request):
+        # TODO: Get users from the request
+        users = []
+        for user in users:
+            # TODO: send the message
+            pass
+        return Response(None, status=200)
+</code></pre>
+<p>Right off the bat I know that I need to get a list of users and do something with each of them. In a lot of ways I'm basically writing pseudo-code and slowly filling in the blanks with real code. Next, let's say we write the background task.</p>
+<pre><code># ---- tasks.py ----
+@shared_task
+def send_email(user, subject, message_text):
+    email.send(user.email, subject, text=message_text)
+
+# ---- views.py ----
+class MassEmailView(APIView)
+    # TODO: check if user has permission to mass send mail
+    def post(self, request):
+        # TODO: Get users, subject, and text from the request
+        users = []
+        subject = ''
+        text = ''
+        for user in users:
+            tasks.send_email.delay(user, subject, text)
+        return Response(None, status=200)
+</code></pre>
+<p>Slowly the code is coming together. I've written the background task and updated my view. The basic structure is there, but I haven't done the work of parsing the request or any error handling, so let's move on to that.</p>
+<pre><code># ---- tasks.py ----
+@shared_task
+def send_email(user, subject, message_text):
+    email.send(user.email, subject, text=message_text)
+
+# ---- views.py ----
+class MassEmailView(APIView)
+    @authentication_classes((SessionAuthetication,))
+    @permission_classes((IsAdmin,))
+    def post(self, request):
+        try:
+            users = [
+                User.objects.get(username=username)
+                for username in request.POST['users'].split(',')
+            ]
+        except ObjectDoesNotExist:
+            return Response(INVALID_USER_RESPONSE, status=400)
+
+        subject = request.POST['message_text']
+        text = request.POST['message_text']
+        for user in users:
+            tasks.send_email.delay(user, subject, text)
+        return Response(None, status=200)
+</code></pre>
+<p>Now that we're done, it's clear that the <code>TODO</code> comments were hiding quite a bit of complexity, but the overall structure is the same. Just because our code is read by the computer from top to bottom doesn't mean we have to write it that way. Sometimes it helps to start with a rough outline of the whole picture, and slowly color it in bit by bit.</p>
+<p><link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/climate-change-and-guns-germs-and-steel/">
 					Climate Change and Guns, Germs, and Steel
 				</a>
@@ -331,30 +402,6 @@ default:
 <div class="footnote">
 <sup>1.</sup> I also experimented with Linux in college, but that went from recreational use to professional use.
 </div>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/california-bills-to-safeguard-privacy-from-the-federal-government-advance/">
-					California Bills to Safeguard Privacy from the Federal Government Advance
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Thu, 02 Feb 2017 at 02:07 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p><a href="https://www.eff.org/deeplinks/2017/02/california-bills-safeguard-privacy-federal-government-pass-committee">Rainey Reitman for the EFF</a></p>
-<blockquote>
-<p>New state bills that would create a database firewall between California and the federal government passed out of their respective Senate committees on Tuesday. Both are headed to the Appropriations Committee and then could soon see votes by the full California Senate. If passed, these critical bills would help prevent Muslim registries and mass deportations in California and would send a strong message to the Trump administration that Californians will resist his attacks on digital liberty.</p>
-</blockquote>
-<p>This is some much needed positive Government-related news. I have no idea how legal it is for California to directly oppose Trump's ideas, but I'm all for them. California is the most powerful state in the U.S. by economy and population; let's see what happens when that power gets put to use.</p>
-<p>I don't know how much control California has over Silicon Valley companies and their databases, but those are arguably the most important stores of personal data in the world.</p>
-<blockquote>
-<p>Importantly, these pro-privacy policies will outlast President Trump. Once baked into California law, they’ll safeguard the over 38 million residents of California for generations to come.</p>
-</blockquote>
-<p>At the bottom of the EFF blog post there's ways to contact your representatives and tell them you support this measure.</p>
-<p><a href="https://www.eff.org/deeplinks/2017/02/california-bills-safeguard-privacy-federal-government-pass-committee">California Bills to Safeguard Privacy from the Federal Government Advance &#8594;</a></p>
 		</div>
 	</div>
 </article>
