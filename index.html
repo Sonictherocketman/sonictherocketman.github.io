@@ -47,6 +47,23 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/accidental-devops/">
+					Accidental DevOps
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Tue, 26 Sep 2017 at 12:30 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>Since I became a developer, I've always worked on small (3-5) or single-person teams. Even at my current job, I'm the the lead and only full-time developer. In more recent projects (including <a href="https://adventurerscodex.com">Adventurer's Codex</a>) this means that I'm the DevOps guy and System Admin as well. I'm by no means an expert in either, but I can do both.</p>
+<p>I started learning how to manage and administer servers when I started this site back in 2012. Back then I never thought that all of those hours spent configuring Apache and PHP would lead to anything, but those countless hours of frustration taught me the basics. Fast-forward 5 years and I'm developing three major projects (two unannounced) and I'm DevOps and SysAdmin for all three. It's crazy to think about.</p>
+<p>I'd highly recommend any new developers to follow the same general path I did: start a project or blog and learn to deploy it yourself. I started with a cheap old-style webhost and FTP, and slowly moved to managing the whole stack on Linode. I'm using Docker on new projects, and for now, I'm scripting my own deploys (though this could change soon if I migrate one project to Ansible).</p>
+<p>As developers it's sometimes easy to forget that we write software that actually runs on some actual hardware in some actual datacenter somewhere. Knowing how to do many of the things that DevOps and SysAdmins do will not only make you a better developer, it gives you the ability to do more on your own. You often don't need tons of layers of software to deploy yours if you know how to do it from the ground up (especially if it's a smaller project). Those tools make it easier sure, but they're not required.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/getting-back-on-the-horse/">
 					Getting Back on the Horse
 				</a>
@@ -331,63 +348,6 @@ default:
 <p><link rel="stylesheet" href="/bin/highlight.default.min.css">
 <script src="/bin/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/so-many-words-written-so-many-more-to-come/">
-					So Many Words Written, So Many More to Come
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Mon, 06 Feb 2017 at 07:58 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts<sup>1</sup>. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:</p>
-<pre><code>$ find archive/ -name "*.md"|xargs -I {} cat {} | wc -w
-   49764
-</code></pre>
-<p>Now curious, I did some more digging to see what I could learn; here's a few different statistics:</p>
-<ul>
-<li>Longest post:<ul>
-<li><a href="/archive/a-vision-of-the-open-web/">A Vision of the Open Web</a> - 1574 words</li>
-</ul>
-</li>
-<li>Shortest post:<ul>
-<li><a href="/archive/bloodmoon-eclipse/">BloodMoon Eclipse Photos</a> - 6 words</li>
-</ul>
-</li>
-<li>Most average length post:<ul>
-<li><a href="/archive/can-we-save-the-open-web/">Can we save the open web?</a> - 309 words</li>
-</ul>
-</li>
-<li>If we count all the drafts I've never published (but still have) the grand total goes up to 64,088 words.<ul>
-<li>That's 14,324 words unpublished.</li>
-</ul>
-</li>
-<li>154 different tags used on posts</li>
-<li>Most used tags:<ul>
-<li>blog: 21 times</li>
-<li>web: 14 times</li>
-<li>space: 10 times</li>
-<li>open web: 10 times</li>
-<li>blogging: 10 times</li>
-<li>python: 8 times</li>
-</ul>
-</li>
-<li>Least used tags:<ul>
-<li>D&amp;D, FCC, OS X, alternatives, angular... (and 105 more)</li>
-</ul>
-</li>
-</ul>
-<p>Just for the occasion, I made up a pretty graph.</p>
-<p><img alt="A graph of word count." src="/images/blog/post-word-count-50k-words.png" /></p>
-<p>It's hard to believe that I've been blogging for almost 5 years on this site, and if you count my two blogs before this one, then it's been almost 6 years.</p>
-<p>And in case you're wondering: yes, this post is just over 236 words. 🎉</p>
-<div class="footnote">
-<sup>1</sup> Technically that 50,000 word count includes handcrafted HTML inside a post's markdown. It's not <i>that much</i> of a factor and I'm defending my claim because technically I wrote that HTML so there.
-</div>
 		</div>
 	</div>
 </article>

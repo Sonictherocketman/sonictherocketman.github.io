@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Mon, 25 Sep 2017 23:21:23 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Getting Back on the Horse</title><link>http://brianschrader.com/archive/getting-back-on-the-horse/</link><description>&lt;p&gt;It's been a while since my last post. This whole summer has been an unusually quiet here, and while a number of personal issues have cropped up this summer that derailed me from blogging, I've really just gotten out of the habit of writing regularly. This is me forcing myself back onto that horse. I've got some exciting news coming, and between work and Adventurer's Codex, I've been keeping myself way too busy.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 26 Sep 2017 19:31:22 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Accidental DevOps</title><link>http://brianschrader.com/archive/accidental-devops/</link><description>&lt;p&gt;Since I became a developer, I've always worked on small (3-5) or single-person teams. Even at my current job, I'm the the lead and only full-time developer. In more recent projects (including &lt;a href="https://adventurerscodex.com"&gt;Adventurer's Codex&lt;/a&gt;) this means that I'm the DevOps guy and System Admin as well. I'm by no means an expert in either, but I can do both.&lt;/p&gt;
+&lt;p&gt;I started learning how to manage and administer servers when I started this site back in 2012. Back then I never thought that all of those hours spent configuring Apache and PHP would lead to anything, but those countless hours of frustration taught me the basics. Fast-forward 5 years and I'm developing three major projects (two unannounced) and I'm DevOps and SysAdmin for all three. It's crazy to think about.&lt;/p&gt;
+&lt;p&gt;I'd highly recommend any new developers to follow the same general path I did: start a project or blog and learn to deploy it yourself. I started with a cheap old-style webhost and FTP, and slowly moved to managing the whole stack on Linode. I'm using Docker on new projects, and for now, I'm scripting my own deploys (though this could change soon if I migrate one project to Ansible).&lt;/p&gt;
+&lt;p&gt;As developers it's sometimes easy to forget that we write software that actually runs on some actual hardware in some actual datacenter somewhere. Knowing how to do many of the things that DevOps and SysAdmins do will not only make you a better developer, it gives you the ability to do more on your own. You often don't need tons of layers of software to deploy yours if you know how to do it from the ground up (especially if it's a smaller project). Those tools make it easier sure, but they're not required.&lt;/p&gt;</description><category>devops</category><category> development</category><guid isPermaLink="true">http://brianschrader.com/archive/accidental-devops</guid><pubDate>Tue, 26 Sep 2017 12:30:00 -0800</pubDate></item><item><title>Getting Back on the Horse</title><link>http://brianschrader.com/archive/getting-back-on-the-horse/</link><description>&lt;p&gt;It's been a while since my last post. This whole summer has been an unusually quiet here, and while a number of personal issues have cropped up this summer that derailed me from blogging, I've really just gotten out of the habit of writing regularly. This is me forcing myself back onto that horse. I've got some exciting news coming, and between work and Adventurer's Codex, I've been keeping myself way too busy.&lt;/p&gt;
 &lt;p&gt;On the &lt;a href="https://adventurerscodex.com"&gt;Adventurer's Codex&lt;/a&gt; front: we're in the middle of a large refactor caused by our ongoing migration to Webpack which should hopefully fix a bug caused by our fairly primitive current build and deploy system. We're starting to see the light at the end of the tunnel now, and hopefully it shouldn't take much longer before we're back to writing new, cool features. The original build and deploy system was basically a lot of manual work and a shell script. When we wrote it, I had no idea what Webpack was or how to deploy a modern front-end app, now I do. That's what happens when you learn on the go; sometimes you have to step back and fix your past mistakes.&lt;/p&gt;
 &lt;p&gt;In my dwindling spare time, I've been working on another project that I hope to announce soon, so look for more to come there.&lt;/p&gt;</description><category>update</category><category> blogging</category><guid isPermaLink="true">http://brianschrader.com/archive/getting-back-on-the-horse</guid><pubDate>Mon, 25 Sep 2017 16:20:00 -0800</pubDate></item><item><title>TODOs as a Templating System</title><link>http://brianschrader.com/archive/todos-as-a-templating-system/</link><description>&lt;p&gt;When I sit down to start a new feature or project the blank page or empty function can be extremely intimidating; a void of infinite complexity. I'm sure lots of developers do this, and maybe most don't realize it, but I've found that &lt;code&gt;TODO&lt;/code&gt; comments are super useful in helping to abstract away nitpicky details and focus on the overall purpose of the code as I'm writing it. Let's say that we want to validate some parameters from an HTTP request and kick off a background task to send an email to a list of requested users. First off, we need to handle the request and kick off the task, but there's a bunch of validation and database queries we need to make before we can do that, and we haven't even written the task function yet, that's where &lt;code&gt;TODOs&lt;/code&gt; come in.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;class MassEmailView(APIView)
@@ -163,47 +166,4 @@ default:
 
 &lt;p&gt;&lt;link rel="stylesheet" href="/bin/highlight.default.min.css"&gt;
 &lt;script src="/bin/highlight.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>code</category><category> links</category><category></category><guid isPermaLink="true">http://brianschrader.com/archive/comments-with-cited-references</guid><pubDate>Thu, 09 Feb 2017 12:29:00 -0800</pubDate></item><item><title>So Many Words Written, So Many More to Come</title><link>http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come/</link><description>&lt;p&gt;Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts&lt;sup&gt;1&lt;/sup&gt;. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ find archive/ -name "*.md"|xargs -I {} cat {} | wc -w
-   49764
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now curious, I did some more digging to see what I could learn; here's a few different statistics:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Longest post:&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/a-vision-of-the-open-web/"&gt;A Vision of the Open Web&lt;/a&gt; - 1574 words&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Shortest post:&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/bloodmoon-eclipse/"&gt;BloodMoon Eclipse Photos&lt;/a&gt; - 6 words&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Most average length post:&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/can-we-save-the-open-web/"&gt;Can we save the open web?&lt;/a&gt; - 309 words&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;If we count all the drafts I've never published (but still have) the grand total goes up to 64,088 words.&lt;ul&gt;
-&lt;li&gt;That's 14,324 words unpublished.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;154 different tags used on posts&lt;/li&gt;
-&lt;li&gt;Most used tags:&lt;ul&gt;
-&lt;li&gt;blog: 21 times&lt;/li&gt;
-&lt;li&gt;web: 14 times&lt;/li&gt;
-&lt;li&gt;space: 10 times&lt;/li&gt;
-&lt;li&gt;open web: 10 times&lt;/li&gt;
-&lt;li&gt;blogging: 10 times&lt;/li&gt;
-&lt;li&gt;python: 8 times&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Least used tags:&lt;ul&gt;
-&lt;li&gt;D&amp;amp;D, FCC, OS X, alternatives, angular... (and 105 more)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Just for the occasion, I made up a pretty graph.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A graph of word count." src="/images/blog/post-word-count-50k-words.png" /&gt;&lt;/p&gt;
-&lt;p&gt;It's hard to believe that I've been blogging for almost 5 years on this site, and if you count my two blogs before this one, then it's been almost 6 years.&lt;/p&gt;
-&lt;p&gt;And in case you're wondering: yes, this post is just over 236 words. &#127881;&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;sup&gt;1&lt;/sup&gt; Technically that 50,000 word count includes handcrafted HTML inside a post's markdown. It's not &lt;i&gt;that much&lt;/i&gt; of a factor and I'm defending my claim because technically I wrote that HTML so there.
-&lt;/div&gt;</description><category>blog</category><category> stats</category><category> metablogging</category><guid isPermaLink="true">http://brianschrader.com/archive/so-many-words-written-so-many-more-to-come</guid><pubDate>Mon, 06 Feb 2017 19:58:00 -0800</pubDate></item></channel></rss>
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>code</category><category> links</category><category></category><guid isPermaLink="true">http://brianschrader.com/archive/comments-with-cited-references</guid><pubDate>Thu, 09 Feb 2017 12:29:00 -0800</pubDate></item></channel></rss>
