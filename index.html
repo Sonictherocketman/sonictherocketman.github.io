@@ -47,6 +47,24 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/todolist/">
+					todolist
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Thu, 28 Sep 2017 at 02:28 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>I've <a href="/archive/todos-as-a-templating-system/">talked before</a> about how I use <code>TODO</code> comments in my code to lay out what I want to do before actually doing it. To help me keep track of all of these TODOs in my code I wrote a <a href="https://gist.github.com/Sonictherocketman/77dd6cd8fd907dbbc00031acb08f3ba0">little script yesterday</a> and I've put it on Github for anyone who's interested.</p>
+<p>The script looks through all of the code (by default Python code) in a given destination directory, greps for the <code>TODO</code> comments, and prints them nicely in a constantly updated list in the terminal. The output looks like this:</p>
+<p><img alt="Todolist Terminal Window" src="/images/blog/todolist-terminal.png" /></p>
+<p>Writing this script I learned a couple of new things about terminal commands like how to clear the screen without deleting the scrollback or just printing newlines (i.e. what <code>clear</code> does). I've put the script in my <code>/usr/local/bin</code> and called it <code>todolist</code> so now I can invoke it from anywhere and get a nice little list of what I've put off working on.</p>
+<p><a href="https://gist.github.com/Sonictherocketman/77dd6cd8fd907dbbc00031acb08f3ba0">todolist on Github &#8594;</a></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/accidental-devops/">
 					Accidental DevOps
 				</a>
@@ -301,53 +319,6 @@ Nope. A SHA-1 collision, it turns out, is the minor security news of the day.</p
 <p>This broke late last night PST, and while Travis Ormandy and the hardworking team at Cloudflare have resolved the situation, the consequences of this bug are not small. Cloudflare is a very large CDN that sits in front of tens of thousands of sites and all of them are potentially affected.</p>
 <p><img alt="My report" src="/images/blog/ac-cloudbleed-report.png" /></p>
 <p><a href="https://github.com/pirate/sites-using-cloudflare/blob/master/README.md">List of sites affected by Cloudbleed &#8594;</a></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/comments-with-cited-references/">
-					Comments with Cited References
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Thu, 09 Feb 2017 at 12:29 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>A while back I got into the habit of adding links to any source code that I copy from the web. It's a small addition but it's helped me a lot when I need to go back and fix bugs long after I've forgotten what I did or why.</p>
-<p><code class="swift"><pre>
-// From: http://bit.ly/2ltsDF6
-extension Data {
-    /// Create hexadecimal string representation of <code>Data</code> object.
-    ///
-    /// - returns: <code>String</code> representation of this <code>Data</code> object.
-    func hexadecimal() -&gt; String {
-        return map { String(format: "%02x", $0) }
-            .joined(separator: "")
-    }
-}
-</pre></code></p>
-<p>This technique is also really useful if you encounter unsupported or buggy behavior in some framework or library and you write a weird workaround or unconventional solution. In those cases I don't just document that it <em>is</em> a workaround, I try to link to a place that explains or tracks the bug (like the GitHub Issue or Stack Overflow page).</p>
-<p><code class="swift"><pre>
-switch identifier {
-case "SpecialWaitStep", "OtherSpecialWaitStep":
-    // Wait steps aren't backward navigable.
-    // https://github.com/ResearchKit/ResearchKit/issues/914
-    return nil
-default:
-    return getStep("...")
-}
-</pre></code></p>
-<p>This way if anyone (future me included) needs to go back to fix that section of code, they'll at least know why that hack is there.<sup>1</sup></p>
-<div class="footnote">
-<sup>1.</sup> Hell, maybe by then the issue has been solved and they can even remove your hacky code.
-</div>
-
-<!-- Begin Syntax Stylesheet -->
-
-<p><link rel="stylesheet" href="/bin/highlight.default.min.css">
-<script src="/bin/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script></p>
 		</div>
 	</div>
 </article>
