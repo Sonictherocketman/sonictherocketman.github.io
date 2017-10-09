@@ -47,6 +47,23 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/mini-rant-about-documentation/">
+					Mini-Rant About Documentation
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 09 Oct 2017 at 03:31 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>I want to talk about documentation. iOS<sup>1</sup>, Nginx, Python, DRF, Django, Celery, and Postgres have excellent documentation, but documentation only helps when your question is "How does this thing work and what does it do?" Documentation, at least code level docs, are useless when it comes to figuring out what you need in the first place. Celery can tell you how to use Celery, but it isn't as great at telling you why you might need it. I've become convinced that user guides are as, if not more, important than code level documentation, and we as a community need more of them.</p>
+<div class="footnote">
+1. For their credit, iOS and really all of Apple's developer resources have excellent user guides that explain not only how to use a thing, but why and where you might need it (thinking about it, this could be because iOS and macOS have been around long enough to develop these kinds of docs).
+</div>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/todolist/">
 					todolist
 				</a>
@@ -285,40 +302,6 @@ class MassEmailView(APIView)
 <div class="footnote">
 * Woo, broke the streak!
 </div>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/the-cloudbleed-bug-an-overview/">
-					The Cloudbleed Bug: An Overview
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Fri, 24 Feb 2017 at 11:06 AM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1139">Tavis Ormandy (Chromium Bug Tracker) &#8594;</a></p>
-<blockquote>
-<p>It became clear after a while we were looking at chunks of uninitialized memory interspersed with valid data. The program that this uninitialized data was coming from just happened to have the data I wanted in memory at the time...</p>
-<p>A while later, we figured out how to reproduce the problem. It looked like that if an html page hosted behind cloudflare had a specific combination of unbalanced tags, the proxy would intersperse pages of uninitialized memory into the output...</p>
-<p>We fetched a few live samples, and we observed encryption keys, cookies, passwords, chunks of POST data and even HTTPS requests for other major cloudflare-hosted sites from other users. Once we understood what we were seeing and the implications, we immediately stopped and contacted cloudflare security.</p>
-</blockquote>
-<p><img alt="A tweet you never want to see." src="/images/blog/the-tweet-to-end-it-all.png" /></p>
-<p>Never a tweet you want to see.</p>
-<p><a href="https://news.ycombinator.com/item?id=13718810">tptacek (Hacker News) &#8594;</a></p>
-<blockquote>
-<p>The crazy thing here is that the Project Zero people were joking last night about a disclosure that was going to keep everyone at work late today. And, this morning, Google announced the SHA-1 collision, which everyone (including the insiders who leaked that the SHA-1 collision was coming) thought was the big announcement.
-Nope. A SHA-1 collision, it turns out, is the minor security news of the day.</p>
-</blockquote>
-<p><a href="https://blog.cloudflare.com/incident-report-on-memory-leak-caused-by-cloudflare-parser-bug/">Cloudflare Blog &#8594;</a></p>
-<blockquote>
-<p>The bug was serious because the leaked memory could contain private information and because it had been cached by search engines. We have also not discovered any evidence of malicious exploits of the bug or other reports of its existence...</p>
-<p>We are grateful that it was found by one of the world’s top security research teams and reported to us.</p>
-</blockquote>
-<p>This broke late last night PST, and while Travis Ormandy and the hardworking team at Cloudflare have resolved the situation, the consequences of this bug are not small. Cloudflare is a very large CDN that sits in front of tens of thousands of sites and all of them are potentially affected.</p>
-<p><img alt="My report" src="/images/blog/ac-cloudbleed-report.png" /></p>
-<p><a href="https://github.com/pirate/sites-using-cloudflare/blob/master/README.md">List of sites affected by Cloudbleed &#8594;</a></p>
 		</div>
 	</div>
 </article>
