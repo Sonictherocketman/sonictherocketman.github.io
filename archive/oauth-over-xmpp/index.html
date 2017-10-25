@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OAuth Over XMPP - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+
+	<meta property="og:title" content="OAuth Over XMPP" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/oauth-over-xmpp/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			<span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			<span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+		  <span class="menuBarItem"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+				<span class="mobileMenuBarItem"><a href="https://github.com/Sonictherocketman">Code</a></span>
+			  <span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			</div>
+		</div>
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/oauth-over-xmpp/">OAuth Over XMPP</a></h1>
+					<small style="font-style:italic;">Posted on Tue, 24 Oct 2017 at 06:24 PM</small>
+				</div>
+				<div class="article-content">
+					<p>As <a href="/archive/adventurers-codex-xmpp/">I've said before</a>, <a href="https://adventurerscodex.com">Adventurer's Codex</a> uses XMPP for it's real-time features. During development we ran into a couple of interesting challenges with integrating such a mature system with our new-ish web stack, one of which was User Authentication.</p>
+<p>The majority of Adventurer's Codex uses an OAuth Provider model for user authentication but Ejabberd (our XMPP server) requires that the username and password be sent at connection time. Obviously we didn't want to have two different auth schemes to support, and we didn't want our client app to store any passwords (hence OAuth). We spent a while hunting for different possible solutions, and in the end we stumbled into a really simple one.</p>
+<p>Ejabberd allows for authentication to be handled by an external script, which allows us to use our core database as the auth backend. We could, in principle, use a Django management command to make a call to our database, hash the password that we were given by the client and compare it to the one stored in our database, but not only is that a lot of work and error prone, it's too coupled to our database layer, and it still required the client to store the user's password.</p>
+<p>In the end we went with what might seem like the obvious solution: just keep using OAuth. After the client receives the initial user data at load time, it sends the same OAuth token as the password along with the user's XMPP JID to Ejabberd. Ejabberd then calls out to an external script which makes an HTTP request to our API to see if the user exists and that the token is valid. Clean and simple.</p>
+<p><img alt="A visualization of the OAuth over XMPP process." src="/images/blog/xmpp-auth.svg" /></p>
+<p>There's a few major advantages to using this method. First, The client no longer has to store user passwords, which not only makes our implementation simpler, but also protects our users from a whole host of attacks. Second, the user's XMPP session is now bound to the same limits as the rest of their access to the site which greatly simplifies permissions handling. Third, and perhaps the most interesting is that Ejabberd is no longer tied to either the Django CLI or the database and can be spun off as essentially a separate microservice on another machine.</p>
+<p><a href="https://gist.github.com/Sonictherocketman/aefd78575280978af0562a0b9841a903">Check out the Ejabberd Auth Script &#8594;</a></p>
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
