@@ -1,5 +1,97 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 04 Jan 2018 02:06:58 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Primitive Tech is Here for the Long Haul</title><link>http://brianschrader.com/archive/primitive-tech-is-here-for-the-long-haul/</link><description>&lt;p&gt;John's &lt;a href="https://primitivetechnology.wordpress.com/2017/11/24/new-area-starting-from-scratch/"&gt;most recent Primitive Technology blog post&lt;/a&gt; has me pretty excited. The new video is great, as his videos tend to be, but the post mentions something a bit more exciting.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Fri, 02 Feb 2018 20:12:31 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>The Web as a Social Network</title><link>http://brianschrader.com/archive/the-web-as-a-social-network/</link><description>&lt;p&gt;&lt;a href="http://inessential.com/2018/02/01/why_micro_blog_is_not_another_app_net"&gt;Brent Simmons on Micro.blog&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Twitter and Facebook are convenient, sure, but so are fossil fuels, and the cost was similarly unknown for a long time. But now we have some idea just how bad these things are for the world....&lt;/p&gt;
+&lt;p&gt;[With &lt;a href="https://micro.blog"&gt;Micro.Blog&lt;/a&gt;] your posts are just a normal, everyday part of the open web. At this writing, mine appear on micro.inessential.com &#8212; but it&#8217;s on my to-do list to have those appear on my main blog (this blog) instead. (Probably won&#8217;t happen until after I ship the app I&#8217;m currently working on.)&lt;/p&gt;
+&lt;p&gt;And this is how it used to be, and how it never should have stopped being: my blog is me on the web. I own my blog: I own me.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's where I'd normally write something like this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Brent is right. Blogs and microblogs can and are the future of social networks. They allow you to keep control of your content, and protect you from huge, often nefarious corporate whims...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But any reader of this site will already know my feelings on the Open Web and Social Networking. So this time I've decided to make this post a retrospective on what I've said before, and how my opinions, and the web has changed over the last few years.&lt;/p&gt;
+&lt;h2&gt;The Open Web Series Collection&lt;/h2&gt;
+&lt;p&gt;My first post about the Open Web was from July 2014, when this blog was still in it's infancy. Since then I've basically written about this subject whenever it's come up in the circles I travel in. At first I was just concerned with preserving my site and my thoughts for the future, but over time I morphed into the Open Web loving nerd you see before you today.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/re-permanence/"&gt;Re: Permanence (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How much history is lost by those who live it not writing it down. With the internet, we have the ability (assuming storage is cheap) to preserve everything we ever say, think, write, or post. That's really powerful, and possible accountability and privacy issues aside, its probably the most important use of an invention in the history of man.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/permanence-revisited/"&gt;Permanence Revisited (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I've retweeted &lt;a href="https://twitter.com/gruber/status/1024766035"&gt;this tweet&lt;/a&gt; multiple times, mostly because it's hilarious, but every time I want to do so, even though I have it saved in Instapaper and favorited on Twitter, its easier to google the text of the tweet (as close as I can remember) and let Google do the work.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;After a while I got it into my head that RSS could be used for a new (old?) kind of social network, and I've been rolling with that idea ever since.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/waffle-brent-and-marco-on-social-networks/"&gt;Waffle, Brent and Marco on Social Networks (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What would it mean to have a social network (like Dispora) that is decentralized, and independent of corporate ties? Could such a thing exist?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Then I was (am still) mad at Twitter for a while, which just stoked the Open Web flames.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/twitter-and-the-open-web/"&gt;Twitter and the Open Web (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Could it be that the time for new social networks is past us? I hope not. RSS succeeded as an open standard, and so did email (though email had an early start). The podcasting industry is growing, powered by RSS... RSS use floundered after Google Reader shutdown, but RSS is still with us. That's important.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/how-to-stimulate-the-open-web/"&gt;How to stimulate the open web (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Create systems that are ambivalent about the open or closed web. If I create a tool that's good at posting content to Facebook and Twitter, it should also post to RSS feeds...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I tried &lt;a href="https://www.xkcd.com/927/"&gt;making a standard once&lt;/a&gt;, but putting something on GitHub in a README doesn't make it a standard.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/the-open-microblog-standard/"&gt;The Open Microblog Standard (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A few weeks ago I began drafting a new standard for open, platform independent communication service. You can think of it as Twitter meets RSS...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/making-rss-real-time/"&gt;Making RSS Real-Time (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One of the critiques of RSS feeds in a world dominated by Facebook and Twitter is that RSS just isn't fast enough. You can't hope to achieve what Twitter calls "in-the-moment updates" and "watch events unfold" if your client is polling each web site's RSS feed once an hour for new microblog posts...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;After a while I started noticing that a lot of creators and bloggers I followed were moving back to open, platform-less distribution methods (like CGP Grey and his RSS feeds and email lists).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/the-professional-sharer/"&gt;The Professional Sharer (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[Social Media Platforms] have to do this to make money. It just sucks that how they make money is by compromising the people that made the service what it is (&lt;em&gt;cough&lt;/em&gt; Twitter &lt;em&gt;cough&lt;/em&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I was still mad at Twitter.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/twitter-is-not-a-replacement-for-blogs/"&gt;Twitter is not a replacement for blogs (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Twitter is a complementary medium to blogging, but it's not a replacement...&lt;/p&gt;
+&lt;p&gt;By knocking down a few walls and moving some furniture around, blogging is preparing for a comeback, and we'll all be better off for it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More recently though I've gotten more realistic and still more optimistic about the future of social networks and openness. Facebook and Google's Algorithms still loom high and mighty, but I started to see a resistence forming, and then Manton Reece released &lt;a href="https://micro.blog"&gt;Micro.blog&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/a-vision-of-the-open-web/"&gt;A Vision of the Open Web (2016)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I've long heard people say that we've lost video, music, and messaging to the walled worlds of YouTube, iTunes, and WhatsApp/Facebook/Twitter respectively, and while I believe that is the current state of the web, I don't believe it's the end-state.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/can-we-save-the-open-web/"&gt;Can we save the open web? (2016)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If we're going to allow... algorithms to be such a huge part of our lives, which I don't believe is necessarily a bad thing, then they should at least be subject to some sort oversight.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/archive/mantons-microblog/"&gt;Manton's Micro.blog (2017)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I've written lots of stuff about services like Manton's, and the Open Web in general. It's really important that we preserve not just the way the Web used to work, but as Manton says: the way it &lt;strong&gt;should work&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The future looks bright for the open web and social networking, but the fight is ongoing.&lt;/p&gt;</description><category>open web</category><category> social networking</category><guid isPermaLink="true">http://brianschrader.com/archive/the-web-as-a-social-network</guid><pubDate>Fri, 02 Feb 2018 12:12:00 -0800</pubDate></item><item><title>Primitive Tech is Here for the Long Haul</title><link>http://brianschrader.com/archive/primitive-tech-is-here-for-the-long-haul/</link><description>&lt;p&gt;John's &lt;a href="https://primitivetechnology.wordpress.com/2017/11/24/new-area-starting-from-scratch/"&gt;most recent Primitive Technology blog post&lt;/a&gt; has me pretty excited. The new video is great, as his videos tend to be, but the post mentions something a bit more exciting.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I bought a new property to shoot primitive technology videos on. The new area is dense tropical rainforest with a permanent creek. Starting completely from scratch, my first project was to build a simple dome hut and make a fire.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -58,61 +150,4 @@
 &lt;p&gt;I'd highly recommend any new developers to follow the same general path I did: start a project or blog and learn to deploy it yourself. I started with a cheap old-style webhost and FTP, and slowly moved to managing the whole stack on Linode. I'm using Docker on new projects, and for now, I'm scripting my own deploys (though this could change soon if I migrate one project to Ansible).&lt;/p&gt;
 &lt;p&gt;As developers it's sometimes easy to forget that we write software that actually runs on some actual hardware in some actual datacenter somewhere. Knowing how to do many of the things that DevOps and SysAdmins do will not only make you a better developer, it gives you the ability to do more on your own. You often don't need tons of layers of software to deploy yours if you know how to do it from the ground up (especially if it's a smaller project). Those tools make it easier sure, but they're not required.&lt;/p&gt;</description><category>devops</category><category> development</category><guid isPermaLink="true">http://brianschrader.com/archive/accidental-devops</guid><pubDate>Tue, 26 Sep 2017 12:30:00 -0800</pubDate></item><item><title>Getting Back on the Horse</title><link>http://brianschrader.com/archive/getting-back-on-the-horse/</link><description>&lt;p&gt;It's been a while since my last post. This whole summer has been an unusually quiet here, and while a number of personal issues have cropped up this summer that derailed me from blogging, I've really just gotten out of the habit of writing regularly. This is me forcing myself back onto that horse. I've got some exciting news coming, and between work and Adventurer's Codex, I've been keeping myself way too busy.&lt;/p&gt;
 &lt;p&gt;On the &lt;a href="https://adventurerscodex.com"&gt;Adventurer's Codex&lt;/a&gt; front: we're in the middle of a large refactor caused by our ongoing migration to Webpack which should hopefully fix a bug caused by our fairly primitive current build and deploy system. We're starting to see the light at the end of the tunnel now, and hopefully it shouldn't take much longer before we're back to writing new, cool features. The original build and deploy system was basically a lot of manual work and a shell script. When we wrote it, I had no idea what Webpack was or how to deploy a modern front-end app, now I do. That's what happens when you learn on the go; sometimes you have to step back and fix your past mistakes.&lt;/p&gt;
-&lt;p&gt;In my dwindling spare time, I've been working on another project that I hope to announce soon, so look for more to come there.&lt;/p&gt;</description><category>update</category><category> blogging</category><guid isPermaLink="true">http://brianschrader.com/archive/getting-back-on-the-horse</guid><pubDate>Mon, 25 Sep 2017 16:20:00 -0800</pubDate></item><item><title>TODOs as a Templating System</title><link>http://brianschrader.com/archive/todos-as-a-templating-system/</link><description>&lt;p&gt;When I sit down to start a new feature or project the blank page or empty function can be extremely intimidating; a void of infinite complexity. I'm sure lots of developers do this, and maybe most don't realize it, but I've found that &lt;code&gt;TODO&lt;/code&gt; comments are super useful in helping to abstract away nitpicky details and focus on the overall purpose of the code as I'm writing it. Let's say that we want to validate some parameters from an HTTP request and kick off a background task to send an email to a list of requested users. First off, we need to handle the request and kick off the task, but there's a bunch of validation and database queries we need to make before we can do that, and we haven't even written the task function yet, that's where &lt;code&gt;TODOs&lt;/code&gt; come in.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;class MassEmailView(APIView)
-    # TODO: check if user has permission to send mass mail
-    def post(self, request):
-        # TODO: Get users from the request
-        users = []
-        for user in users:
-            # TODO: send the message
-            pass
-        return Response(None, status=200)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Right off the bat I know that I need to get a list of users and do something with each of them. In a lot of ways I'm basically writing pseudo-code and slowly filling in the blanks with real code. Next, let's say we write the background task.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# ---- tasks.py ----
-@shared_task
-def send_email(user, subject, message_text):
-    email.send(user.email, subject, text=message_text)
-
-# ---- views.py ----
-class MassEmailView(APIView)
-    # TODO: check if user has permission to mass send mail
-    def post(self, request):
-        # TODO: Get users, subject, and text from the request
-        users = []
-        subject = ''
-        text = ''
-        for user in users:
-            tasks.send_email.delay(user, subject, text)
-        return Response(None, status=200)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Slowly the code is coming together. I've written the background task and updated my view. The basic structure is there, but I haven't done the work of parsing the request or any error handling, so let's move on to that.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# ---- tasks.py ----
-@shared_task
-def send_email(user, subject, message_text):
-    email.send(user.email, subject, text=message_text)
-
-# ---- views.py ----
-class MassEmailView(APIView)
-    @authentication_classes((SessionAuthetication,))
-    @permission_classes((IsAdmin,))
-    def post(self, request):
-        try:
-            users = [
-                User.objects.get(username=username)
-                for username in request.POST['users'].split(',')
-            ]
-        except ObjectDoesNotExist:
-            return Response(INVALID_USER_RESPONSE, status=400)
-
-        subject = request.POST['message_text']
-        text = request.POST['message_text']
-        for user in users:
-            tasks.send_email.delay(user, subject, text)
-        return Response(None, status=200)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now that we're done, it's clear that the &lt;code&gt;TODO&lt;/code&gt; comments were hiding quite a bit of complexity, but the overall structure is the same. Just because our code is read by the computer from top to bottom doesn't mean we have to write it that way. Sometimes it helps to start with a rough outline of the whole picture, and slowly color it in bit by bit.&lt;/p&gt;
-&lt;p&gt;&lt;link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;
-&lt;script src="https://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>software development</category><category> programming</category><category> thought technology</category><guid isPermaLink="true">http://brianschrader.com/archive/todos-as-a-templating-system</guid><pubDate>Mon, 31 Jul 2017 15:24:00 -0800</pubDate></item></channel></rss>
+&lt;p&gt;In my dwindling spare time, I've been working on another project that I hope to announce soon, so look for more to come there.&lt;/p&gt;</description><category>update</category><category> blogging</category><guid isPermaLink="true">http://brianschrader.com/archive/getting-back-on-the-horse</guid><pubDate>Mon, 25 Sep 2017 16:20:00 -0800</pubDate></item></channel></rss>
