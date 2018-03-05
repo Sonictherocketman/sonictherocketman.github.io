@@ -47,6 +47,28 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/safaris-websocket-stream-view/">
+					Safari's WebSocket Stream View
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Sun, 04 Mar 2018 at 10:16 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>I've mentioned before that <a href="https://adventurerscodex.com">Adventurer's Codex</a> uses XMPP over WebSockets for it's live-chat and party features, and we're planning to add lots more of these kinds of features in the future. That being said, as a developer, I've had a pretty difficult time building features that rely on WebSockets because it's kind of annoying to see exactly what is being sent and received over the connection. I know that Chrome has some features to help with developing WebSocket applications, but I've never had a good experience with them, and I use Safari as my default browser for both casual use and for web development.</p>
+<p>That said, I stumbled across a new WebSocket Stream View in Safari's Dev Tools and, just like when <a href="/archive/gits-hidden-feature-notes/">I discovered that Git supports notes</a>, I got really excited. Clicking on an active WebSocket connection now brings up a live timeline of every message sent and received by the browser over that connection. It even shows the <code>ping/pong</code> frames that the browser occasionally sends to verify that the connection is still open.</p>
+<div class="image-container">
+    <img src="/images/blog/safari-websocket-stream-viewer.png"
+         alt="safari websocket viewer">
+    <p><small>Safari's New WebSocket Stream View</small></p>
+</div>
+
+<p>I'm hoping that this new view will make it a lot easier to debug problems because I can now see exactly what's being sent over the connection. I'm not sure when this was added to the Safari Dev Tools, but it's definitely very welcome.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/gits-hidden-feature-notes/">
 					Git's Hidden Feature: Notes
 				</a>
@@ -333,24 +355,6 @@
 <div class="footnote">
 1. For their credit, iOS and really all of Apple's developer resources have excellent user guides that explain not only how to use a thing, but why and where you might need it (thinking about it, this could be because iOS and macOS have been around long enough to develop these kinds of docs).
 </div>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/todolist/">
-					todolist
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Thu, 28 Sep 2017 at 02:28 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>I've <a href="/archive/todos-as-a-templating-system/">talked before</a> about how I use <code>TODO</code> comments in my code to lay out what I want to do before actually doing it. To help me keep track of all of these TODOs in my code I wrote a <a href="https://gist.github.com/Sonictherocketman/77dd6cd8fd907dbbc00031acb08f3ba0">little script yesterday</a> and I've put it on Github for anyone who's interested.</p>
-<p>The script looks through all of the code (by default Python code) in a given destination directory, greps for the <code>TODO</code> comments, and prints them nicely in a constantly updated list in the terminal. The output looks like this:</p>
-<p><img alt="Todolist Terminal Window" src="/images/blog/todolist-terminal.png" /></p>
-<p>Writing this script I learned a couple of new things about terminal commands like how to clear the screen without deleting the scrollback or just printing newlines (i.e. what <code>clear</code> does). I've put the script in my <code>/usr/local/bin</code> and called it <code>todolist</code> so now I can invoke it from anywhere and get a nice little list of what I've put off working on.</p>
-<p><a href="https://gist.github.com/Sonictherocketman/77dd6cd8fd907dbbc00031acb08f3ba0">todolist on Github &#8594;</a></p>
 		</div>
 	</div>
 </article>
