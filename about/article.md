@@ -8,7 +8,7 @@ status: draft
 
 My name is Brian Schrader. I'm an independent software developer living in San Diego, CA. This site is my little home on the internet where I go on (and on) about things that are important to me.
 
-I own and run [SkyRocket Software][sky], my indie software company, where I make thinks some people like. I'm also a co-founder of [Adventurer's Codex][ac], a tool for enhancing and tracking D&D games. And I'm the lead singer, song-writer, and rhythm guitarist in a band called Academic Prison.
+I own and run [SkyRocket Software][sky], my indie software company, where I make things some people like. I'm also a co-founder of [Adventurer's Codex][ac], a tool for enhancing and tracking D&D games. And I'm the lead singer, song-writer, and rhythm guitarist in a band called [Academic Prison][ap].
 
 
 ## Contact Me
@@ -19,3 +19,4 @@ Shoot me an email at [brian@brianschrader.com][email], but I might take a while 
 [tw]: http://twitter.com/sonicrocketman
 [sky]: https://skyrocket.software
 [ac]: https://adventurerscodex.com
+[ap]: http://academicprison.band
