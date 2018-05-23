@@ -47,6 +47,31 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/announcing-pine-microblogging-for-a-new-generation-/">
+					Announcing Pine: Microblogging for a New Generation 🎉
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Wed, 23 May 2018 at 11:30 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p><img
+    alt="Pine Logo"
+    class="image-right"
+    style="max-width:200px;"
+    src="https://pine.blog/static/images/pine-logo-color-500.png"
+/></p>
+<p>Today I'm announcing <a href="https://pine.blog">Pine, a new kind of RSS Reader and Microblogging client</a>. I've been developing Pine, in addition to a bunch of other projects for a while now, and it's finally time to show it off to the world.</p>
+<p>In a classical sense, Pine is a Feed Reader, but it's really more of a successor to my old <a href="/archive/microblogger-status-updates-and-more/">Microblogger project</a> from way back. Not only can users follow the people and sites they want, but you can also use Pine to post to your own Wordpress site and find new sites and people using the built in search. In a lot of ways Pine and <a href="https://micro.blog">Micro.blog</a> are similar with a few key differences and, from what I can tell, both Manton and I started working on them at around the same time. Pine is my contribution to a new ecosystem of open social networking tools and services. Anyone on Micro.blog can follow people on Pine and vice-versa.</p>
+<p>Pine is also my first venture into building paid software. It's $5 per month and at that price I don't have to sell ads or do anything shady to earn money.</p>
+<p>I've been reluctant to post anything about Pine until it officially launched, but now that it has, I've got a few interesting design decisions I'd like to talk about. Building a feed reader has always been on my to-do list, and it turns out that there's a lot more to it than just parsing feeds.</p>
+<p>I've got a lot of great new features planned, including an iOS app which should be coming soon. If you're interested, give Pine a shot, and let me know what you think!</p>
+<p><a href="https://pine.blog">Pine &#8594;</a></p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/the-people-vs-democracy/">
 					The People vs. Democracy
 				</a>
@@ -341,27 +366,6 @@
 <p><img alt="A visualization of the OAuth over XMPP process." src="/images/blog/xmpp-auth.svg" /></p>
 <p>There's a few major advantages to using this method. First, The client no longer has to store user passwords, which not only makes our implementation simpler, but also protects our users from a whole host of attacks. Second, the user's XMPP session is now bound to the same limits as the rest of their access to the site which greatly simplifies permissions handling. Third, and perhaps the most interesting is that Ejabberd is no longer tied to either the Django CLI or the database and can be spun off as essentially a separate microservice on another machine.</p>
 <p><a href="https://gist.github.com/Sonictherocketman/aefd78575280978af0562a0b9841a903">Check out the Ejabberd Auth Script &#8594;</a></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/todolist-update/">
-					todolist update
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Tue, 10 Oct 2017 at 03:35 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Over the last week, I've made some changes to <a href="//gist.github.com/Sonictherocketman/77dd6cd8fd907dbbc00031acb08f3ba0">my todolist script</a>: I've cleaned up the printing a bit and removed the temp file.</p>
-<p><img alt="todolist terminal output" src="/images/blog/todolist-update.png" /></p>
-<p>I had to remove the temp file because it was actually causing performance problems with BBEdit. Since the temp file came into and out of existence every few seconds, BBEdit's project view would dutifully redraw the project file list twice in quick succession, wasting quite a bit of CPU power<sup>1</sup>, and sometimes causing my MacBook's fan to spin up. Now that the temp file is gone, that problem is too.</p>
-<div class="footnote">
-<sup>1. </sup>I'm not sure why BBEdit needs so much power to redraw the project list and I've reached out to their support. Hopefully they can resolve the issue. At the very least my script is a little more well behaved so it's no longer an issue.
-</div>
-
-<p><a href="//gist.github.com/Sonictherocketman/77dd6cd8fd907dbbc00031acb08f3ba0">todolist &#8594;</a></p>
 		</div>
 	</div>
 </article>
