@@ -47,6 +47,59 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/a-sneak-peek-pine-for-ios/">
+					A Sneak Peek: Pine for iOS
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Fri, 15 Jun 2018 at 12:42 PM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<style>
+    div.image-container {
+        width: unset;
+        text-align:center;
+        padding: 0px;
+        float:none;
+    }
+    div img.pine-screenshot {
+        max-height: unset;
+        max-width: unset;
+    }
+    img.pine-screenshot {
+        box-shadow: 4px 4px 5px #ccc;
+        padding: 0;
+        margin-right: 15px;
+        display: inline;
+        height:350pt;
+    }
+</style>
+
+<p>It's been a few busy weeks since I first <a href="//pine.blog">launched Pine</a>, a new kind of Feed Reader. And while it's not quite ready for prime-time yet, here's a sneak peek at the official Pine app for iOS.</p>
+<p><strong>The app will be free and require a Pine subscription</strong> to use. My favorite features though are the <strong>Dark Mode</strong> and <strong>Dark App Icon</strong> support.</p>
+<p>The first version of the app is pretty bare bones with only only a few screens: your timeline, likes listing, and full article view. And while you'll of course be able to share and like posts, Version 1.0 will not have any sort of search or follow/unfollow support (though that's coming soon afterwards).</p>
+<div class="image-container">
+<img
+    class="pine-screenshot"
+    src="/images/blog/pine/820-likes-dark.PNG"
+/>
+<img
+    class="pine-screenshot"
+    src="/images/blog/pine/820-post-light.PNG"
+/>
+<img
+    class="pine-screenshot"
+    src="/images/blog/pine/820-post-dark.PNG"
+/>
+</div>
+
+<p>Deciding what to cut and what to keep is always hard, but I've once you've set up Pine in the browser, this version of the app should have enough features for a nice day-to-day experience.</p>
+<p>I've been using the app for a couple of days now and it's really shaping up into something special. Hopefully it will be ready for launch soon.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/announcing-pine-microblogging-for-a-new-generation-/">
 					Announcing Pine: Microblogging for a New Generation 🎉
 				</a>
@@ -346,26 +399,6 @@
 <p>...ask people who've done it before... The internet is great, but it's actually pretty difficult to find out how to design modern web systems from scratch with just a vague notion and Google.</p>
 </blockquote>
 <p>MyGeneRank, to me, represents my passing from a junior to a senior developer in a lot of ways. By no means have I learned all there is to know, but having now built two large web projects, and being the  sole developer for one of them, I feel like a different person from the one who started the project a year and a half ago. I'd love to know what you all think of the source, and if you find a bug, file an issue please.</p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/oauth-over-xmpp/">
-					OAuth Over XMPP
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Tue, 24 Oct 2017 at 06:24 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>As <a href="/archive/adventurers-codex-xmpp/">I've said before</a>, <a href="https://adventurerscodex.com">Adventurer's Codex</a> uses XMPP for it's real-time features. During development we ran into a couple of interesting challenges with integrating such a mature system with our new-ish web stack, one of which was User Authentication.</p>
-<p>The majority of Adventurer's Codex uses an OAuth Provider model for user authentication but Ejabberd (our XMPP server) requires that the username and password be sent at connection time. Obviously we didn't want to have two different auth schemes to support, and we didn't want our client app to store any passwords (hence OAuth). We spent a while hunting for different possible solutions, and in the end we stumbled into a really simple one.</p>
-<p>Ejabberd allows for authentication to be handled by an external script, which allows us to use our core database as the auth backend. We could, in principle, use a Django management command to make a call to our database, hash the password that we were given by the client and compare it to the one stored in our database, but not only is that a lot of work and error prone, it's too coupled to our database layer, and it still required the client to store the user's password.</p>
-<p>In the end we went with what might seem like the obvious solution: just keep using OAuth. After the client receives the initial user data at load time, it sends the same OAuth token as the password along with the user's XMPP JID to Ejabberd. Ejabberd then calls out to an external script which makes an HTTP request to our API to see if the user exists and that the token is valid. Clean and simple.</p>
-<p><img alt="A visualization of the OAuth over XMPP process." src="/images/blog/xmpp-auth.svg" /></p>
-<p>There's a few major advantages to using this method. First, The client no longer has to store user passwords, which not only makes our implementation simpler, but also protects our users from a whole host of attacks. Second, the user's XMPP session is now bound to the same limits as the rest of their access to the site which greatly simplifies permissions handling. Third, and perhaps the most interesting is that Ejabberd is no longer tied to either the Django CLI or the database and can be spun off as essentially a separate microservice on another machine.</p>
-<p><a href="https://gist.github.com/Sonictherocketman/aefd78575280978af0562a0b9841a903">Check out the Ejabberd Auth Script &#8594;</a></p>
 		</div>
 	</div>
 </article>

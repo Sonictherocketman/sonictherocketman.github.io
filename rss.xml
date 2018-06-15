@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Wed, 23 May 2018 18:31:08 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Announcing Pine: Microblogging for a New Generation &#127881;</title><link>http://brianschrader.com/archive/announcing-pine-microblogging-for-a-new-generation-/</link><description>&lt;p&gt;&lt;img
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Fri, 15 Jun 2018 19:42:58 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>A Sneak Peek: Pine for iOS</title><link>http://brianschrader.com/archive/a-sneak-peek-pine-for-ios/</link><description>&lt;style&gt;
+    div.image-container {
+        width: unset;
+        text-align:center;
+        padding: 0px;
+        float:none;
+    }
+    div img.pine-screenshot {
+        max-height: unset;
+        max-width: unset;
+    }
+    img.pine-screenshot {
+        box-shadow: 4px 4px 5px #ccc;
+        padding: 0;
+        margin-right: 15px;
+        display: inline;
+        height:350pt;
+    }
+&lt;/style&gt;
+
+&lt;p&gt;It's been a few busy weeks since I first &lt;a href="//pine.blog"&gt;launched Pine&lt;/a&gt;, a new kind of Feed Reader. And while it's not quite ready for prime-time yet, here's a sneak peek at the official Pine app for iOS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The app will be free and require a Pine subscription&lt;/strong&gt; to use. My favorite features though are the &lt;strong&gt;Dark Mode&lt;/strong&gt; and &lt;strong&gt;Dark App Icon&lt;/strong&gt; support.&lt;/p&gt;
+&lt;p&gt;The first version of the app is pretty bare bones with only only a few screens: your timeline, likes listing, and full article view. And while you'll of course be able to share and like posts, Version 1.0 will not have any sort of search or follow/unfollow support (though that's coming soon afterwards).&lt;/p&gt;
+&lt;div class="image-container"&gt;
+&lt;img
+    class="pine-screenshot"
+    src="/images/blog/pine/820-likes-dark.PNG"
+/&gt;
+&lt;img
+    class="pine-screenshot"
+    src="/images/blog/pine/820-post-light.PNG"
+/&gt;
+&lt;img
+    class="pine-screenshot"
+    src="/images/blog/pine/820-post-dark.PNG"
+/&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Deciding what to cut and what to keep is always hard, but I've once you've set up Pine in the browser, this version of the app should have enough features for a nice day-to-day experience.&lt;/p&gt;
+&lt;p&gt;I've been using the app for a couple of days now and it's really shaping up into something special. Hopefully it will be ready for launch soon.&lt;/p&gt;</description><category>pine</category><category> ios</category><category> app</category><guid isPermaLink="true">http://brianschrader.com/archive/a-sneak-peek-pine-for-ios</guid><pubDate>Fri, 15 Jun 2018 12:42:00 -0800</pubDate></item><item><title>Announcing Pine: Microblogging for a New Generation &#127881;</title><link>http://brianschrader.com/archive/announcing-pine-microblogging-for-a-new-generation-/</link><description>&lt;p&gt;&lt;img
     alt="Pine Logo"
     class="image-right"
     style="max-width:200px;"
@@ -178,10 +217,4 @@
 &lt;blockquote&gt;
 &lt;p&gt;...ask people who've done it before... The internet is great, but it's actually pretty difficult to find out how to design modern web systems from scratch with just a vague notion and Google.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;MyGeneRank, to me, represents my passing from a junior to a senior developer in a lot of ways. By no means have I learned all there is to know, but having now built two large web projects, and being the  sole developer for one of them, I feel like a different person from the one who started the project a year and a half ago. I'd love to know what you all think of the source, and if you find a bug, file an issue please.&lt;/p&gt;</description><category>django</category><category> software</category><category> technical overview</category><category> review</category><category> researchkit</category><guid isPermaLink="true">http://brianschrader.com/archive/mygenerank-behind-the-scenes-of-the-newest-researchkit-app</guid><pubDate>Wed, 25 Oct 2017 10:11:00 -0800</pubDate></item><item><title>OAuth Over XMPP</title><link>http://brianschrader.com/archive/oauth-over-xmpp/</link><description>&lt;p&gt;As &lt;a href="/archive/adventurers-codex-xmpp/"&gt;I've said before&lt;/a&gt;, &lt;a href="https://adventurerscodex.com"&gt;Adventurer's Codex&lt;/a&gt; uses XMPP for it's real-time features. During development we ran into a couple of interesting challenges with integrating such a mature system with our new-ish web stack, one of which was User Authentication.&lt;/p&gt;
-&lt;p&gt;The majority of Adventurer's Codex uses an OAuth Provider model for user authentication but Ejabberd (our XMPP server) requires that the username and password be sent at connection time. Obviously we didn't want to have two different auth schemes to support, and we didn't want our client app to store any passwords (hence OAuth). We spent a while hunting for different possible solutions, and in the end we stumbled into a really simple one.&lt;/p&gt;
-&lt;p&gt;Ejabberd allows for authentication to be handled by an external script, which allows us to use our core database as the auth backend. We could, in principle, use a Django management command to make a call to our database, hash the password that we were given by the client and compare it to the one stored in our database, but not only is that a lot of work and error prone, it's too coupled to our database layer, and it still required the client to store the user's password.&lt;/p&gt;
-&lt;p&gt;In the end we went with what might seem like the obvious solution: just keep using OAuth. After the client receives the initial user data at load time, it sends the same OAuth token as the password along with the user's XMPP JID to Ejabberd. Ejabberd then calls out to an external script which makes an HTTP request to our API to see if the user exists and that the token is valid. Clean and simple.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A visualization of the OAuth over XMPP process." src="/images/blog/xmpp-auth.svg" /&gt;&lt;/p&gt;
-&lt;p&gt;There's a few major advantages to using this method. First, The client no longer has to store user passwords, which not only makes our implementation simpler, but also protects our users from a whole host of attacks. Second, the user's XMPP session is now bound to the same limits as the rest of their access to the site which greatly simplifies permissions handling. Third, and perhaps the most interesting is that Ejabberd is no longer tied to either the Django CLI or the database and can be spun off as essentially a separate microservice on another machine.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://gist.github.com/Sonictherocketman/aefd78575280978af0562a0b9841a903"&gt;Check out the Ejabberd Auth Script &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>django</category><category> software</category><category> xmpp</category><category> oauth</category><category> adventurerscodex</category><guid isPermaLink="true">http://brianschrader.com/archive/oauth-over-xmpp</guid><pubDate>Tue, 24 Oct 2017 18:24:00 -0800</pubDate></item></channel></rss>
+&lt;p&gt;MyGeneRank, to me, represents my passing from a junior to a senior developer in a lot of ways. By no means have I learned all there is to know, but having now built two large web projects, and being the  sole developer for one of them, I feel like a different person from the one who started the project a year and a half ago. I'd love to know what you all think of the source, and if you find a bug, file an issue please.&lt;/p&gt;</description><category>django</category><category> software</category><category> technical overview</category><category> review</category><category> researchkit</category><guid isPermaLink="true">http://brianschrader.com/archive/mygenerank-behind-the-scenes-of-the-newest-researchkit-app</guid><pubDate>Wed, 25 Oct 2017 10:11:00 -0800</pubDate></item></channel></rss>
