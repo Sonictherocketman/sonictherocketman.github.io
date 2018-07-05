@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 05 Jul 2018 23:32:21 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Pine for iOS Released!</title><link>http://brianschrader.com/archive/pine-for-ios-released/</link><description>&lt;div class="image-container"&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 05 Jul 2018 23:37:35 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Pine for iOS Released!</title><link>http://brianschrader.com/archive/pine-for-ios-released/</link><description>&lt;div class="image-container"&gt;
 &lt;img
     src="/images/blog/pine/pine-app-logo-light.png"
     alt="Pine.blog iOS App Logo"
-    style="max-width:150px; width:80%; box-shadow:3px 3px 5px darkgrey; border-radius:30px; padding:0; margin-right:10px;"
+    style="max-width:150px; width:80%; box-shadow:3px 3px 5px darkgrey; border-radius:30px; padding:0; margin-right:10px; float:right;"
 /&gt;
 &lt;/div&gt;
 

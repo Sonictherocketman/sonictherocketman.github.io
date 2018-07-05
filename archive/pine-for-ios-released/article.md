@@ -1,6 +1,6 @@
 slug: pine-for-ios-released
 published: Thu, 05 Jul 2018 at 11:32 PM
-updated: Thu, 05 Jul 2018 at 11:32 PM
+updated: Thu, 05 Jul 2018 at 11:36 PM
 title: Pine for iOS Released!
 author: Brian Schrader
 tags: pine, ios, app, release
@@ -10,7 +10,7 @@ status: publish
 <img
     src="/images/blog/pine/pine-app-logo-light.png"
     alt="Pine.blog iOS App Logo"
-    style="max-width:150px; width:80%; box-shadow:3px 3px 5px darkgrey; border-radius:30px; padding:0; margin-right:10px;"
+    style="max-width:150px; width:80%; box-shadow:3px 3px 5px darkgrey; border-radius:30px; padding:0; margin-right:10px; float:right;"
 />
 </div>
 
