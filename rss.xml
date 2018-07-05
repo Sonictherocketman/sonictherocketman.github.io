@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 05 Jul 2018 23:37:35 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Pine for iOS Released!</title><link>http://brianschrader.com/archive/pine-for-ios-released/</link><description>&lt;div class="image-container"&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 05 Jul 2018 23:40:11 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Pine for iOS Released!</title><link>http://brianschrader.com/archive/pine-for-ios-released/</link><description>&lt;div class="image-container"&gt;
 &lt;img
     src="/images/blog/pine/pine-app-logo-light.png"
     alt="Pine.blog iOS App Logo"
@@ -7,7 +7,7 @@
 /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;It's official: the &lt;a href=""&gt;Pine.blog app for iOS&lt;/a&gt; is available on the App Store! The app is free for all and requires a premium subscription to &lt;a href="https://pine.blog"&gt;Pine.blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It's official: the &lt;a href="https://itunes.apple.com/us/app/pine-blog/id1401683628?ls=1&amp;amp;mt=8"&gt;Pine.blog app for iOS&lt;/a&gt; is available on the App Store! The app is free for all and requires a premium subscription to &lt;a href="https://pine.blog"&gt;Pine.blog&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;With this version you can quickly and easily check up on your timeline and your favorites, and the app refreshes in the background so that you're always up to date with the latest news and posts from any site you follow.&lt;/p&gt;
 &lt;p&gt;Version 1.0 is pretty slimmed down, which is why I was able to get something out so quickly after the initial Pine launch, but don't worry; there's lots of great features planned for the app. Overall, I'm trying to keep releases fairly small so that they can be released more often.&lt;/p&gt;
 &lt;p&gt;So far, I'm planning for v1.1 to include the ability to:&lt;/p&gt;
