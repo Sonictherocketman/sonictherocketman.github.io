@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Wed, 11 Jul 2018 01:40:33 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>On the Future of Social Media</title><link>http://brianschrader.com/archive/on-the-future-of-social-media/</link><description>&lt;p&gt;I just finished the newest episode of the &lt;a href="https://www.vox.com/ezra-klein-show-podcast"&gt;Ezra Klein Show&lt;/a&gt; with Jaron Lanier. Jaron spends a good portion of the episode talking about how the systems we've built into the internet, and social media specifically, have really had a negative effect on civil discourse.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Fri, 13 Jul 2018 18:34:07 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Pine v1.1 is Out &amp;amp; A Special Moment</title><link>http://brianschrader.com/archive/pine-v11-is-out-amp-a-special-moment/</link><description>&lt;p&gt;Pine &lt;a href="https://itunes.apple.com/us/app/pine-blog/id1401683628?ls=1&amp;amp;mt=8"&gt;v1.1 for iOS&lt;/a&gt; is out today! This release ended up being a bit smaller than I'd originally intended, but it has enough fixes and improvements that I didn't want to sit on it any longer. Along with a few bug fixes and performance enhancements, Version 1.1 adds a couple of really cool features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Images now show up in a beautiful slideshow in the timeline, rather than just in the full post view.&lt;/li&gt;
+&lt;li&gt;Siri can now read the contents of an article to you, which is really nice for keeping up with the news on a walk or ride.&lt;/li&gt;
+&lt;li&gt;If a feed doesn't specify an image, Pine will grab the site's App Icon, or Favicon to show instead.&lt;/li&gt;
+&lt;li&gt;Fixes a nasty issue that would cause scrolling to be really choppy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sign up for a &lt;a href="https://pine.blog"&gt;Pine.blog&lt;/a&gt; subscription to start using the app today!&lt;/p&gt;
+&lt;h2&gt;Pine Joins the Wall of Apps&lt;/h2&gt;
+&lt;p&gt;On an episode of &lt;a href="http://atp.fm"&gt;ATP&lt;/a&gt; years back, Marco Arment mentioned that he gets prints of his app icons made in order to have a physical reminder of what he's built. I really liked this idea, so for the last couple of years I've done the same thing, and last week, my &lt;a href="https://fractureme.com"&gt;Fracture&lt;/a&gt; of the Pine iOS app icon arrived and is now on my wall.&lt;/p&gt;
+&lt;p&gt;&lt;img
+    class="image-center"
+    style="max-width:25em;"
+    src="/images/blog/pine-counter.jpg"
+    alt=""
+/&gt;
+&lt;center&gt;&lt;small&gt;&lt;caption&gt;
+    I think this is my favorite print so far. The colors are stunning.
+&lt;/caption&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;To paraphrase Marco: Software Developers spend hundreds of hours building a thing that can affect hundreds (or thousands) of people, but since it's software, you can't touch it or take a picture of you in front of it like you can with a bridge or something.&lt;/p&gt;
+&lt;p&gt;&lt;img
+    class="image-center"
+    style="max-width:30em;"
+    src="/images/blog/fractures.jpg"
+    alt=""
+/&gt;
+&lt;center&gt;&lt;small&gt;&lt;caption&gt;
+    Pine joins Adventurer's Codex and MyGeneRank as the third app I've built (or had a big hand in building).
+&lt;/caption&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;When you build and ship software, there's no tacky trophy, no photo of the ribbon cutting, or blueprints of the structure; nothing you can easily take home and keep as a reminder. Having physical prints (and especially Fracture prints) of your app icons is a nice little momento of all of the effort and time you spent to make a thing.&lt;/p&gt;</description><category>indie</category><category> app development</category><category> fracture</category><guid isPermaLink="true">http://brianschrader.com/archive/pine-v11-is-out-amp-a-special-moment</guid><pubDate>Fri, 13 Jul 2018 18:33:00 -0800</pubDate></item><item><title>On the Future of Social Media</title><link>http://brianschrader.com/archive/on-the-future-of-social-media/</link><description>&lt;p&gt;I just finished the newest episode of the &lt;a href="https://www.vox.com/ezra-klein-show-podcast"&gt;Ezra Klein Show&lt;/a&gt; with Jaron Lanier. Jaron spends a good portion of the episode talking about how the systems we've built into the internet, and social media specifically, have really had a negative effect on civil discourse.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://overcast.fm/+F_9G-Gkus/1:01:37"&gt;One question Ezra brought up&lt;/a&gt; really struck me:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you were building, or you were redesigning a social network that would call forth our better selves... what do you think would be the parameters of that? What rules would you set such that it would urge us to be a better version of ourselves, not a worse version?&lt;/p&gt;
@@ -120,96 +149,4 @@
 &lt;li&gt;&lt;a href="/images/blog/SpaceX-Booster-Landing.mp4"&gt;The full landing video with audio &amp;#8594;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=BHIo6qwJarI"&gt;Some music to go with the video &amp;#8594;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=wbSwFU6tY1c&amp;amp;t=2279s"&gt;The full stream on YouTube &amp;#8594;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>space</category><category> spacex</category><category> rockets</category><category> future</category><guid isPermaLink="true">http://brianschrader.com/archive/real-life-science-fiction</guid><pubDate>Tue, 06 Feb 2018 17:59:00 -0800</pubDate></item><item><title>The Web as a Social Network</title><link>http://brianschrader.com/archive/the-web-as-a-social-network/</link><description>&lt;p&gt;&lt;a href="http://inessential.com/2018/02/01/why_micro_blog_is_not_another_app_net"&gt;Brent Simmons on Micro.blog&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Twitter and Facebook are convenient, sure, but so are fossil fuels, and the cost was similarly unknown for a long time. But now we have some idea just how bad these things are for the world....&lt;/p&gt;
-&lt;p&gt;[With &lt;a href="https://micro.blog"&gt;Micro.Blog&lt;/a&gt;] your posts are just a normal, everyday part of the open web. At this writing, mine appear on micro.inessential.com &#8212; but it&#8217;s on my to-do list to have those appear on my main blog (this blog) instead. (Probably won&#8217;t happen until after I ship the app I&#8217;m currently working on.)&lt;/p&gt;
-&lt;p&gt;And this is how it used to be, and how it never should have stopped being: my blog is me on the web. I own my blog: I own me.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Here's where I'd normally write something like this:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Brent is right. Blogs and microblogs can and are the future of social networks. They allow you to keep control of your content, and protect you from huge, often nefarious corporate whims...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;But any reader of this site will already know my feelings on the Open Web and Social Networking. So this time I've decided to make this post a retrospective on what I've said before, and how my opinions, and the web has changed over the last few years.&lt;/p&gt;
-&lt;h2&gt;The Open Web Series Collection&lt;/h2&gt;
-&lt;p&gt;My first post about the Open Web was from July 2014, when this blog was still in it's infancy. Since then I've basically written about this subject whenever it's come up in the circles I travel in. At first I was just concerned with preserving my site and my thoughts for the future, but over time I morphed into the Open Web loving nerd you see before you today.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/re-permanence/"&gt;Re: Permanence (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;How much history is lost by those who live it not writing it down. With the internet, we have the ability (assuming storage is cheap) to preserve everything we ever say, think, write, or post. That's really powerful, and possible accountability and privacy issues aside, its probably the most important use of an invention in the history of man.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/permanence-revisited/"&gt;Permanence Revisited (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I've retweeted &lt;a href="https://twitter.com/gruber/status/1024766035"&gt;this tweet&lt;/a&gt; multiple times, mostly because it's hilarious, but every time I want to do so, even though I have it saved in Instapaper and favorited on Twitter, its easier to google the text of the tweet (as close as I can remember) and let Google do the work.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;After a while I got it into my head that RSS could be used for a new (old?) kind of social network, and I've been rolling with that idea ever since.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/waffle-brent-and-marco-on-social-networks/"&gt;Waffle, Brent and Marco on Social Networks (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What would it mean to have a social network (like Dispora) that is decentralized, and independent of corporate ties? Could such a thing exist?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Then I was (am still) mad at Twitter for a while, which just stoked the Open Web flames.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/twitter-and-the-open-web/"&gt;Twitter and the Open Web (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Could it be that the time for new social networks is past us? I hope not. RSS succeeded as an open standard, and so did email (though email had an early start). The podcasting industry is growing, powered by RSS... RSS use floundered after Google Reader shutdown, but RSS is still with us. That's important.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/how-to-stimulate-the-open-web/"&gt;How to stimulate the open web (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Create systems that are ambivalent about the open or closed web. If I create a tool that's good at posting content to Facebook and Twitter, it should also post to RSS feeds...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I tried &lt;a href="https://www.xkcd.com/927/"&gt;making a standard once&lt;/a&gt;, but putting something on GitHub in a README doesn't make it a standard.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/the-open-microblog-standard/"&gt;The Open Microblog Standard (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A few weeks ago I began drafting a new standard for open, platform independent communication service. You can think of it as Twitter meets RSS...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/making-rss-real-time/"&gt;Making RSS Real-Time (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;One of the critiques of RSS feeds in a world dominated by Facebook and Twitter is that RSS just isn't fast enough. You can't hope to achieve what Twitter calls "in-the-moment updates" and "watch events unfold" if your client is polling each web site's RSS feed once an hour for new microblog posts...&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;After a while I started noticing that a lot of creators and bloggers I followed were moving back to open, platform-less distribution methods (like CGP Grey and his RSS feeds and email lists).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/the-professional-sharer/"&gt;The Professional Sharer (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[Social Media Platforms] have to do this to make money. It just sucks that how they make money is by compromising the people that made the service what it is (&lt;em&gt;cough&lt;/em&gt; Twitter &lt;em&gt;cough&lt;/em&gt;).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I was still mad at Twitter.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/twitter-is-not-a-replacement-for-blogs/"&gt;Twitter is not a replacement for blogs (2014)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Twitter is a complementary medium to blogging, but it's not a replacement...&lt;/p&gt;
-&lt;p&gt;By knocking down a few walls and moving some furniture around, blogging is preparing for a comeback, and we'll all be better off for it.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;More recently though I've gotten more realistic and still more optimistic about the future of social networks and openness. Facebook and Google's Algorithms still loom high and mighty, but I started to see a resistence forming, and then Manton Reece released &lt;a href="https://micro.blog"&gt;Micro.blog&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/a-vision-of-the-open-web/"&gt;A Vision of the Open Web (2016)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I've long heard people say that we've lost video, music, and messaging to the walled worlds of YouTube, iTunes, and WhatsApp/Facebook/Twitter respectively, and while I believe that is the current state of the web, I don't believe it's the end-state.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/can-we-save-the-open-web/"&gt;Can we save the open web? (2016)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;If we're going to allow... algorithms to be such a huge part of our lives, which I don't believe is necessarily a bad thing, then they should at least be subject to some sort oversight.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/archive/mantons-microblog/"&gt;Manton's Micro.blog (2017)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I've written lots of stuff about services like Manton's, and the Open Web in general. It's really important that we preserve not just the way the Web used to work, but as Manton says: the way it &lt;strong&gt;should work&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The future looks bright for the open web and social networking, but the fight is ongoing.&lt;/p&gt;</description><category>open web</category><category> social networking</category><guid isPermaLink="true">http://brianschrader.com/archive/the-web-as-a-social-network</guid><pubDate>Fri, 02 Feb 2018 12:12:00 -0800</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><category>space</category><category> spacex</category><category> rockets</category><category> future</category><guid isPermaLink="true">http://brianschrader.com/archive/real-life-science-fiction</guid><pubDate>Tue, 06 Feb 2018 17:59:00 -0800</pubDate></item></channel></rss>
