@@ -1,6 +1,6 @@
 slug: code-lasts-whether-you-know-it-or-not
 published: Sun, 04 Nov 2018 at 06:52 PM
-updated: Sun, 04 Nov 2018 at 06:52 PM
+updated: Fri, 23 Nov 2018 at 07:28 AM
 title: Code Lasts Whether You Know it or Not
 author: Brian Schrader
 tags: software, blogging, code
@@ -14,7 +14,7 @@ I'm reminded of something I saw on Twitter the other day:
 
 <img
     alt="An example of some old code that lives on"
-    src="/images/blog/an-old-bug.png"
+    src="/images/blog/an-old-bug.jpg"
     style="max-width:80%;"
 />
 
