@@ -1,6 +1,6 @@
 slug: changing-tides
 published: Sun, 09 Jun 2019 at 02:43 AM
-updated: Sun, 09 Jun 2019 at 02:45 AM
+updated: Sun, 09 Jun 2019 at 02:47 AM
 title: Changing Tides
 author: Brian Schrader
 tags: software, pine.blog, payments
@@ -23,4 +23,4 @@ At time of writing, the newest version of the iOS app is "Waiting for App Review
 <sup>*</sup>Coming soon!
 </div>
 
-[pine]: (https://pine.blog/?r=bs)
+[pine]: https://pine.blog/?r=bs
