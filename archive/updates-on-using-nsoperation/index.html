@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Updates on using NSOperation - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+
+	<meta property="og:title" content="Updates on using NSOperation" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/updates-on-using-nsoperation/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://skyrocket.software">Apps</a></span>
+			<span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			<span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+		  <span class="menuBarItem"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+			  <span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			</div>
+		</div>
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/updates-on-using-nsoperation/">Updates on using NSOperation</a></h1>
+					<small style="font-style:italic;">Posted on Sat, 29 Jun 2019 at 07:31 PM</small>
+				</div>
+				<div class="article-content">
+					<p>Last time <a href="/archive/i-love-nsoperation/">I talked about NSOperation</a>, I mentioned that I really liked using it to do things like networking and asynchronous operations in my app. Well, I've made a few tweaks to my <code>BackgroundNetworkingController</code> recently (alas a new name was not among them) and I think the new version is even more readable and expressive.</p>
+<p>For those who don't know, NSOperation (or just Operation in Swift) is a class that when paired with (NS)OperationQueue allow you to order and track long running and often asynchronous tasks in your apps. You can use it to do API calls, animate transitions, walk a user through a process, and a lot more.</p>
+<p>In my last blog post I demoed this piece of code as an example of how I use Operations in the Pine.blog app.</p>
+<p><code class="swift"><pre>
+func updateTimeline() {
+    let reauthorize = TokenReauthorizationOperation()
+    let fetchTimeline = FetchTimelineOperation()
+    fetchTimeline.delegate = self
+    fetchTimeline.addOperation(reauthorization)
+    BackgroundQueueController.queue?.addOperations(
+        [reauthorize, fetchTimeline],
+        waitUntilFinished: false
+    )
+}
+</pre></code></p>
+<p>And while that example is pretty straight forward, I knew it could be better. There's so many times when I just need to tell my app: do these things in the background, in this order, and tell me when you're done (and let me know if something comes up). Operations allow me to do that, but setting up delegates and adding dependencies seems like cruft that I don't really want to care about.</p>
+<p>With that in mind, I added a new set of methods to my queue controller: <code>performInSeries(operations:)</code> and <code>performInSeries(operations: with:)</code>. Using those instead, the above example becomes:</p>
+<p><code class="swift"><pre>
+BackgroundNetworkingController.performInSeries(
+    operations: [
+        TokenReauthorizationOperation(),
+        FetchTimelineOperation(),
+    ],
+    with: self
+)
+</pre></code></p>
+<p>This code sets up the given operation with each previous operation as a dependency and assigns their delegate to <code>self</code>. Reading this it becomes pretty clear that I want these operations to be performed in the order I specify and I want them to alert me if anything comes up, which is exactly what I want.</p>
+<p>Even the most complex uses in all of the Pine.blog app still retain their readability (aside from array concatenation). This example reauthorizes the user's token, then fetches the most recent posts in  each of the user's timelines, finds any new posts that the user has liked, and finally calls the given completionHandler to let the app know that it has completed updating its data.</p>
+<p><code class="swift"><pre>
+BackgroundNetworkingController.performInSeries(
+    operations:
+        [ ReauthorizationTask() ]
+        + timelines.map { FetchNewestPostsInTimeline(timeline: $0) }
+        + [ FetchLikesOperation(), BlockOperation { completionHandler?(self.fetchResult) }],
+    with: self
+)
+</pre></code></p>
+<p>There's still a bit further I can go with this, but I'm really happy with the readability and clarity improvement that these changes have made to my codebase.</p>
+<p><link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></p>
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
