@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lots of Little Things - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+
+	<meta property="og:title" content="Lots of Little Things" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/lots-of-little-things/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://skyrocket.software">Apps</a></span>
+			<span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			<span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+		  <span class="menuBarItem"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+			  <span class="menuBarItem"><a href="http://microblog.brianschrader.com">Microblog</a></span>
+			</div>
+		</div>
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/lots-of-little-things/">Lots of Little Things</a></h1>
+					<small style="font-style:italic;">Posted on Sat, 29 Jun 2019 at 04:02 AM</small>
+				</div>
+				<div class="article-content">
+					<p>Recently I've been focused on finishing the next set of major features for <a href="https://pine.blog/">Pine.blog</a>, but as happens from time-to-time I got a bit distracted and ended up knocking out a whole lot of little features that I've wanted to build for a long time. Today's update was entirely server-side, and I'll have a new update for the iOS app coming in a few days.</p>
+<h3>Wordpress Enhancements</h3>
+<p>In addition to making a lot of things just plain faster, I've also added a new <a href="https://pine.blog/kb/add_external_blog">feature for Wordpress users</a> so that when users post on their blog, Wordpress will automatically let Pine.blog know and their posts show up much more quickly in their (and other user's) timelines.</p>
+<p>For me, this feature involved yet another foray into undocumented XML-RPC APIs from over a decade ago. So much of the information just isn't easy to find anymore so building features that use them is more archeology than software development.</p>
+<h3>API Keys and Webhooks</h3>
+<p>Users that want to write scripts using Pine.blog (or build custom applications) can now get an API key quickly and easily that lets you access the full range of Pine.blog APIs.</p>
+<p>For those who want to dive even deeper into their data with Pine.blog, users can now add a Webhook URL if they'd like to receive updates from Pine.blog whenever a feed they're subscribed to changes.</p>
+<h3>API Documentation Revamp</h3>
+<p>I've completely redone the Pine.blog API documentation. Hopefully this makes it much easier for developers to discover and use the Pine.blog/Feed Directory API. The new documentation includes much more detailed information about the throttling limits, what to expect from each endpoint, and much much more. If you're looking to use the Pine.blog/Feed Directory API in your app or service <a href="https://pine.blog/api/documentation">you can find out more from the documentation here</a>.</p>
+<p>A lot of these developer-focused features are test runs for much broader features that I have cooking in the background. Meanwhile I'm trying to keep the majority of what I do with Pine.blog a lot more user-focused.</p>
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

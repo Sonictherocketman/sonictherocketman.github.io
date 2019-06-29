@@ -47,6 +47,29 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/lots-of-little-things/">
+					Lots of Little Things
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Sat, 29 Jun 2019 at 04:02 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>Recently I've been focused on finishing the next set of major features for <a href="https://pine.blog/">Pine.blog</a>, but as happens from time-to-time I got a bit distracted and ended up knocking out a whole lot of little features that I've wanted to build for a long time. Today's update was entirely server-side, and I'll have a new update for the iOS app coming in a few days.</p>
+<h3>Wordpress Enhancements</h3>
+<p>In addition to making a lot of things just plain faster, I've also added a new <a href="https://pine.blog/kb/add_external_blog">feature for Wordpress users</a> so that when users post on their blog, Wordpress will automatically let Pine.blog know and their posts show up much more quickly in their (and other user's) timelines.</p>
+<p>For me, this feature involved yet another foray into undocumented XML-RPC APIs from over a decade ago. So much of the information just isn't easy to find anymore so building features that use them is more archeology than software development.</p>
+<h3>API Keys and Webhooks</h3>
+<p>Users that want to write scripts using Pine.blog (or build custom applications) can now get an API key quickly and easily that lets you access the full range of Pine.blog APIs.</p>
+<p>For those who want to dive even deeper into their data with Pine.blog, users can now add a Webhook URL if they'd like to receive updates from Pine.blog whenever a feed they're subscribed to changes.</p>
+<h3>API Documentation Revamp</h3>
+<p>I've completely redone the Pine.blog API documentation. Hopefully this makes it much easier for developers to discover and use the Pine.blog/Feed Directory API. The new documentation includes much more detailed information about the throttling limits, what to expect from each endpoint, and much much more. If you're looking to use the Pine.blog/Feed Directory API in your app or service <a href="https://pine.blog/api/documentation">you can find out more from the documentation here</a>.</p>
+<p>A lot of these developer-focused features are test runs for much broader features that I have cooking in the background. Meanwhile I'm trying to keep the majority of what I do with Pine.blog a lot more user-focused.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/changing-tides/">
 					Changing Tides
 				</a>
@@ -418,21 +441,6 @@ class LotsOfConcurrentRequests: Operation {
 			<p>I've asked a few people recently about the differences between services like Facebook, Twitter, Instagram and traditional blogs. The answers are almost entirely conventional not technical, and this leads me to what I think is a big reason why blogging has receded in recent years: blogging has an image problem. It's supposed to be for everyone, but lots of people, who are sometimes extremely active on social media sites, are hesitant to start a blog.</p>
 <p>From a technical standpoint, the combination of a blog (that supports WebMentions and/or ActivityPub) and a good Feed Reader can provide nearly all of the features people require from a modern social network (a combination that <a href="https://pine.blog/">Pine.blog</a> aims to provide). The technology exists, but to get started with blogging is still too complex. On Facebook or Twitter you can sign up and be posting in minutes, you can easily find other things to follow, and you can easily see what others are saying. Typical Feed Readers solve only one of these problems. You can follow other sites, but you can't post to your own, and you can't easily discover new sites to follow. Having a blog then means that you have to switch from reading a post in one app, to posting to your own blog in another, which makes blogging feel arcane and clunky. And even with both a good reader and a blog, it's still fairly difficult to find interesting things to follow.</p>
 <p><a href="https://pine.blog/">Pine.blog</a> is my attempt to solve all three of these issues at once and make reading blogs and blogging on your own site just as easy as browsing your timeline and posting to Twitter.</p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/feed-readers-and-local-news/">
-					Feed Readers and Local News
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Fri, 19 Oct 2018 at 06:58 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Interest in local news outlets has been declining over time. Bigger, flashier news outlets with more resources can attract more users and more traffic. But local news provides so much valuable information to the people living in the communities they serve and arguably this news generally effects reader's lives more than national news.</p>
-<p>I've been thinking a lot lately about how <a href="https://pine.blog/">Pine.blog</a> can help promote local news. Adding individual sections for each "locale" is obviously untenable since the Pine.blog directory is manually curated, but simply tagging a site as a "reputable local news outlet" might be enough. The issue then is deciding what  reputable", "local", and "news outlet" mean from the outside.</p>
 		</div>
 	</div>
 </article>
