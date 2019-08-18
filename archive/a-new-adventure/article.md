@@ -1,6 +1,6 @@
 slug: a-new-adventure
 published: Sun, 18 Aug 2019 at 01:25 AM
-updated: Sun, 18 Aug 2019 at 01:25 AM
+updated: Sun, 18 Aug 2019 at 03:10 AM
 title: A New Adventure
 author: Brian Schrader
 tags: photography, hobbies, money sink,
@@ -52,14 +52,14 @@ While I'll probably be posting most of the good shots I take to my [photoblog](h
     <a href="/images/collections/a6000/private.jpg" title="Private - Full Image">
         <img
             alt="Private"
-            src="/images/collections/a6000/private-web.jpg"
+            src="/images/collections/a6000/private-web.PNG"
             style="display:inline-block;width:350px;margin-left:auto;margin-right:auto;"
         />
     </a>
     <a href="/images/collections/a6000/tank.jpg" title="Tank - Full Image">
         <img
             alt="Tank"
-            src="/images/collections/a6000/tank-web.jpg"
+            src="/images/collections/a6000/tank-web.PNG"
             style="display:inline-block;width:350px;margin-left:auto;margin-right:auto;"
         />
     </a>
