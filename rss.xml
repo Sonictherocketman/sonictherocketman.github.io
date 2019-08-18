@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Wed, 31 Jul 2019 17:47:04 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Don't Ban Infinite Scrolling, License Engineers Instead</title><link>http://brianschrader.com/archive/dont-ban-infinite-scrolling-license-engineers-instead/</link><description>&lt;p&gt;Yesterday, the &lt;a href="https://www.theverge.com/2019/7/30/20746878/josh-hawley-dark-patterns-platform-design-autoplay-youtube-videos-scrolling-snapstreaks-illegal"&gt;Verge reported that Sen. Josh Hawley sponsored&lt;/a&gt; a bill that aims to reduce the tech industry&#8217;s use of "addictive design" practices by putting a ban on features like infinite scrolling and autoplaying video. While I applaud Congress for focusing on this important issue, the proposed solution is both naive and unproductive. When a surgeon is accused of malpractice, the appropriate solution is not to ban their use of the scalpel, it's to revoke their license.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sun, 18 Aug 2019 01:26:04 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>A New Adventure</title><link>http://brianschrader.com/archive/a-new-adventure/</link><description>&lt;p&gt;Last week, I bought a camera. I've wanted one for a while, but I'd never really looked around for something that would fit my needs. A few of my &lt;a href="https://www.instagram.com/photorayg/"&gt;friends&lt;/a&gt; and &lt;a href="http://www.museofadventure.com"&gt;family&lt;/a&gt; are actual photographers, and I knew that I didn't want to do what they do. I'd be carelessly jumping into a deep end to swim with reel big fish.&lt;/p&gt;
+&lt;p&gt;I haven't owned a dedicated camera in over a decade. Ever since 2010, the only camera I've owned came with an iPhone attached to it. However, while the iPhone X's camera is great, it's just not enough for a whole myriad of situations, and in the last year I've found myself ever more limited by what my phone's camera could and couldn't do.&lt;/p&gt;
+&lt;p&gt;There's an old adage: "the best camera is the one you have with you", and if I was going to have this camera with me, even a fraction of the time that I have my phone with me, it had to meet some pretty strict qualifications: It had to be really versatile (inter-changeable lenses was a hard requirement), it had to be compact enough to take almost anywhere, and it had to be a camera that could grow with me as I delve into this new-fangled world. So I talked to some people, read a bunch of articles, watched a bunch of reviews, and got this:&lt;/p&gt;
+&lt;div style="text-align:center;"&gt;
+    &lt;img
+        alt="My new camera"
+        src="/images/collections/a6000/camera-web.jpg"
+        style="width:300px;margin-left:auto;margin-right:auto;"
+    /&gt;
+    &lt;caption&gt;
+        &lt;a href="https://www.amazon.com/Sony-Mirrorless-Digitial-3-0-Inch-16-50mm/dp/B00I8BICB2/ref=sr_1_7?keywords=sony+a6000&amp;qid=1566087531&amp;s=gateway&amp;sr=8-7" title="The Sony &#945;6000"&gt;
+            The Sony &#945;6000
+        &lt;/a&gt;
+    &lt;/caption&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I've heard from quite a few people that Sony's &#945;6000 and &#945;6400 are really good for people who want a great camera, but aren't willing to dive into DSLRs. I don't know much about that second bit, but that description matched me to a T. As I've only had it a week so far, my opinions are still riddled with &lt;a href="https://www.urbandictionary.com/define.php?term=Ney%20Toy%20Syndrome"&gt;Ney Toy Syndrome&lt;/a&gt;. That said, I really like this camera. It's small and light enough to fit in the spare pocket of my daily carry bag, and it uses Sony's E-Mount which means that there's tons of compatible lenses, making it really versatile.&lt;/p&gt;
+&lt;p&gt;I ended up getting the &#945;6000 mostly because of the price. The &#945;6400 was more than I wanted to spend and anything below the &#945;6000 didn't have a viewfinder, which was a dealbreaker. I'm still rocking the kit lens for now, but I plan on getting a 50/55mm Prime lens pretty soon. Before that though, I need to get a much more intuitive grasp of how to properly use what I have, and it'll probably take me a while to get the basics down.&lt;/p&gt;
+&lt;h3&gt;A Checkpoint in Time&lt;/h3&gt;
+&lt;p&gt;While I'll probably be posting most of the good shots I take to my &lt;a href="https://photos.brianschrader.com/"&gt;photoblog&lt;/a&gt;, below are a few of my favorite shots from the last week. I'm posting them here so that they serve as a record of my skills as a photographer right now. Hopefully, as time goes on and my skills improve, I'll look back on these pictures like I look back on old code I've written: with fond memories, and mild disgust.&lt;/p&gt;
+&lt;div style="text-align:center;"&gt;
+    &lt;a href="/images/collections/a6000/moonlight.jpg" title="Moonlight - Full Image"&gt;
+        &lt;img
+            alt="Moonlight"
+            src="/images/collections/a6000/moonlight-web.jpg"
+            style="display:inline-block;width:350px;margin-left:auto;margin-right:auto;"
+        /&gt;
+    &lt;/a&gt;
+    &lt;a href="/images/collections/a6000/bark.jpg" title="Bark - Full Image"&gt;
+        &lt;img
+            alt="Bark"
+            src="/images/collections/a6000/bark-web.jpg"
+            style="display:inline-block;width:350px;margin-left:auto;margin-right:auto;"
+        /&gt;
+    &lt;/a&gt;
+    &lt;a href="/images/collections/a6000/private.jpg" title="Private - Full Image"&gt;
+        &lt;img
+            alt="Private"
+            src="/images/collections/a6000/private-web.jpg"
+            style="display:inline-block;width:350px;margin-left:auto;margin-right:auto;"
+        /&gt;
+    &lt;/a&gt;
+    &lt;a href="/images/collections/a6000/tank.jpg" title="Tank - Full Image"&gt;
+        &lt;img
+            alt="Tank"
+            src="/images/collections/a6000/tank-web.jpg"
+            style="display:inline-block;width:350px;margin-left:auto;margin-right:auto;"
+        /&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</description><category>photography</category><category> hobbies</category><category> money sink</category><category></category><guid isPermaLink="true">http://brianschrader.com/archive/a-new-adventure</guid><pubDate>Sun, 18 Aug 2019 01:25:00 -0800</pubDate></item><item><title>Don't Ban Infinite Scrolling, License Engineers Instead</title><link>http://brianschrader.com/archive/dont-ban-infinite-scrolling-license-engineers-instead/</link><description>&lt;p&gt;Yesterday, the &lt;a href="https://www.theverge.com/2019/7/30/20746878/josh-hawley-dark-patterns-platform-design-autoplay-youtube-videos-scrolling-snapstreaks-illegal"&gt;Verge reported that Sen. Josh Hawley sponsored&lt;/a&gt; a bill that aims to reduce the tech industry&#8217;s use of "addictive design" practices by putting a ban on features like infinite scrolling and autoplaying video. While I applaud Congress for focusing on this important issue, the proposed solution is both naive and unproductive. When a surgeon is accused of malpractice, the appropriate solution is not to ban their use of the scalpel, it's to revoke their license.&lt;/p&gt;
 &lt;p&gt;I have long argued that Software Engineers (especially those at large companies that affect the lives of millions of people) &lt;a href="/archive/software-engineering/"&gt;should be licensed&lt;/a&gt;. Requiring a license to practice Software Engineering would finally place software in the realm of the other classical engineering fields and require practitioners to use their skills ethically and for the benefit of society. It would also help educate engineers on the risks and trade-offs with the decisions they make and give the government a lever to pull when trying to encourage ethical practices across the industry. Likewise, licensed engineers are able to refuse to implement unethical or unsafe designs when they fear that they could lose their license.&lt;/p&gt;
 &lt;p&gt;One common argument against this point is that the tech industry is filled with lots of independent developers and others who operate relatively small businesses and that licensing them would put an damper on overall innovation in the industry. However, while we do often require Civil Engineers to have a license, we don't apply the same logic to carpenters, and we can apply the same kinds of criteria to Software Enginering licensure.&lt;/p&gt;
 &lt;p&gt;We've required licenses for those practicing classical Engineering, Medicine, and Law for a long time&lt;sup&gt;1&lt;/sup&gt;, and those licenses have helped governments and the licensed individuals themselves steer industry practice away from things that can be considered unethical or unsafe. Instead of trying to take powerful tools away from Engineers, we should instead be focused on enabling and educating them to make ethical and societally beneficial decisions. The Internet is part of the infrastructure of our modern world, so let's ensure that the people who build and maintain it have society's best interests at heart.&lt;/p&gt;
@@ -276,21 +325,4 @@ class LotsOfConcurrentRequests: Operation {
 &lt;/blockquote&gt;
 &lt;p&gt;I'm really bummed to hear that Michael is stepping away from Textual and even more-so because it's partially for financial reasons. I've been a Textual customer for years now and I love the app; I plan to continue using it as long as it runs on my Mac.&lt;/p&gt;
 &lt;p&gt;Developing indie-software is difficult and 8+ years is a really good run. I wish him the best with his next project.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.codeux.com/textual/"&gt;Textual IRC &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>irc</category><category> apps</category><category> software development</category><guid isPermaLink="true">http://brianschrader.com/archive/textualapp-maintainer-steps-away</guid><pubDate>Thu, 15 Nov 2018 21:20:00 -0800</pubDate></item><item><title>Mastodon and Microblogging</title><link>http://brianschrader.com/archive/mastodon-and-microblogging/</link><description>&lt;p&gt;&lt;a href="https://www.manton.org/2018/11/07/microblog-mastodon.html"&gt;Manton Reece&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We&#8217;re launching 2 major features today:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Micro.blog can now cross-post to a Mastodon user account, in the same way we cross-post to Twitter, Facebook, Medium, and LinkedIn. This takes a copy of your blog posts and sends them to a specified Mastodon account.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Your custom domain on Micro.blog can now be ActivityPub-compatible, so that you can follow and reply to Mastodon users directly on Micro.blog. This also means someone can follow your blog posts by adding @you@yourdomain.com on Mastodon. (This username is configurable. Mine is @manton@manton.org.)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Really excited to see Mastodon integrations in &lt;a href="https://micro.blog"&gt;Micro.blog&lt;/a&gt; and congrats to Manton on launching such a huge feature. His attention to detail is really appreciated. Here's just one example of it in action:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Muting in Micro.blog has been expanded to support muting individual Mastodon users, or entire Mastodon instances based on their domain name. We have also preloaded a common list of Mastodon instances that are muted automatically because of code of conduct violations.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Manton is very careful and deliberate about the design of Micro.blog features and this is, of course, no exception.&lt;/p&gt;
-&lt;p&gt;Coincidentally, I've had Mastodon integration on the list of &lt;a href="https://pine.blog"&gt;Pine.blog&lt;/a&gt; features for a long time and I can't wait to get there.&lt;/p&gt;</description><category>mastodon</category><category> micro.blog</category><category> pine</category><guid isPermaLink="true">http://brianschrader.com/archive/mastodon-and-microblogging</guid><pubDate>Sat, 10 Nov 2018 00:04:00 -0800</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.codeux.com/textual/"&gt;Textual IRC &amp;#8594;&lt;/a&gt;&lt;/p&gt;</description><category>irc</category><category> apps</category><category> software development</category><guid isPermaLink="true">http://brianschrader.com/archive/textualapp-maintainer-steps-away</guid><pubDate>Thu, 15 Nov 2018 21:20:00 -0800</pubDate></item></channel></rss>
