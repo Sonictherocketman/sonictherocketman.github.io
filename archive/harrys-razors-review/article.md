@@ -1,6 +1,6 @@
 slug: harrys-razors-review
 published: Thu, 05 Jun 2014 at 05:32 PM
-updated: Wed, 03 Jan 2018 at 06:05 PM
+updated: Tue, 08 Oct 2019 at 01:37 AM
 title: Harry's Razors Review
 author: Brian Schrader
 tags: harrys razors, review

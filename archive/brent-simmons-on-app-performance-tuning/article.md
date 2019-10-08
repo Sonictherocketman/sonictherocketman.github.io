@@ -1,6 +1,6 @@
 slug: brent-simmons-on-app-performance-tuning
 published: Sun, 31 Aug 2014 at 01:31 AM
-updated: Wed, 03 Jan 2018 at 06:05 PM
+updated: Tue, 08 Oct 2019 at 01:37 AM
 title: Brent Simmons on App Performance Tuning
 author: Brian Schrader
 status: publish

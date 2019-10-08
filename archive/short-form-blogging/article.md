@@ -1,6 +1,6 @@
 slug: short-form-blogging
 published: Sun, 02 Nov 2014 at 10:03 PM
-updated: Wed, 03 Jan 2018 at 06:05 PM
+updated: Tue, 08 Oct 2019 at 01:37 AM
 title: Short-form blogging
 author: Brian Schrader
 status: publish

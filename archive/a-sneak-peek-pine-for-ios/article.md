@@ -1,6 +1,6 @@
 slug: a-sneak-peek-pine-for-ios
 published: Fri, 15 Jun 2018 at 12:42 PM
-updated: Fri, 15 Jun 2018 at 12:42 PM
+updated: Tue, 08 Oct 2019 at 01:37 AM
 title: A Sneak Peek: Pine for iOS
 author: Brian Schrader
 tags: pine, ios, app

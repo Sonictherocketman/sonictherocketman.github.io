@@ -1,6 +1,6 @@
 slug: pine-for-ios-released
 published: Thu, 05 Jul 2018 at 11:32 PM
-updated: Thu, 05 Jul 2018 at 11:39 PM
+updated: Tue, 08 Oct 2019 at 01:37 AM
 title: Pine for iOS Released!
 author: Brian Schrader
 tags: pine, ios, app, release

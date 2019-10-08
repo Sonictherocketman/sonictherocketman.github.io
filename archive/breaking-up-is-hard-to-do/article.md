@@ -1,6 +1,6 @@
 slug: breaking-up-is-hard-to-do
 published: Mon, 11 Jan 2016 at 09:58 AM
-updated: Wed, 03 Jan 2018 at 06:05 PM
+updated: Tue, 08 Oct 2019 at 01:37 AM
 title: Breaking up is hard to do
 author: Brian Schrader
 tags: twitter

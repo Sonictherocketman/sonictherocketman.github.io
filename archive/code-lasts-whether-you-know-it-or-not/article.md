@@ -1,6 +1,6 @@
 slug: code-lasts-whether-you-know-it-or-not
 published: Sun, 04 Nov 2018 at 06:52 PM
-updated: Fri, 23 Nov 2018 at 07:28 AM
+updated: Tue, 08 Oct 2019 at 01:37 AM
 title: Code Lasts Whether You Know it or Not
 author: Brian Schrader
 tags: software, blogging, code
