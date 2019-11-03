@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Tue, 08 Oct 2019 01:40:08 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Finally</title><link>http://brianschrader.com/archive/finally/</link><description>&lt;p&gt;Today marks the release of &lt;a href="https://blog.pine.blog/2019/10/fall-2019-update-hosted-blogs/"&gt;Pine.blog's Fall Update&lt;/a&gt;. It's a release I've been working on for months now and it feels great to finally get it out into the world. With this release, Pine.blog is now what I'd wanted it to be when I started &lt;a href="/archive/a-vision-of-the-open-web/"&gt;dreaming of what a the open web could do&lt;/a&gt;. On Pine.blog, you can follow your interests, keep up with the latest news, and join the conversation by starting a blog. I can finally say that the core features I want are in place.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sun, 03 Nov 2019 18:59:47 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Remembering Things is Hard</title><link>http://brianschrader.com/archive/remembering-things-is-hard/</link><description>&lt;p&gt;I'm not very good at remembering things, even simple things, and I'm even worse at grinding (doing a simple or repetitive task more than once). That's one reason why I love being a developer: often times, I can script simple, repetitive, and common tasks.&lt;/p&gt;
+&lt;p&gt;When it comes to development, although most of my projects leverage some form of automated continuous testing and linting, by the time I've pushed up my code and the tests have run, I've moved on to some other task. This means that when my code has a failing test or a linting error, I have to stop the new thing that I'm doing, stash my changes, and fix the error. I &lt;em&gt;should&lt;/em&gt; remember to run the tests before I push my code, but I never do.&lt;/p&gt;
+&lt;p&gt;So in lieu of doing the hard work to remember to run the tests and becoming a better person in the process, I've written a &lt;code&gt;pre-commit&lt;/code&gt; script that runs before I commit my code. That way I can't commit my code without fixing the error, or explicitly ignoring it (with the &lt;code&gt;-n&lt;/code&gt; flag).*&lt;/p&gt;
+&lt;div class="footnote"&gt;
+* This also helps avoid the unprofessional looking "Fixes linting" commits.
+&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Here's my &lt;code&gt;.git/hooks/pre-commit&lt;/code&gt; file for any Django project. Give it a shot yourself and let me know if it helps you write better code.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="bash"&gt;#! /bin/bash
+set -e;
+log() { echo "[$(date)] $1"; }
+
+cat &lt;&lt; EOF
+-----------------------------------
+Running the tests...
+You might want to get a coffee. &#9749;&#65039;
+-----------------------------------
+log "Linting the code..."
+flake8
+log "Running the tests..."
+./manage.py test
+log "Done."
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css"&gt;
+&lt;script src="http://yandex.st/highlightjs/8.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>code</category><category> software</category><category> preflight</category><category> git</category><guid isPermaLink="true">http://brianschrader.com/archive/remembering-things-is-hard</guid><pubDate>Sun, 03 Nov 2019 18:59:00 -0800</pubDate></item><item><title>Finally</title><link>http://brianschrader.com/archive/finally/</link><description>&lt;p&gt;Today marks the release of &lt;a href="https://blog.pine.blog/2019/10/fall-2019-update-hosted-blogs/"&gt;Pine.blog's Fall Update&lt;/a&gt;. It's a release I've been working on for months now and it feels great to finally get it out into the world. With this release, Pine.blog is now what I'd wanted it to be when I started &lt;a href="/archive/a-vision-of-the-open-web/"&gt;dreaming of what a the open web could do&lt;/a&gt;. On Pine.blog, you can follow your interests, keep up with the latest news, and join the conversation by starting a blog. I can finally say that the core features I want are in place.&lt;/p&gt;
 &lt;p&gt;Obviously my goals for Pine.blog have expanded since I originally thought of the idea in 2014 (and began writing it in 2016), so there's still &lt;strong&gt;a lot to do&lt;/strong&gt;.&lt;/p&gt;</description><category>pine.blog</category><category> open web</category><category> rss</category><guid isPermaLink="true">http://brianschrader.com/archive/finally</guid><pubDate>Tue, 08 Oct 2019 01:34:00 -0800</pubDate></item><item><title>A New Adventure</title><link>http://brianschrader.com/archive/a-new-adventure/</link><description>&lt;p&gt;Last week, I bought a camera. I've wanted one for a while, but I'd never really looked around for something that would fit my needs. A few of my &lt;a href="https://www.instagram.com/photorayg/"&gt;friends&lt;/a&gt; and &lt;a href="http://www.museofadventure.com"&gt;family&lt;/a&gt; are actual photographers, and I knew that I didn't want to do what they do. I'd be carelessly jumping into a deep end to swim with reel big fish.&lt;/p&gt;
 &lt;p&gt;I haven't owned a dedicated camera in over a decade. Ever since 2010, the only camera I've owned came with an iPhone attached to it. However, while the iPhone X's camera is great, it's just not enough for a whole myriad of situations, and in the last year I've found myself ever more limited by what my phone's camera could and couldn't do.&lt;/p&gt;
 &lt;p&gt;There's an old adage: "the best camera is the one you have with you", and if I was going to have this camera with me, even a fraction of the time that I have my phone with me, it had to meet some pretty strict qualifications: It had to be really versatile (inter-changeable lenses was a hard requirement), it had to be compact enough to take almost anywhere, and it had to be a camera that could grow with me as I delve into this new-fangled world. So I talked to some people, read a bunch of articles, watched a bunch of reviews, and got this:&lt;/p&gt;
@@ -291,32 +318,4 @@ class LotsOfConcurrentRequests: Operation {
 &lt;p&gt;And that's pretty much it. NSOperation has basically replaced GCD for me in all but a few niche use-cases since NSOperation allows you to define complex workflows in a simple, clear way that you can invoke and control from any aspect of your app and it nicely separates your networking code from the other parts of the system.&lt;/p&gt;
 &lt;p&gt;&lt;link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"&gt;
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"&gt;&lt;/script&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>development</category><category> software</category><category> nsoperation</category><guid isPermaLink="true">http://brianschrader.com/archive/i-love-nsoperation</guid><pubDate>Sun, 23 Dec 2018 22:29:00 -0800</pubDate></item><item><title>Pine.blog Version 1.3: Multiple Timelines &#127881;</title><link>http://brianschrader.com/archive/pineblog-version-13-multiple-timelines-/</link><description>&lt;p&gt;&lt;img
-    class="image-right"
-    style="width:200px;"
-    alt="A look at the new Pine.blog" timeline."
-    src="/images/blog/pine/v1.3/subscribe.png"
-/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://pine.blog/?ref=me"&gt;Pine.blog&lt;/a&gt; has come a long way since launch and today I'm announcing the next big step: Version 1.3, which is available now. This version is pretty jam-packed with features and improvements, but the most notable addition is the ability to &lt;strong&gt;organize the sites you follow using timelines&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3&gt;Multiple Timelines&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://pine.blog/?ref=me"&gt;Pine.blog&lt;/a&gt; has had a clean, easy to read timeline since the beginning, but after you start following lots of sites, it can be pretty cumbersome to have so many new posts in one timeline. I've wanted to support multiple timelines for a while now, and it's finally here. Most feed readers have a method of organizing subscriptions, but traditional "folder" methods don't allow for a feed to be in multiple lists at once. With Pine.blog, a feed can be in multiple timelines at once so you can organize your timelines however you like.&lt;/p&gt;
-&lt;p&gt;Pine.blog doesn't use algorithms to decide what you see in your timeline. Instead Pine.blog shows you every post from the sites you follow. Traditionally, companies use those algorithms for two main reasons: to "increase engagement" (shudder) and because users follow so many things that they get overwhelmed by   the sheer volume of content they see in their news feed.&lt;/p&gt;
-&lt;p&gt;&lt;img
-    alt="A look at the new Pine.blog timeline."
-    src="/images/blog/pine/v1.3/timeline.jpg"
-    style="width:500px;"
-    class="image-center"
-/&gt;&lt;/p&gt;
-&lt;p&gt;But people are smart. If you give them the tools they need, they will use them. And multiple timelines are just one of a number of upcoming features that are coming soon to help users organize and find things they want to follow.&lt;/p&gt;
-&lt;p&gt;If you're a fan of the new changes to the timelines, &lt;a href="/about"&gt;get in touch&lt;/a&gt;. I'd love to hear from you.&lt;/p&gt;
-&lt;h3&gt;Other Changes&lt;/h3&gt;
-&lt;p&gt;In addition to multiple timeline support, version 1.3 also has a ton of new features for both iOS and the web. The web changes have been rolled out slowly over the last few days so you may have already seen them, but here's a pretty exhaustive list.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Web UI Refresh: The timeline, likes, and sites pages have all been updated with a cleaner, more modern look.&lt;/li&gt;
-&lt;li&gt;Improved Search Results (iOS/Web): You should see much more relevant search results and better support for advanced search syntax. (i.e. Using &lt;code&gt;AND, OR, and ()&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Swipe to favorite (iOS): You can now swipe right on a post in the timeline to favorite it, or swipe right on a post you've already liked to unfavorite it.&lt;/li&gt;
-&lt;li&gt;Better Featured Images (iOS): Small images (usually share buttons) will no longer show up in the featured images gallery.&lt;/li&gt;
-&lt;li&gt;Follow any feed from a site (iOS/Web): As mentioned above, you can now follow any feed for a site from the app or the web, not just the site's "Main Feed".&lt;/li&gt;
-&lt;li&gt;Improved Timeline Preview (iOS): The content of posts in the timeline supports inline links and markup.&lt;/li&gt;
-&lt;li&gt;Lots of bug fixes and enhancements.&lt;/li&gt;
-&lt;/ul&gt;</description><category>pine.blog</category><category> software</category><category> release</category><guid isPermaLink="true">http://brianschrader.com/archive/pineblog-version-13-multiple-timelines-</guid><pubDate>Wed, 19 Dec 2018 19:23:00 -0800</pubDate></item></channel></rss>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"&gt;&lt;/script&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>development</category><category> software</category><category> nsoperation</category><guid isPermaLink="true">http://brianschrader.com/archive/i-love-nsoperation</guid><pubDate>Sun, 23 Dec 2018 22:29:00 -0800</pubDate></item></channel></rss>
