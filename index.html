@@ -47,6 +47,29 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/high-tech-empires/">
+					High-Tech Empires
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Thu, 07 Nov 2019 at 01:20 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p><a href="https://stratechery.com/2019/tech-and-liberty/">Ben Thompson &#8594;</a></p>
+<blockquote>
+<p>In the long run, though, it is very problematic that such a powerful player in our democracy has no accountability. Liberty is not simply about laws, or culture, it is also about structure, and it is right to be concerned about the centralized nature of companies like Facebook.</p>
+</blockquote>
+<p><a href="https://www.manton.org/2019/11/06/kill-the-algorithm.html">Manton Reece &#8594;</a></p>
+<blockquote>
+<p>Platforms that have as many problems as Facebook does can always be improved, but by design they can never be good enough because their size alone is one of the problems.</p>
+</blockquote>
+<p>A difference in scale can become a difference in kind. Facebook and other large Tech companies have more users than most nations have citizens. We look down on autocratic governments, and will hopefully continue to do so. We can't forget that these large corporations are a new form of the same thing.</p>
+<p>We have a words to describe organizations of large enough size that exert control over vastly different groups of people and that aren't answerable to their constituents. We call them autocracies; we call them empires.</p>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/remembering-things-is-hard/">
 					Remembering Things is Hard
 				</a>
@@ -350,156 +373,6 @@ BackgroundNetworkingController.performInSeries(
     <sup>1</sup> My Raspberry Pi B+ (Quad-Core 800MHz CPU & 1 GB of RAM) is hooked up to a 150x15 Mbps connection, and runs a standard build of Debian Linux. If you can't host your website on that, then you're either building a fairly complex site with lots of computing demands, or have some pretty inefficient code.<br />
     <sup>2</sup> Disregard this message if you actually are building space ships or otherwise very complex software that for obvious reasons cannot be run on a $35 SOC meant for teaching children. Web Devs building CRUD apps: you're not excluded.
 </div>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/i-love-nsoperation/">
-					I Love NSOperation
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Sun, 23 Dec 2018 at 10:29 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>I've <a href="/archive/multithreading-in-java/">talked before</a> about how much I like using Apple's Grand Central Dispatch API for multithreading on iOS, but over the last year I've become a huge fan of NSOperation and it's become my preferred way to do multitasking on iOS over bare-bones GCD.</p>
-<p>NSOperation (or just Operation in Swift) can be used a layer of abstraction over GCD that provides built-in dependency tracking, and task isolation. When combined with NSOperationQueue (OperationQueue in Swift) you also get powerful throttling APIs and more. Typically I've used Operations for background networking and processing, but the API is designed to be used for any set of discrete tasks including UI workflows and more.</p>
-<h2>As a Networking Layer</h2>
-<p>My most common use case for NSOperation is in doing networking. In Pine.blog for example I need to always ensure that a user's OAuth Access Token is valid before making a resource request, say for their timeline. That code looks something like this:</p>
-<p><code class="swift"><pre>
-func updateTimeline() {
-    // This task must always happen first. It ensures that the OAuth token
-    // is going to be valid when I request it, or it attempts to refresh the token.
-    let reauthorize = TokenReauthorizationOperation()
-    // Now we attempt to fetch the user's timeline and add ourselves as a delegate
-    // so the Operation will tell us when new data is available. We also set the
-    // reauthorization operation as a dependency of the FetchTimelineOperation
-    let fetchTimeline = FetchTimelineOperation()
-    fetchTimeline.delegate = self
-    fetchTimeline.addOperation(reauthorization)
-    // Add the tasks to the queue and process them asyncronously.
-    // The custom delegate will be alerted when new data is available.
-    BackgroundQueueController.queue?.addOperations(
-        [reauthorize, fetchTimeline],
-        waitUntilFinished: false
-    )
-}
-</pre></code></p>
-<p>What I've really liked about my NSOperation-based networking is that from the ViewController's perspective, it doesn't care what these tasks do or how, they're just notified when they've received results and I've finally stashed away my networking code into it's own little corner of the codebase, rather than in a custom controller or nestled inside the ViewController where it just gets in the way.</p>
-<p>The FetchTimelineOperation takes care of fetching the JSON from the API and creating Core Data Managed Objects. Then my ViewController's FetchedResultsController just worries about displaying the changes to the user. It's simple, clean, and there's a clear seperation between the ViewController and the Networking Stack.</p>
-<h2>Gotchas</h2>
-<p>If there's one thing that frustrates my iOS development it's that Core Data Contexts aren't thread-safe. Originally, I thought that just meant that I couldn't write to the same Core Data store from another thread, but that's simply not the full story. <strong>Never read from or write to Core Data objects from a thread or context other than the one they came from.</strong> Better yet: do all your Core Data writing inside a <code>performAndWait() {}</code> block.</p>
-<p>Keep in mind, these aren't so much issues with NSOperation as they are overall tips for using Core Data.</p>
-<h3>The Bad Way</h3>
-<p>When it comes to my Operations, what that means is that although you'd be tempted to write something like this:</p>
-<p><code class="swift"><pre>
-class MarkPostAsRead: Operation {
-    var post: Post
-    init(post: Post) {
-        self.post = post
-    }
-    override main() {
-        let context = getManagedObjectContext()
-        context.performAndWait {
-            self.post.read = true
-            do {
-                context.save()
-            } catch {
-                NSLog("Failed to save post read status for Post: (id)")
-            }
-        }
-    }
-}
-</pre></code></p>
-<p><strong>You should never do this.</strong> You're violating a number of Core Data's assumptions and you'll get a crash.</p>
-<h3>The Good Way</h3>
-<p>The best way I've found to do Core Data work in a Background Operation is something like this:</p>
-<p><code class="swift"><pre>
-class MarkPostAsRead: Operation {
-    var id: NSManagedObjectId
-    init(postWith id: NSManagedObjectId) {
-        self.id = id
-    }
-    override main() {
-        let context = getBackgroundManagedObjectContext()
-        context.performAndWait {
-            // Get the post from CoreData
-            var post: Post!
-            do {
-                post = try context.existingObject(with: id) as? Post
-            } catch {
-                NSLog("Unable to mark post as read because it doesn't exist.")
-                return
-            }
-            // Mark it as read
-            post.read = true
-            // Save the Context
-            do {
-                context.save()
-            } catch {
-                NSLog("Failed to save post read status for Post: (id)")
-            }
-        }
-    }
-}
-</pre></code></p>
-<p>This method ensures that you're never passing managed objects between threads and you're only modifying that object within the background context you created
-for that purpose.</p>
-<p>Keep in mind though, any <code>FetchedResultsControllers</code> you've made won't be immediately notified of the changes because they happened in a background context instead of the View Context they're using. To fix this add something like this into your Core Data Stack Code:</p>
-<p><code class="swift"><pre>
-    func initializeCoreDataStack() {
-        // ... Do startup work...
-        // Listen for background context changes
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(contextDidSave),
-            name: .NSManagedObjectContextDidSave,
-            object: nil
-        )
-    }
-    @objc func contextDidSave(notification: Notification) {
-        guard let sender = notification.object as? NSManagedObjectContext else {
-            // Not a managed object context. Just leave it alone.
-            return
-        }
-        // Don't listen for changes to the view context.
-        let viewContext = DataController.persistentContainer.viewContext
-        if sender != viewContext {
-            ensureMainThread {
-                viewContext.mergeChanges(fromContextDidSave: notification)
-            }
-        }
-    }
-</pre></code></p>
-<p>Now the View Context will automatically merge changes from the background contexts when you call <code>context.save()</code>.</p>
-<h3>Dispatching Concurrent Groups of Operations</h3>
-<p>In some cases your app will need to dispatch an operation that could need to dispatch multiple, concurrent suboperations. In this case I've found it really helpful to wrap the group of asynchronous operations inside of a synchronous operation that simply waits for them to complete.</p>
-<p><code class="swift"><pre>
-class LotsOfConcurrentRequests: Operation {
-    var urls: [URL]
-    var results: [JSONObject]? = nil
-    init(responsesFrom urls: [URL]) {
-        self.urls = urls
-    }
-    override main() {
-        let suboperations = urls.map { url in
-            return AsyncFetchURLOperation(url: url)
-        }
-        // Add the tasks to the queue and wait until they're all done. Easy.
-        BackgroundQueueController.queue?.addOperations(
-            suboperations,
-            waitUntilFinished: true
-        )
-        // Gather the results
-        results = suboperations.map { $0.result }
-    }
-}
-</pre></code></p>
-<p>And that's pretty much it. NSOperation has basically replaced GCD for me in all but a few niche use-cases since NSOperation allows you to define complex workflows in a simple, clear way that you can invoke and control from any aspect of your app and it nicely separates your networking code from the other parts of the system.</p>
-<p><link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></p>
 		</div>
 	</div>
 </article>

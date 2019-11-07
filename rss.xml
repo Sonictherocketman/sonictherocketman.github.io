@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Sun, 03 Nov 2019 18:59:47 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>Remembering Things is Hard</title><link>http://brianschrader.com/archive/remembering-things-is-hard/</link><description>&lt;p&gt;I'm not very good at remembering things, even simple things, and I'm even worse at grinding (doing a simple or repetitive task more than once). That's one reason why I love being a developer: often times, I can script simple, repetitive, and common tasks.&lt;/p&gt;
+<rss version="2.0"><channel><title>BiteofanApple by Brian Schrader</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history, and whatever else I'm interested in.</description><lastBuildDate>Thu, 07 Nov 2019 01:20:34 +0000</lastBuildDate><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><image><url>http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>sonicrocketman</title><link>http://brianschrader.com</link></image><item><title>High-Tech Empires</title><link>http://brianschrader.com/archive/high-tech-empires/</link><description>&lt;p&gt;&lt;a href="https://stratechery.com/2019/tech-and-liberty/"&gt;Ben Thompson &amp;#8594;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the long run, though, it is very problematic that such a powerful player in our democracy has no accountability. Liberty is not simply about laws, or culture, it is also about structure, and it is right to be concerned about the centralized nature of companies like Facebook.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://www.manton.org/2019/11/06/kill-the-algorithm.html"&gt;Manton Reece &amp;#8594;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Platforms that have as many problems as Facebook does can always be improved, but by design they can never be good enough because their size alone is one of the problems.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A difference in scale can become a difference in kind. Facebook and other large Tech companies have more users than most nations have citizens. We look down on autocratic governments, and will hopefully continue to do so. We can't forget that these large corporations are a new form of the same thing.&lt;/p&gt;
+&lt;p&gt;We have a words to describe organizations of large enough size that exert control over vastly different groups of people and that aren't answerable to their constituents. We call them autocracies; we call them empires.&lt;/p&gt;</description><category>social web</category><category> software</category><category> facebook</category><category> social media</category><guid isPermaLink="true">http://brianschrader.com/archive/high-tech-empires</guid><pubDate>Thu, 07 Nov 2019 01:20:00 -0800</pubDate></item><item><title>Remembering Things is Hard</title><link>http://brianschrader.com/archive/remembering-things-is-hard/</link><description>&lt;p&gt;I'm not very good at remembering things, even simple things, and I'm even worse at grinding (doing a simple or repetitive task more than once). That's one reason why I love being a developer: often times, I can script simple, repetitive, and common tasks.&lt;/p&gt;
 &lt;p&gt;When it comes to development, although most of my projects leverage some form of automated continuous testing and linting, by the time I've pushed up my code and the tests have run, I've moved on to some other task. This means that when my code has a failing test or a linting error, I have to stop the new thing that I'm doing, stash my changes, and fix the error. I &lt;em&gt;should&lt;/em&gt; remember to run the tests before I push my code, but I never do.&lt;/p&gt;
 &lt;p&gt;So in lieu of doing the hard work to remember to run the tests and becoming a better person in the process, I've written a &lt;code&gt;pre-commit&lt;/code&gt; script that runs before I commit my code. That way I can't commit my code without fixing the error, or explicitly ignoring it (with the &lt;code&gt;-n&lt;/code&gt; flag).*&lt;/p&gt;
 &lt;div class="footnote"&gt;
@@ -182,140 +191,4 @@ BackgroundNetworkingController.performInSeries(
 &lt;div class="footnote"&gt;
     &lt;sup&gt;1&lt;/sup&gt; My Raspberry Pi B+ (Quad-Core 800MHz CPU &amp; 1 GB of RAM) is hooked up to a 150x15 Mbps connection, and runs a standard build of Debian Linux. If you can't host your website on that, then you're either building a fairly complex site with lots of computing demands, or have some pretty inefficient code.&lt;br /&gt;
     &lt;sup&gt;2&lt;/sup&gt; Disregard this message if you actually are building space ships or otherwise very complex software that for obvious reasons cannot be run on a $35 SOC meant for teaching children. Web Devs building CRUD apps: you're not excluded.
-&lt;/div&gt;</description><category>software development</category><category> programming</category><category> complexity</category><category> engineering</category><guid isPermaLink="true">http://brianschrader.com/archive/the-hidden-cost-of-cheap-hardware</guid><pubDate>Wed, 23 Jan 2019 18:08:00 -0800</pubDate></item><item><title>I Love NSOperation</title><link>http://brianschrader.com/archive/i-love-nsoperation/</link><description>&lt;p&gt;I've &lt;a href="/archive/multithreading-in-java/"&gt;talked before&lt;/a&gt; about how much I like using Apple's Grand Central Dispatch API for multithreading on iOS, but over the last year I've become a huge fan of NSOperation and it's become my preferred way to do multitasking on iOS over bare-bones GCD.&lt;/p&gt;
-&lt;p&gt;NSOperation (or just Operation in Swift) can be used a layer of abstraction over GCD that provides built-in dependency tracking, and task isolation. When combined with NSOperationQueue (OperationQueue in Swift) you also get powerful throttling APIs and more. Typically I've used Operations for background networking and processing, but the API is designed to be used for any set of discrete tasks including UI workflows and more.&lt;/p&gt;
-&lt;h2&gt;As a Networking Layer&lt;/h2&gt;
-&lt;p&gt;My most common use case for NSOperation is in doing networking. In Pine.blog for example I need to always ensure that a user's OAuth Access Token is valid before making a resource request, say for their timeline. That code looks something like this:&lt;/p&gt;
-&lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
-func updateTimeline() {
-    // This task must always happen first. It ensures that the OAuth token
-    // is going to be valid when I request it, or it attempts to refresh the token.
-    let reauthorize = TokenReauthorizationOperation()
-    // Now we attempt to fetch the user's timeline and add ourselves as a delegate
-    // so the Operation will tell us when new data is available. We also set the
-    // reauthorization operation as a dependency of the FetchTimelineOperation
-    let fetchTimeline = FetchTimelineOperation()
-    fetchTimeline.delegate = self
-    fetchTimeline.addOperation(reauthorization)
-    // Add the tasks to the queue and process them asyncronously.
-    // The custom delegate will be alerted when new data is available.
-    BackgroundQueueController.queue?.addOperations(
-        [reauthorize, fetchTimeline],
-        waitUntilFinished: false
-    )
-}
-&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;What I've really liked about my NSOperation-based networking is that from the ViewController's perspective, it doesn't care what these tasks do or how, they're just notified when they've received results and I've finally stashed away my networking code into it's own little corner of the codebase, rather than in a custom controller or nestled inside the ViewController where it just gets in the way.&lt;/p&gt;
-&lt;p&gt;The FetchTimelineOperation takes care of fetching the JSON from the API and creating Core Data Managed Objects. Then my ViewController's FetchedResultsController just worries about displaying the changes to the user. It's simple, clean, and there's a clear seperation between the ViewController and the Networking Stack.&lt;/p&gt;
-&lt;h2&gt;Gotchas&lt;/h2&gt;
-&lt;p&gt;If there's one thing that frustrates my iOS development it's that Core Data Contexts aren't thread-safe. Originally, I thought that just meant that I couldn't write to the same Core Data store from another thread, but that's simply not the full story. &lt;strong&gt;Never read from or write to Core Data objects from a thread or context other than the one they came from.&lt;/strong&gt; Better yet: do all your Core Data writing inside a &lt;code&gt;performAndWait() {}&lt;/code&gt; block.&lt;/p&gt;
-&lt;p&gt;Keep in mind, these aren't so much issues with NSOperation as they are overall tips for using Core Data.&lt;/p&gt;
-&lt;h3&gt;The Bad Way&lt;/h3&gt;
-&lt;p&gt;When it comes to my Operations, what that means is that although you'd be tempted to write something like this:&lt;/p&gt;
-&lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
-class MarkPostAsRead: Operation {
-    var post: Post
-    init(post: Post) {
-        self.post = post
-    }
-    override main() {
-        let context = getManagedObjectContext()
-        context.performAndWait {
-            self.post.read = true
-            do {
-                context.save()
-            } catch {
-                NSLog("Failed to save post read status for Post: (id)")
-            }
-        }
-    }
-}
-&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;You should never do this.&lt;/strong&gt; You're violating a number of Core Data's assumptions and you'll get a crash.&lt;/p&gt;
-&lt;h3&gt;The Good Way&lt;/h3&gt;
-&lt;p&gt;The best way I've found to do Core Data work in a Background Operation is something like this:&lt;/p&gt;
-&lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
-class MarkPostAsRead: Operation {
-    var id: NSManagedObjectId
-    init(postWith id: NSManagedObjectId) {
-        self.id = id
-    }
-    override main() {
-        let context = getBackgroundManagedObjectContext()
-        context.performAndWait {
-            // Get the post from CoreData
-            var post: Post!
-            do {
-                post = try context.existingObject(with: id) as? Post
-            } catch {
-                NSLog("Unable to mark post as read because it doesn't exist.")
-                return
-            }
-            // Mark it as read
-            post.read = true
-            // Save the Context
-            do {
-                context.save()
-            } catch {
-                NSLog("Failed to save post read status for Post: (id)")
-            }
-        }
-    }
-}
-&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This method ensures that you're never passing managed objects between threads and you're only modifying that object within the background context you created
-for that purpose.&lt;/p&gt;
-&lt;p&gt;Keep in mind though, any &lt;code&gt;FetchedResultsControllers&lt;/code&gt; you've made won't be immediately notified of the changes because they happened in a background context instead of the View Context they're using. To fix this add something like this into your Core Data Stack Code:&lt;/p&gt;
-&lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
-    func initializeCoreDataStack() {
-        // ... Do startup work...
-        // Listen for background context changes
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(contextDidSave),
-            name: .NSManagedObjectContextDidSave,
-            object: nil
-        )
-    }
-    @objc func contextDidSave(notification: Notification) {
-        guard let sender = notification.object as? NSManagedObjectContext else {
-            // Not a managed object context. Just leave it alone.
-            return
-        }
-        // Don't listen for changes to the view context.
-        let viewContext = DataController.persistentContainer.viewContext
-        if sender != viewContext {
-            ensureMainThread {
-                viewContext.mergeChanges(fromContextDidSave: notification)
-            }
-        }
-    }
-&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Now the View Context will automatically merge changes from the background contexts when you call &lt;code&gt;context.save()&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Dispatching Concurrent Groups of Operations&lt;/h3&gt;
-&lt;p&gt;In some cases your app will need to dispatch an operation that could need to dispatch multiple, concurrent suboperations. In this case I've found it really helpful to wrap the group of asynchronous operations inside of a synchronous operation that simply waits for them to complete.&lt;/p&gt;
-&lt;p&gt;&lt;code class="swift"&gt;&lt;pre&gt;
-class LotsOfConcurrentRequests: Operation {
-    var urls: [URL]
-    var results: [JSONObject]? = nil
-    init(responsesFrom urls: [URL]) {
-        self.urls = urls
-    }
-    override main() {
-        let suboperations = urls.map { url in
-            return AsyncFetchURLOperation(url: url)
-        }
-        // Add the tasks to the queue and wait until they're all done. Easy.
-        BackgroundQueueController.queue?.addOperations(
-            suboperations,
-            waitUntilFinished: true
-        )
-        // Gather the results
-        results = suboperations.map { $0.result }
-    }
-}
-&lt;/pre&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;And that's pretty much it. NSOperation has basically replaced GCD for me in all but a few niche use-cases since NSOperation allows you to define complex workflows in a simple, clear way that you can invoke and control from any aspect of your app and it nicely separates your networking code from the other parts of the system.&lt;/p&gt;
-&lt;p&gt;&lt;link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"&gt;
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"&gt;&lt;/script&gt;&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;&lt;/p&gt;</description><category>development</category><category> software</category><category> nsoperation</category><guid isPermaLink="true">http://brianschrader.com/archive/i-love-nsoperation</guid><pubDate>Sun, 23 Dec 2018 22:29:00 -0800</pubDate></item></channel></rss>
+&lt;/div&gt;</description><category>software development</category><category> programming</category><category> complexity</category><category> engineering</category><guid isPermaLink="true">http://brianschrader.com/archive/the-hidden-cost-of-cheap-hardware</guid><pubDate>Wed, 23 Jan 2019 18:08:00 -0800</pubDate></item></channel></rss>
