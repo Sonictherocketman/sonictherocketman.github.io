@@ -47,6 +47,56 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/">
+					Pine.blog Downtime Post-Mortem: A Story of Finite Resources
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 17 Feb 2020 at 04:57 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>Pine.blog was down for a while today (~6 hours). What follows is a bit about why and what I've learned from the experience. In the end, nothing was lost and the site is back up. My apologies to all of my users; thanks for your patience.</p>
+<hr />
+<p>Today did not go as planned. As I do, this morning I opened Pine.blog to read the news and instead of seeing a newly updated timeline, the app had logged me out. Worse still, I couldn't log back in, and the website wasn't responding. Sigh.</p>
+<p>Some quick investigation revealed that the disk had filled, which caused the creation of new sessions and access tokens to fail. Admittedly, I don't have any sort of disk usage monitoring on the database server, but because I'd just doubled the amount of storage on that server less than two months ago, I wasn't really thinking it would fill up anytime soon. Regardless, it had.</p>
+<h3>The Causes</h3>
+<p>From what I can tell, a combination of external factors and my own design decisions led to the disk filling up much faster than I was expecting:</p>
+<ol>
+<li>
+<p><strong>Feeds are kinda huge (sometimes).</strong> A few Pine.blog users have feeds that seem to contain hundreds of new items every hour, which Pine.blog will faithfully parse and store in their timelines. In some cases, this meant that such a feed could contain 200,000+ items in only a few weeks. What's worse is that because of a recent change to how timelines work, a timeline can't hold that many items anymore which means Pine.blog was storing a ton of data it would never actually use.</p>
+</li>
+<li>
+<p><strong>Pine.blog stores a lot of data.</strong> By design, Pine.blog doesn't really delete items that it has previously parsed and it stores multiple copies of certain data to make it easier to serve, but this drastically inflates storage requirements.</p>
+</li>
+<li>
+<p><strong>I misunderstood my tools.</strong> I'm not a database guy; I'm an app developer. To me Postgres has always been a bit magical, and today that bit me. About a month ago, I thought I'd read somewhere that the newest versions of Postgres didn't need to be routinely vacuumed, and that running a daily vacuum was an old, outdated practice, so I stopped doing it. <em>This was a bad idea</em>. Without that daily cleaning, the Pine.blog database couldn't reuse space that it no longer needed, and so it kept asking the OS for more disk space, right up until there wasn't any more.</p>
+</li>
+</ol>
+<p>In the end it was the mundane, but powerful combination of a few small things that caused the issues today: some overzealous design choices, a few misunderstandings, and a few overactive feeds.</p>
+<h3>The Solutions</h3>
+<p>Right away, I should admit this whole thing could have been solved a lot sooner. I underestimated the issue at first and tried to keep the site up while I fixed the issue. In hindsight it would have been a lot faster and easier to resize the server to something that had more disk space, vacuum the database, resize the filesystem and scale back down. This whole thing could have been solved in 1-2 hours instead of 6-8.</p>
+<p>That said, here's the two things that I'll be changing about how Pine.blog works in order to prevent this problem in the future:</p>
+<ol>
+<li>
+<p>The nightly vacuum is back. Removing it was a dumb idea.</p>
+</li>
+<li>
+<p><strong>Pine.blog will no longer store the entire history of external feeds.</strong> This one isn't fully in effect yet, but expect the change soon.</p>
+</li>
+</ol>
+<p>As of recently, each Pine.blog timeline has a maximum length of 3000 posts. Once a post falls off the end, you won't be able to find it by scrolling backward in your timeline anymore. This is exactly what Twitter does (although their limit is a modest 800 posts). Feeds will soon do something similar. Pine.blog will keep just the most recent posts in a feed (~3-5000 posts in total) and anything beyond that point will be removed from Pine.blog's database.<sup>1</sup></p>
+<p>I suspect that no one will actually notice these changes once they're rolled out, but to me they mark the end of the road for a naive dream I had back when I started Pine.blog.</p>
+<p><center>
+<strong>tl;dr</strong> Turns out parsing and storing entire portions of the web is hard.
+</center></p>
+<div class="footnote">
+<sup>1.</sup> Hosted blogs are uneffected. Pine.blog will store your entire blog . This change only effects feeds from outside of Pine.blog.
+</div>
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/an-agency-that-protects-data/">
 					An Agency that Protects Data
 				</a>
@@ -344,29 +394,6 @@ BackgroundNetworkingController.performInSeries(
 <p><link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/lots-of-little-things/">
-					Lots of Little Things
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Sat, 29 Jun 2019 at 04:02 AM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Recently I've been focused on finishing the next set of major features for <a href="https://pine.blog/">Pine.blog</a>, but as happens from time-to-time I got a bit distracted and ended up knocking out a whole lot of little features that I've wanted to build for a long time. Today's update was entirely server-side, and I'll have a new update for the iOS app coming in a few days.</p>
-<h3>Wordpress Enhancements</h3>
-<p>In addition to making a lot of things just plain faster, I've also added a new <a href="https://pine.blog/kb/add_external_blog">feature for Wordpress users</a> so that when users post on their blog, Wordpress will automatically let Pine.blog know and their posts show up much more quickly in their (and other user's) timelines.</p>
-<p>For me, this feature involved yet another foray into undocumented XML-RPC APIs from over a decade ago. So much of the information just isn't easy to find anymore so building features that use them is more archeology than software development.</p>
-<h3>API Keys and Webhooks</h3>
-<p>Users that want to write scripts using Pine.blog (or build custom applications) can now get an API key quickly and easily that lets you access the full range of Pine.blog APIs.</p>
-<p>For those who want to dive even deeper into their data with Pine.blog, users can now add a Webhook URL if they'd like to receive updates from Pine.blog whenever a feed they're subscribed to changes.</p>
-<h3>API Documentation Revamp</h3>
-<p>I've completely redone the Pine.blog API documentation. Hopefully this makes it much easier for developers to discover and use the Pine.blog/Feed Directory API. The new documentation includes much more detailed information about the throttling limits, what to expect from each endpoint, and much much more. If you're looking to use the Pine.blog/Feed Directory API in your app or service <a href="https://pine.blog/api/documentation">you can find out more from the documentation here</a>.</p>
-<p>A lot of these developer-focused features are test runs for much broader features that I have cooking in the background. Meanwhile I'm trying to keep the majority of what I do with Pine.blog a lot more user-focused.</p>
 		</div>
 	</div>
 </article>

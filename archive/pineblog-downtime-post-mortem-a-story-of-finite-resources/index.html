@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pine.blog Downtime Post-Mortem: A Story of Finite Resources - BiteofanApple</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+
+	<meta property="og:title" content="Pine.blog Downtime Post-Mortem: A Story of Finite Resources" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+</head>
+<body>
+<div id="content">
+	<div id="title-bar">
+		<!-- Desktop Nav -->
+		<span>
+			<!-- Name and Author -->
+			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
+			<!-- Links -->
+			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
+			<span class="menuBarItem"><a href="/about/">About</a></span>
+			<span class="menuBarItem"><a href="https://skyrocket.software">Apps</a></span>
+			<span class="menuBarItem"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></span>
+			<span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
+		  <span class="menuBarItem"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></span>
+			<br>
+			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
+		</span>
+		<!-- Mobile Nav -->
+		<div class="mobile-nav">
+			<!-- Name and Author -->
+			<div style="text-align:center; margin-top:-20pt;">
+				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
+			</div>
+			<!-- Links -->
+			<div style="margin-top:2%;">
+				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
+				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
+			  <span class="menuBarItem"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></span>
+			</div>
+		</div>
+	</div>
+	<div id="post-list">
+		<article>
+			<div class="post">
+				<div class="article-title">
+					<h1><a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/">Pine.blog Downtime Post-Mortem: A Story of Finite Resources</a></h1>
+					<small style="font-style:italic;">Posted on Mon, 17 Feb 2020 at 04:57 AM</small>
+				</div>
+				<div class="article-content">
+					<p>Pine.blog was down for a while today (~6 hours). What follows is a bit about why and what I've learned from the experience. In the end, nothing was lost and the site is back up. My apologies to all of my users; thanks for your patience.</p>
+<hr />
+<p>Today did not go as planned. As I do, this morning I opened Pine.blog to read the news and instead of seeing a newly updated timeline, the app had logged me out. Worse still, I couldn't log back in, and the website wasn't responding. Sigh.</p>
+<p>Some quick investigation revealed that the disk had filled, which caused the creation of new sessions and access tokens to fail. Admittedly, I don't have any sort of disk usage monitoring on the database server, but because I'd just doubled the amount of storage on that server less than two months ago, I wasn't really thinking it would fill up anytime soon. Regardless, it had.</p>
+<h3>The Causes</h3>
+<p>From what I can tell, a combination of external factors and my own design decisions led to the disk filling up much faster than I was expecting:</p>
+<ol>
+<li>
+<p><strong>Feeds are kinda huge (sometimes).</strong> A few Pine.blog users have feeds that seem to contain hundreds of new items every hour, which Pine.blog will faithfully parse and store in their timelines. In some cases, this meant that such a feed could contain 200,000+ items in only a few weeks. What's worse is that because of a recent change to how timelines work, a timeline can't hold that many items anymore which means Pine.blog was storing a ton of data it would never actually use.</p>
+</li>
+<li>
+<p><strong>Pine.blog stores a lot of data.</strong> By design, Pine.blog doesn't really delete items that it has previously parsed and it stores multiple copies of certain data to make it easier to serve, but this drastically inflates storage requirements.</p>
+</li>
+<li>
+<p><strong>I misunderstood my tools.</strong> I'm not a database guy; I'm an app developer. To me Postgres has always been a bit magical, and today that bit me. About a month ago, I thought I'd read somewhere that the newest versions of Postgres didn't need to be routinely vacuumed, and that running a daily vacuum was an old, outdated practice, so I stopped doing it. <em>This was a bad idea</em>. Without that daily cleaning, the Pine.blog database couldn't reuse space that it no longer needed, and so it kept asking the OS for more disk space, right up until there wasn't any more.</p>
+</li>
+</ol>
+<p>In the end it was the mundane, but powerful combination of a few small things that caused the issues today: some overzealous design choices, a few misunderstandings, and a few overactive feeds.</p>
+<h3>The Solutions</h3>
+<p>Right away, I should admit this whole thing could have been solved a lot sooner. I underestimated the issue at first and tried to keep the site up while I fixed the issue. In hindsight it would have been a lot faster and easier to resize the server to something that had more disk space, vacuum the database, resize the filesystem and scale back down. This whole thing could have been solved in 1-2 hours instead of 6-8.</p>
+<p>That said, here's the two things that I'll be changing about how Pine.blog works in order to prevent this problem in the future:</p>
+<ol>
+<li>
+<p>The nightly vacuum is back. Removing it was a dumb idea.</p>
+</li>
+<li>
+<p><strong>Pine.blog will no longer store the entire history of external feeds.</strong> This one isn't fully in effect yet, but expect the change soon.</p>
+</li>
+</ol>
+<p>As of recently, each Pine.blog timeline has a maximum length of 3000 posts. Once a post falls off the end, you won't be able to find it by scrolling backward in your timeline anymore. This is exactly what Twitter does (although their limit is a modest 800 posts). Feeds will soon do something similar. Pine.blog will keep just the most recent posts in a feed (~3-5000 posts in total) and anything beyond that point will be removed from Pine.blog's database.<sup>1</sup></p>
+<p>I suspect that no one will actually notice these changes once they're rolled out, but to me they mark the end of the road for a naive dream I had back when I started Pine.blog.</p>
+<p><center>
+<strong>tl;dr</strong> Turns out parsing and storing entire portions of the web is hard.
+</center></p>
+<div class="footnote">
+<sup>1.</sup> Hosted blogs are uneffected. Pine.blog will store your entire blog . This change only effects feeds from outside of Pine.blog.
+</div>
+				</div>
+			</div>
+		</article>
+		<div style="text-align:center;">
+			<div class="article-content">
+				<span style="font-size:small;">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
