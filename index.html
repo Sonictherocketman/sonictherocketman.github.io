@@ -47,6 +47,36 @@
 			<article>
 	<div class="post">
 		<div class="article-title">
+			<h1><a href="/archive/thats-when-i-knew-i-cant-actually-use-macos/">
+					That's When I Knew: I Can't Actually Use macOS
+				</a>
+			</h1>
+			<small style="font-style:italic;">Posted on Mon, 24 Feb 2020 at 04:06 AM </small>
+		</div> <!-- End article-title -->
+		<div class="article-content">
+			<p>A few months back, I got a new laptop for work: a new 15" MacBook Pro.<sup>1</sup> It was the first time I'd gotten a new Mac since 2014 when I got the MacBook Pro I'm using to write this post; this Mac has been my primary machine ever since. I use it for everything: I built <a href="https://adventurerscodex.com">Adventurer's Codex</a> and <a href="https://pine.blog">Pine.blog</a> with it, I used it for over 4 years as my work computer, I've taken it all across the country and for most of that time I've carried it with me every single day.</p>
+<p>In all that time though, I haven't been using macOS as it comes from Apple, I've heavily customized just about everything. I've written tons of little command-line utilities, keyboard macros, Apple Script extensions, and installed bits of extra utilities to make this laptop work <em>exactly</em> the way I want. What's more, when I got this machine, I migrated my previous MacBook onto it. In short, there's now a decade of customizations and tweaks baked into macOS, and it's been long enough now that I have no idea which behaviors are mine and which are part of the macOS that Apple ships.</p>
+<p>Which presents a problem when setting up a new Mac.</p>
+<p>Nowadays, when I use my Mac, I don't really think about what I'm doing. My hands do things, and the thing I want to happen, does; all in perfect harmony. One thing I knew, coming into this new Mac, was that my hands would likely stumble over this new bigger, chunkier keyboard. I was right, but for this I was prepared. I was less prepared for what came next.</p>
+<h3>That Demoralizing Beep</h3>
+<p>There I was, welcoming a new friend into the world, stumbling sure, but maintaining my balance. It was then, for what reason I know not, I heard a sound I'd not heard in a long time, a long time: the error chime. Instantly, I was lost, adrift on unfamiliar shores that at first glance looked just like the islands I'd called home for a decade, but which, on second glance turned out to be nothing more than a mirage that obscured the sharp rocks on which I was now adrift.</p>
+<p>In a flurry, I reached for <a href="">Alfred</a>. I whacked Command + Space and found only Spotlight. When I asked Spotlight for <code>set</code> and whacked Enter, instead of seeing my familiar System Preferences, I heard only that chime again. I started to panic. It was then I realized that I was truly alone. Pastebot had fallen, Shiori did not heed my call, and Terminal no longer spoke my native tongue. Somehow, I managed to open Safari, but when I searched for <code>alfred</code> I was thrust to Google.com, a far cry from my <a href="https://duckduckgo.com">usual port of call</a>. I was lost; adrift on the farthest shores. Unmoored, scared, and alone.</p>
+<p><img alt="Alfred using Settings to Open System Preferences" src="/images/blog/alfred-set.png" /></p>
+<p>What was this strange world? I knew not. For now I only knew the screams of error demons emanating from the void.</p>
+<h3>The Thrilling Conclusion</h3>
+<p>Eventually, through the most heroic of efforts, I managed to install a few utilities, apps, and copy over some scripts from my personal Mac onto this new one. It still doesn't feel like home, but it's close.</p>
+<p>This harrowing, 15-minute adventure has caused me to reflect more on how I use my tools. I'm not sure I like knowing that I'll either need to migrate this Mac forever, or that I'll need to start over and rebuild my foundations sometime in the future. I like my shortcuts, but that's just it: they're mine, not Apple's not yours, not anyone else's; just mine. I'm not sure I want the burden of migrating or re-learning everything. Is the only answer for me to slowly wean myself off of my little tweaks, my time-savers? I'm not sure.</p>
+<p>But it's been interesting to think about.</p>
+<div class="footnote">
+    <sup>1</sup> This was prior to the 16" coming out.<br />
+    <sup>2</sup> Somehow Alfred knows that "set", short for Settings, refers to System Preferences. I have no idea how it learned this or when, but I've never once asked for that app by its real name.
+</div
+		</div>
+	</div>
+</article>
+<article>
+	<div class="post">
+		<div class="article-title">
 			<h1><a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/">
 					Pine.blog Downtime Post-Mortem: A Story of Finite Resources
 				</a>
@@ -340,60 +370,6 @@ log "Done."
 <h3>Pushing Forward</h3>
 <p>One of the things I've come to strongly believe is that as developers (or as anyone who makes a thing) we can work to push the world toward we think it should be, and I think that the Web can and should be our shared social network.</p>
 <p>This is why I'm so excited by what I see as the future for Pine.blog. If we want people to move off of the platforms we think are the cause of so many problems in our world, we need to give those people a place to go. Most people aren't going to start a blog and use a feed reader unless we, as the people with the skills to do so, make the Social Web better than Social Media.</p>
-		</div>
-	</div>
-</article>
-<article>
-	<div class="post">
-		<div class="article-title">
-			<h1><a href="/archive/updates-on-using-nsoperation/">
-					Updates on using NSOperation
-				</a>
-			</h1>
-			<small style="font-style:italic;">Posted on Sat, 29 Jun 2019 at 07:31 PM </small>
-		</div> <!-- End article-title -->
-		<div class="article-content">
-			<p>Last time <a href="/archive/i-love-nsoperation/">I talked about NSOperation</a>, I mentioned that I really liked using it to do things like networking and asynchronous operations in my app. Well, I've made a few tweaks to my <code>BackgroundNetworkingController</code> recently (alas a new name was not among them) and I think the new version is even more readable and expressive.</p>
-<p>For those who don't know, NSOperation (or just Operation in Swift) is a class that when paired with (NS)OperationQueue allow you to order and track long running and often asynchronous tasks in your apps. You can use it to do API calls, animate transitions, walk a user through a process, and a lot more.</p>
-<p>In my last blog post I demoed this piece of code as an example of how I use Operations in the Pine.blog app.</p>
-<p><code class="swift"><pre>
-func updateTimeline() {
-    let reauthorize = TokenReauthorizationOperation()
-    let fetchTimeline = FetchTimelineOperation()
-    fetchTimeline.delegate = self
-    fetchTimeline.addOperation(reauthorization)
-    BackgroundQueueController.queue?.addOperations(
-        [reauthorize, fetchTimeline],
-        waitUntilFinished: false
-    )
-}
-</pre></code></p>
-<p>And while that example is pretty straight forward, I knew it could be better. There's so many times when I just need to tell my app: do these things in the background, in this order, and tell me when you're done (and let me know if something comes up). Operations allow me to do that, but setting up delegates and adding dependencies seems like cruft that I don't really want to care about.</p>
-<p>With that in mind, I added a new set of methods to my queue controller: <code>performInSeries(operations:)</code> and <code>performInSeries(operations: with:)</code>. Using those instead, the above example becomes:</p>
-<p><code class="swift"><pre>
-BackgroundNetworkingController.performInSeries(
-    operations: [
-        TokenReauthorizationOperation(),
-        FetchTimelineOperation(),
-    ],
-    with: self
-)
-</pre></code></p>
-<p>This code sets up the given operation with each previous operation as a dependency and assigns their delegate to <code>self</code>. Reading this it becomes pretty clear that I want these operations to be performed in the order I specify and I want them to alert me if anything comes up, which is exactly what I want.</p>
-<p>Even the most complex uses in all of the Pine.blog app still retain their readability (aside from array concatenation). This example reauthorizes the user's token, then fetches the most recent posts in  each of the user's timelines, finds any new posts that the user has liked, and finally calls the given completionHandler to let the app know that it has completed updating its data.</p>
-<p><code class="swift"><pre>
-BackgroundNetworkingController.performInSeries(
-    operations:
-        [ ReauthorizationTask() ]
-        + timelines.map { FetchNewestPostsInTimeline(timeline: $0) }
-        + [ FetchLikesOperation(), BlockOperation { completionHandler?(self.fetchResult) }],
-    with: self
-)
-</pre></code></p>
-<p>There's still a bit further I can go with this, but I'm really happy with the readability and clarity improvement that these changes have made to my codebase.</p>
-<p><link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></p>
 		</div>
 	</div>
 </article>
