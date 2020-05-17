@@ -45,13 +45,18 @@
 		</div>
 	</div>
 	<div id="post-list">
-		<article>
+		<article class="h-entry">
+		  <a href="/" class="u-author"></a>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="/archive/python-multiprocessing-and-unittest/">Python multiprocessing and unittest</a></h1>
-					<small style="font-style:italic;">Posted on Tue, 28 Apr 2015 at 01:39 AM</small>
+					<h1 class="p-name"><a href="/archive/python-multiprocessing-and-unittest/">Python multiprocessing and unittest</a></h1>
+					<small style="font-style:italic;">
+					  <time class="dt-published" datetime="2015-04-28T01:39:00-08:00">
+  					  Posted on Tue, 28 Apr 2015 at 01:39 AM
+  					</time>
+					</small>
 				</div>
-				<div class="article-content">
+				<div class="article-content e-content">
 					<p>I've been having an issue with unit testing Microblogger when my tests need to use Python's multiprocessing module. I've been looking at this code for days now and I can't seem to find the bug. I'm hoping that by writing down my thoughts here, I can think through the problem. </p>
 <p>Basically, the test is trying to verify that a User object can be created with information from a remote XML feed. The <a href="https://github.com/Sonictherocketman/Microblogger/blob/master/test/user_test.py#L41">test</a> gives the <code>User</code> module a URL and tells it to fetch all information at that resource.</p>
 <p><code class="python"><pre>    def test_cache_user(self):
@@ -125,9 +130,9 @@
 		<div style="text-align:center;">
 			<div class="article-content">
 				<span style="font-size:small;">
-					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
-					</a>
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
 			</div>
 		</div>
 	</div>

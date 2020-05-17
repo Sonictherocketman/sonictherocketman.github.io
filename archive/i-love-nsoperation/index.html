@@ -45,13 +45,18 @@
 		</div>
 	</div>
 	<div id="post-list">
-		<article>
+		<article class="h-entry">
+		  <a href="/" class="u-author"></a>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="/archive/i-love-nsoperation/">I Love NSOperation</a></h1>
-					<small style="font-style:italic;">Posted on Sun, 23 Dec 2018 at 10:29 PM</small>
+					<h1 class="p-name"><a href="/archive/i-love-nsoperation/">I Love NSOperation</a></h1>
+					<small style="font-style:italic;">
+					  <time class="dt-published" datetime="2018-12-23T22:29:00-08:00">
+  					  Posted on Sun, 23 Dec 2018 at 10:29 PM
+  					</time>
+					</small>
 				</div>
-				<div class="article-content">
+				<div class="article-content e-content">
 					<p>I've <a href="/archive/multithreading-in-java/">talked before</a> about how much I like using Apple's Grand Central Dispatch API for multithreading on iOS, but over the last year I've become a huge fan of NSOperation and it's become my preferred way to do multitasking on iOS over bare-bones GCD.</p>
 <p>NSOperation (or just Operation in Swift) can be used a layer of abstraction over GCD that provides built-in dependency tracking, and task isolation. When combined with NSOperationQueue (OperationQueue in Swift) you also get powerful throttling APIs and more. Typically I've used Operations for background networking and processing, but the API is designed to be used for any set of discrete tasks including UI workflows and more.</p>
 <h2>As a Networking Layer</h2>
@@ -195,9 +200,9 @@ class LotsOfConcurrentRequests: Operation {
 		<div style="text-align:center;">
 			<div class="article-content">
 				<span style="font-size:small;">
-					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
-					</a>
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
 			</div>
 		</div>
 	</div>

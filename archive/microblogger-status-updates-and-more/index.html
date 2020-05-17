@@ -45,13 +45,18 @@
 		</div>
 	</div>
 	<div id="post-list">
-		<article>
+		<article class="h-entry">
+		  <a href="/" class="u-author"></a>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="/archive/microblogger-status-updates-and-more/">Microblogger status updates and more</a></h1>
-					<small style="font-style:italic;">Posted on Sat, 13 Dec 2014 at 07:16 AM</small>
+					<h1 class="p-name"><a href="/archive/microblogger-status-updates-and-more/">Microblogger status updates and more</a></h1>
+					<small style="font-style:italic;">
+					  <time class="dt-published" datetime="2014-12-13T07:16:00-08:00">
+  					  Posted on Sat, 13 Dec 2014 at 07:16 AM
+  					</time>
+					</small>
 				</div>
-				<div class="article-content">
+				<div class="article-content e-content">
 					<p>Over the last few weeks I've been working on the first implementation of Microblogger (new name desired): a self hosted microblog implementing the <a href="http://openmicroblog.com">Open Microblog standard</a>. Work has been slower than I'd like, but steady nonetheless. The <a href="http://github.com/Sonictherocketman/microblog_crawler">microblogcrawler</a> I announced a couple weeks back, was just one of many pieces of the project, and one that could easily be spin off into its own little sub-project.</p>
 <p>Yessir, all was going well: basic crawling is almost in place, and almost everything regarding the user's data and profile is good to go. I was working on adding another crawler to the mix (for on demand requests) and flushing out the caching engine last time I touched the project, trouble is that was over a week ago. Since then all progress has stopped. </p>
 <p>Due to a colony of microbes wreaking havoc on my immune system, I've been out of commission all week. With a busy weekend ahead of me, I'm holding out hope that I'll be able to get something done, but it probably won't be much. Either way, next week, I'm diving back in. </p>
@@ -73,9 +78,9 @@
 		<div style="text-align:center;">
 			<div class="article-content">
 				<span style="font-size:small;">
-					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
-					</a>
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
 			</div>
 		</div>
 	</div>

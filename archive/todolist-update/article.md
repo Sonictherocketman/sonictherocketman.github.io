@@ -1,6 +1,6 @@
 slug: todolist-update
 published: Tue, 10 Oct 2017 at 03:35 PM
-updated: Tue, 08 Oct 2019 at 01:37 AM
+updated: Sun, 17 May 2020 at 05:49 AM
 title: todolist update
 author: Brian Schrader
 tags: development, bash

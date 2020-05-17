@@ -45,13 +45,18 @@
 		</div>
 	</div>
 	<div id="post-list">
-		<article>
+		<article class="h-entry">
+		  <a href="/" class="u-author"></a>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="/archive/accidental-devops/">Accidental DevOps</a></h1>
-					<small style="font-style:italic;">Posted on Tue, 26 Sep 2017 at 12:30 PM</small>
+					<h1 class="p-name"><a href="/archive/accidental-devops/">Accidental DevOps</a></h1>
+					<small style="font-style:italic;">
+					  <time class="dt-published" datetime="2017-09-26T12:30:00-08:00">
+  					  Posted on Tue, 26 Sep 2017 at 12:30 PM
+  					</time>
+					</small>
 				</div>
-				<div class="article-content">
+				<div class="article-content e-content">
 					<p>Since I became a developer, I've always worked on small (3-5) or single-person teams. Even at my current job, I'm the the lead and only full-time developer. In more recent projects (including <a href="https://adventurerscodex.com">Adventurer's Codex</a>) this means that I'm the DevOps guy and System Admin as well. I'm by no means an expert in either, but I can do both.</p>
 <p>I started learning how to manage and administer servers when I started this site back in 2012. Back then I never thought that all of those hours spent configuring Apache and PHP would lead to anything, but those countless hours of frustration taught me the basics. Fast-forward 5 years and I'm developing three major projects (two unannounced) and I'm DevOps and SysAdmin for all three. It's crazy to think about.</p>
 <p>I'd highly recommend any new developers to follow the same general path I did: start a project or blog and learn to deploy it yourself. I started with a cheap old-style webhost and FTP, and slowly moved to managing the whole stack on Linode. I'm using Docker on new projects, and for now, I'm scripting my own deploys (though this could change soon if I migrate one project to Ansible).</p>
@@ -62,9 +67,9 @@
 		<div style="text-align:center;">
 			<div class="article-content">
 				<span style="font-size:small;">
-					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
-					</a>
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
 			</div>
 		</div>
 	</div>

@@ -45,13 +45,18 @@
 		</div>
 	</div>
 	<div id="post-list">
-		<article>
+		<article class="h-entry">
+		  <a href="/" class="u-author"></a>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="/archive/so-many-words-written-so-many-more-to-come/">So Many Words Written, So Many More to Come</a></h1>
-					<small style="font-style:italic;">Posted on Mon, 06 Feb 2017 at 07:58 PM</small>
+					<h1 class="p-name"><a href="/archive/so-many-words-written-so-many-more-to-come/">So Many Words Written, So Many More to Come</a></h1>
+					<small style="font-style:italic;">
+					  <time class="dt-published" datetime="2017-02-06T19:58:00-08:00">
+  					  Posted on Mon, 06 Feb 2017 at 07:58 PM
+  					</time>
+					</small>
 				</div>
-				<div class="article-content">
+				<div class="article-content e-content">
 					<p>Apparently I'm 236 words short of 50,000 total words written for my blog over 161 posts<sup>1</sup>. That's about 309 words per post on average. I was playing around with the site just now and just out of curiosity I ran this:</p>
 <pre><code>$ find archive/ -name "*.md"|xargs -I {} cat {} | wc -w
    49764
@@ -102,9 +107,9 @@
 		<div style="text-align:center;">
 			<div class="article-content">
 				<span style="font-size:small;">
-					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
-					</a>
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
 			</div>
 		</div>
 	</div>

@@ -45,13 +45,18 @@
 		</div>
 	</div>
 	<div id="post-list">
-		<article>
+		<article class="h-entry">
+		  <a href="/" class="u-author"></a>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="/archive/oauth-over-xmpp/">OAuth Over XMPP</a></h1>
-					<small style="font-style:italic;">Posted on Tue, 24 Oct 2017 at 06:24 PM</small>
+					<h1 class="p-name"><a href="/archive/oauth-over-xmpp/">OAuth Over XMPP</a></h1>
+					<small style="font-style:italic;">
+					  <time class="dt-published" datetime="2017-10-24T18:24:00-08:00">
+  					  Posted on Tue, 24 Oct 2017 at 06:24 PM
+  					</time>
+					</small>
 				</div>
-				<div class="article-content">
+				<div class="article-content e-content">
 					<p>As <a href="/archive/adventurers-codex-xmpp/">I've said before</a>, <a href="https://adventurerscodex.com">Adventurer's Codex</a> uses XMPP for it's real-time features. During development we ran into a couple of interesting challenges with integrating such a mature system with our new-ish web stack, one of which was User Authentication.</p>
 <p>The majority of Adventurer's Codex uses an OAuth Provider model for user authentication but Ejabberd (our XMPP server) requires that the username and password be sent at connection time. Obviously we didn't want to have two different auth schemes to support, and we didn't want our client app to store any passwords (hence OAuth). We spent a while hunting for different possible solutions, and in the end we stumbled into a really simple one.</p>
 <p>Ejabberd allows for authentication to be handled by an external script, which allows us to use our core database as the auth backend. We could, in principle, use a Django management command to make a call to our database, hash the password that we were given by the client and compare it to the one stored in our database, but not only is that a lot of work and error prone, it's too coupled to our database layer, and it still required the client to store the user's password.</p>
@@ -65,9 +70,9 @@
 		<div style="text-align:center;">
 			<div class="article-content">
 				<span style="font-size:small;">
-					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
-					</a>
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
 			</div>
 		</div>
 	</div>

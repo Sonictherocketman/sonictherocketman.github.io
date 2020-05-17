@@ -1,6 +1,6 @@
 slug: youtube-has-apparently-reinstated-rss-feeds
 published: Mon, 14 Nov 2016 at 07:49 PM
-updated: Tue, 08 Oct 2019 at 01:37 AM
+updated: Sun, 17 May 2020 at 05:49 AM
 title: YouTube has (apparently) reinstated RSS feeds
 author: Brian Schrader
 tags: rss, open web, youtube

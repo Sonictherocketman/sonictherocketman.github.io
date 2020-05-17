@@ -45,13 +45,18 @@
 		</div>
 	</div>
 	<div id="post-list">
-		<article>
+		<article class="h-entry">
+		  <a href="/" class="u-author"></a>
 			<div class="post">
 				<div class="article-title">
-					<h1><a href="/archive/more-secure-pastures/">More Secure Pastures</a></h1>
-					<small style="font-style:italic;">Posted on Wed, 27 Jan 2016 at 09:13 PM</small>
+					<h1 class="p-name"><a href="/archive/more-secure-pastures/">More Secure Pastures</a></h1>
+					<small style="font-style:italic;">
+					  <time class="dt-published" datetime="2016-01-27T21:13:00-08:00">
+  					  Posted on Wed, 27 Jan 2016 at 09:13 PM
+  					</time>
+					</small>
 				</div>
-				<div class="article-content">
+				<div class="article-content e-content">
 					<p>Well, I finally did it; I finally upgraded this site to use https. I've wanted to do this for a while, and I know that I should have done it years ago, but the thought of having to upgrade Apache, even after all these years, still puts a chill down my spine. Regardless, this site is now certified by <a href="https://letsencrypt.org">Let's Encrypt</a>, and my thanks to them for making free SSL certificates a possibility. </p>
 <p>I encountered a few troubles while upgrading, and I hope no one noticed, but for anyone looking to do the same thing, here's a few links that helped me through the process:</p>
 <ul>
@@ -64,9 +69,9 @@
 		<div style="text-align:center;">
 			<div class="article-content">
 				<span style="font-size:small;">
-					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-						<img alt="Creative Commons License" style="border-width:0" src="/images/misc/cc-license.png" />
-					</a>
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
 			</div>
 		</div>
 	</div>
