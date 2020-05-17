@@ -1,6 +1,6 @@
 slug: rss-has-already-won
 published: Fri, 06 Jul 2018 at 11:39 PM
-updated: Sun, 17 May 2020 at 05:49 AM
+updated: Sun, 17 May 2020 at 06:41 AM
 title: RSS Has Already Won
 author: Brian Schrader
 tags: pine, rss, standards, open web

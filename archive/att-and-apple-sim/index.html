@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="/bin/CSS/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="/bin/CSS/mobile.css">
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="AT&T and Apple SIM" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="http://brianschrader.com/archive/att-and-apple-sim/" />
@@ -15,35 +15,26 @@
 </head>
 <body>
 <div id="content">
-	<div id="title-bar">
-		<!-- Desktop Nav -->
-		<span>
-			<!-- Name and Author -->
-			<span class="menuBarItem" style="margin-left: 10px; font-size:2em;"><a href="/">BiteofanApple</a></span>
-			<!-- Links -->
-			<span class="menuBarItem" style="margin-left: 40px;"><a href="/archive/">Archive</a></span>
-			<span class="menuBarItem"><a href="/about/">About</a></span>
-			<span class="menuBarItem"><a href="https://skyrocket.software">Apps</a></span>
-			<span class="menuBarItem"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></span>
-			<span class="menuBarItem"><a href="http://photos.brianschrader.com">Photos</a></span>
-		  <span class="menuBarItem"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></span>
-			<br>
-			<span class="menuBarItem" style=" position:absolute; margin-top:-80px; margin-left:10px; font-size:10pt; font-style:italic;">by <a href="/about/">Brian Schrader</a></span>
-		</span>
-		<!-- Mobile Nav -->
-		<div class="mobile-nav">
-			<!-- Name and Author -->
-			<div style="text-align:center; margin-top:-20pt;">
-				<span class="" style="font-size:2em;"><a href="/">BiteofanApple</a></span>
-			</div>
-			<!-- Links -->
-			<div style="margin-top:2%;">
-				<span class="mobileMenuBarItem" style=""><a href="/archive/">Archive</a></span>
-				<span class="mobileMenuBarItem"><a href="/about/">About</a></span>
-			  <span class="menuBarItem"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></span>
-			</div>
-		</div>
-	</div>
+  <div class="nav-container">
+    <nav class="nav">
+      <div class="nav-item nav-brand">
+        <a href="/" class="site-title">
+          BiteofanApple
+        </a>
+        <span
+          class="author-tag hide-on-mobile"
+        >
+          by <a href="/about/">Brian Schrader</a>
+        </span>
+      </div>
+      <div class="nav-item"><a href="/archive/">Archive</a></div>
+      <div class="nav-item"><a href="/about/">About</a></div>
+      <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+      <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+      <div class="nav-item hide-on-mobile"><a href="http://photos.brianschrader.com">Photos</a></div>
+      <div class="nav-item hide-on-mobile"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></div>
+    </nav>
+  </div>
 	<div id="post-list">
 		<article class="h-entry">
 		  <a href="/" class="u-author"></a>

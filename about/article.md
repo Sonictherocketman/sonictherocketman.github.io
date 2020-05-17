@@ -4,7 +4,11 @@ updated: Sat, 08 Aug 2015 at 08:48 PM
 title: About Me
 status: draft
 
-<img src="http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=280" class="image-right" style="padding-left:3%;">
+<img src="http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=240" class="hide-on-mobile image-right image-rounded shadow">
+
+<div class="show-on-mobile text-center">
+  <img src="http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595" class="image-center image-rounded shadow">
+</div>
 
 My name is Brian Schrader. I'm an independent software developer living in San Diego, CA. This site is my little home on the internet where I go on (and on) about things that are important to me.
 

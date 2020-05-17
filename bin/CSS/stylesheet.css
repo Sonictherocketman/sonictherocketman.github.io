@@ -63,29 +63,25 @@ ul p {
 *
 */
 
+.site-title {
+  font-size:1.5em;
+  display:block;
+}
+
+.author-tag {
+  font-size:10pt;
+  font-style:italic;
+}
+
 #content {
 	margin:0px;
 	padding:0px;
 }
 
-#title-bar {
-	background-color: #454545;
-	color:#FFFFFF;
-	line-height:100px;
-	position:relative;
-	z-index: 100;
-
-	/* FIXING IT TO THE TOP */
-	/* position:fixed;
-    top:0; */
-    width:100%;
-}
-
 #post-list {
 	margin: auto;
-	/*margin-top:100px;*/
 	max-width:825px;
-    overflow:hidden;
+  overflow:hidden;
 }
 
 #post, #first-post {
@@ -114,6 +110,10 @@ ul p {
 
 #article-title {
 	text-align:center;
+}
+
+.show-on-mobile {
+  display:none !important;
 }
 
 /*
@@ -215,6 +215,13 @@ ul p {
 	margin-right:auto;
 	display:block;
 }
+.image-rounded {
+  border-radius: 50%;
+}
+
+.shadow {
+  box-shadow: 1px 1px 2px #ccc;
+}
 
 .image-container {
   float:right;
@@ -232,6 +239,10 @@ ul p {
 
 .xsmall {
 	width:200px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 
@@ -269,15 +280,31 @@ ul p {
 	font-size:26pt;
 }
 
-.menuBarItem {
-	position:relative;
-	display:inline;
-	padding-left:10px;
-	font-size:13.5pt;
+/* New Nav Styling */
+
+.nav-container {
+	background-color: #454545;
+	color:#FFFFFF;
+	z-index: 100;
+  width:100%;
+  line-height: 1;
 }
 
-.mobile-nav {
-	display:none;
+.nav {
+	margin: auto;
+	max-width:825px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nav .nav-item {
+	position:relative;
+	display:inline-block;
+	margin: 0.75rem;
+	font-size:13.5pt;
+  vertical-align: middle;
 }
 
 /*
@@ -286,10 +313,10 @@ ul p {
 *
 */
 
-#title-bar a:link {color:white; text-decoration:none;}
-#title-bar a:visited {color:white; text-decoration:none;}
-#title-bar a:hover {color:#7EA5E0; text-decoration:none;}
-#title-bar a:active {color:#4068B8; text-decoration:none;}
+.nav a:link {color:white; text-decoration:none;}
+.nav a:visited {color:white; text-decoration:none;}
+.nav a:hover {color:#7EA5E0; text-decoration:none;}
+.nav a:active {color:#4068B8; text-decoration:none;}
 
 #article-content a:link {color:#4068B8; text-decoration:none;}
 #article-content a:visited {color:#4068B8; text-decoration:none;}
