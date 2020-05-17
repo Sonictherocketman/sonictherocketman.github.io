@@ -1,7 +1,7 @@
 slug: about-brian-schrader
 published: Sat, 08 Aug 2015 at 08:37 PM
 updated: Sat, 08 Aug 2015 at 08:48 PM
-title: About Brian Schrader
+title: About Me
 status: draft
 
 <img src="http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=280" class="image-right" style="padding-left:3%;">
