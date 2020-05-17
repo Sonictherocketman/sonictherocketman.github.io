@@ -1,0 +1,117 @@
+/*
+ * Phone styling
+ */
+
+@media only screen and (max-width : 600px) {
+
+/*
+* Begin Tag Styling
+*/
+
+body {
+	font-family: 'Avenir', 'Helvetica', 'Average', serif;
+	background-color:#F4F4F4;
+	line-height:1.7;
+	font-size: larger;
+	margin:auto;
+	width:100%;
+	text-align:left;
+}
+
+p {text-indent:0px;}
+
+blockquote {
+	margin: 1em 0.5em;
+	padding-left: 1em;
+}
+
+article {
+  margin: 8px 12px;
+}
+
+/*
+*
+* Begin ID Styling
+*
+*/
+
+#post, #first-post {
+	margin-top: -3px;
+	padding: 0%;
+	overflow:hidden;
+}
+
+#article-title {
+	text-align:center;
+}
+
+/*
+*
+* Begin Class Styling
+*
+*/
+
+.hide-on-mobile {
+	display:none !important;
+}
+
+.post {
+	margin-top: -3px;
+	padding: 0%;
+	overflow:hidden;
+}
+
+.article-title {
+	text-align:center;
+}
+
+.body-image-right{
+	float:right;
+	padding:1px;
+	margin:15px;
+}
+.body-image-left{
+	float:left;
+	padding:1px;
+	margin:15px;
+}
+.body-image-center {
+	padding:1px;
+	margin-left:auto;
+	margin-right:auto;
+}
+/*
+ * Dynamic Image Styling
+ */
+.image-right{
+
+}
+.image-left{
+
+}
+.image-center {
+	width:100%;
+	max-width:100%;
+	max-height:auto;
+}
+
+.nav {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.nav .nav-item.nav-brand {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+}
+
+.nav .nav-item {
+  width: calc(25% - 2.5rem);
+  text-align: center;
+}
+
+.show-on-mobile {
+  display:unset !important;
+}
