@@ -1,6 +1,6 @@
 slug: an-agency-that-protects-data
 published: Fri, 14 Feb 2020 at 02:30 AM
-updated: Sun, 17 May 2020 at 06:41 AM
+updated: Sat, 30 May 2020 at 08:39 PM
 title: An Agency that Protects Data
 author: Brian Schrader
 tags: law, data protection, privacy, Kirsten Gillibrand

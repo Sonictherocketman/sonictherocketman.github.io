@@ -1,6 +1,6 @@
 slug: primitive-tech-tiptoes-into-the-bronze-age
 published: Fri, 29 Jul 2016 at 04:18 PM
-updated: Sun, 17 May 2020 at 06:41 AM
+updated: Sat, 30 May 2020 at 08:39 PM
 title: Primitive Tech tiptoes into the Bronze Age
 author: Brian Schrader
 tags: youtube, primitive technology

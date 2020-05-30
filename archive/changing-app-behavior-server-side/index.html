@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Changing App Behavior Server-Side - BiteofanApple</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <title>Changing App Behavior Server-Side - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Changing App Behavior Server-Side" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://brianschrader.com/archive/changing-app-behavior-server-side/" />
+  <meta property="og:title" content="Changing App Behavior Server-Side" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/changing-app-behavior-server-side/" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
   <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
 </head>
@@ -35,35 +36,35 @@
       <div class="nav-item hide-on-mobile"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></div>
     </nav>
   </div>
-	<div id="post-list">
-		<article class="h-entry">
-		  <a href="/" class="u-author"></a>
-			<div class="post">
-				<div class="article-title">
-					<h1 class="p-name"><a href="/archive/changing-app-behavior-server-side/">Changing App Behavior Server-Side</a></h1>
-					<small style="font-style:italic;">
-					  <time class="dt-published" datetime="2014-08-17T00:00:00-08:00">
-  					  Posted on Sun, 17 Aug 2014 at 12:00 AM
-  					</time>
-					</small>
-				</div>
-				<div class="article-content e-content">
-					<p>We've all been there: you ship your app, it passes Apple's App Review, then it's in the Store... and <em>then</em> you find a bug. A small bug, but one you should fix ASAP. Whether it's some issue with download behavior, the color of some box, the font somewhere is too small, or your French localization of some text is overflowing some button (like what <a href="http://www.red-sweater.com">Daniel Jalkut</a> talked about on <a href="http://www.coreint.org">Core Intuition</a> this week), either way, it's a pain. You fix the problem locally, and submit a new build, but Apple still takes a week to review it. Meanwhile your users are having to deal with a bug that you've already solved. It's a common, frustrating and often a sales affecting problem.</p>
+  <div id="post-list">
+    <article class="h-entry">
+      <a href="/" class="u-author"></a>
+      <div class="post">
+        <div class="article-title">
+          <h1 class="p-name"><a href="/archive/changing-app-behavior-server-side/">Changing App Behavior Server-Side</a></h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2014-08-17T00:00:00-08:00">
+              Posted on Sun, 17 Aug 2014 at 12:00 AM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>We've all been there: you ship your app, it passes Apple's App Review, then it's in the Store... and <em>then</em> you find a bug. A small bug, but one you should fix ASAP. Whether it's some issue with download behavior, the color of some box, the font somewhere is too small, or your French localization of some text is overflowing some button (like what <a href="http://www.red-sweater.com">Daniel Jalkut</a> talked about on <a href="http://www.coreint.org">Core Intuition</a> this week), either way, it's a pain. You fix the problem locally, and submit a new build, but Apple still takes a week to review it. Meanwhile your users are having to deal with a bug that you've already solved. It's a common, frustrating and often a sales affecting problem.</p>
 <p>On a <a href="http://atp.fm/episodes/74">recent episode of ATP</a>, <a href="http://www.marco.org">Marco</a> mentioned that he could change quite a few features of the app from the server-side. Combine this with <a href="http://inessential.com">Brent Simmons'</a> way of building <a href="http://vesperapp.co">Vesper</a> (i.e. using plists to configure colors, fonts, item sizes, etc) and it seems to me that it should be entirely possible to make iOS apps that are mostly configurable from the server-side. This got me thinking. Why not build the app to download it's configuration file (i.e. plist, or Localization.strings file) remotely? Sure it's not as convenient as Apple's built in frameworks sometimes, but it would allow developers to fix features, colors, themes, and localization issues all remotely, and instantly.</p>
 <p>I haven't looked into the technical issues with this, and there is an argument to be made that not all iOS devs want to run a server just to host their .strings files, but if you're already running a server for some other functionality in your app, it's basically cost free and avoids quite a few small but irritating problems.</p>
 <p>My motto: If it can be on the server, it should be on the server. The client doesn't need to worry about it, it just needs to display it.</p>
-				</div>
-			</div>
-		</article>
-		<div style="text-align:center;">
-			<div class="article-content">
-				<span style="font-size:small;">
+        </div>
+      </div>
+    </article>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
           <a rel="alternate" href="/rss.xml">
             RSS
           </a>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

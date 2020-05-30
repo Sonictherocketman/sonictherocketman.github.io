@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Microblog Crawler v1.4(.1) - BiteofanApple</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <title>Microblog Crawler v1.4(.1) - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Microblog Crawler v1.4(.1)" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://brianschrader.com/archive/microblog-crawler-v141/" />
+  <meta property="og:title" content="Microblog Crawler v1.4(.1)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/microblog-crawler-v141/" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
   <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
 </head>
@@ -35,20 +36,20 @@
       <div class="nav-item hide-on-mobile"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></div>
     </nav>
   </div>
-	<div id="post-list">
-		<article class="h-entry">
-		  <a href="/" class="u-author"></a>
-			<div class="post">
-				<div class="article-title">
-					<h1 class="p-name"><a href="/archive/microblog-crawler-v141/">Microblog Crawler v1.4(.1)</a></h1>
-					<small style="font-style:italic;">
-					  <time class="dt-published" datetime="2015-04-25T22:29:00-08:00">
-  					  Posted on Sat, 25 Apr 2015 at 10:29 PM
-  					</time>
-					</small>
-				</div>
-				<div class="article-content e-content">
-					<p>Version 1.4.1 of my MicroblogCrawler is out on <a href="https://pypi.python.org/pypi/MicroblogCrawler/1.4.1">PyPi</a>! Technically v1.4 was out last week but it had a fairly large bug that needed fixing. 1.4.1 has patched it and it's ready for prime time.</p>
+  <div id="post-list">
+    <article class="h-entry">
+      <a href="/" class="u-author"></a>
+      <div class="post">
+        <div class="article-title">
+          <h1 class="p-name"><a href="/archive/microblog-crawler-v141/">Microblog Crawler v1.4(.1)</a></h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2015-04-25T22:29:00-08:00">
+              Posted on Sat, 25 Apr 2015 at 10:29 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>Version 1.4.1 of my MicroblogCrawler is out on <a href="https://pypi.python.org/pypi/MicroblogCrawler/1.4.1">PyPi</a>! Technically v1.4 was out last week but it had a fairly large bug that needed fixing. 1.4.1 has patched it and it's ready for prime time.</p>
 <p>v1.4.1 is full of enhancements, a few of which are listed here:</p>
 <ul>
 <li>Calling stop now actually stops the crawler. This bug was due to a nasty bug in Python's multiprocessing module (9400). The crawler now alerts you when such a problem arises by outputting it through the on_error callback.</li>
@@ -58,18 +59,18 @@
 <p><a href="https://github.com/Sonictherocketman/microblog_crawler">The full version notes are available here.</a></p>
 <p>The major enhancement in this version (besides the graceful exiting) was the addition of a workaround for a <a href="http://bugs.python.org/issue9400">bug in Python's multiprocessing module</a>. The bug has to do with what happens to exceptions raised in child processes. When they are raised, they are pickled and sent back to the parent process. The problem arises when an exception is not pickleable. The child process hangs and never exits. The interesting thing is that the bug was first reported in 2010 and affects all versions of Python since 2010 (i.e. 2.7, 3.2, 3.3, 3.4). This bug has been baffling me since I started converting the crawler to be multiprocessed, and its nice to finally have a workaround. </p>
 <p>If anyone out there is using MicroblogCrawler, I'd love to hear from you, and pull requests are very welcome!</p>
-				</div>
-			</div>
-		</article>
-		<div style="text-align:center;">
-			<div class="article-content">
-				<span style="font-size:small;">
+        </div>
+      </div>
+    </article>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
           <a rel="alternate" href="/rss.xml">
             RSS
           </a>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

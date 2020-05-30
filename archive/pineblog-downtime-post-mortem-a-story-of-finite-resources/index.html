@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pine.blog Downtime Post-Mortem: A Story of Finite Resources - BiteofanApple</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <title>Pine.blog Downtime Post-Mortem: A Story of Finite Resources - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Pine.blog Downtime Post-Mortem: A Story of Finite Resources" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://brianschrader.com/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/" />
+  <meta property="og:title" content="Pine.blog Downtime Post-Mortem: A Story of Finite Resources" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
   <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
 </head>
@@ -35,20 +36,20 @@
       <div class="nav-item hide-on-mobile"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></div>
     </nav>
   </div>
-	<div id="post-list">
-		<article class="h-entry">
-		  <a href="/" class="u-author"></a>
-			<div class="post">
-				<div class="article-title">
-					<h1 class="p-name"><a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/">Pine.blog Downtime Post-Mortem: A Story of Finite Resources</a></h1>
-					<small style="font-style:italic;">
-					  <time class="dt-published" datetime="2020-02-17T04:57:00-08:00">
-  					  Posted on Mon, 17 Feb 2020 at 04:57 AM
-  					</time>
-					</small>
-				</div>
-				<div class="article-content e-content">
-					<p>Pine.blog was down for a while today (~6 hours). What follows is a bit about why and what I've learned from the experience. In the end, nothing was lost and the site is back up. My apologies to all of my users; thanks for your patience.</p>
+  <div id="post-list">
+    <article class="h-entry">
+      <a href="/" class="u-author"></a>
+      <div class="post">
+        <div class="article-title">
+          <h1 class="p-name"><a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/">Pine.blog Downtime Post-Mortem: A Story of Finite Resources</a></h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2020-02-17T04:57:00-08:00">
+              Posted on Mon, 17 Feb 2020 at 04:57 AM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>Pine.blog was down for a while today (~6 hours). What follows is a bit about why and what I've learned from the experience. In the end, nothing was lost and the site is back up. My apologies to all of my users; thanks for your patience.</p>
 <hr />
 <p>Today did not go as planned. As I do, this morning I opened Pine.blog to read the news and instead of seeing a newly updated timeline, the app had logged me out. Worse still, I couldn't log back in, and the website wasn't responding. Sigh.</p>
 <p>Some quick investigation revealed that the disk had filled, which caused the creation of new sessions and access tokens to fail. Admittedly, I don't have any sort of disk usage monitoring on the database server, but because I'd just doubled the amount of storage on that server less than two months ago, I wasn't really thinking it would fill up anytime soon. Regardless, it had.</p>
@@ -85,18 +86,18 @@
 <div class="footnote">
 <sup>1.</sup> Hosted blogs are uneffected. Pine.blog will store your entire blog . This change only effects feeds from outside of Pine.blog.
 </div>
-				</div>
-			</div>
-		</article>
-		<div style="text-align:center;">
-			<div class="article-content">
-				<span style="font-size:small;">
+        </div>
+      </div>
+    </article>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
           <a rel="alternate" href="/rss.xml">
             RSS
           </a>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

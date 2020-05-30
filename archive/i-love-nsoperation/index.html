@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>I Love NSOperation - BiteofanApple</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <title>I Love NSOperation - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="I Love NSOperation" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://brianschrader.com/archive/i-love-nsoperation/" />
+  <meta property="og:title" content="I Love NSOperation" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/i-love-nsoperation/" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
   <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
 </head>
@@ -35,20 +36,20 @@
       <div class="nav-item hide-on-mobile"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></div>
     </nav>
   </div>
-	<div id="post-list">
-		<article class="h-entry">
-		  <a href="/" class="u-author"></a>
-			<div class="post">
-				<div class="article-title">
-					<h1 class="p-name"><a href="/archive/i-love-nsoperation/">I Love NSOperation</a></h1>
-					<small style="font-style:italic;">
-					  <time class="dt-published" datetime="2018-12-23T22:29:00-08:00">
-  					  Posted on Sun, 23 Dec 2018 at 10:29 PM
-  					</time>
-					</small>
-				</div>
-				<div class="article-content e-content">
-					<p>I've <a href="/archive/multithreading-in-java/">talked before</a> about how much I like using Apple's Grand Central Dispatch API for multithreading on iOS, but over the last year I've become a huge fan of NSOperation and it's become my preferred way to do multitasking on iOS over bare-bones GCD.</p>
+  <div id="post-list">
+    <article class="h-entry">
+      <a href="/" class="u-author"></a>
+      <div class="post">
+        <div class="article-title">
+          <h1 class="p-name"><a href="/archive/i-love-nsoperation/">I Love NSOperation</a></h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2018-12-23T22:29:00-08:00">
+              Posted on Sun, 23 Dec 2018 at 10:29 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>I've <a href="/archive/multithreading-in-java/">talked before</a> about how much I like using Apple's Grand Central Dispatch API for multithreading on iOS, but over the last year I've become a huge fan of NSOperation and it's become my preferred way to do multitasking on iOS over bare-bones GCD.</p>
 <p>NSOperation (or just Operation in Swift) can be used a layer of abstraction over GCD that provides built-in dependency tracking, and task isolation. When combined with NSOperationQueue (OperationQueue in Swift) you also get powerful throttling APIs and more. Typically I've used Operations for background networking and processing, but the API is designed to be used for any set of discrete tasks including UI workflows and more.</p>
 <h2>As a Networking Layer</h2>
 <p>My most common use case for NSOperation is in doing networking. In Pine.blog for example I need to always ensure that a user's OAuth Access Token is valid before making a resource request, say for their timeline. That code looks something like this:</p>
@@ -185,18 +186,18 @@ class LotsOfConcurrentRequests: Operation {
 <p><link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script></p>
-				</div>
-			</div>
-		</article>
-		<div style="text-align:center;">
-			<div class="article-content">
-				<span style="font-size:small;">
+        </div>
+      </div>
+    </article>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
           <a rel="alternate" href="/rss.xml">
             RSS
           </a>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

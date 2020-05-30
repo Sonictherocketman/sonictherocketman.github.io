@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Cloudbleed Bug: An Overview - BiteofanApple</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <title>The Cloudbleed Bug: An Overview - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="The Cloudbleed Bug: An Overview" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://brianschrader.com/archive/the-cloudbleed-bug-an-overview/" />
+  <meta property="og:title" content="The Cloudbleed Bug: An Overview" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/the-cloudbleed-bug-an-overview/" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
   <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
 </head>
@@ -35,20 +36,20 @@
       <div class="nav-item hide-on-mobile"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></div>
     </nav>
   </div>
-	<div id="post-list">
-		<article class="h-entry">
-		  <a href="/" class="u-author"></a>
-			<div class="post">
-				<div class="article-title">
-					<h1 class="p-name"><a href="/archive/the-cloudbleed-bug-an-overview/">The Cloudbleed Bug: An Overview</a></h1>
-					<small style="font-style:italic;">
-					  <time class="dt-published" datetime="2017-02-24T11:06:00-08:00">
-  					  Posted on Fri, 24 Feb 2017 at 11:06 AM
-  					</time>
-					</small>
-				</div>
-				<div class="article-content e-content">
-					<p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1139">Tavis Ormandy (Chromium Bug Tracker) &#8594;</a></p>
+  <div id="post-list">
+    <article class="h-entry">
+      <a href="/" class="u-author"></a>
+      <div class="post">
+        <div class="article-title">
+          <h1 class="p-name"><a href="/archive/the-cloudbleed-bug-an-overview/">The Cloudbleed Bug: An Overview</a></h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2017-02-24T11:06:00-08:00">
+              Posted on Fri, 24 Feb 2017 at 11:06 AM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p><a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1139">Tavis Ormandy (Chromium Bug Tracker) &#8594;</a></p>
 <blockquote>
 <p>It became clear after a while we were looking at chunks of uninitialized memory interspersed with valid data. The program that this uninitialized data was coming from just happened to have the data I wanted in memory at the time...</p>
 <p>A while later, we figured out how to reproduce the problem. It looked like that if an html page hosted behind cloudflare had a specific combination of unbalanced tags, the proxy would intersperse pages of uninitialized memory into the output...</p>
@@ -69,18 +70,18 @@ Nope. A SHA-1 collision, it turns out, is the minor security news of the day.</p
 <p>This broke late last night PST, and while Travis Ormandy and the hardworking team at Cloudflare have resolved the situation, the consequences of this bug are not small. Cloudflare is a very large CDN that sits in front of tens of thousands of sites and all of them are potentially affected.</p>
 <p><img alt="My report" src="/images/blog/ac-cloudbleed-report.png" /></p>
 <p><a href="https://github.com/pirate/sites-using-cloudflare/blob/master/README.md">List of sites affected by Cloudbleed &#8594;</a></p>
-				</div>
-			</div>
-		</article>
-		<div style="text-align:center;">
-			<div class="article-content">
-				<span style="font-size:small;">
+        </div>
+      </div>
+    </article>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
           <a rel="alternate" href="/rss.xml">
             RSS
           </a>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

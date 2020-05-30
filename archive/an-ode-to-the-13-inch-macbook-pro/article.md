@@ -1,6 +1,6 @@
 slug: an-ode-to-the-13-inch-macbook-pro
 published: Sat, 04 Feb 2017 at 01:25 PM
-updated: Sun, 17 May 2020 at 06:41 AM
+updated: Sat, 30 May 2020 at 08:39 PM
 title: An Ode to the 13 Inch MacBook Pro
 author: Brian Schrader
 tags: apple, macbook pro

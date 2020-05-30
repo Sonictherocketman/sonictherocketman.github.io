@@ -1,6 +1,6 @@
 slug: tabletop-audio
 published: Sun, 07 Aug 2016 at 05:27 PM
-updated: Sun, 17 May 2020 at 06:41 AM
+updated: Sat, 30 May 2020 at 08:39 PM
 title: Tabletop Audio
 author: Brian Schrader
 tags: tabletop rpg, D&D, audio

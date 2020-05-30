@@ -1,6 +1,6 @@
 slug: adventurers-codex-behind-the-curtain
 published: Tue, 20 Jun 2017 at 09:52 PM
-updated: Sun, 17 May 2020 at 06:41 AM
+updated: Sat, 30 May 2020 at 08:39 PM
 title: Adventurer's Codex: Behind the Curtain
 author: Brian Schrader
 tags: adventurer's codex, development, dnd
