@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Careful with Complex Querysets - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Careful with Complex Querysets" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/careful-with-complex-querysets/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+</head>
+<body>
+<div id="content">
+  <div class="nav-container">
+    <nav class="nav">
+      <div class="nav-item nav-brand">
+        <a href="/" class="site-title">
+          BiteofanApple
+        </a>
+        <span
+          class="author-tag hide-on-mobile"
+        >
+          by <a href="/about/">Brian Schrader</a>
+        </span>
+      </div>
+      <div class="nav-item"><a href="/archive/">Archive</a></div>
+      <div class="nav-item"><a href="/about/">About</a></div>
+      <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+      <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+      <div class="nav-item hide-on-mobile"><a href="http://photos.brianschrader.com">Photos</a></div>
+      <div class="nav-item hide-on-mobile"><a href="//pinboard.in/u:sonicrocketman/public/">Links</a></div>
+    </nav>
+  </div>
+  <div id="post-list">
+    <article class="h-entry">
+      <a href="/" class="u-author"></a>
+      <div class="post">
+        <div class="article-title">
+          <h1 class="p-name"><a href="/archive/careful-with-complex-querysets/">Careful with Complex Querysets</a></h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2020-06-18T18:57:00-08:00">
+              Posted on Thu, 18 Jun 2020 at 06:57 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>Today I learned something about filtering Django Querysets and fixed a long standing bug. But first some context.</p>
+<p>As a feed reader, Pine.blog needs to parse feeds. To do this, every 5 minutes, Pine.blog checks to see which feeds it needs to parse. A feed can fall into one of three categories:</p>
+<ul>
+<li><strong>Constantly changing feeds with active subscribers</strong>: Feeds that change regularly (i.e. microblogs, Reddit feeds, etc) and have recently active users subscribed to them.</li>
+<li><strong>Less frequently changing feeds with active subscribers</strong>: Feeds that may update rarely, but still have recently active users subscribed to them.</li>
+<li><strong>Everything else</strong>: Feeds with no one subscribed to them, but are still included in the Feed Directory, or feeds with subscribers who haven't logged in to Pine.blog recently.</li>
+</ul>
+<p>To do all of this, Pine.blog keeps track of how often a feed is typically updated, but if it can't tell, it sets the <code>approximate_update_frequency</code> to <code>NULL</code>. Then each of the three categories are checked at different frequencies, ensuring that everything gets parsed at least once every 24 hours, but things that change more often, or with active users subscribed to them, are given priority and parsed more regularly: every 15 or every 30 minutes respectively.</p>
+<p>It's the second category that's long been acting weird. And that's where my bug comes in.</p>
+<h3>The Actual Code</h3>
+<p>The bug I discovered has to do with how I group the feeds into those categories. Specifically, I learned that this:</p>
+<pre><code>Q(approximate_update_frequency__in=[
+    None,
+    UpdateFrequency.CONSTANTLY,
+    UpdateFrequency.FEW_PER_DAY,
+])
+</code></pre>
+<p>Is not the same as this:</p>
+<pre><code>Q(approximate_update_frequency__in=[
+    UpdateFrequency.CONSTANTLY,
+    UpdateFrequency.FEW_PER_DAY,
+]) | Q(approximate_update_frequency__isnull=True)
+</code></pre>
+<p>The critical change is the switch from including <code>None</code> in the list of allowed items to explicitly filtering by <code>isnull</code>. It seems minor, and it totally feels like you should be able to use None in an <code>IN</code> collection, but you can't.</p>
+<p>Funnily enough, the query sort-of works with the <code>None</code> in there, it just ignores the <code>None</code> and uses the other two. The true issue arises when you try to inverse the condition using the <code>NOT</code> operator. This is exactly what Pine.blog's dispatch tasks were doing. It would first fetch the list of every feed matching that criteria, and then do a second fetch of everything that didn't match, and that second one is where results were getting lost.</p>
+<p>All this means that some feeds in the second group were being lumped into the third group, delaying their posts from appearing for hours. I've known about this issue for a while, because the posts from this blog (which squarely fall into the second group) weren't showing up in Pine.blog until the following day.</p>
+<p>Glad to finally squash that bug.</p>
+<div class="footnote">
+* This update also migrates Pine.blog to Python 3.7. It's been on 3.6 for years, and I only upgraded it because homebrew screwed up my 3.6 install and it was easier to upgrade Pine.blog than downgrade my Mac's Python version. Fun times.
+</div>
+        </div>
+      </div>
+    </article>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

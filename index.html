@@ -39,6 +39,54 @@
 			<article>
 	<div class="post h-entry">
 		<div class="article-title">
+			<h1><a href="/archive/careful-with-complex-querysets/" class="u-url p-name">
+					Careful with Complex Querysets
+				</a>
+			</h1>
+			<small style="font-style:italic;">
+        <time class="dt-published" datetime="2020-06-18T18:57:00-08:00">
+          Posted on Thu, 18 Jun 2020 at 06:57 PM
+        </time>
+			</small>
+		</div> <!-- End article-title -->
+		<div class="article-content e-content">
+			<p>Today I learned something about filtering Django Querysets and fixed a long standing bug. But first some context.</p>
+<p>As a feed reader, Pine.blog needs to parse feeds. To do this, every 5 minutes, Pine.blog checks to see which feeds it needs to parse. A feed can fall into one of three categories:</p>
+<ul>
+<li><strong>Constantly changing feeds with active subscribers</strong>: Feeds that change regularly (i.e. microblogs, Reddit feeds, etc) and have recently active users subscribed to them.</li>
+<li><strong>Less frequently changing feeds with active subscribers</strong>: Feeds that may update rarely, but still have recently active users subscribed to them.</li>
+<li><strong>Everything else</strong>: Feeds with no one subscribed to them, but are still included in the Feed Directory, or feeds with subscribers who haven't logged in to Pine.blog recently.</li>
+</ul>
+<p>To do all of this, Pine.blog keeps track of how often a feed is typically updated, but if it can't tell, it sets the <code>approximate_update_frequency</code> to <code>NULL</code>. Then each of the three categories are checked at different frequencies, ensuring that everything gets parsed at least once every 24 hours, but things that change more often, or with active users subscribed to them, are given priority and parsed more regularly: every 15 or every 30 minutes respectively.</p>
+<p>It's the second category that's long been acting weird. And that's where my bug comes in.</p>
+<h3>The Actual Code</h3>
+<p>The bug I discovered has to do with how I group the feeds into those categories. Specifically, I learned that this:</p>
+<pre><code>Q(approximate_update_frequency__in=[
+    None,
+    UpdateFrequency.CONSTANTLY,
+    UpdateFrequency.FEW_PER_DAY,
+])
+</code></pre>
+<p>Is not the same as this:</p>
+<pre><code>Q(approximate_update_frequency__in=[
+    UpdateFrequency.CONSTANTLY,
+    UpdateFrequency.FEW_PER_DAY,
+]) | Q(approximate_update_frequency__isnull=True)
+</code></pre>
+<p>The critical change is the switch from including <code>None</code> in the list of allowed items to explicitly filtering by <code>isnull</code>. It seems minor, and it totally feels like you should be able to use None in an <code>IN</code> collection, but you can't.</p>
+<p>Funnily enough, the query sort-of works with the <code>None</code> in there, it just ignores the <code>None</code> and uses the other two. The true issue arises when you try to inverse the condition using the <code>NOT</code> operator. This is exactly what Pine.blog's dispatch tasks were doing. It would first fetch the list of every feed matching that criteria, and then do a second fetch of everything that didn't match, and that second one is where results were getting lost.</p>
+<p>All this means that some feeds in the second group were being lumped into the third group, delaying their posts from appearing for hours. I've known about this issue for a while, because the posts from this blog (which squarely fall into the second group) weren't showing up in Pine.blog until the following day.</p>
+<p>Glad to finally squash that bug.</p>
+<div class="footnote">
+* This update also migrates Pine.blog to Python 3.7. It's been on 3.6 for years, and I only upgraded it because homebrew screwed up my 3.6 install and it was easier to upgrade Pine.blog than downgrade my Mac's Python version. Fun times.
+</div>
+		</div>
+	</div>
+</article>
+
+<article>
+	<div class="post h-entry">
+		<div class="article-title">
 			<h1><a href="/archive/announcing-nine9scloud-/" class="u-url p-name">
 					Announcing Nine9s.cloud 🎉
 				</a>
@@ -299,61 +347,6 @@
     <sup>1</sup> This was prior to the 16" coming out.<br />
     <sup>2</sup> Somehow Alfred knows that "set", short for Settings, refers to System Preferences. I have no idea how it learned this or when, but I've never once asked for that app by its real name.
 </div
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/" class="u-url p-name">
-					Pine.blog Downtime Post-Mortem: A Story of Finite Resources
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-02-17T04:57:00-08:00">
-          Posted on Mon, 17 Feb 2020 at 04:57 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Pine.blog was down for a while today (~6 hours). What follows is a bit about why and what I've learned from the experience. In the end, nothing was lost and the site is back up. My apologies to all of my users; thanks for your patience.</p>
-<hr />
-<p>Today did not go as planned. As I do, this morning I opened Pine.blog to read the news and instead of seeing a newly updated timeline, the app had logged me out. Worse still, I couldn't log back in, and the website wasn't responding. Sigh.</p>
-<p>Some quick investigation revealed that the disk had filled, which caused the creation of new sessions and access tokens to fail. Admittedly, I don't have any sort of disk usage monitoring on the database server, but because I'd just doubled the amount of storage on that server less than two months ago, I wasn't really thinking it would fill up anytime soon. Regardless, it had.</p>
-<h3>The Causes</h3>
-<p>From what I can tell, a combination of external factors and my own design decisions led to the disk filling up much faster than I was expecting:</p>
-<ol>
-<li>
-<p><strong>Feeds are kinda huge (sometimes).</strong> A few Pine.blog users have feeds that seem to contain hundreds of new items every hour, which Pine.blog will faithfully parse and store in their timelines. In some cases, this meant that such a feed could contain 200,000+ items in only a few weeks. What's worse is that because of a recent change to how timelines work, a timeline can't hold that many items anymore which means Pine.blog was storing a ton of data it would never actually use.</p>
-</li>
-<li>
-<p><strong>Pine.blog stores a lot of data.</strong> By design, Pine.blog doesn't really delete items that it has previously parsed and it stores multiple copies of certain data to make it easier to serve, but this drastically inflates storage requirements.</p>
-</li>
-<li>
-<p><strong>I misunderstood my tools.</strong> I'm not a database guy; I'm an app developer. To me Postgres has always been a bit magical, and today that bit me. About a month ago, I thought I'd read somewhere that the newest versions of Postgres didn't need to be routinely vacuumed, and that running a daily vacuum was an old, outdated practice, so I stopped doing it. <em>This was a bad idea</em>. Without that daily cleaning, the Pine.blog database couldn't reuse space that it no longer needed, and so it kept asking the OS for more disk space, right up until there wasn't any more.</p>
-</li>
-</ol>
-<p>In the end it was the mundane, but powerful combination of a few small things that caused the issues today: some overzealous design choices, a few misunderstandings, and a few overactive feeds.</p>
-<h3>The Solutions</h3>
-<p>Right away, I should admit this whole thing could have been solved a lot sooner. I underestimated the issue at first and tried to keep the site up while I fixed the issue. In hindsight it would have been a lot faster and easier to resize the server to something that had more disk space, vacuum the database, resize the filesystem and scale back down. This whole thing could have been solved in 1-2 hours instead of 6-8.</p>
-<p>That said, here's the two things that I'll be changing about how Pine.blog works in order to prevent this problem in the future:</p>
-<ol>
-<li>
-<p>The nightly vacuum is back. Removing it was a dumb idea.</p>
-</li>
-<li>
-<p><strong>Pine.blog will no longer store the entire history of external feeds.</strong> This one isn't fully in effect yet, but expect the change soon.</p>
-</li>
-</ol>
-<p>As of recently, each Pine.blog timeline has a maximum length of 3000 posts. Once a post falls off the end, you won't be able to find it by scrolling backward in your timeline anymore. This is exactly what Twitter does (although their limit is a modest 800 posts). Feeds will soon do something similar. Pine.blog will keep just the most recent posts in a feed (~3-5000 posts in total) and anything beyond that point will be removed from Pine.blog's database.<sup>1</sup></p>
-<p>I suspect that no one will actually notice these changes once they're rolled out, but to me they mark the end of the road for a naive dream I had back when I started Pine.blog.</p>
-<p><center>
-<strong>tl;dr</strong> Turns out parsing and storing entire portions of the web is hard.
-</center></p>
-<div class="footnote">
-<sup>1.</sup> Hosted blogs are uneffected. Pine.blog will store your entire blog . This change only effects feeds from outside of Pine.blog.
-</div>
 		</div>
 	</div>
 </article>
