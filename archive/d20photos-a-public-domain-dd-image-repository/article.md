@@ -1,12 +1,19 @@
 slug: d20photos-a-public-domain-dd-image-repository
-published: Tue, 23 Jun 2020 at 07:47 PM
-updated: Tue, 23 Jun 2020 at 07:47 PM
+published: Wed, 24 Jun 2020 at 5:00 PM
+updated: Tue, 23 Jun 2020 at 08:05 PM
 title: d20.photos: A Public Domain D&D Image Repository
 author: Brian Schrader
 tags: d20.photos, D&D, Pathfinder, public domain, image hosting, primitive
 status: publish
 
 I bought the domain [d20.photos][1] on Nov 23rd, 2018 with the goal of building a free-to-use, public-domain image hosting service for D&D, Pathfinder, and other fantasy RPGs. Today, that goal is realized.
+
+<a href="https://d20.photos/">
+  <img
+    src="https://d20.photos/static/images/apple-touch-icon.jpg"
+    alt="d20.photos Logo"
+    style="max-width:150px; width:80%; box-shadow:3px 3px 5px darkgrey; border-radius:30px; padding:0; margin:15px; float:right;">
+</a>
 
 Finding images for your D&D campaigns is really difficult, especially if you're looking to sell your campaign. Most artwork isn't licensed in a way that makes it easy for low-budget creators to use and often there's no way to easily find images for settings or places in your game. [d20.photos][1] aims to change that by providing a free, community-driven, human-curated image hosting service for D&D/Pathfinder related images. [d20.photos][1] aims to be a one-stop-shop for all your image needs. Since all images on the site are released into the Public Domain, you can be sure that you're ok to use, re-use, modify, them and even include them in your paid campaign or story.
 
