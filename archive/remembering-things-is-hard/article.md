@@ -1,6 +1,6 @@
 slug: remembering-things-is-hard
 published: Sun, 03 Nov 2019 at 06:59 PM
-updated: Sat, 30 May 2020 at 08:39 PM
+updated: Thu, 09 Jul 2020 at 01:58 AM
 title: Remembering Things is Hard
 author: Brian Schrader
 tags: code, software, preflight, git

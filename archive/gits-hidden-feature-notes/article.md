@@ -1,6 +1,6 @@
 slug: gits-hidden-feature-notes
 published: Sun, 04 Mar 2018 at 08:37 PM
-updated: Sat, 30 May 2020 at 08:39 PM
+updated: Thu, 09 Jul 2020 at 01:58 AM
 title: Git's Hidden Feature: Notes
 author: Brian Schrader
 tags: git, development, software, programming

@@ -1,10 +1,11 @@
 slug: announcing-nine9scloud-
 published: Wed, 10 Jun 2020 at 04:43 PM
-updated: Wed, 10 Jun 2020 at 04:43 PM
+updated: Thu, 09 Jul 2020 at 01:58 AM
 title: Announcing Nine9s.cloud 🎉
 author: Brian Schrader
 tags: nine9s, launch, announcement, uptime monitoring, saas
 status: publish
+featured: true
 
 <center><i>We interrupt this blog for a special announcement</i></center>
 

@@ -1,6 +1,6 @@
 slug: a-good-day
 published: Sat, 14 Mar 2020 at 05:34 AM
-updated: Sat, 30 May 2020 at 08:39 PM
+updated: Thu, 09 Jul 2020 at 01:58 AM
 title: A Good Day
 author: Brian Schrader
 tags: pine.blog, good, success, win,

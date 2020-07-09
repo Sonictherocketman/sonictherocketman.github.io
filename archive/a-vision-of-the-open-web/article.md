@@ -1,10 +1,11 @@
 slug: a-vision-of-the-open-web
 published: Tue, 08 Mar 2016 at 09:31 AM
-updated: Sat, 30 May 2020 at 08:39 PM
+updated: Thu, 09 Jul 2020 at 01:58 AM
 title: A Vision of the Open Web
 author: Brian Schrader
 tags: open web, technology
 status: publish
+featured: true
 
 > **The Open Web**: (N) A term used by tech nerds and developers whenever a large corporation shuts off their public API.
 

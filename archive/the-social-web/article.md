@@ -1,10 +1,11 @@
 slug: the-social-web
 published: Sun, 28 Jul 2019 at 06:35 AM
-updated: Sat, 30 May 2020 at 08:39 PM
+updated: Thu, 09 Jul 2020 at 01:58 AM
 title: The Social Web
 author: Brian Schrader
 tags: open web, social media, pine.blog
 status: publish
+featured: true
 
 Things have been quiet here recently, and that's largely because I've been really busy working on lots of cool new stuff for [Pine.blog][pine]. While the last few months have been full of steady progress, there's still a ways to go before the next set of features are ready for the world. If everything goes according to plan, the next major release should allow premium users to start their own blog on the site.
 

@@ -307,11 +307,53 @@ ul p {
   vertical-align: middle;
 }
 
-/*
-*
-* Begin Link Styling
-*
-*/
+/* Home Page Styles */
+
+.bars {
+	margin: auto;
+	max-width: 925px;
+}
+
+.bars .main-bar {
+	margin: auto;
+  overflow: hidden;
+  display: inline-block;
+  width: 80%;
+  vertical-align: top;
+}
+
+.bars .side-bar {
+	margin: auto;
+  overflow: hidden;
+  display: inline-block;
+  width: calc(20% - 5px);
+  vertical-align: top;
+  padding-top: 6rem;
+}
+
+.side-bar h4,h5,h6 {
+  margin-bottom: 8px;
+}
+
+.side-bar ul {
+  font-size: 92%;
+  margin-top: 0px;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.side-bar ul > li {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.side-bar a {
+  text-decoration: none;
+  color: #4068B8;
+}
+
+/* Begin Link Styling */
 
 .nav a:link {color:white; text-decoration:none;}
 .nav a:visited {color:white; text-decoration:none;}
