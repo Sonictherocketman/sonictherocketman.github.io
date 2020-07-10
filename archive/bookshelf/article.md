@@ -1,6 +1,6 @@
 slug: bookshelf
 published: Fri, 10 Jul 2020 at 07:37 PM
-updated: Fri, 10 Jul 2020 at 07:37 PM
+updated: Fri, 10 Jul 2020 at 07:41 PM
 title: Book Recommendations
 author: Brian Schrader
 tags: book recommendations, recommendations, knowledge
@@ -26,7 +26,7 @@ status: publish
 
 ### Mathematics and Technology
 
-- *[The Gödel's Proof][13]*
+- *[The Gödel's Proof][13]* by Ernest Nagel, James R. Newman, Douglas R. Hofstadter
 
 
 ### History
