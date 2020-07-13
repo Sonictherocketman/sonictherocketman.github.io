@@ -315,7 +315,6 @@ ul p {
 }
 
 .bars .main-bar {
-	margin: auto;
   overflow: hidden;
   display: inline-block;
   width: 80%;
@@ -326,7 +325,8 @@ ul p {
 	margin: auto;
   overflow: hidden;
   display: inline-block;
-  width: calc(20% - 5px);
+  width: 20%;
+  float: right;
   vertical-align: top;
   padding-top: 6rem;
 }
@@ -385,4 +385,29 @@ ul p {
 	}
 ::-moz-selection {
 	background: #7EA5E0; /* Firefox */
+}
+
+
+/* Progress Bars */
+
+.progress-bar {
+  margin: auto;
+  width: calc(100% - 2px);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.progress-bar .progress {
+  border-radius: 3px;
+  background-color: #454545;
+  text-align:center;
+  height: 6px;
+}
+
+.progress-bar .progress.progress-saas-book {
+  width: 23%;
+}
+
+.progress-bar .progress-pine-blog-release {
+  width: 5%;
 }

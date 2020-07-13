@@ -123,14 +123,15 @@
 @media only screen and (max-width : 925px) {
   .bars .main-bar {
     display: block;
-    width: 100%;
+    width: auto;
     border-bottom: 1px solid #ccc;
   }
 
   .bars .side-bar {
+    float: none;
   	padding: 3%;
     display: block;
-    width: 100%;
+    width: auto;
   }
 }
 
