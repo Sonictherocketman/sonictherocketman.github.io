@@ -1,6 +1,6 @@
 slug: bookshelf
 published: Fri, 10 Jul 2020 at 07:37 PM
-updated: Sun, 12 Jul 2020 at 01:36 AM
+updated: Thu, 13 Aug 2020 at 04:49 AM
 title: Book Recommendations
 author: Brian Schrader
 tags: book recommendations, recommendations, knowledge
@@ -9,13 +9,14 @@ hidden: yes
 status: publish
 
 
-### Politics and Government
+### Politics, Society, and Government
 
 - *[Democracy May Not Exist but We'll Miss it When it's Gone][1]* by Astra Taylor
 - *[Why We're Polarized][2]* by Ezra Klein
 - *[The People vs. Democracy][3]* by Yasha Mounk
 - *[Give People Money: How a Universal Basic Income Would End Poverty, Revolutionize Work, and Remake the World][4]* by Annie Lowery
 - *[The Deficit Myth: Modern Monetary Theory and the Birth of the People's Economy][5]* by Stephanie Kelton
+- *[Ghosting the News: Local Journalism and the Crisis of American Democracy][21]* by Margaret Sullivan
 
 
 ### Philosophy
@@ -77,3 +78,4 @@ status: publish
 [18]: https://www.indiebound.org/book/9780486841915
 [19]: https://www.indiebound.org/book/9781591025948
 [20]: https://www.indiebound.org/book/9780684818627
+[21]: https://www.indiebound.org/book/9781733623780
