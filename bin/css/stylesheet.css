@@ -412,3 +412,42 @@ ul p {
 .progress-bar .progress-pine-blog-release {
   width: 40%;
 }
+
+.promotion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px;
+  margin: 8px 8px 8px 0px;
+  border: 1px dashed #ccc;
+  text-align: left;
+}
+
+.promotion img.promotion-cover {
+  flex: 0 0 50px;
+  margin-right: 12px;
+}
+
+.promotion div.promotion-body {
+  flex: 1;
+}
+
+.promotion-body p {
+  text-indent: 0px;
+  text-align: left;
+}
+
+.promotion .link-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.promotion .link-bar a {
+  flex: 1;
+}
+
+.promotion .disclaimer {
+  font-size: small;
+  font-style: italic;
+}
