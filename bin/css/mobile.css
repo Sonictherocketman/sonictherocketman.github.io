@@ -113,8 +113,33 @@
   }
 
   .show-on-mobile {
-    display:unset !important;
+    display: unset !important;
   }
+
+  .promotion {
+    margin: 8px 2px 8px 2px;
+    border: 1px dashed #ccc;
+  }
+
+  .promotion img.promotion-cover {
+
+  }
+
+  .promotion div.promotion-body {
+  }
+
+  .promotion-body p {
+  }
+
+  .promotion .link-bar {
+  }
+
+  .promotion .link-bar a {
+  }
+
+.promotion .disclaimer {
+  font-size: initial;
+}
 
 }
 

@@ -426,13 +426,16 @@ ul p {
 .promotion img.promotion-cover {
   flex: 0 0 50px;
   margin-right: 12px;
+  width: auto;
+  height: auto;
+  max-width: 100px;
 }
 
 .promotion div.promotion-body {
   flex: 1;
 }
 
-.promotion-body p {
+.promotion p {
   text-indent: 0px;
   text-align: left;
 }
@@ -440,7 +443,9 @@ ul p {
 .promotion .link-bar {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
 }
 
 .promotion .link-bar a {

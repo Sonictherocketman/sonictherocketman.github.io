@@ -1,6 +1,6 @@
 slug: going-indie
 published: Sat, 08 Aug 2020 at 02:18 AM
-updated: Wed, 19 Aug 2020 at 11:46 PM
+updated: Thu, 03 Sep 2020 at 09:03 PM
 title: Going Indie
 author: Brian Schrader
 status: publish
@@ -12,8 +12,10 @@ hidden: true
 </style>
 
 <img
-    class="image-right not-too-small hide-on-mobile"
-    src="/images/blog/Gray_book.png"
+    class="not-too-small hide-on-mobile"
+    style="float:right;width:250px;height:auto;"
+    src="/images/going-indie/cover.jpg"
+    width="250px"
 />
 
 ### A complete guide to becoming an independent software developer
@@ -21,10 +23,10 @@ hidden: true
 From starting a company and staying motivated, to designing, building, and launching your first product and beyond.
 
 <center class="show-on-mobile">
-  <img src="/images/blog/Gray_book.png"/>
+  <img src="/images/going-indie/cover.jpg"/>
 </center>
 
-*Coming in 2020*
+*Coming in 2020!*
 
 
 #### Get Instant Updates
