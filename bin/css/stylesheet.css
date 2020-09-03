@@ -406,12 +406,14 @@ ul p {
 }
 
 .progress-bar .progress.progress-saas-book {
-  width: 97.3%;
+  width: 15%;
 }
 
 .progress-bar .progress-pine-blog-release {
-  width: 40%;
+  width: 5%;
 }
+
+/* Going Indie Promo */
 
 .promotion {
   display: flex;
