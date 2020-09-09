@@ -1,0 +1,16 @@
+site:
+    name: BiteofanApple
+    domain: brianschrader.com
+    root: ~/Projects/brianschrader.com
+    templates: ~/Projects/brianschrader.com/_admin/templates
+    author_image_url: http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595
+    description: >-
+        Thoughts, and ramblings about technology, programming, history,
+         and whatever else I\'m interested in.
+    categories:
+        - programming
+        - history
+        - science
+        - personal
+        - technology
+
