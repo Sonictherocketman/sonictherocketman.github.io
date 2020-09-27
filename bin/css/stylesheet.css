@@ -218,6 +218,8 @@ ul p {
 }
 .image-rounded {
   border-radius: 50%;
+  /* Remove other style padding that messes with circle border. */
+  padding: 0px !important;
 }
 
 .shadow {
