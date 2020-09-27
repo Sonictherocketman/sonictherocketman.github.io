@@ -75,6 +75,40 @@
         <article>
 	<div class="post h-entry">
 		<div class="article-title">
+			<h1><a href="/archive/git-hooks-for-fun-and-profit/" class="u-url p-name">
+					Git Hooks for Fun and Profit
+				</a>
+			</h1>
+			<small style="font-style:italic;">
+        <time class="dt-published" datetime="2020-09-27T19:44:00-08:00">
+          Posted on Sun, 27 Sep 2020 at 07:44 PM
+        </time>
+			</small>
+		</div> <!-- End article-title -->
+		<div class="article-content e-content">
+			<p>I love Git hooks. For those who aren't aware, Git hooks allow you to specify actions that will be automatically taken whenever certain Git commands start or complete. Git hooks are great for simple, easily forgettable, automate-able tasks. In most projects, <a href="/archive/remembering-things-is-hard/">I use Git hooks</a> to <a href="https://gist.github.com/Sonictherocketman/b196995f768eda4411e0771e9c509237">automatically run preflight checks</a> before I'm allowed to commit any changes to a codebase. Usually this means that the codebase is properly formatted, dangling imports are removed, and basic style checks and tests pass. If these checks don't pass, the commit fails.</p>
+<p>That said, Git hooks can do so much more. As I've mentioned many times, this site, along with <a href="//goingindie.tech/">GoingIndie.tech</a> and <a href="http://indiedevlife.fm">IndieDevLife.fm</a> are static sites. They're just files served by apache. Because of that, both sites aren't able to take advantage of a lot of really cool blog ecosystem features like ping change notifications. These notifications are typically sent from blogging systems to search engines or news aggregators to let those services know that the site's content has been updated (i.e. a new post was just published, etc). These notifications help services more quickly discover and disseminate that new content to users. <a href="https://pine.blog/kb/add_external_blog#ping">Pine.blog supports this feature</a> and Wordpress blogs automatically send these notifications to Google, but my simple static site couldn't.</p>
+<p>Then I realized that Git hooks can solve this problem!</p>
+<p>Both sites are just Git repos that use a <code>post-receive</code> hook to check out the latest version to a directory served by apache. I commit a new set of changes, push those changes to the remote repo on my server, and that hook runs and copies this new version into wherever apache is expecting. All I need to do is add a little snippet of code to that same hook to send Pine.blog a notification, because by definition: whenever a Git commit is received, the site has changed.</p>
+<pre><code># Send an XML-RPC extendedPing notification to Pine.blog
+echo "&lt;methodCall&gt;
+    &lt;methodName&gt;weblogUpdates.extendedPing&lt;/methodName&gt;
+    &lt;params&gt;
+        &lt;param&gt;&lt;value&gt;&lt;string&gt;brianschrader.com&lt;/string&gt;&lt;/value&gt;&lt;/param&gt;
+        &lt;param&gt;&lt;value&gt;&lt;string&gt;https://brianschrader.com/&lt;/string&gt;&lt;/value&gt;&lt;/param&gt;
+    &lt;/params&gt;
+&lt;/methodCall&gt;
+" | curl -H "Content-Type: application/xml" -X POST -d @- \
+    https://pine.blog/api/xml-rpc/ping
+</code></pre>
+<p>Adding this simple curl script to my <code>post-receive</code> hook did the trick! Now my blog posts will more quickly appear on Pine.blog! Git hooks for the win.</p>
+		</div>
+	</div>
+</article>
+
+<article>
+	<div class="post h-entry">
+		<div class="article-title">
 			<h1><a href="/archive/the-little-engine-that-could/" class="u-url p-name">
 					The Little Engine that Could
 				</a>
@@ -334,32 +368,6 @@
 <p>Blogs can and should be the social network of the future, and Pine.blog is here to help make that better world a reality.</p>
 </blockquote>
 <p><a href="https://blog.pine.blog/2020/05/bring-us-your-static-sites-yearning-to-breathe-free/">Bring Us Your Static Sites, Yearning to Breathe Free &#8594;</a></p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/a-whole-new-mac/" class="u-url p-name">
-					A Whole New Mac
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-05-22T00:43:00-08:00">
-          Posted on Fri, 22 May 2020 at 12:43 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Today was an important day. Today I'm finally retiring my 2013 MacBook Pro. I'm even writing these words on a new Mac. It's been a <a href="/archive/an-ode-to-the-13-inch-macbook-pro/">long road</a>, but my dependable, old 2013 MBP has reached the end of its life... as my primary computer. It still works well, so I can't bear getting rid of it. At this point I think I'll wipe it and use it for editing music.</p>
-<h3>A New Fantastic Point of View</h3>
-<p>As I type these words on my new 13" Macbook Pro, I feel extremely relieved. This laptop feels great to use. It's small, light, powerful, and beautiful. The keyboard works well and feels good, the display is beautiful, the touch bar with an escape key is a good compromise, Touch ID is great, and Migration Assistant transferred everything over perfectly (even my blogging engine and the outdated versions of Python 2 on which it depends).*</p>
-<p>I look forward to taking this thing through it's paces. I've taken my 2013 MBP  across the US and beyond, so there's no telling where this one will go. I'll miss the HDMI port and Magsafe moreso, but c'est la vie. The years start coming and they don't stop coming; so must I march along with them.</p>
-<p>Welcome to the party, new MacBook. I hope you're ready to rock.</p>
-<div class="footnote">
-* Migration Assistant remains one of the most magical and underrated pieces of software Apple makes. It transfers apps, files, .rc files, everything in /usr/local/bin and more. The idea of having to manually migrate my files and applications makes me cringe. I've never set up a new personal Mac after my first one.
-</div>
 		</div>
 	</div>
 </article>

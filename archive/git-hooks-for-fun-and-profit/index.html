@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Git Hooks for Fun and Profit - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Git Hooks for Fun and Profit" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/git-hooks-for-fun-and-profit/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+</head>
+<body>
+<div id="content">
+  <div class="nav-container">
+    <nav class="nav">
+      <div class="nav-item nav-brand">
+        <a href="/" class="site-title">
+          BiteofanApple
+        </a>
+        <span
+          class="author-tag hide-on-mobile"
+        >
+          by <a href="/about/">Brian Schrader</a>
+        </span>
+      </div>
+      <div class="nav-item"><a href="/archive/">Archive</a></div>
+      <div class="nav-item"><a href="http://brianschrader.com/about/">About</a></div>
+      <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+      <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+    </nav>
+  </div>
+  <div id="post-list">
+    <article class="h-entry">
+      <a href="/" class="u-author"></a>
+      <div class="post">
+        <div class="article-title">
+          <h1 class="p-name"><a href="http://brianschrader.com/archive/git-hooks-for-fun-and-profit/">Git Hooks for Fun and Profit</a></h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2020-09-27T19:44:00-08:00">
+              Posted on Sun, 27 Sep 2020 at 07:44 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>I love Git hooks. For those who aren't aware, Git hooks allow you to specify actions that will be automatically taken whenever certain Git commands start or complete. Git hooks are great for simple, easily forgettable, automate-able tasks. In most projects, <a href="/archive/remembering-things-is-hard/">I use Git hooks</a> to <a href="https://gist.github.com/Sonictherocketman/b196995f768eda4411e0771e9c509237">automatically run preflight checks</a> before I'm allowed to commit any changes to a codebase. Usually this means that the codebase is properly formatted, dangling imports are removed, and basic style checks and tests pass. If these checks don't pass, the commit fails.</p>
+<p>That said, Git hooks can do so much more. As I've mentioned many times, this site, along with <a href="//goingindie.tech/">GoingIndie.tech</a> and <a href="http://indiedevlife.fm">IndieDevLife.fm</a> are static sites. They're just files served by apache. Because of that, both sites aren't able to take advantage of a lot of really cool blog ecosystem features like ping change notifications. These notifications are typically sent from blogging systems to search engines or news aggregators to let those services know that the site's content has been updated (i.e. a new post was just published, etc). These notifications help services more quickly discover and disseminate that new content to users. <a href="https://pine.blog/kb/add_external_blog#ping">Pine.blog supports this feature</a> and Wordpress blogs automatically send these notifications to Google, but my simple static site couldn't.</p>
+<p>Then I realized that Git hooks can solve this problem!</p>
+<p>Both sites are just Git repos that use a <code>post-receive</code> hook to check out the latest version to a directory served by apache. I commit a new set of changes, push those changes to the remote repo on my server, and that hook runs and copies this new version into wherever apache is expecting. All I need to do is add a little snippet of code to that same hook to send Pine.blog a notification, because by definition: whenever a Git commit is received, the site has changed.</p>
+<pre><code># Send an XML-RPC extendedPing notification to Pine.blog
+echo "&lt;methodCall&gt;
+    &lt;methodName&gt;weblogUpdates.extendedPing&lt;/methodName&gt;
+    &lt;params&gt;
+        &lt;param&gt;&lt;value&gt;&lt;string&gt;brianschrader.com&lt;/string&gt;&lt;/value&gt;&lt;/param&gt;
+        &lt;param&gt;&lt;value&gt;&lt;string&gt;https://brianschrader.com/&lt;/string&gt;&lt;/value&gt;&lt;/param&gt;
+    &lt;/params&gt;
+&lt;/methodCall&gt;
+" | curl -H "Content-Type: application/xml" -X POST -d @- \
+    https://pine.blog/api/xml-rpc/ping
+</code></pre>
+<p>Adding this simple curl script to my <code>post-receive</code> hook did the trick! Now my blog posts will more quickly appear on Pine.blog! Git hooks for the win.</p>
+        </div>
+      </div>
+    </article>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
