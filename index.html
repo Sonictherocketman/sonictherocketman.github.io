@@ -75,6 +75,48 @@
         <article>
 	<div class="post h-entry">
 		<div class="article-title">
+			<h1><a href="/archive/house-judiciary-committee-recommends-interoperable-social-media/" class="u-url p-name">
+					House Judiciary Committee recommends Interoperable Social Media
+				</a>
+			</h1>
+			<small style="font-style:italic;">
+        <time class="dt-published" datetime="2020-10-07T01:46:00-08:00">
+          Posted on Wed, 07 Oct 2020 at 01:46 AM
+        </time>
+			</small>
+		</div> <!-- End article-title -->
+		<div class="article-content e-content">
+			<p>Today the <a href="/image/blog/investigation_of_competition_in_digital_markets_majority_staff_report_and_recommendations.pdf">House Judiciary Committee released its report</a> detailing the numerous anti-competitive practices employed by the big tech firms: Apple, Amazon, Facebook, and Google. The report details why these firms are under investigation, what role they play in their respective markets, and whether they have achieved monopoly status in those markets (spoiler, it says they have). The report looks at the web search, web advertising, social media, e-commerce, and mobile software distribution markets, their history, and their future. It's a long read, but you should check it out, at least through the Executive Summary section.</p>
+<p>Importantly, the authors also make a number of recommendations aimed at fixing the problems they identified in the report. This is where things get interesting. The report recommends a lot of what open web folks (like myself) have been wanting for years. Here's a few of the most relevant recommendations (emphasis mine):</p>
+<blockquote>
+<ul>
+<li>Structural separations and <strong>prohibitions of certain dominant platforms from operating in adjacent lines of business</strong>;</li>
+<li>Nondiscrimination requirements, <strong>prohibiting dominant platforms from engaging in self-preferencing, and requiring them to offer equal terms for equal products and services</strong>;</li>
+<li><strong>Interoperability and data portability</strong>, requiring dominant platforms to make their services compatible with various networks and to make content and information easily portable between them;</li>
+<li><strong>Safe harbor for news publishers</strong> in order to safeguard a free and diverse press;</li>
+<li><strong>Prohibitions on abuses of superior bargaining power</strong>, proscribing dominant platforms from engaging in contracting practices that derive from their dominant market position, and requiring due process protections for individuals and businesses dependent on the dominant platforms;</li>
+<li>Strengthening private enforcement, through <strong>eliminating obstacles such as forced arbitration clauses</strong>, limits on class action formation, judicially created standards constraining what constitutes an antitrust injury, and unduly high pleading standards.</li>
+</ul>
+<p><em>p. 20-12</em></p>
+</blockquote>
+<p>This is great news! These reforms would, in my opinion, do a lot to level the playing field that currently tilts towards benefitting these large incumbents. Each and every one of these companies benefitted by taking advantage of the power of the Open Web in their early days and most still do in some form, but they contribute nothing back and they actively work to undermine the things that make the Web and the Internet great. The report explicitly calls out Facebook's lack of interoperability and recommends that social media companies be forced to interoperate and provide data portability in the same way that phone carriers are currently required to do.</p>
+<blockquote>
+<p>As a result, these markets are no longer contestable by new entrants, the competitive process shifts from “competition in the market to competition for the market.”</p>
+<p>This dynamic is particularly evident in the social networking market...</p>
+<p>In response to these concerns, Subcommittee staff recommends that Congress consider data interoperability and portability to encourage competition by lowering entry barriers for competitors and switching costs by consumers. These reforms would complement vigorous antitrust enforcement by spurring competitive entry.</p>
+<p><strong>a. Interoperability</strong></p>
+<p>Interoperability is fundamental to the open internet. It is present in email, which is an open, interoperable protocol for communicating online regardless of a person’s email service or the type of the device they use to send the email.</p>
+<p>An interoperability requirement would allow competing social networking platforms to interconnect with dominant firms to ensure that users can communicate across services. Foremost, interoperability “breaks the power of network effects”...</p>
+<p><em>p. 384</em></p>
+</blockquote>
+<p>Open Web folks won't be surprised by any of these recommendations. We've been wanting them for years, but it appears that Congress is finally paying attention. There's a lot more in this report than just social media market reforms, but in my opinion these reforms are the most exciting and the most impactful to our discourse on the Web. Hopefully now that the wheels of government are turning, they move to enact some of these long-awaited and way-overdue reforms and give us back the Open Web we want.</p>
+		</div>
+	</div>
+</article>
+
+<article>
+	<div class="post h-entry">
+		<div class="article-title">
 			<h1><a href="/archive/assumptions-and-variable-names/" class="u-url p-name">
 					Assumptions and Variable Names
 				</a>
@@ -345,54 +387,6 @@ echo "&lt;methodCall&gt;
 <h3>The Environment (Again)</h3>
 <p>Like <a href="https://nine9s.cloud/">Nine9s.cloud</a>, <a href="https://d20.photos/">d20.photos</a> is hosted in London in a datacenter powered by 92% clean and renewable energy. d20.photos runs on the same size of server as Nine9s, so I didn't need to recalculate the environmental impact. Unless I just can't make it work, I think I'm going to be hosting most of my software in the Linode U.K. datacenter from now on, or at least until one of their U.S. partners commits to using renewable energy in the same way. It's not a big thing, but it's a thing I can do.</p>
 <p>I hope <a href="https://d20.photos/">d20.photos</a> is useful to you, and if it is, I'd love to hear about it. The site is donation based, so if you like what you see, please consider supporting it. If enough people do, it'll be a lot easier to justify improving it in the future.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/careful-with-complex-querysets/" class="u-url p-name">
-					Careful with Complex Querysets
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-06-18T18:57:00-08:00">
-          Posted on Thu, 18 Jun 2020 at 06:57 PM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Today I learned something about filtering Django Querysets and fixed a long standing bug. But first some context.</p>
-<p>As a feed reader, Pine.blog needs to parse feeds. To do this, every 5 minutes, Pine.blog checks to see which feeds it needs to parse. A feed can fall into one of three categories:</p>
-<ul>
-<li><strong>Constantly changing feeds with active subscribers</strong>: Feeds that change regularly (i.e. microblogs, Reddit feeds, etc) and have recently active users subscribed to them.</li>
-<li><strong>Less frequently changing feeds with active subscribers</strong>: Feeds that may update rarely, but still have recently active users subscribed to them.</li>
-<li><strong>Everything else</strong>: Feeds with no one subscribed to them, but are still included in the Feed Directory, or feeds with subscribers who haven't logged in to Pine.blog recently.</li>
-</ul>
-<p>To do all of this, Pine.blog keeps track of how often a feed is typically updated, but if it can't tell, it sets the <code>approximate_update_frequency</code> to <code>NULL</code>. Then each of the three categories are checked at different frequencies, ensuring that everything gets parsed at least once every 24 hours, but things that change more often, or with active users subscribed to them, are given priority and parsed more regularly: every 15 or every 30 minutes respectively.</p>
-<p>It's the second category that's long been acting weird. And that's where my bug comes in.</p>
-<h3>The Actual Code</h3>
-<p>The bug I discovered has to do with how I group the feeds into those categories. Specifically, I learned that this:</p>
-<pre><code>Q(approximate_update_frequency__in=[
-    None,
-    UpdateFrequency.CONSTANTLY,
-    UpdateFrequency.FEW_PER_DAY,
-])
-</code></pre>
-<p>Is not the same as this:</p>
-<pre><code>Q(approximate_update_frequency__in=[
-    UpdateFrequency.CONSTANTLY,
-    UpdateFrequency.FEW_PER_DAY,
-]) | Q(approximate_update_frequency__isnull=True)
-</code></pre>
-<p>The critical change is the switch from including <code>None</code> in the list of allowed items to explicitly filtering by <code>isnull</code>. It seems minor, and it totally feels like you should be able to use None in an <code>IN</code> collection, but you can't.</p>
-<p>Funnily enough, the query sort-of works with the <code>None</code> in there, it just ignores the <code>None</code> and uses the other two. The true issue arises when you try to inverse the condition using the <code>NOT</code> operator. This is exactly what Pine.blog's dispatch tasks were doing. It would first fetch the list of every feed matching that criteria, and then do a second fetch of everything that didn't match, and that second one is where results were getting lost.</p>
-<p>All this means that some feeds in the second group were being lumped into the third group, delaying their posts from appearing for hours. I've known about this issue for a while, because the posts from this blog (which squarely fall into the second group) weren't showing up in Pine.blog until the following day.</p>
-<p>Glad to finally squash that bug.</p>
-<div class="footnote">
-* This update also migrates Pine.blog to Python 3.7. It's been on 3.6 for years, and I only upgraded it because homebrew screwed up my 3.6 install and it was easier to upgrade Pine.blog than downgrade my Mac's Python version. Fun times.
-</div>
 		</div>
 	</div>
 </article>
