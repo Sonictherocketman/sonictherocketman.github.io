@@ -13,7 +13,7 @@ template: about.html
 
 Hi, I'm Brian Schrader. I'm an independent software developer, writer, and musician living in San Diego, CA. This site is my little home on the internet where I go on (and on) about things that are important to me.
 
-I own and run [SkyRocket Software][sky], my indie software company, where I make things some people like. I'm also a co-founder of [Adventurer's Codex][ac], a tool for enhancing and tracking D&D games. And I'm the singer, song-writer, and guitarist in a band currently called BNH.
+I own and run [SkyRocket Software][sky], my indie software company, where I make things some people like. I'm also a co-founder of [Adventurer's Codex][ac], a tool for enhancing and tracking D&D games. And I'm the singer, song-writer, and guitarist of The Fourth Section.
 
 Oh, and I'm writing a book! [Check out the details here.](/archive/going-indie/)
 
