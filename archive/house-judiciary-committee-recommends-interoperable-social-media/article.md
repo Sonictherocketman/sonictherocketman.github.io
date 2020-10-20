@@ -1,6 +1,6 @@
 slug: house-judiciary-committee-recommends-interoperable-social-media
 published: Wed, 07 Oct 2020 at 01:46 AM
-updated: Wed, 07 Oct 2020 at 01:46 AM
+updated: Tue, 20 Oct 2020 at 04:55 AM
 title: House Judiciary Committee recommends Interoperable Social Media
 author: Brian Schrader
 tags: law, social media, antitrust, web, open web
@@ -38,4 +38,4 @@ This is great news! These reforms would, in my opinion, do a lot to level the pl
 Open Web folks won't be surprised by any of these recommendations. We've been wanting them for years, but it appears that Congress is finally paying attention. There's a lot more in this report than just social media market reforms, but in my opinion these reforms are the most exciting and the most impactful to our discourse on the Web. Hopefully now that the wheels of government are turning, they move to enact some of these long-awaited and way-overdue reforms and give us back the Open Web we want.
 
 
-[1]: /image/blog/investigation_of_competition_in_digital_markets_majority_staff_report_and_recommendations.pdf
+[1]: /images/blog/investigation_of_competition_in_digital_markets_majority_staff_report_and_recommendations.pdf
