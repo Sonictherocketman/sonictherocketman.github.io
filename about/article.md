@@ -13,11 +13,13 @@ template: about.html
 
 Hi, I'm Brian Schrader. I'm an independent software developer, writer, and musician living in San Diego, CA. This site is my little home on the internet where I go on (and on) about things that are important to me.
 
-I own and run [SkyRocket Software][sky], my indie software company, where I make things some people like. I'm also a co-founder of [Adventurer's Codex][ac], a tool for enhancing and tracking D&D games. And I'm the singer, song-writer, and guitarist of The Fourth Section.
+I own and run [SkyRocket Software][sky], my indie software company, where I make things some people like. I'm a co-founder of [Adventurer's Codex][ac], a tool for enhancing and tracking D&D games. And I'm the singer, song-writer, and guitarist of The Fourth Section.
 
-Oh, and I'm writing a book! [Check out the details here.](/archive/going-indie/)
+Oh, and I wrote a book about [how to be an Indie Developer](https://goingindie.tech)!
 
 I frequent lots of places on the Internet most of which I've included in the sidebar on the [home page](/) of this site. I [read a lot][gr], I [write music][bc], and I [build things][gh]. I care deeply about the Web, the future of our discourse on it, the standards on which it’s based, the changes in society it helps create, how we as people shape it, and how it shapes us in turn. I actually read IETF RFCs, I've open sourced a [few][cache] [different][b2] [things][variant], and I’ve built an [HTCPCP-compliant Coffee Pot][coffee].
+
+I do occasionally write about politics, policy, and government and their impact on our lives. I'm a huge proponent of democracy and advocate for powerful and progressive change.
 
 I built this site in 2012 to teach myself programming and I've been blogging here ever since. Since then I've worked in government, medical research, and at a start-up. Technically I learned how to build planes and rockets in school, but I doubt I'd remember any of that now.
 
