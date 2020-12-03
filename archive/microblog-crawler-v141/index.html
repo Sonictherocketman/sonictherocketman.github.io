@@ -58,6 +58,13 @@
 <p>The major enhancement in this version (besides the graceful exiting) was the addition of a workaround for a <a href="http://bugs.python.org/issue9400">bug in Python's multiprocessing module</a>. The bug has to do with what happens to exceptions raised in child processes. When they are raised, they are pickled and sent back to the parent process. The problem arises when an exception is not pickleable. The child process hangs and never exits. The interesting thing is that the bug was first reported in 2010 and affects all versions of Python since 2010 (i.e. 2.7, 3.2, 3.3, 3.4). This bug has been baffling me since I started converting the crawler to be multiprocessed, and its nice to finally have a workaround. </p>
 <p>If anyone out there is using MicroblogCrawler, I'd love to hear from you, and pull requests are very welcome!</p>
         </div>
+        <hr />
+        <small>
+          Filed under:
+          <span class="tags article-content">
+            <a href="/tags.html#tag-microblogcrawler" title="microblogcrawler" class="tag">microblogcrawler</a>, <a href="/tags.html#tag-github" title="github" class="tag">github</a>
+          </span>
+        </small>
       </div>
     </article>
     <div style="text-align:center;">

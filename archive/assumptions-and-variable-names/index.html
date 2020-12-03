@@ -3,8 +3,8 @@
 <head>
   <title>Assumptions and Variable Names - BiteofanApple</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/mobile.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
   <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
         </span>
       </div>
       <div class="nav-item"><a href="/archive/">Archive</a></div>
-      <div class="nav-item"><a href="http://brianschrader.com/about/">About</a></div>
+      <div class="nav-item"><a href="/about/">About</a></div>
       <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
       <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
     </nav>
@@ -39,7 +39,7 @@
       <a href="/" class="u-author"></a>
       <div class="post">
         <div class="article-title">
-          <h1 class="p-name"><a href="http://brianschrader.com/archive/assumptions-and-variable-names/">Assumptions and Variable Names</a></h1>
+          <h1 class="p-name"><a href="/archive/assumptions-and-variable-names/">Assumptions and Variable Names</a></h1>
           <small style="font-style:italic;">
             <time class="dt-published" datetime="2020-10-01T22:00:00-08:00">
               Posted on Thu, 01 Oct 2020 at 10:00 PM
@@ -73,6 +73,13 @@ def is_probably_a_json_feed(tree):
 <p>As a guide to users, Pine.blog tries to determine the frequency that a given feed contains new items. Twitter users may be familiar with <a href="https://allenpike.com/2009/announcing-unladen-follow">Unladen Follow</a> which does the same thing for Twitter accounts, or how the podcast app <a href="https://overcast.fm">Overcast</a> does the same thing. This feature lets potential followers know how often a given feed will have new posts. This value is generally pretty simple to calculate, but because it's something determined by Pine.blog and not set by the site owner, this value is descriptive not prescriptive. It describes what is likely the update frequency based on past publishing habits. This measure cannot completely predict a site's future behavior, it's just a guess. To reflect that, my code calls this variable <code>approximate_update_frequency</code>, because it's just that <code>approximate</code>. Some would probably prefer the word <code>estimated</code>, which is certainly clearer, but the point is the same. The variable name conveys just as much confidence as possible without giving other developers (including future me) the false impression that the data is any more certain or guaranteed than it actually is.</p>
 <p>Developers like guarantees. We like to know that data won't change on us without warning and that things are what they claim to be. This is why so many developers care deeply about variable naming. No one likes variables that are outright incorrect. If you saw a variable in a codebase called <code>bank_account_number</code>, but upon inspection, you saw that it contained a user's first and last name, you would be understandably confused and irritated. The original developer of that code either didn't account for a certain case, incorrectly assigned that data to the wrong variable, or they simply lied to you. The same is true when we name a given variable <code>html_string</code>, but it turns out to contain invalid data. The variable name lied to us. By naming variables you're making assumptions and you're making promises to yourself and to later developers about what the variable contains. If you're not sure about what the data is, or can't guarantee that fact, then you should probably say so.</p>
         </div>
+        <hr />
+        <small>
+          Filed under:
+          <span class="tags article-content">
+            <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-knowing" title="knowing" class="tag">knowing</a>, <a href="/tags.html#tag-philosophy" title="philosophy" class="tag">philosophy</a>, <a href="/tags.html#tag-variable naming" title="variable naming" class="tag">variable naming</a>
+          </span>
+        </small>
       </div>
     </article>
     <div style="text-align:center;">

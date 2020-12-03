@@ -1,6 +1,6 @@
 slug: why-im-switching-back-to-itunes
 published: Mon, 12 Oct 2015 at 02:55 PM
-updated: Thu, 09 Jul 2020 at 01:58 AM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Why I'm switching back to iTunes
 author: Brian Schrader
 tags: music, drm

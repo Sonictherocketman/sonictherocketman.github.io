@@ -1,6 +1,6 @@
 slug: programming-misconceptions
 published: Mon, 23 Nov 2020 at 03:35 AM
-updated: Mon, 23 Nov 2020 at 03:35 AM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Programming Misconceptions
 author: Brian Schrader
 tags: programming, software, funny

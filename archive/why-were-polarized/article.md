@@ -1,6 +1,6 @@
 slug: why-were-polarized
 published: Mon, 18 May 2020 at 04:45 AM
-updated: Thu, 09 Jul 2020 at 01:58 AM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Why We're Polarized
 author: Brian Schrader
 tags: ezra klein, book review, politics

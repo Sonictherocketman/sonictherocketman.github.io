@@ -67,7 +67,6 @@
             </a>
           </div>
         </div>
-
         <article>
 	<div class="post h-entry">
 		<div class="article-title">
@@ -313,8 +312,7 @@ echo "&lt;methodCall&gt;
         &lt;param&gt;&lt;value&gt;&lt;string&gt;https://brianschrader.com/&lt;/string&gt;&lt;/value&gt;&lt;/param&gt;
     &lt;/params&gt;
 &lt;/methodCall&gt;
-" | curl -H "Content-Type: application/xml" -X POST -d @- \
-    https://pine.blog/api/xml-rpc/ping
+" | curl -H "Content-Type: application/xml" -X POST -d @-         https://pine.blog/api/xml-rpc/ping
 </code></pre>
 <p>Adding this simple curl script to my <code>post-receive</code> hook did the trick! Now my blog posts will more quickly appear on Pine.blog! Git hooks for the win.</p>
 		</div>
@@ -480,6 +478,9 @@ echo "&lt;methodCall&gt;
           <li><a href="/archive/recipes/" title="Food and Drink Recipes">
             Food &amp; Drink Recipes
           </a></li>
+          <li><a href="/tags.html" title="Posts by Tag">
+            Tags
+          </a></li>
         </ul>
         <h4>In Progress</h4>
         <ul>
@@ -499,6 +500,10 @@ echo "&lt;methodCall&gt;
             Not planning on voting? Read this
           </a></li>
         </ul>
+        <h4>Tags</h4>
+        <div class="tags">
+          <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>, <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>, <a href="/tags.html#tag-software" title="software" class="tag">software</a>, <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>, <a href="/tags.html#tag-development" title="development" class="tag">development</a>, <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>, <a href="/tags.html#tag-python" title="python" class="tag">python</a>, <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-rss" title="rss" class="tag">rss</a>, <a href="/tags.html#tag-history" title="history" class="tag">history</a>
+        </div>
         <h4>Blogroll</h4>
         <ul>
           <li><a href="https://vincentritter.com/" title="Vincent Ritter" rel="nofollow">

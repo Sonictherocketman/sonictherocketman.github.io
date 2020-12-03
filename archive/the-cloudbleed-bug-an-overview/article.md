@@ -1,6 +1,6 @@
 slug: the-cloudbleed-bug-an-overview
 published: Fri, 24 Feb 2017 at 11:06 AM
-updated: Thu, 09 Jul 2020 at 01:58 AM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: The Cloudbleed Bug: An Overview
 author: Brian Schrader
 tags: security, ssl, encryption, heartbleed

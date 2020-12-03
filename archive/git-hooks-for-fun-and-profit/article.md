@@ -1,6 +1,6 @@
 slug: git-hooks-for-fun-and-profit
 published: Sun, 27 Sep 2020 at 07:44 PM
-updated: Sun, 27 Sep 2020 at 07:44 PM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Git Hooks for Fun and Profit
 author: Brian Schrader
 tags: git, hooks, automation, bash, hacks, web dev
@@ -22,8 +22,7 @@ Both sites are just Git repos that use a `post-receive` hook to check out the la
             <param><value><string>https://brianschrader.com/</string></value></param>
         </params>
     </methodCall>
-    " | curl -H "Content-Type: application/xml" -X POST -d @- \
-        https://pine.blog/api/xml-rpc/ping
+    " | curl -H "Content-Type: application/xml" -X POST -d @-         https://pine.blog/api/xml-rpc/ping
 
 Adding this simple curl script to my `post-receive` hook did the trick! Now my blog posts will more quickly appear on Pine.blog! Git hooks for the win.
 

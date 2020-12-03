@@ -1,6 +1,6 @@
 slug: pine-v11-is-out-amp-a-special-moment
 published: Fri, 13 Jul 2018 at 06:33 PM
-updated: Thu, 09 Jul 2020 at 01:58 AM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Pine v1.1 is Out &amp; A Special Moment
 author: Brian Schrader
 tags: indie, app development, fracture

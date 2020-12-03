@@ -1,6 +1,6 @@
 slug: announcing-hewell-public-beta-
 published: Tue, 10 Nov 2020 at 09:21 PM
-updated: Tue, 10 Nov 2020 at 09:21 PM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Announcing: Hewell Public Beta 🎉
 author: Brian Schrader
 tags: announcement, app, ios, beta

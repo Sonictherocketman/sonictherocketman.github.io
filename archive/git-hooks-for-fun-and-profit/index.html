@@ -3,8 +3,8 @@
 <head>
   <title>Git Hooks for Fun and Profit - BiteofanApple</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/mobile.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
   <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
         </span>
       </div>
       <div class="nav-item"><a href="/archive/">Archive</a></div>
-      <div class="nav-item"><a href="http://brianschrader.com/about/">About</a></div>
+      <div class="nav-item"><a href="/about/">About</a></div>
       <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
       <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
     </nav>
@@ -39,7 +39,7 @@
       <a href="/" class="u-author"></a>
       <div class="post">
         <div class="article-title">
-          <h1 class="p-name"><a href="http://brianschrader.com/archive/git-hooks-for-fun-and-profit/">Git Hooks for Fun and Profit</a></h1>
+          <h1 class="p-name"><a href="/archive/git-hooks-for-fun-and-profit/">Git Hooks for Fun and Profit</a></h1>
           <small style="font-style:italic;">
             <time class="dt-published" datetime="2020-09-27T19:44:00-08:00">
               Posted on Sun, 27 Sep 2020 at 07:44 PM
@@ -59,11 +59,17 @@ echo "&lt;methodCall&gt;
         &lt;param&gt;&lt;value&gt;&lt;string&gt;https://brianschrader.com/&lt;/string&gt;&lt;/value&gt;&lt;/param&gt;
     &lt;/params&gt;
 &lt;/methodCall&gt;
-" | curl -H "Content-Type: application/xml" -X POST -d @- \
-    https://pine.blog/api/xml-rpc/ping
+" | curl -H "Content-Type: application/xml" -X POST -d @-         https://pine.blog/api/xml-rpc/ping
 </code></pre>
 <p>Adding this simple curl script to my <code>post-receive</code> hook did the trick! Now my blog posts will more quickly appear on Pine.blog! Git hooks for the win.</p>
         </div>
+        <hr />
+        <small>
+          Filed under:
+          <span class="tags article-content">
+            <a href="/tags.html#tag-git" title="git" class="tag">git</a>, <a href="/tags.html#tag-hooks" title="hooks" class="tag">hooks</a>, <a href="/tags.html#tag-automation" title="automation" class="tag">automation</a>, <a href="/tags.html#tag-bash" title="bash" class="tag">bash</a>, <a href="/tags.html#tag-hacks" title="hacks" class="tag">hacks</a>, <a href="/tags.html#tag-web dev" title="web dev" class="tag">web dev</a>
+          </span>
+        </small>
       </div>
     </article>
     <div style="text-align:center;">

@@ -345,6 +345,12 @@ ul p {
   padding-inline-start: 0px;
 }
 
+.side-bar div.tags {
+  font-size: 92%;
+  margin-top: 0px;
+  text-align: left;
+}
+
 .side-bar ul > li {
   overflow: hidden;
   white-space: nowrap;

@@ -1,6 +1,6 @@
 slug: rewritten
 published: Mon, 10 Aug 2015 at 01:16 PM
-updated: Thu, 09 Jul 2020 at 01:58 AM
+updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Rewritten
 author: Brian Schrader
 status: publish
