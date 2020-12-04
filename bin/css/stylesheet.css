@@ -345,6 +345,10 @@ ul p {
   padding-inline-start: 0px;
 }
 
+.side-bar ul ul {
+  padding-inline-start: 1rem;
+}
+
 .side-bar div.tags {
   font-size: 92%;
   margin-top: 0px;
