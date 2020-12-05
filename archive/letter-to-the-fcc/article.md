@@ -2,7 +2,7 @@ slug: letter-to-the-fcc
 published: Wed, 16 Jul 2014 at 12:00 AM
 updated: Sat, 08 Aug 2015 at 04:31 PM
 title: Letter to the FCC
-
+tags: politics, fcc
 
 
 author: Brian Schrader
@@ -16,7 +16,7 @@ My letter to the FCC today:
 
 <i>
 
->The loss of net neutrality would be tragic from so many levels. The internet is supposed to be free and open, and by removing the protections that net neutrality offers the FCC is allowing for the selective censoring of the internet by any given ISP or other provider. Information that we, as a society, depend on these days will be stripped by for-profit companies. Companies would be able to censor opposers of their interests and manipulate the information users receive. If that's not scary to you, I'm sorry, but frankly you don't understand the issue. 
+>The loss of net neutrality would be tragic from so many levels. The internet is supposed to be free and open, and by removing the protections that net neutrality offers the FCC is allowing for the selective censoring of the internet by any given ISP or other provider. Information that we, as a society, depend on these days will be stripped by for-profit companies. Companies would be able to censor opposers of their interests and manipulate the information users receive. If that's not scary to you, I'm sorry, but frankly you don't understand the issue.
 
 >
 
@@ -38,7 +38,7 @@ My letter to the FCC today:
 
 
 
-Please take some time today to sign [this petition][1] asking the FCC to not repeal net neutrality. I've asked before, and I'll ask again. The fight isn't over. 
+Please take some time today to sign [this petition][1] asking the FCC to not repeal net neutrality. I've asked before, and I'll ask again. The fight isn't over.
 
 
 

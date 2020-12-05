@@ -1,9 +1,9 @@
 slug: an-agency-that-protects-data
 published: Fri, 14 Feb 2020 at 02:30 AM
-updated: Thu, 03 Dec 2020 at 04:21 AM
+updated: Sat, 05 Dec 2020 at 12:12 AM
 title: An Agency that Protects Data
 author: Brian Schrader
-tags: law, data protection, privacy, Kirsten Gillibrand
+tags: law, data protection, privacy, Kirsten Gillibrand, politics
 status: publish
 
 [New York Senator Kirsten Gillibrand][senator] has just announced a bill to create a new Data Protection Agency, which would be in charge of regulating... well data protection.

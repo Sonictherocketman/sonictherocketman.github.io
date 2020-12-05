@@ -1,9 +1,9 @@
 slug: house-judiciary-committee-recommends-interoperable-social-media
 published: Wed, 07 Oct 2020 at 01:46 AM
-updated: Thu, 03 Dec 2020 at 04:21 AM
+updated: Sat, 05 Dec 2020 at 12:09 AM
 title: House Judiciary Committee recommends Interoperable Social Media
 author: Brian Schrader
-tags: law, social media, antitrust, web, open web
+tags: law, social media, antitrust, web, open web, politics
 status: publish
 
 Today the [House Judiciary Committee released its report][1] detailing the numerous anti-competitive practices employed by the big tech firms: Apple, Amazon, Facebook, and Google. The report details why these firms are under investigation, what role they play in their respective markets, and whether they have achieved monopoly status in those markets (spoiler, it says they have). The report looks at the web search, web advertising, social media, e-commerce, and mobile software distribution markets, their history, and their future. It's a long read, but you should check it out, at least through the Executive Summary section.
