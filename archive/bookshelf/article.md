@@ -1,6 +1,6 @@
 slug: bookshelf
 published: Fri, 10 Jul 2020 at 07:37 PM
-updated: Thu, 03 Dec 2020 at 04:21 AM
+updated: Sat, 05 Dec 2020 at 01:23 AM
 title: Book Recommendations
 author: Brian Schrader
 tags: book recommendations, recommendations, knowledge
@@ -17,6 +17,7 @@ status: publish
 - *[Give People Money: How a Universal Basic Income Would End Poverty, Revolutionize Work, and Remake the World][4]* by Annie Lowery
 - *[The Deficit Myth: Modern Monetary Theory and the Birth of the People's Economy][5]* by Stephanie Kelton
 - *[Ghosting the News: Local Journalism and the Crisis of American Democracy][21]* by Margaret Sullivan
+- *[One Billion Americans: The Case for Thinking Bigger][22]* by Matthew Yglesias
 
 
 ### Philosophy
@@ -79,3 +80,4 @@ status: publish
 [19]: https://www.indiebound.org/book/9781591025948
 [20]: https://www.indiebound.org/book/9780684818627
 [21]: https://www.indiebound.org/book/9781733623780
+[22]: https://www.indiebound.org/book/9780593190210
