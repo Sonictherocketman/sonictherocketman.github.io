@@ -3,7 +3,7 @@ published: Fri, 06 Jul 2018 at 11:39 PM
 updated: Thu, 03 Dec 2020 at 04:21 AM
 title: RSS Has Already Won
 author: Brian Schrader
-tags: pine, rss, standards, open web
+tags: pine.blog, rss, standards, open web
 status: publish
 
 It's been a little over [5 years since Google Reader shut down][reader] and the world of RSS readers was tossed into the junk drawer of collective memory. But, looking back on it today, I'd actually argue that RSS and Feeds as a whole never really disappeared, only the Feed Readers did.

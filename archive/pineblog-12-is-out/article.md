@@ -3,7 +3,7 @@ published: Wed, 17 Oct 2018 at 05:10 AM
 updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Pine.blog 1.2 is Out!
 author: Brian Schrader
-tags: pine.blog, version release, 1.2
+tags: pine.blog, release
 status: publish
 
 The wait is over: [Pine.blog][pine] v1.2 is out! This update has been steeping for a while now, and I hope you all like it. Along with a ton of iOS features (listed below), I've also given the site a makeover, added a demo video, added a 7-day free trial for new users, included a lot more info about how Pine.blog works and how to use it, as well as quite a few little web UI enhancements.

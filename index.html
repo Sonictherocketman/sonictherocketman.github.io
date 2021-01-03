@@ -72,6 +72,27 @@
         <article>
 	<div class="post h-entry">
 		<div class="article-title">
+			<h1><a href="/archive/various-goings-on/" class="u-url p-name">
+					Various Goings On
+				</a>
+			</h1>
+			<small style="font-style:italic;">
+        <time class="dt-published" datetime="2021-01-03T05:49:00-08:00">
+          Posted on Sun, 03 Jan 2021 at 05:49 AM
+        </time>
+			</small>
+		</div> <!-- End article-title -->
+		<div class="article-content e-content">
+			<p>I've been a little scatter-brained over the past few weeks. I've started lots of little projects and finished almost none of them. Hopefully, they'll all start to wrap up soon. I mentioned on a previous <a href="https://indiedevlife.fm">Indie Dev Life</a> that I was working on an update to the <a href="https://pine.blog">Pine.blog</a> iOS app, and that is still true. It's coming along nicely. I think I'm about 80% done with it, but I've reached the infamous second 80% and it's become a bit of a slog, so I did what a usually do in this situation: literally anything else.</p>
+<p>To that end, I've been experimenting with a few other projects. I've started the process of adding a dark mode to Pine.blog's Web UI, which is coming along nicely. I've also started building out Micropub support for Pine.blog. Both are features I've wanted for a long time, but never gotten to. Hopefully they'll be done around the same time as the iOS refresh. I've always struggled with putting together a coherent design for the Pine.blog web UI, and it shows. With the newest refactor of Pine.blog for iOS though, I've finally developed a coherent design and I've started using the same layout and components on both iOS and the web. It's looking really good, and hopefully this new design will last a while and bring Pine.blog up to modern standards.</p>
+<p>On Monday the holidays are officially over and I'll force myself to finish the iOS release for Pine.blog. Usually I try to keep myself pretty focused, but for now I'll keep tinkering &mdash; it's a nice thing to do every once in a while.</p>
+		</div>
+	</div>
+</article>
+
+<article>
+	<div class="post h-entry">
+		<div class="article-title">
 			<h1><a href="/archive/breadcrumbs-and-pinboard/" class="u-url p-name">
 					Breadcrumbs and Pinboard
 				</a>
@@ -388,49 +409,6 @@
 	</div>
 </article>
 
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/assumptions-and-variable-names/" class="u-url p-name">
-					Assumptions and Variable Names
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-10-01T22:00:00-08:00">
-          Posted on Thu, 01 Oct 2020 at 10:00 PM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>As developers, we make a lot of assumptions about the world. We have to. The world is messy, unorganized, unsorted, and chaotic, and so is the data that this world generates. It's nigh impossible to process data in an orderly fashion if you can't organize it and make meaningful distinctions between different categories. Consider how much more difficult it would be for a music service to recommend titles if we didn't group music into genres, or how utterly meaningless it would be to say that COVID case counts were rising or falling if you couldn't say where or when. Developers are one of many groups of people who's job is largely to categorize and process data. We employ different methods than other disciplines, but the principle is the same. The problem is that almost any attempt to categorize the real world is fraught with peril. The world doesn't fit nicely into groups. It feeds back into itself in knotted and tangled ways. Few natural categories exist, and this means that in order for us to categorize the world, we need to construct those categories ourselves. These categories are build on assumptions about the world, but they're only assumptions. They can and will be broken, and when our assumptions no longer hold, they cause bugs.</p>
-<h3>What does this have to do with code?</h3>
-<p>A lot actually. When we write code we give names to various data points. We call one bit of memory a <code>username</code> and the other an <code>email_address</code>. Sometimes, like with more fundamental computer-science concepts, we can mathematically or physically guarantee that certain data is what it claims to be. Other times, we simply define a byte as 8-bits or a given variable as an <code>int</code> and not a <code>string</code>. Importantly, these definitions are assumptions. They assume that the hardware the code runs on works a certain way or that the system can be expected to do what the OS claims it will do, but that's a topic for another time.</p>
-<p>Many bugs are the cause of failed assumptions. Some languages try to reduce the number of assumptions that a developer needs to make by guaranteeing that variables defined as a certain type will always hold data that is that type, but fundamentally, there are much bigger problems plaguing software than type checking. For example, type checking can guarantee that a given variable called <code>html_string</code> contains a string value and that it always will, but it can't guarantee that the string is actually HTML. It could be an email address or it could just be invalid HTML. Both are strings, sure, but that's not the whole story.</p>
-<p>We often make the mistake of asserting more certainty in our code than is rightfully there. When we accept data from a user, we can't guarantee what the data is until we've validated it. When parsing batch data or data gathered from the Web, the situation is the same. Pine.blog encounters this a lot. As a feed reader, Pine.blog must parse feeds from the Web at large, but RSS and Atom feeds in the wild are notorious for being malformed and invalid (and sometimes just plain wrong). I've even come across a site that returned a PDF when requesting its RSS feed. Until the data is validated, you can only assume what the data contains. Years ago, I started coming up with ways to help me identify when I'm making assumptions in my code in an effort to reduce bugs, improve clarity, and minimize assumptions.</p>
-<p>In the Pine.blog source code, there are quite a few examples of this explicit assumption-making process, especially in my variable names. When Pine.blog first receives data from a request, it needs to try to parse that data, but it can't do that until I know what kind of feed it is. To do this I have a series of functions that use a bunch of heuristics to check the data and determine what it contains.</p>
-<pre><code>def is_probably_an_rss_feed(tree):
-    pass
-
-def is_probably_an_atom_feed(tree):
-    pass
-
-def is_probably_a_json_feed(tree):
-    pass
-</code></pre>
-<p>The important thing here is the word <code>probably</code>. These functions don't attempt to actually parse the data, so they don't know for sure. By explicitly qualifying what these functions do I, as the programmer, understand the assumptions I'm making when I act on that information.</p>
-<p>I do this a lot actually. It's common for my variables to contain the words <code>probably</code> or <code>approximate</code> if I'm not 100% sure that the data is valid or correct. Variables that contain these words immediately cause concern and force me to think about the potential failure modes whenever I attempt to manipulate them. If something says that it is an <code>html_string</code> than you don't usually think to second-guess that fact, but until you know that for sure, you may want to name your variable <code>probably_an_html_string</code> to better reflect your knowledge at the given point in your process.</p>
-<p><img
-    src="/images/blog/approximate-update-frequency.png"
-    class="image-right hide-on-mobile"
-    alt="Pine.blog Approximate Update Frequency"
-/></p>
-<h3>Handling Approximations</h3>
-<p>As a guide to users, Pine.blog tries to determine the frequency that a given feed contains new items. Twitter users may be familiar with <a href="https://allenpike.com/2009/announcing-unladen-follow">Unladen Follow</a> which does the same thing for Twitter accounts, or how the podcast app <a href="https://overcast.fm">Overcast</a> does the same thing. This feature lets potential followers know how often a given feed will have new posts. This value is generally pretty simple to calculate, but because it's something determined by Pine.blog and not set by the site owner, this value is descriptive not prescriptive. It describes what is likely the update frequency based on past publishing habits. This measure cannot completely predict a site's future behavior, it's just a guess. To reflect that, my code calls this variable <code>approximate_update_frequency</code>, because it's just that <code>approximate</code>. Some would probably prefer the word <code>estimated</code>, which is certainly clearer, but the point is the same. The variable name conveys just as much confidence as possible without giving other developers (including future me) the false impression that the data is any more certain or guaranteed than it actually is.</p>
-<p>Developers like guarantees. We like to know that data won't change on us without warning and that things are what they claim to be. This is why so many developers care deeply about variable naming. No one likes variables that are outright incorrect. If you saw a variable in a codebase called <code>bank_account_number</code>, but upon inspection, you saw that it contained a user's first and last name, you would be understandably confused and irritated. The original developer of that code either didn't account for a certain case, incorrectly assigned that data to the wrong variable, or they simply lied to you. The same is true when we name a given variable <code>html_string</code>, but it turns out to contain invalid data. The variable name lied to us. By naming variables you're making assumptions and you're making promises to yourself and to later developers about what the variable contains. If you're not sure about what the data is, or can't guarantee that fact, then you should probably say so.</p>
-		</div>
-	</div>
-</article>
-
       </div>
       <div class="side-bar">
         <h4>Featured Posts</h4>
@@ -554,7 +532,7 @@ def is_probably_a_json_feed(tree):
         </ul>
         <h4>Tags</h4>
         <div class="tags">
-          <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>, <a href="/tags.html#tag-software" title="software" class="tag">software</a>, <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>, <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>, <a href="/tags.html#tag-development" title="development" class="tag">development</a>, <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>, <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>, <a href="/tags.html#tag-python" title="python" class="tag">python</a>, <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-history" title="history" class="tag">history</a>
+          <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>, <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>, <a href="/tags.html#tag-software" title="software" class="tag">software</a>, <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>, <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>, <a href="/tags.html#tag-development" title="development" class="tag">development</a>, <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>, <a href="/tags.html#tag-python" title="python" class="tag">python</a>, <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-history" title="history" class="tag">history</a>
         </div>
         <h4>Blogroll</h4>
         <ul>

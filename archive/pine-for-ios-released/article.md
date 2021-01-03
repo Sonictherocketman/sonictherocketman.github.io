@@ -3,7 +3,7 @@ published: Thu, 05 Jul 2018 at 11:32 PM
 updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Pine for iOS Released!
 author: Brian Schrader
-tags: pine, ios, app, release
+tags: pine.blog, ios, app, release
 status: publish
 
 <div class="image-container">

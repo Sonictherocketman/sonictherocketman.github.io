@@ -3,7 +3,7 @@ published: Sat, 10 Nov 2018 at 12:04 AM
 updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Mastodon and Microblogging
 author: Brian Schrader
-tags: mastodon, micro.blog, pine
+tags: mastodon, micro.blog, pine.blog
 status: publish
 
 [Manton Reece][manton]:

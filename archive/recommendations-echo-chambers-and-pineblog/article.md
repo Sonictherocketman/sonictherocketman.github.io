@@ -3,7 +3,7 @@ published: Sun, 04 Nov 2018 at 06:16 PM
 updated: Thu, 03 Dec 2020 at 04:21 AM
 title: Recommendations, Echo Chambers, and Pine.blog
 author: Brian Schrader
-tags: [Pine.blog][pine], blogging, problems with blogging
+tags: pine.blog, blogging, problems with blogging
 status: publish
 
 In my last post I laid out three main problems that the blogging ecosystem has when competing with social networking sites. I also mentioned that [Pine.blog][pine] aims to solve all three of them at once.

@@ -4,7 +4,7 @@ updated: Thu, 03 Dec 2020 at 04:21 AM
 title: The Scope Creep is Real
 author: Brian Schrader
 status: publish
-tags: pine, development
+tags: pine.blog, development
 
 With development on [Pine.blog](https://pine.blog) v1.2 wrapping up, and a releasable version in sight, I've been thinking about why this version has taken so much longer than the previous two. My answer in short: I kept adding features.
 
