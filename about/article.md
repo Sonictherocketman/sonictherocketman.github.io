@@ -19,7 +19,7 @@ Oh, and I wrote a book about [how to be an Indie Developer](https://goingindie.t
 
 I frequent lots of places on the Internet most of which I've included in the sidebar on the [home page](/) of this site. I [read a lot][gr], I [write music][bc], and I [build things][gh]. I care deeply about the Web, the future of our discourse on it, the standards on which it’s based, the changes in society it helps create, how we as people shape it, and how it shapes us in turn. I actually read [IETF RFCs][ietf], I've open sourced a [few][cache] [different][b2] [things][variant], and I’ve built an [HTCPCP-compliant Coffee Pot][coffee].
 
-I do occasionally write about politics, policy, and government and their impact on our lives. I'm a huge proponent of democracy and advocate for powerful and progressive change.
+I write, at [Democracy &amp; Progress][dnp], about politics, policy, and government and their impact on our lives. I'm a huge proponent of democracy and advocate for powerful and progressive change.
 
 I built this site in 2012 to teach myself programming and I've been blogging here ever since. Since then I've worked in government, medical research, and at a start-up. Technically I learned how to build planes and rockets in school, but I doubt I'd remember any of that now.
 
@@ -41,3 +41,4 @@ Shoot me an email at [brian@brianschrader.com][email], but I might take a while 
 [bc]: https://sonicrocketman.bandcamp.com
 [gh]: https://github.com/sonictherocketman/
 [ietf]: https://tools.ietf.org/html/draft-lohsen-ip-burrito-00
+[dnp]: http://democracyandprogress.com
