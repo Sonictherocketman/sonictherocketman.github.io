@@ -1,6 +1,6 @@
 slug: various-goings-on
 published: Sun, 03 Jan 2021 at 05:49 AM
-updated: Sun, 03 Jan 2021 at 05:49 AM
+updated: Thu, 25 Mar 2021 at 08:51 PM
 title: Various Goings On
 author: Brian Schrader
 tags: indie dev, pine.blog, metablogging

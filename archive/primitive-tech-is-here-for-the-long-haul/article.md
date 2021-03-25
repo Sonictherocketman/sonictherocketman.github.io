@@ -1,6 +1,6 @@
 slug: primitive-tech-is-here-for-the-long-haul
 published: Fri, 24 Nov 2017 at 02:46 PM
-updated: Thu, 03 Dec 2020 at 04:21 AM
+updated: Thu, 25 Mar 2021 at 08:51 PM
 title: Primitive Tech is Here for the Long Haul
 author: Brian Schrader
 tags: primitive technology, news

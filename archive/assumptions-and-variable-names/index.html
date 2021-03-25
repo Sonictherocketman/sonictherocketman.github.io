@@ -3,7 +3,7 @@
 <head>
   <title>Assumptions and Variable Names - BiteofanApple</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=1.1">
   <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
   <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
@@ -34,20 +34,21 @@
       <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
     </nav>
   </div>
-  <div id="post-list">
-    <article class="h-entry">
-      <a href="/" class="u-author"></a>
-      <div class="post">
-        <div class="article-title">
-          <h1 class="p-name"><a href="/archive/assumptions-and-variable-names/">Assumptions and Variable Names</a></h1>
-          <small style="font-style:italic;">
-            <time class="dt-published" datetime="2020-10-01T22:00:00-08:00">
-              Posted on Thu, 01 Oct 2020 at 10:00 PM
-            </time>
-          </small>
-        </div>
-        <div class="article-content e-content">
-          <p>As developers, we make a lot of assumptions about the world. We have to. The world is messy, unorganized, unsorted, and chaotic, and so is the data that this world generates. It's nigh impossible to process data in an orderly fashion if you can't organize it and make meaningful distinctions between different categories. Consider how much more difficult it would be for a music service to recommend titles if we didn't group music into genres, or how utterly meaningless it would be to say that COVID case counts were rising or falling if you couldn't say where or when. Developers are one of many groups of people who's job is largely to categorize and process data. We employ different methods than other disciplines, but the principle is the same. The problem is that almost any attempt to categorize the real world is fraught with peril. The world doesn't fit nicely into groups. It feeds back into itself in knotted and tangled ways. Few natural categories exist, and this means that in order for us to categorize the world, we need to construct those categories ourselves. These categories are build on assumptions about the world, but they're only assumptions. They can and will be broken, and when our assumptions no longer hold, they cause bugs.</p>
+  <div class="bars">
+      <div class="main-bar">
+        <article class="h-entry">
+          <a href="/" class="u-author"></a>
+          <div class="post">
+          <div class="article-title">
+            <h1 class="p-name"><a href="/archive/assumptions-and-variable-names/">Assumptions and Variable Names</a></h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2020-10-01T22:00:00-08:00">
+                Posted on Thu, 01 Oct 2020 at 10:00 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>As developers, we make a lot of assumptions about the world. We have to. The world is messy, unorganized, unsorted, and chaotic, and so is the data that this world generates. It's nigh impossible to process data in an orderly fashion if you can't organize it and make meaningful distinctions between different categories. Consider how much more difficult it would be for a music service to recommend titles if we didn't group music into genres, or how utterly meaningless it would be to say that COVID case counts were rising or falling if you couldn't say where or when. Developers are one of many groups of people who's job is largely to categorize and process data. We employ different methods than other disciplines, but the principle is the same. The problem is that almost any attempt to categorize the real world is fraught with peril. The world doesn't fit nicely into groups. It feeds back into itself in knotted and tangled ways. Few natural categories exist, and this means that in order for us to categorize the world, we need to construct those categories ourselves. These categories are build on assumptions about the world, but they're only assumptions. They can and will be broken, and when our assumptions no longer hold, they cause bugs.</p>
 <h3>What does this have to do with code?</h3>
 <p>A lot actually. When we write code we give names to various data points. We call one bit of memory a <code>username</code> and the other an <code>email_address</code>. Sometimes, like with more fundamental computer-science concepts, we can mathematically or physically guarantee that certain data is what it claims to be. Other times, we simply define a byte as 8-bits or a given variable as an <code>int</code> and not a <code>string</code>. Importantly, these definitions are assumptions. They assume that the hardware the code runs on works a certain way or that the system can be expected to do what the OS claims it will do, but that's a topic for another time.</p>
 <p>Many bugs are the cause of failed assumptions. Some languages try to reduce the number of assumptions that a developer needs to make by guaranteeing that variables defined as a certain type will always hold data that is that type, but fundamentally, there are much bigger problems plaguing software than type checking. For example, type checking can guarantee that a given variable called <code>html_string</code> contains a string value and that it always will, but it can't guarantee that the string is actually HTML. It could be an email address or it could just be invalid HTML. Both are strings, sure, but that's not the whole story.</p>
@@ -72,16 +73,139 @@ def is_probably_a_json_feed(tree):
 <h3>Handling Approximations</h3>
 <p>As a guide to users, Pine.blog tries to determine the frequency that a given feed contains new items. Twitter users may be familiar with <a href="https://allenpike.com/2009/announcing-unladen-follow">Unladen Follow</a> which does the same thing for Twitter accounts, or how the podcast app <a href="https://overcast.fm">Overcast</a> does the same thing. This feature lets potential followers know how often a given feed will have new posts. This value is generally pretty simple to calculate, but because it's something determined by Pine.blog and not set by the site owner, this value is descriptive not prescriptive. It describes what is likely the update frequency based on past publishing habits. This measure cannot completely predict a site's future behavior, it's just a guess. To reflect that, my code calls this variable <code>approximate_update_frequency</code>, because it's just that <code>approximate</code>. Some would probably prefer the word <code>estimated</code>, which is certainly clearer, but the point is the same. The variable name conveys just as much confidence as possible without giving other developers (including future me) the false impression that the data is any more certain or guaranteed than it actually is.</p>
 <p>Developers like guarantees. We like to know that data won't change on us without warning and that things are what they claim to be. This is why so many developers care deeply about variable naming. No one likes variables that are outright incorrect. If you saw a variable in a codebase called <code>bank_account_number</code>, but upon inspection, you saw that it contained a user's first and last name, you would be understandably confused and irritated. The original developer of that code either didn't account for a certain case, incorrectly assigned that data to the wrong variable, or they simply lied to you. The same is true when we name a given variable <code>html_string</code>, but it turns out to contain invalid data. The variable name lied to us. By naming variables you're making assumptions and you're making promises to yourself and to later developers about what the variable contains. If you're not sure about what the data is, or can't guarantee that fact, then you should probably say so.</p>
+          </div>
+          <hr />
+          <small>
+            Filed under:
+            <span class="tags article-content">
+              <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-knowing" title="knowing" class="tag">knowing</a>, <a href="/tags.html#tag-philosophy" title="philosophy" class="tag">philosophy</a>, <a href="/tags.html#tag-variable naming" title="variable naming" class="tag">variable naming</a>
+            </span>
+          </small>
         </div>
-        <hr />
-        <small>
-          Filed under:
-          <span class="tags article-content">
-            <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-knowing" title="knowing" class="tag">knowing</a>, <a href="/tags.html#tag-philosophy" title="philosophy" class="tag">philosophy</a>, <a href="/tags.html#tag-variable naming" title="variable naming" class="tag">variable naming</a>
-          </span>
-        </small>
+        </article>
       </div>
-    </article>
+      <div class="side-bar">
+        <div class="promotion">
+          <div>
+            <a href="https://goingindie.tech" title="Going Indie More Information">
+              <img
+                  class="promotion-cover"
+                  src="/images/going-indie/cover-icon.jpg"
+                  height="100px"
+                  width="100px"
+              />
+            </a>
+          </div>
+          <div>
+            Going Indie
+            <small>
+              <p>
+                A complete guide to becoming an independent software developer
+              </p>
+              <a href="https://goingindie.tech" title="Going Indie Order Now">
+              Order Now &#8594;
+              </a>
+            </small>
+          </div>
+        </div>
+        <h4>Also Me</h4>
+        <ul>
+          <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+            Pine.blog
+          </a></li>
+          <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+            GitHub
+          </a></li>
+          <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+            Twitter
+          </a></li>
+          <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+            Pinboard
+          </a></li>
+          <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+            Photoblog
+          </a></li>
+          <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+            Gravatar
+          </a></li>
+          <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+            Bandcamp
+          </a></li>
+          <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+            Goodreads
+          </a></li>
+        </ul>
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+            Democracy &amp; Progress
+          </a></li>
+          <li><a href="https://goingindie.tech" title="Going Indie">
+            Going Indie
+          </a></li>
+          <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+            Pine.blog
+          </a></li>
+          <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+            Indie Dev Life Podcast
+          </a></li>
+          <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+            Nine9s
+          </a></li>
+          <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+            d20.photos
+          </a></li>
+          <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+            Adventurer&apos;s Codex
+          </a></li>
+        </ul>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/archive/bookshelf" title="Book Recommendations">
+            Book Recommendations
+          </a></li>
+          <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+            Food &amp; Drink Recipes
+          </a></li>
+          <li><a href="/tags.html" title="Posts by Tag">
+            Tags
+          </a></li>
+        </ul>
+        <h4>Other Writings</h4>
+        <ul>
+          <b>The Way Forward (Series)</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/" title="Conquering the pandemic">
+                Conquering the pandemic
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-jobs-for-all/" title="Jobs for all">
+                Jobs for all
+              </a></li>
+              <li><a href="https://sduptownnews.com/the-way-forward-democracy-is-the-answer/" title="Democracy is the answer">
+                Democracy is the answer
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <b>Assorted Works</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/californians-deserve-better-data-protection/" title="Californians deserve better data protection">
+                Californians deserve better data protection
+              </a></li>
+              <li><a href="https://sduptownnews.com/not-planning-on-voting-read-this/" title="Not planning on voting? Read this">
+                Not planning on voting? Read this
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-rounding-the-corner/" title="Rounding the corner">
+                Rounding the corner
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div style="text-align:center;">
       <div class="article-content">
         <span style="font-size:small;">

@@ -1,6 +1,6 @@
 slug: a-false-dichotomy
 published: Sat, 05 Dec 2020 at 12:11 AM
-updated: Sat, 05 Dec 2020 at 12:11 AM
+updated: Thu, 25 Mar 2021 at 08:51 PM
 title: A False Dichotomy
 author: Brian Schrader
 tags: politics, government, covid-19

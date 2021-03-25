@@ -3,7 +3,7 @@
 <head>
   <title>Microblog Crawler Diary: Signals - BiteofanApple</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=1.1">
   <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
   <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
@@ -34,35 +34,159 @@
       <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
     </nav>
   </div>
-  <div id="post-list">
-    <article class="h-entry">
-      <a href="/" class="u-author"></a>
-      <div class="post">
-        <div class="article-title">
-          <h1 class="p-name"><a href="/archive/microblog-crawler-diary-signals/">Microblog Crawler Diary: Signals</a></h1>
-          <small style="font-style:italic;">
-            <time class="dt-published" datetime="2015-02-24T03:07:00-08:00">
-              Posted on Tue, 24 Feb 2015 at 03:07 AM
-            </time>
-          </small>
-        </div>
-        <div class="article-content e-content">
-          <p>I've been turning this issue over in my head all day, and I think I've got a workable solution. Here's the problem: Since the web-app and the crawler are two separate processes (completely unrelated since the crawler is a cron job and the web-app is running under mod_wsgi) they don't have any way to communicate. Normally this isn't a problem since they don't really need to communicate. The crawler does its thing, and inserts records into a cache, and the web-app reads from the cache. Simple. However, my goal now is to support server notifications for new posts. That is, when a user posts a message, any service that has registered for notifications will be pinged to let them know that a new post is available. That way the server doesn't have to poll URLs constantly to receive to-the-minute updates.</p>
+  <div class="bars">
+      <div class="main-bar">
+        <article class="h-entry">
+          <a href="/" class="u-author"></a>
+          <div class="post">
+          <div class="article-title">
+            <h1 class="p-name"><a href="/archive/microblog-crawler-diary-signals/">Microblog Crawler Diary: Signals</a></h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2015-02-24T03:07:00-08:00">
+                Posted on Tue, 24 Feb 2015 at 03:07 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I've been turning this issue over in my head all day, and I think I've got a workable solution. Here's the problem: Since the web-app and the crawler are two separate processes (completely unrelated since the crawler is a cron job and the web-app is running under mod_wsgi) they don't have any way to communicate. Normally this isn't a problem since they don't really need to communicate. The crawler does its thing, and inserts records into a cache, and the web-app reads from the cache. Simple. However, my goal now is to support server notifications for new posts. That is, when a user posts a message, any service that has registered for notifications will be pinged to let them know that a new post is available. That way the server doesn't have to poll URLs constantly to receive to-the-minute updates.</p>
 <p>Sending these messages is simple. Receiving them is hard. Upon receiving a message, the app server needs to notify the crawler that it should go and fetch a given URL (and possibly even a given item). Interrupting a process that is completely unrelated and that could be right in the middle of something else, is not an easy problem to solve. Here's my solution though. Currently, when the crawler starts up it checks to see if there is a <code>pid</code> file in the system's temp directory. If there is, then it quits, if not it creates one and sets about its business. The pid file tells the crawler that an instance of itself is already running. The web-app will read the pid from that file, write the link it's supposed to crawl to another file, and send a signal to the crawler process with that pid. </p>
 <p>The crawler will have a handler for that signal that will then pause the crawling, (if it is being done) read in the link that is supposed to be crawled, and do so. Once it is done crawling, it records the link, and inserts the new post into the cache. The crawler then resumes its job of crawling the list of links, and if that link is the same as the link recorded in the signal handler, then it moves on without processing it (since it has already done so). </p>
 <p>It does seem a bit primitive, but it should be straight forward to implement. With this implemented, the crawler can increase its default crawling interval and fall back to just being notified if anything new comes along.</p>
 <hr />
 <p><strong>Side note:</strong> I will have to be careful what signals are allowed to pass to the crawler. If unchecked, spammers could easily stop the crawler dead in its tracks (since I would be essentially sending OS interrupts for every message received). To mitigate this, the web-app will keep a whitelist of servers it has requested updates from and only accept messages from those servers. </p>
+          </div>
+          <hr />
+          <small>
+            Filed under:
+            <span class="tags article-content">
+              <a href="/tags.html#tag-microblog crawler diary" title="microblog crawler diary" class="tag">microblog crawler diary</a>, <a href="/tags.html#tag-signals" title="signals" class="tag">signals</a>
+            </span>
+          </small>
         </div>
-        <hr />
-        <small>
-          Filed under:
-          <span class="tags article-content">
-            <a href="/tags.html#tag-microblog crawler diary" title="microblog crawler diary" class="tag">microblog crawler diary</a>, <a href="/tags.html#tag-signals" title="signals" class="tag">signals</a>
-          </span>
-        </small>
+        </article>
       </div>
-    </article>
+      <div class="side-bar">
+        <div class="promotion">
+          <div>
+            <a href="https://goingindie.tech" title="Going Indie More Information">
+              <img
+                  class="promotion-cover"
+                  src="/images/going-indie/cover-icon.jpg"
+                  height="100px"
+                  width="100px"
+              />
+            </a>
+          </div>
+          <div>
+            Going Indie
+            <small>
+              <p>
+                A complete guide to becoming an independent software developer
+              </p>
+              <a href="https://goingindie.tech" title="Going Indie Order Now">
+              Order Now &#8594;
+              </a>
+            </small>
+          </div>
+        </div>
+        <h4>Also Me</h4>
+        <ul>
+          <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+            Pine.blog
+          </a></li>
+          <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+            GitHub
+          </a></li>
+          <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+            Twitter
+          </a></li>
+          <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+            Pinboard
+          </a></li>
+          <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+            Photoblog
+          </a></li>
+          <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+            Gravatar
+          </a></li>
+          <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+            Bandcamp
+          </a></li>
+          <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+            Goodreads
+          </a></li>
+        </ul>
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+            Democracy &amp; Progress
+          </a></li>
+          <li><a href="https://goingindie.tech" title="Going Indie">
+            Going Indie
+          </a></li>
+          <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+            Pine.blog
+          </a></li>
+          <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+            Indie Dev Life Podcast
+          </a></li>
+          <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+            Nine9s
+          </a></li>
+          <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+            d20.photos
+          </a></li>
+          <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+            Adventurer&apos;s Codex
+          </a></li>
+        </ul>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/archive/bookshelf" title="Book Recommendations">
+            Book Recommendations
+          </a></li>
+          <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+            Food &amp; Drink Recipes
+          </a></li>
+          <li><a href="/tags.html" title="Posts by Tag">
+            Tags
+          </a></li>
+        </ul>
+        <h4>Other Writings</h4>
+        <ul>
+          <b>The Way Forward (Series)</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/" title="Conquering the pandemic">
+                Conquering the pandemic
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-jobs-for-all/" title="Jobs for all">
+                Jobs for all
+              </a></li>
+              <li><a href="https://sduptownnews.com/the-way-forward-democracy-is-the-answer/" title="Democracy is the answer">
+                Democracy is the answer
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <b>Assorted Works</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/californians-deserve-better-data-protection/" title="Californians deserve better data protection">
+                Californians deserve better data protection
+              </a></li>
+              <li><a href="https://sduptownnews.com/not-planning-on-voting-read-this/" title="Not planning on voting? Read this">
+                Not planning on voting? Read this
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-rounding-the-corner/" title="Rounding the corner">
+                Rounding the corner
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div style="text-align:center;">
       <div class="article-content">
         <span style="font-size:small;">

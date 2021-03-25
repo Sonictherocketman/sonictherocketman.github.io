@@ -1,6 +1,6 @@
 slug: so-many-words-written-so-many-more-to-come
 published: Mon, 06 Feb 2017 at 07:58 PM
-updated: Thu, 03 Dec 2020 at 04:21 AM
+updated: Thu, 25 Mar 2021 at 08:51 PM
 title: So Many Words Written, So Many More to Come
 author: Brian Schrader
 tags: blog, stats, metablogging

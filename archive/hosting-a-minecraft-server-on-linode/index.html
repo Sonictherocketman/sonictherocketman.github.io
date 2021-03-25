@@ -3,7 +3,7 @@
 <head>
   <title>Hosting a Minecraft Server on Linode - BiteofanApple</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=1.1">
   <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
   <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
   <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
@@ -34,36 +34,160 @@
       <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
     </nav>
   </div>
-  <div id="post-list">
-    <article class="h-entry">
-      <a href="/" class="u-author"></a>
-      <div class="post">
-        <div class="article-title">
-          <h1 class="p-name"><a href="/archive/hosting-a-minecraft-server-on-linode/">Hosting a Minecraft Server on Linode</a></h1>
-          <small style="font-style:italic;">
-            <time class="dt-published" datetime="2016-03-01T10:11:00-08:00">
-              Posted on Tue, 01 Mar 2016 at 10:11 AM
-            </time>
-          </small>
-        </div>
-        <div class="article-content e-content">
-          <p>The planets have aligned again, and I've returned to Minecraft. Every once and a while I get the urge to call up some friends, spin up a server, and spend a few hours a week building crazy things and fighting for survival in a blocky world. Usually, I host the server on my laptop, but this time I wanted to try something different (read: more complicated). I'm a developer, and I have the power of the cloud at my fingertips, so why not spin up a Linode instance and host the server there?</p>
+  <div class="bars">
+      <div class="main-bar">
+        <article class="h-entry">
+          <a href="/" class="u-author"></a>
+          <div class="post">
+          <div class="article-title">
+            <h1 class="p-name"><a href="/archive/hosting-a-minecraft-server-on-linode/">Hosting a Minecraft Server on Linode</a></h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2016-03-01T10:11:00-08:00">
+                Posted on Tue, 01 Mar 2016 at 10:11 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>The planets have aligned again, and I've returned to Minecraft. Every once and a while I get the urge to call up some friends, spin up a server, and spend a few hours a week building crazy things and fighting for survival in a blocky world. Usually, I host the server on my laptop, but this time I wanted to try something different (read: more complicated). I'm a developer, and I have the power of the cloud at my fingertips, so why not spin up a Linode instance and host the server there?</p>
 <p><img alt="A tower on the hill" class="image-right" style="padding-left:5px;"
     src="/images/blog/mc-tower.jpg"></p>
 <p>The first night, I made the terrible mistake of trying to use my existing Linode instance to host the server. A paltry 1 core, 1GB memory machine can run a nice static website, but it's terrible at running a gaming server. If you want the server to constantly crash, and run out of memory, then that's the method you should try</p>
 <p>If you actually want to play the game, I recommend using Linode's 4 core, 4GB memory instances. Unless you plan on having tens of people on the server at once, its going to be more that enough. The best part is that those instances are $0.06/hr. Last night I played with a friend for 4 hours, and it cost me a whole 24¢.</p>
 <p>I've written a little <a href="https://gist.github.com/Sonictherocketman/221c6fad8ea76657d2b2">shell script</a> to do the installation automatically, and even sign the EULA. So now, whenever I want to play with some friends, I can click a whole three buttons in Linode's admin panel, SSH into the server, run my script and start playing. Then when we're done I can copy the world onto my Mac via FTP, and shut down the instance. Super simple, cheap, and fast.</p>
 <p>The cloud is pretty awesome sometimes.</p>
+          </div>
+          <hr />
+          <small>
+            Filed under:
+            <span class="tags article-content">
+              <a href="/tags.html#tag-minecraft" title="minecraft" class="tag">minecraft</a>, <a href="/tags.html#tag-linode" title="linode" class="tag">linode</a>
+            </span>
+          </small>
         </div>
-        <hr />
-        <small>
-          Filed under:
-          <span class="tags article-content">
-            <a href="/tags.html#tag-minecraft" title="minecraft" class="tag">minecraft</a>, <a href="/tags.html#tag-linode" title="linode" class="tag">linode</a>
-          </span>
-        </small>
+        </article>
       </div>
-    </article>
+      <div class="side-bar">
+        <div class="promotion">
+          <div>
+            <a href="https://goingindie.tech" title="Going Indie More Information">
+              <img
+                  class="promotion-cover"
+                  src="/images/going-indie/cover-icon.jpg"
+                  height="100px"
+                  width="100px"
+              />
+            </a>
+          </div>
+          <div>
+            Going Indie
+            <small>
+              <p>
+                A complete guide to becoming an independent software developer
+              </p>
+              <a href="https://goingindie.tech" title="Going Indie Order Now">
+              Order Now &#8594;
+              </a>
+            </small>
+          </div>
+        </div>
+        <h4>Also Me</h4>
+        <ul>
+          <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+            Pine.blog
+          </a></li>
+          <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+            GitHub
+          </a></li>
+          <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+            Twitter
+          </a></li>
+          <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+            Pinboard
+          </a></li>
+          <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+            Photoblog
+          </a></li>
+          <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+            Gravatar
+          </a></li>
+          <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+            Bandcamp
+          </a></li>
+          <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+            Goodreads
+          </a></li>
+        </ul>
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+            Democracy &amp; Progress
+          </a></li>
+          <li><a href="https://goingindie.tech" title="Going Indie">
+            Going Indie
+          </a></li>
+          <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+            Pine.blog
+          </a></li>
+          <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+            Indie Dev Life Podcast
+          </a></li>
+          <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+            Nine9s
+          </a></li>
+          <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+            d20.photos
+          </a></li>
+          <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+            Adventurer&apos;s Codex
+          </a></li>
+        </ul>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/archive/bookshelf" title="Book Recommendations">
+            Book Recommendations
+          </a></li>
+          <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+            Food &amp; Drink Recipes
+          </a></li>
+          <li><a href="/tags.html" title="Posts by Tag">
+            Tags
+          </a></li>
+        </ul>
+        <h4>Other Writings</h4>
+        <ul>
+          <b>The Way Forward (Series)</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/" title="Conquering the pandemic">
+                Conquering the pandemic
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-jobs-for-all/" title="Jobs for all">
+                Jobs for all
+              </a></li>
+              <li><a href="https://sduptownnews.com/the-way-forward-democracy-is-the-answer/" title="Democracy is the answer">
+                Democracy is the answer
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <b>Assorted Works</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/californians-deserve-better-data-protection/" title="Californians deserve better data protection">
+                Californians deserve better data protection
+              </a></li>
+              <li><a href="https://sduptownnews.com/not-planning-on-voting-read-this/" title="Not planning on voting? Read this">
+                Not planning on voting? Read this
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-rounding-the-corner/" title="Rounding the corner">
+                Rounding the corner
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div style="text-align:center;">
       <div class="article-content">
         <span style="font-size:small;">

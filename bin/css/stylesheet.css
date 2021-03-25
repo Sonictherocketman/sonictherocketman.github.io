@@ -330,6 +330,7 @@ ul p {
   display: inline-block;
   width: 20%;
   float: right;
+  text-align: left;
   vertical-align: top;
 /*
   padding-top: 6rem;

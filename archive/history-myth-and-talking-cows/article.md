@@ -1,6 +1,6 @@
 slug: history-myth-and-talking-cows
 published: Sun, 27 Dec 2020 at 08:34 AM
-updated: Sun, 27 Dec 2020 at 08:34 AM
+updated: Thu, 25 Mar 2021 at 08:51 PM
 title: History, Myth, and Talking Cows
 author: Brian Schrader
 tags: history, book

@@ -1,6 +1,6 @@
 slug: an-uplifting-tale-in-these-dark-times
 published: Sun, 10 May 2020 at 12:01 AM
-updated: Thu, 03 Dec 2020 at 04:21 AM
+updated: Thu, 25 Mar 2021 at 08:51 PM
 title: An Uplifting Tale in these Dark Times
 author: Brian Schrader
 tags: uplifting, covid19, human condition
