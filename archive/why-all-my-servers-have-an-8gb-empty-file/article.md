@@ -1,6 +1,6 @@
 slug: why-all-my-servers-have-an-8gb-empty-file
 published: Thu, 25 Mar 2021 at 06:39 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Thu, 25 Mar 2021 at 09:29 PM
 title: Why All My Servers Have an 8GB Empty File
 author: Brian Schrader
 tags: marco, software development, web dev
@@ -38,7 +38,7 @@ That's it. That's why I keep a useless file on disk at all times: so I can one d
 </div>
 
 
-[fm]: https://www.relay.fm/radar/213
-[utr]: https://overcast.fm
+[fm]: https://overcast.fm
+[utr]: https://www.relay.fm/radar/213
 [post]: /archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/
 [disk]: https://overcast.fm/+FgnbaF18Q/14:09
