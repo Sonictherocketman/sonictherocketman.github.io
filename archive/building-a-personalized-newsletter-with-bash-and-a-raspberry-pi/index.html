@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Building a Personalized Newsletter with Bash and a Raspberry Pi - BiteofanApple</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/stylesheet.css?v=1.1">
+  <link rel="stylesheet" type="text/css" href="https://brianschrader.com/bin/css/mobile.css">
+  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Building a Personalized Newsletter with Bash and a Raspberry Pi" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/" />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+</head>
+<body>
+<div id="content">
+  <div class="nav-container">
+    <nav class="nav">
+      <div class="nav-item nav-brand">
+        <a href="/" class="site-title">
+          BiteofanApple
+        </a>
+        <span
+          class="author-tag hide-on-mobile"
+        >
+          by <a href="/about/">Brian Schrader</a>
+        </span>
+      </div>
+      <div class="nav-item"><a href="/archive/">Archive</a></div>
+      <div class="nav-item"><a href="http://brianschrader.com/about/">About</a></div>
+      <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+      <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+    </nav>
+  </div>
+  <div class="bars">
+      <div class="main-bar">
+        <article class="h-entry">
+          <a href="/" class="u-author"></a>
+          <div class="post">
+          <div class="article-title">
+            <h1 class="p-name"><a href="http://brianschrader.com/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/">Building a Personalized Newsletter with Bash and a Raspberry Pi</a></h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-04-03T21:02:00-08:00">
+                Posted on Sat, 03 Apr 2021 at 09:02 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I use <a href="https://pinboard.in/">Pinboard</a> to save articles I've read and, increasingly, to save articles I <em>want</em> to read. That said I rarely go back and actually read things once they disappear into the Pinboard void. This isn't an uncommon problem, I know, but I think I've devised a simple solution.</p>
+<p>I recently set up a Raspberry Pi and mounted it under my desk. I've been playing with RPis for years, but I'd never found a recurring need for them, they've always been toys with fleeting amusement value. But this time around, I've configured it as both a local web server and Samba file share. This allows me to quickly and easily share files with the RPi and, since I configured it to send emails through my Fastmail account, it can now alert me whenever I want.</p>
+<h2>My Pinboard Weekly Newsletter</h2>
+<p>Now that everything on the RPi is set up and easily accessable, I wrote up a simple <a href="https://gist.github.com/Sonictherocketman/8504244c5c916f41dc7815e28f297b86">bash script</a> to pull my most recent bookmarks from Pinboard, filter out the stuff I've already read, and draft an email with everything from the past week that I still haven't gotten to.</p>
+<p>I've posted a simplified version <a href="https://gist.github.com/Sonictherocketman/8504244c5c916f41dc7815e28f297b86">on Github</a>, but my real script isn't much more complex&mdash;all told it comes out to 55 lines of code&mdash;and it's run with a simple, weekly cron job.</p>
+<p><img alt="Pinboard Weekly" src="/images/blog/pinboard-weekly.png" />
+<center><small><i>Here's a sample of the newsletter email&mdash;and yes, my RPi's name is Demin.</i></small></center></p>
+<p>Hopefully this weekly newsletter reminds me to actually go back and read the interesting news and articles I've collected during the week (or it will help remind me just how unimportant certain things really are when you've had a week to let them sit).</p>
+<p>If you use Pinboard, and you constantly find yourself saving articles and never reading them, give my script a try. If you do, let me know what you think!</p>
+          </div>
+          <hr />
+          <small>
+            Filed under:
+            <span class="tags article-content">
+              <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>, <a href="/tags.html#tag-fun" title="fun" class="tag">fun</a>
+            </span>
+          </small>
+        </div>
+        </article>
+      </div>
+      <div class="side-bar">
+        <div class="promotion">
+          <div>
+            <a href="https://goingindie.tech" title="Going Indie More Information">
+              <img
+                  class="promotion-cover"
+                  src="/images/going-indie/cover-icon.jpg"
+                  height="100px"
+                  width="100px"
+              />
+            </a>
+          </div>
+          <div>
+            Going Indie
+            <small>
+              <p>
+                A complete guide to becoming an independent software developer
+              </p>
+              <a href="https://goingindie.tech" title="Going Indie Order Now">
+              Order Now &#8594;
+              </a>
+            </small>
+          </div>
+        </div>
+        <h4>Also Me</h4>
+        <ul>
+          <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+            Pine.blog
+          </a></li>
+          <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+            GitHub
+          </a></li>
+          <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+            Twitter
+          </a></li>
+          <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+            Pinboard
+          </a></li>
+          <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+            Photoblog
+          </a></li>
+          <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+            Gravatar
+          </a></li>
+          <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+            Bandcamp
+          </a></li>
+          <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+            Goodreads
+          </a></li>
+        </ul>
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+            Democracy &amp; Progress
+          </a></li>
+          <li><a href="https://goingindie.tech" title="Going Indie">
+            Going Indie
+          </a></li>
+          <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+            Pine.blog
+          </a></li>
+          <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+            Indie Dev Life Podcast
+          </a></li>
+          <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+            Nine9s
+          </a></li>
+          <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+            d20.photos
+          </a></li>
+          <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+            Adventurer&apos;s Codex
+          </a></li>
+        </ul>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/archive/bookshelf" title="Book Recommendations">
+            Book Recommendations
+          </a></li>
+          <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+            Food &amp; Drink Recipes
+          </a></li>
+          <li><a href="/tags.html" title="Posts by Tag">
+            Tags
+          </a></li>
+        </ul>
+        <h4>Other Writings</h4>
+        <ul>
+          <b>The Way Forward (Series)</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/" title="Conquering the pandemic">
+                Conquering the pandemic
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-jobs-for-all/" title="Jobs for all">
+                Jobs for all
+              </a></li>
+              <li><a href="https://sduptownnews.com/the-way-forward-democracy-is-the-answer/" title="Democracy is the answer">
+                Democracy is the answer
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <b>Assorted Works</b>
+          <li>
+            <ul>
+              <li><a href="https://sduptownnews.com/californians-deserve-better-data-protection/" title="Californians deserve better data protection">
+                Californians deserve better data protection
+              </a></li>
+              <li><a href="https://sduptownnews.com/not-planning-on-voting-read-this/" title="Not planning on voting? Read this">
+                Not planning on voting? Read this
+              </a></li>
+              <li><a href="https://sduptownnews.com/guest-editorial-rounding-the-corner/" title="Rounding the corner">
+                Rounding the corner
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <div class="article-content">
+        <span style="font-size:small;">
+          <a rel="alternate" href="/rss.xml">
+            RSS
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

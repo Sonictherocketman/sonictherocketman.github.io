@@ -40,6 +40,33 @@
         <article>
 	<div class="post h-entry">
 		<div class="article-title">
+			<h1><a href="/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/" class="u-url p-name">
+					Building a Personalized Newsletter with Bash and a Raspberry Pi
+				</a>
+			</h1>
+			<small style="font-style:italic;">
+        <time class="dt-published" datetime="2021-04-03T21:02:00-08:00">
+          Posted on Sat, 03 Apr 2021 at 09:02 PM
+        </time>
+			</small>
+		</div> <!-- End article-title -->
+		<div class="article-content e-content">
+			<p>I use <a href="https://pinboard.in/">Pinboard</a> to save articles I've read and, increasingly, to save articles I <em>want</em> to read. That said I rarely go back and actually read things once they disappear into the Pinboard void. This isn't an uncommon problem, I know, but I think I've devised a simple solution.</p>
+<p>I recently set up a Raspberry Pi and mounted it under my desk. I've been playing with RPis for years, but I'd never found a recurring need for them, they've always been toys with fleeting amusement value. But this time around, I've configured it as both a local web server and Samba file share. This allows me to quickly and easily share files with the RPi and, since I configured it to send emails through my Fastmail account, it can now alert me whenever I want.</p>
+<h2>My Pinboard Weekly Newsletter</h2>
+<p>Now that everything on the RPi is set up and easily accessable, I wrote up a simple <a href="https://gist.github.com/Sonictherocketman/8504244c5c916f41dc7815e28f297b86">bash script</a> to pull my most recent bookmarks from Pinboard, filter out the stuff I've already read, and draft an email with everything from the past week that I still haven't gotten to.</p>
+<p>I've posted a simplified version <a href="https://gist.github.com/Sonictherocketman/8504244c5c916f41dc7815e28f297b86">on Github</a>, but my real script isn't much more complex&mdash;all told it comes out to 55 lines of code&mdash;and it's run with a simple, weekly cron job.</p>
+<p><img alt="Pinboard Weekly" src="/images/blog/pinboard-weekly.png" />
+<center><small><i>Here's a sample of the newsletter email&mdash;and yes, my RPi's name is Demin.</i></small></center></p>
+<p>Hopefully this weekly newsletter reminds me to actually go back and read the interesting news and articles I've collected during the week (or it will help remind me just how unimportant certain things really are when you've had a week to let them sit).</p>
+<p>If you use Pinboard, and you constantly find yourself saving articles and never reading them, give my script a try. If you do, let me know what you think!</p>
+		</div>
+	</div>
+</article>
+
+<article>
+	<div class="post h-entry">
+		<div class="article-title">
 			<h1><a href="/archive/why-all-my-servers-have-an-8gb-empty-file/" class="u-url p-name">
 					Why All My Servers Have an 8GB Empty File
 				</a>
@@ -322,34 +349,6 @@
 	</div>
 </article>
 
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/programming-misconceptions/" class="u-url p-name">
-					Programming Misconceptions
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-11-23T03:35:00-08:00">
-          Posted on Mon, 23 Nov 2020 at 03:35 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Along the lines of my post about <a href="/archive/assumptions-and-variable-names/">assumptions and variable names</a>, here's a list of a few common programming misconceptions that I often run into (with other people's code and with my own).</p>
-<blockquote>
-<p>What you think the code does is often not the same as what it actually does.</p>
-<p>There is a big difference between: intended, expected, and desired. Something can be both intended and expected, but undesired; but it can also be intended and desired, but unexpected.</p>
-</blockquote>
-<p>And my personal favorite:</p>
-<blockquote>
-<p>What the method/function name says it does is not the same as what it actually does.</p>
-</blockquote>
-<p>Naming is hard.</p>
-		</div>
-	</div>
-</article>
-
       </div>
       <div class="side-bar">
         <div class="promotion">
@@ -506,7 +505,7 @@
         </ul>
         <h4>Tags</h4>
         <div class="tags">
-          <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>, <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>, <a href="/tags.html#tag-software" title="software" class="tag">software</a>, <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>, <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>, <a href="/tags.html#tag-development" title="development" class="tag">development</a>, <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>, <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-python" title="python" class="tag">python</a>, <a href="/tags.html#tag-history" title="history" class="tag">history</a>
+          <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>, <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>, <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>, <a href="/tags.html#tag-software" title="software" class="tag">software</a>, <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>, <a href="/tags.html#tag-development" title="development" class="tag">development</a>, <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>, <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-python" title="python" class="tag">python</a>, <a href="/tags.html#tag-history" title="history" class="tag">history</a>
         </div>
         <h4>Blogroll</h4>
         <ul>
