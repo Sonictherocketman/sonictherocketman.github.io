@@ -1,6 +1,6 @@
 slug: mastodon-and-microblogging
 published: Sat, 10 Nov 2018 at 12:04 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: Mastodon and Microblogging
 author: Brian Schrader
 tags: mastodon, micro.blog, pine.blog

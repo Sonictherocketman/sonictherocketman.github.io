@@ -1,6 +1,6 @@
 slug: linodes-13th-birthday
 published: Thu, 16 Jun 2016 at 01:28 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: Linode's 13th Birthday 
 author: Brian Schrader
 status: publish

@@ -1,6 +1,6 @@
 slug: markdown-syntax-request-math-syntax
 published: Thu, 19 Sep 2013 at 02:35 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: MarkDown Syntax Feature Request: Math Syntax
 author: Brian Schrader
 status: publish 

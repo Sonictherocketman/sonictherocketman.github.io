@@ -1,6 +1,6 @@
 slug: numba-compiling-python-using-llvm-the-way-webkit-compiles-javascript
 published: Sat, 30 Aug 2014 at 11:10 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: Numba: Compiling Python Using LLVM the way WebKit Compiles JavaScript
 author: Brian Schrader
 tags: python, javascript, llvm

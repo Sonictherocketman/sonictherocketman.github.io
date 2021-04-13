@@ -1,6 +1,6 @@
 slug: pineblog-12-is-out
 published: Wed, 17 Oct 2018 at 05:10 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: Pine.blog 1.2 is Out!
 author: Brian Schrader
 tags: pine.blog, release

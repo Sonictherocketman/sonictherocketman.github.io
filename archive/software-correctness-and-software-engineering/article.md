@@ -1,6 +1,6 @@
 slug: software-correctness-and-software-engineering
 published: Mon, 05 Oct 2015 at 04:50 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: Software Correctness and Software Engineering 
 author: Brian Schrader
 tags: software development

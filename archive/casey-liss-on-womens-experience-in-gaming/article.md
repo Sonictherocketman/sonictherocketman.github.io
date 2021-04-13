@@ -1,6 +1,6 @@
 slug: casey-liss-on-womens-experience-in-gaming
 published: Sat, 06 Sep 2014 at 10:20 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: Casey Liss on Women's Experience in Gaming
 author: Brian Schrader
 tags: gaming

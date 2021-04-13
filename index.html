@@ -1,57 +1,60 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>BiteofanApple</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
-	<link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=1.1">
-	<link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
-  <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+	<meta property="og:type" content="article" />
   <link rel="authorization_endpoint" href="https://indielogin.com/auth"/>
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token"/>
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
-  <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
-	<meta property="og:type" content="article" />
-</head>
-<body>
-	<div id="content" class="h-feed">
-    <div class="nav-container">
-      <nav class="nav">
-        <div class="nav-item nav-brand">
-          <a href="/" class="site-title">
-            BiteofanApple
-          </a>
-          <span
-            class="author-tag hide-on-mobile"
-          >
-            by <a href="/about/">Brian Schrader</a>
-          </span>
-        </div>
-        <div class="nav-item"><a href="/archive/">Archive</a></div>
-        <div class="nav-item"><a href="/about/">About</a></div>
-        <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
-        <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
-      </nav>
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
     </div>
-    <div class="bars">
-      <div class="main-bar">
-        <article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/" class="u-url p-name">
-					Building a Personalized Newsletter with Bash and a Raspberry Pi
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2021-04-03T21:02:00-08:00">
-          Posted on Sat, 03 Apr 2021 at 09:02 PM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>I use <a href="https://pinboard.in/">Pinboard</a> to save articles I've read and, increasingly, to save articles I <em>want</em> to read. That said I rarely go back and actually read things once they disappear into the Pinboard void. This isn't an uncommon problem, I know, but I think I've devised a simple solution.</p>
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/" class="u-url p-name">
+                Building a Personalized Newsletter with Bash and a Raspberry Pi
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-04-03T21:02:00-08:00">
+                Posted on Sat, 03 Apr 2021 at 09:02 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I use <a href="https://pinboard.in/">Pinboard</a> to save articles I've read and, increasingly, to save articles I <em>want</em> to read. That said I rarely go back and actually read things once they disappear into the Pinboard void. This isn't an uncommon problem, I know, but I think I've devised a simple solution.</p>
 <p>I recently set up a Raspberry Pi and mounted it under my desk. I've been playing with RPis for years, but I'd never found a recurring need for them, they've always been toys with fleeting amusement value. But this time around, I've configured it as both a local web server and Samba file share. This allows me to quickly and easily share files with the RPi and, since I configured it to send emails through my Fastmail account, it can now alert me whenever I want.</p>
 <h2>My Pinboard Weekly Newsletter</h2>
 <p>Now that everything on the RPi is set up and easily accessable, I wrote up a simple <a href="https://gist.github.com/Sonictherocketman/8504244c5c916f41dc7815e28f297b86">bash script</a> to pull my most recent bookmarks from Pinboard, filter out the stuff I've already read, and draft an email with everything from the past week that I still haven't gotten to.</p>
@@ -60,25 +63,25 @@
 <center><small><i>Here's a sample of the newsletter email&mdash;and yes, my RPi's name is Demin.</i></small></center></p>
 <p>Hopefully this weekly newsletter reminds me to actually go back and read the interesting news and articles I've collected during the week (or it will help remind me just how unimportant certain things really are when you've had a week to let them sit).</p>
 <p>If you use Pinboard, and you constantly find yourself saving articles and never reading them, give my script a try. If you do, let me know what you think!</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/why-all-my-servers-have-an-8gb-empty-file/" class="u-url p-name">
-					Why All My Servers Have an 8GB Empty File
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2021-03-25T18:39:00-08:00">
-          Posted on Thu, 25 Mar 2021 at 06:39 PM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Last night I was listening to the latest <a href="https://www.relay.fm/radar/213">Under the Radar</a>, where Marco Arment dove into nerdy detail about his recent <a href="https://overcast.fm">Overcast</a> server issues. The discussion was great, and you should listen to it, but Marco's recent server troubles were pretty similar to my own <a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/">server issues</a> from last year, and so I figured I'd share my life-hack solution for anyone out there with the same problem.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/why-all-my-servers-have-an-8gb-empty-file/" class="u-url p-name">
+                Why All My Servers Have an 8GB Empty File
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-03-25T18:39:00-08:00">
+                Posted on Thu, 25 Mar 2021 at 06:39 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>Last night I was listening to the latest <a href="https://www.relay.fm/radar/213">Under the Radar</a>, where Marco Arment dove into nerdy detail about his recent <a href="https://overcast.fm">Overcast</a> server issues. The discussion was great, and you should listen to it, but Marco's recent server troubles were pretty similar to my own <a href="/archive/pineblog-downtime-post-mortem-a-story-of-finite-resources/">server issues</a> from last year, and so I figured I'd share my life-hack solution for anyone out there with the same problem.</p>
 <h2>The what and where</h2>
 <p>Both hosts, Marco Arment and David Smith, run their own servers on Linode&mdash;as do I&mdash;and I found myself nodding along in solidarity with Marco as he discussed his toils during a painful database server migration. Here's the crux of what happened in <a href="https://overcast.fm/+FgnbaF18Q/14:09">Marco's own words</a>:</p>
 <blockquote>
@@ -97,46 +100,46 @@
 <div class="footnote">
 <sup>1</sup> There are <a href="https://www.cyberciti.biz/faq/howto-create-lage-files-with-dd-command/"> lots of tools you can use to do</a> this besides dd. I just prefer it.
 </div>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/all-too-quiet/" class="u-url p-name">
-					All Too Quiet
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2021-03-07T02:12:00-08:00">
-          Posted on Sun, 07 Mar 2021 at 02:12 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Other than my last post, it's been pretty quiet here lately. I've spent the majority of the last two months wrapping up the newest update to Pine.blog, which launched silently about a month ago. I meant to do a sort of announcement or retrospective post on the launch, but I just never got around to it.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/all-too-quiet/" class="u-url p-name">
+                All Too Quiet
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-03-07T02:12:00-08:00">
+                Posted on Sun, 07 Mar 2021 at 02:12 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>Other than my last post, it's been pretty quiet here lately. I've spent the majority of the last two months wrapping up the newest update to Pine.blog, which launched silently about a month ago. I meant to do a sort of announcement or retrospective post on the launch, but I just never got around to it.</p>
 <p>A new <a href="https://indiedevlife.fm">IndieDevLife</a> is coming, but I haven't had the mental bandwidth to record an episode lately. I've been spending a lot of time reading and writing policy proposals for <a href="http://democracyandprogress.com">Democracy &amp; Progress</a> and I've been pouring the remainder of my time into a new iOS app.</p>
 <p>That's right, I've started yet another new app! It's in a private, early beta now, and I'm expecting the launch in May. No more details just yet, but I promise this one will be particularly special. I'm doing a lot that I've never done before, and playing with APIs I'd never heard of until now. It's fun stuff.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/california-democracy-and-progress/" class="u-url p-name">
-					California, Democracy, and Progress
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2021-03-05T19:26:00-08:00">
-          Posted on Fri, 05 Mar 2021 at 07:26 PM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Last week I published the first proposal on <a href="http://democracyandprogress.com">Democracy &amp; Progress</a>, my new public policy blog. It's about Democracy Vouchers and how California should adopt them.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/california-democracy-and-progress/" class="u-url p-name">
+                California, Democracy, and Progress
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-03-05T19:26:00-08:00">
+                Posted on Fri, 05 Mar 2021 at 07:26 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>Last week I published the first proposal on <a href="http://democracyandprogress.com">Democracy &amp; Progress</a>, my new public policy blog. It's about Democracy Vouchers and how California should adopt them.</p>
 <p>You should read the post, then please consider subscribing. The blog is in its initial launch phase, so your subscription means more than it normally would.</p>
 <p>I've been wanting to write about policy for a long time, but I could never quite figure out the tone or the topic scope. I finally settled on the idea of discussing California politics through the lens of improving and promoting democracy. It's a big topic, and there's a lot to discuss, so I hope you'll follow along and let me know what you think.</p>
 <p>Over the last few years, I've become pretty immersed in the policy world's conversations. I read a lot of policy books, articles and papers, I follow a lot of political writers, and I listen to a lot of politics podcasts. Over time, I started to develop my own policy outlook and then I wanted to participate in the conversation to add what I thought was a different angle on the discussion. Last year I started writing Op-Eds and <a href="http://sduptownnews.com">publishing some in my local paper</a>, but also I wanted to do more than that. I just couldn't figure out what my angle would be, what kinds of topics or ideas I wanted to cover, and through what lens I would cover them.</p>
@@ -145,70 +148,70 @@
 <p>Politics can be a difficult thing to discuss in public, so that's why I wanted to focus on policy, not politics. Hopefully the blog can stay far away from the concerns of the day and avoid kindling a partisan fervor. At D&amp;P, we're going to focus on solutions. California is a solidly Democratic state (the party not the governing strategy), so partisan squabbling is less of an issue&mdash;which is a blessing&mdash;but there are still plenty of difficult issues.</p>
 <p>As part of my work for D&amp;P, I've started compiling a <a href="http://democracyandprogress.com/archive/resources/">list of resources</a> for people to help them follow California politics. I know I wish I'd had something like this to get me started, so hopefully I can pay it forward.</p>
 <p>Please consider giving D&amp;P a follow in your favorite feed reader via <a href="https://democracyandprogress.com/rss.xml">RSS</a>, on <a href="https://twitter.com/dem_and_prog">Twitter @dem_and_prog</a>, or sign up for <a href="https://tinyletter.com/democracyandprogress">the newsletter</a>. Here's to a better, more policy focused California.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/various-goings-on/" class="u-url p-name">
-					Various Goings On
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2021-01-03T05:49:00-08:00">
-          Posted on Sun, 03 Jan 2021 at 05:49 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>I've been a little scatter-brained over the past few weeks. I've started lots of little projects and finished almost none of them. Hopefully, they'll all start to wrap up soon. I mentioned on a previous <a href="https://indiedevlife.fm">Indie Dev Life</a> that I was working on an update to the <a href="https://pine.blog">Pine.blog</a> iOS app, and that is still true. It's coming along nicely. I think I'm about 80% done with it, but I've reached the infamous second 80% and it's become a bit of a slog, so I did what a usually do in this situation: literally anything else.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/various-goings-on/" class="u-url p-name">
+                Various Goings On
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-01-03T05:49:00-08:00">
+                Posted on Sun, 03 Jan 2021 at 05:49 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I've been a little scatter-brained over the past few weeks. I've started lots of little projects and finished almost none of them. Hopefully, they'll all start to wrap up soon. I mentioned on a previous <a href="https://indiedevlife.fm">Indie Dev Life</a> that I was working on an update to the <a href="https://pine.blog">Pine.blog</a> iOS app, and that is still true. It's coming along nicely. I think I'm about 80% done with it, but I've reached the infamous second 80% and it's become a bit of a slog, so I did what a usually do in this situation: literally anything else.</p>
 <p>To that end, I've been experimenting with a few other projects. I've started the process of adding a dark mode to Pine.blog's Web UI, which is coming along nicely. I've also started building out Micropub support for Pine.blog. Both are features I've wanted for a long time, but never gotten to. Hopefully they'll be done around the same time as the iOS refresh. I've always struggled with putting together a coherent design for the Pine.blog web UI, and it shows. With the newest refactor of Pine.blog for iOS though, I've finally developed a coherent design and I've started using the same layout and components on both iOS and the web. It's looking really good, and hopefully this new design will last a while and bring Pine.blog up to modern standards.</p>
 <p>On Monday the holidays are officially over and I'll force myself to finish the iOS release for Pine.blog. Usually I try to keep myself pretty focused, but for now I'll keep tinkering &mdash; it's a nice thing to do every once in a while.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/breadcrumbs-and-pinboard/" class="u-url p-name">
-					Breadcrumbs and Pinboard
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-12-31T01:44:00-08:00">
-          Posted on Thu, 31 Dec 2020 at 01:44 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>I use <a href="https://pinboard.in">Pinboard</a>, and I have for some time. For years, I've dumped the occasional interesting article there and then largely forgotten about it. Recently though, I've decided to really dive in and start using the service to solve a problem I routinely have.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/breadcrumbs-and-pinboard/" class="u-url p-name">
+                Breadcrumbs and Pinboard
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2020-12-31T01:44:00-08:00">
+                Posted on Thu, 31 Dec 2020 at 01:44 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I use <a href="https://pinboard.in">Pinboard</a>, and I have for some time. For years, I've dumped the occasional interesting article there and then largely forgotten about it. Recently though, I've decided to really dive in and start using the service to solve a problem I routinely have.</p>
 <p>I read a lot of articles, as I'm sure many of you do, and I often refer to them in conversation or in a blog post. When I do reference an article I like to cite it, even in conversation, but I often can't find the article anymore nor can I remember enough about it to effectively search for it. I think it's important to cite your sources, even casually, because it helps you recognize your own filter bubble, and it helps to ground you in the realm of facts. It also helps the other people you're conversing with better understand and counter your argument if they can tell where you're getting your information from. Plus, if you can find the original source, you can always verify that you're remembering the information correctly.</p>
 <p>In an effort to forever solve this problem, I've started archiving essentially every article I read in Pinboard, and I do this whether or not I think the article was any good. This effectively turns Pinboard into a breadcrumb trail that I can use to retrace my path on the Web and hopefully dig up and verify any information that I half-remember.</p>
 <p>A while back, I started <a href="https://pine.blog/u/sonicrocketman/archive/e335c9e3-4e5f-4249-ad15-644c33bd658b">taking notes</a> when I read books so I can more easily remember and refer back to information I may need, but I don't want to keep a notebook for everything I read online. Enter Pinboard.</p>
 <p>There are a few things that my system is lacking so far. Most importantly, I'm still having trouble finding some articles when I know that I've bookmarked them. It seems that either Pinboard's search isn't working how I'd expect or I'm not giving it enough metadata to search through when bookmarking articles.</p>
 <p>Hopefully, as I get more accustomed to this new way of using Pinboard I'll drastically increase the frequency when I can recall some useful fact and also produce a worthy citation.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/history-myth-and-talking-cows/" class="u-url p-name">
-					History, Myth, and Talking Cows
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-12-27T08:34:00-08:00">
-          Posted on Sun, 27 Dec 2020 at 08:34 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>I started reading <a href="https://www.indiebound.org/book/9780140448092">The Early History Of Rome</a> by Livy a little over two years ago, but today I finally finished it. It's a good book and a fun and illustrative read, but there's a reason it took me so long to get through.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/history-myth-and-talking-cows/" class="u-url p-name">
+                History, Myth, and Talking Cows
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2020-12-27T08:34:00-08:00">
+                Posted on Sun, 27 Dec 2020 at 08:34 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I started reading <a href="https://www.indiebound.org/book/9780140448092">The Early History Of Rome</a> by Livy a little over two years ago, but today I finally finished it. It's a good book and a fun and illustrative read, but there's a reason it took me so long to get through.</p>
 <p>Livy, or Titus Livius, as he was actually known, was a Roman writer <a href="https://en.wikipedia.org/wiki/Livy">born in 64 or 59 BC</a>, so his writing style is... strange by modern standards. I would often have to re-read multiple pages after realizing that I had no idea who was doing what. This is compounded by the fact that there are literally hundreds of names and, in a very Roman tradition, they are all incredibly similar. I'm also a fairly slow reader, so between the constant re-reading, my overall slow reading speed, and huge reading backlog, I could only finish 20 pages before getting distracted with another <del>easier</del> book.</p>
 <p>That said, Livy's work is certainly worth reading if only for some of the truly amazing stories he tells. Sometimes the stories are so completely outlandish that I have to stop and remind myself that this isn't a fantasy story, it's history. Now, obviously there is myth and legend interspersed with it, and in these early histories they're effectively inseparable. After all, it's claimed &mdash;by multiple Roman authors&mdash; that the city was founded by two children nursed by a wolf, before the oldest kills the youngest, becomes king, and ascends to heaven in a cloud. It's an interesting read.</p>
 <p>I'd like to share just one passage that I earmarked early on in the book. For context, know that the Romans were <em>incredibly</em> superstitious. They were constantly on the lookout for signs from the gods and they rarely did anything without performing some sacred ritual and seeking approval from the gods (see the <a href="http://www.anecdotesfromantiquity.net/the-sacred-chickens-of-rome/">story of the Sacred Chickens</a>). In this passage, the consuls for the year (461 BC) had just been elected, and war would soon come to the Romans though they didn't know it yet.</p>
@@ -218,25 +221,25 @@
 </blockquote>
 <p>There is so much that I love about this passage, but my absolute favorite thing is that Livy reports that <strong>a cow talked</strong>, but for some reason the first time this happened it was dismissed, and that a cow talking is apparently a warning to avoid factious politics. If that's the case, then I kinda wish a cow would talk today.</p>
 <p>I've already purchased the <a href="https://www.indiebound.org/book/9780140443882">second volume</a> of Livy's work and it's on my shelf ready to go. Hopefully I can get through this one a bit quicker.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/arbitrary-achievement-unlocked/" class="u-url p-name">
-					Arbitrary Achievement Unlocked
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-12-10T23:14:00-08:00">
-          Posted on Thu, 10 Dec 2020 at 11:14 PM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>Today marks the 10th episode of my podcast <a href="https://indiedevlife.fm">Indie Dev Life</a>, and while that might not seem like a huge milestone, it's an important one because I decided it was. When I decided to start a podcast I, arbitrarily, set a goal for myself to publish at least ten episodes. After that I would decide if I liked doing it and if I would continue. Today I achieved my arbitrary goal.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/arbitrary-achievement-unlocked/" class="u-url p-name">
+                Arbitrary Achievement Unlocked
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2020-12-10T23:14:00-08:00">
+                Posted on Thu, 10 Dec 2020 at 11:14 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>Today marks the 10th episode of my podcast <a href="https://indiedevlife.fm">Indie Dev Life</a>, and while that might not seem like a huge milestone, it's an important one because I decided it was. When I decided to start a podcast I, arbitrarily, set a goal for myself to publish at least ten episodes. After that I would decide if I liked doing it and if I would continue. Today I achieved my arbitrary goal.</p>
 <p>I do plan to continue the podcast. I like doing it, and it's fun to both record and edit. So far, I like both the format and the length. As is hopefully apparent, I'm trying to model IDL on <a href="http://developingperspective.com">_davidsmith's Developing Perspective</a> podcast. I enjoyed that show (and it's casual format) a lot and I think a short show works well for the kind of show I'm trying to create. So, if you like the show, don't worry there's going to be more of it.</p>
 <h3>Arbitrary Deadlines &amp; Achievements</h3>
 <p>I'm a procrastinator by nature, so I have to set, what are often completely arbitrary and unnecessary, deadlines for myself if I want to accomplish basically anything, plus I have a terrible memory. So, I tend to create task lists for myself and assign tight due dates so that I can remember what I need to do and ensure that I actually get it done. And whenever possible, I try to stick to my arbitrary deadlines no matter the work involved. If I decided something will launch tomorrow, then it will. I do the same with arbitrary goals.</p>
@@ -252,25 +255,25 @@
 <p>This tiered structure helps me understand myself and my own expectations. It also keeps me motivated. If I say I'd be happy with something, and set my expectations accordingly, then when I achieve it, I feel good. Without this structure, I tend to trap myself into believing that my wildest dream scenario is just as likely as the rest and then I'm disappointed when that dream doesn't come true.</p>
 <p>I say this in Going Indie, but managing your own expectations is incredibly important, not only to your own motivation, but to your mental health. If you constantly convince yourself that an idea or project is going to make it big, and then it doesn't, you're going to get discouraged. But if you set reasonable goals, and learn to manage your own expectations (of yourself, your capabilities, and your results) then it's a lot easier to appreciate the successes you do achieve and keep going to bigger and better things.</p>
 <p>tl;dr I made 10 episodes of my podcast, and I want to make more.</p>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/a-false-dichotomy/" class="u-url p-name">
-					A False Dichotomy
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-12-05T00:11:00-08:00">
-          Posted on Sat, 05 Dec 2020 at 12:11 AM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>An editorial of mine was <a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/">published today in a local paper</a>. It's the first in a short series about America's future and how we can work together to solve our most pressing problems, and like most things these days this first essay is about the COVID-19 pandemic.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/a-false-dichotomy/" class="u-url p-name">
+                A False Dichotomy
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2020-12-05T00:11:00-08:00">
+                Posted on Sat, 05 Dec 2020 at 12:11 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>An editorial of mine was <a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/">published today in a local paper</a>. It's the first in a short series about America's future and how we can work together to solve our most pressing problems, and like most things these days this first essay is about the COVID-19 pandemic.</p>
 <blockquote>
 <p>COVID-19 has disrupted our entire way of life and it seems like that will continue for longer than we would like or hope. The race to a vaccine and mass inoculation is ongoing, but it will take time to see the fruits of that labor. In the meantime, we are not helpless...our current situation is not unsalvageable.</p>
 </blockquote>
@@ -290,25 +293,25 @@
 <blockquote>
 <p>..we can't control the virus, we can only mitigate its spread. We can, however, directly effect the economy. We could have built up our institutions, we could have helped those that lost their jobs, we could have woven a net to catch those who fall. We chose not to, but we still can.</p>
 </blockquote>
-		</div>
-	</div>
-</article>
-
-<article>
-	<div class="post h-entry">
-		<div class="article-title">
-			<h1><a href="/archive/why-i-dont-retweet-anything/" class="u-url p-name">
-					Why I Don't Retweet Anything
-				</a>
-			</h1>
-			<small style="font-style:italic;">
-        <time class="dt-published" datetime="2020-12-04T20:43:00-08:00">
-          Posted on Fri, 04 Dec 2020 at 08:43 PM
-        </time>
-			</small>
-		</div> <!-- End article-title -->
-		<div class="article-content e-content">
-			<p>I still read Twitter (despite my <a href="/_drafts/retweeting/">efforts to quit entirely</a>), but I've stopped retweeting. My last retweet was on July 17th and it was of a tweet I wrote for <a href="https://adventurerscodex.com">a company I co-own</a>. And if things continue as planned, that will be the last retweet I ever do.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
+            <h1><a href="/archive/why-i-dont-retweet-anything/" class="u-url p-name">
+                Why I Don't Retweet Anything
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2020-12-04T20:43:00-08:00">
+                Posted on Fri, 04 Dec 2020 at 08:43 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I still read Twitter (despite my <a href="/_drafts/retweeting/">efforts to quit entirely</a>), but I've stopped retweeting. My last retweet was on July 17th and it was of a tweet I wrote for <a href="https://adventurerscodex.com">a company I co-own</a>. And if things continue as planned, that will be the last retweet I ever do.</p>
 <h3>Why No Retweets?</h3>
 <p>Retweets are Twitter's original sin. Akin to Facebook's Share, or Tumblr's Re-blog, the Retweet is what allows content on Twitter to spread virally. It allows for users to effortlessly spread false or misleading information with impunity and encourages readers to never go past the title of an article (despite <a href="https://slate.com/technology/2020/10/twitter-retweet-change-election.html">Twitter's admittedly laudable attempts</a> to address this issue). Retweets allow users to easily dunk on each other and act as super-spreaders of identity-reenforcing and tribalistic memes that only serve to make Twitter a worse platform.</p>
 <p>Quote retweets are a little better (at least they require the user to express some opinion about the content they're spreading), but they still allow for the easy dunking that's a mainstay of the platform.</p>
@@ -341,253 +344,284 @@
 <div class="footnote">
 <sup>1</sup> Pine.blog will show you when someone retweets or re-posts your blog posts if you allow for Webmentions, though I'm considering letting users configure this behavior. Retweets also poison the mind of the poster, not just the reader.
 </div>
-
 <div class="footnote">
 <sup>2</sup> In an effort to be transparent, I have asked others to retweet my posts before an an attempt to gain some traction outside my bubble. I'm going to stop doing that too.
 </div>
-		</div>
-	</div>
-</article>
-
-      </div>
-      <div class="side-bar">
-        <div class="promotion">
-          <div>
-            <a href="https://goingindie.tech" title="Going Indie More Information">
-              <img
-                  class="promotion-cover"
-                  src="/images/going-indie/cover-icon.jpg"
-                  height="100px"
-                  width="100px"
-              />
-            </a>
-          </div>
-          <div>
-            Going Indie
-            <small>
-              <p>
-                A complete guide to becoming an independent software developer
-              </p>
-              <a href="https://goingindie.tech" title="Going Indie Order Now">
-              Order Now &#8594;
-              </a>
-            </small>
           </div>
         </div>
-        <h4>Featured Posts</h4>
-<ul><li><a href="/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
-  Announcing: Hewell Public Beta 🎉
-</a></li>
-<li><a href="/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
-  On Uber, Lyft, and Labor Law
-</a></li>
-<li><a href="/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&D Image Repository" rel="nofollow">
-  d20.photos: A Public Domain D&D Image Repository
-</a></li>
-<li><a href="/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
-  Announcing Nine9s.cloud 🎉
-</a></li>
-<li><a href="/archive/why-were-polarized/" title="Why We're Polarized" rel="nofollow">
-  Why We're Polarized
-</a></li>
-<li><a href="/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
-  A New Adventure
-</a></li>
-<li><a href="/archive/the-social-web/" title="The Social Web" rel="nofollow">
-  The Social Web
-</a></li>
-<li><a href="/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
-  Feed Readers and Local News
-</a></li>
-<li><a href="/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
-  The Web as a Social Network
-</a></li>
-<li><a href="/archive/a-vision-of-the-open-web/" title="A Vision of the Open Web" rel="nofollow">
-  A Vision of the Open Web
-</a></li>
-</ul>
-
-        <h4>Also Me</h4>
-        <ul>
-          <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
-            Pine.blog
-          </a></li>
-          <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
-            GitHub
-          </a></li>
-          <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
-            Twitter
-          </a></li>
-          <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
-            Pinboard
-          </a></li>
-          <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
-            Photoblog
-          </a></li>
-          <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
-            Gravatar
-          </a></li>
-          <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
-            Bandcamp
-          </a></li>
-          <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
-            Goodreads
-          </a></li>
-        </ul>
-        <h4>Projects</h4>
-        <ul>
-          <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
-            Democracy &amp; Progress
-          </a></li>
-          <li><a href="https://goingindie.tech" title="Going Indie">
-            Going Indie
-          </a></li>
-          <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
-            Pine.blog
-          </a></li>
-          <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
-            Indie Dev Life Podcast
-          </a></li>
-          <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
-            Nine9s
-          </a></li>
-          <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
-            d20.photos
-          </a></li>
-          <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
-            Adventurer&apos;s Codex
-          </a></li>
-        </ul>
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="/archive/bookshelf" title="Book Recommendations">
-            Book Recommendations
-          </a></li>
-          <li><a href="/archive/recipes/" title="Food and Drink Recipes">
-            Food &amp; Drink Recipes
-          </a></li>
-          <li><a href="/tags.html" title="Posts by Tag">
-            Tags
-          </a></li>
-        </ul>
-        <h4>Other Writings</h4>
-        <ul>
-          <b>The Way Forward (Series)</b>
-          <li>
-            <ul>
-              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/" title="Conquering the pandemic">
-                Conquering the pandemic
-              </a></li>
-              <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-jobs-for-all/" title="Jobs for all">
-                Jobs for all
-              </a></li>
-              <li><a href="https://sduptownnews.com/the-way-forward-democracy-is-the-answer/" title="Democracy is the answer">
-                Democracy is the answer
-              </a></li>
-            </ul>
-          </li>
-        </ul>
-        <ul>
-          <b>Assorted Works</b>
-          <li>
-            <ul>
-              <li><a href="https://sduptownnews.com/californians-deserve-better-data-protection/" title="Californians deserve better data protection">
-                Californians deserve better data protection
-              </a></li>
-              <li><a href="https://sduptownnews.com/not-planning-on-voting-read-this/" title="Not planning on voting? Read this">
-                Not planning on voting? Read this
-              </a></li>
-              <li><a href="https://sduptownnews.com/guest-editorial-rounding-the-corner/" title="Rounding the corner">
-                Rounding the corner
-              </a></li>
-            </ul>
-          </li>
-        </ul>
-        <h4>Tags</h4>
-        <div class="tags">
-          <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>, <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>, <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>, <a href="/tags.html#tag-software" title="software" class="tag">software</a>, <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>, <a href="/tags.html#tag-development" title="development" class="tag">development</a>, <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>, <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>, <a href="/tags.html#tag-python" title="python" class="tag">python</a>, <a href="/tags.html#tag-history" title="history" class="tag">history</a>
-        </div>
-        <h4>Blogroll</h4>
-        <ul>
-          <li><a href="https://vincentritter.com/" title="Vincent Ritter" rel="nofollow">
-            Vincent Ritter
-          </a></li>
-          <li><a href="https://gregorlove.com/" title="gRegorLove.com" rel="nofollow">
-            gRegorLove.com
-          </a></li>
-          <li><a href="https://eli.li/" title="Oatmeal" rel="nofollow">
-            Oatmeal
-          </a></li>
-          <li><a href="https://aaronparecki.com/" title="Aaron Parecki" rel="nofollow">
-            Aaron Parecki
-          </a></li>
-          <li><a href="http://inessential.com/" title="inessential" rel="nofollow">
-            inessential
-          </a></li>
-          <li><a href="http://idlewords.com/" title="Idle Words" rel="nofollow">
-            Idle Words
-          </a></li>
-          <li><a href="http://macgenie.micro.blog/" title="Jean MacDonald" rel="nofollow">
-            Jean MacDonald
-          </a></li>
-          <li><a href="https://www.vox.com/authors/ezra-klein" title="Ezra Klein" rel="nofollow">
-            Ezra Klein
-          </a></li>
-          <li><a href="https://pine.blog/u/photosaboutadams" title="Photos About Adams" rel="nofollow">
-            Photos About Adams
-          </a></li>
-          <li><a href="https://iifrp.org" title="IIFRP.org" rel="nofollow">
-            IIFRP.org
-          </a></li>
-          <li><a href="http://mattgemmell.com/" title="Matt Gemmell" rel="nofollow">
-            Matt Gemmell
-          </a></li>
-          <li><a href="http://hypercritical.co/" title="Hypercritical" rel="nofollow">
-            Hypercritical
-          </a></li>
-          <li><a href="https://twitter.com/HelloMelanieC" title="Melanie Crutchfield" rel="nofollow">
-            Melanie Crutchfield
-          </a></li>
-          <li><a href="http://jvns.ca/" title="Julia Evans" rel="nofollow">
-            Julia Evans
-          </a></li>
-          <li><a href="https://kateheddleston.com/blog" title="Kate Heddleston" rel="nofollow">
-            Kate Heddleston
-          </a></li>
-          <li><a href="https://beckyhansmeyer.com/" title="Becky Hansmeyer" rel="nofollow">
-            Becky Hansmeyer
-          </a></li>
-          <li><a href="https://adventurerscodex.com/blog.html" title="Adventurer's Codex Blog" rel="nofollow">
-            Adventurer's Codex Blog
-          </a></li>
-          <li><a href="https://blog.pine.blog/" title="Pine.blog Official Blog" rel="nofollow">
-            Pine.blog Official Blog
-          </a></li>
-          <li><a href="https://www.peoplespolicyproject.org/" title="People's Policy Project" rel="nofollow">
-            People's Policy Project
-          </a></li>
-        </ul>
-      </div>
+      </article>
+      
     </div>
-    <div class="h-card p-author" style="display:none;">
+    <div class="side-bar">
+      <div class="promotion">
+  <div>
+    <a href="https://goingindie.tech" title="Going Indie More Information">
       <img
-        class="u-photo"
-        src="https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595"
+          class="promotion-cover"
+          src="/images/going-indie/cover-icon.jpg"
+          height="100px"
+          width="100px"
       />
-      <span class="p-name">Brian Schrader</span>
-      <span class="p-nickname">sonicrocketman</span>
-      <a href="/" class="u-url u-uid"></a>
+    </a>
+  </div>
+  <div>
+    Going Indie
+    <small>
+      <p>
+        A complete guide to becoming an independent software developer
+      </p>
+      <a href="https://goingindie.tech" title="Going Indie Order Now">
+      Order Now &#8594;
+      </a>
+    </small>
+  </div>
+</div>
+<h4>Featured Posts</h4>
+<ul>
+  
+  <li><a href="/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
+    Announcing: Hewell Public Beta 🎉
+  </a></li>
+  
+  <li><a href="/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
+    On Uber, Lyft, and Labor Law
+  </a></li>
+  
+  <li><a href="/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&amp;D Image Repository" rel="nofollow">
+    d20.photos: A Public Domain D&amp;D Image Repository
+  </a></li>
+  
+  <li><a href="/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
+    Announcing Nine9s.cloud 🎉
+  </a></li>
+  
+  <li><a href="/archive/why-were-polarized/" title="Why We&#39;re Polarized" rel="nofollow">
+    Why We&#39;re Polarized
+  </a></li>
+  
+  <li><a href="/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
+    A New Adventure
+  </a></li>
+  
+  <li><a href="/archive/the-social-web/" title="The Social Web" rel="nofollow">
+    The Social Web
+  </a></li>
+  
+  <li><a href="/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
+    Feed Readers and Local News
+  </a></li>
+  
+  <li><a href="/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+    The Web as a Social Network
+  </a></li>
+  
+  <li><a href="/archive/a-vision-of-the-open-web/" title="A Vision of the Open Web" rel="nofollow">
+    A Vision of the Open Web
+  </a></li>
+  
+</ul>
+<h4>Also Me</h4>
+<ul>
+  <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+    Pine.blog
+  </a></li>
+  <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+    GitHub
+  </a></li>
+  <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+    Twitter
+  </a></li>
+  <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+    Pinboard
+  </a></li>
+  <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+    Photoblog
+  </a></li>
+  <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+    Gravatar
+  </a></li>
+  <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+    Bandcamp
+  </a></li>
+  <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+    Goodreads
+  </a></li>
+</ul>
+<h4>Projects</h4>
+<ul>
+  <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+    Democracy &amp; Progress
+  </a></li>
+  <li><a href="https://goingindie.tech" title="Going Indie">
+    Going Indie
+  </a></li>
+  <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+    Pine.blog
+  </a></li>
+  <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+    Indie Dev Life Podcast
+  </a></li>
+  <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+    Nine9s
+  </a></li>
+  <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+    d20.photos
+  </a></li>
+  <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+    Adventurer&apos;s Codex
+  </a></li>
+</ul>
+<h4>Resources</h4>
+<ul>
+  <li><a href="/archive/bookshelf" title="Book Recommendations">
+    Book Recommendations
+  </a></li>
+  <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+    Food &amp; Drink Recipes
+  </a></li>
+  <li><a href="/tags.html" title="Posts by Tag">
+    Tags
+  </a></li>
+</ul>
+<h4>Other Writings</h4>
+<ul>
+  <b>The Way Forward (Series)</b>
+  <li>
+    <ul>
+      <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-conquering-the-pandemic/" title="Conquering the pandemic">
+        Conquering the pandemic
+      </a></li>
+      <li><a href="https://sduptownnews.com/guest-editorial-the-way-forward-jobs-for-all/" title="Jobs for all">
+        Jobs for all
+      </a></li>
+      <li><a href="https://sduptownnews.com/the-way-forward-democracy-is-the-answer/" title="Democracy is the answer">
+        Democracy is the answer
+      </a></li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <b>Assorted Works</b>
+  <li>
+    <ul>
+      <li><a href="https://sduptownnews.com/californians-deserve-better-data-protection/" title="Californians deserve better data protection">
+        Californians deserve better data protection
+      </a></li>
+      <li><a href="https://sduptownnews.com/not-planning-on-voting-read-this/" title="Not planning on voting? Read this">
+        Not planning on voting? Read this
+      </a></li>
+      <li><a href="https://sduptownnews.com/guest-editorial-rounding-the-corner/" title="Rounding the corner">
+        Rounding the corner
+      </a></li>
+    </ul>
+  </li>
+</ul>
+<h4>Tags</h4>
+<div class="tags">
+  
+    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
+  
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
+    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
+  
+    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
+  
+    <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
+  
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
+  
+    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
+  
+    <a href="/tags.html#tag-python" title="python" class="tag">python</a>
+  
+</div>
+<h4>Blogroll</h4>
+<ul>
+  <li><a href="https://vincentritter.com/" title="Vincent Ritter" rel="nofollow">
+    Vincent Ritter
+  </a></li>
+  <li><a href="https://gregorlove.com/" title="gRegorLove.com" rel="nofollow">
+    gRegorLove.com
+  </a></li>
+  <li><a href="https://eli.li/" title="Oatmeal" rel="nofollow">
+    Oatmeal
+  </a></li>
+  <li><a href="https://aaronparecki.com/" title="Aaron Parecki" rel="nofollow">
+    Aaron Parecki
+  </a></li>
+  <li><a href="http://inessential.com/" title="inessential" rel="nofollow">
+    inessential
+  </a></li>
+  <li><a href="http://idlewords.com/" title="Idle Words" rel="nofollow">
+    Idle Words
+  </a></li>
+  <li><a href="http://macgenie.micro.blog/" title="Jean MacDonald" rel="nofollow">
+    Jean MacDonald
+  </a></li>
+  <li><a href="https://www.vox.com/authors/ezra-klein" title="Ezra Klein" rel="nofollow">
+    Ezra Klein
+  </a></li>
+  <li><a href="https://pine.blog/u/photosaboutadams" title="Photos About Adams" rel="nofollow">
+    Photos About Adams
+  </a></li>
+  <li><a href="https://iifrp.org" title="IIFRP.org" rel="nofollow">
+    IIFRP.org
+  </a></li>
+  <li><a href="http://mattgemmell.com/" title="Matt Gemmell" rel="nofollow">
+    Matt Gemmell
+  </a></li>
+  <li><a href="http://hypercritical.co/" title="Hypercritical" rel="nofollow">
+    Hypercritical
+  </a></li>
+  <li><a href="https://twitter.com/HelloMelanieC" title="Melanie Crutchfield" rel="nofollow">
+    Melanie Crutchfield
+  </a></li>
+  <li><a href="http://jvns.ca/" title="Julia Evans" rel="nofollow">
+    Julia Evans
+  </a></li>
+  <li><a href="https://kateheddleston.com/blog" title="Kate Heddleston" rel="nofollow">
+    Kate Heddleston
+  </a></li>
+  <li><a href="https://beckyhansmeyer.com/" title="Becky Hansmeyer" rel="nofollow">
+    Becky Hansmeyer
+  </a></li>
+  <li><a href="https://adventurerscodex.com/blog.html" title="Adventurer's Codex Blog" rel="nofollow">
+    Adventurer's Codex Blog
+  </a></li>
+  <li><a href="https://blog.pine.blog/" title="Pine.blog Official Blog" rel="nofollow">
+    Pine.blog Official Blog
+  </a></li>
+  <li><a href="https://www.peoplespolicyproject.org/" title="People's Policy Project" rel="nofollow">
+    People's Policy Project
+  </a></li>
+</ul>
     </div>
+  </div>
+  <div class="h-card p-author" style="display:none;">
+    <img
+      class="u-photo"
+      src="https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595"
+    />
+    <span class="p-name">Brian Schrader</span>
+    <span class="p-nickname">sonicrocketman</span>
+    <a href="/" class="u-url u-uid"></a>
+  </div>
 
-    <div style="text-align:center;">
-      <div class="article-content">
-        <span style="font-size:small;">
-          <a rel="alternate" href="/rss.xml">
-            RSS
-          </a>
-        </div>
+  <div style="text-align:center;">
+    <div class="article-content">
+      <span style="font-size:small;">
+        <a rel="alternate" href="/rss.xml">
+          RSS
+        </a>
       </div>
-		</div>
-	</div>
-</body>
+    </div>
+  </div>
+
+    </div>
+  </body>
 </html>

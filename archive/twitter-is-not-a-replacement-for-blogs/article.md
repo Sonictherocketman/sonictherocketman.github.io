@@ -1,6 +1,6 @@
 slug: twitter-is-not-a-replacement-for-blogs
 published: Sun, 02 Nov 2014 at 09:41 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: Twitter is not a replacement for blogs
 author: Brian Schrader
 tags: blogging, twitter, open web

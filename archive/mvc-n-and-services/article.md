@@ -1,6 +1,6 @@
 slug: mvc-n-and-services
 published: Tue, 24 May 2016 at 10:40 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: MVC-N and Services
 author: Brian Schrader
 status: publish

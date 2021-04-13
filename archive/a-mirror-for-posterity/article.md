@@ -1,6 +1,6 @@
 slug: a-mirror-for-posterity
 published: Sun, 20 Sep 2015 at 03:47 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: A mirror for posterity
 author: Brian Schrader
 tags: open web

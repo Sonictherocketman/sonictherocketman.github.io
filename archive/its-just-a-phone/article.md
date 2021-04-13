@@ -1,6 +1,6 @@
 slug: its-just-a-phone
 published: Sun, 22 Jun 2014 at 05:05 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: It's just a Phone
 author: Brian Schrader
 tags: wwdc, apps, development

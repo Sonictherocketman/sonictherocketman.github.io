@@ -1,6 +1,6 @@
 slug: the-hidden-cost-of-cheap-hardware
 published: Wed, 23 Jan 2019 at 06:08 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: The Hidden Cost of Cheap Hardware
 author: Brian Schrader
 tags: software development, programming, complexity, engineering

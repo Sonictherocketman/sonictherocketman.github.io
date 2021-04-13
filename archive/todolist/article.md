@@ -1,6 +1,6 @@
 slug: todolist
 published: Thu, 28 Sep 2017 at 02:28 PM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: todolist
 author: Brian Schrader
 tags: code, bash, tools, programming

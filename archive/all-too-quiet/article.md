@@ -1,6 +1,6 @@
 slug: all-too-quiet
 published: Sun, 07 Mar 2021 at 02:12 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: All Too Quiet
 author: Brian Schrader
 tags: blog, meta

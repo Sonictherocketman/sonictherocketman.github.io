@@ -1,6 +1,6 @@
 slug: announcing-pine-microblogging-for-a-new-generation-
 published: Wed, 23 May 2018 at 11:30 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: Announcing Pine: Microblogging for a New Generation 🎉
 author: Brian Schrader
 tags: pine.blog, software, announcement

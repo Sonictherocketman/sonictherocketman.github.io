@@ -1,6 +1,7 @@
 site.yml
 .DS_Store
 *.py
+_templates/
 _drafts/
 _reports/
 _admin/

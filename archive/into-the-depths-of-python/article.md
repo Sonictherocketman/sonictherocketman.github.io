@@ -1,6 +1,6 @@
 slug: into-the-depths-of-python
 published: Tue, 05 Aug 2014 at 01:54 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 05:59 AM
 title: Into the Depths of Python
 author: Brian Schrader
 status: publish

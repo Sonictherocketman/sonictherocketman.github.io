@@ -1,6 +1,6 @@
 slug: programming-sucks
 published: Fri, 02 May 2014 at 03:43 AM
-updated: Thu, 25 Mar 2021 at 08:51 PM
+updated: Wed, 07 Apr 2021 at 06:00 AM
 title: Programming Sucks 
 author: Brian Schrader
 status: publish
