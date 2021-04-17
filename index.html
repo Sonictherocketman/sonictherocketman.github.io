@@ -43,6 +43,57 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/lessons-on-variable-naming-from-breakfast-burritos/" class="u-url p-name">
+                Lessons on Variable Naming from Breakfast Burritos
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-04-17T01:19:00-08:00">
+                Posted on Sat, 17 Apr 2021 at 01:19 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>This morning I ordered a breakfast burrito from a local taco shop. Normally this would not be news and obviously would not warrant a blog post or any in-depth analysis, but it was early and I hadn't yet had coffee, so my mind was loose and my thoughts wandering. As I looked over the menu, I pondered the two vegetarian breakfast burrito options:</p>
+<ul>
+<li><strong>Mushroom burrito</strong> filled with mushrooms, potatoes, eggs, and cheese</li>
+<li><strong>Potato burrito</strong> filled with potatoes, eggs, beans, and cheese</li>
+</ul>
+<p>At the counter I asked for the potato breakfast burrito, and I intended to order the latter of the two, but it occurred to me that they both contained potatoes and therefor my order was ambiguous. What after all makes a burrito with potatoes, eggs cheese, and mushrooms deserve a different name than a burrito with potatoes, beans, eggs, and cheese? What makes the latter not a bean breakfast burrito, as the beans are the item that is unique to the latter burrito whereas potatoes are common to both? Are potatoes a more significant ingredient? If so, why?</p>
+<p>I received my order&mdash;which was correct by the way&mdash;and went home, but as I walked I wondered, how is it that the cashier and I understood each other? There was so much ambiguity in the names of those menu items. How were we able to make sense of the obvious ambiguity?</p>
+<h2>Naming is <strong>Really</strong> Hard</h2>
+<p>If you haven't seen the connection by now, let me drop the pretext. These same questions also relate to how we choose to name our variables and our functions in code. Naming after all is hard, and I think my burrito example helps explain why.</p>
+<blockquote>
+<p>It is often said that the three hardest problems in computer science are naming and off-by-one errors.</p>
+</blockquote>
+<p>In a more rigorous naming system, I assume that most people would come to the conclusion that the second burrito is probably mis-named. It should be called the "bean breakfast burrito" since, as I mentioned, the beans are the distinct ingredient that make the latter burrito not strictly a subset of the former.</p>
+<p>That said, beans are not normally considered a main ingredient in a burrito. In the conventional burrito naming scheme, more appealing or distinct ingredients, or ingredients not considered to be condiments, take precedence. This naming scheme is the reason why a burrito with carne asada, pico de gallo, and guacamole would be simply called a carne asada burrito and not a guacamole burrito.</p>
+<p>These same conventions exist when we name variables and functions. We can imagine a scenario where we have a list of users and need to filter out which users have recently logged in and which among those have active subscriptions to our service.</p>
+<pre><code>def get_active_subscribed_users():
+    all_users = get_all_users()
+    active_users = (user for user in all_users if user.is_active)
+    &lt;variable&gt; = (user for user in active_users if user.has_active_subscription)
+</code></pre>
+<p>The first two variable names are fairly obvious, the question becomes: what do we name the third variable so that it is not ambiguous? We could of course call this new variable <code>active_users_with_active_subscriptions</code>, but to many that would be too long, and to my eyes that makes it seem that this variable contains a list of <code>(user, subscription)</code> pairs.</p>
+<p>We could name the value <code>active_users</code>, <code>actively_subscribed_users</code>, or even just <code>relevant_users</code> if the criteria for what relevancy means is clear enough in context. Some developers prefer to simply refer to these as <code>users</code> but I find that incredibly confusing. Others may prefer to define the variable <code>users</code> and then redefine it as they filter down the list to suit their needs, which I find even more confusing and unclear.</p>
+<p>In practice I tend to prefer the third option along with a comment explaining what I mean by "relevant". This only exacerbates our problems though. If two groups of "relevant" users meet in a new context, their names would clash and we would need to find new names for these groups.</p>
+<p>The context is here is key. If we instead fetched the same list from another function call, we could drop the qualifier entirely.</p>
+<pre><code>def get_active_subscribed_users():
+    users = get_active_users()
+    # We can avoid the question entirely if we simply return the list here.
+    return (user for user in users if user.has_active_subscription)
+</code></pre>
+<h2>Names are a Leaky Abstraction</h2>
+<p>As with our breakfast burritos, we could simply default to the names being a list of the components, but that can become overly burdensome very quickly. Our potato burrito would be unceremoniously called the "potato, eggs, bean and cheese breakfast burrito", which is unambiguous but also cumbersome. It can also cause problems as forgetting to mention a single component could confuse the reader and lead them to believe that a reference to a potato, egg, and bean burrito was not the same as your potato, egg, bean, and cheese burrito even if you were both referring to the same thing.</p>
+<p>As programmers we aren't taxed by the character; we can have longer variable names, but at best those names should be descriptive, succinct, and distinct. Issues arise when names, by their nature, don't convey the whole story. Names almost always convey a summary of their true meaning. They can't effectively convey the context in which the name was given or the inherent value of the named thing. Out of context a name might be confusing, but that confusion may vanish when used in the appropriate context.</p>
+<p>Likewise, in some contexts a potato breakfast burrito is the same thing as a mushroom burrito, but today it wasn't.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/" class="u-url p-name">
                 Building a Personalized Newsletter with Bash and a Raspberry Pi
               </a>
@@ -297,60 +348,6 @@
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/why-i-dont-retweet-anything/" class="u-url p-name">
-                Why I Don't Retweet Anything
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2020-12-04T20:43:00-08:00">
-                Posted on Fri, 04 Dec 2020 at 08:43 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>I still read Twitter (despite my <a href="/_drafts/retweeting/">efforts to quit entirely</a>), but I've stopped retweeting. My last retweet was on July 17th and it was of a tweet I wrote for <a href="https://adventurerscodex.com">a company I co-own</a>. And if things continue as planned, that will be the last retweet I ever do.</p>
-<h3>Why No Retweets?</h3>
-<p>Retweets are Twitter's original sin. Akin to Facebook's Share, or Tumblr's Re-blog, the Retweet is what allows content on Twitter to spread virally. It allows for users to effortlessly spread false or misleading information with impunity and encourages readers to never go past the title of an article (despite <a href="https://slate.com/technology/2020/10/twitter-retweet-change-election.html">Twitter's admittedly laudable attempts</a> to address this issue). Retweets allow users to easily dunk on each other and act as super-spreaders of identity-reenforcing and tribalistic memes that only serve to make Twitter a worse platform.</p>
-<p>Quote retweets are a little better (at least they require the user to express some opinion about the content they're spreading), but they still allow for the easy dunking that's a mainstay of the platform.</p>
-<p>To their credit, Twitter has long known that the retweet button causes problems on their platform. The original designer of the feature has even said as much.</p>
-<p><a href="https://www.buzzfeednews.com/article/alexkantrowitz/how-the-retweet-ruined-the-internet">Chris Wetherell</a>:</p>
-<blockquote>
-<p>“We might have just handed a 4-year-old a loaded weapon,” Wetherell recalled thinking as he watched the first Twitter mob use the tool he created. “That’s what I think we actually did.”</p>
-</blockquote>
-<p>Both Pine.blog and Micro.blog don't have retweets, and Manton does a great job explaining why (I used the same reasoning for Pine.blog).<sup>1</sup></p>
-<p><a href="https://www.manton.org/2016/11/22/fake-news-and.html">Manton Reece</a>:</p>
-<blockquote>
-<p>When you have to put a little work into posting, you take it more seriously. I wonder if fake news would have spread so quickly on Facebook if it was a little more difficult to share an article before you’ve read more than the headline.</p>
-</blockquote>
-<p>Putting in the extra effort to actually articulate an intelligible thought helps me better understand the content myself and it helps me gauge whether or not the given post is even worth sharing. On more than one occasion, I've stopped myself from sharing something because I realized that it just wasn't all that interesting.</p>
-<h3>How I (Still) Use Twitter</h3>
-<p>While I still read Twitter, the vast majority of my posts are cross-posted from <a href="https://pine.blog/u/sonicrocketman">my microblog</a>. I still favorite posts (because my favorites are automatically saved to Pinboard so I can find them later), but for the most part, my interactions are read-only.</p>
-<p>Because I spend most of my "social media time" either reading articles on <a href="https://pine.blog">Pine.blog</a> or browsing <a href="https://micro.blog">Micro.blog</a>, reading Twitter now feels like wading through a nuance-lacking, toxic cesspit rather than acccessing the real-time information platform I once knew and loved, which in turn drives me further away from the platform. I see people I follow there cooking amazing meals, telling fanciful stories, sharing hilarious memes, but all of that is drowned out by the hate and vitriol in every next post.</p>
-<p>With all that said though, I do still share stuff on the Web. I just do it by writing a post.</p>
-<div style="max-width: 450px;" class="image-center">
-<img
-  alt="A sample pseudo-retweet"
-  src="/images/blog/pseudo-retweet.png"
-  class="image-center"
-/>
-<center><small><caption>I'd love a browser plugin that removes the Retweet button and hides all retweets. It seems like a few exist, but none that I tried worked. Presumably Twitter tries to circumvent them.</caption></small></center>
-</div>
-
-<p>Virality is a fact of life on the Web; neither innately good nor bad. For too long we've seen it as something to be harnessed, to utilize. But a virus is incredibly difficult to control and, like with today's real-world troubles, a pandemic of memes and satire does enormous harm to our individual health and to the health of our society.<sup>2</sup></p>
-<p>tl;dr Pandemics are bad. Both online and in meatspace. We should limit their spread and stop retweeting.</p>
-<div class="footnote">
-<sup>1</sup> Pine.blog will show you when someone retweets or re-posts your blog posts if you allow for Webmentions, though I'm considering letting users configure this behavior. Retweets also poison the mind of the poster, not just the reader.
-</div>
-<div class="footnote">
-<sup>2</sup> In an effort to be transparent, I have asked others to retweet my posts before an an attempt to gain some traction outside my bubble. I'm going to stop doing that too.
-</div>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -519,11 +516,11 @@
 <h4>Tags</h4>
 <div class="tags">
   
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
     <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
   
     <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
-  
-    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
   
     <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
   
@@ -531,9 +528,9 @@
   
     <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
-    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
-  
     <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
   
     <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
   
