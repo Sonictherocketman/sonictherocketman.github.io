@@ -57,6 +57,17 @@ ul p {
   text-indent:0px;
 }
 
+details {
+  background-color: #ddd;
+  padding: 8px 16px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px #ccc;
+}
+
+details p {
+  text-indent: 0px;
+}
+
 /*
 *
 * Begin ID Styling
