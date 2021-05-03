@@ -43,6 +43,59 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/easy-and-ethical-traffic-monitoring-with-goaccess/" class="u-url p-name">
+                Easy and Ethical Traffic Monitoring with GoAccess
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-05-03T18:08:00-08:00">
+                Posted on Mon, 03 May 2021 at 06:08 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>Traffic monitoring is a staple for web businesses, but for some reason, we've outsourced a pretty simple problem to mischievous third-parties. While there are well-behaved traffic monitoring platforms, I've developed a few homegrown solutions that have worked really well for me and my business. If you're looking for an easy traffic monitoring solution, and you're conscious of your user's/visitor's privacy, you should try one of these solutions. I promise, they're pretty simple.</p>
+<h2>Option 1: Just Don't</h2>
+<p>You always have the option to just not do traffic monitoring. Often times we can convince ourselves that data we collect is precious or useful when it fulfills no real business or personal need.</p>
+<p>If you're a blogger, then traffic might matter to you, but <a href="https://inessential.com/2016/01/20/nick_on_twitter">it probably shouldn't</a>. Back when <a href="/archive/removing-google-analytics/">I used to use Google Analytics</a> I also had very few visitors to this site. Was it useful to know that 13 people had seen my article? Not really, but it felt useful. In the end it was just another stat for me to endlessly refresh. Progress bars are fun to watch, but you'd probably be better off writing another post, or just going for a walk.</p>
+<p>If you own a business that sells a product, then remember this: it's not actually relevant how many hits your website gets. It's important how many products you sell. At one point, <a href="https://goingindie.tech">Going Indie</a> was featured on Product Hunt, which was awesome, but that featuring resulted in very few actual sales. Was it worth my time to endlessly refresh the PH dashboard? No, and I kinda wish I didn't have the option.</p>
+<p>Real-time dashboards are addictive dopamine factories. Sometimes it's better to just avoid them.</p>
+<h2>Option 2: Use GoAccess</h2>
+<p>If you need to have some sort of traffic monitoring, then give <a href="https://goaccess.io">GoAccess</a> a try. GoAccess aggregates webserver access logs and provides reports either live in the shell, or as really elegant and self-contained HTML files.</p>
+<p>I've used GoAccess for years, and it's become my default solution for traffic monitoring. I've automated my reporting using my <a href="/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/">new helper RPi</a>. Every week, the RPi generates and aggregates the reports for my various websites and emails them to me.</p>
+<p><a href="https://rt.goaccess.io/?20210429113731&amp;ref=hpimg"><img alt="Sample GoAccess Report" src="/images/blog/goaccess.png" /></a>
+<center><small><caption>A sample GoAccess HTML report</small></center></caption></p>
+<p>There are downsides to GoAccess though. Since it's using access logs, the numbers are inflated by bots and browser prefetching. GoAccess has ways to filter out some of those things, but in most cases, I've just gotten used to the numbers being bigger than they really should be.</p>
+<p>One upside to using server-side traffic monitoring is that your stats are unaffected by people who are using ad-blockers or who refuse to enable JavaScript (are there still people doing that?)</p>
+<h2>Option 3: Roll Your Own</h2>
+<p>For some projects, I've needed more reliable and accurate traffic stats. To do that, I decided it would be best to roll my own. As I said earlier, traffic monitoring is a pretty simple problem-domain&mdash;as long as you're willing to live with some margins of error. My <a href="http://democracyandprogress.com">California policy blog</a> uses a homegrown traffic monitoring solution that is so maddeningly simple, I will include it below in its entirety&mdash;formatted for readability.</p>
+<pre><code>(function() {
+    if (window.fetch) setTimeout(function() {
+        fetch('/pageview?u=' + window.location.pathname)
+    }, 2000)
+})()
+</code></pre>
+<p>This snippet sets a timer for two seconds and then fires a request off to <code>/pageview</code> which simply returns a 200 response. The site is statically generated&mdash;just like this one&mdash;so it can't do any processing or custom request handling, and there's an empty file called pageview in the webroot directory. I join all of my access logs together, remove anything that doesn't contain a request to <code>/pageview</code> and voila!</p>
+<pre><code>zcat /var/log/nginx/access*gz | grep pageview &gt; $STATSFILE;
+cat /var/log/nginx/access.log | grep pageview &gt;&gt; $STATSFILE;
+
+/usr/local/bin/goaccess \
+    -f $STATSFILE \
+    --ignore-crawlers \
+    -p /etc/goaccess.conf \
+    &gt; $REPORTFILE;
+</code></pre>
+<p>These reports won't include any requests made by searchbots, any request that didn't execute the JavaScript, or any request made by a user that didn't keep the page open for at least two seconds. This solution gives me simple and effective traffic stats that leverage the data my servers were already collecting, with no additional or accidental data collection required!</p>
+<h2>What Really Matters</h2>
+<p>Traffic monitoring is a useful, but addictive tool, and it's easy to get caught up in the data they collect and convince yourself that it's more useful than it really is. At the end of the day, I just need to know, roughly, how many people read one of my articles or how many visited the homepage of a service I run. I don't need to know who they were or anything else about them, and I don't want more data than I need.</p>
+<p>Due to the limitations of server-side monitoring&mdash;even with my JS snippet&mdash;GoAccess can't provide you with exact traffic numbers; nothing can. But like I said, you probably don't need exact numbers. You probably only really need the order of magnitude, which server-side monitoring can easily provide.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/how-i-use-docker-for-now/" class="u-url p-name">
                 How I Use Docker (for Now)
               </a>
@@ -319,40 +372,6 @@
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/arbitrary-achievement-unlocked/" class="u-url p-name">
-                Arbitrary Achievement Unlocked
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2020-12-10T23:14:00-08:00">
-                Posted on Thu, 10 Dec 2020 at 11:14 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>Today marks the 10th episode of my podcast <a href="https://indiedevlife.fm">Indie Dev Life</a>, and while that might not seem like a huge milestone, it's an important one because I decided it was. When I decided to start a podcast I, arbitrarily, set a goal for myself to publish at least ten episodes. After that I would decide if I liked doing it and if I would continue. Today I achieved my arbitrary goal.</p>
-<p>I do plan to continue the podcast. I like doing it, and it's fun to both record and edit. So far, I like both the format and the length. As is hopefully apparent, I'm trying to model IDL on <a href="http://developingperspective.com">_davidsmith's Developing Perspective</a> podcast. I enjoyed that show (and it's casual format) a lot and I think a short show works well for the kind of show I'm trying to create. So, if you like the show, don't worry there's going to be more of it.</p>
-<h3>Arbitrary Deadlines &amp; Achievements</h3>
-<p>I'm a procrastinator by nature, so I have to set, what are often completely arbitrary and unnecessary, deadlines for myself if I want to accomplish basically anything, plus I have a terrible memory. So, I tend to create task lists for myself and assign tight due dates so that I can remember what I need to do and ensure that I actually get it done. And whenever possible, I try to stick to my arbitrary deadlines no matter the work involved. If I decided something will launch tomorrow, then it will. I do the same with arbitrary goals.</p>
-<p>I'm not sure why my brain finds it so much easier to work under a deadline, but it does. Even when I know the deadline is meaningless, simply having one is enough to trick my brain into thinking it's real. The procrastinator in me will always put off work until the last minute (unless it's something I enjoy playing with) so I often make my self-imposed deadlines tighter than they probably should be.</p>
-<p>I do the same thing with setting achievements for myself. When I released <a href="https://goingindie.tech">Going Indie</a>, I set a series of goals for what I'd consider a successful release. My expectations being what they are, I tend to make my first goal incredibly low so that I'm basically guaranteed to hit it. For Going Indie, my first goal was to sell 10 copies, and thanks to you all, I sold many more than that. After the first goal, the rest follow a pretty simple format:</p>
-<ul>
-<li>What is the bare minimum I'd consider successful?</li>
-<li>What would I be happy with?</li>
-<li>What would I want to have happen?</li>
-<li>What would I dream of happening?</li>
-<li>What is basically impossible?</li>
-</ul>
-<p>This tiered structure helps me understand myself and my own expectations. It also keeps me motivated. If I say I'd be happy with something, and set my expectations accordingly, then when I achieve it, I feel good. Without this structure, I tend to trap myself into believing that my wildest dream scenario is just as likely as the rest and then I'm disappointed when that dream doesn't come true.</p>
-<p>I say this in Going Indie, but managing your own expectations is incredibly important, not only to your own motivation, but to your mental health. If you constantly convince yourself that an idea or project is going to make it big, and then it doesn't, you're going to get discouraged. But if you set reasonable goals, and learn to manage your own expectations (of yourself, your capabilities, and your results) then it's a lot easier to appreciate the successes you do achieve and keep going to bigger and better things.</p>
-<p>tl;dr I made 10 episodes of my podcast, and I want to make more.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -531,9 +550,9 @@
   
     <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
   
-    <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
-  
     <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
     <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
   
