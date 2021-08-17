@@ -1,6 +1,6 @@
 slug: bookshelf
 published: Fri, 10 Jul 2020 at 07:37 PM
-updated: Tue, 17 Aug 2021 at 04:28 AM
+updated: Tue, 17 Aug 2021 at 04:42 AM
 title: Book Recommendations
 author: Brian Schrader
 tags: book recommendations, recommendations, knowledge
@@ -9,7 +9,7 @@ hidden: yes
 status: publish
 
 
-### Politics, Society, and Government
+### Politics, Society, Economics, and Government
 
 - *[Democracy May Not Exist but We'll Miss it When it's Gone][1]* by Astra Taylor
 - *[Why We're Polarized][2]* by Ezra Klein
@@ -18,6 +18,8 @@ status: publish
 - *[The Deficit Myth: Modern Monetary Theory and the Birth of the People's Economy][5]* by Stephanie Kelton
 - *[Ghosting the News: Local Journalism and the Crisis of American Democracy][21]* by Margaret Sullivan
 - *[One Billion Americans: The Case for Thinking Bigger][22]* by Matthew Yglesias
+- *[Kill Switch: The Rise of the Modern Senate and the Crippling of American Democracy][23]* by Adam Jentleson
+- *[The Undercover Economist Strikes Back: How to Run&mdash;or Ruin&mdash;an Economy][25]* by Tim Harford
 
 
 ### Philosophy
@@ -57,6 +59,7 @@ status: publish
 - *[Mistborn][12]* (Series) by Brandon Sanderson
 - *[Alloy of Law][15]* (Series) by Brandon Sanderson
 - *[The First Law][19]* (Series) by Joe Abercrombie
+- *[The Silmarillion][24]* by J.R.R. Tolkien
 
 
 [1]: https://www.indiebound.org/book/9781250179845
@@ -81,3 +84,6 @@ status: publish
 [20]: https://www.indiebound.org/book/9780684818627
 [21]: https://www.indiebound.org/book/9781733623780
 [22]: https://www.indiebound.org/book/9780593190210
+[23]: https://www.indiebound.org/book/9781631497773
+[24]: https://www.indiebound.org/book/9780544338012
+[25]: https://www.indiebound.org/book/9781594632914
