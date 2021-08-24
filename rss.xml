@@ -1,5 +1,48 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 23 Aug 2021 23:29:49 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/retrospective-on-a-year-spent-writing</guid><pubDate>Mon, 23 Aug 2021 23:28:00 -0800</pubDate><category>writing</category><category>meta</category><category>blogging</category><title>Retrospective on a Year Spent Writing</title><link>http://brianschrader.com/archive/retrospective-on-a-year-spent-writing/</link><description><![CDATA[<p>Around this time last year, I started writing a lot. Since then, I've published <a href="https://goingindie.tech">a book</a>, started a <a href="https://democracyandprogress.com">policy blog</a>, and started writing for a <a href="https://sduptownnews.com/californians-deserve-better-data-protection/">local paper</a>. All in all, I think it's safe to say that I've written about as many words in the past 12-15 months as over the preceding 10 years.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Tue, 24 Aug 2021 20:59:51 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast</guid><pubDate>Tue, 24 Aug 2021 20:59:00 -0800</pubDate><category>blogging</category><category>programming</category><title>Automated Podcasts with Automator &amp;amp; Overcast</title><link>http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast/</link><description><![CDATA[<p>I've <a href="/archive/siri-is-a-blogging-tool/">mentioned before</a> that I use Siri as an editing tool. I write a piece, lightly edit it, and then have Siri read it back to me. This helps me catch unintended grammatical errors and clumsy sentences. Building on that principle, <a href="https://pine.blog">Pine.blog</a> and <a href="https://hewellapp.com">Hewell</a> both ship with a feature that use iOS's <code>AVSpeechSynthesizer</code> API to read articles or location information aloud.</p>
+<p>That said, I often find articles that I want to read, but after a long day staring at a computer screen, I don't want to actually <em>read</em> them. Lots of sites these days provide spoken audio for their articles&mdash;which is great&mdash;but the vast majority don't.</p>
+<p>That's where Automator comes in.</p>
+<p><img alt="Save Spoken Text to File" src="/images/blog/automator-spoken-text.png" /></p>
+<p>This Automator service simply runs a bash script that takes the contents of the selected text as input, feeds it to the built-in macOS <code>say</code> command, and outputs it to a file on the Desktop named using the contents in my clipboard.</p>
+<details>
+  <summary>Check out the full script</summary>
+<pre><code>cd ~/Desktop;
+# A hack to get stdin into say through Automator. For some
+# reason simply saying -f didn't work for me.
+while read line; do echo "$line" done < "${1:-/dev/stdin}" |
+    say -o .spoken_text -f -
+
+TITLE="$(pbpaste -Prefer txt)"
+if [ -z "$TITLE" ]; then
+    TITLE="Spoken Text"
+fi
+# Sanitize the article title. Writers love colons which macOS hates
+TITLE="$(echo "$TITLE" | sed -e 's/[^A-Za-z0-9._-]/_/g')"
+
+# Conver the audio and be quiet about it
+/usr/local/bin/ffmpeg -i .spoken_text.aiff -loglevel -8 -y "$TITLE.aac"
+rm .spoken_text.aiff</code></pre>
+</details>
+
+<p>The script also uses FFmpeg to convert the audio to an AAC file so that I can then upload it to <a href="https://overcast.fm">Overcast</a>, my preferred podcast player.</p>
+<p>By default, macOS will include Automater services in the right-click menu, but I've also bound the script to <code>Cmd+Ctl+Shift+S</code> (which is similar to my existing <code>Cmd+Ctl+S</code> shortcut for reading the selected text aloud).</p>
+<p><img alt="The macOS Services Menu" src="/images/blog/services-menu-speak.png" /></p>
+<p>Now, I can discover new articles to read, perform a quick set of keystrokes, upload the audio to Overcast, and then go for a walk while I catch up on the day's interesting news!<sup>1</sup></p>
+<p>I've provided the Automator service as a zip archive below if anyone wants to play with it.</p>
+<p><a href="/dropzone/Save Spoken Text to File.zip">⬇️ Save Spoken Text to File.workflow</a></p>
+<hr />
+<div class="footnote">
+    <p><sup>1.</sup>&nbsp;There are a few quirks to this workflow still. Websites are filled with non-article content, so to avoid selecting those, I typically following the following steps:
+    </p>
+    <ol>
+        <li>Turn on reader mode (<code>Cmd+Shift+R</code>)</li>
+        <li>Copy the title of the article to the clipboard (<code>Cmd+C</code>)</li>
+        <li>Select the article text (<code>Cmd+A</code>)</li>
+        <li>Run my Automator service (<code>Cmd+Ctl+Shift+S</code>)</li>
+        <li>Upload the new AAC file to Overcast</li>
+    </ol>
+    <p>I admit, it's a little cumbersome, but it does work really well.</p>
+</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/retrospective-on-a-year-spent-writing</guid><pubDate>Mon, 23 Aug 2021 23:28:00 -0800</pubDate><category>writing</category><category>meta</category><category>blogging</category><title>Retrospective on a Year Spent Writing</title><link>http://brianschrader.com/archive/retrospective-on-a-year-spent-writing/</link><description><![CDATA[<p>Around this time last year, I started writing a lot. Since then, I've published <a href="https://goingindie.tech">a book</a>, started a <a href="https://democracyandprogress.com">policy blog</a>, and started writing for a <a href="https://sduptownnews.com/californians-deserve-better-data-protection/">local paper</a>. All in all, I think it's safe to say that I've written about as many words in the past 12-15 months as over the preceding 10 years.</p>
 <p>A crude calculation of the word-count of this blog shows that I've written approximately 93,719 words. That's a lot, but considering that <a href="https://goingindie.tech">Going Indie</a> is over 62,000 words and my published articles total almost 7,000, that 93,000 looks a lot less impressive.</p>
 <pre><code>$ find archive/ -name "*.md" | xargs -I {} cat {} | wc -w
    93719
@@ -210,6 +253,4 @@ cat /var/log/nginx/access.log | grep pageview &gt;&gt; $STATSFILE;
 <p>That's it. That's why I keep a useless file on disk at all times: so I can one day delete it. This solution is super simple, trivial to implement, and easy to utilize. Obviously the real solution is to not fill up the database server, but as with Marco's migration woes, sometimes servers do fill up because of simple mistakes or design flaws. When that time comes, it's good to have a plan, because otherwise you're stuck with a full disk and a really bad day.</p>
 <div class="footnote">
 <sup>1</sup> There are <a href="https://www.cyberciti.biz/faq/howto-create-lage-files-with-dd-command/"> lots of tools you can use to do</a> this besides dd. I just prefer it.
-</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/all-too-quiet</guid><pubDate>Sun, 07 Mar 2021 02:12:00 -0800</pubDate><category>blog</category><category>meta</category><title>All Too Quiet</title><link>http://brianschrader.com/archive/all-too-quiet/</link><description><![CDATA[<p>Other than my last post, it's been pretty quiet here lately. I've spent the majority of the last two months wrapping up the newest update to Pine.blog, which launched silently about a month ago. I meant to do a sort of announcement or retrospective post on the launch, but I just never got around to it.</p>
-<p>A new <a href="https://indiedevlife.fm">IndieDevLife</a> is coming, but I haven't had the mental bandwidth to record an episode lately. I've been spending a lot of time reading and writing policy proposals for <a href="http://democracyandprogress.com">Democracy &amp; Progress</a> and I've been pouring the remainder of my time into a new iOS app.</p>
-<p>That's right, I've started yet another new app! It's in a private, early beta now, and I'm expecting the launch in May. No more details just yet, but I promise this one will be particularly special. I'm doing a lot that I've never done before, and playing with APIs I'd never heard of until now. It's fun stuff.</p>]]></description></item></channel></rss>
+</div>]]></description></item></channel></rss>
