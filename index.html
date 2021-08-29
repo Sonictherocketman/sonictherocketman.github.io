@@ -57,7 +57,12 @@
             <p>I've <a href="/archive/siri-is-a-blogging-tool/">mentioned before</a> that I use Siri as an editing tool. I write a piece, lightly edit it, and then have Siri read it back to me. This helps me catch unintended grammatical errors and clumsy sentences. Building on that principle, <a href="https://pine.blog">Pine.blog</a> and <a href="https://hewellapp.com">Hewell</a> both ship with a feature that use iOS's <code>AVSpeechSynthesizer</code> API to read articles or location information aloud.</p>
 <p>That said, I often find articles that I want to read, but after a long day staring at a computer screen, I don't want to actually <em>read</em> them. Lots of sites these days provide spoken audio for their articles&mdash;which is great&mdash;but the vast majority don't.</p>
 <p>That's where Automator comes in.</p>
-<p><img alt="Save Spoken Text to File" src="/images/blog/automator-spoken-text.png" /></p>
+<p><img
+    alt="Save Spoken Text to File"
+    src="/images/blog/automator-spoken-text.png"
+    style="width:500px; height:381.5px;"
+    class="image-center"
+/></p>
 <p>This Automator service simply runs a bash script that takes the contents of the selected text as input, feeds it to the built-in macOS <code>say</code> command, and outputs it to a file on the Desktop named using the contents in my clipboard.</p>
 <details>
   <summary>Check out the full script</summary>
@@ -81,7 +86,12 @@ rm .spoken_text.aiff</code></pre>
 
 <p>The script also uses FFmpeg to convert the audio to an AAC file so that I can then upload it to <a href="https://overcast.fm">Overcast</a>, my preferred podcast player.</p>
 <p>By default, macOS will include Automater services in the right-click menu, but I've also bound the script to <code>Cmd+Ctl+Shift+S</code> (which is similar to my existing <code>Cmd+Ctl+S</code> shortcut for reading the selected text aloud).</p>
-<p><img alt="The macOS Services Menu" src="/images/blog/services-menu-speak.png" /></p>
+<p><img
+    alt="The macOS Services Menu"
+    src="/images/blog/services-menu-speak.png"
+    style="width:321px; height:230px"
+    class="image-center"
+/></p>
 <p>Now, I can discover new articles to read, perform a quick set of keystrokes, upload the audio to Overcast, and then go for a walk while I catch up on the day's interesting news!<sup>1</sup></p>
 <p>I've provided the Automator service as a zip archive below if anyone wants to play with it.</p>
 <p><a href="/dropzone/Save Spoken Text to File.zip">⬇️ Save Spoken Text to File.workflow</a></p>

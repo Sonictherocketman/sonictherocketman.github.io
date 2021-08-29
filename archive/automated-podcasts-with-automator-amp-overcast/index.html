@@ -45,7 +45,7 @@
         <div class="article-title">
           <h1 class="p-name">
             <a
-              href="http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast/"
+              href="/archive/automated-podcasts-with-automator-amp-overcast/"
               title="Automated Podcasts with Automator &amp;amp; Overcast"
             >
               Automated Podcasts with Automator &amp; Overcast
@@ -61,7 +61,12 @@
           <p>I've <a href="/archive/siri-is-a-blogging-tool/">mentioned before</a> that I use Siri as an editing tool. I write a piece, lightly edit it, and then have Siri read it back to me. This helps me catch unintended grammatical errors and clumsy sentences. Building on that principle, <a href="https://pine.blog">Pine.blog</a> and <a href="https://hewellapp.com">Hewell</a> both ship with a feature that use iOS's <code>AVSpeechSynthesizer</code> API to read articles or location information aloud.</p>
 <p>That said, I often find articles that I want to read, but after a long day staring at a computer screen, I don't want to actually <em>read</em> them. Lots of sites these days provide spoken audio for their articles&mdash;which is great&mdash;but the vast majority don't.</p>
 <p>That's where Automator comes in.</p>
-<p><img alt="Save Spoken Text to File" src="/images/blog/automator-spoken-text.png" /></p>
+<p><img
+    alt="Save Spoken Text to File"
+    src="/images/blog/automator-spoken-text.png"
+    style="width:500px; height:381.5px;"
+    class="image-center"
+/></p>
 <p>This Automator service simply runs a bash script that takes the contents of the selected text as input, feeds it to the built-in macOS <code>say</code> command, and outputs it to a file on the Desktop named using the contents in my clipboard.</p>
 <details>
   <summary>Check out the full script</summary>
@@ -85,7 +90,12 @@ rm .spoken_text.aiff</code></pre>
 
 <p>The script also uses FFmpeg to convert the audio to an AAC file so that I can then upload it to <a href="https://overcast.fm">Overcast</a>, my preferred podcast player.</p>
 <p>By default, macOS will include Automater services in the right-click menu, but I've also bound the script to <code>Cmd+Ctl+Shift+S</code> (which is similar to my existing <code>Cmd+Ctl+S</code> shortcut for reading the selected text aloud).</p>
-<p><img alt="The macOS Services Menu" src="/images/blog/services-menu-speak.png" /></p>
+<p><img
+    alt="The macOS Services Menu"
+    src="/images/blog/services-menu-speak.png"
+    style="width:321px; height:230px"
+    class="image-center"
+/></p>
 <p>Now, I can discover new articles to read, perform a quick set of keystrokes, upload the audio to Overcast, and then go for a walk while I catch up on the day's interesting news!<sup>1</sup></p>
 <p>I've provided the Automator service as a zip archive below if anyone wants to play with it.</p>
 <p><a href="/dropzone/Save Spoken Text to File.zip">⬇️ Save Spoken Text to File.workflow</a></p>
@@ -146,43 +156,43 @@ rm .spoken_text.aiff</code></pre>
 <h4>Featured Posts</h4>
 <ul>
   
-  <li><a href="http://brianschrader.com/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
+  <li><a href="/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
     Grove, a new Tree-planting Wellness Game 🎉
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
+  <li><a href="/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
     Announcing: Hewell Public Beta 🎉
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
+  <li><a href="/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
     On Uber, Lyft, and Labor Law
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&amp;D Image Repository" rel="nofollow">
+  <li><a href="/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&amp;D Image Repository" rel="nofollow">
     d20.photos: A Public Domain D&amp;D Image Repository
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
+  <li><a href="/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
     Announcing Nine9s.cloud 🎉
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/why-were-polarized/" title="Why We&#39;re Polarized" rel="nofollow">
+  <li><a href="/archive/why-were-polarized/" title="Why We&#39;re Polarized" rel="nofollow">
     Why We&#39;re Polarized
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
+  <li><a href="/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
     A New Adventure
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/the-social-web/" title="The Social Web" rel="nofollow">
+  <li><a href="/archive/the-social-web/" title="The Social Web" rel="nofollow">
     The Social Web
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
+  <li><a href="/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
     Feed Readers and Local News
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+  <li><a href="/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
     The Web as a Social Network
   </a></li>
   
@@ -295,9 +305,9 @@ rm .spoken_text.aiff</code></pre>
 <h4>Tags</h4>
 <div class="tags">
   
-    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
-  
     <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
+    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
   
     <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
   

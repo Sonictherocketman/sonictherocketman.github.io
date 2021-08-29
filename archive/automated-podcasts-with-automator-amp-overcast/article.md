@@ -1,6 +1,6 @@
 slug: automated-podcasts-with-automator-amp-overcast
 published: Tue, 24 Aug 2021 at 08:59 PM
-updated: Tue, 24 Aug 2021 at 08:59 PM
+updated: Sun, 29 Aug 2021 at 05:13 AM
 title: Automated Podcasts with Automator &amp; Overcast
 author: Brian Schrader
 tags: blogging, programming
@@ -12,7 +12,12 @@ That said, I often find articles that I want to read, but after a long day stari
 
 That's where Automator comes in.
 
-![Save Spoken Text to File](/images/blog/automator-spoken-text.png)
+<img
+    alt="Save Spoken Text to File"
+    src="/images/blog/automator-spoken-text.png"
+    style="width:500px; height:381.5px;"
+    class="image-center"
+/>
 
 This Automator service simply runs a bash script that takes the contents of the selected text as input, feeds it to the built-in macOS `say` command, and outputs it to a file on the Desktop named using the contents in my clipboard.
 
@@ -40,7 +45,12 @@ The script also uses FFmpeg to convert the audio to an AAC file so that I can th
 
 By default, macOS will include Automater services in the right-click menu, but I've also bound the script to `Cmd+Ctl+Shift+S` (which is similar to my existing `Cmd+Ctl+S` shortcut for reading the selected text aloud).
 
-![The macOS Services Menu](/images/blog/services-menu-speak.png)
+<img
+    alt="The macOS Services Menu"
+    src="/images/blog/services-menu-speak.png"
+    style="width:321px; height:230px"
+    class="image-center"
+/>
 
 Now, I can discover new articles to read, perform a quick set of keystrokes, upload the audio to Overcast, and then go for a walk while I catch up on the day's interesting news!<sup>1</sup>
 
