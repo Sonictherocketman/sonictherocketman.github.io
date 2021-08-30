@@ -379,6 +379,13 @@ details p {
   color: #4068B8;
 }
 
+.footer {
+	margin: auto;
+	max-width: 925px;
+  text-align:center;
+  margin-bottom: 1rem;
+}
+
 /* Begin Link Styling */
 
 .nav a:link {color:white; text-decoration:none;}
