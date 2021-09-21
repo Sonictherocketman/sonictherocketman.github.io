@@ -37,16 +37,51 @@
   </nav>
 </div>
       
+  <style>
+    .post {
+      padding-top: 12px;
+    }
+    .post .header {
+      position: relative;
+      margin-bottom: 47px;
+    }
+    .post .banner {
+      background-image: url('./header.jpg');
+      background-position: bottom left;
+      background-size: cover;
+      height: 14rem;
+      position: relative;
+    }
+    .post .header .banner img {
+      position: absolute;
+      bottom: -35px;
+      left: -20px;
+    }
+
+    img.bordered {
+      border: 2px solid black;
+    }
+    @media only screen and (max-width : 600px) {
+      .post .header .banner img {
+        left: calc(50% - 90px);
+      }
+    }
+  </style>
 	<div id="post-list">
 		<article>
 			<div class="post">
+			  <div class="header">
+          <div class="banner">
+            <div class="">
+              <img
+                src="http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=180"
+                class="image-rounded bordered"
+              />
+            </div>
+          </div>
+        </div>
 				<div class="article-content">
-					<p><img src="http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=240" class="hide-on-mobile image-right image-rounded shadow"></p>
-<div class="show-on-mobile text-center">
-  <img src="http://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595" class="image-center image-rounded shadow">
-</div>
-
-<p>Hi, I'm Brian Schrader. I'm an independent software developer, writer, and musician living in San Diego, CA. This site is my little home on the internet where I go on (and on) about things that are important to me.</p>
+					<p>Hi, I'm Brian Schrader. I'm an independent software developer, writer, and musician living in San Diego, CA. This site is my little home on the internet where I go on (and on) about things that are important to me.</p>
 <p>I own and run <a href="https://skyrocket.software">SkyRocket Software</a>, my indie software company, where I make things some people like. I'm a co-founder of <a href="https://adventurerscodex.com">Adventurer's Codex</a>, a tool for enhancing and tracking D&amp;D games. And I'm the singer, song-writer, and guitarist of <a href="https://thefourthsection.com">The Fourth Section</a>.</p>
 <p>Oh, and I wrote a book about <a href="https://goingindie.tech">how to be an Indie Developer</a>!</p>
 <p>I frequent lots of places on the Internet most of which I've included in the sidebar on the <a href="/">home page</a> of this site. I <a href="https://www.goodreads.com/sonicrocketman">read a lot</a>, I <a href="https://sonicrocketman.bandcamp.com">write music</a>, and I <a href="https://github.com/sonictherocketman/">build things</a>. I care deeply about the Web, the future of our discourse on it, the standards on which it’s based, the changes in society it helps create, how we as people shape it, and how it shapes us in turn. I actually read <a href="https://tools.ietf.org/html/draft-lohsen-ip-burrito-00">IETF RFCs</a>, I've open sourced a <a href="https://github.com/Sonictherocketman/johnny-cache">few</a> <a href="https://github.com/Sonictherocketman/django-backblazeb2-storage">different</a> <a href="https://github.com/Sonictherocketman/myvariant-api">things</a>, and I’ve built an <a href="https://github.com/HyperTextCoffeePot/HyperTextCoffeePot">HTCPCP-compliant Coffee Pot</a>.</p>
