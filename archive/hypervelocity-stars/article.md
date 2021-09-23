@@ -1,6 +1,6 @@
 slug: hypervelocity-stars
 published: Wed, 03 Dec 2014 at 11:47 PM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:18 PM
 title: Hypervelocity Stars
 author: Brian Schrader
 tags: space, writing, exploration

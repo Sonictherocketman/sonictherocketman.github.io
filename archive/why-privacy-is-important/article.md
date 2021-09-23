@@ -1,6 +1,6 @@
 slug: why-privacy-is-important
 published: Tue, 12 Jan 2016 at 09:44 AM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:18 PM
 title: Why privacy is important
 author: Brian Schrader
 type: link

@@ -1,6 +1,6 @@
 slug: microblog-crawler-diary-signals
 published: Tue, 24 Feb 2015 at 03:07 AM
-updated: Mon, 30 Aug 2021 at 01:09 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: Microblog Crawler Diary: Signals
 author: Brian Schrader
 tags: microblog crawler diary, signals

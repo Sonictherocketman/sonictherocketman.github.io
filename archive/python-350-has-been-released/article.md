@@ -1,6 +1,6 @@
 slug: python-350-has-been-released
 published: Sun, 13 Sep 2015 at 02:18 PM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: Python 3.5.0 has been released
 author: Brian Schrader
 tags: python, programming

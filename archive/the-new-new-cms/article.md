@@ -1,6 +1,6 @@
 slug: the-new-new-cms
 published: Mon, 24 Mar 2014 at 02:43 AM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: The <i>New</i> New CMS
 author: Brian Schrader
 tags: websites, cms, blogging

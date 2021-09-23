@@ -1,6 +1,6 @@
 slug: real-life-science-fiction
 published: Tue, 06 Feb 2018 at 05:59 PM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:18 PM
 title: Real Life Science Fiction
 author: Brian Schrader
 tags: space, spacex, rockets, future

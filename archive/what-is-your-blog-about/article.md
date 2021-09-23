@@ -1,6 +1,6 @@
 slug: what-is-your-blog-about
 published: Sun, 02 Nov 2014 at 10:22 PM
-updated: Mon, 30 Aug 2021 at 01:09 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: What is your blog about?
 author: Brian Schrader
 tags: blogging, topics

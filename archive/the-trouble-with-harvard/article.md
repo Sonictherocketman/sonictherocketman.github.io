@@ -1,6 +1,6 @@
 slug: the-trouble-with-harvard
 published: Sun, 14 Sep 2014 at 08:01 PM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:18 PM
 title: The Trouble With Harvard 
 author: Brian Schrader
 tags: university, education

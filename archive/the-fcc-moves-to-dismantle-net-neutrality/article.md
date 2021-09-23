@@ -1,6 +1,6 @@
 slug: the-fcc-moves-to-dismantle-net-neutrality
 published: Thu, 23 Nov 2017 at 09:18 PM
-updated: Mon, 30 Aug 2021 at 01:09 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: The FCC Moves to Dismantle Net Neutrality
 author: Brian Schrader
 tags: fcc, net neutrality, internet

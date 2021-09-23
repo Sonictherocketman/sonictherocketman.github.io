@@ -1,6 +1,6 @@
 slug: chris-radcliff-on-twitters-timeline-changes
 published: Sun, 07 Sep 2014 at 02:34 AM
-updated: Mon, 30 Aug 2021 at 01:09 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: Chris Radcliff on Twitter's Timeline Changes
 author: Brian Schrader
 tags: twitter

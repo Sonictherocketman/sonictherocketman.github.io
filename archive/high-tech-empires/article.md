@@ -1,6 +1,6 @@
 slug: high-tech-empires
 published: Thu, 07 Nov 2019 at 01:20 AM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:18 PM
 title: High-Tech Empires
 author: Brian Schrader
 tags: social web, software, facebook, social media

@@ -1,6 +1,6 @@
 slug: the-invention-of-farming
 published: Fri, 15 Jan 2016 at 01:18 PM
-updated: Mon, 30 Aug 2021 at 01:09 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: The Invention of Farming
 author: Brian Schrader
 status: publish

@@ -1,6 +1,6 @@
 slug: twitter-and-the-open-web
 published: Mon, 25 Aug 2014 at 12:01 AM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:18 PM
 title: Twitter and the Open Web
 author: Brian Schrader
 tags: twitter, open web

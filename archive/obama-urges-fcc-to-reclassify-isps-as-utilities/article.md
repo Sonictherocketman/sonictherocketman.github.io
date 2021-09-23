@@ -1,6 +1,6 @@
 slug: obama-urges-fcc-to-reclassify-isps-as-utilities
 published: Mon, 10 Nov 2014 at 08:34 PM
-updated: Mon, 30 Aug 2021 at 01:10 AM
+updated: Thu, 23 Sep 2021 at 11:18 PM
 title: Obama "urges" FCC to reclassify ISPs as Utilities
 author: Brian Schrader
 tags: net neutrality, obama, politics

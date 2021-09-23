@@ -1,6 +1,6 @@
 slug: better-image-sharing-with-dropbox
 published: Fri, 05 Feb 2016 at 02:38 PM
-updated: Mon, 30 Aug 2021 at 01:09 AM
+updated: Thu, 23 Sep 2021 at 11:17 PM
 title: Better Image Sharing with Dropbox
 author: Brian Schrader
 tags: dropbox, images, sharing
