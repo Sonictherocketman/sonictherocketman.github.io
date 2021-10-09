@@ -31,7 +31,7 @@ body {
 
 img { border:none; }
 
-p { text-indent:20px; }
+/* p { text-indent:20px; } */
 
 h1, h2, h3 {
 	/* font-family:'Average', serif; */
@@ -160,6 +160,10 @@ details p {
 
 .article-title {
 	text-align:center;
+}
+
+.text-center {
+  text-align:center;
 }
 
 .link {
