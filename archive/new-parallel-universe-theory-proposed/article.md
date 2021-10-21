@@ -1,6 +1,6 @@
 slug: new-parallel-universe-theory-proposed
 published: Tue, 04 Nov 2014 at 09:19 PM
-updated: Thu, 23 Sep 2021 at 11:18 PM
+updated: Thu, 21 Oct 2021 at 02:27 AM
 title: New Parallel Universe Theory Proposed
 author: Brian Schrader
 tags: physics, cosmology
