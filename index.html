@@ -43,6 +43,47 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/the-internets-original-sin/" class="u-url p-name">
+                The Internet's Original Sin
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-10-26T18:07:00-08:00">
+                Posted on Tue, 26 Oct 2021 at 06:07 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>A piece I wrote was <a href="https://www.sandiegouniontribune.com/opinion/commentary/story/2021-10-25/internet-website-domain-privacy-big-data">published in the San Diego Union Tribune</a> today. The piece is a short dive into a possible alternate history of the web and the internet as it could have been.</p>
+<p>In a bucolic way, the piece compares the development of the internet and the inevitable consequences of a few seemingly insignificant policies adopted by ISPs in the early days. The piece draws a through-line from those policies straight to the emergence of the centralized platforms we know today.</p>
+<p>In short: ISPs killed the internet and made platforms like Facebook and Amazon inevitable.</p>
+<p>The piece compares America's idealized conception of the westward expansion on the frontier to the development of the internet in the last few decades.</p>
+<blockquote>
+<p>There are no homesteads on the internet frontier. This is true on both the large and the small scales. Whether you start a website yourself, or use Facebook, you’re still effectively renting space from someone else. On the internet, <strong>we are all simply users of other people’s computers, tenants renting homes we can never own.</strong></p>
+</blockquote>
+<p><img
+    src="/images/blog/ut-paper-tech-article.jpg"
+    alt=""
+    class="image-center"
+/></p>
+<div class="text-center"><small><caption>
+The title for the print version is much more attention grabbing.
+</caption></small></div>
+
+<p>However, the development of the internet was fundamentally different from westward expansion in two key ways. First off, there was no one already living on the internet frontier&mdash;which isn't relevant to the piece directly, but it's an important distinction. The expansion onto the internet frontier was bloodless.</p>
+<p>But secondly, ISPs made the internet a renter's frontier. Their decisions to not assign static IP addresses to homes or user accounts, and their decisions to provide non-symmetrical connections and block ports 80 and 443 made the internet fundamentally different than it was intended. On the internet today, truly owning your online presence is only possible for a very small subset of individuals and companies; the landlords of the internet.</p>
+<blockquote>
+<p>No one would accept a world in which you could never own the car you drive, or the house you live in. Some people prefer to rent or lease, but cars and houses can still actually be bought. On the internet there is no path to ownership. Each of these stumbling blocks ensures that ordinary people can never truly own a piece of the internet frontier.</p>
+<p>If computers are the land of the internet, then our personal information is the crop. Instead of being given our own small farm to start our online lives anew, we’re forced to be digital sharecroppers. In exchange for a portion of our privacy, we are allowed the chance to cultivate lands we do not own. On the internet, we are not citizens. We’re just users. Is this freedom?</p>
+</blockquote>
+<p><a href="1">Check out the full piece for yourself &#8594;</a></p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/last-year-i-started-reading-a-physical-newspaper/" class="u-url p-name">
                 Last Year I Started Reading A Physical Newspaper
               </a>
@@ -477,33 +518,6 @@ cat /var/log/nginx/access.log | grep pageview &gt;&gt; $STATSFILE;
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/building-a-personalized-newsletter-with-bash-and-a-raspberry-pi/" class="u-url p-name">
-                Building A Personalized Newsletter With Bash And A Raspberry Pi
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2021-04-03T21:02:00-08:00">
-                Posted on Sat, 03 Apr 2021 at 09:02 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>I use <a href="https://pinboard.in/">Pinboard</a> to save articles I've read and, increasingly, to save articles I <em>want</em> to read. That said I rarely go back and actually read things once they disappear into the Pinboard void. This isn't an uncommon problem, I know, but I think I've devised a simple solution.</p>
-<p>I recently set up a Raspberry Pi and mounted it under my desk. I've been playing with RPis for years, but I'd never found a recurring need for them, they've always been toys with fleeting amusement value. But this time around, I've configured it as both a local web server and Samba file share. This allows me to quickly and easily share files with the RPi and, since I configured it to send emails through my Fastmail account, it can now alert me whenever I want.</p>
-<h2>My Pinboard Weekly Newsletter</h2>
-<p>Now that everything on the RPi is set up and easily accessable, I wrote up a simple <a href="https://gist.github.com/Sonictherocketman/8504244c5c916f41dc7815e28f297b86">bash script</a> to pull my most recent bookmarks from Pinboard, filter out the stuff I've already read, and draft an email with everything from the past week that I still haven't gotten to.</p>
-<p>I've posted a simplified version <a href="https://gist.github.com/Sonictherocketman/8504244c5c916f41dc7815e28f297b86">on Github</a>, but my real script isn't much more complex&mdash;all told it comes out to 55 lines of code&mdash;and it's run with a simple, weekly cron job.</p>
-<p><img alt="Pinboard Weekly" src="/images/blog/pinboard-weekly.png" />
-<center><small><i>Here's a sample of the newsletter email&mdash;and yes, my RPi's name is Demin.</i></small></center></p>
-<p>Hopefully this weekly newsletter reminds me to actually go back and read the interesting news and articles I've collected during the week (or it will help remind me just how unimportant certain things really are when you've had a week to let them sit).</p>
-<p>If you use Pinboard, and you constantly find yourself saving articles and never reading them, give my script a try. If you do, let me know what you think!</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -646,9 +660,9 @@ cat /var/log/nginx/access.log | grep pageview &gt;&gt; $STATSFILE;
 <h4>Tags</h4>
 <div class="tags">
   
-    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
-  
     <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
+  
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
   
     <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
   
