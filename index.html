@@ -43,6 +43,38 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/the-road-to-glass--stone/" class="u-url p-name">
+                The Road To Glass & Stone
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2021-12-07T21:11:00-08:00">
+                Posted on Tue, 07 Dec 2021 at 09:11 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I don't think I've ever talked about this here before, but I play in a band. And that band, <a href="https://thefourthsection.com">The Fourth Section</a>, just released its first EP, 'Glass &amp; Stone'; and it's available now.</p>
+<p>It's been almost two years since we formed, just before lockdown in March of 2020, so technically this is our pandemic EP. I'm super happy that we've finally gotten a release out there and available for everyone.</p>
+<p><a href="https://thefourthsection.com"><img
+    src="/images/blog/glass_and_stone.png"
+    alt="Glass & Stone"
+    class="image-center"
+/></a></p>
+<p>I've released music on Bandcamp before, but this is the first time that I'd ever gone through the process of getting music onto the big platforms. It's both a time-consuming process, and still incredible that a bunch of indie artists, with no label backing, can simply fill out some paperwork and then distribute music world wide. We often lose sight of it, but the internet is really magical sometimes.</p>
+<p>The EP was recorded, mixed, and mastered at <a href="https://www.cachoestudio.com">Cacho Studio</a> in Tijuana, and they did a great job. My thanks to everyone at the studio for their hard work.</p>
+<h2>A Virtual and Untrodden Road</h2>
+<p>Since we formed right before the pandemic lockdowns hit the U.S., we couldn't practice at a studio in-person at first. For nearly a year we rehearsed virtually or acoustically&mdash;as well as masked and social distanced&mdash;at a local park. The three of us used <a href="https://jamkazam.com">Jamkazam</a> for our virtual practices and it works well enough for that purpose, but it's no substitute for actual, plugged-in rehearsal at a practice studio.</p>
+<p>We're back to in-person rehearsal now, and it feels great. Lots of new stuff is in the works and hopefully there will be more to show in the coming months.</p>
+<p>Having gone through the process of writing, composing, and distributing music once, we now have a pretty good idea of what it takes to make an EP (or an album) happen, and we're really stoked to do this whole process again (and soon). As with most things, the first try is usually the hardest. There's always the initial, one-time setup that has to be done, and there's just so much you don't know the first time. That is all past now. We know what it takes, and the setup is done. Releasing more stuff is a lot easier now.</p>
+<p>And that is what we plan to do.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/nine9s-gets-an-upgrade-/" class="u-url p-name">
                 Nine9s Gets An Upgrade ⬆️
               </a>
@@ -457,49 +489,6 @@ cat /var/log/nginx/access.log | grep pageview &gt;&gt; $STATSFILE;
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/how-i-use-docker-for-now/" class="u-url p-name">
-                How I Use Docker (For Now)
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2021-04-30T01:05:00-08:00">
-                Posted on Fri, 30 Apr 2021 at 01:05 AM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>In a recent episode of <a href="https://indiedevlife.fm/archive/13-im-starting-to-regret-promising-things/">Indie Dev Life</a> I went into some detail about how I use <a href="https://www.docker.com">Docker</a> to host my software. I discussed my experiences with and guidelines for using Docker in production. This post is a continuation of that discussion.</p>
-<p>I've been using Docker to run my software in production ever since the launch of <a href="https://adventurerscodex.com">Adventurer's Codex</a>, and <a href="https://mygenerank.scripps.edu">MyGeneRank</a> back in 2017. In my technical discussion <a href="/archive/adventurers-codex-the-stack/">blog post</a> for <a href="/archive/mygenerank-behind-the-scenes-of-the-newest-researchkit-app/">both projects</a>, I talked a little bit about Docker and its place in the stack. I also discuss Docker and its role as a deployment tool briefly in <a href="https://goingindie.tech">Going Indie</a>.</p>
-<blockquote>
-<p>Over the years I’ve managed to tune my services to be incredibly easy to upgrade. For example, since Nine9s is written in Python and uses Docker, a deploy is simply a <code>git pull</code> and <code>docker-compose up</code>. Nowadays, even those steps are automated by a bash script. Having such a simple process means that I can deploy quickly, and it lessens the cognitive burden associated with upgrading a service, even when that service has gone without changes for months.</p>
-</blockquote>
-<p>Over time, Docker's role in my software has morphed and evolved. During the initial launch of Adventurer's Codex, I depended heavily on community-built Docker files for large portions of the architecture. But over time Docker has actually shrunk to fill a much more limited role.</p>
-<h2>The Problem Docker Solves (for Me)</h2>
-<details>
-  <summary>Context</summary>
-  <p>I use <a href="http://linode.com" title="Linode">Linode</a> for my server hosting, so I'm already operating within a VM, and depending on the software, I might have multiple virtual servers powering a given service. Docker simply provides isolation for processes on the same VM. I do not use Docker Swarm, and I've always just used the community edition of Docker.</p>
-</details>
-
-<p>To me, Docker has become a tool that makes it easy to upgrade and manage my own code and other supporting services. All of my code runs in a Docker container, but so do other systems that my code depends on. For example, Pine.blog and Nine9s both use memcache for <a href="https://docs.djangoproject.com/en/3.2/topics/cache/">template caching</a> since support for it is built into Django&mdash;my preferred web framework. Each web server runs Nginx on the host which reverse-proxies to Docker containers running my Django apps.</p>
-<p>Both services also perform asynchronous processing via worker nodes. These workers are running inside of Docker. Pine.blog's workers are spread across various machines and pass requests through their own <a href="https://github.com/Sonictherocketman/johnny-cache">custom forward caching proxy</a> containers backed by a shared Redis instance also in Docker.</p>
-<p>This setup ensures that I can easily upgrade my own code, and it ensures that exploitable services like memcache aren't exposed to the outside world.</p>
-<p>In short, I've found that Docker works great for parts of the stack that are either upgraded frequently or for parts of the stack that are largely extraneous and that only need to communicate with other parts on the same machine.</p>
-<p>I've largely stopped using Docker in cases where there are external tools that rely on things being installed on the host machine, or where the software requires more nuanced control. Nginx is a great example. All of my new projects have Nginx installed on the host, not in Docker. This is because so many tools from log monitoring to certbot are designed to run on a version of Nginx installed globally. I use Nginx as both a webserver for static content and a reverse-proxy to my Django apps. If you want to use Nginx in Docker, I'd suggest only using it for the former case. The latter is better installed on the host.</p>
-<p>I'm still torn about running my databases and task brokers in Docker. Docker (without Swarm) really annoys me when I'm configuring services that need to be accessed by outside actors. Docker punches through CentOS firewalls which renders most of my typical tactics for securing things moot. I've also started to question the usefulness of Docker when I'm configuring a machine that serves only one purpose. Docker is great at isolating multiple pieces of a stack from each other, but on a single-purpose VM it seems like it's just another useless layer that's only there for consistency.</p>
-<p>Docker on CentOS is particularly irritating as the <code>devicemapper</code> doesn't seem to release disk space that it no longer needs. This means that your server is slowly loosing useful disk space every time you update and rebuild your containers. After about 3 years of upgrades, Pine.blog's main server has lost about 20GB of storage to this bug. Needless to say, I'm investigating a move to Ubuntu in the near future.</p>
-<h2>What about Docker in Development?</h2>
-<p>As with Docker in production, I have mixed feelings about the role Docker plays in my development. I dev on a Macbook Pro, and my Django apps run in a plain-old virtual environment. No Docker there. That said, I do use Docker to run extraneous services&mdash;like Redis, memcache, or that forward caching proxy.</p>
-<p>I stopped running my Django apps in Docker a while back for much the same reason that I no longer run Nginx in Docker. Even with Docker's recommended fixes, Django's management CLI is frustrating to use through Docker and I've had more than one issue with Docker's buffering of log output during development.</p>
-<h2>Docker: Four Years In</h2>
-<p>Overall, I really like Docker. It makes deployments super simple: just <code>git pull</code> and <code>docker-compose up</code> (or use my fancy shell script that does zero-downtime deploys). That said, I'm certainly not a Docker purist. I use Docker in a way that reduces the friction of my deploys, and I'm starting to use it less and less when it's just another layer that serves little purpose.</p>
-<p>Like every tool, Docker has it's role to play, but in my experience it's not the silver bullet that many people think. I haven't used Docker on AWS via ECS, so I can't comment on that. Perhaps that's where Docker really shines. I still prefer a more traditional hosting strategy. Either way, Docker will remain an important tool in my toolbelt for the foreseeable future.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -553,6 +542,10 @@ cat /var/log/nginx/access.log | grep pageview &gt;&gt; $STATSFILE;
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/the-road-to-glass--stone/" title="The Road to Glass &amp; Stone" rel="nofollow">
+    The Road to Glass &amp; Stone
+  </a></li>
+  
   <li><a href="/archive/nine9s-gets-an-upgrade-/" title="Nine9s gets an upgrade ⬆️" rel="nofollow">
     Nine9s gets an upgrade ⬆️
   </a></li>
@@ -587,10 +580,6 @@ cat /var/log/nginx/access.log | grep pageview &gt;&gt; $STATSFILE;
   
   <li><a href="/archive/easy-and-ethical-traffic-monitoring-with-goaccess/" title="Easy and Ethical Traffic Monitoring with GoAccess" rel="nofollow">
     Easy and Ethical Traffic Monitoring with GoAccess
-  </a></li>
-  
-  <li><a href="/archive/how-i-use-docker-for-now/" title="How I Use Docker (for Now)" rel="nofollow">
-    How I Use Docker (for Now)
   </a></li>
   
 </ul>
