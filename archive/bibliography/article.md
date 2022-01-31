@@ -1,6 +1,6 @@
 slug: bibliography
 published: Thu, 21 Oct 2021 at 02:26 AM
-updated: Thu, 21 Oct 2021 at 02:26 AM
+updated: Mon, 31 Jan 2022 18:01:31 
 title: Bibliography
 author: Brian Schrader
 tags:
@@ -12,6 +12,10 @@ This page lists (almost) all of the works I've written that aren't published on 
 
 Articles are mostly in reverse-chronological order.
 
+- [San Diego Needs to Grow, and That’s OK](https://www.voiceofsandiego.org/topics/opinion/san-diego-needs-to-grow-and-thats-ok/) (Voice of San Diego)
+- [Uptown Needs to Grow](https://sduptownnews.com/uptown-needs-to-grow/) (SD Uptown/Downtown News)
+- [30th St Needs a Mini Park](https://sduptownnews.com/30th-street-needs-a-mini-park/) (SD Uptown/Downtown News)
+- [If the internet had developed differently, websites could have come in boxes](https://www.sandiegouniontribune.com/opinion/commentary/story/2021-10-25/internet-website-domain-privacy-big-data) (San Diego Union Tribune)
 - [While Southern California Battles Drought, San Diego Is Faring Better](https://www.eastcountymagazine.org/while-southern-california-battles-drought-san-diego-faring-better) (East County Magazine)
 - [What Do California’s New Housing Laws Mean For East County?](https://www.eastcountymagazine.org/what-does-california’s-new-housing-law-mean-east-county) (East County Magazine)
 - [Reader’s Editorial: The Last Chance For Climate Policy This Decade](https://www.eastcountymagazine.org/reader’s-editorial-last-chance-climate-policy-decade) (East County Magazine)
