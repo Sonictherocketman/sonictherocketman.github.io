@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>I Solved The Same Bug Twice And Didn&#39;t Know It - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+  <meta property="og:title" content="I Solved The Same Bug Twice And Didn&#39;t Know It" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" />
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      <article class="h-entry">
+        <a href="/" class="u-author"></a>
+        <div class="post">
+        <div class="article-title">
+          <h1 class="p-name">
+            <a
+              href="http://brianschrader.com/archive/i-solved-the-same-bug-twice-and-didnt-know-it/"
+              title="I Solved The Same Bug Twice And Didn&#39;t Know It"
+            >
+              I Solved The Same Bug Twice And Didn't Know It
+            </a>
+          </h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2022-02-01T23:44:00">
+              Posted on Tue, 01 Feb 2022 at 11:44 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>Human memory is incredibly lossy; the brain an imperfect storage medium.</p>
+<p>I've <a href="/archive/comments-with-cited-references/">written before</a> about how I include links in my code comments to resources that helped me find unintuitive or convoluted solutions. These links are essentially the footnotes of my systems; both documentation and a debugging paper-trail for poor, future souls to follow.</p>
+<p>However, I am an imperfect soul, and so not all of my hackish solutions are cited. This fact bit me the other day when I discovered a strange bug with a new feature in <a href="https://adventurerscodex.com/">Adventurer's Codex</a>.</p>
+<h3>The Technical Details</h3>
+<p>The actual issue was fairly nuanced and understanding it depends heavily on the details of our infrastructure, but the simple version goes like this:</p>
+<p>We have two endpoints, one that returns a resource and one that returns the schema for our entire API. For whatever reason, in this particular case, requesting the resource changed the output of the schema the first time the resource was requested. This is obviously unexpected. The structure of an API shouldn't change when you call it right? Well, that's the thing. Technically the API wasn't actually changing, but the schema was ever so slightly different: the format of the schema for that resource had changed.</p>
+<p><img
+    alt="A funny joke"
+    src="/images/blog/changed-outcome.jpg"
+    class="image-right"
+    style="max-width:320px;"
+/></p>
+<p>The schema is a hierarchical description of all of our API endpoints, with paths to describe how each resource is related. In this case, the schema would output two different paths to the same resource, but the data at both paths were identical.</p>
+<p>For technical reasons, these paths matter to us. <strong>They must remain the same.</strong></p>
+<h3>Following the Breadcrumb Trail</h3>
+<p>After some DuckDuckGo-fu failed to turn up any useful results, I turned to the rest of the codebase. The problematic endpoint was very simple. Surely we'd implemented other similar functionality which didn't cause this behavior. Sure enough I found two such cases. Both of which contained the same strange, seemingly useless line of code.</p>
+<p>Once I had added that seemingly useless code, the schema no longer changed. I had fixed the bug! I had discovered <em>how</em> to fix the bug, but not <em>why</em>. I could have stopped there. Someone else might have, but I needed to go further. I needed to find out how this unrelated line solved my problem.</p>
+<p>For now, I had found a clue.</p>
+<p>Being the primary author of this particular codebase I knew that such a strange implementation would probably have at least a code comment or a comment in the implementing commit that explained the weirdness. There was no code comment unfortunately, and neither was there one in the commit. However, by diving through the history of that particular file I found that there had been a code comment, right where I would have expected it to be, when the code was written; but it had been removed in another commit a few months back&mdash;<em>by me</em>.</p>
+<p><img
+    alt="The Fatefult Commit"
+    src="/images/blog/ac-fateful-comment.png"
+    class="image-center"
+/></p>
+<p>Unfortunately, the comment didn't link to an answer on the internet and subsequent searches have turned up nothing of use.</p>
+<p>For now, I had found another clue&mdash;and a big one at that. I had also discovered something scarier: I had already found, fought, and beaten this bug before, and it was I that deleted the vital clue.</p>
+<p>I had discovered that I was not just the detective but the victim and the murderer, and that the case had been closed three years prior.</p>
+<h3>Answers Lost to the Mists of Time</h3>
+<p>As strange as it may seem, I find that this kind of thing happens more often than we may like to admit. I am in a situation where I maintain most of the code I write, and so I get to live with my mistakes for years&mdash;going on a decade now. When I wrote the offending code and the comment that explained it, I was deep in the bowels of <a href="https://www.django-rest-framework.org">DRF</a> building out the Adventurer's Codex backend from whole cloth. Since then I've moved on to building other things. That code has now sat for years untouched, working as designed; and <a href="https://www.goodreads.com/quotes/376870-and-some-things-that-should-not-have-been-forgotten-were">some things which should not have been forgotten were lost</a>.</p>
+<p>At time of writing this mystery is still unsolved; the clues leading to an end I cannot see. However I now know that at one point in the past I did know the cause of this issue and how to solve it. The solution lives on, but <a href="/archive/where-it-comes-from-nobody-knows/">the cause is lost</a>: a coder's <a href="https://en.wikipedia.org/wiki/Greek_fire">greek fire</a>.</p>
+<p>The answer may be lost to time, as even three years is enough time for some links to rot and trails to run cold. In what now feels like another lifetime, a past version of myself held the answers I now seek. Perhaps one day a Future Me will know what Past Me had found.</p>
+        </div>
+        <hr />
+        
+        <small>
+          Filed under:
+          <span class="tags article-content">
+            
+              <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+            
+              <a href="/tags.html#tag- programming" title=" programming" class="tag"> programming</a>
+            
+          </span>
+        </small><br />
+        
+        <small>
+          Other Links:
+          <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+          <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+          <span class="article-content">
+            <a
+              rel="status"
+              href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+              target="_blank"
+            >
+              Status Page &#8594;
+            </a>
+          </span>
+        </small>
+      </div>
+      </article>
+    </div>
+    <div class="side-bar">
+      <div class="promotion">
+  <div data-sublime-embed="oKLwqL0q2k9NOA"></div>
+  <script src="https://embed.sublimeads.com/embed.js" defer></script>
+</div>
+<h4>Featured Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
+    Grove, a new Tree-planting Wellness Game 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
+    Announcing: Hewell Public Beta 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
+    On Uber, Lyft, and Labor Law
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&amp;D Image Repository" rel="nofollow">
+    d20.photos: A Public Domain D&amp;D Image Repository
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
+    Announcing Nine9s.cloud 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/why-were-polarized/" title="Why We&#39;re Polarized" rel="nofollow">
+    Why We&#39;re Polarized
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
+    A New Adventure
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-social-web/" title="The Social Web" rel="nofollow">
+    The Social Web
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
+    Feed Readers and Local News
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+    The Web as a Social Network
+  </a></li>
+  
+</ul>
+<h4>Recent Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/take-a-break-script-something/" title="Take a Break, Script Something" rel="nofollow">
+    Take a Break, Script Something
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-road-to-glass--stone/" title="The Road to Glass &amp; Stone" rel="nofollow">
+    The Road to Glass &amp; Stone
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/nine9s-gets-an-upgrade-/" title="Nine9s gets an upgrade ⬆️" rel="nofollow">
+    Nine9s gets an upgrade ⬆️
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-internets-original-sin/" title="The Internet&#39;s Original Sin" rel="nofollow">
+    The Internet&#39;s Original Sin
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/last-year-i-started-reading-a-physical-newspaper/" title="Last Year I Started Reading a Physical Newspaper" rel="nofollow">
+    Last Year I Started Reading a Physical Newspaper
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast/" title="Automated Podcasts with Automator &amp;amp; Overcast" rel="nofollow">
+    Automated Podcasts with Automator &amp;amp; Overcast
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/retrospective-on-a-year-spent-writing/" title="Retrospective on a Year Spent Writing" rel="nofollow">
+    Retrospective on a Year Spent Writing
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
+    Grove, a new Tree-planting Wellness Game 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/unbounded-possibility-is-bad-for-productivity/" title="Unbounded Possibility is Bad for Productivity" rel="nofollow">
+    Unbounded Possibility is Bad for Productivity
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/imports-are-endorsements/" title="Imports are Endorsements" rel="nofollow">
+    Imports are Endorsements
+  </a></li>
+  
+</ul>
+<h4>Also Me</h4>
+<ul>
+  <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+    Pine.blog
+  </a></li>
+  <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+    GitHub
+  </a></li>
+  <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+    Twitter
+  </a></li>
+  <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+    Pinboard
+  </a></li>
+  <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+    Photoblog
+  </a></li>
+  <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+    Gravatar
+  </a></li>
+  <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+    Bandcamp
+  </a></li>
+  <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+    Goodreads
+  </a></li>
+</ul>
+<h4>Projects</h4>
+<ul>
+  <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+    Democracy &amp; Progress
+  </a></li>
+  <li><a href="https://goingindie.tech" title="Going Indie">
+    Going Indie
+  </a></li>
+  <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+    Pine.blog
+  </a></li>
+  <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+    Indie Dev Life Podcast
+  </a></li>
+  <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+    Nine9s
+  </a></li>
+  <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+    d20.photos
+  </a></li>
+  <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+    Adventurer&apos;s Codex
+  </a></li>
+</ul>
+<h4>Resources</h4>
+<ul>
+  <li><a href="/archive/bibliography" title="Bibliography">
+    Bibliography
+  </a></li>
+  <li><a href="/archive/bookshelf" title="Book Recommendations">
+    Book Recommendations
+  </a></li>
+  <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+    Food &amp; Drink Recipes
+  </a></li>
+  <li><a href="/tags.html" title="Posts by Tag">
+    Tags
+  </a></li>
+</ul>
+<h4>Tags</h4>
+<div class="tags">
+  
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
+    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
+  
+    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
+  
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
+    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
+  
+    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
+  
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
+  
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
+  
+    <a href="/tags.html#tag-python" title="python" class="tag">python</a>
+  
+</div>
+<h4>Blogroll</h4>
+<ul>
+  <li><a href="https://vincentritter.com/" title="Vincent Ritter" rel="nofollow">
+    Vincent Ritter
+  </a></li>
+  <li><a href="https://gregorlove.com/" title="gRegorLove.com" rel="nofollow">
+    gRegorLove.com
+  </a></li>
+  <li><a href="https://eli.li/" title="Oatmeal" rel="nofollow">
+    Oatmeal
+  </a></li>
+  <li><a href="https://aaronparecki.com/" title="Aaron Parecki" rel="nofollow">
+    Aaron Parecki
+  </a></li>
+  <li><a href="http://inessential.com/" title="inessential" rel="nofollow">
+    inessential
+  </a></li>
+  <li><a href="http://idlewords.com/" title="Idle Words" rel="nofollow">
+    Idle Words
+  </a></li>
+  <li><a href="http://macgenie.micro.blog/" title="Jean MacDonald" rel="nofollow">
+    Jean MacDonald
+  </a></li>
+  <li><a href="https://www.vox.com/authors/ezra-klein" title="Ezra Klein" rel="nofollow">
+    Ezra Klein
+  </a></li>
+  <li><a href="https://pine.blog/u/photosaboutadams" title="Photos About Adams" rel="nofollow">
+    Photos About Adams
+  </a></li>
+  <li><a href="https://iifrp.org" title="IIFRP.org" rel="nofollow">
+    IIFRP.org
+  </a></li>
+  <li><a href="http://mattgemmell.com/" title="Matt Gemmell" rel="nofollow">
+    Matt Gemmell
+  </a></li>
+  <li><a href="http://hypercritical.co/" title="Hypercritical" rel="nofollow">
+    Hypercritical
+  </a></li>
+  <li><a href="https://twitter.com/HelloMelanieC" title="Melanie Crutchfield" rel="nofollow">
+    Melanie Crutchfield
+  </a></li>
+  <li><a href="http://jvns.ca/" title="Julia Evans" rel="nofollow">
+    Julia Evans
+  </a></li>
+  <li><a href="https://kateheddleston.com/blog" title="Kate Heddleston" rel="nofollow">
+    Kate Heddleston
+  </a></li>
+  <li><a href="https://beckyhansmeyer.com/" title="Becky Hansmeyer" rel="nofollow">
+    Becky Hansmeyer
+  </a></li>
+  <li><a href="https://adventurerscodex.com/blog.html" title="Adventurer's Codex Blog" rel="nofollow">
+    Adventurer's Codex Blog
+  </a></li>
+  <li><a href="https://blog.pine.blog/" title="Pine.blog Official Blog" rel="nofollow">
+    Pine.blog Official Blog
+  </a></li>
+  <li><a href="https://www.peoplespolicyproject.org/" title="People's Policy Project" rel="nofollow">
+    People's Policy Project
+  </a></li>
+</ul>
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div class="article-content">
+    </div>
+  </div>
+
+    </div>
+  </body>
+</html>

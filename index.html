@@ -43,6 +43,55 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" class="u-url p-name">
+                I Solved The Same Bug Twice And Didn't Know It
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2022-02-01T23:44:00-08:00">
+                Posted on Tue, 01 Feb 2022 at 11:44 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>Human memory is incredibly lossy; the brain an imperfect storage medium.</p>
+<p>I've <a href="/archive/comments-with-cited-references/">written before</a> about how I include links in my code comments to resources that helped me find unintuitive or convoluted solutions. These links are essentially the footnotes of my systems; both documentation and a debugging paper-trail for poor, future souls to follow.</p>
+<p>However, I am an imperfect soul, and so not all of my hackish solutions are cited. This fact bit me the other day when I discovered a strange bug with a new feature in <a href="https://adventurerscodex.com/">Adventurer's Codex</a>.</p>
+<h3>The Technical Details</h3>
+<p>The actual issue was fairly nuanced and understanding it depends heavily on the details of our infrastructure, but the simple version goes like this:</p>
+<p>We have two endpoints, one that returns a resource and one that returns the schema for our entire API. For whatever reason, in this particular case, requesting the resource changed the output of the schema the first time the resource was requested. This is obviously unexpected. The structure of an API shouldn't change when you call it right? Well, that's the thing. Technically the API wasn't actually changing, but the schema was ever so slightly different: the format of the schema for that resource had changed.</p>
+<p><img
+    alt="A funny joke"
+    src="/images/blog/changed-outcome.jpg"
+    class="image-right"
+    style="max-width:320px;"
+/></p>
+<p>The schema is a hierarchical description of all of our API endpoints, with paths to describe how each resource is related. In this case, the schema would output two different paths to the same resource, but the data at both paths were identical.</p>
+<p>For technical reasons, these paths matter to us. <strong>They must remain the same.</strong></p>
+<h3>Following the Breadcrumb Trail</h3>
+<p>After some DuckDuckGo-fu failed to turn up any useful results, I turned to the rest of the codebase. The problematic endpoint was very simple. Surely we'd implemented other similar functionality which didn't cause this behavior. Sure enough I found two such cases. Both of which contained the same strange, seemingly useless line of code.</p>
+<p>Once I had added that seemingly useless code, the schema no longer changed. I had fixed the bug! I had discovered <em>how</em> to fix the bug, but not <em>why</em>. I could have stopped there. Someone else might have, but I needed to go further. I needed to find out how this unrelated line solved my problem.</p>
+<p>For now, I had found a clue.</p>
+<p>Being the primary author of this particular codebase I knew that such a strange implementation would probably have at least a code comment or a comment in the implementing commit that explained the weirdness. There was no code comment unfortunately, and neither was there one in the commit. However, by diving through the history of that particular file I found that there had been a code comment, right where I would have expected it to be, when the code was written; but it had been removed in another commit a few months back&mdash;<em>by me</em>.</p>
+<p><img
+    alt="The Fatefult Commit"
+    src="/images/blog/ac-fateful-comment.png"
+    class="image-center"
+/></p>
+<p>Unfortunately, the comment didn't link to an answer on the internet and subsequent searches have turned up nothing of use.</p>
+<p>For now, I had found another clue&mdash;and a big one at that. I had also discovered something scarier: I had already found, fought, and beaten this bug before, and it was I that deleted the vital clue.</p>
+<p>I had discovered that I was not just the detective but the victim and the murderer, and that the case had been closed three years prior.</p>
+<h3>Answers Lost to the Mists of Time</h3>
+<p>As strange as it may seem, I find that this kind of thing happens more often than we may like to admit. I am in a situation where I maintain most of the code I write, and so I get to live with my mistakes for years&mdash;going on a decade now. When I wrote the offending code and the comment that explained it, I was deep in the bowels of <a href="https://www.django-rest-framework.org">DRF</a> building out the Adventurer's Codex backend from whole cloth. Since then I've moved on to building other things. That code has now sat for years untouched, working as designed; and <a href="https://www.goodreads.com/quotes/376870-and-some-things-that-should-not-have-been-forgotten-were">some things which should not have been forgotten were lost</a>.</p>
+<p>At time of writing this mystery is still unsolved; the clues leading to an end I cannot see. However I now know that at one point in the past I did know the cause of this issue and how to solve it. The solution lives on, but <a href="/archive/where-it-comes-from-nobody-knows/">the cause is lost</a>: a coder's <a href="https://en.wikipedia.org/wiki/Greek_fire">greek fire</a>.</p>
+<p>The answer may be lost to time, as even three years is enough time for some links to rot and trails to run cold. In what now feels like another lifetime, a past version of myself held the answers I now seek. Perhaps one day a Future Me will know what Past Me had found.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/take-a-break-script-something/" class="u-url p-name">
                 Take A Break, Script Something
               </a>
@@ -439,38 +488,6 @@ rm .spoken_text.aiff</code></pre>
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/imports-are-endorsements/" class="u-url p-name">
-                Imports Are Endorsements
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2021-05-20T18:00:00-08:00">
-                Posted on Thu, 20 May 2021 at 06:00 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>When you import someone's code, are you endorsing them?</p>
-<p>At first glance, the answer might seem simple: of course not! And while it's pretty obvious that imports are not universal endorsements of the code's author, they aren't entirely void of meaning either. Endorsements aren't an indivisible quanta&mdash;some fundamental particle that cannot be divided&mdash;they exist on a spectrum.</p>
-<h2>Supply chains are tricky things</h2>
-<p>Importing code written by someone else is always a risky endeavor. Most often external dependencies work and work well, but they also expose your software to additional risk. The fact that you are willing to depend on someone else's code implies some kind of inherent bond of trust. It implies a relationship between the developer (or organization) and the code author. Importantly, it also implies that the developer finds the author's code valuable in some way.</p>
-<p>Dependencies are part of a software's digital supply chain&mdash;along with any other provider we use to power our software. And in today's world, where alternative dependencies abound, many people understand that the various links in the supply chain aren't simply bound together out of mutual necessity. They choose to depend on each other, and so there are shared values and responsibilities that are common to all in the chain.</p>
-<p>Using an example out of the news, Apple doesn't manufacture many of the components in its devices, yet when it's partner Foxconn is found to be abusing workers, we place some of that blame on Apple for choosing to work with Foxconn given their past behavior. Similarly, Google and Microsoft do not generate their own power, yet they've made efforts to rid their supply chains of fossil fuels, and the public has&mdash;rightly&mdash;heaped praise on them for these actions. From fashion to technology we understand that companies are somewhat responsible for choosing ethical and responsible supply chain partners. Why should developers be any different?</p>
-<h2>Our decisions matter</h2>
-<p>I think most people would agree with the decision not to use software written by an outspoken white-supremacist, but even that extreme example implies that there is some threshold where the author's views would impact the technical decision to use a given toolset. The literature, music, and film worlds are well-accustomed to this debate. Authors leave a mark on their work. How big that mark is remains a subject of debate, but there's no debate that the author has at least some impact.</p>
-<p>Obviously big tech companies and organizations don't suffer because one company decides not to use their stuff&mdash;ideas require collective, industry-wide action to produce results.</p>
-<p>The point is that our decisions to use Facebook's frameworks, Google's toolsets, Apple's platforms, or Amazon's services must be informed by their creators' behaviors and policies. Sometimes these decisions will be good for business, and sometimes not. Other times they might be incredibly beneficial or utterly unremarkable. Regardless of their effects, these decisions matter.</p>
-<p>Some readers might bemoan this idea, claiming that I'm making software political, but everything is political in some form. Software doesn't exist in a vacuum and there are real consequences to our choices that echo beyond the apps and websites we build.</p>
-<p>Whether we like it or not, the role of engineers is to manipulate the real world to achieve some end, and how we do that work has just as much import as what end we achieve.</p>
-<p>I, for one, am driven to do what I can to mitigate the effects of Climate Change, so I host all of my new services <a href="https://nine9s.cloud/kb/infrastructure">in data centers powered by renewable energy</a> and I'm working on migrating my existing services there as well. My hosting platform is a part of my digital supply chain, and I bear some responsibility for the emissions my services produce. The downside is that those servers are in Europe now, so my ping times suffer a bit, but to me that tradeoff was worth making.</p>
-<p>Destinations matter, but the road to the destination matters too. Developers achieve our ends through importing other people's code, and those imports matter. Choose yours well.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -524,6 +541,10 @@ rm .spoken_text.aiff</code></pre>
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" title="I Solved The Same Bug Twice And Didn&#39;t Know It" rel="nofollow">
+    I Solved The Same Bug Twice And Didn&#39;t Know It
+  </a></li>
+  
   <li><a href="/archive/take-a-break-script-something/" title="Take a Break, Script Something" rel="nofollow">
     Take a Break, Script Something
   </a></li>
@@ -558,10 +579,6 @@ rm .spoken_text.aiff</code></pre>
   
   <li><a href="/archive/unbounded-possibility-is-bad-for-productivity/" title="Unbounded Possibility is Bad for Productivity" rel="nofollow">
     Unbounded Possibility is Bad for Productivity
-  </a></li>
-  
-  <li><a href="/archive/imports-are-endorsements/" title="Imports are Endorsements" rel="nofollow">
-    Imports are Endorsements
   </a></li>
   
 </ul>
@@ -642,9 +659,9 @@ rm .spoken_text.aiff</code></pre>
   
     <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
   
-    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
-  
     <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
   
     <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
