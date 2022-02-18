@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Generating Deterministic, Procedural Artwork with pdraw - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+  <meta property="og:title" content="Generating Deterministic, Procedural Artwork with pdraw" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/generating-deterministic-procedural-artwork-with-pdraw/" />
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      <article class="h-entry">
+        <a href="/" class="u-author"></a>
+        <div class="post">
+        <div class="article-title">
+          <h1 class="p-name">
+            <a
+              href="http://brianschrader.com/archive/generating-deterministic-procedural-artwork-with-pdraw/"
+              title="Generating Deterministic, Procedural Artwork with pdraw"
+            >
+              Generating Deterministic, Procedural Artwork With Pdraw
+            </a>
+          </h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2022-02-18T22:36:00">
+              Posted on Fri, 18 Feb 2022 at 10:36 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>I've been messing with procedural artwork lately, and I've decided to discuss the fruits of my labor. Behold <a href="https://github.com/Sonictherocketman/pdraw">pdraw</a>: a script that generates cool line art from arbitrary text!</p>
+<p><a href="https://github.com/Sonictherocketman/pdraw"><img class="image-right" src="/images/blog/pdraw.gif" alt="Pdraw.py" style="max-width: 300px;" /></a></p>
+<p>About two weeks ago, <a href="https://www.youtube.com/watch?v=tkC1HHuuk7c">Numberphile</a> released a new video about visualizing the digits of Pi using procedural artwork. I was taken by the idea and decided that I would, for fun, simply replicate their technique in Python and use it to plot random sections of Pi. It was a sort of goof-off project to occupy an evening. At the end of that evening, I had finished my script (through several iterations) and plotted various sections of Pi. I could now plot any stream of numbers. Then it hit me: all digital data can be represented as a base 10 string of numbers. I could draw anything.</p>
+<p>The next evening, I set about making it so that my script could accept various command-line configurations and convert any text into its base 10 equivalent (with a small tweak for artistic reasons). Once I had that, it was time to start plotting anything I could think of. I've tried drawing binaries, zip files, websites, and a lot more.</p>
+<p>I've <a href="https://github.com/Sonictherocketman/pdraw">open sourced</a> the code for pdraw &mdash; which uses no dependences because Python is cool like that &mdash; so you the technically inclined reader can draw your very own text streams and see if they produce anything interesting.</p>
+<p>I've found that the cooler drawings tend to arise from text containing between 250-2000 characters, although larger files can be cool too. What's especially interesting is that you can almost see the structure of the data in the drawing as you watch it draw. For example, my blog archive page is basically a blob of header information, then a long and repetitive HTML table, and then another blob. This structure appears in the drawing when you plot the HTML of the page; the table rows appearing as little loops followed by lines in random directions.</p>
+<p><code>$ curl https://brianschrader.com/archive/ | ./pdraw -e</code></p>
+<p>Check it out, and let me know what you do with it. I'd love to know if anyone finds more cool things to do with pdraw, or if you generate some particularly cool drawings with it.</p>
+        </div>
+        <hr />
+        
+        <small>
+          Filed under:
+          <span class="tags article-content">
+            
+              <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+            
+              <a href="/tags.html#tag- python" title=" python" class="tag"> python</a>,
+            
+              <a href="/tags.html#tag- software" title=" software" class="tag"> software</a>,
+            
+              <a href="/tags.html#tag- tools" title=" tools" class="tag"> tools</a>
+            
+          </span>
+        </small><br />
+        
+        <small>
+          Other Links:
+          <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+          <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+          <span class="article-content">
+            <a
+              rel="status"
+              href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+              target="_blank"
+            >
+              Status Page &#8594;
+            </a>
+          </span>
+        </small>
+      </div>
+      </article>
+    </div>
+    <div class="side-bar">
+      <div class="promotion">
+  <div data-sublime-embed="oKLwqL0q2k9NOA"></div>
+  <script src="https://embed.sublimeads.com/embed.js" defer></script>
+</div>
+<h4>Featured Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
+    Grove, a new Tree-planting Wellness Game 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
+    Announcing: Hewell Public Beta 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
+    On Uber, Lyft, and Labor Law
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&amp;D Image Repository" rel="nofollow">
+    d20.photos: A Public Domain D&amp;D Image Repository
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
+    Announcing Nine9s.cloud 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/why-were-polarized/" title="Why We&#39;re Polarized" rel="nofollow">
+    Why We&#39;re Polarized
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
+    A New Adventure
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-social-web/" title="The Social Web" rel="nofollow">
+    The Social Web
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
+    Feed Readers and Local News
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+    The Web as a Social Network
+  </a></li>
+  
+</ul>
+<h4>Recent Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" title="I Solved The Same Bug Twice And Didn&#39;t Know It" rel="nofollow">
+    I Solved The Same Bug Twice And Didn&#39;t Know It
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/take-a-break-script-something/" title="Take a Break, Script Something" rel="nofollow">
+    Take a Break, Script Something
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-road-to-glass--stone/" title="The Road to Glass &amp; Stone" rel="nofollow">
+    The Road to Glass &amp; Stone
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/nine9s-gets-an-upgrade-/" title="Nine9s gets an upgrade ⬆️" rel="nofollow">
+    Nine9s gets an upgrade ⬆️
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-internets-original-sin/" title="The Internet&#39;s Original Sin" rel="nofollow">
+    The Internet&#39;s Original Sin
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/last-year-i-started-reading-a-physical-newspaper/" title="Last Year I Started Reading a Physical Newspaper" rel="nofollow">
+    Last Year I Started Reading a Physical Newspaper
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast/" title="Automated Podcasts with Automator &amp;amp; Overcast" rel="nofollow">
+    Automated Podcasts with Automator &amp;amp; Overcast
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/retrospective-on-a-year-spent-writing/" title="Retrospective on a Year Spent Writing" rel="nofollow">
+    Retrospective on a Year Spent Writing
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
+    Grove, a new Tree-planting Wellness Game 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/unbounded-possibility-is-bad-for-productivity/" title="Unbounded Possibility is Bad for Productivity" rel="nofollow">
+    Unbounded Possibility is Bad for Productivity
+  </a></li>
+  
+</ul>
+<h4>Also Me</h4>
+<ul>
+  <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+    Pine.blog
+  </a></li>
+  <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+    GitHub
+  </a></li>
+  <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+    Twitter
+  </a></li>
+  <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+    Pinboard
+  </a></li>
+  <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+    Photoblog
+  </a></li>
+  <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+    Gravatar
+  </a></li>
+  <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+    Bandcamp
+  </a></li>
+  <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+    Goodreads
+  </a></li>
+</ul>
+<h4>Projects</h4>
+<ul>
+  <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+    Democracy &amp; Progress
+  </a></li>
+  <li><a href="https://goingindie.tech" title="Going Indie">
+    Going Indie
+  </a></li>
+  <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+    Pine.blog
+  </a></li>
+  <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+    Indie Dev Life Podcast
+  </a></li>
+  <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+    Nine9s
+  </a></li>
+  <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+    d20.photos
+  </a></li>
+  <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+    Adventurer&apos;s Codex
+  </a></li>
+</ul>
+<h4>Resources</h4>
+<ul>
+  <li><a href="/archive/bibliography" title="Bibliography">
+    Bibliography
+  </a></li>
+  <li><a href="/archive/bookshelf" title="Book Recommendations">
+    Book Recommendations
+  </a></li>
+  <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+    Food &amp; Drink Recipes
+  </a></li>
+  <li><a href="/tags.html" title="Posts by Tag">
+    Tags
+  </a></li>
+</ul>
+<h4>Tags</h4>
+<div class="tags">
+  
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
+    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
+  
+    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
+  
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
+    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
+  
+    <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
+  
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
+  
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
+  
+    <a href="/tags.html#tag-python" title="python" class="tag">python</a>
+  
+</div>
+<h4>Blogroll</h4>
+<ul>
+  <li><a href="https://vincentritter.com/" title="Vincent Ritter" rel="nofollow">
+    Vincent Ritter
+  </a></li>
+  <li><a href="https://gregorlove.com/" title="gRegorLove.com" rel="nofollow">
+    gRegorLove.com
+  </a></li>
+  <li><a href="https://eli.li/" title="Oatmeal" rel="nofollow">
+    Oatmeal
+  </a></li>
+  <li><a href="https://aaronparecki.com/" title="Aaron Parecki" rel="nofollow">
+    Aaron Parecki
+  </a></li>
+  <li><a href="http://inessential.com/" title="inessential" rel="nofollow">
+    inessential
+  </a></li>
+  <li><a href="http://idlewords.com/" title="Idle Words" rel="nofollow">
+    Idle Words
+  </a></li>
+  <li><a href="http://macgenie.micro.blog/" title="Jean MacDonald" rel="nofollow">
+    Jean MacDonald
+  </a></li>
+  <li><a href="https://www.vox.com/authors/ezra-klein" title="Ezra Klein" rel="nofollow">
+    Ezra Klein
+  </a></li>
+  <li><a href="https://pine.blog/u/photosaboutadams" title="Photos About Adams" rel="nofollow">
+    Photos About Adams
+  </a></li>
+  <li><a href="https://iifrp.org" title="IIFRP.org" rel="nofollow">
+    IIFRP.org
+  </a></li>
+  <li><a href="http://mattgemmell.com/" title="Matt Gemmell" rel="nofollow">
+    Matt Gemmell
+  </a></li>
+  <li><a href="http://hypercritical.co/" title="Hypercritical" rel="nofollow">
+    Hypercritical
+  </a></li>
+  <li><a href="https://twitter.com/HelloMelanieC" title="Melanie Crutchfield" rel="nofollow">
+    Melanie Crutchfield
+  </a></li>
+  <li><a href="http://jvns.ca/" title="Julia Evans" rel="nofollow">
+    Julia Evans
+  </a></li>
+  <li><a href="https://kateheddleston.com/blog" title="Kate Heddleston" rel="nofollow">
+    Kate Heddleston
+  </a></li>
+  <li><a href="https://beckyhansmeyer.com/" title="Becky Hansmeyer" rel="nofollow">
+    Becky Hansmeyer
+  </a></li>
+  <li><a href="https://adventurerscodex.com/blog.html" title="Adventurer's Codex Blog" rel="nofollow">
+    Adventurer's Codex Blog
+  </a></li>
+  <li><a href="https://blog.pine.blog/" title="Pine.blog Official Blog" rel="nofollow">
+    Pine.blog Official Blog
+  </a></li>
+  <li><a href="https://www.peoplespolicyproject.org/" title="People's Policy Project" rel="nofollow">
+    People's Policy Project
+  </a></li>
+</ul>
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div class="article-content">
+    </div>
+  </div>
+
+    </div>
+  </body>
+</html>

@@ -43,6 +43,32 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/generating-deterministic-procedural-artwork-with-pdraw/" class="u-url p-name">
+                Generating Deterministic, Procedural Artwork With Pdraw
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2022-02-18T22:36:00-08:00">
+                Posted on Fri, 18 Feb 2022 at 10:36 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I've been messing with procedural artwork lately, and I've decided to discuss the fruits of my labor. Behold <a href="https://github.com/Sonictherocketman/pdraw">pdraw</a>: a script that generates cool line art from arbitrary text!</p>
+<p><a href="https://github.com/Sonictherocketman/pdraw"><img class="image-right" src="/images/blog/pdraw.gif" alt="Pdraw.py" style="max-width: 300px;" /></a></p>
+<p>About two weeks ago, <a href="https://www.youtube.com/watch?v=tkC1HHuuk7c">Numberphile</a> released a new video about visualizing the digits of Pi using procedural artwork. I was taken by the idea and decided that I would, for fun, simply replicate their technique in Python and use it to plot random sections of Pi. It was a sort of goof-off project to occupy an evening. At the end of that evening, I had finished my script (through several iterations) and plotted various sections of Pi. I could now plot any stream of numbers. Then it hit me: all digital data can be represented as a base 10 string of numbers. I could draw anything.</p>
+<p>The next evening, I set about making it so that my script could accept various command-line configurations and convert any text into its base 10 equivalent (with a small tweak for artistic reasons). Once I had that, it was time to start plotting anything I could think of. I've tried drawing binaries, zip files, websites, and a lot more.</p>
+<p>I've <a href="https://github.com/Sonictherocketman/pdraw">open sourced</a> the code for pdraw &mdash; which uses no dependences because Python is cool like that &mdash; so you the technically inclined reader can draw your very own text streams and see if they produce anything interesting.</p>
+<p>I've found that the cooler drawings tend to arise from text containing between 250-2000 characters, although larger files can be cool too. What's especially interesting is that you can almost see the structure of the data in the drawing as you watch it draw. For example, my blog archive page is basically a blob of header information, then a long and repetitive HTML table, and then another blob. This structure appears in the drawing when you plot the HTML of the page; the table rows appearing as little loops followed by lines in random directions.</p>
+<p><code>$ curl https://brianschrader.com/archive/ | ./pdraw -e</code></p>
+<p>Check it out, and let me know what you do with it. I'd love to know if anyone finds more cool things to do with pdraw, or if you generate some particularly cool drawings with it.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" class="u-url p-name">
                 I Solved The Same Bug Twice And Didn't Know It
               </a>
@@ -441,53 +467,6 @@ rm .spoken_text.aiff</code></pre>
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/unbounded-possibility-is-bad-for-productivity/" class="u-url p-name">
-                Unbounded Possibility Is Bad For Productivity
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2021-05-25T00:07:00-08:00">
-                Posted on Tue, 25 May 2021 at 12:07 AM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>Being productive is hard; especially if you're working by yourself or working remotely. When you're working alone you have a lot of freedom, but that also means you have a lot of slack. No one is holding you to a schedule or deadline, and nothing is stopping you from procrastinating or getting distracted.</p>
-<p>Even when you're focused, it can be hard to decide what to focus on, since there's often no required order in which things be done. From an objective perspective, whether I choose to call my bank today or tomorrow makes absolutely no difference. The same is true with what features I choose to implement on any given day. As long as the features get done, the order and the exact date they're completed isn't really important. Some features must be done before others for technical reasons, but others are completely unrelated and can be developed in any order. But this ambiguity is precisely the problem.</p>
-<p>If you could work on anything at any time, what should you work on right now?</p>
-<p>I'm going to generalize here: I don't think humans deal with unbounded possibility very well. We long for some sort of structure&mdash;or at least I do. When presented with the choice of doing any feature I want, I'm left unfocused and forced to decide&mdash;moment by moment&mdash;what features to build, which not only wastes time, but increases decision fatigue.</p>
-<h2>Lights in the Infinite Dark</h2>
-<p>Speaking with a friend earlier over the weekend, we stumbled on a maxim that I think sums up the solution pretty well:</p>
-<blockquote>
-<p>Planning is the art of bringing order to chaos.</p>
-</blockquote>
-<p>I've found that arbitrary deadlines, like <a href="/archive/arbitrary-achievement-unlocked/">arbitrary goals</a> keep me motivated and focused. Without some sort of deadline or goal, I feel adrift and it's difficult to force myself to work on anything for a significant period of time.  So I create artificial deadlines and goals, sometimes completely arbitrarily. Often times, I'll just pick a date on the calendar based on nothing but gut intuition, and then I change it later if necessary.</p>
-<p><div
-    class="images-side-by-side"
-    style="display:flex;justify-content:center;text-align:center;flex-wrap:wrap;"
->
-    <div style="max-width: 300px;min-width: 200px; flex:1;">
-        <b>Without goals and deadlines</b>
-        <img src="/images/blog/focus.png" alt="Infinite Focus" />
-        <caption><small>Infinite possibility gives no guidance.</small></caption>
-    </div>
-    <div style="max-width: 300px;min-width: 200px; flex:1;">
-        <b>With goals and deadlines</b>
-        <img src="/images/blog/focus-focused.png" alt="Focus with Direction" />
-        <caption><small>Adding goals gives you a direction.</small></caption>
-    </div>
-</div>
-</p>
-<p>By setting completely arbitrary deadlines and goals, I'm able to narrow down the unbounded, infinite possibility that is creating software into a simple series of steps. This isn't a new idea; tons of people do this. I just find it interesting to think of deadlines this way.</p>
-<p>Whether your planning process involves ultra-precise scheduling, or just a notes file with some rough deadlines in it, having any sort of plan at all gives focus to your efforts and it guides you through the haze of infinite possibility.</p>
-<p>Even if your deadlines are completely arbitrary and can be changed at will, having them is the most important thing.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -541,6 +520,10 @@ rm .spoken_text.aiff</code></pre>
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/generating-deterministic-procedural-artwork-with-pdraw/" title="Generating Deterministic, Procedural Artwork with pdraw" rel="nofollow">
+    Generating Deterministic, Procedural Artwork with pdraw
+  </a></li>
+  
   <li><a href="/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" title="I Solved The Same Bug Twice And Didn&#39;t Know It" rel="nofollow">
     I Solved The Same Bug Twice And Didn&#39;t Know It
   </a></li>
@@ -575,10 +558,6 @@ rm .spoken_text.aiff</code></pre>
   
   <li><a href="/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
     Grove, a new Tree-planting Wellness Game 🎉
-  </a></li>
-  
-  <li><a href="/archive/unbounded-possibility-is-bad-for-productivity/" title="Unbounded Possibility is Bad for Productivity" rel="nofollow">
-    Unbounded Possibility is Bad for Productivity
   </a></li>
   
 </ul>
@@ -667,9 +646,9 @@ rm .spoken_text.aiff</code></pre>
   
     <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
   
-    <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
+    <a href="/tags.html#tag-python" title="python" class="tag">python</a>,
   
-    <a href="/tags.html#tag-python" title="python" class="tag">python</a>
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>
   
 </div>
 <h4>Blogroll</h4>
