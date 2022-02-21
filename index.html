@@ -43,6 +43,53 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/at-vs-on-a-story-of-semantic-data-modeling/" class="u-url p-name">
+                At Vs. On: A Story Of Semantic Data Modeling
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2022-02-21T22:50:00-08:00">
+                Posted on Mon, 21 Feb 2022 at 10:50 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>As most good software developers eventually learn: time is hard. Time-based bugs are incredibly common and are sometimes difficult to solve. There are a <a href="https://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time">ton of misconceptions about how time and dates work</a> in the real world and the simple solution is rarely correct for any significant length of time. Performing calculations based on times and dates can get messy, but so can simply storing them. There's a lot to be wary of when building out a data model with timestamps involved, and as always, a lack of consistent naming can cause a ton of problems.</p>
+<p>Over the years I've come to use a specific terminology for dates and time in my data models. In general, I prefer not to use data types in variable names, and I prefer my code to read as passable English where possible. This means, I tend to avoid names like: <code>date_created</code> or <code>published_ts</code> which contain the data type in the name, and I avoid names like: <code>created</code> which give me absolutely no indication of the type or what it is used for.</p>
+<p>Instead, I prefer to take cues from the English language. For timestamps or any data type that represents a precise moment in time, I use the suffix <code>at</code>. For dates or times that represent more abstract things like wall time or calendar dates, I use the suffix <code>on</code>.</p>
+<p>As an example let's say I have the following data model:</p>
+<pre><code>class BlogPost:
+
+    # ... other fields ...
+
+    created_at = TimestampField()
+    updated_at = TimestampField()
+
+    posted_on = DateField()
+</code></pre>
+<p>This convention tells me that I should expect the <code>posted_on</code> field to contain a date or time but not both, and that it represents an abstract notion of time, whereas both the <code>created_at</code> and <code>updated_at</code> fields represent a specific moment.</p>
+<p>I arrived at this convention through asking myself questions about the data in plain English. Consider the following questions:</p>
+<ol>
+<li>Q: When was this post published?<br />
+A: It was published <strong>on</strong> the 25th of January.</li>
+<li>Q: When was the post record created?<br />
+A: It was created <strong>at</strong> 12:00 PM on January 24th.</li>
+</ol>
+<details><summary>Disclaimer</summary>
+This convention doesn't always work because usually people would use <b>at</b> to describe any time (e.g. "I arrived <b>at</b> noon"). But once I settled on the convention, it wasn't confusing. It just doesn't always read nicely.
+</details>
+
+<p>Knowing when to use a timestamp vs. a calendar date or wall-clock time is another issue (and a complicated one), but at least with this convention, I know which one I'm dealing with.</p>
+<div class="footnote">
+Now that I think about it, it might make sense to name timestamps with an <b>aton</b> suffix since question #2 technically uses both <b>at</b> and <b>on</b>.
+</div>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/generating-deterministic-procedural-artwork-with-pdraw/" class="u-url p-name">
                 Generating Deterministic, Procedural Artwork With Pdraw
               </a>
@@ -403,70 +450,6 @@ rm .spoken_text.aiff</code></pre>
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/grove/" class="u-url p-name">
-                Grove, A New Tree-Planting Wellness Game 🎉
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2021-07-12T02:07:00-08:00">
-                Posted on Mon, 12 Jul 2021 at 02:07 AM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>Today marks the release of my newest app: Grove! Here's a brief description of the app from the <a href="https://thegroveapp.com?ref=bs">product page</a>:</p>
-<p><a href="https://thegroveapp.com?ref=bs"><img src="https://thegroveapp.com/img/icon.png" alt="Grove Logo" style="max-width:150px; width:80%; box-shadow:3px 3px 5px darkgrey; border-radius:30px; padding:0; margin:15px; float:right;"></a></p>
-<blockquote>
-<p>Grove is an augmented-reality game where you plant virtual trees in the real world! Collect the various kinds of trees, learn about them, and earn achievements all while getting outdoors and enjoying your virtual garden.</p>
-<p>Grove is part game, part educational app, and part wellness app! In Grove you care for your trees and tend to your garden, and in turn, you stay fit and healthy.</p>
-<p>&mdash; <a href="https://thegroveapp.com?ref=bs">Grove Product Page</a></p>
-</blockquote>
-<p>If you're at all interested in the app, please do give it a try, and let me know what you think. I can't wait to hear your feedback (and see some of your trees)!</p>
-<p><a href="https://thegroveapp.com?ref=bs"><div style="text-align:center;">
-    <img src="https://thegroveapp.com/img/v1.0/grove-full.png"
-        alt="The grove view"
-        width="400px"
-        style="width:200px; display:inline-block;"
-    />
-    <img src="https://thegroveapp.com/img/v1.0/plant.png"
-        alt="A detail view"
-        class="hide-on-mobile"
-        width="400px"
-        style="width:200px; display:inline-block;"
-    />
-    <img src="https://thegroveapp.com/img/v1.0/market.png"
-        alt="A detail view"
-        class="hide-on-mobile"
-        width="400px"
-        style="width:200px; display:inline-block;"
-    />
-</div></a></p>
-<h2>What is Grove?</h2>
-<p>At its core, Grove is part game, part AR-wellness app with some educational bits sprinkled in. The player plants virtual trees in real-life locations and builds out their virtual grove. Each tree is unique and randomly generated. Trees can be of several collectable types, each with their own unique artwork and animations. Players tend their grove by regularly watering, fertilizing, and harvesting from their trees and well-tended trees grow big and strong.</p>
-<p>Each tree has a unique name, fun facts, and secret stats that determine the bonuses it gives when harvesting. Harvested resources can be sold at the market for coin that in-turn can be used to expand the player's grove and help tend their trees.</p>
-<p>Grove is also a social app. Players can invite their friends to play with them and visit each other's trees. Lonely trees drop fewer seeds, but trees with friendly visitors are happier and more productive.</p>
-<p>The app also includes some optional in-app purchases that can provide additional boosts, or unlock a secret Developer Diary and custom avatars to show off to friends.</p>
-<p>As players tend and grow their grove, they earn achievements for their progress and rewards that help them advance further.</p>
-<h3>Where's the Wellness?</h3>
-<p>In Grove, as in real life, trees need space to grow; they can't be too close together. In order to plant trees, they need to be spaced apart and trees can only be watered, tended, and harvested from when the player is nearby. In essence, think of Grove as an app that encourages uses to go on a daily walk to tend their grove. Trees need to be spaced at least 30 meters (~100 ft) apart so there's plenty of walking to do when you've built up a full size grove. The app also awards bonuses and rewards for completing daily step goals.</p>
-<h3>And then there's Climate Change</h3>
-<p>Yup, you read that right. Climate Change is a gameplay mechanic.</p>
-<p>Trees in the real world naturally absorb carbon dioxide from the air and turn it into wood, leaves, and branches. One technical name for processes like this is Carbon Capture and Sequestration, and tree planting is one technique that can be used to mitigate the effects of Climate Change in our world today.</p>
-<p>In Grove, your trees capture carbon too! (virtual carbon that is) As your trees grow they capture carbon at the rate of real trees using data collected by the <a href="https://www.eea.europa.eu/articles/forests-health-and-climate-change/key-facts/trees-help-tackle-climate-change">European Environment Agency</a>. This helps players get familiar with this crucial emerging technology and get a feel for just how much tree planting can do to help the environment. Also, there's achievements for capturing lots of carbon.</p>
-<h2>A New Challenger Appears!</h2>
-<p>I've been working on Grove for the past six months and it's been a blast to build. I've never built a game before and while Grove is technically more of a wellness and education app than a game, there are certainly game-like components.</p>
-<p>Grove is also the first iOS app I've built that heavily relies on custom assets. Usually I try to stick to drawing simple things in code or simply structuring the app to focus more on textual content, but for Grove that approach simply would not do. It needed to be cute, and it needed to be beautiful. I'd like to thank Grove's designer <a href="https://telesdesign.com">Victor Teles</a> for everything he's done to give Grove a unique and adorable feel.</p>
-<p>If you'd like to learn more about how (and why) I built Grove, <a href="https://thegroveapp.com?ref=bs">give the app a try</a> and unlock the Developer Diary. I've written a deep-dive there that goes into exactly why and how Grove came to be.</p>
-<p>I'm sure I'll be going into more detail on various aspects of Grove in due time, and especially on <a href="https://indiedevlife.fm">my podcast: Indie Dev Life</a>, so be sure to stay tuned for updates.</p>
-<p>As always, thanks to all of my beta testers and to everyone who contributed to Grove. This launch would not be possible without you.</p>
-<p><a href="https://thegroveapp.com?ref=bs">Check out Grove &#8594;</a></p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -520,6 +503,10 @@ rm .spoken_text.aiff</code></pre>
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/at-vs-on-a-story-of-semantic-data-modeling/" title="At vs. On: a Story of Semantic Data Modeling" rel="nofollow">
+    At vs. On: a Story of Semantic Data Modeling
+  </a></li>
+  
   <li><a href="/archive/generating-deterministic-procedural-artwork-with-pdraw/" title="Generating Deterministic, Procedural Artwork with pdraw" rel="nofollow">
     Generating Deterministic, Procedural Artwork with pdraw
   </a></li>
@@ -554,10 +541,6 @@ rm .spoken_text.aiff</code></pre>
   
   <li><a href="/archive/retrospective-on-a-year-spent-writing/" title="Retrospective on a Year Spent Writing" rel="nofollow">
     Retrospective on a Year Spent Writing
-  </a></li>
-  
-  <li><a href="/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
-    Grove, a new Tree-planting Wellness Game 🎉
   </a></li>
   
 </ul>
@@ -634,11 +617,11 @@ rm .spoken_text.aiff</code></pre>
   
     <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
   
+    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
     <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
   
     <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
-  
-    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
   
     <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
   
