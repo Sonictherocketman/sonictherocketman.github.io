@@ -43,6 +43,111 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/hacks-can-be-good-code-too/" class="u-url p-name">
+                Hacks Can Be Good Code Too
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2022-03-21T21:45:00-08:00">
+                Posted on Mon, 21 Mar 2022 at 09:45 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <style>
+table {
+    width: 100%;
+}
+table td {
+    padding: 2px;
+    padding-right: 1.5rem;
+}
+table tr td:last-child {
+    padding: 0;
+}
+</style>
+
+<p>Writing code is, like everything in life, all about making tradeoffs. Code can be quick to write, but at the same time unreadable; it can be fast, but hard to maintain; and it can be flexible, but overly complex. Each of these factors are worth considering when writing Good Code. Complicating this is the fact that: what constitutes Good Code in one situation may not be ideal in another.</p>
+<p>Good Code is not universally so.</p>
+<p>It is incredibly difficult to explain why one set of tradeoffs are worth pursuing in one case but not in another, and often times reasonable people will disagree on the value of certain tradeoffs over others. Perhaps a snippet of hacky string parsing is good in one place, but not in another. Often times, the most significant cost of solving a problem "The Right Way" is time.</p>
+<p>When deciding whether to do something The Right Way or to cheat and simply hack something together, I often try to consider the exposure the given code will have. Consider these questions:</p>
+<ul>
+<li>Do other systems touch this code?</li>
+<li>How many developers will need to interact with it over time?</li>
+<li>How much work would be involved in building out the correct approach?</li>
+<li>How much work would be involved in building out the bad approach?</li>
+<li>How valuable is the intended feature?</li>
+<li>How much additional maintenance does the bad solution require?</li>
+</ul>
+<p>Each of these answers helps me decide what kind of code I should write. These questions neglect multiple other factors (e.g. performance, readability), but they are a good starting point.</p>
+<p>In a recent example I needed to modify the blog engine that powers this site as well as a few others. I wanted a simple feature that would count the number of articles on the side as well as the total number of words in every blog post, and display those values on the home page. <a href="/archive/the-new-new-cms/">As I've said before</a> the blog engine for this site is very old, and has been <a href="/archive/smaller/">rewritten</a> <a href="/archive/rewritten/">several</a> <a href="/archive/thinking-about-redoing-my-blog-engine/">times</a>. It's well beyond needing a massive rewrite, but that's not something I really want to do right now.</p>
+<p>The blog engine is written in Python, provides a command-line interface, and uses Git Hooks both client and server-side to build and deploy itself.</p>
+<p>I originally considered writing this feature in Python: counting the number of words in each article, adding a new context variable to the template rendering process, and then rendering the pages as normal. But that would require touching substantial pieces of the codebase (some of which <a href="/archive/i-solved-the-same-bug-twice-and-didnt-know-it/">I no longer understand</a>). It would probably take me all evening to dive into the code, understand it, make the change, and test it. To be honest, this feature was not worth wasting an evening on. So I decided to just hack something.</p>
+<p>As I said, I use Git to deploy the site. So I just added a new line to the HTML template:</p>
+<pre><code class="html">
+&lt;p&gt;
+    This site contains <code>{+ARTICLE_COUNT+}</code>
+    different writings and <code>{+WORD_COUNT+}</code>
+    total words. That's about <code>{+PAGE_COUNT+}</code>
+    pages!
+&lt;/p&gt;
+</code></pre>
+
+<p>And then I added a new step to the pre-commit hook that runs after the template rendering process, but before the changes are committed and the site is deployed.</p>
+<pre><code class="bash">
+WPP=320
+WORDS_N="$(find archive/ -name "*.md"|xargs -I {} cat {} | wc -w)"
+WORDS=`printf "%'d" $WORDS_N`
+ARTICLES=`printf "%'d" $(find archive/ -name "*.md" | wc -l)`
+PAGES="$(( WORDS_N / WPP ))"
+
+TMP_HOME=`mktemp`
+cp ./index.html $TMP_HOME
+cat $TMP_HOME |
+    sed "s/{+ARTICLE_COUNT+}/$ARTICLES/" |
+    sed "s/{+PAGE_COUNT+}/$PAGES/" |
+    sed "s/{+WORD_COUNT+}/$WORDS/" > ./index.html
+</code></pre>
+
+<p>Let's check in and see how this hack fit my criteria above:</p>
+<table border="1" frame="hsides" rules="rows" style="margin-right:auto;margin-left:auto;">
+    <tr>
+        <td>Do other systems touch this code?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td># of Developers?</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Time for Correct Approach?</td>
+        <td>2-3 hours</td>
+    </tr>
+    <tr>
+        <td>Time for Bad Approach?</td>
+        <td>10 minutes</td>
+    </tr>
+    <tr>
+        <td>How Valuable is the Feature?</td>
+        <td>Very</td>
+    </tr>
+    <tr>
+        <td>Additional Maintenance Burden?</td>
+        <td>Not much</td>
+    </tr>
+</table>
+
+<p>Is this elegant: absolutely not. Did it take basically zero time? Yes. Have I thought about it since? Not until writing this post. Would I have done this on a team project or a commercial product? Absolutely not. It's a feature for my personal blog engine and a feature that is specific to one particular low-value site that I run.</p>
+<p>In this case, a hack is an example of Good Code. That's because Good Code is a relative construct.</p>
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script></p>
+<script>hljs.initHighlightingOnLoad();</script>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/at-vs-on-a-story-of-semantic-data-modeling/" class="u-url p-name">
                 At Vs. On: A Story Of Semantic Data Modeling
               </a>
@@ -422,34 +527,6 @@ rm .spoken_text.aiff</code></pre>
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/retrospective-on-a-year-spent-writing/" class="u-url p-name">
-                Retrospective On A Year Spent Writing
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2021-08-23T23:28:00-08:00">
-                Posted on Mon, 23 Aug 2021 at 11:28 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>Around this time last year, I started writing a lot. Since then, I've published <a href="https://goingindie.tech">a book</a>, started a <a href="https://democracyandprogress.com">policy blog</a>, and started writing for a <a href="https://sduptownnews.com/californians-deserve-better-data-protection/">local paper</a>. All in all, I think it's safe to say that I've written about as many words in the past 12-15 months as over the preceding 10 years.</p>
-<p>A crude calculation of the word-count of this blog shows that I've written approximately 93,719 words. That's a lot, but considering that <a href="https://goingindie.tech">Going Indie</a> is over 62,000 words and my published articles total almost 7,000, that 93,000 looks a lot less impressive.</p>
-<pre><code>$ find archive/ -name "*.md" | xargs -I {} cat {} | wc -w
-   93719
-</code></pre>
-<p>I've learned a lot about myself and my writing in the past year. I've learned how to pitch articles, how to build up the courage to submit them, and how to research and write about complex topics. I've also gotten better at defining my <a href="https://redalemeden.com/microblog/post-1570576215962">assumed audience</a>.</p>
-<p>I'd always intended for this blog to be a place for me to write about whatever I wanted, and while I have written about a number of topics here, over time I've gravitated towards discussions of software, the tech industry, and personal matters. Last year, during the depths of the pandemic, I wanted to expand and write about public policy, but this blog never felt like the right place to do that. Hence why I started <a href="https://democracyandprogress.com">Democracy &amp; Progress</a>, and why I continue to write for the local paper.</p>
-<p>Writing for both D&amp;P and the paper has helped me focus my energy on working to better inform people and convince them to take an interest in a given subject. It's also helped me better understand the in-depth nuances of topics I previously thought I knew something about. Nowadays, I write not only as a way to inform and convince others, but as an exercise to educate myself. They say you don't fully understand something until you try to teach it, and that truism has held strong for me this past year.</p>
-<p>Writing this much has also been a catalyst that pushes me to <a href="/archive/novels-and-insurmountable-tasks/">write even more</a>.</p>
-<p>I've really enjoyed this deeper commitment to writing, and while it remains just a hobby, it's an incredibly fulfilling and enjoying one that I hope to continue as long as I can.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -503,6 +580,10 @@ rm .spoken_text.aiff</code></pre>
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/hacks-can-be-good-code-too/" title="Hacks can be Good Code Too" rel="nofollow">
+    Hacks can be Good Code Too
+  </a></li>
+  
   <li><a href="/archive/at-vs-on-a-story-of-semantic-data-modeling/" title="At vs. On: a Story of Semantic Data Modeling" rel="nofollow">
     At vs. On: a Story of Semantic Data Modeling
   </a></li>
@@ -537,10 +618,6 @@ rm .spoken_text.aiff</code></pre>
   
   <li><a href="/archive/automated-podcasts-with-automator-amp-overcast/" title="Automated Podcasts with Automator &amp;amp; Overcast" rel="nofollow">
     Automated Podcasts with Automator &amp;amp; Overcast
-  </a></li>
-  
-  <li><a href="/archive/retrospective-on-a-year-spent-writing/" title="Retrospective on a Year Spent Writing" rel="nofollow">
-    Retrospective on a Year Spent Writing
   </a></li>
   
 </ul>

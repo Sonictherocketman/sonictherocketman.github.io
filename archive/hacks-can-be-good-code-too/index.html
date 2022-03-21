@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hacks can be Good Code Too - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+  <meta property="og:title" content="Hacks can be Good Code Too" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/hacks-can-be-good-code-too/" />
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      <article class="h-entry">
+        <a href="/" class="u-author"></a>
+        <div class="post">
+        <div class="article-title">
+          <h1 class="p-name">
+            <a
+              href="http://brianschrader.com/archive/hacks-can-be-good-code-too/"
+              title="Hacks can be Good Code Too"
+            >
+              Hacks Can Be Good Code Too
+            </a>
+          </h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2022-03-21T21:45:00">
+              Posted on Mon, 21 Mar 2022 at 09:45 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <style>
+table {
+    width: 100%;
+}
+table td {
+    padding: 2px;
+    padding-right: 1.5rem;
+}
+table tr td:last-child {
+    padding: 0;
+}
+</style>
+
+<p>Writing code is, like everything in life, all about making tradeoffs. Code can be quick to write, but at the same time unreadable; it can be fast, but hard to maintain; and it can be flexible, but overly complex. Each of these factors are worth considering when writing Good Code. Complicating this is the fact that: what constitutes Good Code in one situation may not be ideal in another.</p>
+<p>Good Code is not universally so.</p>
+<p>It is incredibly difficult to explain why one set of tradeoffs are worth pursuing in one case but not in another, and often times reasonable people will disagree on the value of certain tradeoffs over others. Perhaps a snippet of hacky string parsing is good in one place, but not in another. Often times, the most significant cost of solving a problem "The Right Way" is time.</p>
+<p>When deciding whether to do something The Right Way or to cheat and simply hack something together, I often try to consider the exposure the given code will have. Consider these questions:</p>
+<ul>
+<li>Do other systems touch this code?</li>
+<li>How many developers will need to interact with it over time?</li>
+<li>How much work would be involved in building out the correct approach?</li>
+<li>How much work would be involved in building out the bad approach?</li>
+<li>How valuable is the intended feature?</li>
+<li>How much additional maintenance does the bad solution require?</li>
+</ul>
+<p>Each of these answers helps me decide what kind of code I should write. These questions neglect multiple other factors (e.g. performance, readability), but they are a good starting point.</p>
+<p>In a recent example I needed to modify the blog engine that powers this site as well as a few others. I wanted a simple feature that would count the number of articles on the side as well as the total number of words in every blog post, and display those values on the home page. <a href="/archive/the-new-new-cms/">As I've said before</a> the blog engine for this site is very old, and has been <a href="/archive/smaller/">rewritten</a> <a href="/archive/rewritten/">several</a> <a href="/archive/thinking-about-redoing-my-blog-engine/">times</a>. It's well beyond needing a massive rewrite, but that's not something I really want to do right now.</p>
+<p>The blog engine is written in Python, provides a command-line interface, and uses Git Hooks both client and server-side to build and deploy itself.</p>
+<p>I originally considered writing this feature in Python: counting the number of words in each article, adding a new context variable to the template rendering process, and then rendering the pages as normal. But that would require touching substantial pieces of the codebase (some of which <a href="/archive/i-solved-the-same-bug-twice-and-didnt-know-it/">I no longer understand</a>). It would probably take me all evening to dive into the code, understand it, make the change, and test it. To be honest, this feature was not worth wasting an evening on. So I decided to just hack something.</p>
+<p>As I said, I use Git to deploy the site. So I just added a new line to the HTML template:</p>
+<pre><code class="html">
+&lt;p&gt;
+    This site contains <code>{+ARTICLE_COUNT+}</code>
+    different writings and <code>{+WORD_COUNT+}</code>
+    total words. That's about <code>{+PAGE_COUNT+}</code>
+    pages!
+&lt;/p&gt;
+</code></pre>
+
+<p>And then I added a new step to the pre-commit hook that runs after the template rendering process, but before the changes are committed and the site is deployed.</p>
+<pre><code class="bash">
+WPP=320
+WORDS_N="$(find archive/ -name "*.md"|xargs -I {} cat {} | wc -w)"
+WORDS=`printf "%'d" $WORDS_N`
+ARTICLES=`printf "%'d" $(find archive/ -name "*.md" | wc -l)`
+PAGES="$(( WORDS_N / WPP ))"
+
+TMP_HOME=`mktemp`
+cp ./index.html $TMP_HOME
+cat $TMP_HOME |
+    sed "s/{+ARTICLE_COUNT+}/$ARTICLES/" |
+    sed "s/{+PAGE_COUNT+}/$PAGES/" |
+    sed "s/{+WORD_COUNT+}/$WORDS/" > ./index.html
+</code></pre>
+
+<p>Let's check in and see how this hack fit my criteria above:</p>
+<table border="1" frame="hsides" rules="rows" style="margin-right:auto;margin-left:auto;">
+    <tr>
+        <td>Do other systems touch this code?</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td># of Developers?</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Time for Correct Approach?</td>
+        <td>2-3 hours</td>
+    </tr>
+    <tr>
+        <td>Time for Bad Approach?</td>
+        <td>10 minutes</td>
+    </tr>
+    <tr>
+        <td>How Valuable is the Feature?</td>
+        <td>Very</td>
+    </tr>
+    <tr>
+        <td>Additional Maintenance Burden?</td>
+        <td>Not much</td>
+    </tr>
+</table>
+
+<p>Is this elegant: absolutely not. Did it take basically zero time? Yes. Have I thought about it since? Not until writing this post. Would I have done this on a team project or a commercial product? Absolutely not. It's a feature for my personal blog engine and a feature that is specific to one particular low-value site that I run.</p>
+<p>In this case, a hack is an example of Good Code. That's because Good Code is a relative construct.</p>
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script></p>
+<script>hljs.initHighlightingOnLoad();</script>
+        </div>
+        <hr />
+        
+        <small>
+          Filed under:
+          <span class="tags article-content">
+            
+              <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+            
+              <a href="/tags.html#tag- software development" title=" software development" class="tag"> software development</a>
+            
+          </span>
+        </small><br />
+        
+        <small>
+          Other Links:
+          <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+          <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+          <span class="article-content">
+            <a
+              rel="status"
+              href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+              target="_blank"
+            >
+              Status Page &#8594;
+            </a>
+          </span>
+        </small>
+      </div>
+      </article>
+    </div>
+    <div class="side-bar">
+      <div class="promotion">
+  <div data-sublime-embed="oKLwqL0q2k9NOA"></div>
+  <script src="https://embed.sublimeads.com/embed.js" defer></script>
+</div>
+<h4>Featured Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
+    Grove, a new Tree-planting Wellness Game 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
+    Announcing: Hewell Public Beta 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
+    On Uber, Lyft, and Labor Law
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&amp;D Image Repository" rel="nofollow">
+    d20.photos: A Public Domain D&amp;D Image Repository
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
+    Announcing Nine9s.cloud 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/why-were-polarized/" title="Why We&#39;re Polarized" rel="nofollow">
+    Why We&#39;re Polarized
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
+    A New Adventure
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-social-web/" title="The Social Web" rel="nofollow">
+    The Social Web
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
+    Feed Readers and Local News
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+    The Web as a Social Network
+  </a></li>
+  
+</ul>
+<h4>Recent Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/at-vs-on-a-story-of-semantic-data-modeling/" title="At vs. On: a Story of Semantic Data Modeling" rel="nofollow">
+    At vs. On: a Story of Semantic Data Modeling
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/generating-deterministic-procedural-artwork-with-pdraw/" title="Generating Deterministic, Procedural Artwork with pdraw" rel="nofollow">
+    Generating Deterministic, Procedural Artwork with pdraw
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" title="I Solved The Same Bug Twice And Didn&#39;t Know It" rel="nofollow">
+    I Solved The Same Bug Twice And Didn&#39;t Know It
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/take-a-break-script-something/" title="Take a Break, Script Something" rel="nofollow">
+    Take a Break, Script Something
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-road-to-glass--stone/" title="The Road to Glass &amp; Stone" rel="nofollow">
+    The Road to Glass &amp; Stone
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/nine9s-gets-an-upgrade-/" title="Nine9s gets an upgrade ⬆️" rel="nofollow">
+    Nine9s gets an upgrade ⬆️
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-internets-original-sin/" title="The Internet&#39;s Original Sin" rel="nofollow">
+    The Internet&#39;s Original Sin
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/last-year-i-started-reading-a-physical-newspaper/" title="Last Year I Started Reading a Physical Newspaper" rel="nofollow">
+    Last Year I Started Reading a Physical Newspaper
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast/" title="Automated Podcasts with Automator &amp;amp; Overcast" rel="nofollow">
+    Automated Podcasts with Automator &amp;amp; Overcast
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/retrospective-on-a-year-spent-writing/" title="Retrospective on a Year Spent Writing" rel="nofollow">
+    Retrospective on a Year Spent Writing
+  </a></li>
+  
+</ul>
+<h4>Also Me</h4>
+<ul>
+  <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+    Pine.blog
+  </a></li>
+  <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+    GitHub
+  </a></li>
+  <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+    Twitter
+  </a></li>
+  <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+    Pinboard
+  </a></li>
+  <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+    Photoblog
+  </a></li>
+  <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+    Gravatar
+  </a></li>
+  <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+    Bandcamp
+  </a></li>
+  <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+    Goodreads
+  </a></li>
+</ul>
+<h4>Projects</h4>
+<ul>
+  <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+    Democracy &amp; Progress
+  </a></li>
+  <li><a href="https://goingindie.tech" title="Going Indie">
+    Going Indie
+  </a></li>
+  <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+    Pine.blog
+  </a></li>
+  <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+    Indie Dev Life Podcast
+  </a></li>
+  <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+    Nine9s
+  </a></li>
+  <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+    d20.photos
+  </a></li>
+  <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+    Adventurer&apos;s Codex
+  </a></li>
+</ul>
+<h4>Resources</h4>
+<ul>
+  <li><a href="/archive/bibliography" title="Bibliography">
+    Bibliography
+  </a></li>
+  <li><a href="/archive/bookshelf" title="Book Recommendations">
+    Book Recommendations
+  </a></li>
+  <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+    Food &amp; Drink Recipes
+  </a></li>
+  <li><a href="/tags.html" title="Posts by Tag">
+    Tags
+  </a></li>
+</ul>
+<h4>Tags</h4>
+<div class="tags">
+  
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
+    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
+  
+    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
+  
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
+    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
+  
+    <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
+  
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
+  
+    <a href="/tags.html#tag-python" title="python" class="tag">python</a>,
+  
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>
+  
+</div>
+<h4>Blogroll</h4>
+<ul>
+  <li><a href="https://vincentritter.com/" title="Vincent Ritter" rel="nofollow">
+    Vincent Ritter
+  </a></li>
+  <li><a href="https://gregorlove.com/" title="gRegorLove.com" rel="nofollow">
+    gRegorLove.com
+  </a></li>
+  <li><a href="https://eli.li/" title="Oatmeal" rel="nofollow">
+    Oatmeal
+  </a></li>
+  <li><a href="https://aaronparecki.com/" title="Aaron Parecki" rel="nofollow">
+    Aaron Parecki
+  </a></li>
+  <li><a href="http://inessential.com/" title="inessential" rel="nofollow">
+    inessential
+  </a></li>
+  <li><a href="http://idlewords.com/" title="Idle Words" rel="nofollow">
+    Idle Words
+  </a></li>
+  <li><a href="http://macgenie.micro.blog/" title="Jean MacDonald" rel="nofollow">
+    Jean MacDonald
+  </a></li>
+  <li><a href="https://www.vox.com/authors/ezra-klein" title="Ezra Klein" rel="nofollow">
+    Ezra Klein
+  </a></li>
+  <li><a href="https://pine.blog/u/photosaboutadams" title="Photos About Adams" rel="nofollow">
+    Photos About Adams
+  </a></li>
+  <li><a href="https://iifrp.org" title="IIFRP.org" rel="nofollow">
+    IIFRP.org
+  </a></li>
+  <li><a href="http://mattgemmell.com/" title="Matt Gemmell" rel="nofollow">
+    Matt Gemmell
+  </a></li>
+  <li><a href="http://hypercritical.co/" title="Hypercritical" rel="nofollow">
+    Hypercritical
+  </a></li>
+  <li><a href="https://twitter.com/HelloMelanieC" title="Melanie Crutchfield" rel="nofollow">
+    Melanie Crutchfield
+  </a></li>
+  <li><a href="http://jvns.ca/" title="Julia Evans" rel="nofollow">
+    Julia Evans
+  </a></li>
+  <li><a href="https://kateheddleston.com/blog" title="Kate Heddleston" rel="nofollow">
+    Kate Heddleston
+  </a></li>
+  <li><a href="https://beckyhansmeyer.com/" title="Becky Hansmeyer" rel="nofollow">
+    Becky Hansmeyer
+  </a></li>
+  <li><a href="https://adventurerscodex.com/blog.html" title="Adventurer's Codex Blog" rel="nofollow">
+    Adventurer's Codex Blog
+  </a></li>
+  <li><a href="https://blog.pine.blog/" title="Pine.blog Official Blog" rel="nofollow">
+    Pine.blog Official Blog
+  </a></li>
+  <li><a href="https://www.peoplespolicyproject.org/" title="People's Policy Project" rel="nofollow">
+    People's Policy Project
+  </a></li>
+</ul>
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div class="article-content">
+    </div>
+  </div>
+
+    </div>
+  </body>
+</html>
