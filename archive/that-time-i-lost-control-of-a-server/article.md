@@ -1,6 +1,6 @@
 slug: that-time-i-lost-control-of-a-server
 published: Tue, 19 Apr 2022 at 12:10 AM
-updated: Tue, 19 Apr 2022 00:10:05 
+updated: Tue, 19 Apr 2022 01:06:24 
 title: That Time I Lost Control of a Server
 author: Brian Schrader
 tags: software development
@@ -31,7 +31,7 @@ Immediately I felt terrible for falling victim to such a simple, brute-force att
 
 ### Lessons Learned
 
-Having fallen prey to what was likely a simple dictionary attack on my root account, I promised myself that I would never again fall prey to such an attack. Now, whenever I set up a server I always set aside plenty of time to do so, use long and complex passwords, disable root logins over SSH, and follow [that Linode guide][6] I mentioned earlier. Other experiences, like those with spambots, have made me more cautious and careful about the functionality my sites expose and how they expose it (Pine.blog doesn't offer free blogging & image uploads for a reason).
+Having fallen prey to what was likely a simple brute-force attack on my root account, I promised myself that I would never again fall prey to such an attack. Now, whenever I set up a server I always set aside plenty of time to do so, use long and complex passwords, disable root logins over SSH, and follow [that Linode guide][6] I mentioned earlier. Other experiences, like those with spambots, have made me more cautious and careful about the functionality my sites expose and how they expose it (Pine.blog doesn't offer free blogging & image uploads for a reason).
 
 <img src="/images/blog/keychain-access.png" alt="Keychain can generate long passwords easily" style="padding:0;margin:auto;" />
 <caption><center><small>Keychain can generate long passwords easily, though I wish it could make even longer ones.</small></center></caption>
