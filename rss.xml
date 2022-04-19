@@ -1,5 +1,25 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Sun, 10 Apr 2022 06:55:54 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/hacks-can-be-good-code-too</guid><pubDate>Mon, 21 Mar 2022 21:45:00 -0800</pubDate><category>programming</category><category>software development</category><title>Hacks can be Good Code Too</title><link>http://brianschrader.com/archive/hacks-can-be-good-code-too/</link><description><![CDATA[<style>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Tue, 19 Apr 2022 00:10:32 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/that-time-i-lost-control-of-a-server</guid><pubDate>Tue, 19 Apr 2022 00:10:00 -0800</pubDate><category>software development</category><title>That Time I Lost Control of a Server</title><link>http://brianschrader.com/archive/that-time-i-lost-control-of-a-server/</link><description><![CDATA[<p>Good security hygiene is essential for software developers. The thing is: we tell ourselves that, but rarely ever do we actually experience the effects of bad security hygiene. While deterrence is the point of good hygiene, it's helpful to walk through the real world consequences of bad hygiene and not just talk about the theoretical side of things.</p>
+<p>So let's talk about the time one of my servers was hijacked.</p>
+<details open><summary>Disclaimer</summary>
+<hr />
+Right off the bat I need to note that the server in this story was not connected to any product or service that my company, <a href="https://skyrocket.software" title="SkyRocket Software">SkyRocket Software</a>, runs. This was a personal toy server that had no connection with anything I make or sell.
+</details>
+
+<h3>The Story</h3>
+<p>I've run servers for lots of projects over the years. I manage servers for <a href="https://pine.blog">Pine.blog</a>, <a href="https://nine9s.cloud">Nine9.cloud</a>, <a href="https://d20.photos">d20.photos</a>, and <a href="https://adventurerscodex.com">Adventurer's Codex</a>. I also run several servers for client projects, this blog, and for toy projects. One of those toy projects is a server for an annual holiday Minecraft extravaganza with some friends of mine.</p>
+<p>Once long ago, I was going through the process of setting up a new Minecraft server (this was before Linode provided easy-to-deploy Minecraft servers). I wanted to set up the server before going out that evening, and so I was in a bit of a rush. Being in a rush, I didn't bother to set up the server according to Linode's excellent guide on <a href="https://www.linode.com/docs/guides/set-up-and-secure/">Securing Your Server</a>. Instead, I just set a <del>short</del> trivially guessable root password, logged in as root, and got to installing Minecraft.</p>
+<p>About halfway through the process I needed to leave, so I disconnected from the server and went to dinner.</p>
+<p>When I returned home that night, I found an email in my inbox from Linode telling me that my server had been forcibly shut down because they'd determined that it was being used to send spam emails and help DDOS another site.</p>
+<p>I had been gone only about three hours, but it had taken <strong>less than one hour</strong> from when my server had been instantiated to when it was compromised. It had happened shortly after I'd logged out.</p>
+<p>Immediately I felt terrible for falling victim to such a simple, brute-force attack, and the experience has been one of those that makes me appreciate the often painful security hoops we sometimes need to jump through as developers.</p>
+<h3>Lessons Learned</h3>
+<p>Having fallen prey to what was likely a simple dictionary attack on my root account, I promised myself that I would never again fall prey to such an attack. Now, whenever I set up a server I always set aside plenty of time to do so, use long and complex passwords, disable root logins over SSH, and follow <a href="https://www.linode.com/docs/guides/set-up-and-secure/">that Linode guide</a> I mentioned earlier. Other experiences, like those with spambots, have made me more cautious and careful about the functionality my sites expose and how they expose it (Pine.blog doesn't offer free blogging &amp; image uploads for a reason).</p>
+<p><img src="/images/blog/keychain-access.png" alt="Keychain can generate long passwords easily" style="padding:0;margin:auto;" />
+<caption><center><small>Keychain can generate long passwords easily, though I wish it could make even longer ones.</small></center></caption></p>
+<p>All in all, I count myself unlucky that I had to learn my lesson this way, but I count myself very lucky that I learned it by losing control of an unimportant and trivially replaceable server.</p>
+<p>The internet is a very hostile place to those who aren't prepared for it. This is true on a societal level, and on a technical one. If you ever need a reminder of just how dangerous it is, try having <a href="https://www.linode.com/docs/guides/using-fail2ban-to-secure-your-server-a-tutorial/">Fail2Ban</a> email you whenever it blocks a hostile IP address or watch your access logs for bots trying to break into your site (usually using maliciously crafted Wordpress/Drupal URLS). Things like that happen all day, every day; we just don't usually see them.</p>
+<p>Anyway, that's the story. Hopefully everyone reading this takes it to heart so that this story remains but a cautionary tale and nothing more.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/hacks-can-be-good-code-too</guid><pubDate>Mon, 21 Mar 2022 21:45:00 -0800</pubDate><category>programming</category><category>software development</category><title>Hacks can be Good Code Too</title><link>http://brianschrader.com/archive/hacks-can-be-good-code-too/</link><description><![CDATA[<style>
 table {
     width: 100%;
 }
@@ -243,57 +263,4 @@ The title for the print version is much more attention grabbing.
 
 <script>
 document.getElementById('now-dt').innerHTML = (new Date()).getFullYear();
-</script>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast</guid><pubDate>Tue, 24 Aug 2021 20:59:00 -0800</pubDate><category>blogging</category><category>programming</category><title>Automated Podcasts with Automator &amp;amp; Overcast</title><link>http://brianschrader.com/archive/automated-podcasts-with-automator-amp-overcast/</link><description><![CDATA[<p>I've <a href="/archive/siri-is-a-blogging-tool/">mentioned before</a> that I use Siri as an editing tool. I write a piece, lightly edit it, and then have Siri read it back to me. This helps me catch unintended grammatical errors and clumsy sentences. Building on that principle, <a href="https://pine.blog">Pine.blog</a> and <a href="https://hewellapp.com">Hewell</a> both ship with a feature that use iOS's <code>AVSpeechSynthesizer</code> API to read articles or location information aloud.</p>
-<p>That said, I often find articles that I want to read, but after a long day staring at a computer screen, I don't want to actually <em>read</em> them. Lots of sites these days provide spoken audio for their articles&mdash;which is great&mdash;but the vast majority don't.</p>
-<p>That's where Automator comes in.</p>
-<p><img
-    alt="Save Spoken Text to File"
-    src="/images/blog/automator-spoken-text.png"
-    style="width:500px; height:381.5px;"
-    class="image-center"
-/></p>
-<p>This Automator service simply runs a bash script that takes the contents of the selected text as input, feeds it to the built-in macOS <code>say</code> command, and outputs it to a file on the Desktop named using the contents in my clipboard.</p>
-<details>
-  <summary>Check out the full script</summary>
-<pre><code>cd ~/Desktop;
-# A hack to get stdin into say through Automator. For some
-# reason simply saying -f didn't work for me.
-while read line; do echo "$line" done < "${1:-/dev/stdin}" |
-    say -o .spoken_text -f -
-
-TITLE="$(pbpaste -Prefer txt)"
-if [ -z "$TITLE" ]; then
-    TITLE="Spoken Text"
-fi
-# Sanitize the article title. Writers love colons which macOS hates
-TITLE="$(echo "$TITLE" | sed -e 's/[^A-Za-z0-9._-]/_/g')"
-
-# Conver the audio and be quiet about it
-/usr/local/bin/ffmpeg -i .spoken_text.aiff -loglevel -8 -y "$TITLE.aac"
-rm .spoken_text.aiff</code></pre>
-</details>
-
-<p>The script also uses FFmpeg to convert the audio to an AAC file so that I can then upload it to <a href="https://overcast.fm">Overcast</a>, my preferred podcast player.</p>
-<p>By default, macOS will include Automater services in the right-click menu, but I've also bound the script to <code>Cmd+Ctl+Shift+S</code> (which is similar to my existing <code>Cmd+Ctl+S</code> shortcut for reading the selected text aloud).</p>
-<p><img
-    alt="The macOS Services Menu"
-    src="/images/blog/services-menu-speak.png"
-    style="width:321px; height:230px"
-    class="image-center"
-/></p>
-<p>Now, I can discover new articles to read, perform a quick set of keystrokes, upload the audio to Overcast, and then go for a walk while I catch up on the day's interesting news!<sup>1</sup></p>
-<p>I've provided the Automator service as a zip archive below if anyone wants to play with it.</p>
-<p><a href="/dropzone/Save Spoken Text to File.zip">⬇️ Save Spoken Text to File.workflow</a></p>
-<hr />
-<div class="footnote">
-    <p><sup>1.</sup>&nbsp;There are a few quirks to this workflow still. Websites are filled with non-article content, so to avoid selecting those, I typically following the following steps:
-    </p>
-    <ol>
-        <li>Turn on reader mode (<code>Cmd+Shift+R</code>)</li>
-        <li>Copy the title of the article to the clipboard (<code>Cmd+C</code>)</li>
-        <li>Select the article text (<code>Cmd+A</code>)</li>
-        <li>Run my Automator service (<code>Cmd+Ctl+Shift+S</code>)</li>
-        <li>Upload the new AAC file to Overcast</li>
-    </ol>
-    <p>I admit, it's a little cumbersome, but it does work really well.</p>
-</div>]]></description></item></channel></rss>
+</script>]]></description></item></channel></rss>
