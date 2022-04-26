@@ -14,6 +14,19 @@
 	<meta property="og:title" content="Archive" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="/archive/" />
+	<style>
+	  .hide {
+	    display: none;
+	  }
+	  .histogram {
+      margin-top: -80px;
+      width: 100%;
+      overflow-x: scroll;
+	  }
+	  .article-title h1 {
+	    transform: perspective(200px) translateZ(0px);
+	  }
+	</style>
 
   </head>
   <body>
@@ -41,6 +54,7 @@
     <article class="post">
       <div class=article-title>
         <h1>Articles</h1>
+        <div id="post-histogram" class="histogram hide"></div>
       </div>
       <div class="article-content">
         <table style="margin-right:auto; margin-left:auto;">
@@ -2689,6 +2703,50 @@
       </div>
     </article>
   </div>
+  <script src="/bin/d3.js"></script>
+  <script>
+    // set the dimensions and margins of the graph
+    var margin = {top: 0, right: 0, bottom: 0, left: 0},
+        width = 775 - margin.left - margin.right,
+        height = 150 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#post-histogram")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+
+      var data = [["2012-12", 1], ["2013-07", 3], ["2013-09", 1], ["2014-02", 1], ["2014-03", 2], ["2014-04", 9], ["2014-05", 5], ["2014-06", 3], ["2014-07", 5], ["2014-08", 16], ["2014-09", 6], ["2014-10", 11], ["2014-11", 13], ["2014-12", 6], ["2015-01", 5], ["2015-02", 3], ["2015-03", 6], ["2015-04", 3], ["2015-05", 1], ["2015-06", 1], ["2015-07", 1], ["2015-08", 4], ["2015-09", 9], ["2015-10", 3], ["2015-11", 3], ["2015-12", 4], ["2016-01", 6], ["2016-02", 4], ["2016-03", 5], ["2016-04", 2], ["2016-05", 3], ["2016-06", 2], ["2016-07", 4], ["2016-08", 2], ["2016-11", 1], ["2016-12", 1], ["2017-01", 4], ["2017-02", 5], ["2017-06", 2], ["2017-07", 4], ["2017-09", 3], ["2017-10", 4], ["2017-11", 2], ["2018-02", 2], ["2018-03", 2], ["2018-05", 2], ["2018-06", 1], ["2018-07", 4], ["2018-10", 3], ["2018-11", 5], ["2018-12", 2], ["2019-01", 1], ["2019-06", 3], ["2019-07", 2], ["2019-08", 1], ["2019-10", 1], ["2019-11", 3], ["2020-02", 3], ["2020-03", 1], ["2020-04", 1], ["2020-05", 5], ["2020-06", 5], ["2020-07", 2], ["2020-08", 3], ["2020-09", 3], ["2020-10", 2], ["2020-11", 3], ["2020-12", 5], ["2021-01", 1], ["2021-03", 3], ["2021-04", 3], ["2021-05", 3], ["2021-07", 1], ["2021-08", 2], ["2021-10", 3], ["2021-12", 2], ["2022-01", 1], ["2022-02", 3], ["2022-03", 1], ["2022-04", 1]];
+
+      // Add X axis --> it is a date format
+      var x = d3.scaleLinear()
+        .domain([ 0, data.length ])
+        .range([ 0, width ]);
+
+      // Add Y axis
+      var y = d3.scaleLinear()
+        .domain([0, d3.max(data, function(d) { return d[1]; })])
+        .range([ height, 0 ]);
+
+      // Add the area
+      svg.append("path")
+        .datum(data)
+        .attr("fill", "#CAD9F7")
+        .attr("stroke", "#4068B8")
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.area()
+          .x(function(d) { return x(data.indexOf(d)) })
+          .y0(y(0))
+          .y1(function(d) { return y(d[1]) })
+          .curve(d3.curveBasis)
+        );
+
+      // Unhide it.
+      document.getElementById('post-histogram').className = 'histogram';
+  </script>
 
     </div>
   </body>
