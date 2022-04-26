@@ -65,6 +65,12 @@
     text-align:center;
   }
 
+  .article-content {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+
   .body-image-right{
     float:right;
     padding:1px;
