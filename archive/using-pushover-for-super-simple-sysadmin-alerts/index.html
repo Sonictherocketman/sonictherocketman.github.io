@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Using Pushover for Super Simple SysAdmin Alerts - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+  <meta property="og:title" content="Using Pushover for Super Simple SysAdmin Alerts" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://brianschrader.com/archive/using-pushover-for-super-simple-sysadmin-alerts/" />
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    <div class="nav-item"><a href="https://pine.blog/u/sonicrocketman">Microblog</a></div>
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      <article class="h-entry">
+        <a href="/" class="u-author"></a>
+        <div class="post">
+        <div class="article-title">
+          <h1 class="p-name">
+            <a
+              href="http://brianschrader.com/archive/using-pushover-for-super-simple-sysadmin-alerts/"
+              title="Using Pushover for Super Simple SysAdmin Alerts"
+            >
+              Using Pushover For Super Simple Sysadmin Alerts
+            </a>
+          </h1>
+          <small style="font-style:italic;">
+            <time class="dt-published" datetime="2022-04-27T23:36:00">
+              Posted on Wed, 27 Apr 2022 at 11:36 PM
+            </time>
+          </small>
+        </div>
+        <div class="article-content e-content">
+          <p>For those who don't know, <a href="https://pushover.net">Pushover</a> is a really great tool that allows users to easily set up and send push notifications to a smartphone. The setup is super simple, and all you need is their app and a little scripting know-how.</p>
+<p>I've used Pushover for years to help me monitor my apps and services, and over the years my uses for Pushover have evolved and grown more and more integral to my ability to keep track of the various apps I run. To me, Pushover has gone from a nice-to-have integration to an absolute necessity.</p>
+<p>I use Pushover to alert me of all kinds of things. Just to give you an idea, here are a few examples of some of the things I currently use Pushover for:</p>
+<ul>
+<li>Potential queue backups in <a href="https://pine.blog">Pine.blog</a></li>
+<li>Reporting daily user signups for <a href="https://nine9s.cloud">Nine9s</a></li>
+<li>Alerts when critical background jobs fail</li>
+<li>Alerts when nightly builds fail to deploy</li>
+<li>Alerts when a manually-run, long-running job completes</li>
+</ul>
+<p>Because Pushover is so easy to integrate with basically any codebase (and even one-off shell scripts) I use it all the time for everything from simple alerts to complex and critical reports.</p>
+<p>One particular use I'd like to call out from that list above is the nightly build alerts. <a href="https://adventurerscodex.com">Adventurer's Codex</a> has a test environment that we use to sanity check our code before a full deploy. We used to have the test environment redeploy after every single merged pull request, but that system proved incredibly fickle and error prone, so we switched to a simple nightly build. The issue with any automatic build system is that unless you have a detailed live dashboard of deployment statuses (which we do not) it's hard to know if/when a given build has finished deploying or if it encountered an error. That's where Pushover comes in.</p>
+<details><summary>Nightly Build and Deploy Script</summary>
+<hr />
+<p>This script runs as a cron job every night. It attempts to deploy the latest version of the application and if that fails it sends a notification to Pushover.</p>
+<code><pre>PUSHOVER_USER="xxxx"
+PUSHOVER_KEY="xxx"
+PUSHOVER_URL="https://api.pushover.net/1/messages.json"
+
+TITLE="AC Nightly: Build Failed to Deploy"
+MESSAGE="The latest build on Nightly has failed."
+
+log() {
+  echo "[$(date)] $@";
+}
+
+alert_admins() {
+  curl -X POST $PUSHOVER_URL \
+    -H "Content-Type: application/json" \
+    -d "{\"title\": \"$TITLE\", \"message\": \"$MESSAGE\", \
+        \"user\": \"$PUSHOVER_USER\", \"token\": \"$PUSHOVER_KEY\"}"
+}
+
+./docker-bootstrap.sh upgrade --env nightly
+STATUS=$?
+
+if [ $STATUS -eq 0 ]; then
+  log "🚀 Build completed successfully!"
+else
+  log "Uh oh. There was an issue. Alert the admins!"
+  alert_admins
+fi</pre></code>
+</details>
+
+<p>My nightly build script for Adventurer's Codex includes a section after the deployment has completed that checkes the status code of the deploy command and if it is not 0 (i.e. it failed) then it sends me a notification. Bam! Now, every morning that I don't get a notification, I know things are working as intended. If I ever wake up to a notification, then I know I have work to do.</p>
+<h3>What Happens in the Background is Ignored in the Background</h3>
+<p>Crucially, I use Pushover to alert me about problems with background tasks. Modern web apps include lots of always-running or periodic asynchronous behavior, and because &mdash; when they fail &mdash; they don't directly result in user feedback or a big, loud error page mistakes, bottlenecks, and bugs often go unnoticed or unaccounted for.</p>
+<p>Pushover solves those issues. It's trivial to write code that checks for bad behavior or that catches difficult-to-reach-but-critical bugs and just send off a notification.</p>
+<p>I used to use email for this sort of thing, and while email is still a good solution, the setup is actually more involved. Most VPSs aren't allowed to send emails directly anymore (due to concerns over spam) and configuring an email provider is just as much work if not slightly more work than using Pushover. In some cases email is more flexible and might be better for larger teams, but I almost always reach for Pushover these days instead of email.</p>
+<p>It's just that good.</p>
+        </div>
+        <hr />
+        
+        <small>
+          Filed under:
+          <span class="tags article-content">
+            
+              <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+            
+              <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>
+            
+          </span>
+        </small><br />
+        
+        <small>
+          Other Links:
+          <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+          <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+          <span class="article-content">
+            <a
+              rel="status"
+              href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+              target="_blank"
+            >
+              Status Page &#8594;
+            </a>
+          </span>
+        </small>
+      </div>
+      </article>
+    </div>
+    <div class="side-bar">
+      <div class="promotion">
+  <div data-sublime-embed="oKLwqL0q2k9NOA"></div>
+  <script src="https://embed.sublimeads.com/embed.js" defer></script>
+</div>
+<h4>Featured Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/grove/" title="Grove, a new Tree-planting Wellness Game 🎉" rel="nofollow">
+    Grove, a new Tree-planting Wellness Game 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-hewell-public-beta-/" title="Announcing: Hewell Public Beta 🎉" rel="nofollow">
+    Announcing: Hewell Public Beta 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/on-uber-lyft-and-labor-law/" title="On Uber, Lyft, and Labor Law" rel="nofollow">
+    On Uber, Lyft, and Labor Law
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/d20photos-a-public-domain-dd-image-repository/" title="d20.photos: A Public Domain D&amp;D Image Repository" rel="nofollow">
+    d20.photos: A Public Domain D&amp;D Image Repository
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/announcing-nine9scloud-/" title="Announcing Nine9s.cloud 🎉" rel="nofollow">
+    Announcing Nine9s.cloud 🎉
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/why-were-polarized/" title="Why We&#39;re Polarized" rel="nofollow">
+    Why We&#39;re Polarized
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/a-new-adventure/" title="A New Adventure" rel="nofollow">
+    A New Adventure
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-social-web/" title="The Social Web" rel="nofollow">
+    The Social Web
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/feed-readers-and-local-news/" title="Feed Readers and Local News" rel="nofollow">
+    Feed Readers and Local News
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+    The Web as a Social Network
+  </a></li>
+  
+</ul>
+<h4>Recent Posts</h4>
+<ul>
+  
+  <li><a href="http://brianschrader.com/archive/crossing-the-wording-threshold/" title="Crossing the Wording Threshold" rel="nofollow">
+    Crossing the Wording Threshold
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/that-time-i-lost-control-of-a-server/" title="That Time I Lost Control of a Server" rel="nofollow">
+    That Time I Lost Control of a Server
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/hacks-can-be-good-code-too/" title="Hacks can be Good Code Too" rel="nofollow">
+    Hacks can be Good Code Too
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/at-vs-on-a-story-of-semantic-data-modeling/" title="At vs. On: a Story of Semantic Data Modeling" rel="nofollow">
+    At vs. On: a Story of Semantic Data Modeling
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/generating-deterministic-procedural-artwork-with-pdraw/" title="Generating Deterministic, Procedural Artwork with pdraw" rel="nofollow">
+    Generating Deterministic, Procedural Artwork with pdraw
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/i-solved-the-same-bug-twice-and-didnt-know-it/" title="I Solved The Same Bug Twice And Didn&#39;t Know It" rel="nofollow">
+    I Solved The Same Bug Twice And Didn&#39;t Know It
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/take-a-break-script-something/" title="Take a Break, Script Something" rel="nofollow">
+    Take a Break, Script Something
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-road-to-glass--stone/" title="The Road to Glass &amp; Stone" rel="nofollow">
+    The Road to Glass &amp; Stone
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/nine9s-gets-an-upgrade-/" title="Nine9s gets an upgrade ⬆️" rel="nofollow">
+    Nine9s gets an upgrade ⬆️
+  </a></li>
+  
+  <li><a href="http://brianschrader.com/archive/the-internets-original-sin/" title="The Internet&#39;s Original Sin" rel="nofollow">
+    The Internet&#39;s Original Sin
+  </a></li>
+  
+</ul>
+<h4>Also Me</h4>
+<ul>
+  <li><a href="http://pine.blog/u/sonicrocketman" title="Pine.blog" rel="nofollow me">
+    Pine.blog
+  </a></li>
+  <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+    GitHub
+  </a></li>
+  <li><a href="https://twitter.com/sonicrocketman" title="Twitter" rel="nofollow me">
+    Twitter
+  </a></li>
+  <li><a href="//pinboard.in/u:sonicrocketman/public/" title="Pinboard" rel="nofollow me">
+    Pinboard
+  </a></li>
+  <li><a href="http://photos.brianschrader.com" title="My Photoblog" rel="nofollow me">
+    Photoblog
+  </a></li>
+  <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+    Gravatar
+  </a></li>
+  <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+    Bandcamp
+  </a></li>
+  <li><a href="https://www.goodreads.com/user/show/119559749-brian-schrader" title="Goodreads" rel="nofollow me">
+    Goodreads
+  </a></li>
+</ul>
+<h4>Projects</h4>
+<ul>
+  <li><a href="http://democracyandprogress.com" title="Democracy and Progress">
+    Democracy &amp; Progress
+  </a></li>
+  <li><a href="https://goingindie.tech" title="Going Indie">
+    Going Indie
+  </a></li>
+  <li><a href="https://pine.blog" title="Pine.blog" rel="nofollow">
+    Pine.blog
+  </a></li>
+  <li><a href="https://indiedevlife.fm" title="Indie Dev Life Podcast">
+    Indie Dev Life Podcast
+  </a></li>
+  <li><a href="https://nine9s.cloud" title="Nine9s" rel="nofollow">
+    Nine9s
+  </a></li>
+  <li><a href="https://d20.photos" title="d20.photos" rel="nofollow">
+    d20.photos
+  </a></li>
+  <li><a href="https://adventurerscodex.com" title="Adventurer's Codex" rel="nofollow">
+    Adventurer&apos;s Codex
+  </a></li>
+</ul>
+<h4>Resources</h4>
+<ul>
+  <li><a href="/archive/bibliography" title="Bibliography">
+    Bibliography
+  </a></li>
+  <li><a href="/archive/bookshelf" title="Book Recommendations">
+    Book Recommendations
+  </a></li>
+  <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+    Food &amp; Drink Recipes
+  </a></li>
+  <li><a href="/tags.html" title="Posts by Tag">
+    Tags
+  </a></li>
+</ul>
+<h4>Tags</h4>
+<div class="tags">
+  
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
+    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
+  
+    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
+  
+    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
+  
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
+    <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
+  
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
+  
+    <a href="/tags.html#tag-python" title="python" class="tag">python</a>,
+  
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>
+  
+</div>
+<h4>Blogroll</h4>
+<ul>
+  <li><a href="https://vincentritter.com/" title="Vincent Ritter" rel="nofollow">
+    Vincent Ritter
+  </a></li>
+  <li><a href="https://gregorlove.com/" title="gRegorLove.com" rel="nofollow">
+    gRegorLove.com
+  </a></li>
+  <li><a href="https://eli.li/" title="Oatmeal" rel="nofollow">
+    Oatmeal
+  </a></li>
+  <li><a href="https://aaronparecki.com/" title="Aaron Parecki" rel="nofollow">
+    Aaron Parecki
+  </a></li>
+  <li><a href="http://inessential.com/" title="inessential" rel="nofollow">
+    inessential
+  </a></li>
+  <li><a href="http://idlewords.com/" title="Idle Words" rel="nofollow">
+    Idle Words
+  </a></li>
+  <li><a href="http://macgenie.micro.blog/" title="Jean MacDonald" rel="nofollow">
+    Jean MacDonald
+  </a></li>
+  <li><a href="https://www.vox.com/authors/ezra-klein" title="Ezra Klein" rel="nofollow">
+    Ezra Klein
+  </a></li>
+  <li><a href="https://pine.blog/u/photosaboutadams" title="Photos About Adams" rel="nofollow">
+    Photos About Adams
+  </a></li>
+  <li><a href="https://iifrp.org" title="IIFRP.org" rel="nofollow">
+    IIFRP.org
+  </a></li>
+  <li><a href="http://mattgemmell.com/" title="Matt Gemmell" rel="nofollow">
+    Matt Gemmell
+  </a></li>
+  <li><a href="http://hypercritical.co/" title="Hypercritical" rel="nofollow">
+    Hypercritical
+  </a></li>
+  <li><a href="https://twitter.com/HelloMelanieC" title="Melanie Crutchfield" rel="nofollow">
+    Melanie Crutchfield
+  </a></li>
+  <li><a href="http://jvns.ca/" title="Julia Evans" rel="nofollow">
+    Julia Evans
+  </a></li>
+  <li><a href="https://kateheddleston.com/blog" title="Kate Heddleston" rel="nofollow">
+    Kate Heddleston
+  </a></li>
+  <li><a href="https://beckyhansmeyer.com/" title="Becky Hansmeyer" rel="nofollow">
+    Becky Hansmeyer
+  </a></li>
+  <li><a href="https://adventurerscodex.com/blog.html" title="Adventurer's Codex Blog" rel="nofollow">
+    Adventurer's Codex Blog
+  </a></li>
+  <li><a href="https://blog.pine.blog/" title="Pine.blog Official Blog" rel="nofollow">
+    Pine.blog Official Blog
+  </a></li>
+  <li><a href="https://www.peoplespolicyproject.org/" title="People's Policy Project" rel="nofollow">
+    People's Policy Project
+  </a></li>
+</ul>
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div class="article-content">
+    </div>
+  </div>
+
+    </div>
+  </body>
+</html>

@@ -1,5 +1,54 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Wed, 27 Apr 2022 03:07:30 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/crossing-the-wording-threshold</guid><pubDate>Wed, 27 Apr 2022 03:07:00 -0800</pubDate><category>meta</category><category>blogging</category><category>stats</category><title>Crossing the Wording Threshold</title><link>http://brianschrader.com/archive/crossing-the-wording-threshold/</link><description><![CDATA[<p>A few years ago, I wrote <a href="/archive/so-many-words-written-so-many-more-to-come/">a post</a> about the number of words this blog contained. Well, that was then; this is now, and those counts have changed pretty drastically in the intervening time.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Wed, 27 Apr 2022 23:37:09 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/using-pushover-for-super-simple-sysadmin-alerts</guid><pubDate>Wed, 27 Apr 2022 23:36:00 -0800</pubDate><category>programming</category><category>software development</category><title>Using Pushover for Super Simple SysAdmin Alerts</title><link>http://brianschrader.com/archive/using-pushover-for-super-simple-sysadmin-alerts/</link><description><![CDATA[<p>For those who don't know, <a href="https://pushover.net">Pushover</a> is a really great tool that allows users to easily set up and send push notifications to a smartphone. The setup is super simple, and all you need is their app and a little scripting know-how.</p>
+<p>I've used Pushover for years to help me monitor my apps and services, and over the years my uses for Pushover have evolved and grown more and more integral to my ability to keep track of the various apps I run. To me, Pushover has gone from a nice-to-have integration to an absolute necessity.</p>
+<p>I use Pushover to alert me of all kinds of things. Just to give you an idea, here are a few examples of some of the things I currently use Pushover for:</p>
+<ul>
+<li>Potential queue backups in <a href="https://pine.blog">Pine.blog</a></li>
+<li>Reporting daily user signups for <a href="https://nine9s.cloud">Nine9s</a></li>
+<li>Alerts when critical background jobs fail</li>
+<li>Alerts when nightly builds fail to deploy</li>
+<li>Alerts when a manually-run, long-running job completes</li>
+</ul>
+<p>Because Pushover is so easy to integrate with basically any codebase (and even one-off shell scripts) I use it all the time for everything from simple alerts to complex and critical reports.</p>
+<p>One particular use I'd like to call out from that list above is the nightly build alerts. <a href="https://adventurerscodex.com">Adventurer's Codex</a> has a test environment that we use to sanity check our code before a full deploy. We used to have the test environment redeploy after every single merged pull request, but that system proved incredibly fickle and error prone, so we switched to a simple nightly build. The issue with any automatic build system is that unless you have a detailed live dashboard of deployment statuses (which we do not) it's hard to know if/when a given build has finished deploying or if it encountered an error. That's where Pushover comes in.</p>
+<details><summary>Nightly Build and Deploy Script</summary>
+<hr />
+<p>This script runs as a cron job every night. It attempts to deploy the latest version of the application and if that fails it sends a notification to Pushover.</p>
+<code><pre>PUSHOVER_USER="xxxx"
+PUSHOVER_KEY="xxx"
+PUSHOVER_URL="https://api.pushover.net/1/messages.json"
+
+TITLE="AC Nightly: Build Failed to Deploy"
+MESSAGE="The latest build on Nightly has failed."
+
+log() {
+  echo "[$(date)] $@";
+}
+
+alert_admins() {
+  curl -X POST $PUSHOVER_URL \
+    -H "Content-Type: application/json" \
+    -d "{\"title\": \"$TITLE\", \"message\": \"$MESSAGE\", \
+        \"user\": \"$PUSHOVER_USER\", \"token\": \"$PUSHOVER_KEY\"}"
+}
+
+./docker-bootstrap.sh upgrade --env nightly
+STATUS=$?
+
+if [ $STATUS -eq 0 ]; then
+  log "🚀 Build completed successfully!"
+else
+  log "Uh oh. There was an issue. Alert the admins!"
+  alert_admins
+fi</pre></code>
+</details>
+
+<p>My nightly build script for Adventurer's Codex includes a section after the deployment has completed that checkes the status code of the deploy command and if it is not 0 (i.e. it failed) then it sends me a notification. Bam! Now, every morning that I don't get a notification, I know things are working as intended. If I ever wake up to a notification, then I know I have work to do.</p>
+<h3>What Happens in the Background is Ignored in the Background</h3>
+<p>Crucially, I use Pushover to alert me about problems with background tasks. Modern web apps include lots of always-running or periodic asynchronous behavior, and because &mdash; when they fail &mdash; they don't directly result in user feedback or a big, loud error page mistakes, bottlenecks, and bugs often go unnoticed or unaccounted for.</p>
+<p>Pushover solves those issues. It's trivial to write code that checks for bad behavior or that catches difficult-to-reach-but-critical bugs and just send off a notification.</p>
+<p>I used to use email for this sort of thing, and while email is still a good solution, the setup is actually more involved. Most VPSs aren't allowed to send emails directly anymore (due to concerns over spam) and configuring an email provider is just as much work if not slightly more work than using Pushover. In some cases email is more flexible and might be better for larger teams, but I almost always reach for Pushover these days instead of email.</p>
+<p>It's just that good.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/crossing-the-wording-threshold</guid><pubDate>Wed, 27 Apr 2022 03:07:00 -0800</pubDate><category>meta</category><category>blogging</category><category>stats</category><title>Crossing the Wording Threshold</title><link>http://brianschrader.com/archive/crossing-the-wording-threshold/</link><description><![CDATA[<p>A few years ago, I wrote <a href="/archive/so-many-words-written-so-many-more-to-come/">a post</a> about the number of words this blog contained. Well, that was then; this is now, and those counts have changed pretty drastically in the intervening time.</p>
 <p>Using the same method as before, I can now report that this blog contains just over 100,000 words spread across 270 posts! A pretty significant achievement.</p>
 <pre><code>$ find archive/ -name "*.md"|xargs -I {} cat {} | wc -w
   101042
@@ -227,26 +276,4 @@ Now that I think about it, it might make sense to name timestamps with an <b>ato
 <p>This release also marks the launch of the <a href="https://nine9s.cloud/#app">official Nine9s app for macOS!</a> It's my first ever public macOS app and I'm super excited to get it out there into the world. The app shares all of its code with the iOS and iPad versions  and is built on Catalyst, so it should feel <em>mostly</em> native.</p>
 <p>The app has all of the features you'd imagine: the ability to monitor your Endpoints and Measures, support for push notifications, and more.</p>
 <p>The app is also my first ever native app released outside of the App Store!</p>
-<p>I've been working on this update for a few months now and I'm stoked to get it into the hands of all you out there! If you do end up downloading the app, let me know especially if you have feature recommendations! I'd also love to know how you all are using Measures in the wild.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/the-internets-original-sin</guid><pubDate>Tue, 26 Oct 2021 18:07:00 -0800</pubDate><category>software</category><category>internet</category><category>history</category><title>The Internet's Original Sin</title><link>http://brianschrader.com/archive/the-internets-original-sin/</link><description><![CDATA[<p>A piece I wrote was <a href="https://www.sandiegouniontribune.com/opinion/commentary/story/2021-10-25/internet-website-domain-privacy-big-data">published in the San Diego Union Tribune</a> today. The piece is a short dive into a possible alternate history of the web and the internet as it could have been.</p>
-<p>In a bucolic way, the piece compares the development of the internet and the inevitable consequences of a few seemingly insignificant policies adopted by ISPs in the early days. The piece draws a through-line from those policies straight to the emergence of the centralized platforms we know today.</p>
-<p>In short: ISPs killed the internet and made platforms like Facebook and Amazon inevitable.</p>
-<p>The piece compares America's idealized conception of the westward expansion on the frontier to the development of the internet in the last few decades.</p>
-<blockquote>
-<p>There are no homesteads on the internet frontier. This is true on both the large and the small scales. Whether you start a website yourself, or use Facebook, you’re still effectively renting space from someone else. On the internet, <strong>we are all simply users of other people’s computers, tenants renting homes we can never own.</strong></p>
-</blockquote>
-<p><img
-    src="/images/blog/ut-paper-tech-article.jpg"
-    alt=""
-    class="image-center"
-/></p>
-<div class="text-center"><small><caption>
-The title for the print version is much more attention grabbing.
-</caption></small></div>
-
-<p>However, the development of the internet was fundamentally different from westward expansion in two key ways. First off, there was no one already living on the internet frontier&mdash;which isn't relevant to the piece directly, but it's an important distinction. The expansion onto the internet frontier was bloodless.</p>
-<p>But secondly, ISPs made the internet a renter's frontier. Their decisions to not assign static IP addresses to homes or user accounts, and their decisions to provide non-symmetrical connections and block ports 80 and 443 made the internet fundamentally different than it was intended. On the internet today, truly owning your online presence is only possible for a very small subset of individuals and companies; the landlords of the internet.</p>
-<blockquote>
-<p>No one would accept a world in which you could never own the car you drive, or the house you live in. Some people prefer to rent or lease, but cars and houses can still actually be bought. On the internet there is no path to ownership. Each of these stumbling blocks ensures that ordinary people can never truly own a piece of the internet frontier.</p>
-<p>If computers are the land of the internet, then our personal information is the crop. Instead of being given our own small farm to start our online lives anew, we’re forced to be digital sharecroppers. In exchange for a portion of our privacy, we are allowed the chance to cultivate lands we do not own. On the internet, we are not citizens. We’re just users. Is this freedom?</p>
-</blockquote>
-<p><a href="1">Check out the full piece for yourself &#8594;</a></p>]]></description></item></channel></rss>
+<p>I've been working on this update for a few months now and I'm stoked to get it into the hands of all you out there! If you do end up downloading the app, let me know especially if you have feature recommendations! I'd also love to know how you all are using Measures in the wild.</p>]]></description></item></channel></rss>
