@@ -1,6 +1,6 @@
 slug: bibliography
 published: Thu, 21 Oct 2021 at 02:26 AM
-updated: Tue, 21 Jun 2022 23:26:15 
+updated: Fri, 15 Jul 2022 04:09:29 
 title: Bibliography
 author: Brian Schrader
 tags:
@@ -12,6 +12,8 @@ This page lists (almost) all of the works I've written that aren't published on 
 
 Articles are mostly in reverse-chronological order.
 
+- [The myth of ‘Smart Growth’](https://sduptownnews.com/the-myth-of-smart-growth/)  (SD Uptown/Downtown News)
+- [San Diego Needs to Pick Up its Carbon Trash](https://voiceofsandiego.org/2022/07/06/san-diego-needs-to-pick-up-its-carbon-trash/) (Voice of San Diego)
 - [Lestat’s West reopens as study space with live music planned](https://sduptownnews.com/lestats-west-reopens-as-study-space-with-live-music-planned/) (SD Uptown/Downtown News)
 - [Asm. Chris Ward on housing, homelessness, climate change](https://sduptownnews.com/asm-chris-ward-on-housing-homelessness-climate-change/) (SD Uptown/Downtown News)
 - [San Diego Needs to Grow, and That’s OK](https://www.voiceofsandiego.org/topics/opinion/san-diego-needs-to-grow-and-thats-ok/) (Voice of San Diego)
