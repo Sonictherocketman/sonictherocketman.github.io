@@ -1,6 +1,6 @@
 slug: bibliography
 published: Thu, 21 Oct 2021 at 02:26 AM
-updated: Fri, 15 Jul 2022 04:09:29 
+updated: Sun, 17 Jul 2022 19:43:09 
 title: Bibliography
 author: Brian Schrader
 tags:
@@ -12,6 +12,7 @@ This page lists (almost) all of the works I've written that aren't published on 
 
 Articles are mostly in reverse-chronological order.
 
+- [Statues celebrate what we value at the time they are built. It’s OK to replace them](https://www.sandiegouniontribune.com/opinion/commentary/story/2022-07-15/pete-wilson-statue-museum) (San Diego Union Tribune)
 - [The myth of ‘Smart Growth’](https://sduptownnews.com/the-myth-of-smart-growth/)  (SD Uptown/Downtown News)
 - [San Diego Needs to Pick Up its Carbon Trash](https://voiceofsandiego.org/2022/07/06/san-diego-needs-to-pick-up-its-carbon-trash/) (Voice of San Diego)
 - [Lestat’s West reopens as study space with live music planned](https://sduptownnews.com/lestats-west-reopens-as-study-space-with-live-music-planned/) (SD Uptown/Downtown News)
