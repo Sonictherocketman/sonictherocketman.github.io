@@ -1,5 +1,39 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 29 Aug 2022 23:14:05 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/step-counts-and-goal-setting</guid><pubDate>Mon, 29 Aug 2022 23:13:00 -0800</pubDate><category>programming</category><category>ios</category><category>productivity</category><category></category><title>Step Counts and Goal-Setting</title><link>http://brianschrader.com/archive/step-counts-and-goal-setting/</link><description><![CDATA[<p>In yet more at-home-data-science, I recently decided to take a look at my step count history and see what insights I could gain from visualizing the data. I've been using <a href="https://pedometer.app">Pedometer++</a> to track my daily step count since 2014 and the app conveniently provides a CSV export of all of your daily step totals as well as other related data like distance and floors climbed. I think the results of my investigation are pretty interesting and yield some important insights.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Sun, 04 Sep 2022 17:21:42 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/stargazing-pictures</guid><pubDate>Sun, 04 Sep 2022 17:21:00 -0800</pubDate><category>photography</category><category>space</category><title>Stargazing Pictures</title><link>http://brianschrader.com/archive/stargazing-pictures/</link><description><![CDATA[<p>Last night I went stargazing with a few friends, and while the weather did conspire against us we did get a few good chances to see the stars through a friend's telescope. The photos through the telescope are no where near as good as the actual sights, but that's largely because we didn't bring any camera equipment. With time, practice, and proper gear, we'd likely have done a lot better. That said, w e also took some pictures just with our phones and the results were a lot more impressive than any of us expected.</p>
+<p><img
+    alt="A shot of stars through the lens of a telescope"
+    class="image-center"
+    style="max-width: 350px;"
+    src="/images/blog/telescope-stars.jpeg"
+/>
+<center><small>
+    This is the best shot I could get through the telescope eyepiece with my phone. The actual view was great, but the pictures: not so much.
+</small></center></p>
+<div style="display:flex; justify-content:center; flex-wrap:wrap;">
+
+    <div style="flex:1;">
+        <img
+            alt="A shot of a starfield and clouds through my iphone camera"
+            style="min-width: 200px;"
+            class="image-center"
+            src="/images/blog/star-field.jpeg"
+        />
+        <center><small>
+            A shot of the night sky with just my iPhone on a 10-second exposure.
+        </small></center>
+    </div>
+    <div style="flex:1;">
+        <img
+            alt="Another shot of a starfield and clouds through my iphone camera"
+            class="image-center"
+            style="min-width: 200px;"
+            src="/images/blog/star-field-2.jpeg"
+        />
+        <center><small>
+            Turns out that the cameras on our phones are very, very good.
+        </small></center>
+    </div>
+</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/step-counts-and-goal-setting</guid><pubDate>Mon, 29 Aug 2022 23:13:00 -0800</pubDate><category>programming</category><category>ios</category><category>productivity</category><category></category><title>Step Counts and Goal-Setting</title><link>http://brianschrader.com/archive/step-counts-and-goal-setting/</link><description><![CDATA[<p>In yet more at-home-data-science, I recently decided to take a look at my step count history and see what insights I could gain from visualizing the data. I've been using <a href="https://pedometer.app">Pedometer++</a> to track my daily step count since 2014 and the app conveniently provides a CSV export of all of your daily step totals as well as other related data like distance and floors climbed. I think the results of my investigation are pretty interesting and yield some important insights.</p>
 <p>First off, I simply plotted the entire data set to see what it showed. There were three things I noticed immediately.</p>
 <p><a href="https://gist.github.com/Sonictherocketman/54ac8666460ec5c121f9d5da1ab139c2"><img alt="A chart generated by an R Script that plots my step count since 2014" src="/images/blog/step-counts-all-time.png" /></a></p>
 <ol>
@@ -293,11 +327,4 @@ This convention doesn't always work because usually people would use <b>at</b> t
 <p>Knowing when to use a timestamp vs. a calendar date or wall-clock time is another issue (and a complicated one), but at least with this convention, I know which one I'm dealing with.</p>
 <div class="footnote">
 Now that I think about it, it might make sense to name timestamps with an <b>aton</b> suffix since question #2 technically uses both <b>at</b> and <b>on</b>.
-</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/generating-deterministic-procedural-artwork-with-pdraw</guid><pubDate>Fri, 18 Feb 2022 22:36:00 -0800</pubDate><category>programming</category><category>python</category><category>software</category><category>tools</category><title>Generating Deterministic, Procedural Artwork with pdraw</title><link>http://brianschrader.com/archive/generating-deterministic-procedural-artwork-with-pdraw/</link><description><![CDATA[<p>I've been messing with procedural artwork lately, and I've decided to discuss the fruits of my labor. Behold <a href="https://github.com/Sonictherocketman/pdraw">pdraw</a>: a script that generates cool line art from arbitrary text!</p>
-<p><a href="https://github.com/Sonictherocketman/pdraw"><img class="image-right" src="/images/blog/pdraw.gif" alt="Pdraw.py" style="max-width: 300px;" /></a></p>
-<p>About two weeks ago, <a href="https://www.youtube.com/watch?v=tkC1HHuuk7c">Numberphile</a> released a new video about visualizing the digits of Pi using procedural artwork. I was taken by the idea and decided that I would, for fun, simply replicate their technique in Python and use it to plot random sections of Pi. It was a sort of goof-off project to occupy an evening. At the end of that evening, I had finished my script (through several iterations) and plotted various sections of Pi. I could now plot any stream of numbers. Then it hit me: all digital data can be represented as a base 10 string of numbers. I could draw anything.</p>
-<p>The next evening, I set about making it so that my script could accept various command-line configurations and convert any text into its base 10 equivalent (with a small tweak for artistic reasons). Once I had that, it was time to start plotting anything I could think of. I've tried drawing binaries, zip files, websites, and a lot more.</p>
-<p>I've <a href="https://github.com/Sonictherocketman/pdraw">open sourced</a> the code for pdraw &mdash; which uses no dependences because Python is cool like that &mdash; so you the technically inclined reader can draw your very own text streams and see if they produce anything interesting.</p>
-<p>I've found that the cooler drawings tend to arise from text containing between 250-2000 characters, although larger files can be cool too. What's especially interesting is that you can almost see the structure of the data in the drawing as you watch it draw. For example, my blog archive page is basically a blob of header information, then a long and repetitive HTML table, and then another blob. This structure appears in the drawing when you plot the HTML of the page; the table rows appearing as little loops followed by lines in random directions.</p>
-<p><code>$ curl https://brianschrader.com/archive/ | ./pdraw -e</code></p>
-<p>Check it out, and let me know what you do with it. I'd love to know if anyone finds more cool things to do with pdraw, or if you generate some particularly cool drawings with it.</p>]]></description></item></channel></rss>
+</div>]]></description></item></channel></rss>

@@ -43,6 +43,59 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/stargazing-pictures/" class="u-url p-name">
+                Stargazing Pictures
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2022-09-04T17:21:00-08:00">
+                Posted on Sun, 04 Sep 2022 at 05:21 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>Last night I went stargazing with a few friends, and while the weather did conspire against us we did get a few good chances to see the stars through a friend's telescope. The photos through the telescope are no where near as good as the actual sights, but that's largely because we didn't bring any camera equipment. With time, practice, and proper gear, we'd likely have done a lot better. That said, w e also took some pictures just with our phones and the results were a lot more impressive than any of us expected.</p>
+<p><img
+    alt="A shot of stars through the lens of a telescope"
+    class="image-center"
+    style="max-width: 350px;"
+    src="/images/blog/telescope-stars.jpeg"
+/>
+<center><small>
+    This is the best shot I could get through the telescope eyepiece with my phone. The actual view was great, but the pictures: not so much.
+</small></center></p>
+<div style="display:flex; justify-content:center; flex-wrap:wrap;">
+
+    <div style="flex:1;">
+        <img
+            alt="A shot of a starfield and clouds through my iphone camera"
+            style="min-width: 200px;"
+            class="image-center"
+            src="/images/blog/star-field.jpeg"
+        />
+        <center><small>
+            A shot of the night sky with just my iPhone on a 10-second exposure.
+        </small></center>
+    </div>
+    <div style="flex:1;">
+        <img
+            alt="Another shot of a starfield and clouds through my iphone camera"
+            class="image-center"
+            style="min-width: 200px;"
+            src="/images/blog/star-field-2.jpeg"
+        />
+        <center><small>
+            Turns out that the cameras on our phones are very, very good.
+        </small></center>
+    </div>
+</div>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/step-counts-and-goal-setting/" class="u-url p-name">
                 Step Counts And Goal-Setting
               </a>
@@ -505,32 +558,6 @@ Now that I think about it, it might make sense to name timestamps with an <b>ato
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/generating-deterministic-procedural-artwork-with-pdraw/" class="u-url p-name">
-                Generating Deterministic, Procedural Artwork With Pdraw
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2022-02-18T22:36:00-08:00">
-                Posted on Fri, 18 Feb 2022 at 10:36 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>I've been messing with procedural artwork lately, and I've decided to discuss the fruits of my labor. Behold <a href="https://github.com/Sonictherocketman/pdraw">pdraw</a>: a script that generates cool line art from arbitrary text!</p>
-<p><a href="https://github.com/Sonictherocketman/pdraw"><img class="image-right" src="/images/blog/pdraw.gif" alt="Pdraw.py" style="max-width: 300px;" /></a></p>
-<p>About two weeks ago, <a href="https://www.youtube.com/watch?v=tkC1HHuuk7c">Numberphile</a> released a new video about visualizing the digits of Pi using procedural artwork. I was taken by the idea and decided that I would, for fun, simply replicate their technique in Python and use it to plot random sections of Pi. It was a sort of goof-off project to occupy an evening. At the end of that evening, I had finished my script (through several iterations) and plotted various sections of Pi. I could now plot any stream of numbers. Then it hit me: all digital data can be represented as a base 10 string of numbers. I could draw anything.</p>
-<p>The next evening, I set about making it so that my script could accept various command-line configurations and convert any text into its base 10 equivalent (with a small tweak for artistic reasons). Once I had that, it was time to start plotting anything I could think of. I've tried drawing binaries, zip files, websites, and a lot more.</p>
-<p>I've <a href="https://github.com/Sonictherocketman/pdraw">open sourced</a> the code for pdraw &mdash; which uses no dependences because Python is cool like that &mdash; so you the technically inclined reader can draw your very own text streams and see if they produce anything interesting.</p>
-<p>I've found that the cooler drawings tend to arise from text containing between 250-2000 characters, although larger files can be cool too. What's especially interesting is that you can almost see the structure of the data in the drawing as you watch it draw. For example, my blog archive page is basically a blob of header information, then a long and repetitive HTML table, and then another blob. This structure appears in the drawing when you plot the HTML of the page; the table rows appearing as little loops followed by lines in random directions.</p>
-<p><code>$ curl https://brianschrader.com/archive/ | ./pdraw -e</code></p>
-<p>Check it out, and let me know what you do with it. I'd love to know if anyone finds more cool things to do with pdraw, or if you generate some particularly cool drawings with it.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -584,6 +611,10 @@ Now that I think about it, it might make sense to name timestamps with an <b>ato
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/stargazing-pictures/" title="Stargazing Pictures" rel="nofollow">
+    Stargazing Pictures
+  </a></li>
+  
   <li><a href="/archive/step-counts-and-goal-setting/" title="Step Counts and Goal-Setting" rel="nofollow">
     Step Counts and Goal-Setting
   </a></li>
@@ -618,10 +649,6 @@ Now that I think about it, it might make sense to name timestamps with an <b>ato
   
   <li><a href="/archive/at-vs-on-a-story-of-semantic-data-modeling/" title="At vs. On: a Story of Semantic Data Modeling" rel="nofollow">
     At vs. On: a Story of Semantic Data Modeling
-  </a></li>
-  
-  <li><a href="/archive/generating-deterministic-procedural-artwork-with-pdraw/" title="Generating Deterministic, Procedural Artwork with pdraw" rel="nofollow">
-    Generating Deterministic, Procedural Artwork with pdraw
   </a></li>
   
 </ul>
