@@ -1,6 +1,6 @@
 slug: reading-milestones-attention-spans-and-cool-charts
 published: Mon, 24 Oct 2022 at 03:46 AM
-updated: Mon, 24 Oct 2022 03:46:37 
+updated: Mon, 24 Oct 2022 03:51:05 
 title: Reading Milestones, Attention Spans, and Cool Charts
 author: Brian Schrader
 tags: productivity,apps
@@ -32,7 +32,7 @@ Booktrack is a really cool indie app that lets you keep track of your entire boo
 
 ### Deliberate Acts of Reading
 
-Since leaving high school over a decade ago, my reading preferences have largely pivoted away from Sci-Fi and Fantasy and toward Non-Fiction, especially history, politics, and public policy. That said my love of Fantasy never died, I just stopped reading it; instead I listened to it.
+Since graduating high school over a decade ago, my reading preferences have largely pivoted away from Sci-Fi and Fantasy and toward Non-Fiction, especially history, politics, and public policy. That said my love of Fantasy never died, I just stopped reading it; instead I listened to it.
 
 Now, I consider listening to audiobooks to be fundamentally equivalent to reading physical books in almost every way. For me though, the act of sitting down to read a book, as opposed to listening while doing something else, is a much more conscious and deliberate act. I've recently gone back to reading Fiction again. I've done this partly to give myself a break from Non-Fiction, and partially to rediscover the joy of actually reading fiction with my eyeballs.
 
