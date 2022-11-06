@@ -11,7 +11,7 @@ I own and run [SkyRocket Software][sky], my indie software company, where I make
 
 Oh, and I wrote a book about [how to be an Indie Developer](https://goingindie.tech)!
 
-I frequent lots of places on the Internet most of which I've included in the sidebar on the [home page](/) of this site. I read a lot, I [write music][bc], and I [build things][gh]. I've open sourced a [few][cache] [different][b2] [things][variant], and I’ve built an [HTCPCP-compliant Coffee Pot][coffee]. As you can probably tell, I care deeply about the Web &mdash; and technology more broadly. I care about the future of our discourse on the web, the standards on which it’s based, the changes in society it helps create, how we as people shape it, and how it shapes us in turn.
+I frequent lots of places on the Internet most of which I've included in the sidebar on the [home page](/) of this site. I [read a lot][read], I [write music][bc], and I [build things][gh]. I've open sourced a [few][cache] [different][b2] [things][variant], and I’ve built an [HTCPCP-compliant Coffee Pot][coffee]. As you can probably tell, I care deeply about the Web &mdash; and technology more broadly. I care about the future of our discourse on the web, the standards on which it’s based, the changes in society it helps create, how we as people shape it, and how it shapes us in turn.
 
 I occasionally write for several outlets including [a few local papers][bib] and at [Democracy &amp; Progress][dnp]: a blog about San Diego &amp; California policy. In recent years my attention has been focused on local &amp; state policy issues including addressing Homelessness, Housing Affordability &amp; Availability, and Climate Change.
 
@@ -38,3 +38,4 @@ Shoot me an email at [brian@brianschrader.com][email], but I might take a while 
 [tfs]: https://thefourthsection.com
 [bib]: /archive/bibliography
 [webm]: https://indieweb.org/Webmention
+[read]: /archive/reading-report/
