@@ -5,6 +5,7 @@ _templates/
 _drafts/
 _reports/
 _admin/
+_data/
 .dropbox
 catalog.json
 microblog/microblog_spec.html

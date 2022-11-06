@@ -1,6 +1,6 @@
 slug: nine9s-gets-an-upgrade-
 published: Mon, 06 Dec 2021 at 06:28 PM
-updated: Mon, 06 Dec 2021 at 06:28 PM
+updated: Sun, 06 Nov 2022 01:39:03 
 title: Nine9s gets an upgrade ⬆️
 author: Brian Schrader
 tags: software development, apps

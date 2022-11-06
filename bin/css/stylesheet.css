@@ -499,3 +499,15 @@ details p {
   font-size: small;
   font-style: italic;
 }
+
+.hide {
+  display: none;
+}
+.histogram {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.rtl {
+  direction: rtl;
+}
