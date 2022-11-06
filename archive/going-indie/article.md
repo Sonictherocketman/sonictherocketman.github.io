@@ -1,6 +1,6 @@
 slug: going-indie
 published: Sat, 08 Aug 2020 at 02:18 AM
-updated: Sun, 06 Nov 2022 01:39:02 
+updated: Sun, 06 Nov 2022 05:02:19 
 title: Going Indie
 author: Brian Schrader
 status: publish

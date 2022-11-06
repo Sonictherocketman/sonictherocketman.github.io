@@ -1,6 +1,6 @@
 slug: philae-breaks-our-hearts
 published: Sun, 16 Nov 2014 at 06:11 PM
-updated: Thu, 21 Oct 2021 at 02:27 AM
+updated: Sun, 06 Nov 2022 05:02:18 
 title: Philae Breaks our Hearts
 author: Brian Schrader
 tags: philae, space

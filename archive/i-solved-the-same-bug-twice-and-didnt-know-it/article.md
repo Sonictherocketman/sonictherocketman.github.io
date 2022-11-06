@@ -1,6 +1,6 @@
 slug: i-solved-the-same-bug-twice-and-didnt-know-it
 published: Tue, 01 Feb 2022 at 11:44 PM
-updated: Tue, 01 Feb 2022 23:44:00 
+updated: Sun, 06 Nov 2022 05:02:18 
 title: I Solved The Same Bug Twice And Didn't Know It
 author: Brian Schrader
 tags: software development, programming

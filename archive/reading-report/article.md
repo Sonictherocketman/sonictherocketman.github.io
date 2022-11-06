@@ -1,18 +1,44 @@
 slug: reading-report
 published: Sat, 05 Nov 2022 at 04:52 AM
-updated: Sun, 06 Nov 2022 01:28:33 
-title: Reading Report
+updated: Sun, 06 Nov 2022 05:02:18 
+title: Books & Reading Statistics
 author: Brian Schrader
 status: publish
 hidden: true
 tags: reading, books
 
-This page tracks my current reading statistics. Charts on this page are updated semi-frequently and irregularly. All data is exported from the excellent app [Book Tracker](https://booktrack.app). For more info on the app and my recent reading, check out [this post from 2022](/archive/reading-milestones-attention-spans-and-cool-charts/)
+This page tracks my current reading statistics. Charts on this page are updated semi-frequently and irregularly. All data is exported from the excellent app [Book Tracker](https://booktrack.app). For more info on the app and my recent reading, check out [this post from 2022](/archive/reading-milestones-attention-spans-and-cool-charts/). If you're interested in books I recommend, then please check out [my recommendations page](/archive/bookshelf).
+
+This page serves partly as a cool place to show off some data as well as a way to motivate myself to read more and more consistently. Enjoy!
+
+
+## Book Collection
+
+<div style="display: flex; justify-content: space-around; align-items: stretch; gap: 1rem; text-align: center;">
+
+    <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
+        <h3 id="books-collection">?</h3>
+        <b>Books in Collection</b>
+    </div>
+
+    <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
+        <h3 id="books-read">?</h3>
+        <b>Books Actually Read</b>
+    </div>
+
+    <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
+        <h3 id="percentage">?</h3>
+        <b>Percent Completion</b>
+    </div>
+
+</div>
 
 
 ### Books Read By Year
 
 <div id="year-by-year" class="hide"></div>
+
+
 <small id="last-updated"></small>
 
 <script src="/bin/d3.js"></script>
@@ -98,5 +124,19 @@ This page tracks my current reading statistics. Charts on this page are updated 
         (new Date(b.finishedReading)) - (new Date(a.finishedReading))
       ))[0];
       lastUpdated.innerText = "Last Updated: " + (new Date(moreRecent.finishedReading)).toLocaleDateString();
+
+      // Calculate stats
+
+      const collectionSize = data.length;
+      const booksRead = data.filter(book => (
+        book.readingStatus === "read"
+      )).length
+      const percentage = Math.round(booksRead / collectionSize * 100);
+
+      document.querySelector('#books-collection').innerText = collectionSize;
+      document.querySelector('#books-read').innerText = booksRead;
+      document.querySelector('#percentage').innerText = (
+        percentage + '%'
+      );
 })()
 </script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Reading Report - BiteofanApple</title>
+    <title>Books &amp; Reading Statistics - BiteofanApple</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
@@ -11,7 +11,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
     <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
     
-  <meta property="og:title" content="Reading Report" />
+  <meta property="og:title" content="Books &amp; Reading Statistics" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="http://brianschrader.com/archive/reading-report/" />
 
@@ -46,9 +46,9 @@
           <h1 class="p-name">
             <a
               href="/archive/reading-report/"
-              title="Reading Report"
+              title="Books &amp; Reading Statistics"
             >
-              Reading Report
+              Books & Reading Statistics
             </a>
           </h1>
           <small style="font-style:italic;">
@@ -58,9 +58,31 @@
           </small>
         </div>
         <div class="article-content e-content">
-          <p>This page tracks my current reading statistics. Charts on this page are updated semi-frequently and irregularly. All data is exported from the excellent app <a href="https://booktrack.app">Book Tracker</a>. For more info on the app and my recent reading, check out <a href="/archive/reading-milestones-attention-spans-and-cool-charts/">this post from 2022</a></p>
+          <p>This page tracks my current reading statistics. Charts on this page are updated semi-frequently and irregularly. All data is exported from the excellent app <a href="https://booktrack.app">Book Tracker</a>. For more info on the app and my recent reading, check out <a href="/archive/reading-milestones-attention-spans-and-cool-charts/">this post from 2022</a>. If you're interested in books I recommend, then please check out <a href="/archive/bookshelf">my recommendations page</a>.</p>
+<p>This page serves partly as a cool place to show off some data as well as a way to motivate myself to read more and more consistently. Enjoy!</p>
+<h2>Book Collection</h2>
+<div style="display: flex; justify-content: space-around; align-items: stretch; gap: 1rem; text-align: center;">
+
+    <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
+        <h3 id="books-collection">?</h3>
+        <b>Books in Collection</b>
+    </div>
+
+    <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
+        <h3 id="books-read">?</h3>
+        <b>Books Actually Read</b>
+    </div>
+
+    <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
+        <h3 id="percentage">?</h3>
+        <b>Percent Completion</b>
+    </div>
+
+</div>
+
 <h3>Books Read By Year</h3>
 <div id="year-by-year" class="hide"></div>
+
 <p><small id="last-updated"></small></p>
 <script src="/bin/d3.js"></script>
 <noscript>Sorry, you'll need JS enabled in order to view the cool charts I made for this page.</noscript>
@@ -145,6 +167,20 @@
         (new Date(b.finishedReading)) - (new Date(a.finishedReading))
       ))[0];
       lastUpdated.innerText = "Last Updated: " + (new Date(moreRecent.finishedReading)).toLocaleDateString();
+
+      // Calculate stats
+
+      const collectionSize = data.length;
+      const booksRead = data.filter(book => (
+        book.readingStatus === "read"
+      )).length
+      const percentage = Math.round(booksRead / collectionSize * 100);
+
+      document.querySelector('#books-collection').innerText = collectionSize;
+      document.querySelector('#books-read').innerText = booksRead;
+      document.querySelector('#percentage').innerText = (
+        percentage + '%'
+      );
 })()
 </script>
         </div>
@@ -334,7 +370,7 @@
     Food &amp; Drink Recipes
   </a></li>
   <li><a href="/archive/reading-report/" title="Reading Report">
-    Reading Report
+    Books & Reading Statistics
   </a></li>
   <li><a href="/tags.html" title="Posts by Tag">
     Tags
