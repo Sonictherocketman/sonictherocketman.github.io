@@ -1,6 +1,6 @@
 slug: gitbook
 published: Mon, 14 Dec 2015 at 10:48 AM
-updated: Sat, 19 Nov 2022 07:49:37 
+updated: Sat, 19 Nov 2022 23:42:08 
 title: GitBook
 author: Brian Schrader
 tags: gitbooks

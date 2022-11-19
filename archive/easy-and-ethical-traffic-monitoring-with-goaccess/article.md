@@ -1,6 +1,6 @@
 slug: easy-and-ethical-traffic-monitoring-with-goaccess
 published: Mon, 03 May 2021 at 06:08 PM
-updated: Sat, 19 Nov 2022 07:49:37 
+updated: Sat, 19 Nov 2022 23:42:08 
 title: Easy and Ethical Traffic Monitoring with GoAccess
 author: Brian Schrader
 tags: software development, blogging

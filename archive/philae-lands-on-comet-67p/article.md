@@ -1,6 +1,6 @@
 slug: philae-lands-on-comet-67p
 published: Wed, 12 Nov 2014 at 07:39 PM
-updated: Sat, 19 Nov 2022 07:49:34 
+updated: Sat, 19 Nov 2022 23:42:05 
 title: Philae Lands on Comet 67P
 author: Brian Schrader
 tags: space, philae

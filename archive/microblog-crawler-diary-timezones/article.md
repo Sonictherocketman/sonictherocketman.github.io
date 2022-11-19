@@ -1,6 +1,6 @@
 slug: microblog-crawler-diary-timezones
 published: Sun, 22 Feb 2015 at 11:20 PM
-updated: Sat, 19 Nov 2022 07:49:38 
+updated: Sat, 19 Nov 2022 23:42:08 
 title: Microblog Crawler Diary: Timezones
 author: Brian Schrader
 tags: microblog crawler diary
