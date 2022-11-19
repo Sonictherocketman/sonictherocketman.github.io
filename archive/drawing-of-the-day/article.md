@@ -1,6 +1,6 @@
 slug: drawing-of-the-day
 published: Sat, 19 Nov 2022 at 07:48 AM
-updated: Sat, 19 Nov 2022 20:40:28 
+updated: Sat, 19 Nov 2022 20:48:18 
 title: Drawing of the Day
 author: Brian Schrader
 tags: fun, programming
@@ -79,7 +79,13 @@ DotD are produced using my [pdraw][1] library. It's free and open-source, so you
     c0.4,0,0.8-0.3,1-0.7c0.4-1.4,0.6-2.8,0.6-4.1C21,17.8,14.2,11,5.9,11z"/>
 </g>
 </svg>
-DotD RSS Feed
+DotD RSS Feed</a>
+|
+<a
+    href="https://pine.blog/sites/45032b9d-80e1-414d-b693-cca389b5dd1a"
+    title="DotD on Pine.blog"
+    rel="nofollow noopener noreferrer">
+DotD on Pine.blog
 </a>
 </div>
 
