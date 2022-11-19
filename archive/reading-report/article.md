@@ -1,6 +1,6 @@
 slug: reading-report
 published: Sat, 05 Nov 2022 at 04:52 AM
-updated: Sun, 06 Nov 2022 05:02:18 
+updated: Sat, 19 Nov 2022 04:26:33 
 title: Books & Reading Statistics
 author: Brian Schrader
 status: publish
@@ -45,7 +45,7 @@ This page serves partly as a cool place to show off some data as well as a way t
 <noscript>Sorry, you'll need JS enabled in order to view the cool charts I made for this page.</noscript>
 <script>
 (async () => {
-    const r = await fetch('/datasets/reading.json');
+    const r = await fetch('https://home.brianschrader.com/datasets/reading.json');
     const data = await r.json();
     const filteredDates = data.filter(d => (
         d.readingStatus === "read" && !!d.finishedReading

@@ -88,7 +88,7 @@
 <noscript>Sorry, you'll need JS enabled in order to view the cool charts I made for this page.</noscript>
 <script>
 (async () => {
-    const r = await fetch('/datasets/reading.json');
+    const r = await fetch('https://home.brianschrader.com/datasets/reading.json');
     const data = await r.json();
     const filteredDates = data.filter(d => (
         d.readingStatus === "read" && !!d.finishedReading
