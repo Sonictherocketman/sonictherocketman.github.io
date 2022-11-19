@@ -1,5 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Sat, 19 Nov 2022 20:49:02 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/reading-milestones-attention-spans-and-cool-charts</guid><pubDate>Mon, 24 Oct 2022 03:46:00 -0800</pubDate><category>productivity</category><category>apps</category><title>Reading Milestones, Attention Spans, and Cool Charts</title><link>http://brianschrader.com/archive/reading-milestones-attention-spans-and-cool-charts/</link><description><![CDATA[<p>Today marks a special occasion. According to my knowledge, I have read more books in 2022 than in any other single year of my life. Better yet, the previous three years are a high-water mark over most of the previous decade.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Sat, 19 Nov 2022 21:18:00 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/a-drawing-every-day</guid><pubDate>Sat, 19 Nov 2022 21:17:00 -0800</pubDate><category>fun</category><category>programming</category><title>A Drawing Every Day!</title><link>http://brianschrader.com/archive/a-drawing-every-day/</link><description><![CDATA[<p><a href="/archive/drawing-of-the-day"><img
+    alt="Today's Drawing of the Day. Yes it is live"
+    src="https://home.brianschrader.com/drawing-of-the-day/latest.png"
+    style="max-height: 300px; border-radius: 4px;"
+    class="image-right"
+/></a></p>
+<p>I love to just mess around with computers. It's a fun way to spend an idle evening, and last night I set up a little script that could generate random line drawings using my little <a href="https://github.com/sonictherocketman/pdraw">pdraw</a> project from <a href="https://brianschrader.com/archive/generating-deterministic-procedural-artwork-with-pdraw/">a while back</a>. The script generates a new image every day and places it in a web-accessible place that I can then link to. This morning I finished up my little project by adding another script that can generate an RSS feed for the list of images and voila!</p>
+<p>You can find <a href="/archive/drawing-of-the-day">each day's Drawing of the Day here</a>. The page also has its own, dedicated <a href="https://home.brianschrader.com/drawing-of-the-day/rss.xml">RSS Feed</a> so give that a follow if you're interested.</p>
+<p>The script to generate all of this was a fun little experiment that involved <code>pdraw</code>, <code>imagemagick</code>, and <code>xvfb</code>. As with all bash projects it involves no shortage of little hacks (including but not limited to a manual, string-joining, feed-generator function). Overall its a great example of just how powerful simple tools can be.</p>
+<p>As an aside, it was projects like this that were my original introduction to programming and to this day they continue to be one of the most fun parts of it for me. Don't get me wrong, I do enjoy building fully-fledged web apps, but throwing <a href="/archive/take-a-break-script-something/">little scripts together</a> is also a ton of fun. Hopefully you all enjoy these daily line drawings as much as I enjoyed making them available.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/reading-milestones-attention-spans-and-cool-charts</guid><pubDate>Mon, 24 Oct 2022 03:46:00 -0800</pubDate><category>productivity</category><category>apps</category><title>Reading Milestones, Attention Spans, and Cool Charts</title><link>http://brianschrader.com/archive/reading-milestones-attention-spans-and-cool-charts/</link><description><![CDATA[<p>Today marks a special occasion. According to my knowledge, I have read more books in 2022 than in any other single year of my life. Better yet, the previous three years are a high-water mark over most of the previous decade.</p>
 <p><img class="image-center" src="/images/blog/book-track-3.png" alt="A chart from the iOS App Book Track depicting books read per year. 2022 is the highest." />
 <center><caption><small>Charts via the excellent app <a href="https://apps.apple.com/us/app/book-tracker-bookshelf-log/id1491660771" title="Booktrack">Booktrack</a> for iOS/macOS</small></caption></center></p>
 <p>As a kid I considered myself an average reader. In fact book reading was one of the very few homework assignments I occasionally completed. In high school I read a fairly significant amount of Science Fiction and Fantasy as well as the occasional book of Physics or Philosophy. Once I got to college though, my recreational reading slowly went by the wayside until the end of my senior year and the year that followed. Over the intervening years I've slowly recovered my habit of reading regularly. However, as you can see something changed in 2020 (something quite obvious to everyone).</p>
@@ -234,90 +243,4 @@ Right off the bat I need to note that the server in this story was not connected
 <caption><center><small>Keychain can generate long passwords easily, though I wish it could make even longer ones.</small></center></caption></p>
 <p>All in all, I count myself unlucky that I had to learn my lesson this way, but I count myself very lucky that I learned it by losing control of an unimportant and trivially replaceable server.</p>
 <p>The internet is a very hostile place to those who aren't prepared for it. This is true on a societal level, and on a technical one. If you ever need a reminder of just how dangerous it is, try having <a href="https://www.linode.com/docs/guides/using-fail2ban-to-secure-your-server-a-tutorial/">Fail2Ban</a> email you whenever it blocks a hostile IP address or watch your access logs for bots trying to break into your site (usually using maliciously crafted Wordpress/Drupal URLS). Things like that happen all day, every day; we just don't usually see them.</p>
-<p>Anyway, that's the story. Hopefully everyone reading this takes it to heart so that this story remains but a cautionary tale and nothing more.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/hacks-can-be-good-code-too</guid><pubDate>Mon, 21 Mar 2022 21:45:00 -0800</pubDate><category>programming</category><category>software development</category><title>Hacks can be Good Code Too</title><link>http://brianschrader.com/archive/hacks-can-be-good-code-too/</link><description><![CDATA[<style>
-table {
-    width: 100%;
-}
-table td {
-    padding: 2px;
-    padding-right: 1.5rem;
-}
-table tr td:last-child {
-    padding: 0;
-}
-</style>
-
-<p>Writing code is, like everything in life, all about making tradeoffs. Code can be quick to write, but at the same time unreadable; it can be fast, but hard to maintain; and it can be flexible, but overly complex. Each of these factors are worth considering when writing Good Code. Complicating this is the fact that: what constitutes Good Code in one situation may not be ideal in another.</p>
-<p>Good Code is not universally so.</p>
-<p>It is incredibly difficult to explain why one set of tradeoffs are worth pursuing in one case but not in another, and often times reasonable people will disagree on the value of certain tradeoffs over others. Perhaps a snippet of hacky string parsing is good in one place, but not in another. Often times, the most significant cost of solving a problem "The Right Way" is time.</p>
-<p>When deciding whether to do something The Right Way or to cheat and simply hack something together, I often try to consider the exposure the given code will have. Consider these questions:</p>
-<ul>
-<li>Do other systems touch this code?</li>
-<li>How many developers will need to interact with it over time?</li>
-<li>How much work would be involved in building out the correct approach?</li>
-<li>How much work would be involved in building out the bad approach?</li>
-<li>How valuable is the intended feature?</li>
-<li>How much additional maintenance does the bad solution require?</li>
-</ul>
-<p>Each of these answers helps me decide what kind of code I should write. These questions neglect multiple other factors (e.g. performance, readability), but they are a good starting point.</p>
-<p>In a recent example I needed to modify the blog engine that powers this site as well as a few others. I wanted a simple feature that would count the number of articles on the side as well as the total number of words in every blog post, and display those values on the home page. <a href="/archive/the-new-new-cms/">As I've said before</a> the blog engine for this site is very old, and has been <a href="/archive/smaller/">rewritten</a> <a href="/archive/rewritten/">several</a> <a href="/archive/thinking-about-redoing-my-blog-engine/">times</a>. It's well beyond needing a massive rewrite, but that's not something I really want to do right now.</p>
-<p>The blog engine is written in Python, provides a command-line interface, and uses Git Hooks both client and server-side to build and deploy itself.</p>
-<p>I originally considered writing this feature in Python: counting the number of words in each article, adding a new context variable to the template rendering process, and then rendering the pages as normal. But that would require touching substantial pieces of the codebase (some of which <a href="/archive/i-solved-the-same-bug-twice-and-didnt-know-it/">I no longer understand</a>). It would probably take me all evening to dive into the code, understand it, make the change, and test it. To be honest, this feature was not worth wasting an evening on. So I decided to just hack something.</p>
-<p>As I said, I use Git to deploy the site. So I just added a new line to the HTML template:</p>
-<pre><code class="html">
-&lt;p&gt;
-    This site contains <code>{+ARTICLE_COUNT+}</code>
-    different writings and <code>{+WORD_COUNT+}</code>
-    total words. That's about <code>{+PAGE_COUNT+}</code>
-    pages!
-&lt;/p&gt;
-</code></pre>
-
-<p>And then I added a new step to the pre-commit hook that runs after the template rendering process, but before the changes are committed and the site is deployed.</p>
-<pre><code class="bash">
-WPP=320
-WORDS_N="$(find archive/ -name "*.md"|xargs -I {} cat {} | wc -w)"
-WORDS=`printf "%'d" $WORDS_N`
-ARTICLES=`printf "%'d" $(find archive/ -name "*.md" | wc -l)`
-PAGES="$(( WORDS_N / WPP ))"
-
-TMP_HOME=`mktemp`
-cp ./index.html $TMP_HOME
-cat $TMP_HOME |
-    sed "s/{+ARTICLE_COUNT+}/$ARTICLES/" |
-    sed "s/{+PAGE_COUNT+}/$PAGES/" |
-    sed "s/{+WORD_COUNT+}/$WORDS/" > ./index.html
-</code></pre>
-
-<p>Let's check in and see how this hack fit my criteria above:</p>
-<table border="1" frame="hsides" rules="rows" style="margin-right:auto;margin-left:auto;">
-    <tr>
-        <td>Do other systems touch this code?</td>
-        <td>No</td>
-    </tr>
-    <tr>
-        <td># of Developers?</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Time for Correct Approach?</td>
-        <td>2-3 hours</td>
-    </tr>
-    <tr>
-        <td>Time for Bad Approach?</td>
-        <td>10 minutes</td>
-    </tr>
-    <tr>
-        <td>How Valuable is the Feature?</td>
-        <td>Very</td>
-    </tr>
-    <tr>
-        <td>Additional Maintenance Burden?</td>
-        <td>Not much</td>
-    </tr>
-</table>
-
-<p>Is this elegant: absolutely not. Did it take basically zero time? Yes. Have I thought about it since? Not until writing this post. Would I have done this on a team project or a commercial product? Absolutely not. It's a feature for my personal blog engine and a feature that is specific to one particular low-value site that I run.</p>
-<p>In this case, a hack is an example of Good Code. That's because Good Code is a relative construct.</p>
-<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script></p>
-<script>hljs.initHighlightingOnLoad();</script>]]></description></item></channel></rss>
+<p>Anyway, that's the story. Hopefully everyone reading this takes it to heart so that this story remains but a cautionary tale and nothing more.</p>]]></description></item></channel></rss>
