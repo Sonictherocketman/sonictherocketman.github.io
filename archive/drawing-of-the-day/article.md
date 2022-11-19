@@ -1,6 +1,6 @@
 slug: drawing-of-the-day
 published: Sat, 19 Nov 2022 at 07:48 AM
-updated: Sat, 19 Nov 2022 20:48:18 
+updated: Sat, 19 Nov 2022 21:20:46 
 title: Drawing of the Day
 author: Brian Schrader
 tags: fun, programming
@@ -53,9 +53,12 @@ hidden: true
 The Drawing of the Day for Today
 </small></caption></center>
 
-DotD are produced using my [pdraw][1] library. It's free and open-source, so you could use it too!
+DotD are produced using my [pdraw][1] library. It's free and open-source, so you could use it too! The images are generated using randomly-generated data resulting in a completely new drawing each and every day.
+
+If you'd like more information about this project, please check out [the announcement blog post][2] or the [pdraw][1] library on GitHub.
 
 [1]: https://github.com/sonictherocketman/pdraw
+[2]: /archive/a-drawing-every-day/
 
 ### Previous Drawings of the Day
 
