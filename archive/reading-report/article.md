@@ -1,18 +1,14 @@
 slug: reading-report
 published: Sat, 05 Nov 2022 at 04:52 AM
-updated: Sat, 19 Nov 2022 23:42:05 
+updated: Sat, 19 Nov 2022 23:44:08 
 title: Books & Reading Statistics
 author: Brian Schrader
 status: publish
 hidden: true
 tags: reading, books
 
-This page tracks my current reading statistics. Charts on this page are updated semi-frequently and irregularly. All data is exported from the excellent app [Book Tracker](https://booktrack.app). For more info on the app and my recent reading, check out [this post from 2022](/archive/reading-milestones-attention-spans-and-cool-charts/). If you're interested in books I recommend, then please check out [my recommendations page](/archive/bookshelf).
 
-This page serves partly as a cool place to show off some data as well as a way to motivate myself to read more and more consistently. Enjoy!
-
-
-## Book Collection
+### Book Collection
 
 <div style="display: flex; justify-content: space-around; align-items: stretch; gap: 1rem; text-align: center;">
 
@@ -38,8 +34,14 @@ This page serves partly as a cool place to show off some data as well as a way t
 
 <div id="year-by-year" class="hide"></div>
 
-
 <small id="last-updated"></small>
+
+### About this Page
+
+This page tracks my current reading statistics. Charts on this page are updated semi-frequently and irregularly. All data is exported from the excellent app [Book Tracker](https://booktrack.app). For more info on the app and my recent reading, check out [this post from 2022](/archive/reading-milestones-attention-spans-and-cool-charts/). If you're interested in books I recommend, then please check out [my recommendations page](/archive/bookshelf).
+
+This page serves partly as a cool place to show off some data as well as a way to motivate myself to read more and more consistently. Enjoy!
+
 
 <script src="/bin/d3.js"></script>
 <noscript>Sorry, you'll need JS enabled in order to view the cool charts I made for this page.</noscript>
