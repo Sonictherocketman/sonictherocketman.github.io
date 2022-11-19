@@ -1,6 +1,6 @@
 slug: lots-of-little-things
 published: Sat, 29 Jun 2019 at 04:02 AM
-updated: Sun, 06 Nov 2022 05:02:19 
+updated: Sat, 19 Nov 2022 07:49:36 
 title: Lots of Little Things
 author: Brian Schrader
 tags: pine.blog, update

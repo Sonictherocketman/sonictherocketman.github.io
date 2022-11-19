@@ -1,6 +1,6 @@
 slug: re-comic-con
 published: Sun, 07 Jul 2013 at 02:35 AM
-updated: Sun, 06 Nov 2022 05:02:19 
+updated: Sat, 19 Nov 2022 07:49:36 
 title: Re: Comic-Con
 author: Brian Schrader
 status: publish

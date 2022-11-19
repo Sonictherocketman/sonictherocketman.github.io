@@ -1,6 +1,6 @@
 slug: priming-the-pump
 published: Tue, 31 Mar 2015 at 09:49 PM
-updated: Sun, 06 Nov 2022 05:02:19 
+updated: Sat, 19 Nov 2022 07:49:36 
 title: Priming the Pump
 author: Brian Schrader
 tags: rss, open internet, youtube

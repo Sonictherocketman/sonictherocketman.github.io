@@ -1,6 +1,6 @@
 slug: sony-mdr-extra-bass-bluetooth-headphones-review
 published: Thu, 01 Dec 2016 at 11:12 AM
-updated: Sun, 06 Nov 2022 05:02:20 
+updated: Sat, 19 Nov 2022 07:49:36 
 title: Sony MDR Extra-Bass Bluetooth Headphones Review
 author: Brian Schrader
 tags: review, headphones

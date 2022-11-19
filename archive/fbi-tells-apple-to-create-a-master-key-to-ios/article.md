@@ -1,6 +1,6 @@
 slug: fbi-tells-apple-to-create-a-master-key-to-ios
 published: Wed, 17 Feb 2016 at 11:05 AM
-updated: Sun, 06 Nov 2022 05:02:17 
+updated: Sat, 19 Nov 2022 07:49:34 
 title: FBI tells Apple to Create a Master Key to iOS
 author: Brian Schrader
 tags: apple, technology, encryption

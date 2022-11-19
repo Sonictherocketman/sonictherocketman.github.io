@@ -1,6 +1,6 @@
 slug: the-open-microblog-standard
 published: Mon, 29 Sep 2014 at 12:16 AM
-updated: Sun, 06 Nov 2022 05:02:20 
+updated: Sat, 19 Nov 2022 07:49:37 
 title: The Open Microblog Standard
 author: Brian Schrader
 tags: open microblog

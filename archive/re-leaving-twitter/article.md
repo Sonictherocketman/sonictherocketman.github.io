@@ -1,6 +1,6 @@
 slug: re-leaving-twitter
 published: Tue, 26 Jan 2016 at 05:32 PM
-updated: Sun, 06 Nov 2022 05:02:20 
+updated: Sat, 19 Nov 2022 07:49:37 
 title: Re: Leaving Twitter 
 author: Brian Schrader
 status: publish

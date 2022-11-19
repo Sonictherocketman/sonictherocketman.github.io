@@ -1,6 +1,6 @@
 slug: building-a-personalized-newsletter-with-bash-and-a-raspberry-pi
 published: Sat, 03 Apr 2021 at 09:02 PM
-updated: Sun, 06 Nov 2022 05:02:17 
+updated: Sat, 19 Nov 2022 07:49:34 
 title: Building a Personalized Newsletter with Bash and a Raspberry Pi
 author: Brian Schrader
 tags: programming, fun

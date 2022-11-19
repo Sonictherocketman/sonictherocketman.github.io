@@ -1,6 +1,6 @@
 slug: step-counts-and-goal-setting
 published: Mon, 29 Aug 2022 at 11:13 PM
-updated: Sun, 06 Nov 2022 05:02:18 
+updated: Sat, 19 Nov 2022 07:49:35 
 title: Step Counts and Goal-Setting
 author: Brian Schrader
 tags: programming, ios, productivity,

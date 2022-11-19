@@ -1,6 +1,6 @@
 slug: assumptions-and-variable-names
 published: Thu, 01 Oct 2020 at 10:00 PM
-updated: Sun, 06 Nov 2022 05:02:18 
+updated: Sat, 19 Nov 2022 07:49:35 
 title: Assumptions and Variable Names
 author: Brian Schrader
 tags: software development, knowing, philosophy, variable naming

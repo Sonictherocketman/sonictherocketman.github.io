@@ -1,6 +1,6 @@
 slug: smaller
 published: Mon, 01 Feb 2016 at 11:57 AM
-updated: Sun, 06 Nov 2022 05:02:18 
+updated: Sat, 19 Nov 2022 07:49:35 
 title: Smaller
 author: Brian Schrader
 tags: blogging, web

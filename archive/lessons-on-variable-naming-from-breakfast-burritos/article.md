@@ -1,6 +1,6 @@
 slug: lessons-on-variable-naming-from-breakfast-burritos
 published: Sat, 17 Apr 2021 at 01:19 AM
-updated: Sun, 06 Nov 2022 05:02:20 
+updated: Sat, 19 Nov 2022 07:49:37 
 title: Lessons on Variable Naming from Breakfast Burritos
 author: Brian Schrader
 tags: programming, software development, fun

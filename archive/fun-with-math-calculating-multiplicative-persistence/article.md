@@ -1,6 +1,6 @@
 slug: fun-with-math-calculating-multiplicative-persistence
 published: Sun, 28 Aug 2022 at 11:27 PM
-updated: Sun, 06 Nov 2022 05:02:20 
+updated: Sat, 19 Nov 2022 07:49:37 
 title: Fun with Math: Calculating Multiplicative Persistence
 author: Brian Schrader
 tags: programming, tools, python, software

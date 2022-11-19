@@ -1,6 +1,6 @@
 slug: todos-as-a-templating-system
 published: Mon, 31 Jul 2017 at 03:24 PM
-updated: Sun, 06 Nov 2022 05:02:20 
+updated: Sat, 19 Nov 2022 07:49:37 
 title: TODOs as a Templating System
 author: Brian Schrader
 tags: software development, programming, thought technology

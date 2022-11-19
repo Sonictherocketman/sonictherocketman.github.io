@@ -1,6 +1,6 @@
 slug: whether-to-monitor-the-weather-and-more
 published: Tue, 16 Aug 2022 at 10:59 PM
-updated: Sun, 06 Nov 2022 05:02:20 
+updated: Sat, 19 Nov 2022 07:49:36 
 title: Whether to Monitor the Weather and More
 author: Brian Schrader
 tags: programming, python

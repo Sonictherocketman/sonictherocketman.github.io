@@ -1,6 +1,6 @@
 slug: a-sobering-thought
 published: Mon, 11 Nov 2019 at 04:18 AM
-updated: Sun, 06 Nov 2022 05:02:17 
+updated: Sat, 19 Nov 2022 07:49:34 
 title: A Sobering Thought
 author: Brian Schrader
 tags: climate change, tree planting, 2050

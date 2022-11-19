@@ -1,6 +1,6 @@
 slug: getting-back-on-the-horse
 published: Mon, 25 Sep 2017 at 04:20 PM
-updated: Sun, 06 Nov 2022 05:02:16 
+updated: Sat, 19 Nov 2022 07:49:33 
 title: Getting Back on the Horse
 author: Brian Schrader
 tags: update, blogging
