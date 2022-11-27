@@ -1,6 +1,6 @@
 slug: microblogger-status-updates-and-more
 published: Sat, 13 Dec 2014 at 07:16 AM
-updated: Sun, 27 Nov 2022 04:42:17 
+updated: Sun, 27 Nov 2022 04:43:30 
 title: Microblogger status updates and more
 author: Brian Schrader
 status: publish
