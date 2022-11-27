@@ -1,6 +1,6 @@
 slug: the-people-vs-democracy
 published: Sat, 19 May 2018 at 01:46 PM
-updated: Sat, 19 Nov 2022 23:42:07 
+updated: Sun, 27 Nov 2022 04:42:17 
 title: The People vs. Democracy
 author: Brian Schrader
 tags: democracy, politics, technology

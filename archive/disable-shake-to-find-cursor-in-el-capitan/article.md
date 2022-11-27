@@ -1,6 +1,6 @@
 slug: disable-shake-to-find-cursor-in-el-capitan
 published: Mon, 12 Oct 2015 at 11:35 AM
-updated: Sat, 19 Nov 2022 23:42:08 
+updated: Sun, 27 Nov 2022 04:42:17 
 title: Disable "shake to find cursor" in El Capitan
 author: Brian Schrader
 tags: mac

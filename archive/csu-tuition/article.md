@@ -1,6 +1,6 @@
 slug: csu-tuition
 published: Thu, 01 May 2014 at 09:11 PM
-updated: Sat, 19 Nov 2022 23:42:08 
+updated: Sun, 27 Nov 2022 04:42:17 
 title: CSU Tuition 
 author: Brian Schrader
 tags: tuition, college

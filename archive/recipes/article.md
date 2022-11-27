@@ -1,6 +1,6 @@
 slug: recipes
 published: Thu, 06 Aug 2020 at 02:02 AM
-updated: Sat, 19 Nov 2022 23:42:07 
+updated: Sun, 27 Nov 2022 04:42:16 
 title: Recipes
 author: Brian Schrader
 tags:

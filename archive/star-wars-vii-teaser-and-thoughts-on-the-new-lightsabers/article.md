@@ -1,6 +1,6 @@
 slug: star-wars-vii-teaser-and-thoughts-on-the-new-lightsabers
 published: Fri, 28 Nov 2014 at 06:04 PM
-updated: Sat, 19 Nov 2022 23:42:04 
+updated: Sun, 27 Nov 2022 04:42:14 
 title: Star Wars VII Teaser (and thoughts on the new lightsabers) 
 author: Brian Schrader
 tags: star wars, teaser

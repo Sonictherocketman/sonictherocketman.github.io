@@ -1,6 +1,6 @@
 slug: latest-project-log-linker
 published: Thu, 14 Jul 2016 at 10:17 PM
-updated: Sat, 19 Nov 2022 23:42:08 
+updated: Sun, 27 Nov 2022 04:42:17 
 title: Latest Project: Log Linker  
 author: Brian Schrader
 status: publish

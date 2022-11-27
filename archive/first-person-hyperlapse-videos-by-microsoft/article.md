@@ -1,6 +1,6 @@
 slug: first-person-hyperlapse-videos-by-microsoft
 published: Mon, 11 Aug 2014 at 06:08 PM
-updated: Sat, 19 Nov 2022 23:42:07 
+updated: Sun, 27 Nov 2022 04:42:16 
 title: First Person Hyperlapse Videos by Microsoft
 author: Brian Schrader
 status: publish

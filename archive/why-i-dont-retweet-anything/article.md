@@ -1,6 +1,6 @@
 slug: why-i-dont-retweet-anything
 published: Fri, 04 Dec 2020 at 08:43 PM
-updated: Sat, 19 Nov 2022 23:42:08 
+updated: Sun, 27 Nov 2022 04:42:17 
 title: Why I Don't Retweet Anything
 author: Brian Schrader
 tags: twitter, social media, misinformation
