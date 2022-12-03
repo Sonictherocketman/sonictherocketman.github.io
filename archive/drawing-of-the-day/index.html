@@ -146,8 +146,8 @@ DotD on Pine.blog
     }).filter(date => (
         Math.floor((date.getTime() - (new Date('2022-11-18').getTime())) / (60*60*24*1000)) >= 0 && Math.floor(((new Date().getTime()) - date.getTime()) / (60*60*24*1000)) < 14
     )).map(date => {
-        const day = date.getDate(),
-            month = date.getMonth() + 1,
+        const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate(),
+            month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1,
             year = date.getFullYear();
         return `${year}-${month}-${day}`;
     });
@@ -208,6 +208,7 @@ DotD on Pine.blog
       </div>
       </article>
     </div>
+    
     <div class="side-bar">
       <div class="promotion">
   <div data-sublime-embed="oKLwqL0q2k9NOA"></div>
@@ -260,6 +261,10 @@ DotD on Pine.blog
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/on-the-web-the-best-outcome-is-email/" title="On the Web, the Best Outcome is Email" rel="nofollow">
+    On the Web, the Best Outcome is Email
+  </a></li>
+  
   <li><a href="/archive/a-drawing-every-day/" title="A Drawing Every Day!" rel="nofollow">
     A Drawing Every Day!
   </a></li>
@@ -294,10 +299,6 @@ DotD on Pine.blog
   
   <li><a href="/archive/crossing-the-wording-threshold/" title="Crossing the Wording Threshold" rel="nofollow">
     Crossing the Wording Threshold
-  </a></li>
-  
-  <li><a href="/archive/that-time-i-lost-control-of-a-server/" title="That Time I Lost Control of a Server" rel="nofollow">
-    That Time I Lost Control of a Server
   </a></li>
   
 </ul>
@@ -389,11 +390,11 @@ DotD on Pine.blog
   
     <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
   
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
     <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
   
     <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
-  
-    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
   
     <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
@@ -465,6 +466,7 @@ DotD on Pine.blog
   </a></li>
 </ul>
     </div>
+    
   </div>
   <div style="text-align:center;">
     <div class="article-content">

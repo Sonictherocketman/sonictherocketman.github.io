@@ -1,6 +1,6 @@
 slug: drawing-of-the-day
 published: Sat, 19 Nov 2022 at 07:48 AM
-updated: Sun, 27 Nov 2022 04:43:28 
+updated: Sat, 03 Dec 2022 03:33:14 
 title: Drawing of the Day
 author: Brian Schrader
 tags: fun, programming
@@ -102,8 +102,8 @@ DotD on Pine.blog
     }).filter(date => (
         Math.floor((date.getTime() - (new Date('2022-11-18').getTime())) / (60*60*24*1000)) >= 0 && Math.floor(((new Date().getTime()) - date.getTime()) / (60*60*24*1000)) < 14
     )).map(date => {
-        const day = date.getDate(),
-            month = date.getMonth() + 1,
+        const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate(),
+            month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1,
             year = date.getFullYear();
         return `${year}-${month}-${day}`;
     });
