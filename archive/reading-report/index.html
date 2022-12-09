@@ -104,6 +104,10 @@
         key => ([key, filteredDates[key]])
     );
 
+    console.log(data.filter(d => (
+        d.readingStatus === "read" && !!d.finishedReading
+    )))
+
     // Generate the Year-By-Year Chart
 
     const margin = {top: 15, right: 50, bottom: 40, left: 20},
@@ -215,6 +219,7 @@
       </div>
       </article>
     </div>
+    
     <div class="side-bar">
       <div class="promotion">
   <div data-sublime-embed="oKLwqL0q2k9NOA"></div>
@@ -267,6 +272,10 @@
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/on-the-web-the-best-outcome-is-email/" title="On the Web, the Best Outcome is Email" rel="nofollow">
+    On the Web, the Best Outcome is Email
+  </a></li>
+  
   <li><a href="/archive/a-drawing-every-day/" title="A Drawing Every Day!" rel="nofollow">
     A Drawing Every Day!
   </a></li>
@@ -301,10 +310,6 @@
   
   <li><a href="/archive/crossing-the-wording-threshold/" title="Crossing the Wording Threshold" rel="nofollow">
     Crossing the Wording Threshold
-  </a></li>
-  
-  <li><a href="/archive/that-time-i-lost-control-of-a-server/" title="That Time I Lost Control of a Server" rel="nofollow">
-    That Time I Lost Control of a Server
   </a></li>
   
 </ul>
@@ -396,11 +401,11 @@
   
     <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
   
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
     <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
   
     <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
-  
-    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
   
     <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
@@ -472,6 +477,7 @@
   </a></li>
 </ul>
     </div>
+    
   </div>
   <div style="text-align:center;">
     <div class="article-content">

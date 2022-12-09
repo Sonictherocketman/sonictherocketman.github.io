@@ -146,6 +146,10 @@
   .promotion .disclaimer {
     font-size: initial;
   }
+
+  .row .col-6 {
+    width: 100%;
+  }
 }
 
 /* Sidebar styling */

@@ -511,3 +511,22 @@ details p {
 .rtl {
   direction: rtl;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-0.5 * 1.5rem);
+  margin-right: calc(-0.5 * 1.5rem);
+}
+
+.row .col-6 {
+  vertical-align: top;
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.row .col-12 {
+  vertical-align: top;
+  flex: 0 0 auto;
+  width: 100%;
+}

@@ -1,6 +1,6 @@
 slug: reading-report
 published: Sat, 05 Nov 2022 at 04:52 AM
-updated: Sun, 27 Nov 2022 04:43:27 
+updated: Sat, 03 Dec 2022 04:04:17 
 title: Books & Reading Statistics
 author: Brian Schrader
 status: publish
@@ -61,6 +61,10 @@ This page serves partly as a cool place to show off some data as well as a way t
     const datesRead = Object.keys(filteredDates).map(
         key => ([key, filteredDates[key]])
     );
+
+    console.log(data.filter(d => (
+        d.readingStatus === "read" && !!d.finishedReading
+    )))
 
     // Generate the Year-By-Year Chart
 
