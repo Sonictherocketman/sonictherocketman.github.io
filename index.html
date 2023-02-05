@@ -43,6 +43,36 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/my-favorite-books-from-2022/" class="u-url p-name">
+                My Favorite Books From 2022
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2023-02-05T01:35:00-08:00">
+                Posted on Sun, 05 Feb 2023 at 01:35 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>As I've <a href="/archive/reading-milestones-attention-spans-and-cool-charts/">mentioned before</a>, 2022 was a watershed year for my reading capacity, and while it is probably a little late in the new year for a retrospective post, I did want to take some time and expressly call out, and recommend, a few of the books I read last year.</p>
+<p>In no particular order, my favorite books last year were:</p>
+<h3>Never the Wind, Francesco Dimitri</h3>
+<p><a href="https://www.indiebound.org/book/9781789099812">This book</a> was an absolute joy to read. It's a coming-of-age, ghost story set in nineties Italy, and it is just so well written and charming that I found myself spellbound by every page. Give this one a go if you're in the mood for some excellent fiction.</p>
+<h3>What Diplomats Do, Brian Sir Barder</h3>
+<p><a href="https://www.indiebound.org/book/9781442271630">This one</a> I read for a yet-unannounced project I'm working on, and while I was hoping the book would be useful to me, I was not prepared for just how much fun it would be to work through. The author, a former U.K. Diplomat, spends as much time explaining the intricacies of overseas diplomacy as he does fictionalizing his time abroad and telling simply incredible stories about how and why certain diplomatic agreements were reached.</p>
+<h3>A Farewell to Arms, Earnest Hemingway</h3>
+<p>I read a lot of Hemingway last year, and <a href="https://www.indiebound.org/book/9781476764528">this one</a> was my favorite. A classic for a reason, and an excellent read. I did also like <a href="https://www.indiebound.org/book/9780743297332">The Sun Also Rises</a>.</p>
+<h3>The Matter of the Gods, Clifford Ando</h3>
+<p><a href="https://www.indiebound.org/book/9780520259867">This one</a>, I'll admit, was a bit tough to get through. It's a treatise on Roman Religion, but it is written by and for historians and classical theologians. I picked this up after scouring the citations for one of <a href="https://acoup.blog">my favorite blogs</a>, and while the book assumes you've already read the ancient classics, and the medieval christian rebuttals to those texts, (which I have not) it was still an interesting read. Ancient mysticism is <a href="/archive/history-myth-and-talking-cows/">fascinating to me</a>, and if the topic sounds enticing to you then I'd recommend skimming through this one. A deep read might be a bit too intense.</p>
+<h3>Existential Physics, Sabine Hossenfelder</h3>
+<p><a href="https://www.youtube.com/@SabineHossenfelder">Sabine</a> is one of my favorite YouTubers, and <a href="https://www.indiebound.org/book/9781984879455">her book</a> is basically just more of the same. The book is a fun romp through many different parts of Theoretical Physics and both acts as a guide to what modern science can, and cannot, hope to explain. It's a good reminder, from the perspective of a physicist, that while science has given us the modern world, it cannot ever hope to solve some very important questions.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/a-very-special-anniversary/" class="u-url p-name">
                 A Very Special Anniversary
               </a>
@@ -426,74 +456,6 @@
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/using-pushover-for-super-simple-sysadmin-alerts/" class="u-url p-name">
-                Using Pushover For Super Simple Sysadmin Alerts
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2022-04-27T23:36:00-08:00">
-                Posted on Wed, 27 Apr 2022 at 11:36 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>For those who don't know, <a href="https://pushover.net">Pushover</a> is a really great tool that allows users to easily set up and send push notifications to a smartphone. The setup is super simple, and all you need is their app and a little scripting know-how.</p>
-<p>I've used Pushover for years to help me monitor my apps and services, and over the years my uses for Pushover have evolved and grown more and more integral to my ability to keep track of the various apps I run. To me, Pushover has gone from a nice-to-have integration to an absolute necessity.</p>
-<p>I use Pushover to alert me of all kinds of things. Just to give you an idea, here are a few examples of some of the things I currently use Pushover for:</p>
-<ul>
-<li>Potential queue backups in <a href="https://pine.blog">Pine.blog</a></li>
-<li>Reporting daily user signups for <a href="https://nine9s.cloud">Nine9s</a></li>
-<li>Alerts when critical background jobs fail</li>
-<li>Alerts when nightly builds fail to deploy</li>
-<li>Alerts when a manually-run, long-running job completes</li>
-</ul>
-<p>Because Pushover is so easy to integrate with basically any codebase (and even one-off shell scripts) I use it all the time for everything from simple alerts to complex and critical reports.</p>
-<p>One particular use I'd like to call out from that list above is the nightly build alerts. <a href="https://adventurerscodex.com">Adventurer's Codex</a> has a test environment that we use to sanity check our code before a full deploy. We used to have the test environment redeploy after every single merged pull request, but that system proved incredibly fickle and error prone, so we switched to a simple nightly build. The issue with any automatic build system is that unless you have a detailed live dashboard of deployment statuses (which we do not) it's hard to know if/when a given build has finished deploying or if it encountered an error. That's where Pushover comes in.</p>
-<details><summary>Nightly Build and Deploy Script</summary>
-<hr />
-<p>This script runs as a cron job every night. It attempts to deploy the latest version of the application and if that fails it sends a notification to Pushover.</p>
-<code><pre>PUSHOVER_USER="xxxx"
-PUSHOVER_KEY="xxx"
-PUSHOVER_URL="https://api.pushover.net/1/messages.json"
-
-TITLE="AC Nightly: Build Failed to Deploy"
-MESSAGE="The latest build on Nightly has failed."
-
-log() {
-  echo "[$(date)] $@";
-}
-
-alert_admins() {
-  curl -X POST $PUSHOVER_URL \
-    -H "Content-Type: application/json" \
-    -d "{\"title\": \"$TITLE\", \"message\": \"$MESSAGE\", \
-        \"user\": \"$PUSHOVER_USER\", \"token\": \"$PUSHOVER_KEY\"}"
-}
-
-./docker-bootstrap.sh upgrade --env nightly
-STATUS=$?
-
-if [ $STATUS -eq 0 ]; then
-  log "🚀 Build completed successfully!"
-else
-  log "Uh oh. There was an issue. Alert the admins!"
-  alert_admins
-fi</pre></code>
-</details>
-
-<p>My nightly build script for Adventurer's Codex includes a section after the deployment has completed that checkes the status code of the deploy command and if it is not 0 (i.e. it failed) then it sends me a notification. Bam! Now, every morning that I don't get a notification, I know things are working as intended. If I ever wake up to a notification, then I know I have work to do.</p>
-<h3>What Happens in the Background is Ignored in the Background</h3>
-<p>Crucially, I use Pushover to alert me about problems with background tasks. Modern web apps include lots of always-running or periodic asynchronous behavior, and because &mdash; when they fail &mdash; they don't directly result in user feedback or a big, loud error page mistakes, bottlenecks, and bugs often go unnoticed or unaccounted for.</p>
-<p>Pushover solves those issues. It's trivial to write code that checks for bad behavior or that catches difficult-to-reach-but-critical bugs and just send off a notification.</p>
-<p>I used to use email for this sort of thing, and while email is still a good solution, the setup is actually more involved. Most VPSs aren't allowed to send emails directly anymore (due to concerns over spam) and configuring an email provider is just as much work if not slightly more work than using Pushover. In some cases email is more flexible and might be better for larger teams, but I almost always reach for Pushover these days instead of email.</p>
-<p>It's just that good.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -547,6 +509,10 @@ fi</pre></code>
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/my-favorite-books-from-2022/" title="My Favorite Books from 2022" rel="nofollow">
+    My Favorite Books from 2022
+  </a></li>
+  
   <li><a href="/archive/a-very-special-anniversary/" title="A Very Special Anniversary" rel="nofollow">
     A Very Special Anniversary
   </a></li>
@@ -581,10 +547,6 @@ fi</pre></code>
   
   <li><a href="/archive/the-simple-joy-of-learning-to-play-piano/" title="The Simple Joy of Learning to Play Piano" rel="nofollow">
     The Simple Joy of Learning to Play Piano
-  </a></li>
-  
-  <li><a href="/archive/using-pushover-for-super-simple-sysadmin-alerts/" title="Using Pushover for Super Simple SysAdmin Alerts" rel="nofollow">
-    Using Pushover for Super Simple SysAdmin Alerts
   </a></li>
   
 </ul>
