@@ -43,8 +43,214 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/automate-the-boring-stuff-with-chatgpt/" class="u-url p-name">
+                
+                Automate the Boring Stuff with ChatGPT
+                
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2023-02-16T22:49:00-08:00">
+                Posted on Thu, 16 Feb 2023 at 10:49 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>There's been a lot of buzz around ChatGPT lately and most recently the discussion followed <a href="https://www.youtube.com/watch?v=jPhJbKBuNnA">Tom Scott's video</a> in which he describes how he was able to use ChatGPT to generate working code to solve a problem&mdash;including asking it to fix several bugs with its own implementation&mdash;and then write an ad spot for him.</p>
+<p>In the video Tom expresses his disquiet with the ongoing advances in machine learning and goes so far as to predict that "everything is about to change" in the same way "everything changed" once smartphones came along in the mid-aughts.</p>
+<p>I've enjoyed using text-to-image AIs like <a href="https://www.midjourney.com/app/">Midjourney</a> for a while now, but I'd largely stayed clear of things like ChatGPT. Tom's video though got me curious, and so I logged on to see what all the fuss was about.</p>
+<p>tl;dr I was pleasantly surprised.</p>
+<h3>Introducing DeveloperGPT</h3>
+<p>There are so many things that developers do day-to-day that are at the same time important and dreadfully dull, and like many devs I find myself searching for ways to both save time and automate away as much menial work as I can. It's one of the <a href="/archive/take-a-break-script-something/">reasons I love Bash so much</a>. And while at some companies such work is often pawned off to junior developers in need of experience, as a one-man shop I have definite use for a sort of algorithmic junior developer who could take on some of that less-engaging work. And after watching Tom's video I started to hope that perhaps ChatGPT could be exactly that.</p>
+<p>In order to see if ChatGPT could fill this role, I did what anyone looking to hire a junior developer would do: I gave it an interview.</p>
+<h3>Giving ChatGPT a Coding Interview</h3>
+<p>In total I gave ChatGPT five questions to answer. These questions were almost entirely development related and spanned the range of what I'd expect a junior developer to be able to do given time and access to the internet.</p>
+<details><summary>Test 1: Django Unit Tests: ✅</summary>
+
+<h5>Prompt</h5>
+<p>write for me 4 python django unit test cases that each make a request to /api/users to do the following: create a user record, fetch a user record, delete a user record, and update a user record. Make sure to include partial update using the PATCH method. And be sure to use Python 3.10 compatible code.</p>
+
+<h5>Response</h5>
+<p>Sure, here are 4 Python Django unit test cases that cover the create, fetch, delete, and update functionality of the /api/users endpoint. These test cases assume that you have a Django application with a User model and a corresponding API viewset that handles CRUD operations for users.</p>
+
+<code class="python"><pre>
+from django.urls import reverse
+from rest_framework.test import APITestCase
+from rest_framework import status
+from .models import User
+
+class UserTests(APITestCase):
+    def test_create_user(self):
+        """
+        Ensure we can create a new user object.
+        """
+        url = reverse('user-list')
+        data = {'username': 'testuser', 'email': 'test@example.com'}
+        response = self.client.post(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(User.objects.count(), 1)
+        self.assertEqual(User.objects.get().username, 'testuser')
+
+        # ... (mine: omitted for brevity) ...</pre></code>
+
+<a href="https://gist.github.com/Sonictherocketman/dd7c06c3792a55cba420324bab365b19">Complete Generated Source Code&#8594;</a>
+
+<p>These test cases cover the basic functionality of the /api/users endpoint and ensure that users can be created, fetched, updated, and deleted. They also cover partial updates using the PATCH method. Note that you will need to update the URLs used in the reverse() function to match the actual URLs for your application.</p>
+</details>
+
+<p>The first test I gave ChatGPT was simply to write a suite of unit tests to verify that a Django User REST API allowed for standard CRUD operations. In general it did very well, even including a test for partial updates via the PATCH method, but it did assume I also wanted it to use Django REST Framework and its implementation of the PUT and POST tests don't include all the correct values. The assumption to use DRF is a fair one, but the other mistake is a red flag.</p>
+<p>Still though it would have saved me from writing the bulk of the code&mdash;assuming it works. I didn't actually test the code.</p>
+<details><summary>Test 2: S3 File Clean Up: ✅</summary>
+
+<h5>Prompt</h5>
+<p>write for me a python function that pulls data from a CSV file containing files that need to be deleted from S3 and that then deletes each file. Include error handling if a file cannot be deleted and return a list of all files that were and were not deleted. Also include suite of three test cases that ensure the function works, that errors are caught, and that the return value is two lists.
+</p>
+
+<h5>Response</h5>
+<p>As an AI language model, I don't have the capability to access files from your computer. However, I can provide you with a sample code that demonstrates how to delete files from S3 using the Boto3 library in Python.</p>
+
+<code class="python"><pre>
+    import boto3
+    import csv
+
+    def delete_files_from_s3(file_path):
+        # Initialize S3 client
+        s3 = boto3.client('s3')
+
+        # Read the CSV file containing file names
+        with open(file_path, 'r') as f:
+            reader = csv.reader(f)
+            files = list(reader)
+
+        # Delete each file from S3
+        deleted_files = []
+        failed_files = []
+        for file in files:
+            try:
+                s3.delete_object(Bucket='your-bucket-name', Key=file[0])
+                deleted_files.append(file[0])
+            except Exception as e:
+                failed_files.append(file[0])
+                print(f"Failed to delete {file[0]}: {e}")
+
+        # Return the list of deleted and failed files
+        return deleted_files, failed_files
+</pre></code>
+
+<p>The function takes the path of the CSV file containing file names as input. It reads the file using the csv module and deletes each file from S3 using the delete_object method of the Boto3 client. If a file cannot be deleted, it is added to the list of failed files and an error message is printed. The function returns two lists, one containing the names of deleted files and the other containing the names of failed files.</p>
+
+<p>Here are three test cases to ensure that the function works correctly:</p>
+
+<code class="python"><pre>
+    # Test case 1: All files are deleted successfully
+    deleted_files, failed_files = delete_files_from_s3('file_list.csv')
+    assert len(deleted_files) == 5
+    assert len(failed_files) == 0
+
+    # Test case 2: Some files cannot be deleted
+    deleted_files, failed_files = delete_files_from_s3('file_list_with_errors.csv')
+    assert len(deleted_files) == 3
+    assert len(failed_files) == 2
+
+    # Test case 3: CSV file does not exist
+    deleted_files, failed_files = delete_files_from_s3('nonexistent_file.csv')
+    assert len(deleted_files) == 0
+    assert len(failed_files) == 0</pre></code>
+
+<p>In the first test case, all files are deleted successfully and the function should return a list of 5 deleted files and an empty list of failed files. In the second test case, some files cannot be deleted and the function should return a list of 3 deleted files and a list of 2 failed files. In the third test case, the CSV file does not exist and the function should return empty lists for deleted and failed files.</p>
+</details>
+
+<p>The second test involved writing a simple Python function to clean up stray files in S3 using a list provided by a CSV file. ChatGPT scored pretty well here. It included the asked-for error handling and API interface, but its tests are not correct. The third test especially would crash when the file was opened, but the script does not account for that.</p>
+<p>Once again I didn't run the code, but assuming the use of boto3 is anywhere close to the actual API, it was faster to have ChatGPT write the code than for me to do it.</p>
+<details><summary>Test 3: Two-Column Layout in React: ✅</summary>
+
+<h5>Prompt</h5>
+<p>write for me a JSX file using React that displays a two column layout with a list of appointments in the left column and the appointment details on the right columns. Use the react-bootstrap library for styling and no other libraries. Assume the list of appointments are passed into the component as props.</p>
+
+<h5>Response</h5>
+<p>Sure, here's an example of a JSX file using React that displays a two-column layout with a list of appointments on the left column and the appointment details on the right column, using the react-bootstrap library for styling:</p>
+
+<code class="js"><pre>
+import React from 'react';
+import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap';
+    function AppointmentList({ appointments }) {
+      return (
+        &lt;Container&gt;
+          &lt;Row&gt;
+            &lt;Col sm={4}&gt;
+              &lt;ListGroup&gt;
+                {appointments.map((appointment) =&gt; (
+                  &lt;ListGroup.Item key={appointment.id}&gt;
+                    {appointment.title}
+                  &lt;/ListGroup.Item&gt;
+                ))}
+              &lt;/ListGroup&gt;
+            &lt;/Col&gt;
+            &lt;Col sm={8}&gt;
+              &lt;Card&gt;
+                &lt;Card.Body&gt;
+                  &lt;Card.Title&gt;Appointment Details&lt;/Card.Title&gt;
+                  &lt;Card.Subtitle className=&quot;mb-2 text-muted&quot;&gt;Title&lt;/Card.Subtitle&gt;
+                  &lt;Card.Text&gt;
+                    Lorem ipsum dolor sit ...
+                  &lt;/Card.Text&gt;
+                  &lt;Card.Subtitle className=&quot;mb-2 text-muted&quot;&gt;Date&lt;/Card.Subtitle&gt;
+                  &lt;Card.Text&gt;
+                    January 1, 2023
+                  &lt;/Card.Text&gt;
+                  &lt;Card.Subtitle className=&quot;mb-2 text-muted&quot;&gt;Location&lt;/Card.Subtitle&gt;
+                  &lt;Card.Text&gt;
+                    123 Main St, Anytown USA
+                  &lt;/Card.Text&gt;
+                &lt;/Card.Body&gt;
+              &lt;/Card&gt;
+            &lt;/Col&gt;
+          &lt;/Row&gt;
+        &lt;/Container&gt;
+      );
+    }
+
+    export default AppointmentList;</pre></code>
+
+<p>Here, the AppointmentList component takes in a prop called appointments, which is an array of appointment objects. The left column displays the list of appointments using the ListGroup component from react-bootstrap, and the right column displays the appointment details using the Card component. You can customize the appearance of the list and the details as desired by modifying the styling properties of the components.</p>
+</details>
+
+<p>This test surprised me. I had ChatGPT create a two column layout in React for an appointment management application. Explaining a complex UI in words is difficult without visual aids, so I expected some misunderstandings, but it powered through and did exactly what I asked. It failed to add any navigation to the app nor did it use the data inside of the appointments array, so it's not really usable as a component, but it's certainly a good starting point and one I'd be happy to use as a starting template should I ever need such a thing.</p>
+<p>That said, without tooling to make ChatGPT more available during development it would be easier to just write the layout myself.</p>
+<details><summary>Test 4: RSS Parsing in Swift: ✅</summary>
+
+<h5>Prompt</h5>
+<p>write for me a Swift RSS feed parser that takes in a string of XML data and produces a Post object with a title, description, pubdate, and enclosure fields. Use only the swift standard library</p>
+
+<h5>Response</h5>
+<p>Sure, here's an example Swift RSS feed parser that uses the Swift standard library to parse a string of XML data and produce a Post object with a title, description, pubdate, and enclosure fields:</p>
+
+<a href="https://gist.github.com/Sonictherocketman/dd7c06c3792a55cba420324bab365b19">Check out the code here. It's very long.</a>
+</details>
+
+<p>This last test was by far the most involved and open-ended. I asked ChatGPT for a Swift-based RSS Feed Parser and it certainly gave me something close. It used the correct Foundation APIs and even understood the need to concatenate the element text, but it failed to generate a valid test fixture (or even valid XML) and there's absolutely no error handling to speak of.</p>
+<p>That said, it did produce valid XML once I called it out and there's something to be said for such humility. I would certainly use this code as a starting point if I needed to build something like this in the near future.</p>
+<h3>Should I Hire ChatGPT?</h3>
+<p>In general I'd say it performed fairly well as a developer, though its ability to imitate bloggers is very lacking. For the fifth test I tried to have it write this post, but the output didn't sound like me at all and it kept trying to sell itself using features it doesn't have. Overall I'd give ChatGPT a tentative recommendation and would probably hire it contingent of course on a 30-day probationary period to see if it can keep its tendency toward exaggeration in check.</p>
+<h3>It's Not an AI Apocalypse, It's Better</h3>
+<p>I don't really buy the idea that ChatGPT and its ilk will do much to disrupt our everyday lives in a dramatic way. I do however see both it and it's text-to-image cousins as being more and more useful as tools to automate away so much of the boring or tedious work of being a developer or a person on the internet in general.</p>
+<p>Like I said, I already use Midjourney to create images for my D&amp;D campaign and those images have had a significant impact in improving the gaming experience. We were never going to contract an artist for four once-a-week landscapes and so economically speaking the AI has had no external effect. Our D&amp;D games just got marginally better. And that's great!</p>
+<p>ChatGPT seems to me like it could be yet another advantage that enterprising developers would use to enhance their own productivity. If something like ChatGPT ever shipped inside of an IDE like Xcode, I could imagine a whole suite of amazing features (automatic complex refactors, automating test writing, and more). GitHub's Copilot does some of this, but it's in its infancy. In general I'd expect to see tools like ChatGPT improve a developer's productivity and let us focus more on the design and nuances of our code rather than on the tedious implementation; and for that I am <em>very</em> excited.</p>
+<!-- Begin Syntax Stylesheet -->
+<p><link rel="stylesheet" href="/bin/highlight.default.min.css"></p>
+<script src="/bin/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/my-favorite-books-from-2022/" class="u-url p-name">
+                
                 My Favorite Books From 2022
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -74,7 +280,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/a-very-special-anniversary/" class="u-url p-name">
+                
                 A Very Special Anniversary
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -100,7 +308,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/on-the-web-the-best-outcome-is-email/" class="u-url p-name">
+                
                 On The Web, The Best Outcome Is Email
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -166,7 +376,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/a-drawing-every-day/" class="u-url p-name">
+                
                 A Drawing Every Day!
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -194,7 +406,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/reading-milestones-attention-spans-and-cool-charts/" class="u-url p-name">
+                
                 Reading Milestones, Attention Spans, And Cool Charts
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -234,7 +448,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/stargazing-pictures/" class="u-url p-name">
+                
                 Stargazing Pictures
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -287,7 +503,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/step-counts-and-goal-setting/" class="u-url p-name">
+                
                 Step Counts And Goal-Setting
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -333,7 +551,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/fun-with-math-calculating-multiplicative-persistence/" class="u-url p-name">
+                
                 Fun With Math: Calculating Multiplicative Persistence
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -383,7 +603,9 @@
         <div class="post h-entry">
           <div class="article-title">
             <h1><a href="/archive/whether-to-monitor-the-weather-and-more/" class="u-url p-name">
+                
                 Whether To Monitor The Weather And More
+                
               </a>
             </h1>
             <small style="font-style:italic;">
@@ -410,48 +632,6 @@
 <div class="footnote">
     <sup>1.</sup> Demin is named after the ship's first mate in one of my D&amp;D games. He was a very good first mate and he's a very helpful little computer too.
 </div>
-          </div>
-        </div>
-      </article>
-      
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/the-simple-joy-of-learning-to-play-piano/" class="u-url p-name">
-                The Simple Joy Of Learning To Play Piano
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2022-05-05T01:41:00-08:00">
-                Posted on Thu, 05 May 2022 at 01:41 AM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>Back in January, I started to teach myself how to play piano. I'd played before when I was a kid &mdash; like many people do &mdash; but I was never very good and it didn't stick once I'd stopped taking lessons. I'd had a keyboard for years, stowed away at my parent's place, but I'd rarely ever used it. I had occasionally tried to pick up piano over the years, but just like when I was a kid: it didn't stick.</p>
-<p><img
-    alt="My paino setup"
-    src="/images/blog/piano.jpg"
-    style="height:auto;width:320px;"
-    class="image-right"
-/></p>
-<p>This time with the keyboard visible, and in the center of the room, I hoped things would be different. It's been almost four months now, and I am happy to report that I am still practicing and importantly: I'm getting better!</p>
-<p>Luckily, I have some music theory under my belt, and I've played guitar, both <a href="https://sonicrocketman.bandcamp.com">solo</a> and <a href="https://thefourthsection.com">in bands</a> for years, so I know my way around musically. That said, neither of those skills prepare you to actually play the piano. It helps to know where middle C is and how to make a chord, but neither of those skills help you contort your hands to actually play the notes and chords you want.</p>
-<p>That said, I do have two tips that I'd like to share.</p>
-<h3>Set Simple Goals, Then Iterate</h3>
-<p>Back in January, I tried to start by simply practicing scales. You know? The thing everyone hates? Well, it turns out they're super useful.</p>
-<p>I started with a simple 5-note scale. I played it over and over again: up the scale and back down as smoothly as possible, one hand at a time. Then I would move it up a key and repeat the process. Not all keys are beginner friendly, so I would often skip complicated keys and stick to the easy ones. Once I had that down I started adding in a few little flairs. Instead of just playing the scales I would keep the time and tempo, but work in a few extra notes or I would start at the root and work up, but on the way back down I'd end on the 5th instead of the root. Little changes.</p>
-<p>When something is difficult it can be pretty demoralizing if you can't see yourself making progress. That's where small goals come in. Each time I'd sit down to practice (and after a short warm up) I would set a small goal for myself. Sometimes the goal would be so minor that it would hardly seem worthwhile, but I always tried to explicitly set a tangible goal.</p>
-<p>It's a slow process, but I am getting measurably better and I can see the results each and every time I sit down to play.</p>
-<h3>Don't Put it Away</h3>
-<p>I learned how to play guitar in high school and while my teacher gave me lots of advice, one thing he said always stuck with me. It was advice about how to make sure you keep practicing.</p>
-<blockquote>
-<p>Never put your guitar away, and keep it within reach. That way you can play it whenever you have even a little bit of downtime. Play it while your computer is loading, while you're waiting for a text message, or even while you're watching a video. You don't need to play a song. Even just strumming a chord, or picking a melody can help.</p>
-<p>Those little moments of practice add up.</p>
-</blockquote>
-<p>To this day my guitar is within arms reach of my desk, and I play it when I need a break, when I need to think, or even just when I'm bored.</p>
-<p>I feel the same idea has helped me learn piano. The keyboard is in the middle of my living room. I have to walk past it to get water, and whenever I do I think about playing. Often times I will play before or after eating, even just for a few minutes.</p>
-<p>The little moments really do add up.</p>
           </div>
         </div>
       </article>
@@ -509,6 +689,10 @@
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/automate-the-boring-stuff-with-chatgpt/" title="Automate the Boring Stuff with ChatGPT" rel="nofollow">
+    Automate the Boring Stuff with ChatGPT
+  </a></li>
+  
   <li><a href="/archive/my-favorite-books-from-2022/" title="My Favorite Books from 2022" rel="nofollow">
     My Favorite Books from 2022
   </a></li>
@@ -543,10 +727,6 @@
   
   <li><a href="/archive/whether-to-monitor-the-weather-and-more/" title="Whether to Monitor the Weather and More" rel="nofollow">
     Whether to Monitor the Weather and More
-  </a></li>
-  
-  <li><a href="/archive/the-simple-joy-of-learning-to-play-piano/" title="The Simple Joy of Learning to Play Piano" rel="nofollow">
-    The Simple Joy of Learning to Play Piano
   </a></li>
   
 </ul>
