@@ -43,6 +43,31 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/a-cross-post-life/" class="u-url p-name">
+                
+                A Cross Post Life
+                
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2023-03-10T03:47:00-08:00">
+                Posted on Fri, 10 Mar 2023 at 03:47 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I use <a href="https://pine.blog/">Pine.blog</a> for microblogging, and following the Post Once Sindicate Elsewhere strategy, I like to have those updates automatically cross-posted to other platforms like <a href="https://micro.blog/sonicrocketman">Micro.Blog</a> and <a href="http://twitter.com/sonicrocketman">Twitter</a> so that they gain a larger audience, and so that anyone who wants to can follow me no matter which platform or software they prefer.</p>
+<p>Obviously I'm not manually posting to five different sites&mdash;that's what computers are for&mdash;and so I need some way to automate that work. Micro.blog makes most of that very easy since it can automatically ingest content from an RSS feed and not only add it to my microblog there, but also cross-post it to Twitter. That only leaves Mastodon out in the cold.</p>
+<p>In recent months there's been a lot of <a href="/archive/on-the-web-the-best-outcome-is-email/">new activity</a> on Mastodon and I've really enjoyed seeing a larger segment of people discover such a great open-web focused tool. It was well past time that I add Mastodon to my cross-posting workflow, but there was a problem: Mastodon's posts are text only (with links at the bottom&mdash;like Twitter), but Pine.blog outputs HTML (or Markdown). I tried several tools, but each one would mangle my posts or just include the raw HTML as the text, neither of which was an acceptable solution. I needed something custom.</p>
+<p>So I <a href="https://gist.github.com/Sonictherocketman/7951ec710b7be1f675e2e95cbcc5220e">wrote a script</a>! It runs every few minutes on the Raspberry Pi under my desk checking for new posts from Pine.blog and posting them to Mastodon. It starts with the raw Markdown, parses the HTML, strips and appends links, and even keeps track of what has and hasn't been posted before. It's a pretty handy script and I encourage you to check it out if you need something like it. I even made use of one of Mastodon's very handy features: <code>Idepotency-Key</code> which helps prevent duplicate entries from being posted in a short period of time.</p>
+<p>As of today my posts are now <a href="https://micro.blog/sonicrocketman">Live On Mastodon</a>, so you can rest assured that if you follow me there you aren't missing a beat. You'll get all... <strong>five posts</strong> I've made this year!</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/automate-the-boring-stuff-with-chatgpt/" class="u-url p-name">
                 
                 Automate the Boring Stuff with ChatGPT
@@ -599,43 +624,6 @@ import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap';
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/whether-to-monitor-the-weather-and-more/" class="u-url p-name">
-                
-                Whether To Monitor The Weather And More
-                
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2022-08-16T22:59:00-08:00">
-                Posted on Tue, 16 Aug 2022 at 10:59 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>Things have been awfully quiet here for the past few months. Lots of other <a href="/archive/the-simple-joy-of-learning-to-play-piano/">side</a> <a href="/archive/bibliography">projects</a> have been taking up my time lately and I haven't felt the need to blog much. I have been doing a lot of reading and writing though and I will hopefully write something about all that stuff soon. For now though, I thought I'd talk about a little side project I've had running for the last half-year.</p>
-<p>I have a Raspberry Pi bolted to the bottom of my desk. It's name is Demin<sup>1</sup> and it does all kinds of useful things for me. One of those things is collecting the current ambient temperature and atmospheric pressure in the room. Originally I intended to chart this data and see if it correlates with me having random headaches. I'd always heard that pressure changes can cause headaches, but I'd never tested the theory myself. Luckily (and unluckily) my headache sample-set this year is far too small to use to reasonably answer this question, but that doesn't mean that Demin's work is all for naught!</p>
-<figure class="text-center">
-<img class="image-center" alt="My Personal Assistant" src="/images/blog/demin.jpg" />
-<figcaption><small>Demin at work. That's the sensor hanging off the top</small></figcaption>
-</figure>
-
-<p>Using a mixture of R, Python, bash, and a SQLite database I've been recording, tracking, and publishing this data for the past several months on an personal website on my local network. But since the data is very cool looking, I figured I'd post the full chart here. I've also uploaded a <a href="https://gist.github.com/Sonictherocketman/ddf3315eaf9c979bf7341400359722ec#file-take-reading-py">gist of the code I use to collect the sensor measurements</a>. The script has a small bash wrapper script that is run via cron job which collects new measurements every five minutes. I've also set up a CGI script (yeah really) that allows me to see the most recent measurements from any device on my local network.</p>
-<figure class="text-center">
-<img class="image-center" alt="My Weather History" src="/images/blog/readings.jpg" />
-<figcaption><small>The last several months of data. Notice the unseasonably cool July temperatures. Very interesting.</small></figcaption>
-</figure>
-
-<p>As I've said <a href="/archive/take-a-break-script-something/">before</a>, I love doing the odd bit of scripting to automate menial work. I <em>could have</em> just bought a small indoor weather station, but that wouldn't provide me with programatic access to either real-time or historical data. Plus putting this whole thing together was half the fun anyway.</p>
-<div class="footnote">
-    <sup>1.</sup> Demin is named after the ship's first mate in one of my D&amp;D games. He was a very good first mate and he's a very helpful little computer too.
-</div>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -689,6 +677,10 @@ import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap';
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/a-cross-post-life/" title="A Cross Post Life" rel="nofollow">
+    A Cross Post Life
+  </a></li>
+  
   <li><a href="/archive/automate-the-boring-stuff-with-chatgpt/" title="Automate the Boring Stuff with ChatGPT" rel="nofollow">
     Automate the Boring Stuff with ChatGPT
   </a></li>
@@ -723,10 +715,6 @@ import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap';
   
   <li><a href="/archive/fun-with-math-calculating-multiplicative-persistence/" title="Fun with Math: Calculating Multiplicative Persistence" rel="nofollow">
     Fun with Math: Calculating Multiplicative Persistence
-  </a></li>
-  
-  <li><a href="/archive/whether-to-monitor-the-weather-and-more/" title="Whether to Monitor the Weather and More" rel="nofollow">
-    Whether to Monitor the Weather and More
   </a></li>
   
 </ul>
