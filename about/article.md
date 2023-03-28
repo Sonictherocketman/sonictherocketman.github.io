@@ -13,6 +13,8 @@ Oh, and I wrote a book about [how to be an Indie Developer](https://goingindie.t
 
 I frequent lots of places on the Internet most of which I've included in the sidebar on the [home page](/) of this site. I [read a lot][read], I [write music][bc], and I [build things][gh]. I've open sourced a [few][cache] [different][b2] [things][variant], and I’ve built an [HTCPCP-compliant Coffee Pot][coffee]. As you can probably tell, I care deeply about the Web &mdash; and technology more broadly. I care about the future of our discourse on the web, the standards on which it’s based, the changes in society it helps create, how we as people shape it, and how it shapes us in turn.
 
+<div class="image-container hide-on-mobile"><a href="https://thefourthsection.com" title="Check out my band. The Fourth Section"><img src="/images/misc/guitar.jpg" alt="Playing guitar" style="height: auto; width: 300px; margin-top: 8px; margin-bottom: 4px;"></a></div>
+
 I occasionally write for several outlets including [a few local papers][bib] and at [Democracy &amp; Progress][dnp]: a blog about San Diego &amp; California policy. In recent years my attention has been focused on local &amp; state policy issues including addressing Homelessness, Housing Affordability &amp; Availability, and Climate Change.
 
 I built this site in 2012 to teach myself programming and I've been blogging here ever since. Since then I've worked in government, medical research, and at a start-up. Technically I learned how to build planes and rockets in school, but I doubt I'd remember any of that now. 🚀
@@ -20,7 +22,7 @@ I built this site in 2012 to teach myself programming and I've been blogging her
 
 ## Contact Me
 
-Shoot me an email at [brian@brianschrader.com][email], but I might take a while to respond. [Twitter][tw] works too. You can also send [WebMentions][webm] to any of my blog posts if that's more your thing.
+Shoot me an email at [brian@brianschrader.com][email], but I might take a while to respond. You can ping me on [Mastodon][mast], though [Twitter][tw] works too. You can also send [WebMentions][webm] to any of my blog posts if that's more your thing.
 
 [email]: mailto:brian@brianschrader.com
 [tw]: http://twitter.com/sonicrocketman
@@ -39,3 +41,4 @@ Shoot me an email at [brian@brianschrader.com][email], but I might take a while 
 [bib]: /archive/bibliography
 [webm]: https://indieweb.org/Webmention
 [read]: /archive/reading-report/
+[mast]: http://mastodon.social/@sonicrocketman
