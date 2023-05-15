@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reader - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
+    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.0">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.0">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+	<meta property="og:title" content="Reader" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://brianschrader.com/archive/reader/" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  </head>
+  <body>
+    <div id="content">
+      
+<div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple | Reader
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    <div style="display: flex; justify-content: right; gap: 1.5rem;">
+      <a href="." role="button" onclick="reload()">⟳&nbsp;Reload</a>
+      <a href="." role="button" onclick="logout()">🚪&nbsp;Logout</a>
+    </div>
+  </nav>
+</div>
+
+      
+  <div class="bars">
+    <div id="timeline" class="main-bar">
+    </div>
+    <div class="side-bar">
+      <h4>About this Project</h4>
+      <p>
+        The BiteofanApple Mastodon Client is a toy app built in an evening
+        as a way of playing with the Mastodon API and live streaming.
+      </p>
+      <p>
+        It stores no data remotely. All keys are kept on device in Local Storage.
+      </p>
+      <p>
+        <a href="reader.js">Check out the code &#8594;</a>
+      </p>
+      <p>
+        Yes, it does stream data. Just be patient.
+      </p>
+      <p>
+        You can also add it to your home screen for quick access, though I have no idea why you would. <a href="https://tapbots.com/ivory/">Use Ivory instead.</a>
+      </p>
+      <h4>Other Projects</h4>
+      <p>
+        I build other things besides useless toy apps.
+      </p>
+      <p>
+        <a href="/">Check those out here &#8594;</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="reader.js"></script>
+
+  <template id="post">
+    <article class="h-entry">
+      <div style="padding: 3%;">
+        <div class="header" style="
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        ">
+          <img class="acct-image" height="40px" width="40px" style="border-radius: 50%;">
+          <span class="acct-name" style="font-weight: bold;"></span>
+          <small class="reblogged-by">
+            🚀
+          </small>
+        </div>
+        <h1 class="article-title p-name"></h1>
+        <div class="article-content e-content"></div>
+      </div>
+    </article>
+  </template>
+
+    </div>
+  </body>
+</html>
