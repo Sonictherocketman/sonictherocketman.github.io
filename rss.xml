@@ -1,5 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Sun, 30 Apr 2023 00:40:19 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/some-thoughts-on-adventurers-codex</guid><pubDate>Sun, 30 Apr 2023 00:39:00 -0800</pubDate><category>programming</category><category>software development</category><category>adventurerscodex</category><title>Some Thoughts on Adventurer's Codex</title><link>http://brianschrader.com/archive/some-thoughts-on-adventurers-codex/</link><description><![CDATA[<p>Last year <a href="https://adventurerscodex.com">Adventurer's Codex</a> reached its 8th birthday. It's a milestone that I honestly didn't believe we'd ever hit, both because eight years is a long time and because&mdash;if I'm honest&mdash;I've never been sure how long this little project would actually last.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 31 Jul 2023 22:53:43 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/announcing-paper-peaks</guid><pubDate>Mon, 31 Jul 2023 22:53:00 -0800</pubDate><category>music</category><title>Announcing Paper Peaks</title><link>http://brianschrader.com/archive/announcing-paper-peaks/</link><description><![CDATA[<p>Nearly two years ago, my band <a href="https://thefourthsection.com">The Fourth Section</a> released an EP called <a href="/archive/the-road-to-glass--stone/">Glass &amp; Stone</a> and this month we released our first, full-length album: Paper Peaks.</p>
+<p>Recording an album has been a long-time goal of mine and something we as a band have been working toward for over three years.</p>
+<p><a href="https://thefourthsection.com">
+<img
+    src="https://thefourthsection.com/img/paperpeaks.webp"
+    class="image-center"
+    style="width: 400px;"
+/>
+</a></p>
+<p>I don't have much to say about the album, other than you should listen to it, but I can say it's been a true honor to have been able to make something like this with such amazing people. The three of us have worked hard since March to record, produce, publish, and promote the thing and it's taken a lot more out of us than I think we expected. Paper Peaks was a labor of love and something that could not have been done save for the support of my bandmates, our producer Jeff Berkley, and so many others.</p>
+<p>If you like indie-rock and alt-rock, give it a listen and if you like it, please share it with your friends.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/some-thoughts-on-adventurers-codex</guid><pubDate>Sun, 30 Apr 2023 00:39:00 -0800</pubDate><category>programming</category><category>software development</category><category>adventurerscodex</category><title>Some Thoughts on Adventurer's Codex</title><link>http://brianschrader.com/archive/some-thoughts-on-adventurers-codex/</link><description><![CDATA[<p>Last year <a href="https://adventurerscodex.com">Adventurer's Codex</a> reached its 8th birthday. It's a milestone that I honestly didn't believe we'd ever hit, both because eight years is a long time and because&mdash;if I'm honest&mdash;I've never been sure how long this little project would actually last.</p>
 <p>These days Adventurer's Codex is primarily built and maintained by three people: two are founders (including myself) and the third is a friend of ours, and as with any long-lived side-project Adventurer's Codex has occasionally suffered a lack of interest or enthusiasm from all of us. At the beginning the three founders met every week (sometimes twice a week) to build new features and plan the roadmap, later we rarely met at all, and sometimes nearly a year could go by before any of us even thought about Adventurer's Codex at all.</p>
 <p>These days though the app is alive and healthy and with the support of our amazing <a href="http://patreon.com/adventurerscodex">patrons on Patreon</a> we continue to make improvements and release features at a steady pace, and this year we're set to release a slate of amazing features that eight-years-ago-me could only dream of.</p>
 <p>It makes me very happy to say this: the future is very bright for Adventurer's Codex.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/more-scripting-nonsense-rocket-edition</guid><pubDate>Fri, 17 Mar 2023 23:15:00 -0800</pubDate><category>programming</category><category>fun</category><title>More Scripting Nonsense: Rocket Edition</title><link>http://brianschrader.com/archive/more-scripting-nonsense-rocket-edition/</link><description><![CDATA[<p>I was browsing <a href="https://gist.github.com/Sonictherocketman">my Github Gists</a> the other day, as you do, and I came across my first one published back in 2015: <a href="https://gist.github.com/Sonictherocketman/11339552">Rocket.py</a>. This script was one part of a rocket trajectory simulator I built for a class in college. Now I don't remember much about that project, but I do remember that the simulation never actually worked&mdash;or rather that it never worked <em>properly</em>.</p>
@@ -295,38 +305,4 @@ import { Container, Row, Col, ListGroup, Card } from 'react-bootstrap';
 <p>Now, I consider listening to audiobooks to be fundamentally equivalent to reading physical books in almost every way. For me though, the act of sitting down to read a book, as opposed to listening while doing something else, is a much more conscious and deliberate act. I've recently gone back to reading Fiction again. I've done this partly to give myself a break from Non-Fiction, and partially to rediscover the joy of actually reading fiction with my eyeballs.</p>
 <p>I still love listening to books and I will of course continue to do so, but sitting down with a book is a fundamentally different activity than listening to one. Like many people I've found my own attention span shrinking as I spend more and more time online. I think that's a bad thing, and I think sitting down with a book helps me re-expand that attention span where listening to a book doesn't (for me at least). These past three years then have been not just a personal milestone for me in terms of my ability to read more books, but they've also been a conscious exercise in expanding my own attention span and improving my ability to think. Both of those are important metrics to track in this distraction-filled time we live in.</p>
 <h3>Watersheds</h3>
-<p>I know many people might look at my reading statistics and laugh. Nineteen books might not seem like a lot to some, but it's a ton for me, and while I'll never truly be able to recover my book-reading numbers from before 2020 &mdash; and especially not from a decade ago &mdash; I am fairly confident that I'm correct when I say 2022 has truly been a great year for my reading habits. Let's hope the trend continues and I don't fall of the train anytime soon.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/stargazing-pictures</guid><pubDate>Sun, 04 Sep 2022 17:21:00 -0800</pubDate><category>photography</category><category>space</category><title>Stargazing Pictures</title><link>http://brianschrader.com/archive/stargazing-pictures/</link><description><![CDATA[<p>Last night I went stargazing with a few friends, and while the weather did conspire against us we did get a few good chances to see the stars through a friend's telescope. The photos through the telescope are no where near as good as the actual sights, but that's largely because we didn't bring any camera equipment. With time, practice, and proper gear, we'd likely have done a lot better. That said, w e also took some pictures just with our phones and the results were a lot more impressive than any of us expected.</p>
-<p><img
-    alt="A shot of stars through the lens of a telescope"
-    class="image-center"
-    style="max-width: 350px;"
-    src="/images/blog/telescope-stars.jpeg"
-/>
-<center><small>
-    This is the best shot I could get through the telescope eyepiece with my phone. The actual view was great, but the pictures: not so much.
-</small></center></p>
-<div style="display:flex; justify-content:center; flex-wrap:wrap;">
-
-    <div style="flex:1;">
-        <img
-            alt="A shot of a starfield and clouds through my iphone camera"
-            style="min-width: 200px;"
-            class="image-center"
-            src="/images/blog/star-field.jpeg"
-        />
-        <center><small>
-            A shot of the night sky with just my iPhone on a 10-second exposure.
-        </small></center>
-    </div>
-    <div style="flex:1;">
-        <img
-            alt="Another shot of a starfield and clouds through my iphone camera"
-            class="image-center"
-            style="min-width: 200px;"
-            src="/images/blog/star-field-2.jpeg"
-        />
-        <center><small>
-            Turns out that the cameras on our phones are very, very good.
-        </small></center>
-    </div>
-</div>]]></description></item></channel></rss>
+<p>I know many people might look at my reading statistics and laugh. Nineteen books might not seem like a lot to some, but it's a ton for me, and while I'll never truly be able to recover my book-reading numbers from before 2020 &mdash; and especially not from a decade ago &mdash; I am fairly confident that I'm correct when I say 2022 has truly been a great year for my reading habits. Let's hope the trend continues and I don't fall of the train anytime soon.</p>]]></description></item></channel></rss>
