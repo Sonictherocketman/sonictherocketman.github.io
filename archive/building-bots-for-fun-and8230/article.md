@@ -1,6 +1,6 @@
 slug: building-bots-for-fun-and8230
 published: Sat, 05 Aug 2023 at 09:41 PM
-updated: Sat, 05 Aug 2023 21:41:27 
+updated: Sat, 05 Aug 2023 21:42:39 
 title: Building Bots for Fun and&#8230;
 author: Brian Schrader
 tags: mastodon,programming,fun
@@ -9,7 +9,7 @@ status: publish
 For all of the good things about Mastodon and the Fediverse more broadly, the technology has so far struggled to spread far outside of tech circles and into the broader public. Mastodon especially is pretty big these days, but its mostly filled with a lot of computer nerds like myself; there really isn't a very large music scene like there is on other social media sites.
 
 <div class="image-container" style="padding-left: 1rem;">
-<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" width="320" height="400" src="http://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fmastodon.social%2Fusers%2Fsdmusiceventsbot&theme=auto&size=80&header=true&replies=false&boosts=false"></iframe>
+<iframe allowfullscreen sandbox="allow-top-navigation allow-scripts allow-popups allow-popups-to-escape-sandbox" width="320" height="400" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fmastodon.social%2Fusers%2Fsdmusiceventsbot&theme=auto&size=80&header=true&replies=false&boosts=false"></iframe>
 </div>
 
 I wanted to help fix that, so I threw together a simple [Mastodon bot][1] (a toot bot?) that regularly shares information about local music shows in San Diego.
