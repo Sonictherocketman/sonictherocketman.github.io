@@ -1,35 +1,33 @@
 slug: daily-step-count--walking-statistics
 published: Sat, 19 Nov 2022 at 11:40 PM
-updated: Sun, 27 Nov 2022 04:43:28 
+updated: Thu, 24 Aug 2023 07:53:26 
 title: Daily Step Count & Walking Statistics
 author: Brian Schrader
 tags: fun, programming
 status: publish
 hidden: true
 
-
-
-<div style="display: flex; justify-content: space-around; align-items: stretch; gap: 1rem; text-align: center;">
+<div style="display: flex; justify-content: space-around; align-items: stretch; gap: 1rem; text-align: center; margin-top: 1rem;">
 
     <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
         <h3 id="steps">?</h3>
-        <b>Average Daily Steps</b>
+        <b>Daily Average</b>
     </div>
 
     <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
-        <h3 id="distance">?</h3>
-        <b>Total Distance</b>
+        <h3 id="best-day">?</h3>
+        <b>Best Single Day</b>
     </div>
 
     <div style="border: 1px solid #ccc; border-radius: 3px; padding: 1rem;">
         <h3 id="percentage">?</h3>
-        <b>Percent Days Goal Met</b>
+        <b>Daily Goal Met</b>
     </div>
 
 </div>
 
 
-### Daily Step Counts (Last 45 Days)
+### Daily Step Counts (Last 60 Days)
 
 <div id="rolling-steps" class="hide"></div>
 
@@ -37,9 +35,16 @@ hidden: true
 
 ### About This Page
 
-This page tracks my daily step count against my goal for the previous 45 days. It also contains some summary stats about my recent average daily steps, distance, and the percent of those recent days I have met my goal.
+This page tracks my daily step count against my goal for the previous 60 days. It also contains some summary stats about my recent average daily steps, distance, and the percent of those recent days I have met my goal.
 
-This data is dynamic, but may be slightly out of date. Unfortunately, there is no easy way for me to get the data out of my [pedometer app][1] automatically. Instead I periodically import the data for display here.
+<span style="height: 0.5rem; width: 1rem; border-radius: 50%; background-color: #111;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+Current Daily Average
+
+<span style="height: 0.5rem; width: 1rem; border-radius: 50%; background-color: #888;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+Daily Goal (6,500 steps).
+
+This data comes directly from my phone's pedometer and is updated automatically
+throughout the day.
 
 [1]: https://pedometer.app
 
@@ -54,7 +59,8 @@ This data is provided entirely because I think it's interesting and it allowed m
 
     const stepsByDay = data.slice(0, 100).map(d => (
         {...d, steps: parseInt(d.Steps), date: new Date(d.Date)}
-    )).slice(0, 45);
+    ));
+    const avgSteps = stepsByDay.reduce((a, b) => a+b.steps, 0) / stepsByDay.length | 0;
 
     // Generate the Year-By-Year Chart
 
@@ -104,6 +110,17 @@ This data is provided entirely because I think it's interesting and it allowed m
           .curve(d3.curveStep)
         );
 
+      svg.append("path")
+        .datum(stepsByDay)
+        .attr("fill", "transparent")
+        .attr("stroke", "#111")
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.line()
+          .x(function(d) { return x(d.date) })
+          .y(function(d) { return y(avgSteps) })
+          .curve(d3.curveStep)
+        );
+
       svg.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")
@@ -135,19 +152,17 @@ This data is provided entirely because I think it's interesting and it allowed m
       document.getElementById('rolling-steps').className = 'histogram';
 
       const lastUpdated = document.querySelector('#last-updated');
-      const moreRecent = stepsByDay[0];
+      const moreRecent = stepsByDay[stepsByDay.length-1];
       lastUpdated.innerText = "Last Updated: " + moreRecent.date.toLocaleDateString();
 
       // Calculate stats
 
-      const avgSteps = stepsByDay.reduce((a, b) => a+b.steps, 0) / stepsByDay.length | 0;
-      const distance = stepsByDay.reduce((a, b) => a+parseFloat(b.Distance) | 0, 0);
-
       const daysMet = stepsByDay.filter(d => d.steps >= 6500).length;
       const percentage = Math.round(daysMet / stepsByDay.length * 100);
+      const bestDay = Math.max(...stepsByDay.map(d => d.steps));
 
-      document.querySelector('#steps').innerText = avgSteps.toLocaleString();
-      document.querySelector('#distance').innerText = distance.toLocaleString() + ' mi';
+      document.querySelector('#steps').innerText = avgSteps.toLocaleString() + ' steps';
+      document.querySelector('#best-day').innerText = bestDay.toLocaleString() + ' steps';
       document.querySelector('#percentage').innerText = (
         percentage + '%'
       );
