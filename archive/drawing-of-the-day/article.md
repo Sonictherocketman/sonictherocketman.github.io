@@ -1,6 +1,6 @@
 slug: drawing-of-the-day
 published: Sat, 19 Nov 2022 at 07:48 AM
-updated: Sat, 03 Dec 2022 03:33:14 
+updated: Sun, 25 Feb 2024 07:25:29 
 title: Drawing of the Day
 author: Brian Schrader
 tags: fun, programming

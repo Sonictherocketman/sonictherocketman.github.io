@@ -1,6 +1,6 @@
 slug: my-favorite-books-from-2023
 published: Sun, 14 Jan 2024 at 10:14 PM
-updated: Sun, 14 Jan 2024 22:14:43 
+updated: Sun, 25 Feb 2024 07:25:29 
 title: My Favorite Books from 2023
 author: Brian Schrader
 tags: books,book,book recommendations,book review
