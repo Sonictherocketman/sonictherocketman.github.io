@@ -1,6 +1,6 @@
 slug: microblog-crawler-v10-released
 published: Sat, 29 Nov 2014 at 08:35 PM
-updated: Sun, 27 Nov 2022 04:43:30 
+updated: Sun, 25 Feb 2024 22:33:21 
 title: Microblog Crawler v1.0 Released
 author: Brian Schrader
 tags: python, microblogcrawler

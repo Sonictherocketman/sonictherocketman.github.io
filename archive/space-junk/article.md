@@ -1,6 +1,6 @@
 slug: space-junk
 published: Sun, 14 Sep 2014 at 02:04 AM
-updated: Sun, 27 Nov 2022 04:43:30 
+updated: Sun, 25 Feb 2024 22:33:21 
 title: Space Junk
 author: Brian Schrader
 tags: space debris

@@ -1,6 +1,6 @@
 slug: bibliography
 published: Thu, 21 Oct 2021 at 02:26 AM
-updated: Sun, 27 Nov 2022 04:43:27 
+updated: Sun, 25 Feb 2024 22:33:17 
 title: Bibliography
 author: Brian Schrader
 tags:

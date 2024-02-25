@@ -1,6 +1,6 @@
 slug: roderick-on-the-line
 published: Sun, 24 Aug 2014 at 04:53 AM
-updated: Sun, 27 Nov 2022 04:43:26 
+updated: Sun, 25 Feb 2024 22:33:16 
 title: Roderick on the Line
 author: Brian Schrader
 status: publish

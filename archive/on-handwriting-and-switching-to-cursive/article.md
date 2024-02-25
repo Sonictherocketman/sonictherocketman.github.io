@@ -1,10 +1,11 @@
 slug: on-handwriting-and-switching-to-cursive
 published: Sun, 25 Feb 2024 at 07:25 AM
-updated: Sun, 25 Feb 2024 07:25:28 
+updated: Sun, 25 Feb 2024 22:33:17 
 title: On Handwriting and Switching to Cursive
 author: Brian Schrader
 tags:writing,personal
 status: publish
+featured: true
 
 > I'm a software developer; I make my living on a computer. In this age there just isn't much reason for me to bother improving my handwriting.
 

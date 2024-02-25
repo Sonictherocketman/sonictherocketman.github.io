@@ -1,6 +1,6 @@
 slug: this-site-supports-webmentions
 published: Sat, 30 May 2020 at 09:27 PM
-updated: Sun, 27 Nov 2022 04:43:27 
+updated: Sun, 25 Feb 2024 22:33:17 
 title: This Site Supports Webmentions!
 author: Brian Schrader
 tags: webmentions, indie web, open web

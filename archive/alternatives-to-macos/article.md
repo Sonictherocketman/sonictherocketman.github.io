@@ -1,6 +1,6 @@
 slug: alternatives-to-macos
 published: Tue, 03 Jan 2017 at 02:15 PM
-updated: Sun, 27 Nov 2022 04:43:30 
+updated: Sun, 25 Feb 2024 22:33:21 
 title: Alternatives to macOS
 author: Brian Schrader
 tags: macOS, linux, alternatives
