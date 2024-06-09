@@ -1,6 +1,6 @@
 slug: time-machine-transfer-trouble-resolved
 published: Fri, 02 Jan 2015 at 07:02 PM
-updated: Sun, 25 Feb 2024 22:33:21 
+updated: Sun, 09 Jun 2024 05:13:58 
 title: Time Machine Transfer Trouble Resolved
 author: Brian Schrader
 tags: time machine

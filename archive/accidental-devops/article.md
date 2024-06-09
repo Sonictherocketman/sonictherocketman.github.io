@@ -1,6 +1,6 @@
 slug: accidental-devops
 published: Tue, 26 Sep 2017 at 12:30 PM
-updated: Sun, 25 Feb 2024 22:33:18 
+updated: Sun, 09 Jun 2024 05:13:54 
 title: Accidental DevOps
 author: Brian Schrader
 tags: devops, development

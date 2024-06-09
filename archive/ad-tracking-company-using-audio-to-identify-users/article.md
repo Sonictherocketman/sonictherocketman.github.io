@@ -1,6 +1,6 @@
 slug: ad-tracking-company-using-audio-to-identify-users
 published: Thu, 12 Nov 2015 at 02:30 PM
-updated: Sun, 25 Feb 2024 22:33:16 
+updated: Sun, 09 Jun 2024 05:13:52 
 title: Ad tracking company using audio to identify users
 author: Brian Schrader
 status: publish

@@ -1,11 +1,11 @@
 slug: d20photos-a-public-domain-dd-image-repository
 published: Wed, 24 Jun 2020 at 5:00 PM
-updated: Sun, 25 Feb 2024 22:33:18 
+updated: Sun, 09 Jun 2024 05:13:54 
 title: d20.photos: A Public Domain D&D Image Repository
 author: Brian Schrader
 tags: d20.photos, D&D, Pathfinder, public domain, image hosting, primitive
 status: publish
-featured: true
+featured: false
 
 I bought the domain [d20.photos][1] on Nov 23rd, 2018 with the goal of building a free-to-use, public-domain image hosting service for D&D, Pathfinder, and other fantasy RPGs. Today, that goal is realized.
 

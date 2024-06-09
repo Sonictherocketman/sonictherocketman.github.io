@@ -1,11 +1,11 @@
 slug: announcing-hewell-public-beta-
 published: Tue, 10 Nov 2020 at 09:21 PM
-updated: Sun, 25 Feb 2024 22:33:17 
+updated: Sun, 09 Jun 2024 05:13:53 
 title: Announcing: Hewell Public Beta 🎉
 author: Brian Schrader
 tags: announcement, app, ios, beta
 status: publish
-featured: true
+featured: false
 
 Today I'm happy to announce the public beta for my newest app [Hewell: A Virtual Tour Guide][1]. I've wanted to build something like Hewell for years, and I finally got around to it. The app is in Public Beta on iOS, so you won't find it in the App Store just yet, but you're free to try it out and give feedback via TestFlight.
 

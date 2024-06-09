@@ -1,10 +1,11 @@
 slug: on-the-web-the-best-outcome-is-email
 published: Fri, 02 Dec 2022 at 01:56 AM
-updated: Sun, 25 Feb 2024 22:33:16 
+updated: Sun, 09 Jun 2024 05:13:53 
 title: On the Web, the Best Outcome is Email
 author: Brian Schrader
 tags: open web, mastodon
 status: publish
+featured: true
 
 Like many out there, I've been thinking a lot lately about the Open Web. As many readers are no doubt aware, the chaos at Twitter lately has driven a lot of people off the platform and onto more fledgling alternatives. Mastodon in particular has seen huge spikes in growth recently and I doubt that growth will slow until either the platform succumbs to the load or the chaos at Twitter ends and users return to the platform.
 

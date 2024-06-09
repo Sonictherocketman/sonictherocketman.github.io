@@ -1,11 +1,11 @@
 slug: on-uber-lyft-and-labor-law
 published: Thu, 20 Aug 2020 at 06:34 PM
-updated: Sun, 25 Feb 2024 22:33:21 
+updated: Sun, 09 Jun 2024 05:13:58 
 title: On Uber, Lyft, and Labor Law
 author: Brian Schrader
 tags: uber, lyft, ab5, labor law, politics
 status: publish
-featured: true
+featured: false
 
 
 A storm has been brewing in California. No, not the Coronavirus pandemic or the [massive fires][2], though both are incredibly important and widespread. California is trying to reign in a few powerful tech industry players. What we're witnessing now may become either a cautionary tale or a key example of just how these battles can be waged in the future against even bigger and more powerful giants.

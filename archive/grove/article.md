@@ -1,11 +1,11 @@
 slug: grove
 published: Mon, 12 Jul 2021 at 02:07 AM
-updated: Sun, 25 Feb 2024 22:33:18 
+updated: Sun, 09 Jun 2024 05:13:54 
 title: Grove, a new Tree-planting Wellness Game 🎉
 author: Brian Schrader
 tags: announcement, software, apps, climate change, gaming, indie, ios
 status: publish
-featured: true
+featured: false
 
 Today marks the release of my newest app: Grove! Here's a brief description of the app from the [product page][1]:
 

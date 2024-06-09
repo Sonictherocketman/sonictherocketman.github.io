@@ -1,11 +1,11 @@
 slug: feed-readers-and-local-news
 published: Fri, 19 Oct 2018 at 06:58 PM
-updated: Sun, 25 Feb 2024 22:33:21 
+updated: Sun, 09 Jun 2024 05:13:58 
 title: Feed Readers and Local News
 author: Brian Schrader
 status: publish
 tags: pine.blog, local news
-featured: true
+featured: false
 
 Interest in local news outlets has been declining over time. Bigger, flashier news outlets with more resources can attract more users and more traffic. But local news provides so much valuable information to the people living in the communities they serve and arguably this news generally effects reader's lives more than national news.
 

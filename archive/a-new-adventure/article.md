@@ -1,11 +1,11 @@
 slug: a-new-adventure
 published: Sun, 18 Aug 2019 at 01:25 AM
-updated: Sun, 25 Feb 2024 22:33:17 
+updated: Sun, 09 Jun 2024 05:13:54 
 title: A New Adventure
 author: Brian Schrader
 tags: photography, hobbies, money sink,
 status: publish
-featured: true
+featured: false
 
 Last week, I bought a camera. I've wanted one for a while, but I'd never really looked around for something that would fit my needs. A few of my [friends][ramon] and [family][bailey] are actual photographers, and I knew that I didn't want to do what they do. I'd be carelessly jumping into a deep end to swim with reel big fish.
 

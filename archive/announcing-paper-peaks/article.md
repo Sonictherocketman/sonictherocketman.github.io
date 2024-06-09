@@ -1,10 +1,11 @@
 slug: announcing-paper-peaks
 published: Mon, 31 Jul 2023 at 10:53 PM
-updated: Sun, 25 Feb 2024 22:33:19 
+updated: Sun, 09 Jun 2024 05:13:55 
 title: Announcing Paper Peaks
 author: Brian Schrader
 tags: music
 status: publish
+
 
 Nearly two years ago, my band [The Fourth Section](https://thefourthsection.com) released an EP called [Glass &amp; Stone](/archive/the-road-to-glass--stone/) and this month we released our first, full-length album: Paper Peaks.
 

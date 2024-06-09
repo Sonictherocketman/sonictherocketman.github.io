@@ -1,6 +1,6 @@
 slug: thats-when-i-knew-i-cant-actually-use-macos
 published: Mon, 24 Feb 2020 at 04:06 AM
-updated: Sun, 25 Feb 2024 22:33:19 
+updated: Sun, 09 Jun 2024 05:13:56 
 title: That's When I Knew: I Can't Actually Use macOS
 author: Brian Schrader
 tags: macos, funny, adrift, macbook pro, productivity, migrations
