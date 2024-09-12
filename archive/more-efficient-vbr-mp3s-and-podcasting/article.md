@@ -1,6 +1,6 @@
 slug: more-efficient-vbr-mp3s-and-podcasting
 published: Mon, 15 Aug 2016 at 12:30 PM
-updated: Sun, 09 Jun 2024 05:13:53 
+updated: Thu, 12 Sep 2024 00:35:12 
 title: More Efficient VBR MP3s and Podcasting
 author: Brian Schrader
 status: publish

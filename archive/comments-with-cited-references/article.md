@@ -1,6 +1,6 @@
 slug: comments-with-cited-references
 published: Thu, 09 Feb 2017 at 12:29 PM
-updated: Sun, 09 Jun 2024 05:13:58 
+updated: Thu, 12 Sep 2024 00:35:16 
 title: Comments with Cited References
 author: Brian Schrader
 tags: code, links,

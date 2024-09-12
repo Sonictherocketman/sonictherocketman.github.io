@@ -1,6 +1,6 @@
 slug: the-joys-of-playing-live-music
 published: Fri, 30 Aug 2024 at 06:46 PM
-updated: Fri, 30 Aug 2024 18:46:33 
+updated: Thu, 12 Sep 2024 00:35:13 
 title: The Joys of Playing Live Music
 author: Brian Schrader
 tags:music

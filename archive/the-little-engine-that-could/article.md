@@ -1,6 +1,6 @@
 slug: the-little-engine-that-could
 published: Sat, 26 Sep 2020 at 11:52 PM
-updated: Sun, 09 Jun 2024 05:13:52 
+updated: Thu, 12 Sep 2024 00:35:12 
 title: The Little Engine that Could
 author: Brian Schrader
 tags: blogging, programming, longevity
