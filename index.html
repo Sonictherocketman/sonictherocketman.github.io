@@ -45,6 +45,61 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/running--securing-servers-a-concise-guide/" class="u-url p-name">
+                
+                Running & Securing Servers: A Concise Guide
+                
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2024-10-21T17:47:00-08:00">
+                Posted on Mon, 21 Oct 2024 at 05:47 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>It might be pretty out-of-vogue to host your own servers in 2024, but I still do it and I quite like it. There's a lot of great benefits to building software on basic infrastructure and I always find myself appreciating the flexibility that simple VPS hosting brings. That said, you do need to be careful. Life as a developer on the Internet requires a pretty decent familiarity with security best-practices.</p>
+<p>Being self-hosted, there's also a lot of simple design decisions that you need to make when running a system on simple VPSs, and there's really not a lot of good info out there to help with this.</p>
+<p>So, here's a simple guide to some of the things I do when setting up my servers.</p>
+<p><span style="padding: 0.5rem; border: 1px solid gray; border-radius: 3px;" class="image-center ">
+This post isn't sponsored by Linode. It's just what I know best.
+</span></p>
+<p><strong>1. Follow <a href="https://techdocs.akamai.com/cloud-computing/docs/set-up-and-secure-a-compute-instance">Linode/Akamai's Great Guide</a> for Securing Your Server.</strong></p>
+<p>Always set up ssh key forwarding and use it. That said, I usually end up leaving Password Authentication Enabled, since I've had problems remoting in from a known machine (i.e. my laptop isn't available). In these cases I use a very strong password (Apple's Keychain app will make up to 31 character random passwords) and synced with iCloud so it's on my phone.</p>
+<p><strong>2. Set Up a Cloud Firewall</strong></p>
+<p>These days, I prefer using the cloud firewalls provided by the platform (here's a <a href="https://techdocs.akamai.com/cloud-computing/docs/getting-started-with-cloud-firewalls">guide for setting this up on Linode</a>). I still do set up simple on-device firewalls on the server itself, but I depend more on the cloud firewall since it's easier to configure.</p>
+<p><strong>3. Configure Basic Maintenance Cronjobs</strong></p>
+<p>These days, I usually set up a few basic cron jobs to monitor things and keep things running. Here's a list of my typical cron jobs. This list will vary a bit depending on what kind of server you're setting up.</p>
+<ul>
+<li>Postgres nightly/weekly vacuum.</li>
+<li>Disk Usage &amp; Avg CPU Usage monitoring using <a href="https://nine9s.cloud/kb/measure-quickstart">Nine9s Measures</a></li>
+<li>Nightly DB Backup &amp; Archive (if needed, see 4)</li>
+<li>Nightly <a href="https://unix.stackexchange.com/questions/139513/how-to-clear-journalctl#194058">Log Trimming</a> (keep 30 days)</li>
+<li>Automatic Deploys (see 5)</li>
+</ul>
+<p>As an aside here, I use <a href="https://pushover.net">Pushover</a> in a lot of my shell scripts. I send a quick API call to the service which forwards Push Notifications to my phone. That way I get notified of things like build failures which normally fail silently.</p>
+<p><strong>4. Set Up Automated Backups</strong></p>
+<p>If your platform supports it, just use the automated backups for your servers. It's so easy and well worth a few extra bucks per month. If you're not in the position to use those (e.g. Linode when wont't back up encrypted partitions), then make sure you have a cron job that backs up your database. I use simple <code>pgdump | gzip</code> commands in those cases.</p>
+<p>If you do the backups yourself, be sure to test <em>restoring from your backups as well!</em></p>
+<p><strong>5. Apps go in Containers</strong></p>
+<p>I use Docker, but any container system works. I've been told this setup isn't "how Docker is intended to be used", but that's fine with me. It works. I deploy my apps to my servers using a build script that usually runs automatically. It uses the production git repo for my docker compose files and runs a simple <code>docker compose up</code> with the configuration for production. I even have it set up to boot a backup copy of the current app while it deploys the new one so I get zero-downtime deployments.</p>
+<p>It's probably overkill to do this, but it works well and avoids the possibility of corrupting code files on the host machine. The automatic deploy (which I frequently do nightly) is awesome because it means I never have to think about which changes have made it to production. If it's in <code>main</code> it's in prod.</p>
+<p>I also run my databases (which is almost always Postgres) in a container as well, only because it makes minor upgrades easier.</p>
+<p><strong>6. Run Webservers on the Host</strong></p>
+<p>Above, I told you that I use Docker. However these days I always run the webserver (nginx in my case, though Caddy is also very nice) directly on the host. Nginx then proxy-passes to my my containers using the <a href="https://stackoverflow.com/a/20778887">loopback address</a>. That way nothing is exposed (Docker likes to punch holes in firewalls). Running nginx on the host let's <code>certbot</code> work as expected.</p>
+<p><strong>7. Set Up Break-Glass Measures</strong></p>
+<p>The single most popular post on this blog is about my (in)famous <a href="/archive/why-all-my-servers-have-an-8gb-empty-file/">8GB Empty File</a> break-glass measure. I don't always do this anymore, but it has saved me a bunch of times. To me, SSH password auth is a kind of break-glass fallback too.</p>
+<h3>What Else?</h3>
+<p>That's all I can think of at the moment. It's a lot, but it's also not too bad. You don't need to be scared of hosting things yourself, but you do need to be careful. It's a wild world out there on the internet.</p>
+<p>As a final note, if you're looking to get a handle on web architecture stuff, I recommend this <a href="https://marco.org/2014/03/27/web-hosting-for-app-developers">blog post</a> for a quick rundown on that. Practical Web Architecture is difficult to learn in my experience, and it takes a lot of pondering, trial, and error to do it right. Most resources are intended for enterprise-scale deployments and not smaller projects. In general, don't over-complicate things if you don't need to. One of the best parts about hosting your own apps this way is that you have the flexibility to change things around as you grow (at the cost of some work and likely some downtime).</p>
+<p>I've been doing this for a while now, but I'm sure there's something I've missed. This guide is certainly not extensive, but it should at least help you avoid some major headaches. I can say that from experience.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/the-joys-of-playing-live-music/" class="u-url p-name">
                 
                 The Joys Of Playing Live Music
@@ -449,37 +504,6 @@
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/announcing-paper-peaks/" class="u-url p-name">
-                
-                Announcing Paper Peaks
-                
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2023-07-31T22:53:00-08:00">
-                Posted on Mon, 31 Jul 2023 at 10:53 PM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>Nearly two years ago, my band <a href="https://thefourthsection.com">The Fourth Section</a> released an EP called <a href="/archive/the-road-to-glass--stone/">Glass &amp; Stone</a> and this month we released our first, full-length album: Paper Peaks.</p>
-<p>Recording an album has been a long-time goal of mine and something we as a band have been working toward for over three years.</p>
-<p><a href="https://thefourthsection.com">
-<img
-    src="https://thefourthsection.com/img/paperpeaks.webp"
-    class="image-center"
-    style="width: 400px;"
-/>
-</a></p>
-<p>I don't have much to say about the album, other than you should listen to it, but I can say it's been a true honor to have been able to make something like this with such amazing people. The three of us have worked hard since March to record, produce, publish, and promote the thing and it's taken a lot more out of us than I think we expected. Paper Peaks was a labor of love and something that could not have been done save for the support of my bandmates, our producer Jeff Berkley, and so many others.</p>
-<p>If you like indie-rock and alt-rock, give it a listen and if you like it, please share it with your friends.</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -504,6 +528,10 @@
 </ul>
 <h4>Recent Posts</h4>
 <ul>
+  
+  <li><a href="/archive/running--securing-servers-a-concise-guide/" title="Running &amp; Securing Servers: A Concise Guide" rel="nofollow">
+    Running &amp; Securing Servers: A Concise Guide
+  </a></li>
   
   <li><a href="/archive/the-joys-of-playing-live-music/" title="The Joys of Playing Live Music" rel="nofollow">
     The Joys of Playing Live Music
@@ -539,10 +567,6 @@
   
   <li><a href="/archive/building-bots-for-fun-and8230/" title="Building Bots for Fun and&amp;#8230;" rel="nofollow">
     Building Bots for Fun and&amp;#8230;
-  </a></li>
-  
-  <li><a href="/archive/announcing-paper-peaks/" title="Announcing Paper Peaks" rel="nofollow">
-    Announcing Paper Peaks
   </a></li>
   
 </ul>
