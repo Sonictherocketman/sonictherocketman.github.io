@@ -1,6 +1,6 @@
 slug: python-35-and-multitasking
 published: Fri, 18 Sep 2015 at 08:19 AM
-updated: Thu, 12 Sep 2024 00:35:15 
+updated: Wed, 13 Nov 2024 01:34:37 
 title: Python 3.5 and multitasking
 author: Brian Schrader
 tags: python, gcd, multitasking

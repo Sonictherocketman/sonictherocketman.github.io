@@ -47,7 +47,7 @@
         <div class="article-title">
           <h1 class="p-name">
             <a
-              href="http://brianschrader.com/archive/a-vision-of-the-open-web/"
+              href="/archive/a-vision-of-the-open-web/"
               title="A Vision of the Open Web"
             >
               
@@ -69,7 +69,7 @@
 <h2>What we have</h2>
 <p>Social networks are a stream of information, and we already have technologies that exist and excel at conveying this kind of data. RSS, Email, and IRC are fantastic tools that are useful for building open and performant social networks. Most of the issues with these existing technologies are their public perceptions. Email sounds like work, and RSS is for nerds who follow tech blogs. The issue with all of these technologies is that they were <a href="https://twitter.com/sonicrocketman/status/676526749757214720">never properly abstracted from their underlying protocol</a>. The Email protocol doesn't require that messages be formal, we just have the cultural expectation that this is the case.</p>
 <div class="image-container" style="width:300px;">
-<img src="https://brianschrader.com/images/blog/reeder.jpg" alt="A screenshot of Reeder for iOS" />
+<img src="/images/blog/reeder.jpg" alt="A screenshot of Reeder for iOS" />
 <small>How can we make this more than just a feed <i>reader</i>?</small></div>
 
 <p>New, emerging, and standardized tools like <a href="https://www.w3.org/TR/webmention/">WebMentions</a>, from the <a href="http://indiewebcamp.com">IndieWebCamp</a>, will allow us to build most of the features provided by a centralized social network in a decentralized way. The best part is that all of these technologies are battle-hardened, and scalable to immense sizes; Email doesn't have the scaling issues like Twitter does because it was designed to be large-scale, and RSS scales fairly easily as well. Each of these technologies have their own dark pasts riddled with spam and invalid markup, but beyond these downsides lie incredible potential. The design of the Open Web is more akin to HTTP than Facebook. It should be thought of as a standard to follow at our benefit, and abandoned at our peril.</p>
@@ -78,14 +78,14 @@
 <p>RSS feeds are extremely powerful, and they already possess standard support for things like <a href="http://cyber.law.harvard.edu/rss/rss.html#ltimagegtSubelementOfLtchannelgt">profile pictures</a>, comments threads, and <a href="http://cyber.law.harvard.edu/rss/rss.html#ltcloudgtSubelementOfLtchannelgt">new post notification subscriptions</a>. I propose using the channel <code>&lt;image&gt;</code> tag of the RSS feed as the user's profile image (preferably a <a href="http://sonicrocketman.snippets.xyz/2016/02/23/f2c3.html">Gravatar URL</a>). This way, a user's profile pictures are independent of the microblogging service they use. I imagine that microblog RSS feeds will be person-centric rather than site-centric. The feed's <code>&lt;title&gt;</code> should be the person's name, not the service's, and the <code>&lt;image&gt;</code> should be their image. Hashtags are here to stay, put them in the RSS item's <code>&lt;category&gt;</code> fields. Services implementing this new feature-set should be on the lookout for replies coming from WebMentions, and a specific WebMentions URL should be present in the feeds for alerting a user of a reply and services should show these replies to the user.</p>
 <p>If a given social network focuses more on private communication, then building it on top of the Email standard might be more apt. Remove the subject field in your client (you can even use it for your own tagging purposes if you need). Structure the email's UI more like a chat or threaded comment system. Group chat is built in to email so there's nothing you need to do. Stick <a href="http://mailroute.net">MailRoute</a> in front of your service to filter spam, and err on the side of caution when showing the user a message from some "rando" they don't follow. Hide the emails of the users and just show their Gravatar profile images and usernames. Email is designed for decentralized messaging, use that to your advantage. Allow users to chat with anyone, including rival email-based messaging services (but don't make it like conventional email). Most of Facebook could easily be built using this kind of system.</p>
 <div class="image-container" style="width:350px;">
-<img src="https://brianschrader.com/images/blog/textual.jp2" alt="Textual IRC app" />
+<img src="/images/blog/textual.jp2" alt="Textual IRC app" />
 <small>Textual is, by far, the nicest looking IRC app out there, but it still looks like IRC.</small></div>
 
 <p>If your network is more like Slack or HipChat, then IRC is what you want. Once again, err on the side of caution when showing chats from unidentified users, encrypt your messages, keep and sync the user's messages between devices, try sending HTML instead of plaintext, and make the UI more like Facebook Messenger or WhatsApp. Anyone can talk to anyone on any IRC service, it's our job as Application developers to make it look and feel good to use.</p>
 <h2>Ecosystem, ecosystem, ecosystem</h2>
 <p>The thing that made Twitter worth using was it's variety of 3rd-party clients. <a href="http://tapbots.com/tweetbot/">Tweetbot</a>, and <a href="http://twitterrific.com/ios">Twitteriffic</a> are some of the best designed, and most powerful apps I've ever used. To me, they <em>are</em> Twitter. Having great alternative clients for their service was one of the things that made Twitter popular, and a good ecosystem of applications for a given service is a must for open technologies.</p>
 <div class="image-container" style="width:300px;">
-<img src="https://brianschrader.com/images/blog/tweetbot.jpg" alt="Tweetbot" />
+<img src="/images/blog/tweetbot.jpg" alt="Tweetbot" />
 <small>There's no reason we can't have awesome apps like Tweetbot for the Open Web.</small></div>
 
 <p>Manton's Snippets.today service is great for following people you care about, but currently it is lacking when users want to search for people to follow, or discover trending topics. Having an open service that provides a directory of blog and microblog feeds, trending topics, featured users, and an open API to access it all would allow microblog services to focus more on their core competency, but still provide advanced functionality through these other services. It's these kinds of related apps, which all embrace the concept of the Open Web, that will give the ecosystem the broad functionality of centralized systems but still allow users to move about between clients or services as they need.</p>
@@ -95,7 +95,7 @@
 <p>I've long heard people say that we've lost video, music, and messaging to the walled worlds of YouTube, iTunes, and WhatsApp/Facebook/Twitter respectively, and while I believe that is the current state of the web, I don't believe it's the end-state. As the pendulum of open-closed online communication reaches it's peak in the near future, it will start to swing the other way. User growth for services like Facebook and Twitter is slowing down, and Twitter especially is desperate to hold on to it's user-base. Now is the time to begin wrestling users from the closed grip of these systems and to build the kinds of services that are only possible on the Open Web.</p>
 <hr />
 <p><small><sup id="1">1</sup>As in freedom, not price.</small></p>
-<p><small><sup id="2">2</sup>Podcasts use a modified version of RSS with added tags for things like audio file location and genre info. There's no reason we couldn't <a href="https://brianschrader.com/archive/the-open-microblog-standard/">extend RSS in a similar way for Microblogs</a></small></p>
+<p><small><sup id="2">2</sup>Podcasts use a modified version of RSS with added tags for things like audio file location and genre info. There's no reason we couldn't <a href="/archive/the-open-microblog-standard/">extend RSS in a similar way for Microblogs</a></small></p>
 <p><small><sup id="3">3</sup>Apps like <a href="https://itunes.apple.com/us/app/hop-email-messenger/id707452888?mt=8">Hop for iOS</a> already do something like this. Hop is an email client that structures messages like I described. </small></p>
         </div>
         <hr />
@@ -131,21 +131,20 @@
     
     <div class="side-bar">
       <div class="promotion">
-  <div data-sublime-embed="oKLwqL0q2k9NOA"></div>
-  <script src="https://embed.sublimeads.com/embed.js" defer></script>
+  <script src="https://shoutouts.page/embed/sRGtA2wwnhW-dAPFXEBy.js" defer></script>
 </div>
 <h4>Featured Posts</h4>
 <ul>
   
-  <li><a href="http://brianschrader.com/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
+  <li><a href="/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
     On Handwriting and Switching to Cursive
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/on-the-web-the-best-outcome-is-email/" title="On the Web, the Best Outcome is Email" rel="nofollow">
+  <li><a href="/archive/on-the-web-the-best-outcome-is-email/" title="On the Web, the Best Outcome is Email" rel="nofollow">
     On the Web, the Best Outcome is Email
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+  <li><a href="/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
     The Web as a Social Network
   </a></li>
   
@@ -153,44 +152,44 @@
 <h4>Recent Posts</h4>
 <ul>
   
-  <li><a href="http://brianschrader.com/archive/the-joys-of-playing-live-music/" title="The Joys of Playing Live Music" rel="nofollow">
+  <li><a href="/archive/running--securing-servers-a-concise-guide/" title="Running &amp; Securing Servers: A Concise Guide" rel="nofollow">
+    Running &amp; Securing Servers: A Concise Guide
+  </a></li>
+  
+  <li><a href="/archive/the-joys-of-playing-live-music/" title="The Joys of Playing Live Music" rel="nofollow">
     The Joys of Playing Live Music
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/the-times-and-i-are-changing/" title="The Times and I Are Changing" rel="nofollow">
+  <li><a href="/archive/the-times-and-i-are-changing/" title="The Times and I Are Changing" rel="nofollow">
     The Times and I Are Changing
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/podcasts-the-universe-and-everything/" title="Podcasts, the Universe, and Everything" rel="nofollow">
+  <li><a href="/archive/podcasts-the-universe-and-everything/" title="Podcasts, the Universe, and Everything" rel="nofollow">
     Podcasts, the Universe, and Everything
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/users-tools-platforms-and-the-shifting-goals-of-software/" title="Users, Tools, Platforms, and the Shifting Goals of Software" rel="nofollow">
+  <li><a href="/archive/users-tools-platforms-and-the-shifting-goals-of-software/" title="Users, Tools, Platforms, and the Shifting Goals of Software" rel="nofollow">
     Users, Tools, Platforms, and the Shifting Goals of Software
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/more-on-handwriting-amp-cursive/" title="More on Handwriting &amp;amp; Cursive" rel="nofollow">
+  <li><a href="/archive/more-on-handwriting-amp-cursive/" title="More on Handwriting &amp;amp; Cursive" rel="nofollow">
     More on Handwriting &amp;amp; Cursive
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
+  <li><a href="/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
     On Handwriting and Switching to Cursive
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/my-favorite-books-from-2023/" title="My Favorite Books from 2023" rel="nofollow">
+  <li><a href="/archive/my-favorite-books-from-2023/" title="My Favorite Books from 2023" rel="nofollow">
     My Favorite Books from 2023
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/experimenting-with-the-game-of-life/" title="Experimenting with the Game of Life" rel="nofollow">
+  <li><a href="/archive/experimenting-with-the-game-of-life/" title="Experimenting with the Game of Life" rel="nofollow">
     Experimenting with the Game of Life
   </a></li>
   
-  <li><a href="http://brianschrader.com/archive/building-bots-for-fun-and8230/" title="Building Bots for Fun and&amp;#8230;" rel="nofollow">
+  <li><a href="/archive/building-bots-for-fun-and8230/" title="Building Bots for Fun and&amp;#8230;" rel="nofollow">
     Building Bots for Fun and&amp;#8230;
-  </a></li>
-  
-  <li><a href="http://brianschrader.com/archive/announcing-paper-peaks/" title="Announcing Paper Peaks" rel="nofollow">
-    Announcing Paper Peaks
   </a></li>
   
 </ul>
