@@ -1,10 +1,11 @@
 slug: nothing-throughout-the-ages
 published: Wed, 13 Nov 2024 at 04:23 AM
-updated: Wed, 13 Nov 2024 04:23:59 
+updated: Wed, 13 Nov 2024 04:33:38 
 title: Nothing Throughout the Ages
 author: Brian Schrader
 tags:history,knowledge
 status: publish
+hero: /images/blog/corpuscle.jpg
 
 I'm fascinated by the systems by which we, as humans, make and communicate knowledge. From the very beginning of our species we've done our best to devise ways to understand the natural world and our place in it, and we've used a huge number of different systems of thought to organize, piece together, and build a more complete picture of the world for ourselves.
 
