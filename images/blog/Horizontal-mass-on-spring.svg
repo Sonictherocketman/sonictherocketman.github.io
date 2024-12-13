@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="344.2128"
+   height="116.50351"
+   viewBox="0 0 344.2128 116.50351"
+   id="svg652"
+   sodipodi:docname="horizontal-mass-on-spring.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata658">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>horizontal mass on spring</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:date>2017-10-08</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Michael A. Rundel</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC BY-SA 4.0</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>physics motion harmonic oscillation</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>horizontal mass on spring system. m is the mass of the object, k is the spring constant. This system shows simple harmonic motion if the floor is considerd frictionless.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs656" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1858"
+     inkscape:window-height="1057"
+     id="namedview654"
+     showgrid="false"
+     inkscape:zoom="1.0577147"
+     inkscape:cx="10.65267"
+     inkscape:cy="14.970856"
+     inkscape:window-x="54"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg652"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <desc
+     id="desc4">
+    <Title />
+    <Creator>FreeHEP Graphics2D Driver</Creator>
+    <Producer>geogebra.d.W Revision: 1.11 </Producer>
+    <Source />
+    <Date>Sonntag, 24. Februar 2019 19:18 Uhr MEZ</Date>
+  </desc>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,0,-48.21489)"
+     id="g434">
+    <clipPath
+       id="clip39">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path425"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip39)"
+       id="g432">
+      <g
+         id="g430"
+         style="fill:none;stroke:#cc0033;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+        <path
+           id="path428"
+           d="m 46.727,169.09 h 20.661 m 146.224,0 h -20.66 m 0,0 -1.27,5.19 -0.94,2.42 -1.12,2.24 -2.73,3.66 -0.77,0.72 -0.79,0.63 -1.65,0.96 -0.85,0.33 -0.86,0.23 -0.87,0.12 -0.87,0.02 -0.88,-0.08 -0.86,-0.19 -1.7,-0.69 -0.82,-0.49 -0.8,-0.59 -1.53,-1.45 -1.39,-1.78 -1.25,-2.07 -1.94,-4.77 -1.14,-5.22 -0.31,-5.14 0.48,-4.53 0.48,-1.9 0.63,-1.58 0.74,-1.23 0.82,-0.84 0.66,-0.37 0.66,-0.13 0.89,0.2 0.86,0.6 1.15,1.66 0.64,1.56 0.5,1.87 0.34,2.14 0.12,4.88 -0.69,5.24 -1.52,5.08 -1.05,2.31 -1.23,2.09 -1.38,1.81 -1.52,1.47 -1.62,1.11 -0.84,0.41 -0.85,0.31 -1.73,0.31 -0.88,-0.01 -0.87,-0.1 -0.86,-0.22 -0.85,-0.31 -1.66,-0.94 -0.79,-0.61 -0.78,-0.7 -1.44,-1.66 -1.31,-1.96 -1.13,-2.22 -1.71,-4.96 -0.88,-5.25 -0.06,-5.01 0.69,-4.26 0.58,-1.71 0.7,-1.36 0.38,-0.55 0.83,-0.79 0.66,-0.33 0.67,-0.1 0.88,0.25 0.85,0.65 0.79,1.05 0.68,1.43 0.55,1.75 0.64,4.33 -0.12,5.05 -0.95,5.25 -1.76,4.92 -1.17,2.18 -1.32,1.92 -1.47,1.61 -1.59,1.25 -0.82,0.49 -0.84,0.38 -1.73,0.47 -0.87,0.08 -0.87,-0.03 -0.87,-0.13 -0.86,-0.24 -1.68,-0.78 -0.81,-0.54 -0.8,-0.63 -1.49,-1.53 -1.37,-1.85 -2.22,-4.47 -0.83,-2.51 -0.63,-2.6 -0.63,-5.24 0.19,-4.82 0.36,-2.11 0.53,-1.83 0.65,-1.5 0.37,-0.62 0.39,-0.52 0.84,-0.75 0.88,-0.34 0.89,0.08 0.87,0.5 0.81,0.9 0.73,1.29 0.61,1.63 0.46,1.94 0.42,4.6 -0.37,5.17 -1.21,5.2 -2,4.72 -1.27,2.02 -1.41,1.74 -1.55,1.39 -0.8,0.56 -0.83,0.47 -1.71,0.62 -0.87,0.16 -0.87,0.05 -0.87,-0.05 -0.87,-0.16 -1.7,-0.62 -0.83,-0.47 -0.81,-0.56 -1.54,-1.39 -1.42,-1.74 -1.27,-2.02 -2,-4.72 -1.2,-5.2 -0.37,-5.17 0.41,-4.6 0.47,-1.94 0.61,-1.63 0.72,-1.29 0.4,-0.5 0.84,-0.7 0.89,-0.29 0.89,0.13 0.86,0.54 0.8,0.95 0.37,0.62 0.66,1.5 0.52,1.83 0.37,2.11 0.18,4.82 -0.62,5.24 -1.46,5.11 -1.03,2.34 -1.2,2.13 -1.36,1.85 -1.5,1.53 -1.6,1.17 -0.84,0.44 -0.848,0.34 -1.729,0.37 -0.872,0.03 -0.871,-0.08 -0.865,-0.18 -0.856,-0.29 -1.668,-0.87 -0.804,-0.58 -0.779,-0.67 -1.469,-1.61 -1.327,-1.92 -1.164,-2.18 -1.766,-4.92 -0.947,-5.25 -0.119,-5.05 0.635,-4.33 0.556,-1.75 0.683,-1.43 0.38,-0.57 0.82,-0.86 0.652,-0.37 0.666,-0.15 0.889,0.18 0.858,0.59 0.795,1 0.7,1.36 0.577,1.71 0.688,4.26 -0.058,5.01 -0.883,5.25 -1.705,4.96 -1.136,2.22 -1.304,1.96 -1.449,1.66 -1.567,1.31 -0.819,0.52 -0.837996,0.42 -1.715,0.53 -0.87,0.1 -0.871,0.01 -0.87,-0.1 -0.864,-0.21 -1.692,-0.72 -0.821,-0.5 -0.799,-0.61 -1.516,-1.47 -1.384,-1.81 -1.23,-2.09 -1.053,-2.31 -1.52,-5.08 -0.689,-5.24 0.124,-4.88 0.34,-2.14 0.5,-1.87 0.637,-1.56 0.748,-1.2 0.828,-0.81 0.654,-0.34 0.668,-0.11 0.887,0.23 0.852,0.64 1.143,1.7 0.628,1.58 0.489,1.9 0.471,4.53 -0.307,5.14 -1.14,5.22 -1.944,4.77 -1.242,2.07 -1.395,1.78 -1.525,1.45 -1.626,1.08 -0.842,0.4 -0.855,0.29 -1.735,0.27 -0.872,-0.02 -0.869,-0.12 -1.712,-0.56 -0.835,-0.43 -0.816,-0.53 -1.559,-1.35 -1.438,-1.68 -1.292,-1.98 -2.06,-4.66 -0.737,-2.56 -0.53,-2.63"
+           inkscape:connector-curvature="0" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip39 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,11.443521,-48.21489)"
+     id="g27">
+    <clipPath
+       id="clip2">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path18"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip2)"
+       id="g25">
+      <g
+         fill-rule="nonzero;"
+         id="g23"
+         style="fill:#000000;fill-opacity:0.25097997;stroke:none">
+        <path
+           d="m 196.93,138.1 h 82.64 v 61.98 h -82.64 z"
+           id="path21"
+           inkscape:connector-curvature="0" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip2 -->
+  </g>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:10.97568035px;font-family:serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.68598002;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     id="text32"
+     y="43.207336"
+     x="89.253922"
+     font-size="16.000"
+     font-weight="normal"
+     font-style="normal">
+    <tspan
+       style="font-size:16px;text-align:center;text-anchor:middle"
+       id="tspan93">k</tspan>
+  </text>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,0,-48.21489)"
+     id="g49">
+    <clipPath
+       id="clip4">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path40"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip4)"
+       id="g47">
+      <g
+         fill-rule="nonzero;"
+         id="g45"
+         style="fill:#cccccc;fill-opacity:1;stroke:none" />
+      <!-- drawing style -->
+    </g>
+    <!-- clip4 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     id="g179"
+     clip-path="none"
+     transform="matrix(0.68598,0,0,0.68598,0,-48.21489)">
+    <g
+       style="fill:#cccccc;fill-opacity:1;stroke:none"
+       id="g177"
+       fill-rule="nonzero;">
+      <path
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:connector-curvature="0"
+         d="M -19.551109,200.08 H 500.76684 v 40.04128 H -19.551109 Z m 66.278109,0 V -20.714565 H -19.551109 V 200.08 Z"
+         id="path175" />
+    </g>
+    <!-- drawing style -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,11.443521,-48.21489)"
+     id="g368">
+    <clipPath
+       id="clip33">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path359"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip33)"
+       id="g366">
+      <g
+         id="g364"
+         style="fill:none;stroke:#cc0033;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+      <!-- drawing style -->
+    </g>
+    <!-- clip33 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,11.443521,-48.21489)"
+     id="g379">
+    <clipPath
+       id="clip34">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path370"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip34)"
+       id="g377">
+      <g
+         id="g375"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+        <path
+           d="M 196.93,200.08 V 138.1"
+           id="path373"
+           inkscape:connector-curvature="0" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip34 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,11.443521,-48.21489)"
+     id="g390">
+    <clipPath
+       id="clip35">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path381"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip35)"
+       id="g388">
+      <g
+         id="g386"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+        <path
+           d="M 279.57,200.08 H 196.93"
+           id="path384"
+           inkscape:connector-curvature="0" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip35 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,11.443521,-48.21489)"
+     id="g401">
+    <clipPath
+       id="clip36">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path392"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip36)"
+       id="g399">
+      <g
+         id="g397"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+        <path
+           d="m 279.57,138.1 v 61.98"
+           id="path395"
+           inkscape:connector-curvature="0" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip36 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,11.443521,-48.21489)"
+     id="g412">
+    <clipPath
+       id="clip37">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path403"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip37)"
+       id="g410">
+      <g
+         id="g408"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+        <path
+           d="m 196.93,138.1 h 82.64"
+           id="path406"
+           inkscape:connector-curvature="0" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip37 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,11.443521,-48.21489)"
+     id="g423">
+    <clipPath
+       id="clip38">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path414"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip38)"
+       id="g421">
+      <g
+         id="g419"
+         style="fill:none;stroke:#cc0033;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+      <!-- drawing style -->
+    </g>
+    <!-- clip38 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,0,-48.21489)"
+     id="g577">
+    <clipPath
+       id="clip52">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path568"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip52)"
+       id="g575">
+      <g
+         id="g573"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+        <path
+           d="M 46.727,200.08 H 500.76684"
+           id="path571"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip52 -->
+  </g>
+  <g
+     style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0"
+     transform="matrix(0.68598,0,0,0.68598,0,-48.21489)"
+     id="g588">
+    <clipPath
+       id="clip53">
+      <path
+         d="M 0,0 V 908 H 1842 V 0 Z"
+         id="path579"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <g
+       clip-path="url(#clip53)"
+       id="g586">
+      <g
+         id="g584"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+        <path
+           d="M 47.227,200.58 V -4.5"
+           id="path582"
+           inkscape:connector-curvature="0" />
+      </g>
+      <!-- drawing style -->
+    </g>
+    <!-- clip53 -->
+  </g>
+  <!-- default stroke -->
+  <text
+     font-style="normal"
+     font-weight="normal"
+     font-size="16.000"
+     x="167.222"
+     y="72.043091"
+     id="text3800"
+     style="font-style:normal;font-weight:normal;font-size:10.97568035px;font-family:serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.68598002;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0">
+    <tspan
+       id="tspan3798"
+       style="font-size:16px;text-align:start;text-anchor:start">m</tspan>
+  </text>
+</svg>
+<!-- bounding box -->
+
