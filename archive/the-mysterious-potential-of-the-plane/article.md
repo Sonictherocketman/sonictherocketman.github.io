@@ -1,6 +1,6 @@
 slug: the-mysterious-potential-of-the-plane
 published: Fri, 13 Dec 2024 at 02:46 AM
-updated: Fri, 13 Dec 2024 02:46:15 
+updated: Fri, 13 Dec 2024 02:50:53 
 title: The Mysterious Potential of the Plane
 author: Brian Schrader
 tags:mathematics, math
@@ -12,8 +12,10 @@ In recent years I've embarked on a sort of journey of rediscovery with respect t
 A common observation among those who study classical engineering fields is that many (if not most) of the problem domains are modelled with very similar techniques. The motion of a cantilevered beam, a road bridge, a plane wing, a mass on a spring, a musical note, and even a planet's orbit can be described by very similar mathematics. Indeed so many physical phenomena can be described by these equations that it can make you wonder if you've stumbled into some [great secret][osc] of the universe.
 
 <figure>
+<a href="https://commons.wikimedia.org/wiki/File:Horizontal-mass-on-spring.svg">
 <img class="image-center" src="/images/blog/Horizontal-mass-on-spring.svg" />
-<figcaption style="display: block; text-align: center;"><small>To the physics/engineering undergrad, <i>everything</i> is a mass on a spring.</small></figcaption>
+</a>
+<figcaption style="display: block; text-align: center;"><small>To the physics/engineering undergrad, <i>everything</i> is a mass on a spring.<br />Credit: MikeRun/WikiMedia Commons</small></figcaption>
 </figure>
 
 But that wonderful truth is only a gateway to something much deeper, more fundamental&mdash;a true capital-S Secret of the Universe. Mathematics tends to deceive with simplicity, and there's few things in this world that hide more secrets than this simplest of concepts.
