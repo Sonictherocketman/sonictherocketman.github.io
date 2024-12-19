@@ -1,6 +1,6 @@
 slug: roderick-on-the-line-space-exploration-is-human-nature
 published: Tue, 10 Mar 2015 at 05:26 AM
-updated: Wed, 13 Nov 2024 01:34:37 
+updated: Thu, 19 Dec 2024 20:03:53 
 title: Roderick on the Line: Space Exploration is Human Nature
 author: Brian Schrader
 tags: roderick on the line, space travel

@@ -1,6 +1,6 @@
 slug: re-the-ethics-of-modern-web-ad-blocking
 published: Sun, 16 Aug 2015 at 11:39 AM
-updated: Wed, 13 Nov 2024 01:34:34 
+updated: Thu, 19 Dec 2024 20:03:51 
 title: Re: The ethics of modern web ad-blocking
 author: Brian Schrader
 tags: web, blocking, traffic

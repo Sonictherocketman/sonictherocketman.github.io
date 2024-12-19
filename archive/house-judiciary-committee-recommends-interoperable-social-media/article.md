@@ -1,6 +1,6 @@
 slug: house-judiciary-committee-recommends-interoperable-social-media
 published: Wed, 07 Oct 2020 at 01:46 AM
-updated: Wed, 13 Nov 2024 01:34:37 
+updated: Thu, 19 Dec 2024 20:03:53 
 title: House Judiciary Committee recommends Interoperable Social Media
 author: Brian Schrader
 tags: law, social media, antitrust, web, open web, politics

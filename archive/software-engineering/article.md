@@ -1,6 +1,6 @@
 slug: software-engineering
 published: Mon, 25 May 2015 at 08:20 PM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:55 
 title: Software 'Engineering'
 author: Brian Schrader
 tags: engineering

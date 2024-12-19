@@ -1,6 +1,6 @@
 slug: wwdc-and-open-source-swift
 published: Tue, 09 Jun 2015 at 02:56 PM
-updated: Wed, 13 Nov 2024 01:34:34 
+updated: Thu, 19 Dec 2024 20:03:50 
 title: WWDC and Open Source Swift
 author: Brian Schrader
 tags: apple, wwdc

@@ -1,6 +1,6 @@
 slug: going-indie-is-out-
 published: Wed, 18 Nov 2020 at 07:43 PM
-updated: Wed, 13 Nov 2024 01:34:34 
+updated: Thu, 19 Dec 2024 20:03:50 
 title: Going Indie is Out! 📚🚀
 author: Brian Schrader
 tags: announcement, launch, book, going indie

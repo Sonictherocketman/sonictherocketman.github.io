@@ -1,6 +1,6 @@
 slug: the-scope-creep-is-real
 published: Sat, 06 Oct 2018 at 08:34 PM
-updated: Wed, 13 Nov 2024 01:34:34 
+updated: Thu, 19 Dec 2024 20:03:50 
 title: The Scope Creep is Real
 author: Brian Schrader
 status: publish

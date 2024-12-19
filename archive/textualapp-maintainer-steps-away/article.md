@@ -1,6 +1,6 @@
 slug: textualapp-maintainer-steps-away
 published: Thu, 15 Nov 2018 at 09:20 PM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:55 
 title: Textual.app Maintainer Steps Away
 author: Brian Schrader
 tags: irc, apps, software development

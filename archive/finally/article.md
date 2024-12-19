@@ -1,6 +1,6 @@
 slug: finally
 published: Tue, 08 Oct 2019 at 01:34 AM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:54 
 title: Finally
 author: Brian Schrader
 tags: pine.blog, open web, rss

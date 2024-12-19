@@ -1,6 +1,6 @@
 slug: last-year-i-started-reading-a-physical-newspaper
 published: Sat, 09 Oct 2021 at 01:00 AM
-updated: Wed, 13 Nov 2024 01:34:39 
+updated: Thu, 19 Dec 2024 20:03:55 
 title: Last Year I Started Reading a Physical Newspaper
 author: Brian Schrader
 tags: newspapers, writing

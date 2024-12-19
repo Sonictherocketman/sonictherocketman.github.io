@@ -1,6 +1,6 @@
 slug: att-and-apple-sim
 published: Fri, 24 Oct 2014 at 08:29 PM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:55 
 title: AT&T and Apple SIM
 author: Brian Schrader
 status: publish

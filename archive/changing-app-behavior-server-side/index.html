@@ -5,7 +5,9 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
-    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
+
     <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.0">
     <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.0">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
@@ -14,6 +16,7 @@
   <meta property="og:title" content="Changing App Behavior Server-Side" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="http://brianschrader.com/archive/changing-app-behavior-server-side/" />
+  
 
   </head>
   <body>
@@ -44,56 +47,64 @@
       <article class="h-entry">
         <a href="/" class="u-author"></a>
         <div class="post">
-        <div class="article-title">
-          <h1 class="p-name">
-            <a
-              href="/archive/changing-app-behavior-server-side/"
-              title="Changing App Behavior Server-Side"
-            >
-              
-              Changing App Behavior Server-Side
-              
-            </a>
-          </h1>
-          <small style="font-style:italic;">
-            <time class="dt-published" datetime="2014-08-17T00:00:00">
-              Posted on Sun, 17 Aug 2014 at 12:00 AM
-            </time>
-          </small>
-        </div>
-        <div class="article-content e-content">
-          <p>We've all been there: you ship your app, it passes Apple's App Review, then it's in the Store... and <em>then</em> you find a bug. A small bug, but one you should fix ASAP. Whether it's some issue with download behavior, the color of some box, the font somewhere is too small, or your French localization of some text is overflowing some button (like what <a href="http://www.red-sweater.com">Daniel Jalkut</a> talked about on <a href="http://www.coreint.org">Core Intuition</a> this week), either way, it's a pain. You fix the problem locally, and submit a new build, but Apple still takes a week to review it. Meanwhile your users are having to deal with a bug that you've already solved. It's a common, frustrating and often a sales affecting problem.</p>
+          <div class="article-title">
+            <h1 class="p-name">
+              <a
+                href="/archive/changing-app-behavior-server-side/"
+                title="Changing App Behavior Server-Side"
+              >
+                
+                Changing App Behavior Server-Side
+                
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2014-08-17T00:00:00">
+                Posted on Sun, 17 Aug 2014 at 12:00 AM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>We've all been there: you ship your app, it passes Apple's App Review, then it's in the Store... and <em>then</em> you find a bug. A small bug, but one you should fix ASAP. Whether it's some issue with download behavior, the color of some box, the font somewhere is too small, or your French localization of some text is overflowing some button (like what <a href="http://www.red-sweater.com">Daniel Jalkut</a> talked about on <a href="http://www.coreint.org">Core Intuition</a> this week), either way, it's a pain. You fix the problem locally, and submit a new build, but Apple still takes a week to review it. Meanwhile your users are having to deal with a bug that you've already solved. It's a common, frustrating and often a sales affecting problem.</p>
 <p>On a <a href="http://atp.fm/episodes/74">recent episode of ATP</a>, <a href="http://www.marco.org">Marco</a> mentioned that he could change quite a few features of the app from the server-side. Combine this with <a href="http://inessential.com">Brent Simmons'</a> way of building <a href="http://vesperapp.co">Vesper</a> (i.e. using plists to configure colors, fonts, item sizes, etc) and it seems to me that it should be entirely possible to make iOS apps that are mostly configurable from the server-side. This got me thinking. Why not build the app to download it's configuration file (i.e. plist, or Localization.strings file) remotely? Sure it's not as convenient as Apple's built in frameworks sometimes, but it would allow developers to fix features, colors, themes, and localization issues all remotely, and instantly.</p>
 <p>I haven't looked into the technical issues with this, and there is an argument to be made that not all iOS devs want to run a server just to host their .strings files, but if you're already running a server for some other functionality in your app, it's basically cost free and avoids quite a few small but irritating problems.</p>
 <p>My motto: If it can be on the server, it should be on the server. The client doesn't need to worry about it, it just needs to display it.</p>
+          </div>
+          <hr />
+          
+          <small>
+            Filed under:
+            <span class="tags article-content">
+              
+                <a href="/tags.html#tag-iOS development" title="iOS development" class="tag">iOS development</a>
+              
+            </span>
+          </small><br />
+          
+          <small>
+            Other Links:
+            <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+            <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+            <span class="article-content">
+              <a
+                rel="status"
+                href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+                target="_blank"
+              >
+                Status Page &#8594;
+              </a>
+            </span>
+          </small>
         </div>
-        <hr />
-        
-        <small>
-          Filed under:
-          <span class="tags article-content">
-            
-              <a href="/tags.html#tag-iOS development" title="iOS development" class="tag">iOS development</a>
-            
-          </span>
-        </small><br />
-        
-        <small>
-          Other Links:
-          <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
-          <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
-          <span class="article-content">
-            <a
-              rel="status"
-              href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
-              target="_blank"
-            >
-              Status Page &#8594;
-            </a>
-          </span>
-        </small>
-      </div>
       </article>
+      <div class="footer">
+        <img
+          src="/images/misc/logo-sm.png"
+          alt="BiteofAnapple Logo"
+          style="width: 60px;"
+          width="60px"
+        />
+      </div>
     </div>
     
     <div class="side-bar">
@@ -119,6 +130,22 @@
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/foundational-texts/" title="Foundational Texts" rel="nofollow">
+    Foundational Texts
+  </a></li>
+  
+  <li><a href="/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">
+    Science, Models, and Squeaking Lead
+  </a></li>
+  
+  <li><a href="/archive/the-mysterious-potential-of-the-plane/" title="The Mysterious Potential of the Plane" rel="nofollow">
+    The Mysterious Potential of the Plane
+  </a></li>
+  
+  <li><a href="/archive/nothing-throughout-the-ages/" title="Nothing Throughout the Ages" rel="nofollow">
+    Nothing Throughout the Ages
+  </a></li>
+  
   <li><a href="/archive/running--securing-servers-a-concise-guide/" title="Running &amp; Securing Servers: A Concise Guide" rel="nofollow">
     Running &amp; Securing Servers: A Concise Guide
   </a></li>
@@ -141,22 +168,6 @@
   
   <li><a href="/archive/more-on-handwriting-amp-cursive/" title="More on Handwriting &amp;amp; Cursive" rel="nofollow">
     More on Handwriting &amp;amp; Cursive
-  </a></li>
-  
-  <li><a href="/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
-    On Handwriting and Switching to Cursive
-  </a></li>
-  
-  <li><a href="/archive/my-favorite-books-from-2023/" title="My Favorite Books from 2023" rel="nofollow">
-    My Favorite Books from 2023
-  </a></li>
-  
-  <li><a href="/archive/experimenting-with-the-game-of-life/" title="Experimenting with the Game of Life" rel="nofollow">
-    Experimenting with the Game of Life
-  </a></li>
-  
-  <li><a href="/archive/building-bots-for-fun-and8230/" title="Building Bots for Fun and&amp;#8230;" rel="nofollow">
-    Building Bots for Fun and&amp;#8230;
   </a></li>
   
 </ul>
@@ -223,11 +234,11 @@
   
     <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
+  
     <a href="/tags.html#tag-python" title="python" class="tag">python</a>,
   
-    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
-  
-    <a href="/tags.html#tag-history" title="history" class="tag">history</a>
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>
   
 </div>
 <h4>Blogroll</h4>

@@ -1,6 +1,6 @@
 slug: oauth-over-xmpp
 published: Tue, 24 Oct 2017 at 06:24 PM
-updated: Wed, 13 Nov 2024 01:34:37 
+updated: Thu, 19 Dec 2024 20:03:54 
 title: OAuth Over XMPP
 author: Brian Schrader
 tags: django, software, xmpp, oauth, adventurerscodex

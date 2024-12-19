@@ -1,6 +1,6 @@
 slug: running--securing-servers-a-concise-guide
 published: Mon, 21 Oct 2024 at 05:47 PM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:54 
 title: Running & Securing Servers: A Concise Guide
 author: Brian Schrader
 tags: software, programming

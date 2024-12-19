@@ -1,6 +1,6 @@
 slug: mvvm-is-not-very-good
 published: Sun, 20 Dec 2015 at 01:45 PM
-updated: Wed, 13 Nov 2024 01:34:37 
+updated: Thu, 19 Dec 2024 20:03:53 
 title: MVVM is not very good
 author: Brian Schrader
 tags: development

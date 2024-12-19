@@ -1,6 +1,6 @@
 slug: forest-through-the-trees
 published: Wed, 16 Jul 2014 at 02:46 AM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:54 
 title: Forest Through the Trees
 author: Brian Schrader
 status: publish

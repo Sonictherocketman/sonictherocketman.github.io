@@ -1,6 +1,6 @@
 slug: the-unremarkable-yesterday
 published: Sat, 11 Oct 2014 at 09:42 PM
-updated: Wed, 13 Nov 2024 01:34:36 
+updated: Thu, 19 Dec 2024 20:03:52 
 title: The unremarkable yesterday
 author: Brian Schrader
 tags: blogging

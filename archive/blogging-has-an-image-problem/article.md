@@ -1,6 +1,6 @@
 slug: blogging-has-an-image-problem
 published: Sat, 03 Nov 2018 at 12:02 AM
-updated: Wed, 13 Nov 2024 01:34:35 
+updated: Thu, 19 Dec 2024 20:03:52 
 title: Blogging has an Image Problem
 author: Brian Schrader
 tags: blogging, open web

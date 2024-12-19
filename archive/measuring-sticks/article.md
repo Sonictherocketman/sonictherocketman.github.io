@@ -1,6 +1,6 @@
 slug: measuring-sticks
 published: Mon, 26 Jun 2017 at 10:37 AM
-updated: Wed, 13 Nov 2024 01:34:36 
+updated: Thu, 19 Dec 2024 20:03:53 
 title: Measuring Sticks
 author: Brian Schrader
 tags: history, roman

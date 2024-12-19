@@ -5,7 +5,9 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="webmention" href="https://pine.blog/api/webmention/r/f4ecb3b3-6edc-4baa-9553-4f678c3e4b96" />
-    <link rel="icon" type="image/png" href="//www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595?size=30">
+    <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
+
     <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.0">
     <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.0">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
@@ -14,6 +16,7 @@
   <meta property="og:title" content="Assumptions and Variable Names" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="http://brianschrader.com/archive/assumptions-and-variable-names/" />
+  
 
   </head>
   <body>
@@ -44,25 +47,25 @@
       <article class="h-entry">
         <a href="/" class="u-author"></a>
         <div class="post">
-        <div class="article-title">
-          <h1 class="p-name">
-            <a
-              href="/archive/assumptions-and-variable-names/"
-              title="Assumptions and Variable Names"
-            >
-              
-              Assumptions And Variable Names
-              
-            </a>
-          </h1>
-          <small style="font-style:italic;">
-            <time class="dt-published" datetime="2020-10-01T22:00:00">
-              Posted on Thu, 01 Oct 2020 at 10:00 PM
-            </time>
-          </small>
-        </div>
-        <div class="article-content e-content">
-          <p>As developers, we make a lot of assumptions about the world. We have to. The world is messy, unorganized, unsorted, and chaotic, and so is the data that this world generates. It's nigh impossible to process data in an orderly fashion if you can't organize it and make meaningful distinctions between different categories. Consider how much more difficult it would be for a music service to recommend titles if we didn't group music into genres, or how utterly meaningless it would be to say that COVID case counts were rising or falling if you couldn't say where or when. Developers are one of many groups of people who's job is largely to categorize and process data. We employ different methods than other disciplines, but the principle is the same. The problem is that almost any attempt to categorize the real world is fraught with peril. The world doesn't fit nicely into groups. It feeds back into itself in knotted and tangled ways. Few natural categories exist, and this means that in order for us to categorize the world, we need to construct those categories ourselves. These categories are build on assumptions about the world, but they're only assumptions. They can and will be broken, and when our assumptions no longer hold, they cause bugs.</p>
+          <div class="article-title">
+            <h1 class="p-name">
+              <a
+                href="/archive/assumptions-and-variable-names/"
+                title="Assumptions and Variable Names"
+              >
+                
+                Assumptions And Variable Names
+                
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2020-10-01T22:00:00">
+                Posted on Thu, 01 Oct 2020 at 10:00 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>As developers, we make a lot of assumptions about the world. We have to. The world is messy, unorganized, unsorted, and chaotic, and so is the data that this world generates. It's nigh impossible to process data in an orderly fashion if you can't organize it and make meaningful distinctions between different categories. Consider how much more difficult it would be for a music service to recommend titles if we didn't group music into genres, or how utterly meaningless it would be to say that COVID case counts were rising or falling if you couldn't say where or when. Developers are one of many groups of people who's job is largely to categorize and process data. We employ different methods than other disciplines, but the principle is the same. The problem is that almost any attempt to categorize the real world is fraught with peril. The world doesn't fit nicely into groups. It feeds back into itself in knotted and tangled ways. Few natural categories exist, and this means that in order for us to categorize the world, we need to construct those categories ourselves. These categories are build on assumptions about the world, but they're only assumptions. They can and will be broken, and when our assumptions no longer hold, they cause bugs.</p>
 <h3>What does this have to do with code?</h3>
 <p>A lot actually. When we write code we give names to various data points. We call one bit of memory a <code>username</code> and the other an <code>email_address</code>. Sometimes, like with more fundamental computer-science concepts, we can mathematically or physically guarantee that certain data is what it claims to be. Other times, we simply define a byte as 8-bits or a given variable as an <code>int</code> and not a <code>string</code>. Importantly, these definitions are assumptions. They assume that the hardware the code runs on works a certain way or that the system can be expected to do what the OS claims it will do, but that's a topic for another time.</p>
 <p>Many bugs are the cause of failed assumptions. Some languages try to reduce the number of assumptions that a developer needs to make by guaranteeing that variables defined as a certain type will always hold data that is that type, but fundamentally, there are much bigger problems plaguing software than type checking. For example, type checking can guarantee that a given variable called <code>html_string</code> contains a string value and that it always will, but it can't guarantee that the string is actually HTML. It could be an email address or it could just be invalid HTML. Both are strings, sure, but that's not the whole story.</p>
@@ -87,40 +90,48 @@ def is_probably_a_json_feed(tree):
 <h3>Handling Approximations</h3>
 <p>As a guide to users, Pine.blog tries to determine the frequency that a given feed contains new items. Twitter users may be familiar with <a href="https://allenpike.com/2009/announcing-unladen-follow">Unladen Follow</a> which does the same thing for Twitter accounts, or how the podcast app <a href="https://overcast.fm">Overcast</a> does the same thing. This feature lets potential followers know how often a given feed will have new posts. This value is generally pretty simple to calculate, but because it's something determined by Pine.blog and not set by the site owner, this value is descriptive not prescriptive. It describes what is likely the update frequency based on past publishing habits. This measure cannot completely predict a site's future behavior, it's just a guess. To reflect that, my code calls this variable <code>approximate_update_frequency</code>, because it's just that <code>approximate</code>. Some would probably prefer the word <code>estimated</code>, which is certainly clearer, but the point is the same. The variable name conveys just as much confidence as possible without giving other developers (including future me) the false impression that the data is any more certain or guaranteed than it actually is.</p>
 <p>Developers like guarantees. We like to know that data won't change on us without warning and that things are what they claim to be. This is why so many developers care deeply about variable naming. No one likes variables that are outright incorrect. If you saw a variable in a codebase called <code>bank_account_number</code>, but upon inspection, you saw that it contained a user's first and last name, you would be understandably confused and irritated. The original developer of that code either didn't account for a certain case, incorrectly assigned that data to the wrong variable, or they simply lied to you. The same is true when we name a given variable <code>html_string</code>, but it turns out to contain invalid data. The variable name lied to us. By naming variables you're making assumptions and you're making promises to yourself and to later developers about what the variable contains. If you're not sure about what the data is, or can't guarantee that fact, then you should probably say so.</p>
+          </div>
+          <hr />
+          
+          <small>
+            Filed under:
+            <span class="tags article-content">
+              
+                <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+              
+                <a href="/tags.html#tag-knowing" title="knowing" class="tag">knowing</a>,
+              
+                <a href="/tags.html#tag-philosophy" title="philosophy" class="tag">philosophy</a>,
+              
+                <a href="/tags.html#tag-variable naming" title="variable naming" class="tag">variable naming</a>
+              
+            </span>
+          </small><br />
+          
+          <small>
+            Other Links:
+            <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+            <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+            <span class="article-content">
+              <a
+                rel="status"
+                href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+                target="_blank"
+              >
+                Status Page &#8594;
+              </a>
+            </span>
+          </small>
         </div>
-        <hr />
-        
-        <small>
-          Filed under:
-          <span class="tags article-content">
-            
-              <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
-            
-              <a href="/tags.html#tag-knowing" title="knowing" class="tag">knowing</a>,
-            
-              <a href="/tags.html#tag-philosophy" title="philosophy" class="tag">philosophy</a>,
-            
-              <a href="/tags.html#tag-variable naming" title="variable naming" class="tag">variable naming</a>
-            
-          </span>
-        </small><br />
-        
-        <small>
-          Other Links:
-          <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
-          <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
-          <span class="article-content">
-            <a
-              rel="status"
-              href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
-              target="_blank"
-            >
-              Status Page &#8594;
-            </a>
-          </span>
-        </small>
-      </div>
       </article>
+      <div class="footer">
+        <img
+          src="/images/misc/logo-sm.png"
+          alt="BiteofAnapple Logo"
+          style="width: 60px;"
+          width="60px"
+        />
+      </div>
     </div>
     
     <div class="side-bar">
@@ -146,6 +157,22 @@ def is_probably_a_json_feed(tree):
 <h4>Recent Posts</h4>
 <ul>
   
+  <li><a href="/archive/foundational-texts/" title="Foundational Texts" rel="nofollow">
+    Foundational Texts
+  </a></li>
+  
+  <li><a href="/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">
+    Science, Models, and Squeaking Lead
+  </a></li>
+  
+  <li><a href="/archive/the-mysterious-potential-of-the-plane/" title="The Mysterious Potential of the Plane" rel="nofollow">
+    The Mysterious Potential of the Plane
+  </a></li>
+  
+  <li><a href="/archive/nothing-throughout-the-ages/" title="Nothing Throughout the Ages" rel="nofollow">
+    Nothing Throughout the Ages
+  </a></li>
+  
   <li><a href="/archive/running--securing-servers-a-concise-guide/" title="Running &amp; Securing Servers: A Concise Guide" rel="nofollow">
     Running &amp; Securing Servers: A Concise Guide
   </a></li>
@@ -168,22 +195,6 @@ def is_probably_a_json_feed(tree):
   
   <li><a href="/archive/more-on-handwriting-amp-cursive/" title="More on Handwriting &amp;amp; Cursive" rel="nofollow">
     More on Handwriting &amp;amp; Cursive
-  </a></li>
-  
-  <li><a href="/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
-    On Handwriting and Switching to Cursive
-  </a></li>
-  
-  <li><a href="/archive/my-favorite-books-from-2023/" title="My Favorite Books from 2023" rel="nofollow">
-    My Favorite Books from 2023
-  </a></li>
-  
-  <li><a href="/archive/experimenting-with-the-game-of-life/" title="Experimenting with the Game of Life" rel="nofollow">
-    Experimenting with the Game of Life
-  </a></li>
-  
-  <li><a href="/archive/building-bots-for-fun-and8230/" title="Building Bots for Fun and&amp;#8230;" rel="nofollow">
-    Building Bots for Fun and&amp;#8230;
   </a></li>
   
 </ul>
@@ -250,11 +261,11 @@ def is_probably_a_json_feed(tree):
   
     <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
+  
     <a href="/tags.html#tag-python" title="python" class="tag">python</a>,
   
-    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>,
-  
-    <a href="/tags.html#tag-history" title="history" class="tag">history</a>
+    <a href="/tags.html#tag-politics" title="politics" class="tag">politics</a>
   
 </div>
 <h4>Blogroll</h4>

@@ -1,6 +1,6 @@
 slug: you-need-math-to-program
 published: Fri, 25 Jul 2014 at 05:29 AM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:55 
 title: You need math to program
 author: Brian Schrader
 status: publish

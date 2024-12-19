@@ -1,6 +1,6 @@
 slug: re-voting-systems
 published: Fri, 15 Apr 2016 at 05:41 PM
-updated: Wed, 13 Nov 2024 01:34:38 
+updated: Thu, 19 Dec 2024 20:03:54 
 title: Re: Voting Systems
 author: Brian Schrader
 tags: voting, cgp grey

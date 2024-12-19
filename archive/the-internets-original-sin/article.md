@@ -1,6 +1,6 @@
 slug: the-internets-original-sin
 published: Tue, 26 Oct 2021 at 06:07 PM
-updated: Wed, 13 Nov 2024 01:34:37 
+updated: Thu, 19 Dec 2024 20:03:53 
 title: The Internet's Original Sin
 author: Brian Schrader
 tags: software, internet, history

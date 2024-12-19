@@ -1,6 +1,6 @@
 slug: overcast-25-update
 published: Mon, 14 Mar 2016 at 07:51 PM
-updated: Wed, 13 Nov 2024 01:34:35 
+updated: Thu, 19 Dec 2024 20:03:51 
 title: Overcast 2.5 Update
 author: Brian Schrader
 tags: overcast, podcasts

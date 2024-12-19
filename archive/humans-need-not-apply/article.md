@@ -1,6 +1,6 @@
 slug: humans-need-not-apply
 published: Sat, 16 Aug 2014 at 08:32 PM
-updated: Wed, 13 Nov 2024 01:34:34 
+updated: Thu, 19 Dec 2024 20:03:50 
 title: Humans Need Not Apply
 author: Brian Schrader
 tags: automation, computers, singularity

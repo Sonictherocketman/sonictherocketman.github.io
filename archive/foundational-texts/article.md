@@ -1,6 +1,6 @@
 slug: foundational-texts
 published: Thu, 19 Dec 2024 at 07:11 PM
-updated: Thu, 19 Dec 2024 19:11:54 
+updated: Thu, 19 Dec 2024 20:03:54 
 title: Foundational Texts
 author: Brian Schrader
 status: publish

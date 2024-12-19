@@ -1,6 +1,6 @@
 slug: adventurers-codex-xmpp
 published: Tue, 11 Jul 2017 at 01:12 PM
-updated: Wed, 13 Nov 2024 01:34:37 
+updated: Thu, 19 Dec 2024 20:03:53 
 title: Adventurer's Codex: XMPP
 status: publish
 author: Brian Schrader
