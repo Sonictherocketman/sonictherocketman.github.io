@@ -1,6 +1,6 @@
 slug: safaris-websocket-stream-view
 published: Sun, 04 Mar 2018 at 10:16 PM
-updated: Thu, 19 Dec 2024 20:03:51 
+updated: Thu, 24 Jul 2025 22:06:42 
 title: Safari's WebSocket Stream View
 author: Brian Schrader
 tags: development, software, programming, adventurer's codex, xmpp

@@ -1,6 +1,6 @@
 slug: california-democracy-and-progress
 published: Fri, 05 Mar 2021 at 07:26 PM
-updated: Thu, 19 Dec 2024 20:03:54 
+updated: Thu, 24 Jul 2025 22:06:45 
 title: California, Democracy, and Progress
 author: Brian Schrader
 tags: blog, announcement, politics

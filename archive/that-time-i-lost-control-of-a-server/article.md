@@ -1,6 +1,6 @@
 slug: that-time-i-lost-control-of-a-server
 published: Tue, 19 Apr 2022 at 12:10 AM
-updated: Thu, 19 Dec 2024 20:03:52 
+updated: Thu, 24 Jul 2025 22:06:43 
 title: That Time I Lost Control of a Server
 author: Brian Schrader
 tags: software development

@@ -1,6 +1,6 @@
 slug: git-hooks-for-fun-and-profit
 published: Sun, 27 Sep 2020 at 07:44 PM
-updated: Thu, 19 Dec 2024 20:03:52 
+updated: Thu, 24 Jul 2025 22:06:43 
 title: Git Hooks for Fun and Profit
 author: Brian Schrader
 tags: git, hooks, automation, bash, hacks, web dev

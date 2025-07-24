@@ -1,6 +1,6 @@
 slug: i-love-nsoperation
 published: Sun, 23 Dec 2018 at 10:29 PM
-updated: Thu, 19 Dec 2024 20:03:51 
+updated: Thu, 24 Jul 2025 22:06:42 
 title: I Love NSOperation
 author: Brian Schrader
 tags: development, software, nsoperation

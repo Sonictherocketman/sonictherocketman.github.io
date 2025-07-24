@@ -1,6 +1,6 @@
 slug: changing-tides
 published: Sun, 09 Jun 2019 at 02:43 AM
-updated: Thu, 19 Dec 2024 20:03:53 
+updated: Thu, 24 Jul 2025 22:06:44 
 title: Changing Tides
 author: Brian Schrader
 tags: software, pine.blog, payments

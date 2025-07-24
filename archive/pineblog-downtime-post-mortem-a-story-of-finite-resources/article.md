@@ -1,6 +1,6 @@
 slug: pineblog-downtime-post-mortem-a-story-of-finite-resources
 published: Mon, 17 Feb 2020 at 04:57 AM
-updated: Thu, 19 Dec 2024 20:03:50 
+updated: Thu, 24 Jul 2025 22:06:41 
 title: Pine.blog Downtime Post-Mortem: A Story of Finite Resources
 author: Brian Schrader
 tags: postmortem, pine.blog, what-happened
