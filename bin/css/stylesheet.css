@@ -500,6 +500,26 @@ details p {
   font-style: italic;
 }
 
+/**
+  Newsletter Promo
+ */
+
+.newsletter-callout a.subscribe {
+  font-size: small;
+  display: block;
+  background-color: #575757;
+  color: white;
+  border-radius: 5px;
+  padding: 0.2rem 0.7rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.newsletter-callout a.subscribe:hover {
+  background-color: #454545;
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
 .hide {
   display: none;
 }
