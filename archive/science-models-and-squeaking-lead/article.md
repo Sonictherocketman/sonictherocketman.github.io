@@ -1,9 +1,10 @@
 slug: science-models-and-squeaking-lead
 published: Wed, 18 Dec 2024 at 07:54 AM
-updated: Thu, 24 Jul 2025 22:06:45 
+updated: Thu, 24 Jul 2025 22:06:45
 title: Science, Models, and Squeaking Lead
 status: publish
 author: Brian Schrader
+featured: true
 tags: history,alchemy,philosophy
 hero: /images/blog/alchemy/books.jpg
 

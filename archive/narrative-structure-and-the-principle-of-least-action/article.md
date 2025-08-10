@@ -1,10 +1,11 @@
 slug: narrative-structure-and-the-principle-of-least-action
 published: Wed, 11 Jun 2025 at 04:15 AM
-updated: Thu, 24 Jul 2025 22:06:45 
+updated: Thu, 24 Jul 2025 22:06:45
 title: Narrative Structure and the Principle of Least Action
 author: Brian Schrader
 tags:writing,physics
 status: publish
+featured: true
 hero: /images/blog/action/unification.jpg
 
 I love reading and watching non-fiction because it never answers a question without raising many more. The process of learning and discovery is a never ending quest to slay the hydra. Every severed head&mdash;every answered question&mdash;only brings with it more heads to slay. This all brings me to an insight that occurred to me the other day after rewatching a [Veritasium video][v] on the discovery of the Principle of Least Action&mdash;for like the fifteenth time.
