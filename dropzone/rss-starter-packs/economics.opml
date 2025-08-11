@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Apple Bloggers | Starter Pack</title>
+	</head>
+<body>
+
+
+	<outline text="Economics" title="Economics">
+		<outline text="Piggington's Econo-Almanac" title="Piggington's Econo-Almanac" description="" type="rss" version="RSS" htmlUrl="http://www.piggington.com/" xmlUrl="https://www.piggington.com/rss.xml"/>
+		<outline text="Full Stack Economics" title="Full Stack Economics" description="" type="rss" version="RSS" htmlUrl="https://fullstackeconomics.com/" xmlUrl="https://fullstackeconomics.com/rss"/>
+		<outline text="Paul Krugman | Substack" title="Paul Krugman | Substack" description="" type="rss" version="RSS" htmlUrl="https://paulkrugman.substack.com/" xmlUrl="https://paulkrugman.substack.com/feed"/>
+		<outline text="Nautilus » Economics Category Feed" title="Nautilus » Economics Category Feed" description="" type="rss" version="RSS" htmlUrl="https://nautil.us/topics/economics/feed/" xmlUrl="https://paulkrugman.substack.com/feed"/>
+	</outline>
+
+
+
+</body>
+</opml>

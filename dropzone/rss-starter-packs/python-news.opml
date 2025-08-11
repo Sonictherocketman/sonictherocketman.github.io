@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Apple Bloggers | Starter Pack</title>
+	</head>
+<body>
+
+	<outline text="Python News" title="Python">
+		<outline text="PyPy Status Blog" title="PyPy Status Blog" description="" type="rss" version="RSS" htmlUrl="http://morepypy.blogspot.com/" xmlUrl="http://feeds.feedburner.com/PyPyStatusBlog"/>
+		<outline text=".py in the sky" title=".py in the sky" description="" type="rss" version="RSS" htmlUrl="http://astrofrog.github.com/" xmlUrl="http://astrofrog.github.io/rss.xml"/>
+		<outline text="Python Insider" title="Python Insider" description="" type="rss" version="RSS" htmlUrl="https://pythoninsider.blogspot.com/" xmlUrl="http://feeds.feedburner.com/PythonInsider"/>
+		<outline text="Neopythonic" title="Neopythonic" description="" type="rss" version="RSS" htmlUrl="http://neopythonic.blogspot.com/" xmlUrl="http://neopythonic.blogspot.com/feeds/posts/default"/>
+		<outline text="Trey Hunner" title="Trey Hunner" description="" type="rss" version="RSS" htmlUrl="" xmlUrl="http://treyhunner.com/atom.xml"/>
+		<outline text="Python Software Foundation News" title="Python Software Foundation News" description="" type="rss" version="RSS" htmlUrl="https://pyfound.blogspot.com/" xmlUrl="http://feeds.feedburner.com/PythonSoftwareFoundationNews?format=xml"/>
+	</outline>
+
+
+</body>
+</opml>

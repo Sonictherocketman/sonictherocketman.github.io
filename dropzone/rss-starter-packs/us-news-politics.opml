@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>US News &amp; Politics | Starter Pack</title>
+	</head>
+<body>
+
+
+	<outline text="US News &amp; Politics" title="US News &amp; Politics">
+		<outline text="NYT &gt; The Upshot" title="NYT &gt; The Upshot" description="" type="rss" version="RSS" htmlUrl="https://www.nytimes.com/section/upshot" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Upshot.xml"/>
+		<outline text="Alex Abad-Santos | Vox" title="Alex Abad-Santos | Vox" description="" type="rss" version="RSS" htmlUrl="https://www.vox.com/author/alex-abad-santos" xmlUrl="https://www.vox.com/authors/alex-abad-santos/rss"/>
+		<outline text="Dylan Matthews | Vox" title="Dylan Matthews | Vox" description="" type="rss" version="RSS" htmlUrl="https://www.vox.com/author/dylan-matthews" xmlUrl="https://www.vox.com/authors/dylan-matthews/rss"/>
+		<outline text="Andrew Prokop | Vox" title="Andrew Prokop | Vox" description="" type="rss" version="RSS" htmlUrl="https://www.vox.com/author/andrew-prokop" xmlUrl="https://www.vox.com/authors/andrew-prokop/rss"/>
+		<outline text="Dylan Scott | Vox" title="Dylan Scott | Vox" description="" type="rss" version="RSS" htmlUrl="https://www.vox.com/author/dylan-scott" xmlUrl="https://www.vox.com/authors/dylan-scott/rss"/>
+		<outline text="Zack Beauchamp | Vox" title="Zack Beauchamp | Vox" description="" type="rss" version="RSS" htmlUrl="https://www.vox.com/author/zack-beauchamp-2" xmlUrl="https://www.vox.com/authors/zack-beauchamp-2/rss"/>
+		<outline text="Ian Millhiser | Vox" title="Ian Millhiser | Vox" description="" type="rss" version="RSS" htmlUrl="https://www.vox.com/author/ian-millhiser-2" xmlUrl="https://www.vox.com/authors/ian-millhiser-2/rss"/>
+	</outline>
+</body>
+</opml>

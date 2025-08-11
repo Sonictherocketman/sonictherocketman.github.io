@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Internet Favorites | Starter Pack</title>
+	</head>
+<body>
+
+	<outline text="Internet Favorites" title="Internet Favorites">
+		<outline text="kottke.org" title="kottke.org" description="" type="rss" version="RSS" htmlUrl="https://kottke.org/" xmlUrl="http://feeds.kottke.org/main"/>
+		<outline text="LoadingReadyRun" title="LoadingReadyRun" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCwjN2uVdL9A0i3gaIHKFzuA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCwjN2uVdL9A0i3gaIHKFzuA"/>
+		<outline text="Primitive Technology" title="Primitive Technology" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCAL3JXZSzSm8AlZyD3nQdBA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCAL3JXZSzSm8AlZyD3nQdBA"/>
+		<outline text="Rands in Repose" title="Rands in Repose" description="" type="rss" version="RSS" htmlUrl="https://randsinrepose.com/" xmlUrl="http://www.randsinrepose.com/index.xml"/>
+		<outline text="Sifting The Past" title="Sifting The Past" description="" type="rss" version="RSS" htmlUrl="http://siftingthepast.com/" xmlUrl="http://siftingthepast.com/feed/"/>
+		<outline text="Wait But Why" title="Wait But Why" description="" type="rss" version="RSS" htmlUrl="https://waitbutwhy.com/" xmlUrl="http://waitbutwhy.com/feed"/>
+		<outline text="Waxy.org" title="Waxy.org" description="" type="rss" version="RSS" htmlUrl="https://waxy.org/" xmlUrl="http://waxy.org/links/index.xml"/>
+		<outline text="Merlin Mann" title="Merlin Mann" description="" type="rss" version="RSS" htmlUrl="https://merlin.ghost.io/" xmlUrl="https://merlin.ghost.io/rss/"/>
+	</outline>
+
+</body>
+</opml>

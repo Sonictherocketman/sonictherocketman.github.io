@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Astronomy &amp; Physics | Starter Pack</title>
+	</head>
+<body>
+
+
+	<outline text="Astronomy &amp; Physics" title="Astronomy &amp; Physics">
+		<outline text="minutephysics" title="minutephysics" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCUHW94eEFW7hkUMVaZz4eDg"/>
+		<outline text="NYT &gt; Science &gt; Space &amp; Cosmos" title="NYT &gt; Science &gt; Space &amp; Cosmos" description="" type="rss" version="RSS" htmlUrl="https://www.nytimes.com/section/science/space" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Space.xml"/>
+		<outline text="Sabine Hossenfelder" title="Sabine Hossenfelder" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC1yNl2E66ZzKApQdRuTQ4tw" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC1yNl2E66ZzKApQdRuTQ4tw"/>
+		<outline text="Veritasium" title="Veritasium" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA"/>
+		<outline text="PBS Space Time" title="PBS Space Time" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC7_gcs09iThXybpVgjHZ_7g" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC7_gcs09iThXybpVgjHZ_7g"/>
+		<outline text="Astronomy Archives - Nautilus" title="Astronomy Archives - Nautilus" description="" type="rss" version="RSS" htmlUrl="https://nautil.us/topics/astronomy/feed/" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC7_gcs09iThXybpVgjHZ_7g"/>
+		<outline text="xkcd's What If?" title="xkcd's What If?" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC6IxnFzHofFJ5X2PycSMsww" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC6IxnFzHofFJ5X2PycSMsww"/>
+		<outline text="Practical Engineering" title="Practical Engineering" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCMOqf8ab-42UUQIdVoKwjlQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCMOqf8ab-42UUQIdVoKwjlQ"/>
+	</outline>
+
+</body>
+</opml>
+

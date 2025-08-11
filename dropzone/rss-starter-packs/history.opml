@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>History 📜 | Starter Pack</title>
+	</head>
+<body>
+
+	<outline text="History 📜" title="History 📜">
+		<outline text="A Collection of Unmitigated Pedantry" title="A Collection of Unmitigated Pedantry" description="" type="rss" version="RSS" htmlUrl="https://acoup.blog/" xmlUrl="https://acoup.blog/feed"/>
+		<outline text="Brian Sandberg: Historical Perspectives" title="Brian Sandberg: Historical Perspectives" description="" type="rss" version="RSS" htmlUrl="https://brian-sandberg.com/" xmlUrl="https://briansandberg.wordpress.com/rss"/>
+		<outline text="distillatio" title="distillatio" description="" type="rss" version="RSS" htmlUrl="https://distillatio.wordpress.com/" xmlUrl="https://distillatio.wordpress.com/feed/"/>
+		<outline text="Tasting History with Max Miller" title="Tasting History with Max Miller" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCsaGKqPZnGp_7N80hcHySGQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCsaGKqPZnGp_7N80hcHySGQ"/>
+		<outline text="Townsends" title="Townsends" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCxr2d4As312LulcajAkKJYw" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=jastownsendandson"/>
+		<outline text="Objectivity" title="Objectivity" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCtwKon9qMt5YLVgQt1tvJKg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCtwKon9qMt5YLVgQt1tvJKg"/>
+		<outline text="Medieval manuscripts blog" title="Medieval manuscripts blog" description="" type="rss" version="RSS" htmlUrl="https://blogs.bl.uk/digitisedmanuscripts/" xmlUrl="https://blogs.bl.uk/digitisedmanuscripts/rss.xml"/>
+		<outline text="My medieval foundry" title="My medieval foundry" description="" type="rss" version="RSS" htmlUrl="https://medievalfoundry.wordpress.com/" xmlUrl="https://medievalfoundry.wordpress.com/feed/"/>
+		<outline text="opusanglicanum" title="opusanglicanum" description="" type="rss" version="RSS" htmlUrl="https://opusanglicanum.wordpress.com/" xmlUrl="https://opusanglicanum.wordpress.com/feed/"/>
+	</outline>
+</body>
+</opml>

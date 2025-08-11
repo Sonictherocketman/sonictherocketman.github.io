@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Music | Starter Pack</title>
+	</head>
+<body>
+
+	<outline text="Music" title="Music">
+		<outline text="Albums &amp; EPs Archives - Obscure Sound" title="Albums &amp; EPs Archives - Obscure Sound" description="" type="rss" version="RSS" htmlUrl="https://www.obscuresound.com/category/albums-eps/" xmlUrl="https://www.obscuresound.com/category/albums-eps/feed/"/>
+		<outline text="Colin Meloy's Machine Shop | Substack" title="Colin Meloy's Machine Shop | Substack" description="" type="rss" version="RSS" htmlUrl="https://colinmeloy.substack.com/" xmlUrl="https://colinmeloy.substack.com/feed"/>
+		<outline text="Ryan Leach" title="Ryan Leach" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC5pbZl4urNZOr9aPxMC1xfg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC5pbZl4urNZOr9aPxMC1xfg"/>
+		<outline text="NPR Music Tiny Desk Concerts" title="NPR Music Tiny Desk Concerts" description="" type="rss" version="RSS" htmlUrl="" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=PL1B627337ED6F55F0"/>
+		<outline text="bill wurtz" title="bill wurtz" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCq6aw03lNILzV96UvEAASfQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCq6aw03lNILzV96UvEAASfQ"/>
+		<outline text="Malukah" title="Malukah" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCS613EogLXE0lTsxyC1cWLA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCS613EogLXE0lTsxyC1cWLA"/>
+		<outline text="melodysheep" title="melodysheep" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCR9sFzaG9Ia_kXJhfxtFMBA" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=melodysheep"/>
+		<outline text="David Coffin" title="David Coffin" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCuF5l9Scauvp9kQesRIfWmA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCuF5l9Scauvp9kQesRIfWmA"/>
+	</outline>
+</body>
+</opml>

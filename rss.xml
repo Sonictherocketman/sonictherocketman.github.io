@@ -1,5 +1,57 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Sun, 10 Aug 2025 21:34:04 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/the-practicals-of-writing-paper-and-pens</guid><pubDate>Thu, 31 Jul 2025 19:07:00 -0800</pubDate><category>writing</category><category>personal</category><title>The Practicals of Writing: Paper and Pens</title><link>https://brianschrader.com/archive/the-practicals-of-writing-paper-and-pens/</link><description><![CDATA[<p>Without wishing to turn this into a writing &amp; pen blog, I did want to talk a little more about the kit I use these days, if only because I figure some readers out there might find it interesting or useful.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 11 Aug 2025 16:34:46 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/the-methods-of-science--medieval-rainbows</guid><pubDate>Mon, 11 Aug 2025 16:34:00 -0800</pubDate><category>history</category><category>science</category><title>The Methods of Science &amp; Medieval Rainbows</title><link>https://brianschrader.com/archive/the-methods-of-science--medieval-rainbows/</link><description><![CDATA[<p>It happened again! I love it when my interests align.</p>
+<p>Not too long ago, Veritasium released a fascinating video on the <a href="https://www.youtube.com/watch?v=24GfgNtnjXc">physics of rainbows</a>&mdash;which you should totally watch. In that video they discuss the mechanics of how light waves of differing wavelengths refract in water droplets to form various kinds of single and double-banded rainbows. The video is a pitch to get the viewer to question their prior knowledge of how rainbows work and then it uses that question to dive in to the deeper physics of light that explain an otherwise common phenomenon.</p>
+<div class="image-right" style="width: 300px;margin-top:0;">
+<a href="https://www.youtube.com/watch?v=24GfgNtnjXc" target="_blank"><img src="/images/blog/veritas-raindrop.jpg" alt="" style="max-width: 100%;"></a>
+<center><small><caption>Source: Veritasium</caption></small></center>
+</div>
+
+<p>What I didn't expect to find, was that rainbows are not just interesting mechanistically, but that they were a particularly insightful topic of discussion for medieval scholastics when debating the importance of <a href="/archive/science-models-and-squeaking-lead/">scientific experimentation</a> itself!</p>
+<p>Beware, we're going <em>deep</em> into the weeds!</p>
+<h2>The Issue of Experiment</h2>
+<p>In order for this to make any sense, we need to dive a bit into how ancient and medieval peoples (and some modern historians thereof) understood their world.</p>
+<p>Medieval scholars were not idiots, as some might sometimes conceive today. They had a very nuanced and complex way of understanding and classifying the natural world. The trouble is that it is a <em>very</em> different method of understanding than we use today and that can be very confusing for us moderns to understand. Particularly we have to consider the role of experimentation in ancient and medieval natural philosophy, which was <em>heavily</em> influenced by Aristotle (aka the Stagirite).</p>
+<p>I think this quote from Dr. Peter Dear sums the prevalent understanding up pretty well:</p>
+<blockquote>
+<p>"For Aristotelians, by contrast, the philosopher learned to understand nature by observing and contemplating its <q>ordinary course,</q> not by interfering with that course and thereby corrupting it."</p>
+<p>&ndash; <em>Promethean Ambitions</em>, William Newman. p 240 Footnote 8. A quote by Peter Dear from <em>Revolutionnizing the Sciences: European Knowledge and its Ambitions</em></p>
+</blockquote>
+<p>Now, you might ask yourself: why did they think this way? What reason could the ancients and medievals have for such a strange seeming conclusion? Well, consider this quote from Antonio Perez-Ramos.</p>
+<blockquote>
+<p>"What is the point...of making or constructing something in order to gain insight into Nature's mysteries if we <strong>posit from the very start</strong> that no productions of human technology can remotely equal or even approach the essence and subtlety of natural processes?"</p>
+<p>&ndash; <em>Promethean Ambitions</em>, William Newman. p 241 Footnote 9. A quote by Antonio Perez-Ramos from <em>Bacon's Forms and the Maker's Knowledge</em> (Emphasis mine).</p>
+</blockquote>
+<p>This assumption, made <em>axiomatically</em> for centuries, is critical if one is to understand this branch of ancient and medieval theory. And while it is true that not all scholars of the time believed such things (as we will see) it is true for many. As such it is/was a prevalent view in the works of many historians as well, a phenomenon that Dr. William Newman calls the noninterventionist fallacy.</p>
+<blockquote>
+<p>The noninterventionist fallacy [is the idea] that the Stagirite and his followers were fundamentally nonexperimental or even actively opposed to experiment, because experimentation involved intervention in natural processes&hellip; Indeed, in [this] view, avoidance of artificial intervention was a necessary consequence of the Aristotelian conception of natural science. Since Aristotle defined an object's "nature" as the sum of its regularly occurring properties, <strong>any attempt to isolate the object from its normal environment could only interfere with its nature</strong>. Since experiment relies on precisely such interference&hellip; it becomes ipso facto useless in Aristotelian natural science.<sup>1</sup></p>
+<p>- <em>Promethean Ambitions</em>, William Newman. p 238-240 (Emphasis mine).</p>
+</blockquote>
+<p>However Newman argues that this fallacy is just that: a fallacy, and that his colleagues (historians of science) should not interpret all medieval or ancient sources this way precisely because Aristotle <em>himself</em> didn't follow the noninterventionist mold, and neither did a very studious set of his later disciples.</p>
+<h2>The Solution in Rainbows</h2>
+<div class="image-right" style="width: 300px;margin-top:0;">
+<a href="/images/blog/newman-rainbows.jpeg" target="_blank"><img src="/images/blog/newman-rainbows.jpeg" alt="" style="max-width: 100%;"></a>
+<center><small><caption>Theodoric's epic diagram! He and Veritasium were on the same path with their visuals.</caption></small></center>
+</div>
+
+<p>One of the examples of ancient and medievalist scientific experimentation comes to us from the writings of Aristotle himself and his later followers.</p>
+<p>Aristotle wrote extensively about how rainbows could be formed by the splash and spray of an oar, and later writers like Albertus Magnus and Robert Bacon experimented with making rainbows from glass vessels, spray, wet rags, and more. Albertus "used vessels filled with water to replicate the individual drops of water in a rainbow," and a wet rag to "produce a fine mist and the attendant spectrum."<sup>2</sup> Albertus then proceeds to replicate Aristotle's experiments with the oar.</p>
+<p>However the culmination of the experimentation on this topic has to be the work of Theodoric of Freiburg who wrote in the first decades of the fourteenth century.</p>
+<blockquote>
+<p>Theodoric managed to use the experimental techniques that we have already described to prove that the rainbow came about from a double refraction and a single reflection within each drop of water. He even managed to explain the formation of the common secondary bow in terms of a double refraction and a double reflection (fig 5.1).</p>
+<p>- <em>Promethean Ambitions</em>, William Newman. p 244</p>
+</blockquote>
+<p>What's more, this idea that all Aristotelian natural philosophers denied the usefulness of experiment is refuted by none other than a medieval scholar himself, Themo Judaei when discussing the merits of scientific experimentation and its regard to rainbows and their accompanying halos.</p>
+<blockquote>
+<p>Likewise it must be known that it is said in the title of the question: "just as the rainbow or halo etc.," because it is difficult to know well the composition or manner of composing metals, just as it is difficult to know the way of generating the rainbow. And unless we knew how to make or see the rainbow and its color, as well the halo, by means of art, we would hardly be led to an understanding of the rainbow or the halo&mdash;and how they come to be thus.<sup>3</sup></p>
+<p><em>Quaestiones</em>, Themo Judaei. Question 27.</p>
+</blockquote>
+<p>He goes on to discuss the relevance of this knowledge to experimentation via a chemical method of making gold, but that is another story.<sup>4</sup></p>
+<div class="footnote">
+<sup>1</sup> I get serious "modern questions on the <a href="https://www.youtube.com/watch?v=ytyjgIyegDI" target="_blank">philosophy of Quantum Mechanics</a>" vibes from this.<br />
+<sup>2</sup> Newman, P 244.<br />
+<sup>3</sup> "Art" here means the artificial making of things in any way, not just, like, painting&mdash;though painting is indeed a kind of art in this definition.<br />
+<sup>4</sup> While chemically impossible, need I remind you, we can <a href="https://www.scientificamerican.com/article/fact-or-fiction-lead-can-be-turned-into-gold/">actually do this today</a> so I think the point remains quite valid.
+</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/the-practicals-of-writing-paper-and-pens</guid><pubDate>Thu, 31 Jul 2025 19:07:00 -0800</pubDate><category>writing</category><category>personal</category><title>The Practicals of Writing: Paper and Pens</title><link>https://brianschrader.com/archive/the-practicals-of-writing-paper-and-pens/</link><description><![CDATA[<p>Without wishing to turn this into a writing &amp; pen blog, I did want to talk a little more about the kit I use these days, if only because I figure some readers out there might find it interesting or useful.</p>
 <p>For a long time, I bought several different kinds of notebooks&mdash;and pens&mdash;looking for the right fit for my needs. Eventually, I landed on a setup that I'm very happy with.</p>
 <h2>A Good Notebook</h2>
 <p>When it comes to notebooks, I have a set of firm criteria and a wishlist of nice-to-haves.</p>
@@ -279,109 +331,4 @@ I've <a href="/archive/on-the-web-the-best-outcome-is-email/">said it before</a>
 <sup>4</sup> For the Programmers out there, think about this:<br /><code>
 class Tin extends Lead implements Squeakable, Silvery {}
 </code>
-</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/the-mysterious-potential-of-the-plane</guid><pubDate>Fri, 13 Dec 2024 02:46:00 -0800</pubDate><category>mathematics</category><category>math</category><title>The Mysterious Potential of the Plane</title><link>https://brianschrader.com/archive/the-mysterious-potential-of-the-plane/</link><description><![CDATA[<p>In recent years I've embarked on a sort of journey of rediscovery with respect to mathematics. As a kid I was <em>somewhat</em> good at math and I spent my college years doing lots of it&mdash;to the point where I grew to really dislike it. But even in those times, mathematics&mdash;while becoming increasingly difficult&mdash;always seemed like it was trying to tell me something. These days, it fascinates me.</p>
-<p>A common observation among those who study classical engineering fields is that many (if not most) of the problem domains are modelled with very similar techniques. The motion of a cantilevered beam, a road bridge, a plane wing, a mass on a spring, a musical note, and even a planet's orbit can be described by very similar mathematics. Indeed so many physical phenomena can be described by these equations that it can make you wonder if you've stumbled into some <a href="https://www.wired.com/2016/07/everything-harmonic-oscillator/">great secret</a> of the universe.</p>
-<figure>
-<a href="https://commons.wikimedia.org/wiki/File:Horizontal-mass-on-spring.svg">
-<img class="image-center" src="/images/blog/Horizontal-mass-on-spring.svg" />
-</a>
-<figcaption style="display: block; text-align: center;"><small>To the physics/engineering undergrad, <i>everything</i> is a mass on a spring.<br />Credit: MikeRun/WikiMedia Commons</small></figcaption>
-</figure>
-
-<p>But that wonderful truth is only a gateway to something much deeper, more fundamental&mdash;a true capital-S Secret of the Universe. Mathematics tends to deceive with simplicity, and there's few things in this world that hide more secrets than this simplest of concepts.</p>
-<h2>Consider the Plane</h2>
-<p>As children we're taught about the 2-D Plane.<sup>1</sup> At first, students are confused in a manner similar to how they felt when being told <math math;"><mrow><mi>x</mi><mrow></math> was a number now, and oftentimes that confusion grows into consternation. At worst, plotting and manipulating curves on this plane feels pointless, arbitrary, and unnatural. For those who come to know the plane as a tool, it can be quite an enlightening process. As an undergrad engineering student, you become familiar with the plane and its rules; you learn to shape curves and solve perspective puzzles with it. Modern <a href="https://www.youtube.com/watch?v=r6sGWTCMz2k">video animations</a> make this so much more intuitive because they're able to show a figure on the plane change over time: you can watch it squish and stretch as you adjust the coefficients of a quadratic.</p>
-<p><img class="image-center" src="/images/blog/cos-grid.png" style="width:500px" /></p>
-<p>What's more Geometry holds so much deeper meaning in our world than I think most people imagine. Vast numbers of people can use mathematics to do every day tasks: measure the square-footage of a room, scale up a recipe for a family dinner, or plan their finances, but Geometry does so much more. Simple rules about finding the angles in a triangle can help measure the curvature of the universe, and simple sines and cosines (which form the backbone of many vector operations) enable the ability to encode the meaning of abstract linguistic concepts in modern Large Language Models. Our universe is made of math in truly fascinating ways.</p>
-<p>But this isn't my point. So far, this has all been backstory.</p>
-<h2>Exploring the Plane</h2>
-<p>What's truly wondrous about the 2-D Plane isn't what you can plot, but what you can discover. There are infinitely many lines, curves, and shapes one can draw on the 2-D Plane and while most of them are useless, quite a few are incredible. Those are the ones we plot to find the motion of a ball in the air, or the speed of a planet's orbit over time. But there are some curves that hold incredible secrets. We know of a few and there are likely many, many more. These magical curves transform our understanding of mathematics itself.</p>
-<p>Consider the logarithm:</p>
-<div>
-    <math display="block" class="tml-display" style="display:block math;">
-      <mrow>
-        <mi>x</mi>
-        <mo>=</mo>
-        <mn>1,000</mn>
-        <mtext> or </mtext>
-        <msup>
-          <mn>10</mn>
-          <mn>3</mn>
-        </msup>
-      </mrow>
-    </math>
-
-    <center style="display: block; padding: 0.25rem;">therefore</center>
-
-    <math display="block" class="tml-display" style="display:block math;">
-      <mrow>
-        <mi>l</mi>
-        <mi>o</mi>
-        <mi>g</mi>
-        <mo form="prefix" stretchy="false">(</mo>
-        <mi>x</mi>
-        <mo form="postfix" stretchy="false">)</mo>
-        <mo>=</mo>
-        <mn>3</mn>
-      </mrow>
-    </math>
-</div>
-
-<p>This is a function that can be used to do all sorts of practical, useful operations, but it can also <strong>convert multiplication into addition</strong>.</p>
-<math display="block" class="tml-display" style="display:block math; margin-bottom: 0.5rem;">
-  <mrow>
-    <msup>
-      <mn>10</mn>
-      <mn>3</mn>
-    </msup>
-    <mo>*</mo>
-    <msup>
-      <mn>10</mn>
-      <mn>5</mn>
-    </msup>
-    <mo>=</mo>
-    <msup>
-      <mn>10</mn>
-      <mn>8</mn>
-    </msup>
-  </mrow>
-</math>
-
-<math display="block" class="tml-display" style="display:block math;">
-  <mrow>
-    <mi>l</mi>
-    <mi>o</mi>
-    <mi>g</mi>
-    <mo form="prefix" stretchy="false">(</mo>
-    <msup>
-      <mn>10</mn>
-      <mn>3</mn>
-    </msup>
-    <mo form="postfix" stretchy="false">)</mo>
-    <mo>+</mo>
-    <mi>l</mi>
-    <mi>o</mi>
-    <mi>g</mi>
-    <mo form="prefix" stretchy="false">(</mo>
-    <msup>
-      <mn>10</mn>
-      <mn>5</mn>
-    </msup>
-    <mo form="postfix" stretchy="false">)</mo>
-    <mo>=</mo>
-    <mn>8</mn>
-  </mrow>
-</math>
-
-<p>Plotted, the <a href="https://www.youtube.com/watch?v=OjIwCOevUew">logarithm function</a> makes a curve on the 2-D Plane. This means that there exists a curve on the plane which converts multiplication to addition! What other <a href="https://www.youtube.com/watch?v=f8CXG7dS-D0">magical curves</a> exist with incredible properties? Perhaps there's a curve that plots itself? Oh wait! <a href="https://www.youtube.com/watch?v=_s5RFgd59ao">There is</a>!</p>
-<p>At it's core, a function is a thing that takes a number(s) and returns another. This sequence of values can be plotted to form a curve on the plane. There's a curve mapping subtraction to multiplication, one for the GDP of the U.S. over time, and (given some encoding trickery) a curve describing the lifespan in seconds of each and every being that will ever exist! They're all in there somewhere; we just have to find them.</p>
-<p>This is one of the true wonders of mathematics<sup>2</sup>, and more specifically of geometry. Who would think that simple shapes and curves could tell such great truths? Yet so much hides within the expanse. In this way, the work of finding such curves is one of exploration in a treacherous wilderness. With simple tools, one carves a path of discovery amid the endless vastness, returning to share the knowledge they have found.</p>
-<h2>The Secrets Within</h2>
-<p>Held within the depths of this infinite expanse there are perhaps infinitely many fundamental secrets. We only find them through careful study, or occasionally by accident, and we have no idea how many we might be missing&mdash;even amidst the sectors of that expanse we've so thoroughly explored.</p>
-<p>It's so wondrous to me that such a simple concept could hold such great truths and that shapes and curves upon the plane could so accurately model the natural world. Perhaps it should be the Plane or the Triangle that stands beside Fire as our most powerful invention.</p>
-<div class="footnote">
-<sup>1</sup> For most of my life, I'd been confused when people mentioned "the complex plane" or "the number line" rather than "a plane" or "a number line", but the beauty in properly capitalizing the name "The 2-D Plane" is that, in a Platonic-Forms kind of way, it reveals the truth that we're all talking about the <i>same</i> plane. There's only one. We may depict some fragment of it on a board, but the true 2-D Plane exists in singular and only in Form.
-</div>
-<div class="footnote">
-<sup>2</sup> No doubt some people out there will read a few of my points here and correctly point out that these are more points about infinity rather than specifically the 2-D plane. You are correct, but my point remains valid.
 </div>]]></description></item></channel></rss>

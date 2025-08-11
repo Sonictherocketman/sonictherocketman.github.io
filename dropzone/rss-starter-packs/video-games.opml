@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Video Games | Starter Pack</title>
+	</head>
+<body>
+
+
+	<outline text="Video Games" title="Video Games">
+		<outline text="Second Wind" title="Second Wind" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC1wZGocgLvopgOqBUFCyIJA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC1wZGocgLvopgOqBUFCyIJA"/>
+		<outline text="Noodle" title="Noodle" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCj74rJ9Lgl3WTngq675wxKg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCj74rJ9Lgl3WTngq675wxKg"/>
+		<outline text="LRR Videogames" title="LRR Videogames" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC5cCITw_rzNdLelWJCw5L1A" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC5cCITw_rzNdLelWJCw5L1A"/>
+		<outline text="Fully Ramblomatic - the blog of Yahtzee Croshaw" title="Fully Ramblomatic - the blog of Yahtzee Croshaw" description="" type="rss" version="RSS" htmlUrl="http://fullyramblomatic-yahtzee.blogspot.com/" xmlUrl="http://fullyramblomatic-yahtzee.blogspot.com/feeds/posts/default"/>
+	</outline>
+
+</body>
+</opml>

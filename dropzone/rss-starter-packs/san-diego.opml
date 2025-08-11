@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>San Diego 🏛 | Starter Pack</title>
+	</head>
+<body>
+
+	<outline text="San Diego 🏛" title="San Diego 🏛">
+		<outline text="All Stories Archives | Voice of San Diego" title="All Stories Archives | Voice of San Diego" description="" type="rss" version="RSS" htmlUrl="https://voiceofsandiego.org/category/topics/" xmlUrl="https://www.voiceofsandiego.org/category/topics/feed/"/>
+		<outline text="Andy Keatts - Axios San Diego" title="Andy Keatts - Axios San Diego" description="" type="rss" version="RSS" htmlUrl="https://www.axios.com/" xmlUrl="https://api.axios.com/feed/author/akeatts"/>
+		<outline text="Economy Archives | Voice of San Diego" title="Economy Archives | Voice of San Diego" description="" type="rss" version="RSS" htmlUrl="https://voiceofsandiego.org/category/topics/economy/" xmlUrl="https://www.voiceofsandiego.org/category/topics/economy/feed/"/>
+		<outline text="Government Archives | Voice of San Diego" title="Government Archives | Voice of San Diego" description="" type="rss" version="RSS" htmlUrl="https://voiceofsandiego.org/category/topics/government/" xmlUrl="https://www.voiceofsandiego.org/category/topics/government/feed/"/>
+		<outline text="Land Use Archives | Voice of San Diego" title="Land Use Archives | Voice of San Diego" description="" type="rss" version="RSS" htmlUrl="https://voiceofsandiego.org/category/topics/land-use/" xmlUrl="https://www.voiceofsandiego.org/category/topics/land-use/feed/"/>
+		<outline text="Politics Archives | Voice of San Diego" title="Politics Archives | Voice of San Diego" description="" type="rss" version="RSS" htmlUrl="https://voiceofsandiego.org/category/topics/politics/" xmlUrl="https://www.voiceofsandiego.org/category/topics/politics/feed/"/>
+		<outline text="Uptown Planners" title="Uptown Planners" description="" type="rss" version="RSS" htmlUrl="https://uptownplannerssd.org/" xmlUrl="https://uptownplannerssd.org/rss"/>
+	</outline>
+</body>
+</opml>

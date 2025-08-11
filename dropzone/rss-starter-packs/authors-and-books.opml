@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Authors &amp; Books 📚 | Starter Pack</title>
+	</head>
+<body>
+	<outline text="Authors &amp; Books 📚" title="Authors &amp; Books 📚">
+		<outline text="Brandon Sanderson" title="Brandon Sanderson" description="" type="rss" version="RSS" htmlUrl="https://www.brandonsanderson.com/" xmlUrl="https://brandonsanderson.com/feed/"/>
+		<outline text="Ex Urbe" title="Ex Urbe" description="" type="rss" version="RSS" htmlUrl="https://www.exurbe.com/" xmlUrl="https://www.exurbe.com/rss"/>
+		<outline text="Going Indie" title="Going Indie" description="" type="rss" version="RSS" htmlUrl="http://goingindie.tech/" xmlUrl="http://goingindie.tech/rss.xml"/>
+		<outline text="Letters of Note" title="Letters of Note" description="" type="rss" version="RSS" htmlUrl="https://lettersofnote.com/" xmlUrl="http://feeds.feedburner.com/LettersOfNote"/>
+		<outline text="Matt Gemmell" title="Matt Gemmell" description="" type="rss" version="RSS" htmlUrl="https://mattgemmell.scot/" xmlUrl="http://mattgemmell.com/feed"/>
+		<outline text="Messapian Words" title="Messapian Words" description="" type="rss" version="RSS" htmlUrl="https://francescodimitri.substack.com/" xmlUrl="https://francescodimitri.substack.com/feed"/>
+		<outline text="The Dictionary of Obscure Sorrows" title="The Dictionary of Obscure Sorrows" description="" type="rss" version="RSS" htmlUrl="https://www.dictionaryofobscuresorrows.com/" xmlUrl="https://www.dictionaryofobscuresorrows.com/rss"/>
+	</outline>
+</body>
+</opml>

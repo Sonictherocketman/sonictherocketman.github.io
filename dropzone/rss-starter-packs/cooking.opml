@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Cooking | Starter Pack</title>
+	</head>
+<body>
+
+	<outline text="Cooking" title="Cooking">
+		<outline text="Babish Culinary Universe" title="Babish Culinary Universe" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=bgfilms"/>
+		<outline text="Food Wishes" title="Food Wishes" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCRIZtPl9nb9RiXc9btSTQNw" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=foodwishes"/>
+		<outline text="Gourmet Makes" title="Gourmet Makes" description="" type="rss" version="RSS" htmlUrl="" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=PLKtIunYVkv_RezN3GB12YA8orYOScQUdA"/>
+		<outline text="How To Cook That" title="How To Cook That" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCsP7Bpw36J666Fct5M8u-ZA" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=howtocookthat"/>
+		<outline text="Edible History : Season 1" title="Edible History : Season 1" description="" type="rss" version="RSS" htmlUrl="" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=PL8zglt-LDl-gmDHluQD-7JDB7-f27Ulpb"/>
+		<outline text="How To Drink" title="How To Drink" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCioZY1p0bZ4Xt-yodw8_cBQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCioZY1p0bZ4Xt-yodw8_cBQ"/>
+	</outline>
+</body>
+</opml>
+

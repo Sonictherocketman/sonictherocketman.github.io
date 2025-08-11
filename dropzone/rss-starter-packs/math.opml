@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+	<head>
+		<title>Mathematics | Starter Pack</title>
+	</head>
+<body>
+
+
+	<outline text="Mathematics" title="Mathematics">
+		<outline text="Randall Munroe – FiveThirtyEight" title="Randall Munroe – FiveThirtyEight" description="" type="rss" version="RSS" htmlUrl="https://fivethirtyeight.com/" xmlUrl="https://fivethirtyeight.com/contributors/randall-munroe/feed/"/>
+		<outline text="Numberphile" title="Numberphile" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCoxcjq-8xIDTYp3uz647V5A"/>
+		<outline text="What's new" title="What's new" description="" type="rss" version="RSS" htmlUrl="https://terrytao.wordpress.com/" xmlUrl="https://terrytao.wordpress.com/feed/"/>
+		<outline text="Shtetl-Optimized" title="Shtetl-Optimized" description="" type="rss" version="RSS" htmlUrl="https://scottaaronson.blog/" xmlUrl="http://www.scottaaronson.com/blog/?feed=rss2"/>
+		<outline text="Michael Tsai" title="Michael Tsai" description="" type="rss" version="RSS" htmlUrl="https://mjtsai.com/blog" xmlUrl="http://mjtsai.com/blog/feed/"/>
+	</outline>
+
+</body>
+</opml>
