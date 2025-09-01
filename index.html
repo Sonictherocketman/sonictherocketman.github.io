@@ -47,6 +47,44 @@
       <article>
         <div class="post h-entry">
           <div class="article-title">
+            <h1><a href="/archive/trapped-in-the-infinite-honey-pot/" class="u-url p-name">
+                
+                Trapped In The Infinite Honey Pot
+                
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2025-09-01T22:23:00-08:00">
+                Posted on Mon, 01 Sep 2025 at 10:23 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <p>I think I've accidentally created a honey pot for badly behaved AI bots. Let me explain:</p>
+<p>A while back I created a joke website called the HyperWebster after the theoretical, infinite dictionary containing all possible thoughts expressible in the english language. I got the idea from <a href="https://www.youtube.com/watch?v=s86-Z-CbaHA">this old Vsauce video</a>. I put it together in an afternoon, posted it on HackerNews, it went no where, then I forgot about it. Nothing eventful there. Anyway, the site is still up <a href="https://random.skyrocket.software/hyperwebster/">if you want to try loading it</a>, but you might have a problem.</p>
+<p>See, for the past month it's been getting slammed by bots from all over the internet trying to read or clone the entirety of human thought. (You can't say they're not ambitious little bots!)</p>
+<div class="image-center">
+<img alt="A screenshot of the website in case it's down" src="/images/blog/hyperwebster.png" style="max-width: 100%;" />
+<center><small>Here's a screenshot of the site in case it's not up when you read this.</small></center>
+</div>
+
+<p>At first I suspected a poorly coded botnet was to blame for this rush of traffic and a quick check of the logs confirmed that, indeed, hundreds of different IP addresses were hitting the site all at once browsing similar pages. Since this site is isolated to its own server and not hosting anything important, I figured I'd let the bots eat their fill of my infinite dictionary and ignore the problem. After all, I'd only noticed the issue because my <a href="https://nine9s.cloud">uptime monitoring system</a> alerted me that the site was a little slower than normal. The traffic spiked at a few hundred requests per second, but eventually it did indeed die down and things returned to normal.</p>
+<p>However, that's where the funny part begins.</p>
+<div class="image-center">
+<img alt="An Infinite HoneyPot" src="/images/blog/honeypot.png" style="max-width: 100%;" />
+<center><small>An Infinite HoneyPot</small></center>
+</div>
+
+<p>If you check out these logs you'll notice that the User-Agent string might sound familiar. Indeed, Claude isn't alone either! Amazon, Claude, and several other big boy bots are currently consuming the HyperWebster in the vain hope of understandin all possible written thoughts! I guess I expected more from the  tech giants than to fall prey to a simple procedurally generated website, but alas this is apparently too much to ask.</p>
+<p>I do not have a takeaway from all this, at time of writing the requests are still pouring in (at a few dozen per second). However, it is <em>very</em> funny.</p>
+<p>Good luck, Claude. We're all counting on you.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article>
+        <div class="post h-entry">
+          <div class="article-title">
             <h1><a href="/archive/the-methods-of-science--medieval-rainbows/" class="u-url p-name">
                 
                 The Methods Of Science & Medieval Rainbows
@@ -513,79 +551,6 @@ I've <a href="/archive/on-the-web-the-best-outcome-is-email/">said it before</a>
         </div>
       </article>
       
-      <article>
-        <div class="post h-entry">
-          <div class="article-title">
-            <h1><a href="/archive/science-models-and-squeaking-lead/" class="u-url p-name">
-                
-                Science, Models, And Squeaking Lead
-                
-              </a>
-            </h1>
-            <small style="font-style:italic;">
-              <time class="dt-published" datetime="2024-12-18T07:54:00-08:00">
-                Posted on Wed, 18 Dec 2024 at 07:54 AM
-              </time>
-            </small>
-          </div>
-          <div class="article-content e-content">
-            <p>At the dawn of the 14th century the Franciscan alchemist <a href="https://en.wikipedia.org/wiki/Paul_of_Taranto">Paul of Taranto</a> crouched over the strange lump of metal he'd created. He gaped, in awe of what he had done. It should have been impossible. The scholars told him he was a fool to even try, yet he'd <em>done</em> it. It wasn't gold that he'd created. He was still far from achieving that goal, but he'd made an important step. According to the book he would later publish under the title <em>Summa perfectionis magisterii</em>, Paul&mdash;writing under a deliberately confusing pseudonym&mdash;had just transmuted Lead into Tin!<sup>1</sup></p>
-<p>For those of us in the 21st century, it's second nature to dismiss this sort of claim as obviously ridiculous. There is no known, chemical way to do what Paul intends. But that begs a very obvious question: what <em>had</em> he done? If we take the man at his word, he certainly seems to have done <em>something</em> to his bar of lead, but what? And why did he believe his experiment had succeeded?</p>
-<p>These questions will lead us down a very fascinating path, and one that reveals the striking truth about our knowledge of the natural world.</p>
-<h2>Theory &amp; Practice</h2>
-<p>We take so much for granted these days about the knowledge of the natural world. We consider obvious and teach to children what took generations of the brightest minds to figure out, and it can be very easy to forget that.</p>
-<p>Today we break apart systems to understand them; this is Reductionism. And we use material analysis to understand and manipulate the properties of physical objects: that is we melt, dissolve, chemically alter, and then recombine materials in order to create what we want. But in order to do all that&mdash;and better to make predictions about what <em>exactly</em> our methods will accomplish in doing so&mdash;we must accept the following assumption: that an object is nothing more than a physical assortment of indivisible components.<sup>2</sup> This assumption may seem obvious to most people today, but it wasn't always that way! Indeed most serious philosophers in the past considered the idea ludicrous.<sup>3</sup></p>
-<p><img src="/images/blog/alchemy/book-wide.jpg" style="width: 100%; max-width: unset; padding: 0;" class="image-center" /></p>
-<p>I won't go into the history of Classical &amp; Medieval Matter Theory, but suffice it to say that before a pre-modern version of what we today would call Atomic Theory would emerge, the dominant view of "What is Stuff?" was far more <strong>qualitative</strong> than <strong>quantitative</strong>. For the programmers out there, think of their Matter Theory as a sort of Duck Typing.<sup>4</sup></p>
-<blockquote>
-<p>If it walks like a duck and it quacks like a duck, then it's a duck.</p>
-</blockquote>
-<p>Matter <em>was</em> it's qualities. Gold is yellow, ductile, resists being tarnished. Lead tarnishes easily, it's heavy. Tin is silvery and <a href="https://www.youtube.com/watch?v=kzIsvbKHgfU">when you bend it</a>, <strong>it squeaks</strong>. Therefore the process of turning one metal into another is a matter of giving it the desired qualities!</p>
-<div style="float: right; min-width: 270px;" class="image-container">
-<img src="/images/blog/alchemy/geber.jpg" style="height: 425px; max-width: unset;" />
-<caption><small>Photos: mine</small></caption>
-</div>
-
-<p>As at every point in history, there were differing view points about what exactly matter is made of and scholarly opinions differed greatly. However, one theory&mdash;preferred by alchemists like our old friend Paul&mdash;held that the four prime elements were bound together into a duopoly of two higher-level substances to make the metals. What were those substances? Why <a href="https://en.wikipedia.org/?title=Sulfur-mercury_theory_of_metals&amp;redirect=no">sulfur and mercury</a>!</p>
-<p>Yup, literal sulfur (or brimstone) and mercury (or quicksilver).</p>
-<p>Now before we make fun of Paul too much (or rather <a href="https://en.wikipedia.org/wiki/Pseudo-Geber">Geber</a> as he called himself in his writing), let's try to understand <em>why</em> he thought sulfur and mercury were the foundational elements underpinning all metals. Under this theory, the difference between say lead and gold was simply in the relative proportions of these primary ingredients!</p>
-<p>Paul, like so many alchemists, was seemingly quite the avid experimentalist, and so based his theories on what he could determine by the fire. Among many other experiments, he noticed the sulfurous smell given off by impure metals during refining and assumed that such a smell was due to a volatile sulfur within the metal itself. Additionally, according to Dr. William Newman:</p>
-<blockquote>
-<p>The fact that calcined [i.e. burned] metals often appear in the form of yellow, red, or white powder (what we coul call oxides) suggests to Geber that they also contain...sulfur that remains after the volatile sulfur has been forced out by calcination.<br />
-- <a href="https://www.amazon.com/Atoms-Alchemy-Experimental-Scientific-Revolution/dp/0226576973">Atoms &amp; Alchemy</a> by William R. Newman, p. 33</p>
-</blockquote>
-<p>As for the mercury, that brings us back to our earlier tale. Again Newman writes:</p>
-<blockquote>
-<p>Geber proves [his] point by washing lead with quicksilver and then melting it. whereupon the lead gains the creak that the tin had lost&mdash;as he puts it, the lead is converted to tin.<br />
-- <a href="https://www.amazon.com/Atoms-Alchemy-Experimental-Scientific-Revolution/dp/0226576973">Atoms &amp; Alchemy</a> by William R. Newman, p. 33</p>
-</blockquote>
-<p>According to his theory this worked because tin had more intrinsic mercury than lead. Therefore, to transform it, one simply needed to add mercury into the lead. Sure enough, once lead is washed in this way, <em>it squeaks when it bends</em>. Paul had successfully imparted the quality of squeakability into his lead, thereby transforming it (albeit partly) into tin.</p>
-<p>It might sound silly, but consider this: here was a person who formed a hypothesis about the cause of a natural phenomenon, then tested it. It worked, so he built on it. That sounds a lot like science, doesn't it?</p>
-<h2>What Even <em>is</em> Science?</h2>
-<p>At it's core, modern science is two things: a process of inquiry and a collection of knowledge. Together those two form a model of the natural world that we use to make predictions and offer explanations into the workings of nature. Science does not, and cannot, tell us how nature actually works under the hood, instead it gives us the tools to develop and test our models.</p>
-<p>This point is worth belaboring, because for me, it took a long time to really click.</p>
-<p>I studied aerospace engineering, which is basically Newton's mechanics, material design, and a lot of stuff about how fluids flow (air is a fluid, you see). When you study physics in this way, it can be tempting to believe you've learned something about nature, but what you've learned is how to <em>model</em> nature. There are always error terms sticking out, gaps in the theory, losses you approximate (spherical, frictionless cows for example). The math isn't nature, it's an approximation. Crucially, it's an approximation that <em>seems to work</em>, or at least it does within your measure of tolerance.</p>
-<p>It's hard to remember that we don't really know how nature works. We know how to approximate it. But that fact becomes easier to understand when you approach the study of nature, not from our current perspective, but from the outside.</p>
-<p>What's so fascinating to me about the example of poor old Geber/Jabir/Paul above is that his theories about matter were utterly wrong, and yet they did offer testable predictions that were sometimes correct! Like many scientists before and since, Paul may have very well chalked up his experimental failures to defects in apparatus, hidden variables like mineral origins, or even the incompleteness of his own theories, but nevertheless he worked with and improved his theories so to arrive at testable methods and predictions, and he wasn't the only one!</p>
-<p>It fascinates me so much because I find myself wondering: what do we believe about nature that future generations will look back on with the same bemusement that we feel about Paul of Taranto or any other proto-scientist who's theories fell short? What about nature will become so obvious that it's taught to ten-year-olds in four centuries, but that now our brightest cannot see?</p>
-<div class="footnote">
-<sup>1</sup> The opening scene of this post is a fictional account, so no one take this too seriously.
-</div>
-<div class="footnote">
-<sup>2</sup> Or chemically indivisible at least.
-</div>
-<div class="footnote">
-<sup>3</sup> All of this pertains only to the European West and the Middle East during the Classical and Medieval periods. Basically those cultures touched by the legacy of Aristotle.
-</div>
-<div class="footnote">
-<sup>4</sup> For the Programmers out there, think about this:<br /><code>
-class Tin extends Lead implements Squeakable, Silvery {}
-</code>
-</div>
-          </div>
-        </div>
-      </article>
-      
     </div>
     <div class="side-bar">
       <div class="promotion">
@@ -619,6 +584,10 @@ class Tin extends Lead implements Squeakable, Silvery {}
 </ul>
 <h4>Recent Posts</h4>
 <ul>
+  
+  <li><a href="/archive/trapped-in-the-infinite-honey-pot/" title="Trapped in the Infinite Honey Pot" rel="nofollow">
+    Trapped in the Infinite Honey Pot
+  </a></li>
   
   <li><a href="/archive/the-methods-of-science--medieval-rainbows/" title="The Methods of Science &amp; Medieval Rainbows" rel="nofollow">
     The Methods of Science &amp; Medieval Rainbows
@@ -654,10 +623,6 @@ class Tin extends Lead implements Squeakable, Silvery {}
   
   <li><a href="/archive/foundational-texts/" title="Foundational Texts" rel="nofollow">
     Foundational Texts
-  </a></li>
-  
-  <li><a href="/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">
-    Science, Models, and Squeaking Lead
   </a></li>
   
 </ul>
