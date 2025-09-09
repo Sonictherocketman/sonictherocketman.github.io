@@ -340,7 +340,6 @@ details p {
 
 .bars .side-bar {
 	margin: auto;
-  overflow: hidden;
   display: inline-block;
   width: 20%;
   float: right;
@@ -448,6 +447,7 @@ details p {
 /* Going Indie Promo */
 
 .promotion {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
