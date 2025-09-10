@@ -1,11 +1,11 @@
 slug: the-strangely-anthropic-form-of-natural-laws
 published: Wed, 10 Sep 2025 at 01:34 AM
-updated: Wed, 10 Sep 2025 01:56:50 
+updated: Wed, 10 Sep 2025 01:57:41 
 title: The Strangely Anthropic Form of Natural Laws
 author: Brian Schrader
 tags:philosophy
 status: publish
-hero: /images/blog/newton-principia.jpg
+hero: /images/blog/newton-principia.jpeg
 
 In the proceeding five centuries, humanity has made incredible progress in discovering and understanding natural laws. Starting in the sixteenth century, the Early Modern Period, colloquially known as the Scientific Revolution, catapulted humanity into the modern era. Today our knowledge of nature's inexorable laws extends from the largest possible structures in the Universe to the smallest physical components that construct all of reality.
 
@@ -20,7 +20,7 @@ Quantum Field Theory (QFT) predicts the behavior of nature's most fundamental co
 Yet, we can and do teach Newton's Laws to high schoolers.
 
 <figure>
-<img src="/images/blog/newton-principia.jpg" class="image-center" style="width: 400px;" />
+<img src="/images/blog/newton-principia.jpeg" class="image-center" style="width: 400px;" />
 <center><small><caption>Photograph: Cambridge University Library/PA</caption></small></center>
 </figure>
 
