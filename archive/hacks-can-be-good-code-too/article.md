@@ -1,6 +1,6 @@
 slug: hacks-can-be-good-code-too
 published: Mon, 21 Mar 2022 at 09:45 PM
-updated: Thu, 24 Jul 2025 22:06:41 
+updated: Tue, 09 Dec 2025 22:38:19 
 title: Hacks can be Good Code Too
 author: Brian Schrader
 tags: programming, software development

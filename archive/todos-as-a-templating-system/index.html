@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.0">
-    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.0">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.2">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.2">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
     <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
     
   <meta property="og:title" content="TODOs as a Templating System" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="http://brianschrader.com/archive/todos-as-a-templating-system/" />
+  <meta property="og:url" content="https://brianschrader.com/archive/todos-as-a-templating-system/" />
   
 
   </head>
@@ -125,35 +125,50 @@ class MassEmailView(APIView)
 <script>hljs.initHighlightingOnLoad();</script>
           </div>
           <hr />
-          
-          <small>
-            Filed under:
-            <span class="tags article-content">
+          <div style="display: flex; justify-content: space-between;">
+            <div>
               
-                <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+              <small>
+                Filed under:
+                <span class="tags article-content">
+                  
+                    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+                  
+                    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+                  
+                    <a href="/tags.html#tag-thought technology" title="thought technology" class="tag">thought technology</a>
+                  
+                </span>
+              </small><br />
               
-                <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
-              
-                <a href="/tags.html#tag-thought technology" title="thought technology" class="tag">thought technology</a>
-              
-            </span>
-          </small><br />
-          
-          <small>
-            Other Links:
-            <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
-            <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
-            <span class="article-content"><a href="https://sendfox.com/brianschrader/">Newsletter</a></span>,
-            <span class="article-content">
-              <a
-                rel="status"
-                href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
-                target="_blank"
-              >
-                Status Page &#8594;
-              </a>
-            </span>
-          </small>
+              <small>
+                Other Links:
+                <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+                <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+                <span class="article-content">
+                  <a
+                    rel="status"
+                    href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+                    target="_blank"
+                  >
+                    Status Page &#8594;
+                  </a>
+                </span>
+              </small>
+            </div>
+            <div class="newsletter-callout">
+              <div class="callout text-center">
+                <a
+                  href="https://sendfox.com/brianschrader/"
+                  title="Subscribe to the newsletter"
+                  class="subscribe"
+                  target="_blank"
+                >
+                  <span class="hide-on-mobile">The</span> Newsletter &#8594;
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
       <div class="footer">
@@ -165,13 +180,28 @@ class MassEmailView(APIView)
         />
       </div>
     </div>
-    
     <div class="side-bar">
       <div class="promotion">
+  
   <script src="https://shoutouts.page/embed/sRGtA2wwnhW-dAPFXEBy.js" defer></script>
+  
 </div>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "/archive", });
+    });
+</script>
 <h4>Featured Posts</h4>
 <ul>
+  
+  <li><a href="/archive/narrative-structure-and-the-principle-of-least-action/" title="Narrative Structure and the Principle of Least Action" rel="nofollow">
+    Narrative Structure and the Principle of Least Action
+  </a></li>
+  
+  <li><a href="/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">
+    Science, Models, and Squeaking Lead
+  </a></li>
   
   <li><a href="/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
     On Handwriting and Switching to Cursive
@@ -189,44 +219,44 @@ class MassEmailView(APIView)
 <h4>Recent Posts</h4>
 <ul>
   
-  <li><a href="/archive/developing-style-writing-cursive-two-years-in/" title="Developing Style: Writing Cursive Two Years In" rel="nofollow">
-    Developing Style: Writing Cursive Two Years In
+  <li><a href="/archive/maintaining-a-music-library-ten-years-on/" title="Maintaining a Music Library, Ten Years On" rel="nofollow">
+    Maintaining a Music Library, Ten Years On
   </a></li>
   
-  <li><a href="/archive/narrative-structure-and-the-principle-of-least-action/" title="Narrative Structure and the Principle of Least Action" rel="nofollow">
-    Narrative Structure and the Principle of Least Action
+  <li><a href="/archive/empirical-partial-derivatives/" title="Empirical Partial Derivatives" rel="nofollow">
+    Empirical Partial Derivatives
   </a></li>
   
-  <li><a href="/archive/experts-in-the-internet-age-the-power-of-email/" title="Experts in the Internet Age: the Power of Email" rel="nofollow">
-    Experts in the Internet Age: the Power of Email
+  <li><a href="/archive/chemical-telescopes-and-the-process-of-science/" title="Chemical Telescopes and the Process of Science" rel="nofollow">
+    Chemical Telescopes and the Process of Science
   </a></li>
   
-  <li><a href="/archive/what-if-bookclub-but-with-ai/" title="What if: Bookclub, but AI?" rel="nofollow">
-    What if: Bookclub, but AI?
+  <li><a href="/archive/pine-blog-deprecation/" title="So Long Pine.blog" rel="nofollow">
+    So Long Pine.blog
   </a></li>
   
-  <li><a href="/archive/a-counting-meta-post/" title="A Counting Meta-Post" rel="nofollow">
-    A Counting Meta-Post
+  <li><a href="/archive/spoken-audio-from-automator--netnewswire/" title="Spoken Audio from Automator &amp; NetNewsWire" rel="nofollow">
+    Spoken Audio from Automator &amp; NetNewsWire
   </a></li>
   
-  <li><a href="/archive/foundational-texts/" title="Foundational Texts" rel="nofollow">
-    Foundational Texts
+  <li><a href="/archive/the-strangely-anthropic-form-of-natural-laws/" title="The Strangely Anthropic Form of Natural Laws" rel="nofollow">
+    The Strangely Anthropic Form of Natural Laws
   </a></li>
   
-  <li><a href="/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">
-    Science, Models, and Squeaking Lead
+  <li><a href="/archive/your-brain-is-an-l1-cache/" title="Your Brain is an L1 Cache" rel="nofollow">
+    Your Brain is an L1 Cache
   </a></li>
   
-  <li><a href="/archive/the-mysterious-potential-of-the-plane/" title="The Mysterious Potential of the Plane" rel="nofollow">
-    The Mysterious Potential of the Plane
+  <li><a href="/archive/trapped-in-the-infinite-honey-pot/" title="Trapped in the Infinite Honey Pot" rel="nofollow">
+    Trapped in the Infinite Honey Pot
   </a></li>
   
-  <li><a href="/archive/nothing-throughout-the-ages/" title="Nothing Throughout the Ages" rel="nofollow">
-    Nothing Throughout the Ages
+  <li><a href="/archive/the-methods-of-science--medieval-rainbows/" title="The Methods of Science &amp; Medieval Rainbows" rel="nofollow">
+    The Methods of Science &amp; Medieval Rainbows
   </a></li>
   
-  <li><a href="/archive/running--securing-servers-a-concise-guide/" title="Running &amp; Securing Servers: A Concise Guide" rel="nofollow">
-    Running &amp; Securing Servers: A Concise Guide
+  <li><a href="/archive/the-practicals-of-writing-paper-and-pens/" title="The Practicals of Writing: Paper and Pens" rel="nofollow">
+    The Practicals of Writing: Paper and Pens
   </a></li>
   
 </ul>
@@ -250,9 +280,6 @@ class MassEmailView(APIView)
   <li><a href="https://www.linkedin.com/in/sonicrocketman/" title="LinkedIn" rel="nofollow me">
     LinkedIn
   </a></li>
-  <li><a href="https://sendfox.com/brianschrader/" title="Newsletter">
-    Newsletter
-  </a></li>
 </ul>
 <h4>Resources</h4>
 <ul>
@@ -274,7 +301,6 @@ class MassEmailView(APIView)
   <li><a href="/archive/daily-step-count--walking-statistics/" title="Daily Step Count &amp; Walking Statistics">
     Daily Step Count &amp; Walking Statistics
   </a></li>
-
   <li><a href="/tags.html" title="Posts by Tag">
     Tags
   </a></li>
@@ -288,19 +314,19 @@ class MassEmailView(APIView)
   
     <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
   
+    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
+  
     <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
   
     <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
-  
-    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
   
     <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
   
     <a href="/tags.html#tag-development" title="development" class="tag">development</a>,
   
-    <a href="/tags.html#tag-python" title="python" class="tag">python</a>,
+    <a href="/tags.html#tag-writing" title="writing" class="tag">writing</a>,
   
-    <a href="/tags.html#tag-writing" title="writing" class="tag">writing</a>
+    <a href="/tags.html#tag-python" title="python" class="tag">python</a>
   
 </div>
 <h4>Blogroll</h4>
@@ -340,7 +366,6 @@ class MassEmailView(APIView)
   </a></li>
 </ul>
     </div>
-    
   </div>
   <div style="text-align:center;">
     <div class="article-content">
@@ -352,4 +377,5 @@ class MassEmailView(APIView)
 
     </div>
   </body>
+  <script src="/pagefind/pagefind-ui.js"></script>
 </html>

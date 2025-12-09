@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.1">
-    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.1">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.2">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.2">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
     <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
     
@@ -523,6 +523,12 @@ of the current scholastic theories of mixture while also providing a convincing 
   <script src="https://shoutouts.page/embed/sRGtA2wwnhW-dAPFXEBy.js" defer></script>
   
 </div>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "/archive", });
+    });
+</script>
 <h4>Featured Posts</h4>
 <ul>
   
@@ -736,4 +742,5 @@ of the current scholastic theories of mixture while also providing a convincing 
 
     </div>
   </body>
+  <script src="/pagefind/pagefind-ui.js"></script>
 </html>

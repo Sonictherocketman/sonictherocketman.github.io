@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.1">
-    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.1">
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.2">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.2">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
     <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
     
@@ -149,6 +149,12 @@ No matter how much we as a society might wish it to be true, healthy living is n
   <script src="https://shoutouts.page/embed/sRGtA2wwnhW-dAPFXEBy.js" defer></script>
   
 </div>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "/archive", });
+    });
+</script>
 <h4>Featured Posts</h4>
 <ul>
   
@@ -175,6 +181,14 @@ No matter how much we as a society might wish it to be true, healthy living is n
 </ul>
 <h4>Recent Posts</h4>
 <ul>
+  
+  <li><a href="/archive/maintaining-a-music-library-ten-years-on/" title="Maintaining a Music Library, Ten Years On" rel="nofollow">
+    Maintaining a Music Library, Ten Years On
+  </a></li>
+  
+  <li><a href="/archive/empirical-partial-derivatives/" title="Empirical Partial Derivatives" rel="nofollow">
+    Empirical Partial Derivatives
+  </a></li>
   
   <li><a href="/archive/chemical-telescopes-and-the-process-of-science/" title="Chemical Telescopes and the Process of Science" rel="nofollow">
     Chemical Telescopes and the Process of Science
@@ -206,14 +220,6 @@ No matter how much we as a society might wish it to be true, healthy living is n
   
   <li><a href="/archive/the-practicals-of-writing-paper-and-pens/" title="The Practicals of Writing: Paper and Pens" rel="nofollow">
     The Practicals of Writing: Paper and Pens
-  </a></li>
-  
-  <li><a href="/archive/starting-a-newsletter/" title="Starting a Newsletter" rel="nofollow">
-    Starting a Newsletter
-  </a></li>
-  
-  <li><a href="/archive/developing-style-writing-cursive-two-years-in/" title="Developing Style: Writing Cursive Two Years In" rel="nofollow">
-    Developing Style: Writing Cursive Two Years In
   </a></li>
   
 </ul>
@@ -334,4 +340,5 @@ No matter how much we as a society might wish it to be true, healthy living is n
 
     </div>
   </body>
+  <script src="/pagefind/pagefind-ui.js"></script>
 </html>

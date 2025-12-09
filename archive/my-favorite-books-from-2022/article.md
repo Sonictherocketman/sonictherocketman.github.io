@@ -1,6 +1,6 @@
 slug: my-favorite-books-from-2022
 published: Sun, 05 Feb 2023 at 01:35 AM
-updated: Thu, 24 Jul 2025 22:06:42 
+updated: Tue, 09 Dec 2025 22:38:19 
 title: My Favorite Books from 2022
 author: Brian Schrader
 tags: book,books,book recommendations,book review
