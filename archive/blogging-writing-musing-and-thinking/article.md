@@ -1,6 +1,6 @@
 slug: blogging-writing-musing-and-thinking
 published: Wed, 14 Jan 2026 at 06:08 PM
-updated: Wed, 14 Jan 2026 18:08:49 
+updated: Wed, 14 Jan 2026 18:13:43 
 title: Blogging, Writing, Musing, and Thinking
 author: Brian Schrader
 tags:blogging,personal,writing,thought technology
@@ -8,7 +8,7 @@ status: publish
 hero: /images/blog/notes.jpg
 re: https://www.joanwestenberg.com/the-case-for-blogging-in-the-ruins/
 
-Yesterday I stumbled on this quote from a blog post by [Joan Westenberg][joan]:
+Yesterday I stumbled on this quote from a blog post by [JA Westenberg][joan]:
 
 > Michel de Montaigne arguably invented the essay in the 1570s, sitting in a tower in his French château, writing about whatever interested him: cannibals, thumbs, the education of children, how to talk to people who are dying. He called these writings essais, meaning "attempts" or "tries." The form was explicitly provisional. Montaigne was trying out ideas, seeing where they led, acknowledging uncertainty as a fundamental feature rather than a bug to be eliminated.
 
@@ -16,7 +16,7 @@ It's hard to convey the sense of both profound agreement and giddy joy I had rea
 
 ## What Writing Is
 
-There's an old adage that says, "Writing is Thinking" and I've usually interpreted those words to mean that "writing helps you think", which is undoubtably true. However in recent years I've discovered an entirely new form of writing that I've taken to calling: musing, that I think takes this idea a step further, and it's precisely what Joan describes Montaigne doing in the 16<sup>th</sup> century.
+There's an old adage that says, "Writing is Thinking" and I've usually interpreted those words to mean that "writing helps you think", which is undoubtably true. However in recent years I've discovered an entirely new form of writing that I've taken to calling: musing, that I think takes this idea a step further, and it's precisely what Westenberg describes Montaigne doing in the 16<sup>th</sup> century.
 
 <div class="image-right" style="width: 330px; padding-right: 0; ">
 <img alt="A collection of my notebooks" src="/images/blog/musingbooks.jpg" style="max-width: 100%; padding-right: 0;"/>
