@@ -1,5 +1,66 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Tue, 09 Dec 2025 22:42:09 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/maintaining-a-music-library-ten-years-on</guid><pubDate>Wed, 29 Oct 2025 21:11:00 -0800</pubDate><category>music</category><category>software</category><title>Maintaining a Music Library, Ten Years On</title><link>https://brianschrader.com/archive/maintaining-a-music-library-ten-years-on/</link><description><![CDATA[<p>It took me by surprise to learn that <a href="/archive/why-im-switching-back-to-itunes/">this post</a> was now a decade old:</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Wed, 14 Jan 2026 18:09:51 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/blogging-writing-musing-and-thinking</guid><pubDate>Wed, 14 Jan 2026 18:08:00 -0800</pubDate><category>blogging</category><category>personal</category><category>writing</category><category>thought technology</category><title>Blogging, Writing, Musing, and Thinking</title><link>https://brianschrader.com/archive/blogging-writing-musing-and-thinking/</link><description><![CDATA[<p>Yesterday I stumbled on this quote from a blog post by <a href="https://www.joanwestenberg.com/the-case-for-blogging-in-the-ruins/">Joan Westenberg</a>:</p>
+<blockquote>
+<p>Michel de Montaigne arguably invented the essay in the 1570s, sitting in a tower in his French château, writing about whatever interested him: cannibals, thumbs, the education of children, how to talk to people who are dying. He called these writings essais, meaning "attempts" or "tries." The form was explicitly provisional. Montaigne was trying out ideas, seeing where they led, acknowledging uncertainty as a fundamental feature rather than a bug to be eliminated.</p>
+</blockquote>
+<p>It's hard to convey the sense of both profound agreement and giddy joy I had reading that because, not only is the wider post about something I love (i.e. blogging), or because I learned something new about the history of writing (which is always fun), but because that quote describes something that I've been doing myself for the past two years and wanted an excuse to talk about!</p>
+<h2>What Writing Is</h2>
+<p>There's an old adage that says, "Writing is Thinking" and I've usually interpreted those words to mean that "writing helps you think", which is undoubtably true. However in recent years I've discovered an entirely new form of writing that I've taken to calling: musing, that I think takes this idea a step further, and it's precisely what Joan describes Montaigne doing in the 16<sup>th</sup> century.</p>
+<div class="image-right" style="width: 330px; padding-right: 0; ">
+<img alt="A collection of my notebooks" src="/images/blog/musingbooks.jpg" style="max-width: 100%; padding-right: 0;"/>
+<center><small>An example of the notebooks I use.</small></center>
+</div>
+
+<p>We have a lot of thoughts throughout the day, and yet we spend so little time indulging these idle curiosities. Writing, especially by hand, can be a great way to explore these ideas and to practice thinking. It's also really fun to do! Over time I started collecting these ideas into notebooks (one of which I almost always carry with me) in order to better organize these inherently random topics into a searchable system. Originally I scribbled on loose leaf pages or random legal pads (as I've mentioned before) and that became unruly very quickly.</p>
+<p>Some of these musings are personal topics, most are not. Often they're just the exploration of a question I have. Here's an example:</p>
+<blockquote>
+<p>Businesses keep offices cold because there's research saying that cooler temperatures help people think and stay focused. Given that's true, could the <a href="https://en.wikipedia.org/wiki/Little_Ice_Age">Little Ice Age</a> have helped improve human cognition during the 17<sup>th</sup> and 18<sup>th</sup> centuries? If so, what does that mean?</p>
+</blockquote>
+<p>I'm not sure, but it was something I thought about for a while and so I wrote it down. The entire musing, or essay as I guess it should be called, is less than a page, but was engaging and very fun to do. I've written short essays about dozens of topics over the years (including several that have been eventually <a href="/archive/narrative-structure-and-the-principle-of-least-action/">published</a> to <a href="/archive/the-mysterious-potential-of-the-plane/">this</a> <a href="/archive/empirical-partial-derivatives/">blog</a>). It's a fun practice, and I encourage you to try it.</p>
+<details>
+  <summary>More Musing Ideas</summary>
+  <ul>
+    <li>Why am I feeling sad lately?</li>
+    <li>Why do we see sunsets as beautiful?</li>
+    <li>Second-guessing [prior topic]</li>
+    <li>What function does the press fulfill in society?
+        <ul>
+            <li>Why is that valuable?</li>
+            <li>How could that value be measured?</li>
+        </ul>
+    </li>
+    <li>What is the single, smallest change I could make to the U.S. constitution to have the biggest impact on the problems I see?</li>
+    <li>
+        Do stories follow mathematical laws?
+        <ul>
+            <li>What would that mean for us?</li>
+            <li>How could such a thing be measured?</li>
+            <li>How come we seem to intuit these laws?</li>
+        </ul>
+    </li>
+    <li>What is math?</li>
+    <li>Is [current stress point] a long-term problem or a temporary one?</li>
+    <li>What is the cognitive purpose of stereotypes?</li>
+    <li>What would it feel like to live 10,000 years ago?</li>
+    <li>Let's try to comprehend the fullness of human history!</li>
+    <li>I had an idea for a cool&mdash;but probably useless&mdash;invention!</li>
+  </ul>
+</details>
+
+<p>Explore your ideas honestly. Don't fear where your mind goes or the questions it will ask. These are personal, honest thoughts not social media posts. Writing like this is inherently introspective, it's a way to give your mind the space to awe and wonder</p>
+<h2>What Thinking Is</h2>
+<p>We often believe that thinking is a process which takes place entirely in the mind, but it's a process that is heavily influenced by the particulars of the body. Try thinking through a problem in a hot and smelly room or on a walk with a rock in your shoe.</p>
+<p><img class="image-right" alt="One of my notebooks" src="/images/blog/notes.jpg" style="width: 330px; padding-right: 0;"/></p>
+<p>However, the body can do more than hinder the thought process, it can catalyze it! This is what writing can be, a way to think through problems using your entire body.</p>
+<p>Occasionally, I've sat down to write but without any particular topic in mind. So, I open my notebook and just start writing. Tons of my essays begin with something like, "I'm not sure what I'm thinking right now and I don't know what to write." From there, I let my thoughts move and course as they will and I just write down what comes to mind, stopping and starting as my thoughts shift and change and eventually I will find that something has come out of it. I might work through a tension or stress point, I could come to realize or discover something about a problem, or I could just get a few lackluster thoughts on a page. Not all thinking is productive but the mind is a muscle and it needs to be exercised to function properly. Sometimes just doing the workout is enough.</p>
+<h2>Thinking as a Skill</h2>
+<p>We usually think of cleverness or intelligence as an innate trait people have, and while that is certainly true in some regards, intelligence and wisdom are just as much a function of practice as of talent. To get good at solving puzzles, you have to practice solving puzzles. The mind is no different than a muscle in that regard. Thinking aloud on the page is one way to record and analyze your thought process and to practice the art of thinking itself.</p>
+<p>As another example, I often revisit my prior writings and find many to be overly simplistic, uninspired, or just plain wrong. But that's good! It means I've learned something in the intervening time! In software there's an addage:</p>
+<blockquote>
+<p>If you come back to old code and see nothing wrong with it, then you haven't learned anything since.</p>
+</blockquote>
+<p>You are not a finished product, you're a process&mdash;always in motion&mdash;that evolves and changes over time. Your thinking can improve with practice as much as it can atrophy from inattention.</p>
+<p>Think about thinking, write those thoughts down, then perhaps publish a few on a blog that you own. It's fun, and it can do wonders for the mind.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/maintaining-a-music-library-ten-years-on</guid><pubDate>Wed, 29 Oct 2025 21:11:00 -0800</pubDate><category>music</category><category>software</category><title>Maintaining a Music Library, Ten Years On</title><link>https://brianschrader.com/archive/maintaining-a-music-library-ten-years-on/</link><description><![CDATA[<p>It took me by surprise to learn that <a href="/archive/why-im-switching-back-to-itunes/">this post</a> was now a decade old:</p>
 <blockquote>
 <p>Last week I decided to leave Spotify. I've been using the service for almost 2 years now, and overall I've really liked it... It's hard to explain why [I'm leaving], but I guess I feel apprehensive about Spotify being in control of how and where I listen to music in ways I haven't been before.</p>
 </blockquote>
@@ -230,35 +291,4 @@ of the current scholastic theories of mixture while also providing a convincing 
 <sup>2</sup> Newman, P 244.<br />
 <sup>3</sup> "Art" here means the artificial making of things in any way, not just, like, painting&mdash;though painting is indeed a kind of art in this definition.<br />
 <sup>4</sup> While chemically impossible, need I remind you, we can <a href="https://www.scientificamerican.com/article/fact-or-fiction-lead-can-be-turned-into-gold/">actually do this today</a> so I think the point remains quite valid.
-</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/the-practicals-of-writing-paper-and-pens</guid><pubDate>Thu, 31 Jul 2025 19:07:00 -0800</pubDate><category>writing</category><category>personal</category><title>The Practicals of Writing: Paper and Pens</title><link>https://brianschrader.com/archive/the-practicals-of-writing-paper-and-pens/</link><description><![CDATA[<p>Without wishing to turn this into a writing &amp; pen blog, I did want to talk a little more about the kit I use these days, if only because I figure some readers out there might find it interesting or useful.</p>
-<p>For a long time, I bought several different kinds of notebooks&mdash;and pens&mdash;looking for the right fit for my needs. Eventually, I landed on a setup that I'm very happy with.</p>
-<h2>A Good Notebook</h2>
-<p>When it comes to notebooks, I have a set of firm criteria and a wishlist of nice-to-haves.</p>
-<p>As some readers might know, I'm left handed and that heavily influences my criteria. I want a notebook with a spine that is thin enough to impact my writing, but at the same time is thick enough to have a meaningful spine presence on a shelf such that I could label the spine and read it. I have a lot of books and notebooks and being able to find things on the shelf quickly matters.</p>
-<p>I tried <a href="https://www.amazon.com/dp/B0BLC876QN">hardbound book blanks</a> (which look <em>amazing</em> on the shelf), but they're a pain to write in because of the thick spine. After that I tried super <a href="https://www.amazon.com/dp/B07QDRVDPK">thin notebooks</a>, but they don't have enough shelf-presence for a spine label and, importantly, they are so thin that they don't contain enough meaningful space for the notes I want to take. Topics spread across volumes and that makes organizing hard.</p>
-<p>I tried so called <a href="https://www.amazon.com/dp/B07YLTJHH4">Executive or Professional Notebooks</a>, these are lovely to look at and hold, and they're great on the shelf, but they're just too big to be easily portable. I like to have a notebook with me at all times and these are simply too big for that.</p>
-<div class="image-right" style="width: 300px;">
-<img src="/images/blog/notebooks-options.jpeg" style="max-width: 100%;">
-<center><small><caption>Just a few of my notebooks.</caption></small></center>
-</div>
-
-<p>That's when I found my solution, a solution that'd been staring me in the face for a long time.</p>
-<p>It's silly to think that my perfect notebook is the simple composition book, but I think it might be. They're super cheap (often only 50¢) and the colored covers (which formed the foundation of my early schooling organizational system) are very useful. They're thick enough to have a good spine, but lay flat on the table. There's enough pages for a meaningful amount of writing, but not so much that filling it feels like a monumental task. I can carry two or three at once in my bag and they're very light and the covers are slightly waterproof&mdash;a welcome feature for the occasional coffee spill. The only real downside is that the low price point means that the paper quality is very bad. Personally, I've found that you can offset some of this by choosing the right brand, but it's a fundamental flaw. Still, I'm using them and love them.</p>
-<h2>What's in a Pen?</h2>
-<p>I'm not going to discuss pencils here, even though I use a <em>lot</em> of them, simply because <a href="https://weareticonderoga.com">Ticonderoga pencils are great</a> and you can just use those.</p>
-<p>When it comes to pens though, I have more nuanced thoughts.</p>
-<p>Years ago, I preferred gel pens, but they <em>suck</em> for left-handers. The ink dries so slowly that it coats the hand in black smudges. From there I moved on to a hodgepodge of ballpoints and never really found one I liked.</p>
-<p>For a while I used a branded metal ballpoint pen from that my Dad took home from work (one of those corporate perks). These felt <em>great</em> in the hand, but they were not great writing implements&mdash;and they exclusively came with blue ink, which was a huge detriment. Blue ink sucks.</p>
-<div class="image-center" style="width: 100%;">
-<img src="/images/blog/sarasa-pen-setup.jpeg" style="max-width: 100%;">
-<center><small><caption>Photo: mine</caption></small></center>
-</div>
-
-<p>Years back, I went to Japan on a vacation with some friends. There I bought a cheap notebook and pen from a convenience store on a whim and then proceeded to fall in love with <a href="https://www.amazon.com/dp/B075YNTT8S">the pen I randomly picked up there</a>. I've used them ever since and while they are cheap, they write extremely well and, crucially, the fine point and particular ink dries very quickly. No smudges on the page, or on my hand! It's a great pen for left-handers. Now, I prefer a very fine point, so that might be a turn off for some people, but I do recommend these pens.</p>
-<p>In other places I use my fountain pens, though I've basically stopped using my dip pens just because they're a hassle. I still love my fountain pens but those Zebra Sarasa pens have stolen my heart.</p>
-<div style="padding: 1rem; border: 1px dashed #ccc; border-radius: 3px;">
-<b>For the record:</b> None of this is an ad for any item mentioned here. I just like them.
-</div>
-
-<p>If you're reading this and you have other suggestions to solve these same problems, I'd love to hear them.</p>
-<p>Also, like I mentioned in my <a href="/archive/starting-a-newsletter/">previous post</a>, I've started a newsletter. If you like this post and want to get future posts delivered straight to your inbox, <a href="https://sendfox.com/brianschrader/">then subscribe</a>!</p>]]></description></item></channel></rss>
+</div>]]></description></item></channel></rss>
