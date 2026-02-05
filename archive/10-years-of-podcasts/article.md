@@ -1,6 +1,6 @@
 slug: 10-years-of-podcasts
 published: Sun, 17 Aug 2014 at 01:27 AM
-updated: Thu, 05 Feb 2026 21:57:40 
+updated: Thu, 05 Feb 2026 23:15:21 
 title: 10 Years of Podcasts
 author: Brian Schrader
 tags: podcasts

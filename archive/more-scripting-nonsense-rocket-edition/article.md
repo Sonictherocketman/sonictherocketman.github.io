@@ -1,6 +1,6 @@
 slug: more-scripting-nonsense-rocket-edition
 published: Fri, 17 Mar 2023 at 11:15 PM
-updated: Thu, 05 Feb 2026 21:57:41 
+updated: Thu, 05 Feb 2026 23:15:22 
 title: More Scripting Nonsense: Rocket Edition
 author: Brian Schrader
 tags: programming,fun

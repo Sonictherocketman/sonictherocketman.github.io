@@ -1,6 +1,6 @@
 slug: the-mysterious-potential-of-the-plane
 published: Fri, 13 Dec 2024 at 02:46 AM
-updated: Thu, 05 Feb 2026 21:57:40 
+updated: Thu, 05 Feb 2026 23:15:21 
 title: The Mysterious Potential of the Plane
 author: Brian Schrader
 tags:mathematics, math

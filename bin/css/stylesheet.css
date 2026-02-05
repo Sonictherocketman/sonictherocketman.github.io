@@ -9,6 +9,13 @@
   src: url('/bin/Newsreader/static/Newsreader_14pt-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/bin/Newsreader/static/Newsreader_14pt-Italic.ttf');
+}
+
 /*
 *
 * Begin Tag Styling

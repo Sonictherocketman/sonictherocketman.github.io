@@ -1,6 +1,6 @@
 slug: users-tools-platforms-and-the-shifting-goals-of-software
 published: Fri, 22 Mar 2024 at 07:04 PM
-updated: Thu, 05 Feb 2026 21:57:40 
+updated: Thu, 05 Feb 2026 23:15:20 
 title: Users, Tools, Platforms, and the Shifting Goals of Software
 author: Brian Schrader
 tags:software, technology
