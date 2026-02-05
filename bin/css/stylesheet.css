@@ -1,13 +1,12 @@
 /*
  * Custom Fonts
  */
+
 @font-face {
-  font-family: 'Avenir', 'Average';
+  font-family: 'Newsreader';
   font-style: normal;
-  font-weight: 400;
-/*
-  src: local('Average'), local('Average-Regular'), url(https://brianschrader.com/bin/average.ttf) format('truetype');
- */
+  font-weight: normal;
+  src: url('/bin/Newsreader/static/Newsreader_14pt-Regular.ttf');
 }
 
 /*
@@ -23,10 +22,22 @@ html {
 
 body {
 	font-family: 'Avenir', 'Helvetica', 'Average', serif;
+	font-kerning: auto;
 	text-align: justify;
 	background-color:#F4F4F4;
 	line-height:1.7;
 	margin:auto;
+}
+
+.article-content p {
+  font-family: "Newsreader", -apple-system-ui-serif, ui-serif, Palatino, serif;
+  font-size: 13pt;
+  line-height: 1.65;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 
 img { border:none; }
