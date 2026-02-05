@@ -1,6 +1,6 @@
 slug: the-fall-of-civilizations-podcast
 published: Mon, 29 Jun 2020 at 03:47 AM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: The Fall of Civilizations Podcast
 author: Brian Schrader
 tags: podcasts, history, cultures

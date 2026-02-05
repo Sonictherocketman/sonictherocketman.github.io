@@ -1,6 +1,6 @@
 slug: imessage-security
 published: Sun, 24 Apr 2016 at 10:29 AM
-updated: Tue, 09 Dec 2025 22:38:18 
+updated: Thu, 05 Feb 2026 03:14:20 
 title: iMessage Security
 author: Brian Schrader
 tags: imessage, apple, security

@@ -1,6 +1,6 @@
 slug: microblog-crawler-v141
 published: Sat, 25 Apr 2015 at 10:29 PM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:22 
 title: Microblog Crawler v1.4(.1)
 author: Brian Schrader
 tags: microblogcrawler, github

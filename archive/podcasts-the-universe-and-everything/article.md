@@ -1,6 +1,6 @@
 slug: podcasts-the-universe-and-everything
 published: Sat, 27 Apr 2024 at 07:01 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Podcasts, the Universe, and Everything
 author: Brian Schrader
 tags: podcasts,

@@ -1,6 +1,6 @@
 slug: horizontal-history
 published: Fri, 15 Jan 2016 at 02:50 PM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:22 
 title: Horizontal History
 author: Brian Schrader
 status: publish

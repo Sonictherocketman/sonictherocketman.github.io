@@ -1,6 +1,6 @@
 slug: hosting-a-minecraft-server-on-linode
 published: Tue, 01 Mar 2016 at 10:11 AM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:22 
 title: Hosting a Minecraft Server on Linode
 author: Brian Schrader
 tags: minecraft, linode

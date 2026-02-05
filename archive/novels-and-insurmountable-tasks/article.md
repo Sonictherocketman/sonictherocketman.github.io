@@ -1,6 +1,6 @@
 slug: novels-and-insurmountable-tasks
 published: Mon, 29 Jun 2020 at 10:12 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:20 
 title: Novels and Insurmountable Tasks
 author: Brian Schrader
 tags: writing, novels, word count, goal setting

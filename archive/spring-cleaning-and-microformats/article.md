@@ -1,6 +1,6 @@
 slug: spring-cleaning-and-microformats
 published: Sun, 17 May 2020 at 07:41 AM
-updated: Tue, 09 Dec 2025 22:38:18 
+updated: Thu, 05 Feb 2026 03:14:20 
 title: Spring Cleaning and Microformats
 author: Brian Schrader
 tags: microformats, spring cleaning, blogging, meta

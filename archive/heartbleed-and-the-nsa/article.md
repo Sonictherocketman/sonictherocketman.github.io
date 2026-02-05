@@ -1,6 +1,6 @@
 slug: heartbleed-and-the-nsa
 published: Sat, 12 Apr 2014 at 07:25 PM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:22 
 title: The NSA knew about and exploited the Heartbleed Bug
 author: Brian Schrader
 status: publish

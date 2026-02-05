@@ -1,6 +1,6 @@
 slug: a-counting-meta-post
 published: Tue, 14 Jan 2025 at 01:50 AM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:20 
 title: A Counting Meta-Post
 author: Brian Schrader
 tags:blogging,meta

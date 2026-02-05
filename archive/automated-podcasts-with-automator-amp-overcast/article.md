@@ -1,6 +1,6 @@
 slug: automated-podcasts-with-automator-amp-overcast
 published: Tue, 24 Aug 2021 at 08:59 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Automated Podcasts with Automator &amp; Overcast
 author: Brian Schrader
 tags: blogging, programming

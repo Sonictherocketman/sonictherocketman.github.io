@@ -1,6 +1,6 @@
 slug: feed-readers-and-local-news
 published: Fri, 19 Oct 2018 at 06:58 PM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:22 
 title: Feed Readers and Local News
 author: Brian Schrader
 status: publish

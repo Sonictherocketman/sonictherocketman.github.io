@@ -1,6 +1,6 @@
 slug: a-new-adventure
 published: Sun, 18 Aug 2019 at 01:25 AM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: A New Adventure
 author: Brian Schrader
 tags: photography, hobbies, money sink,

@@ -1,6 +1,6 @@
 slug: bloodmoon-eclipse
 published: Tue, 15 Apr 2014 at 07:33 AM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:22 
 title: BloodMoon Eclipse Photos
 author: Brian Schrader
 status: publish

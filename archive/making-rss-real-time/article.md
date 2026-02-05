@@ -1,6 +1,6 @@
 slug: making-rss-real-time
 published: Sun, 19 Oct 2014 at 11:32 PM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Making RSS Real-Time
 author: Brian Schrader
 tags: manton, rss

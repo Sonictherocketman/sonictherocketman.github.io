@@ -1,6 +1,6 @@
 slug: careful-with-complex-querysets
 published: Thu, 18 Jun 2020 at 06:57 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Careful with Complex Querysets
 author: Brian Schrader
 tags: django, databases, Querysets, cautionary-tale

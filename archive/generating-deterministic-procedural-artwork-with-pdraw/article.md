@@ -1,6 +1,6 @@
 slug: generating-deterministic-procedural-artwork-with-pdraw
 published: Fri, 18 Feb 2022 at 10:36 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Generating Deterministic, Procedural Artwork with pdraw
 author: Brian Schrader
 tags: programming, python, software, tools

@@ -1,6 +1,6 @@
 slug: maintaining-a-music-library-ten-years-on
 published: Wed, 29 Oct 2025 at 09:11 PM
-updated: Tue, 09 Dec 2025 22:38:18 
+updated: Thu, 05 Feb 2026 03:14:20 
 title: Maintaining a Music Library, Ten Years On
 author: Brian Schrader
 tags: music,software

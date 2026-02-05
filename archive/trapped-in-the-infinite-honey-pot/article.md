@@ -1,6 +1,6 @@
 slug: trapped-in-the-infinite-honey-pot
 published: Mon, 01 Sep 2025 at 10:23 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Trapped in the Infinite Honey Pot
 author: Brian Schrader
 tags:funny,programming,ai

@@ -1,6 +1,6 @@
 slug: announcing-paper-peaks
 published: Mon, 31 Jul 2023 at 10:53 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Announcing Paper Peaks
 author: Brian Schrader
 tags: music

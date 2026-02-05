@@ -1,6 +1,6 @@
 slug: experimenting-with-the-game-of-life
 published: Mon, 25 Sep 2023 at 04:18 AM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:20 
 title: Experimenting with the Game of Life
 author: Brian Schrader
 tags:programming,fun

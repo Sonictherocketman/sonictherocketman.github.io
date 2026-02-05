@@ -1,6 +1,6 @@
 slug: developing-style-writing-cursive-two-years-in
 published: Wed, 23 Jul 2025 at 10:21 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Developing Style: Writing Cursive Two Years In
 author: Brian Schrader
 tags:writing,personal

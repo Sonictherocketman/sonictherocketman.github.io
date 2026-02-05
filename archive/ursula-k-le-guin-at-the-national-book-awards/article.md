@@ -1,6 +1,6 @@
 slug: ursula-k-le-guin-at-the-national-book-awards
 published: Sun, 23 Nov 2014 at 06:51 AM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Ursula K. Le Guin At The National Book Awards
 author: Brian Schrader
 tags: writing, sci-fi

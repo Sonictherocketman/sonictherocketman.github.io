@@ -1,6 +1,6 @@
 slug: pineblog-version-13-multiple-timelines-
 published: Wed, 19 Dec 2018 at 07:23 PM
-updated: Tue, 09 Dec 2025 22:38:19 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Pine.blog Version 1.3: Multiple Timelines 🎉
 author: Brian Schrader
 tags: pine.blog, software, release

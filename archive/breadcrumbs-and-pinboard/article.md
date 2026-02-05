@@ -1,6 +1,6 @@
 slug: breadcrumbs-and-pinboard
 published: Thu, 31 Dec 2020 at 01:44 AM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:21 
 title: Breadcrumbs and Pinboard
 author: Brian Schrader
 tags: personal, software

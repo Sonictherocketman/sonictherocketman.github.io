@@ -1,6 +1,6 @@
 slug: narrative-structure-and-the-principle-of-least-action
 published: Wed, 11 Jun 2025 at 04:15 AM
-updated: Tue, 09 Dec 2025 22:38:20 
+updated: Thu, 05 Feb 2026 03:14:22 
 title: Narrative Structure and the Principle of Least Action
 author: Brian Schrader
 tags:writing,physics

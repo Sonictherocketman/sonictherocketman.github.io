@@ -1,6 +1,6 @@
 slug: twitters-peace-offering-to-developers-is-meaningless
 published: Mon, 20 Oct 2014 at 08:30 PM
-updated: Tue, 09 Dec 2025 22:38:18 
+updated: Thu, 05 Feb 2026 03:14:20 
 title: Twitter's "peace offering" to developers is meaningless
 author: Brian Schrader
 tags: marco, twitter
