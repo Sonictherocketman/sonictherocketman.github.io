@@ -1,6 +1,6 @@
 slug: on-the-lies-depression-tells
 published: Thu, 05 Feb 2026 at 03:10 AM
-updated: Thu, 05 Feb 2026 03:14:21 
+updated: Thu, 05 Feb 2026 21:57:40 
 title: On the Lies Depression Tells
 author: Brian Schrader
 tags: personal,human condition,writing

@@ -1,6 +1,6 @@
 slug: unbounded-possibility-is-bad-for-productivity
 published: Tue, 25 May 2021 at 12:07 AM
-updated: Thu, 05 Feb 2026 03:14:21 
+updated: Thu, 05 Feb 2026 21:57:40 
 title: Unbounded Possibility is Bad for Productivity
 author: Brian Schrader
 tags: productivity
