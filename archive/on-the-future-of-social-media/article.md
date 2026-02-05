@@ -1,6 +1,6 @@
 slug: on-the-future-of-social-media
 published: Wed, 11 Jul 2018 at 01:40 AM
-updated: Thu, 05 Feb 2026 23:38:50 
+updated: Thu, 05 Feb 2026 23:53:20 
 title: On the Future of Social Media
 author: Brian Schrader
 tags: social media, algorithms, development

@@ -1,6 +1,6 @@
 slug: blog-when-you-disagree
 published: Mon, 14 Mar 2016 at 07:57 PM
-updated: Thu, 05 Feb 2026 23:38:51 
+updated: Thu, 05 Feb 2026 23:53:22 
 title: Blog when you disagree
 author: Brian Schrader
 tags: blogging

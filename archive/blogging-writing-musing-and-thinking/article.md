@@ -1,6 +1,6 @@
 slug: blogging-writing-musing-and-thinking
 published: Wed, 14 Jan 2026 at 06:08 PM
-updated: Thu, 05 Feb 2026 23:38:50 
+updated: Thu, 05 Feb 2026 23:53:21 
 title: Blogging, Writing, Musing, and Thinking
 author: Brian Schrader
 tags:blogging,personal,writing,thought technology

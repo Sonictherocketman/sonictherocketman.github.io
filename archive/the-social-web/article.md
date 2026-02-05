@@ -1,6 +1,6 @@
 slug: the-social-web
 published: Sun, 28 Jul 2019 at 06:35 AM
-updated: Thu, 05 Feb 2026 23:38:49 
+updated: Thu, 05 Feb 2026 23:53:19 
 title: The Social Web
 author: Brian Schrader
 tags: open web, social media, pine.blog

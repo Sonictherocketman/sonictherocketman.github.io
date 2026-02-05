@@ -1,6 +1,6 @@
 slug: a-slight-modification-to-gordon-ramseys-scramled-eggs
 published: Tue, 10 Jan 2017 at 10:01 AM
-updated: Thu, 05 Feb 2026 23:38:50 
+updated: Thu, 05 Feb 2026 23:53:21 
 title: A Slight Modification to Gordon Ramsey's Scramled Eggs
 author: Brian Schrader
 tags: cooking, eggs

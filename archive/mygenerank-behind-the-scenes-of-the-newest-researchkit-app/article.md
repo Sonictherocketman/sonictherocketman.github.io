@@ -1,6 +1,6 @@
 slug: mygenerank-behind-the-scenes-of-the-newest-researchkit-app
 published: Wed, 25 Oct 2017 at 10:11 AM
-updated: Thu, 05 Feb 2026 23:38:49 
+updated: Thu, 05 Feb 2026 23:53:19 
 title: MyGeneRank: Behind the Scenes of the Newest ResearchKit App
 author: Brian Schrader
 tags: django, software, technical overview, review, researchkit

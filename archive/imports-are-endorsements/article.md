@@ -1,6 +1,6 @@
 slug: imports-are-endorsements
 published: Thu, 20 May 2021 at 06:00 PM
-updated: Thu, 05 Feb 2026 23:38:50 
+updated: Thu, 05 Feb 2026 23:53:21 
 title: Imports are Endorsements
 author: Brian Schrader
 tags: software development, programing, essay

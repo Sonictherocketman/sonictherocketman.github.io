@@ -1,6 +1,6 @@
 slug: pokemon
 published: Mon, 21 Apr 2014 at 04:28 AM
-updated: Thu, 05 Feb 2026 23:38:50 
+updated: Thu, 05 Feb 2026 23:53:20 
 title: Pokemon
 author: Brian Schrader
 tags: pokemon

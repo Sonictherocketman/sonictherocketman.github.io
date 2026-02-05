@@ -1,6 +1,6 @@
 slug: why-everyone-was-wrong-about-net-neutrality
 published: Sun, 08 Mar 2015 at 08:01 PM
-updated: Thu, 05 Feb 2026 23:38:49 
+updated: Thu, 05 Feb 2026 23:53:19 
 title: Why Everyone Was Wrong About Net Neutrality 
 author: Brian Schrader
 tags: net neutrality

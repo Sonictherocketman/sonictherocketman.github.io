@@ -1,6 +1,6 @@
 slug: retrospective-on-a-year-spent-writing
 published: Mon, 23 Aug 2021 at 11:28 PM
-updated: Thu, 05 Feb 2026 23:38:50 
+updated: Thu, 05 Feb 2026 23:53:19 
 title: Retrospective on a Year Spent Writing
 author: Brian Schrader
 tags: writing, meta, blogging

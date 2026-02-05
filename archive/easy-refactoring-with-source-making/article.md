@@ -1,6 +1,6 @@
 slug: easy-refactoring-with-source-making
 published: Tue, 19 Jul 2016 at 11:58 AM
-updated: Thu, 05 Feb 2026 23:38:51 
+updated: Thu, 05 Feb 2026 23:53:22 
 title: Easy Refactoring with Source Making 
 author: Brian Schrader
 tags: refactoring, programming

@@ -4,16 +4,13 @@
 
 @font-face {
   font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: normal;
-  src: url('/bin/Newsreader/static/Newsreader_14pt-Regular.ttf');
+  src: url('/bin/Newsreader/Newsreader-VariableFont_opsz\,wght.ttf');
 }
 
 @font-face {
   font-family: 'Newsreader';
   font-style: italic;
-  font-weight: normal;
-  src: url('/bin/Newsreader/static/Newsreader_14pt-Italic.ttf');
+  src: url('/bin/Newsreader/Newsreader-Italic-VariableFont_opsz\,wght.ttf');
 }
 
 /*
@@ -36,7 +33,7 @@ body {
 	margin:auto;
 }
 
-.article-content p {
+.article-content p, .article-content ul {
   font-family: "Newsreader", -apple-system-ui-serif, ui-serif, Palatino, serif;
   font-size: 13pt;
   line-height: 1.65;
@@ -200,8 +197,8 @@ details p {
 	border:none;
 }
 
-.footnote {
-  font-size:small;
+.article-content .footnote, .article-content .footnote * {
+  font-size: small;
 }
 
 /*
