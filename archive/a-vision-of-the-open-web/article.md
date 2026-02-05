@@ -1,9 +1,9 @@
 slug: a-vision-of-the-open-web
 published: Tue, 08 Mar 2016 at 09:31 AM
-updated: Thu, 05 Feb 2026 23:15:21 
+updated: Thu, 05 Feb 2026 23:38:50 
 title: A Vision of the Open Web
 author: Brian Schrader
-tags: open web, technology
+tags: open web, technology, essay
 status: publish
 featured: false
 

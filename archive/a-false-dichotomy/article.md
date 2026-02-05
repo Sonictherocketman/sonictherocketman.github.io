@@ -1,9 +1,9 @@
 slug: a-false-dichotomy
 published: Sat, 05 Dec 2020 at 12:11 AM
-updated: Thu, 05 Feb 2026 23:15:21 
+updated: Thu, 05 Feb 2026 23:38:50 
 title: A False Dichotomy
 author: Brian Schrader
-tags: politics, government, covid-19
+tags: politics, government, covid-19, essay
 status: publish
 
 An editorial of mine was [published today in a local paper][1]. It's the first in a short series about America's future and how we can work together to solve our most pressing problems, and like most things these days this first essay is about the COVID-19 pandemic.

@@ -1,9 +1,9 @@
 slug: dont-ban-infinite-scrolling-license-engineers-instead
 published: Wed, 31 Jul 2019 at 05:46 PM
-updated: Thu, 05 Feb 2026 23:15:22 
+updated: Thu, 05 Feb 2026 23:38:51 
 title: Don't Ban Infinite Scrolling, License Engineers Instead
 author: Brian Schrader
-tags: software engineering, ethics, legal,
+tags: software engineering, ethics, legal, essay
 status: publish
 
 Yesterday, the [Verge reported that Sen. Josh Hawley sponsored][bill] a bill that aims to reduce the tech industry’s use of "addictive design" practices by putting a ban on features like infinite scrolling and autoplaying video. While I applaud Congress for focusing on this important issue, the proposed solution is both naive and unproductive. When a surgeon is accused of malpractice, the appropriate solution is not to ban their use of the scalpel, it's to revoke their license.

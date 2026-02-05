@@ -1,6 +1,6 @@
 slug: thoughts-on-the-iphone-6
 published: Sun, 28 Sep 2014 at 10:34 PM
-updated: Thu, 05 Feb 2026 23:15:20 
+updated: Thu, 05 Feb 2026 23:38:49 
 title: Thoughts on the iPhone 6
 author: Brian Schrader
 tags: iphone 6

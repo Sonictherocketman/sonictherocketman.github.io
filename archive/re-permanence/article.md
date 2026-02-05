@@ -1,9 +1,10 @@
 slug: re-permanence
 published: Tue, 15 Jul 2014 at 06:19 AM
-updated: Thu, 05 Feb 2026 23:15:20 
-title: Re: Permanence 
+updated: Thu, 05 Feb 2026 23:38:49 
+title: Re: Permanence
 author: Brian Schrader
 status: publish
+tags: essay
 
 After watching [The Internet's Own Boy][1] I got to thinking about [Matt Gemmell's article][2] a few weeks back about digital permanence. I took to browsing the [Internet Archive][3] after watching the movie, and I was struck by how exhaustive their collection is. Even my old Wordpress blog was in there, crazy. The thing is, we need more of that kind of thing. We need to realize that what we put on the Internet we are committing to history. In the past, the only way to make it into history was to write a book, or publish a scientific paper. Now it's trivial; blogs, Twitter, Facebook (most people's substitute for a blog these days), Instagram, etc instantly connect us with each other, and almost by accident, provide us with first hand accounts of our modern day events. Future historians won't have to search in the dirt for our words, they'll have to cut out all the crap to find the stuff they want. That changes how historians will do their work, and it should change how we think about what we say and do online.
 

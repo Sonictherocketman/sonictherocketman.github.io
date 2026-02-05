@@ -1,9 +1,9 @@
 slug: novels-and-insurmountable-tasks
 published: Mon, 29 Jun 2020 at 10:12 PM
-updated: Thu, 05 Feb 2026 23:15:21 
+updated: Thu, 05 Feb 2026 23:38:49 
 title: Novels and Insurmountable Tasks
 author: Brian Schrader
-tags: writing, novels, word count, goal setting
+tags: writing, novels, word count, goal setting, essay
 status: publish
 
 I've wanted to write epic fantasy for years. In college I fleshed out a pretty substantial world, a unique magic-system, and an overarching conflict, but I never got deep into the characters, their journey, or their individual story-arcs. I discovered that I like building worlds and systems, but crafting plots and characters is a lot more difficult. The world, and the magic-system especially, has stuck with me, and although I'd make significant changes to it now, I still think that the idea is solid at its core. I'd love to write it someday.

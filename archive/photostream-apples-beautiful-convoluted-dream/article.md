@@ -1,9 +1,10 @@
 slug: photostream-apples-beautiful-convoluted-dream
 published: Sun, 07 Jul 2013 at 02:35 AM
-updated: Thu, 05 Feb 2026 23:15:20 
+updated: Thu, 05 Feb 2026 23:38:49 
 title: PhotoStream: Apple's beautiful, convoluted dream
 author: Brian Schrader
 status: publish
+tags: essay
 
 All the yearly hype before WWDC has gotten me thinking. What do we want from iOS this year? What do we want Apple to fix? There's been a lot of interesting talk about this topical ready. Marco Arment talked about it on his show <a href="http://atp.fm">Accidental Tech Podcast</a> and <a href="http://imore.com">iMore</a>has talked about the "iOS 7 Wish List" already too, but I wanted to give my take on the whole thing, specifically in regards to PhotoStream.
 

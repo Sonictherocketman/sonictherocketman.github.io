@@ -1,9 +1,9 @@
 slug: the-methods-of-science--medieval-rainbows
 published: Mon, 11 Aug 2025 at 04:34 PM
-updated: Thu, 05 Feb 2026 23:15:22 
+updated: Thu, 05 Feb 2026 23:38:51 
 title: The Methods of Science & Medieval Rainbows
 author: Brian Schrader
-tags: history,science
+tags: history,science,essay
 status: publish
 hero: /images/blog/newman-rainbows.jpeg
 

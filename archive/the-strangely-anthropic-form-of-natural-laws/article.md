@@ -1,10 +1,11 @@
 slug: the-strangely-anthropic-form-of-natural-laws
 published: Wed, 10 Sep 2025 at 01:34 AM
-updated: Thu, 05 Feb 2026 23:15:22 
+updated: Thu, 05 Feb 2026 23:38:51 
 title: The Strangely Anthropic Form of Natural Laws
 author: Brian Schrader
 tags:philosophy
 status: publish
+tags: essay
 hero: /images/blog/newton-principia.jpeg
 
 In the proceeding five centuries, humanity has made incredible progress in discovering and understanding natural laws. Starting in the sixteenth century, the Early Modern Period, colloquially known as the Scientific Revolution, catapulted humanity into the modern era. Today our knowledge of nature's inexorable laws extends from the largest possible structures in the Universe to the smallest physical components that construct all of reality.

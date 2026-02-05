@@ -1,9 +1,9 @@
 slug: unbounded-possibility-is-bad-for-productivity
 published: Tue, 25 May 2021 at 12:07 AM
-updated: Thu, 05 Feb 2026 23:15:21 
+updated: Thu, 05 Feb 2026 23:38:50 
 title: Unbounded Possibility is Bad for Productivity
 author: Brian Schrader
-tags: productivity
+tags: productivity, essay
 status: publish
 
 Being productive is hard; especially if you're working by yourself or working remotely. When you're working alone you have a lot of freedom, but that also means you have a lot of slack. No one is holding you to a schedule or deadline, and nothing is stopping you from procrastinating or getting distracted.

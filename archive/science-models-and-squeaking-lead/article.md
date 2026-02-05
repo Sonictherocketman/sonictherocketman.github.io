@@ -1,11 +1,11 @@
 slug: science-models-and-squeaking-lead
 published: Wed, 18 Dec 2024 at 07:54 AM
-updated: Thu, 05 Feb 2026 23:15:22 
+updated: Thu, 05 Feb 2026 23:38:51 
 title: Science, Models, and Squeaking Lead
 status: publish
 author: Brian Schrader
 featured: true
-tags: history,alchemy,philosophy
+tags: history,alchemy,philosophy,essay
 hero: /images/blog/alchemy/books.jpg
 
 At the dawn of the 14th century the Franciscan alchemist [Paul of Taranto][paul] crouched over the strange lump of metal he'd created. He gaped, in awe of what he had done. It should have been impossible. The scholars told him he was a fool to even try, yet he'd *done* it. It wasn't gold that he'd created. He was still far from achieving that goal, but he'd made an important step. According to the book he would later publish under the title *Summa perfectionis magisterii*, Paul&mdash;writing under a deliberately confusing pseudonym&mdash;had just transmuted Lead into Tin!<sup>1</sup>

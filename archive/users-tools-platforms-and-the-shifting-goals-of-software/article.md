@@ -1,9 +1,9 @@
 slug: users-tools-platforms-and-the-shifting-goals-of-software
 published: Fri, 22 Mar 2024 at 07:04 PM
-updated: Thu, 05 Feb 2026 23:15:20 
+updated: Thu, 05 Feb 2026 23:38:49 
 title: Users, Tools, Platforms, and the Shifting Goals of Software
 author: Brian Schrader
-tags:software, technology
+tags:software, technology, essay
 status: publish
 
 I've been around long enough now to remember when we used different words to refer to our favorite apps and websites. Long before the words <q>Platform</q>, <q>Service</q>, or <q>Ecosystem</q> infected our discourse there were <q>Tools</q>. And I think we need fewer of the former and more of the latter.

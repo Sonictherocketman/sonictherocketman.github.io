@@ -1,6 +1,6 @@
 slug: starting-a-newsletter
 published: Thu, 24 Jul 2025 at 10:15 PM
-updated: Thu, 05 Feb 2026 23:15:21 
+updated: Thu, 05 Feb 2026 23:38:50 
 title: Starting a Newsletter
 author: Brian Schrader
 tags:personal,meta

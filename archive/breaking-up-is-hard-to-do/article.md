@@ -1,9 +1,9 @@
 slug: breaking-up-is-hard-to-do
 published: Mon, 11 Jan 2016 at 09:58 AM
-updated: Thu, 05 Feb 2026 23:15:22 
+updated: Thu, 05 Feb 2026 23:38:51 
 title: Breaking up is hard to do
 author: Brian Schrader
-tags: twitter
+tags: twitter, essay
 status: publish
 
 Twitter, we need to talk. I've been thinking, and I don't think our relationship is working out. You're not the social network I fell in love with anymore, you've changed.
@@ -27,12 +27,12 @@ We saw the world together. We watched the world cheer when [Lady Gaga sang The S
 [f2]: https://twitter.com/sonicrocketman/status/339928142695251970
 [f3]: https://twitter.com/sonicrocketman/status/338529457373593601
 
-We've had so many great times together, but I can't keep pretending that everything's ok. I depend on you, like so many others do, for realtime communication, and when you came back from that weekend Social Network's Spirit Quest in that WigWam in Arizona, [you almost lost me][ttc]. You said that you'd ["rediscovered yourself" and that you were making changes for the better][cr]. I tried to talk to you, *we all* tried to talk to you. We wanted you to go back to your roots, but you were converted by the teachings of Guru Facebook. 
+We've had so many great times together, but I can't keep pretending that everything's ok. I depend on you, like so many others do, for realtime communication, and when you came back from that weekend Social Network's Spirit Quest in that WigWam in Arizona, [you almost lost me][ttc]. You said that you'd ["rediscovered yourself" and that you were making changes for the better][cr]. I tried to talk to you, *we all* tried to talk to you. We wanted you to go back to your roots, but you were converted by the teachings of Guru Facebook.
 
 [ttc]: http://brianschrader.com/archive/chris-radcliff-on-twitters-timeline-changes/
 [cr]: http://globalspin.com/2014/09/communication-news-entertainment/
 
-I can't keep pretending that we're still happy together. I loved what we were, but not what we are. And so, I'm leaving. Sure, I'll still visit every once and a while, but I think we should start seeing other people. I have to do a little "rediscovering" of my own. I need a social network that respects me, that doesn't reorder my messages because it knows better, or renames "Favorites" to "Likes" in order to desperately cling to the idea of being hip. I want a network that respects developers, and doesn't drive them away. I'm at a point in my life where I want a service that knows what it is, and what it wants. 
+I can't keep pretending that we're still happy together. I loved what we were, but not what we are. And so, I'm leaving. Sure, I'll still visit every once and a while, but I think we should start seeing other people. I have to do a little "rediscovering" of my own. I need a social network that respects me, that doesn't reorder my messages because it knows better, or renames "Favorites" to "Likes" in order to desperately cling to the idea of being hip. I want a network that respects developers, and doesn't drive them away. I'm at a point in my life where I want a service that knows what it is, and what it wants.
 
 I guess I'm saying that you've changed. You're driving your friends away, and now you've driven me away too. Sorry to say it out loud, but it's true, and so I'm leaving.
 
