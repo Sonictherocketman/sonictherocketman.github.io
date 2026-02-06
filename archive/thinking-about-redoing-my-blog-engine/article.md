@@ -1,6 +1,6 @@
 slug: thinking-about-redoing-my-blog-engine
 published: Sat, 11 Oct 2014 at 10:04 PM
-updated: Thu, 05 Feb 2026 23:53:22 
+updated: Fri, 06 Feb 2026 00:10:35 
 title: Thinking about redoing my blog engine
 author: Brian Schrader
 tags: blog engine, programming

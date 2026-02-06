@@ -1,6 +1,6 @@
 slug: what-if-bookclub-but-with-ai
 published: Wed, 04 Jun 2025 at 06:00 AM
-updated: Thu, 05 Feb 2026 23:53:22 
+updated: Fri, 06 Feb 2026 00:10:35 
 title: What if: Bookclub, but AI?
 notitlecaps:false
 status: publish

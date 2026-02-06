@@ -1,6 +1,6 @@
 slug: the-times-and-i-are-changing
 published: Sun, 09 Jun 2024 at 04:51 AM
-updated: Thu, 05 Feb 2026 23:53:21 
+updated: Fri, 06 Feb 2026 00:10:34 
 title: The Times and I Are Changing
 author: Brian Schrader
 tags:personal

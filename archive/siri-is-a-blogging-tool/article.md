@@ -1,6 +1,6 @@
 slug: siri-is-a-blogging-tool
 published: Thu, 02 Jun 2016 at 12:34 PM
-updated: Thu, 05 Feb 2026 23:53:20 
+updated: Fri, 06 Feb 2026 00:10:34 
 title: Siri is a blogging tool
 author: Brian Schrader
 status: publish 

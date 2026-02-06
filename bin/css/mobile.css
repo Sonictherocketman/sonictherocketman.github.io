@@ -18,6 +18,11 @@
     text-align:left;
   }
 
+  .article-content p, .article-content ul {
+    font-size: 15pt;
+    line-height: 1.65;
+  }
+
   p {text-indent:0px;}
 
   blockquote {

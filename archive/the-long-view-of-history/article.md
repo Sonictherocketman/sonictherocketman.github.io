@@ -1,6 +1,6 @@
 slug: the-long-view-of-history
 published: Fri, 23 Jan 2026 at 07:20 PM
-updated: Thu, 05 Feb 2026 23:53:22 
+updated: Fri, 06 Feb 2026 00:10:35 
 title: The Long View of History
 author: Brian Schrader
 tags: history,writing,politics,essay
