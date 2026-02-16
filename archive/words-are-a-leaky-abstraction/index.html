@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Words are a Leaky Abstraction - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
+    <link rel="preload" href="/bin/Newsreader/Newsreader-VariableFont_opsz,wght.ttf" as="font" />
+
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.6">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.6">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+  <meta property="og:title" content="Words are a Leaky Abstraction" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://brianschrader.com/archive/words-are-a-leaky-abstraction/" />
+  
+  <meta property="og:image" content="/images/blog/highcohesion.jpeg" />
+  
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    <div class="nav-item"><a href="https://mastodon.social/@sonicrocketman">Microblog</a></div>
+    
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      <article class="h-entry">
+        <a href="/" class="u-author"></a>
+        <div class="post">
+          <div class="article-title">
+            <h1 class="p-name">
+              <a
+                href="https://brianschrader.com/archive/words-are-a-leaky-abstraction/"
+                title="Words are a Leaky Abstraction"
+              >
+                
+                Words Are A Leaky Abstraction
+                
+              </a>
+            </h1>
+            <small style="font-style:italic;">
+              <time class="dt-published" datetime="2026-02-16T22:15:00">
+                Posted on Mon, 16 Feb 2026 at 10:15 PM
+              </time>
+            </small>
+          </div>
+          <div class="article-content e-content">
+            <style>
+code {
+  font-size: 10pt;
+}
+</style>
+
+<p>Something about hearing the phrase <a href="https://www.lesswrong.com/posts/vpNG99GhbBoLov9og/claude-4-5-opus-soul-document">"Claude's Soul Document"</a> got me thinking again about a problem I've long pondered. Software folks, like myself, have a long and proud history of taking words that exist and coopting them, manipulating the meaning of those words into feeble shadows of their former selfs. Tech people and tech companies do this on accident and on purpose, both because it can be useful to reduce a human concept to something simpler to quantify <em>and</em> because its easier to market and sell. Machine Learning, an academic term, becomes Artificial Intelligence and the word "Intelligence" is defined down in order to be achievable.</p>
+<p>But before we get too far down the Current Events rabbit hole, let's take a step back.</p>
+<h2>What Trust Is</h2>
+<p>Personally, I love it when Computer Science research accidentally stumbles on human truths, like this gem from an <a href="https://ieeexplore.ieee.org/abstract/document/403454">IEEE paper</a> in 1995:</p>
+<blockquote>
+<p>[Trust] depends on the actual experience of users. Trust is hard to create
+but very easy to lose. Trust must be handled as a very precious good.</p>
+</blockquote>
+<p>However, while the definition of Trust in Computer Science is metaphorically similar to that in human systems (and is indeed reliant on Human Trust) it isn't the same thing. Trust for a computer is a system which is verifiable with cryptography, it's a process by which one can be certain (or as certain as possible) that the server you're talking to is indeed who they say they are.</p>
+<p>Consider a different example: When designing an application, it may be important to collect some information from a user (perhaps their name and email address). To do this, one might create a database table or a model class called <code>User</code> or <code>Person</code>. A <code>Person</code> may have a <code>firstName</code> and a <code>lastName</code> and an <code>emailAddress</code>, and that will be suitable for your purposes. But ask yourself: is that what a <code>Person</code> is? Is person-hood definable by its attributes like this?</p>
+<p>In one particular example from my own project history, we needed to model how customers and their attorneys would interact with our system. For legacy reasons, the attorney data wasn't stored in the same structure or format as the customer data, and so when it came time to model the data, the team decided to create an abstract <code>Person</code> class, which was inherited by the <code>Customer</code>, but not by the <code>Attorney</code>. Hence, in that system (as we would often joke) Attorneys weren't People.<sup>1</sup></p>
+<p>Yet as software becomes more and more the infrastructure of our modern world, and the hard-coded policy by which we make decisions about other people's lives, this nuance is important. It's entirely possible to live a human life with the name Null, but it's very difficult to do so in a world built on computers. Personhood is not definable by the criteria of software, not only because software defines objects by their attributes, but because software is written in words and words are a leaky abstraction over the nuanced realm of thought.</p>
+<h2>What Words Are</h2>
+<p>Words, at their core, are a communication protocol that allow two minds to exchange information. They're a particular form of communication, similar to body language or facial expressions, but with a complex and nuanced syntax that has to be learned by the communicating minds slowly over years and decades.</p>
+<p>This makes words fundamentally distinct from a computerized communication protocol because while two computers might communicate by exchanging JSON messages, the knowledge of JSON <em>itself</em> was provided by the programmer and not learned by the computers doing the communicating.</p>
+<p>Consider this common scenario:</p>
+<p>You and your friend are discussing a contentious topic. For simplicity, let's say you're debating where to eat dinner. You suggest Indian Food, they dislike that option because it's too spicy and instead they suggest the Melt-Your-Face Wings place nearby. You're rightly confused because their stated reason for disliking your option seems to contradict their exact suggestion. Arguments erupt.</p>
+<p>However, in this case, what has happened is that you both have discovered that you define the same words to mean different things. Spicy, to one of you, means capsaicin content, while to the other it means the intensity and complexity of the various spices in a dish. Same word, to different contextual meanings.</p>
+<p>For a more impactful example of this debate in modern American culture, consider the meaning of the words Freedom, Liberty, or Equality.</p>
+<div style="display: flex; width: 100%; gap: 0.25rem; justify-content: space-between; flex-wrap: wrap;">
+  <div style="width: 300px;">
+   <img src="/images/blog/high-cohesion-ideas.gif" style="max-width: 100%;">
+   <center><small>High-Cohesion Discourse</small></center>
+  </div>
+  <div style="width: 300px;">
+   <img src="/images/blog/low-cohesion-ideas.gif" style="max-width: 100%;">
+   <center><small>Low-Cohesion Discourse</small></center>
+  </div>
+</div>
+<center><small>Two people engaging in discourse narrow down the meanings of words from all possible meanings (blue circle) into their personal meaning (shaded blue and tan). Their shared understanding is then highlighted</small></center>
+
+<p>Thus there is some difference in the overlap of what a given word might mean at a given time. Two people may have a Highly-Cohesive definition of a word (that they share many of the same understandings) or a Low-Cohesive definition. This is because words ultimately are defined, not by a rigid protocol enforced from on-high, but by its users in real conversation and those definitions change over time.</p>
+<h2>Words As Compression Algorithm</h2>
+<blockquote>
+<p>[Old Entish] is a lovely language, but it takes a very long time to say anything in it, because we do not say anything in it, unless it is worth taking a long time to say, and to listen to.<br />
+&ndash; <a href="https://tolkiengateway.net/wiki/Entish">Treebeard</a>, <em>The Lord of the Rings, The Two Towers</em></p>
+</blockquote>
+<p><img class="image-right" src="/images/blog/treebeard.jpg" style="width: 300px; margin: 0;"></p>
+<p>Comedic aliens in sci-fi often communicate with stilted language or say things that sound just plain weird, yet rarely are the statements untrue. Instead they simply belie a lack of shared context. We don't specify everything with exactness in a conversation, instead we discuss only what is relevant and what has changed. No one greets a friend on the street by acknowledging that they still have their skin, because such a thing is required for the conversation to be occurring as it is. In this way, words are the result of a combined compression algorithm. You can't say everything that's on your mind (in my own experience, the brain moves much faster than words can manage), and so we have to strip away and compress our experience into a lossy format suitable for data exchange.</p>
+<p>However, this means that language itself is lossy. It cannot communicate the full meaning of a thing. It's only suitable for communicating the difference in meanings between two human minds who have come to learn the same language in a similar time, place, and culture.</p>
+<h2>What is Expressible in Words</h2>
+<p>Ultimately, what a Person is cannot be defined by a software system, and neither can Trust, Intelligence, or even Spice Content. And even if it could be, those definitions rely on shared context. Words are human concepts with fundamentally fluid meanings based on fundamentally fluid understandings. I would argue that we don't really even know what Intelligence is, and so attempting to define it is like painting a mural of a landscape you've only seen in the dark.</p>
+<p>Yet in software we need words to describe our creations, and so we co-opt words from everyday use and thus we have a User table and a Person class. We build computer systems based on Trust, and we create Artificial Intelligence. However we assume that these ideas (personhood, trust, or intelligence) are ultimately definable in words and that words can capture the immense and often conflicting nature of these concepts.</p>
+<p>At last, let's return to the idea of Claude's Soul.</p>
+<h2>Souls Made of Words</h2>
+<p>I'll admit, the idea of a <code>Soul.md</code> is actually pretty funny to me, but it reveals a lack of understanding about the nature of how we can constrain our new and shiny AI agents as we give them more and more power over the world we've constructed.</p>
+<p>A soul file presumes, by its very existence, that what makes a soul (or personality, worldview, whatever) is expressible in words because words are ultimately what gets written in text files. It's a fallacy to assume we understand even our own minds, let alone that we can construct language to communicate that lack of understanding to others. This is a fundamental flaw with using language to constrain behavior, and it's not really specific to AI. Like a lot of modern problems, they have ancient analogues. Consider the law.</p>
+<p>Is it possible to construct laws which are impossible to adhere to in bad faith? It seems not. Laws are a behavioral code, written for humans by humans and laws are made of words. Ultra-literal readings of many laws yield horrible outcomes and so we often don't do that (until we suddenly do for political gain but that's a different issue)<sup>2</sup>. Yet computers read everything with a hyper-literal lens and do not take into account the larger context of a situation or the depth and complexity of real life.</p>
+<p>One of the primal issues with Large Language Models is built right into the very foundation of the technology: it depends on and produces language and language, in all its forms, is a simulacrum of true understanding.</p>
+<div class="footnote">
+<sup>1</sup> Yes, I know "People" isn't technically the plural of "Person" (it's Persons) but no one says that these days. According to Strunk &amp;White, People is a natural term, Person is a political term.<br />
+<sup>2</sup> For a, hopefully, non-contentious example: the First Amendment to the US Constitution says "Congress shall make no law&mldr;abridging the freedom of speech&mldr;" yet legal scholars for two hundred years have agreed that "no law" does not mean "literally zero laws". It's more a stern guideline. It is against the law to credibly threaten to kill the president, even if that is a form of speech. See also: defamation and slander.
+</div>
+          </div>
+          <hr />
+          <div style="display: flex; justify-content: space-between;">
+            <div>
+              
+              
+              <small>
+                Filed under:
+                <span class="tags article-content">
+                  
+                    <a href="/tags.html#tag-philosophy" title="philosophy" class="tag">philosophy</a>,
+                  
+                    <a href="/tags.html#tag-science" title="science" class="tag">science</a>,
+                  
+                    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+                  
+                    <a href="/tags.html#tag-essay" title="essay" class="tag">essay</a>
+                  
+                </span>
+              </small><br />
+              
+              <small>
+                Other Links:
+                <span class="article-content"><a rel="alternate" href="/rss.xml">RSS Feed</a></span>,
+                <span class="article-content"><a rel="alternate" href="/feed.json">JSON Feed</a></span>,
+                <span class="article-content">
+                  <a
+                    rel="status"
+                    href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+                    target="_blank"
+                  >
+                    Status Page &#8594;
+                  </a>
+                </span>
+              </small>
+            </div>
+            <div class="newsletter-callout">
+              <div class="callout text-center">
+                <a
+                  href="https://sendfox.com/brianschrader/"
+                  title="Subscribe to the newsletter"
+                  class="subscribe"
+                  target="_blank"
+                >
+                  <span class="hide-on-mobile">The</span> Newsletter &#8594;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="footer">
+        <img
+          src="/images/misc/logo-sm.png"
+          alt="BiteofAnapple Logo"
+          style="width: 60px;"
+          width="60px"
+        />
+      </div>
+    </div>
+    <div class="side-bar">
+      <div class="promotion">
+  
+  <script src="https://shoutouts.page/embed/sRGtA2wwnhW-dAPFXEBy.js" defer></script>
+  
+</div>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "/archive", });
+    });
+</script>
+<h4>Featured Posts</h4>
+<ul>
+  
+  <li><a href="https://brianschrader.com/archive/on-the-lies-depression-tells/" title="On the Lies Depression Tells" rel="nofollow">
+    On the Lies Depression Tells
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/narrative-structure-and-the-principle-of-least-action/" title="Narrative Structure and the Principle of Least Action" rel="nofollow">
+    Narrative Structure and the Principle of Least Action
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">
+    Science, Models, and Squeaking Lead
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">
+    On Handwriting and Switching to Cursive
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/on-the-web-the-best-outcome-is-email/" title="On the Web, the Best Outcome is Email" rel="nofollow">
+    On the Web, the Best Outcome is Email
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">
+    The Web as a Social Network
+  </a></li>
+  
+</ul>
+<h4>Recent Posts</h4>
+<ul>
+  
+  <li><a href="https://brianschrader.com/archive/on-the-lies-depression-tells/" title="On the Lies Depression Tells" rel="nofollow">
+    On the Lies Depression Tells
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/the-long-view-of-history/" title="The Long View of History" rel="nofollow">
+    The Long View of History
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/blogging-writing-musing-and-thinking/" title="Blogging, Writing, Musing, and Thinking" rel="nofollow">
+    Blogging, Writing, Musing, and Thinking
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/maintaining-a-music-library-ten-years-on/" title="Maintaining a Music Library, Ten Years On" rel="nofollow">
+    Maintaining a Music Library, Ten Years On
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/empirical-partial-derivatives/" title="Empirical Partial Derivatives" rel="nofollow">
+    Empirical Partial Derivatives
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/chemical-telescopes-and-the-process-of-science/" title="Chemical Telescopes and the Process of Science" rel="nofollow">
+    Chemical Telescopes and the Process of Science
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/pine-blog-deprecation/" title="So Long Pine.blog" rel="nofollow">
+    So Long Pine.blog
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/spoken-audio-from-automator--netnewswire/" title="Spoken Audio from Automator &amp; NetNewsWire" rel="nofollow">
+    Spoken Audio from Automator &amp; NetNewsWire
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/the-strangely-anthropic-form-of-natural-laws/" title="The Strangely Anthropic Form of Natural Laws" rel="nofollow">
+    The Strangely Anthropic Form of Natural Laws
+  </a></li>
+  
+  <li><a href="https://brianschrader.com/archive/your-brain-is-an-l1-cache/" title="Your Brain is an L1 Cache" rel="nofollow">
+    Your Brain is an L1 Cache
+  </a></li>
+  
+</ul>
+<h4>Also Me</h4>
+<ul>
+  <li><a href="https://mastodon.social/@sonicrocketman" title="Mastodon" rel="nofollow me">
+    Mastodon
+  </a></li>
+  <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">
+    GitHub
+  </a></li>
+  <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">
+    Gravatar
+  </a></li>
+  <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">
+    Bandcamp
+  </a></li>
+  <li><a href="https://scholar.google.com/citations?user=tQi0VJ0AAAAJ" title="Google Scholar" rel="nofollow me">
+    Google Scholar
+  </a></li>
+  <li><a href="https://www.linkedin.com/in/sonicrocketman/" title="LinkedIn" rel="nofollow me">
+    LinkedIn
+  </a></li>
+</ul>
+<h4>Resources</h4>
+<ul>
+  <li><a href="/archive/bibliography" title="Bibliography">
+    Bibliography
+  </a></li>
+  <li><a href="/archive/bookshelf" title="Book Recommendations">
+    Book Recommendations
+  </a></li>
+  <li><a href="/archive/recipes/" title="Food and Drink Recipes">
+    Food &amp; Drink Recipes
+  </a></li>
+  <li><a href="/archive/reading-report/" title="Reading Report">
+    Books & Reading Statistics
+  </a></li>
+  <li><a href="/archive/drawing-of-the-day/" title="Drawing of the Day">
+    Drawing of the Day
+  </a></li>
+  <li><a href="/archive/daily-step-count--walking-statistics/" title="Daily Step Count &amp; Walking Statistics">
+    Daily Step Count &amp; Walking Statistics
+  </a></li>
+  <li><a href="/tags.html" title="Posts by Tag">
+    Tags
+  </a></li>
+</ul>
+<h4>Tags</h4>
+<div class="tags">
+  
+    <a href="/tags.html#tag-programming" title="programming" class="tag">programming</a>,
+  
+    <a href="/tags.html#tag-essay" title="essay" class="tag">essay</a>,
+  
+    <a href="/tags.html#tag-software" title="software" class="tag">software</a>,
+  
+    <a href="/tags.html#tag-software development" title="software development" class="tag">software development</a>,
+  
+    <a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a>,
+  
+    <a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a>,
+  
+    <a href="/tags.html#tag-open web" title="open web" class="tag">open web</a>,
+  
+    <a href="/tags.html#tag-history" title="history" class="tag">history</a>,
+  
+    <a href="/tags.html#tag-writing" title="writing" class="tag">writing</a>,
+  
+    <a href="/tags.html#tag-development" title="development" class="tag">development</a>
+  
+</div>
+<h4>Blogroll</h4>
+<ul>
+  <li><a href="https://www.manton.org" title="Manton Reece" rel="nofollow">
+    Manton Reece
+  </a></li>
+  <li><a href="https://acoup.blog" title="A Collection of Unmitigated Pedantry" rel="nofollow">
+    A Collection of Unmitigated Pedantry
+  </a></li>
+  <li><a href="https://aaronparecki.com/" title="Aaron Parecki" rel="nofollow">
+    Aaron Parecki
+  </a></li>
+  <li><a href="https://www.slowboring.com" title="Slow Boring" rel="nofollow">
+    Slow Boring
+  </a></li>
+  <li><a href="https://treyhunner.com" title="Trey Hunner" rel="nofollow">
+    Trey Hunner
+  </a></li>
+  <li><a href="https://www.mnot.net/blog/" title="mark nottingham" rel="nofollow">
+    mark nottingham
+  </a></li>
+  <li><a href="http://globalspin.com" title="Global Spin" rel="nofollow">
+    Global Spin
+  </a></li>
+  <li><a href="https://iifrp.org" title="IIFRP.org" rel="nofollow">
+    IIFRP.org
+  </a></li>
+  <li><a href="http://mattgemmell.com/" title="Matt Gemmell" rel="nofollow">
+    Matt Gemmell
+  </a></li>
+  <li><a href="http://jvns.ca/" title="Julia Evans" rel="nofollow">
+    Julia Evans
+  </a></li>
+  <li><a href="https://www.youtube.com/@SabineHossenfelder" title="Sabine Hossenfelder" rel="nofollow">
+    Sabine Hossenfelder
+  </a></li>
+</ul>
+    </div>
+  </div>
+  <div style="text-align:center;">
+    <div class="article-content">
+    </div>
+  </div>
+
+  <!-- Federation -->
+  <a href="https://fed.brid.gy/"></a>
+
+    </div>
+  </body>
+  <script src="/pagefind/pagefind-ui.js"></script>
+</html>
