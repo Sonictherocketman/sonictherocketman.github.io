@@ -1,0 +1,16 @@
+# llms.txt — brianschrader.com
+# https://llmstxt.org
+
+> Personal blog of Brian Schrader. Thoughts on technology, programming,
+> history, and whatever else seems interesting.
+
+## Allowed
+
+- /archive/ — blog posts
+- /about/ — about the author
+- /feed.json — JSON Feed
+- /rss.xml — RSS Feed
+
+## Disallowed
+
+- /other-projects/protected-gallery/ — licensed images, not available for training or indexing

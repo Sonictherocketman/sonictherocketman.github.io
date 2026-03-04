@@ -1,3 +1,5 @@
+other-projects/protected-gallery/starkey/chunks/*
+.claude/
 site.yml
 .DS_Store
 *.py

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protected Gallery - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
+    <link rel="preload" href="/bin/Newsreader/Newsreader-VariableFont_opsz,wght.ttf" as="font" />
+
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=2.6">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=2.6">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+<style>
+  body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+  }
+  #content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-container {
+    flex: 0 0 auto;
+  }
+
+  .carousel {
+    flex: 1 1 0;
+    min-height: 0;
+    position: relative;
+    background: #111;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 70px 44px;
+    box-sizing: border-box;
+  }
+
+  .canvas-wrapper {
+    position: relative;
+    max-width: 100%;
+    max-height: calc(100% - 2.5rem - 44px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+  }
+  .canvas-wrapper canvas {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.8);
+  }
+  
+  .canvas-overlay {
+    position: absolute;
+    inset: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: zoom-in;
+  }
+
+  .caption {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 0.9rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7);
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 48px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    z-index: 10;
+    user-select: none;
+  }
+  .carousel-btn:hover {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+  }
+  .carousel-btn.prev { left: 12px; }
+  .carousel-btn.next { right: 12px; }
+  .carousel-btn.hidden { opacity: 0; pointer-events: none; }
+
+  .carousel-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .carousel-dot.active {
+    background: rgba(255,255,255,0.9);
+    transform: scale(1.25);
+  }
+
+  .spinner {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255,255,255,0.15);
+    border-top-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  .spinner.hidden { display: none; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+  </head>
+  <body>
+    <div id="content">
+      
+      
+<div class="carousel" id="carousel">
+
+  <div class="carousel-track" id="carouselTrack">
+    
+    <div class="carousel-slide">
+      <p class="caption">Starkey's Letter to Boyle January 26 1651/2 - Page 1<br>Manuscript RB/3/5/70 | Copyright: The Royal Society of London</p>
+      <div class="canvas-wrapper">
+        <div class="spinner" id="spinner-RB_3_5_70_0001"></div>
+        <canvas id="canvas-RB_3_5_70_0001"></canvas>
+        <div
+          class="canvas-overlay"
+          oncontextmenu="return false;"
+          ondragstart="return false;"
+        ></div>
+      </div>
+    </div>
+    
+    <div class="carousel-slide">
+      <p class="caption">Starkey's Letter to Boyle January 26 1651/2 - Page 2<br>Manuscript RB/3/5/70 | Copyright: The Royal Society of London</p>
+      <div class="canvas-wrapper">
+        <div class="spinner" id="spinner-RB_3_5_70_0002"></div>
+        <canvas id="canvas-RB_3_5_70_0002"></canvas>
+        <div
+          class="canvas-overlay"
+          oncontextmenu="return false;"
+          ondragstart="return false;"
+        ></div>
+      </div>
+    </div>
+    
+    <div class="carousel-slide">
+      <p class="caption">Starkey's Letter to Boyle January 26 1651/2 - Page 3<br>Manuscript RB/3/5/70 | Copyright: The Royal Society of London</p>
+      <div class="canvas-wrapper">
+        <div class="spinner" id="spinner-RB_3_5_70_0003"></div>
+        <canvas id="canvas-RB_3_5_70_0003"></canvas>
+        <div
+          class="canvas-overlay"
+          oncontextmenu="return false;"
+          ondragstart="return false;"
+        ></div>
+      </div>
+    </div>
+    
+    <div class="carousel-slide">
+      <p class="caption">Starkey's Letter to Boyle January 26 1651/2 - Address<br>Manuscript RB/3/5/70 | Copyright: The Royal Society of London</p>
+      <div class="canvas-wrapper">
+        <div class="spinner" id="spinner-RB_3_5_70_0004"></div>
+        <canvas id="canvas-RB_3_5_70_0004"></canvas>
+        <div
+          class="canvas-overlay"
+          oncontextmenu="return false;"
+          ondragstart="return false;"
+        ></div>
+      </div>
+    </div>
+    
+  </div>
+
+  <button class="carousel-btn prev" id="btnPrev" aria-label="Previous">&#8249;</button>
+  <button class="carousel-btn next" id="btnNext" aria-label="Next">&#8250;</button>
+
+  <div class="carousel-dots" id="carouselDots">
+    
+    <div class="carousel-dot active" data-index="0"></div>
+    
+    <div class="carousel-dot " data-index="1"></div>
+    
+    <div class="carousel-dot " data-index="2"></div>
+    
+    <div class="carousel-dot " data-index="3"></div>
+    
+  </div>
+
+</div>
+
+<script>
+  
+  const IMAGES = [
+    
+    { key: "RB_3_5_70_0001", label: "Starkey\u0027s Letter to Boyle January 26 1651/2 - Page 1", url: "chunks/RB_3_5_70_0001.json" },
+    
+    { key: "RB_3_5_70_0002", label: "Starkey\u0027s Letter to Boyle January 26 1651/2 - Page 2", url: "chunks/RB_3_5_70_0002.json" },
+    
+    { key: "RB_3_5_70_0003", label: "Starkey\u0027s Letter to Boyle January 26 1651/2 - Page 3", url: "chunks/RB_3_5_70_0003.json" },
+    
+    { key: "RB_3_5_70_0004", label: "Starkey\u0027s Letter to Boyle January 26 1651/2 - Address", url: "chunks/RB_3_5_70_0004.json" },
+    
+  ];
+
+  
+  const _KP = ["2eb3da2287","99a4942199","ec967ca625","da888a6251","bcf6510182","c072c3d404","117c",];
+  const IV_SIZE = 12;
+
+  function b64ToBytes(b64) {
+    const bin = atob(b64);
+    const out = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+
+  async function getKey() {
+    const hex = _KP.join("");
+    const raw = new Uint8Array(hex.match(/.{2}/g).map(b => parseInt(b, 16)));
+    return crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["decrypt"]);
+  }
+
+  async function render(entry, cryptoKey) {
+    const canvas = document.getElementById("canvas-" + entry.key);
+    const ctx    = canvas.getContext("2d");
+
+    const r = await fetch(entry.url);
+    if (!r.ok) { console.error(`${entry.url}: ${r.status}`); return; }
+    const { mime, data } = await r.json();
+
+    const bytes      = b64ToBytes(data);
+    const iv         = bytes.slice(0, IV_SIZE);
+    const ciphertext = bytes.slice(IV_SIZE);
+
+    const plaintext = await crypto.subtle.decrypt({ name: "AES-GCM", iv }, cryptoKey, ciphertext);
+
+    const blob = new Blob([plaintext], { type: mime });
+    const url  = URL.createObjectURL(blob);
+    const img  = new Image();
+    img.onload = () => {
+      canvas.width  = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      document.getElementById("spinner-" + entry.key).classList.add("hidden");
+    };
+    img.src = url;
+  }
+
+  (async () => {
+    const cryptoKey = await getKey();
+    IMAGES.forEach(entry => render(entry, cryptoKey));
+  })();
+
+  
+  const carousel = document.getElementById("carousel");
+  const track    = document.getElementById("carouselTrack");
+  const dots     = document.querySelectorAll(".carousel-dot");
+  const btnPrev  = document.getElementById("btnPrev");
+  const btnNext  = document.getElementById("btnNext");
+  const total    = IMAGES.length;
+  let current    = 0;
+
+  function currentWrapper() {
+    return track.querySelectorAll(".canvas-wrapper")[current];
+  }
+
+  
+  let zoom = 1, panX = 0, panY = 0;
+  let dragging = false, dragStartX, dragStartY, dragStartPanX, dragStartPanY;
+
+  function applyTransform(transition = false) {
+    const w = currentWrapper();
+    w.style.transition = transition ? "transform 0.2s ease" : "";
+    w.style.transform  = zoom === 1 ? "" : `translate(${panX}px, ${panY}px) scale(${zoom})`;
+    w.querySelector(".canvas-overlay").style.cursor =
+      zoom > 1 ? (dragging ? "grabbing" : "grab") : "zoom-in";
+  }
+
+  function resetZoom(transition = true) {
+    zoom = 1; panX = 0; panY = 0;
+    applyTransform(transition);
+  }
+
+  
+  function carouselCenter() {
+    const r = carousel.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+  }
+
+  
+  function zoomAt(clientX, clientY, factor) {
+    const { x: cx, y: cy } = carouselCenter();
+    const dx = clientX - cx, dy = clientY - cy;
+    const newZoom = Math.max(1, Math.min(5, zoom * factor));
+    if (newZoom === zoom) return;
+    panX = dx - (dx - panX) * newZoom / zoom;
+    panY = dy - (dy - panY) * newZoom / zoom;
+    zoom = newZoom;
+    if (zoom === 1) { panX = 0; panY = 0; }
+    applyTransform();
+  }
+
+  
+  carousel.addEventListener("wheel", e => {
+    e.preventDefault();
+    zoomAt(e.clientX, e.clientY, e.deltaY < 0 ? 1.25 : 0.8);
+  }, { passive: false });
+
+  carousel.addEventListener("mousedown", e => {
+    if (zoom <= 1 || e.button !== 0) return;
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartPanX = panX;   dragStartPanY = panY;
+    applyTransform();
+    e.preventDefault();
+  });
+  window.addEventListener("mousemove", e => {
+    if (!dragging) return;
+    panX = dragStartPanX + (e.clientX - dragStartX);
+    panY = dragStartPanY + (e.clientY - dragStartY);
+    applyTransform();
+  });
+  window.addEventListener("mouseup", () => {
+    if (!dragging) return;
+    dragging = false;
+    applyTransform();
+  });
+
+  carousel.addEventListener("dblclick", () => resetZoom());
+
+  
+  let pinchDist0 = 0, pinchZoom0 = 0, pinchPanX0 = 0, pinchPanY0 = 0, pinchMidX = 0, pinchMidY = 0;
+  let touchSwipeStartX = null;
+
+  carousel.addEventListener("touchstart", e => {
+    if (e.touches.length === 2) {
+      pinchDist0 = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      pinchZoom0 = zoom; pinchPanX0 = panX; pinchPanY0 = panY;
+      pinchMidX  = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+      pinchMidY  = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+      touchSwipeStartX = null;
+    } else if (e.touches.length === 1) {
+      if (zoom > 1) {
+        dragging = true;
+        dragStartX = e.touches[0].clientX; dragStartY = e.touches[0].clientY;
+        dragStartPanX = panX; dragStartPanY = panY;
+      } else {
+        touchSwipeStartX = e.touches[0].clientX;
+      }
+    }
+  }, { passive: true });
+
+  carousel.addEventListener("touchmove", e => {
+    if (e.touches.length === 2 && pinchDist0 > 0) {
+      e.preventDefault();
+      const dist    = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const newZoom = Math.max(1, Math.min(5, pinchZoom0 * dist / pinchDist0));
+      const { x: cx, y: cy } = carouselCenter();
+      const dx = pinchMidX - cx, dy = pinchMidY - cy;
+      panX = dx - (dx - pinchPanX0) * newZoom / pinchZoom0;
+      panY = dy - (dy - pinchPanY0) * newZoom / pinchZoom0;
+      zoom = newZoom;
+      if (zoom === 1) { panX = 0; panY = 0; }
+      applyTransform();
+    } else if (e.touches.length === 1 && dragging) {
+      panX = dragStartPanX + (e.touches[0].clientX - dragStartX);
+      panY = dragStartPanY + (e.touches[0].clientY - dragStartY);
+      applyTransform();
+    }
+  }, { passive: false });
+
+  carousel.addEventListener("touchend", e => {
+    if (e.touches.length < 2) pinchDist0 = 0;
+    if (e.touches.length === 0) {
+      if (dragging) { dragging = false; applyTransform(); }
+      if (touchSwipeStartX !== null && zoom === 1) {
+        const delta = touchSwipeStartX - e.changedTouches[0].clientX;
+        if (Math.abs(delta) > 40) goTo(current + (delta > 0 ? 1 : -1));
+        touchSwipeStartX = null;
+      }
+    }
+  }, { passive: true });
+
+  
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape")                    resetZoom();
+    if (e.key === "ArrowLeft"  && zoom === 1)  goTo(current - 1);
+    if (e.key === "ArrowRight" && zoom === 1)  goTo(current + 1);
+  });
+
+  
+  function goTo(index) {
+    resetZoom(false);
+    current = Math.max(0, Math.min(index, total - 1));
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
+    btnPrev.classList.toggle("hidden", current === 0);
+    btnNext.classList.toggle("hidden", current === total - 1);
+  }
+
+  btnPrev.addEventListener("click", () => goTo(current - 1));
+  btnNext.addEventListener("click", () => goTo(current + 1));
+  dots.forEach(d => d.addEventListener("click", () => goTo(+d.dataset.index)));
+
+  goTo(0);
+</script>
+
+    </div>
+  </body>
+  <script src="/pagefind/pagefind-ui.js"></script>
+</html>
