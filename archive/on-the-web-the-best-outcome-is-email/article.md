@@ -1,6 +1,6 @@
 slug: on-the-web-the-best-outcome-is-email
 published: Fri, 02 Dec 2022 at 01:56 AM
-updated: Thu, 05 Mar 2026 19:45:31 
+updated: Thu, 05 Mar 2026 20:10:06 
 title: On the Web, the Best Outcome is Email
 author: Brian Schrader
 tags: open web, mastodon, essay

@@ -803,7 +803,7 @@ ol.pagefind-ui__results {
   position: absolute;
   left: 5px;
   top: 10px;
-  bottom: 10px;
+  bottom: 24px;
   width: 1px;
   background: #c8d4ef;
 }

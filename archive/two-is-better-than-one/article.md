@@ -1,6 +1,6 @@
 slug: two-is-better-than-one
 published: Thu, 09 Jul 2020 at 02:54 AM
-updated: Thu, 05 Mar 2026 19:45:34 
+updated: Thu, 05 Mar 2026 20:10:10 
 title: Two is Better than One
 author: Brian Schrader
 tags: blog, self, update
