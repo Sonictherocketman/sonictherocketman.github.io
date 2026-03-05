@@ -1160,7 +1160,7 @@ ol.pagefind-ui__results {
     padding: 0;
   }
   .stream-thread-dot {
-    display: none;
+    display: none !important;
   }
   .blogroll {
     columns: 1;
