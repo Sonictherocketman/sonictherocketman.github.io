@@ -1,6 +1,6 @@
 slug: what-if-sending-money-was-as-easy-as-airdrop
 published: Thu, 04 Dec 2014 at 08:56 PM
-updated: Thu, 05 Mar 2026 20:11:59 
+updated: Thu, 05 Mar 2026 21:24:10 
 title: What if sending money was as easy as AirDrop
 author: Brian Schrader
 status: publish

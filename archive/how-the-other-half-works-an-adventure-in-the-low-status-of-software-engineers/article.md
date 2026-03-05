@@ -1,6 +1,6 @@
 slug: how-the-other-half-works-an-adventure-in-the-low-status-of-software-engineers
 published: Mon, 11 Aug 2014 at 06:39 PM
-updated: Thu, 05 Mar 2026 20:11:58 
+updated: Thu, 05 Mar 2026 21:24:09 
 title: How the Other Half Works: an Adventure in the Low Status of Software Engineers
 author: Brian Schrader
 tags: software development

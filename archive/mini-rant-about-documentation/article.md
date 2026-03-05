@@ -1,6 +1,6 @@
 slug: mini-rant-about-documentation
 published: Mon, 09 Oct 2017 at 03:31 PM
-updated: Thu, 05 Mar 2026 20:12:00 
+updated: Thu, 05 Mar 2026 21:24:10 
 title: Mini-Rant About Documentation
 author: Brian Schrader
 tags: development, programming

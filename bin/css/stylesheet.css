@@ -513,6 +513,15 @@ details p {
   Newsletter Promo
  */
 
+.midroll.newsletter-callout {
+  max-width: 300px;
+  padding: 1rem;
+  border-radius: 3px;
+  border: 1px dashed #666;
+  background-color: #eee;
+  margin: auto;
+}
+
 .newsletter-callout a.subscribe {
   font-size: small;
   display: block;

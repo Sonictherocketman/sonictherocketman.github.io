@@ -1,6 +1,6 @@
 slug: rocketsim
 published: Mon, 05 May 2014 at 11:51 PM
-updated: Thu, 05 Mar 2026 20:11:58 
+updated: Thu, 05 Mar 2026 21:24:09 
 title: Rocket Simulation
 author: Brian Schrader
 tags: rocketsim 

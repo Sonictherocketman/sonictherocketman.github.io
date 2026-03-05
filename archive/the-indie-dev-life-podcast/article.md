@@ -1,6 +1,6 @@
 slug: the-indie-dev-life-podcast
 published: Mon, 28 Sep 2020 at 07:57 PM
-updated: Thu, 05 Mar 2026 20:11:58 
+updated: Thu, 05 Mar 2026 21:24:09 
 title: The Indie Dev Life Podcast
 author: Brian Schrader
 tags: podcast, software development, indie dev, announcement

@@ -1,6 +1,6 @@
 slug: climate-change-and-guns-germs-and-steel
 published: Sat, 15 Jul 2017 at 01:42 PM
-updated: Thu, 05 Mar 2026 20:11:58 
+updated: Thu, 05 Mar 2026 21:24:08 
 title: Climate Change and Guns, Germs, and Steel
 author: Brian Schrader
 status: publish

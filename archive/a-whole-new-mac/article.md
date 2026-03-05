@@ -1,6 +1,6 @@
 slug: a-whole-new-mac
 published: Fri, 22 May 2020 at 12:43 AM
-updated: Thu, 05 Mar 2026 20:11:58 
+updated: Thu, 05 Mar 2026 21:24:08 
 title: A Whole New Mac
 author: Brian Schrader
 tags: mac, macos, apple, new hardware

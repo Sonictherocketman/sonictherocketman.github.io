@@ -1,6 +1,6 @@
 slug: arbitrary-achievement-unlocked
 published: Thu, 10 Dec 2020 at 11:14 PM
-updated: Thu, 05 Mar 2026 20:11:58 
+updated: Thu, 05 Mar 2026 21:24:09 
 title: Arbitrary Achievement Unlocked
 author: Brian Schrader
 tags: podcast, indiedevlife, personal, productivity, indie

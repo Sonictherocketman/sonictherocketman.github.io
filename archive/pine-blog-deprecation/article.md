@@ -1,6 +1,6 @@
 slug: pine-blog-deprecation
 published: Mon, 15 Sep 2025 at 11:36 PM
-updated: Thu, 05 Mar 2026 20:11:59 
+updated: Thu, 05 Mar 2026 21:24:09 
 title: So Long Pine.blog
 author: Brian Schrader
 tags:pine.blog,programming,meta
