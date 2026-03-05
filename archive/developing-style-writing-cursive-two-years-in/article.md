@@ -1,11 +1,12 @@
 slug: developing-style-writing-cursive-two-years-in
 published: Wed, 23 Jul 2025 at 10:21 PM
-updated: Fri, 06 Feb 2026 00:29:28 
+updated: Thu, 05 Mar 2026 19:45:32 
 title: Developing Style: Writing Cursive Two Years In
 author: Brian Schrader
 tags:writing,personal
 status: publish
 hero: /images/blog/update-cursive.jpg
+thread: handwriting
 
 Over a year ago, I [switched][1] to writing entirely in cursive and wrote [at length][2] on the techniques and methods I used to re-learn it. This post is an update to those earlier two in which I will dive into the beautiful process I've undertaken trying to develop a personal style for my handwriting.
 

@@ -44,16 +44,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.article-content p:first-child {
+  margin-top: 8px;
+}
+
 img { border:none; }
 
 /* p { text-indent:20px; } */
 
 h1, h2, h3 {
 	/* font-family:'Average', serif; */
-	font-weight:300;
+	font-weight: 300;
 }
 h1 {
-	font-size:18pt;
+	font-size:22pt;
+	line-height: 26pt;
 	margin-bottom:0px;
 }
 
@@ -111,8 +116,7 @@ details p {
 }
 
 #post, #first-post {
-	margin-top: -3px;
-	padding: 3%;
+	padding: 1rem 2rem 2rem 0.5rem;
 
 	border-right: 0px; /* Don't forget to modify to the right border. */
 	background-image:
@@ -149,8 +153,7 @@ details p {
 */
 
 .post {
-	margin-top: -3px;
-	padding: 3%;
+	padding: 1rem 1rem 2rem 1rem;
 	/*
 	border-right: 0px; /* Don't forget to modify to the right border.
 	background-image:
@@ -369,17 +372,6 @@ details p {
   margin-bottom: 8px;
 }
 
-.side-bar ul {
-  font-size: 92%;
-  margin-top: 0px;
-  list-style: none;
-  padding-inline-start: 0px;
-}
-
-.side-bar ul ul {
-  padding-inline-start: 1rem;
-}
-
 .side-bar div.tags {
   font-size: 92%;
   margin-top: 0px;
@@ -462,12 +454,14 @@ details p {
 /* Going Indie Promo */
 
 .promotion {
+/*
   width: 100%;
+ */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 8px;
-  margin: 8px 8px 8px 0px;
+  margin: 8px 0px 8px 0px;
   border: 1px dashed #ccc;
   text-align: left;
 }
@@ -571,7 +565,8 @@ details p {
 */
 
 .pagefind-ui__search-input {
-  width: 100%;
+  width: calc(100% - 14px);
+  margin: 8px 0px 8px 0px;
   height: 1.25rem;
   margin-top: 0.3rem;
 }
@@ -611,4 +606,563 @@ ol.pagefind-ui__results {
   margin: 0;
   margin-block-start: 0em;
   padding-inline-start: 0;
+}
+
+/*
+ * additions.css — styles for the new homepage layout and in-post thread strips.
+ * Load this after stylesheet.css and mobile.css.
+ */
+
+/* ── Homepage layout ──────────────────────────────────────────────── */
+
+.home-layout {
+  max-width: 925px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 185px;
+  border-bottom: 1px solid #e8e8e4;
+}
+
+.stream-col {
+	padding: 2rem 1rem 2rem 0rem;
+}
+
+.side-col {
+  text-align: left;
+}
+
+.sidebar-section:first-child {
+  border: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+
+/* ── Feature post ─────────────────────────────────────────────────── */
+
+.stream-feature {
+  padding-bottom: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e8e8e4;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.stream-feature-title {
+  font-size: 1.9rem;
+  font-weight: 300;
+  line-height: 1.25;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stream-feature-date {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+.stream-feature-img {
+  float: right;
+  width: 135px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0.15rem 0 0.75rem 1.25rem;
+  display: block;
+}
+
+/* ── Stream posts ─────────────────────────────────────────────────── */
+
+.stream-post {
+  padding: 0.45rem 0 0.45rem 1rem;
+  border-bottom: 1px solid #f0f0ee;
+  position: relative;
+}
+.stream-post:last-child { border-bottom: none; }
+
+.stream-title {
+  font-size: 1.4rem;
+  line-height: 1.35;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.stream-col h1.article-title, .stream-col h2.article-title {
+  margin: 0;
+  padding: 0;
+}
+
+.stream-excerpt {
+  color: #555;
+}
+
+.stream-date {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* ── Thread dot (left column) ─────────────────────────────────────── */
+
+.stream-thread-dot {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4068B8;
+  z-index: 1;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+.stream-thread-dot:hover {
+  background: #2a4a8a;
+  transform: scale(1.25);
+}
+
+.stream-feature-thread-dot {
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 10px;
+  height: 10px;
+}
+
+/* Tooltip */
+.stream-thread-dot::after {
+  content: attr(data-thread);
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.45rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  font-family: -apple-system, sans-serif;
+}
+.stream-thread-dot:hover::after { opacity: 1; }
+
+/* Vertical connecting line between consecutive same-thread posts */
+.stream-post.thread-continues::after {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  top: calc(0.75rem + 10px);
+  bottom: -0.45rem;
+  width: 1.5px;
+  background: #c8d4ef;
+}
+
+/* ── Stream footer ────────────────────────────────────────────────── */
+
+.stream-footer {
+  padding-top: 1.25rem;
+  font-size: 0.78rem;
+}
+.stream-footer a {
+  color: #4068B8;
+  text-decoration: none;
+}
+.stream-footer a:hover { color: #2a4a8a; }
+
+/* ── Thread column (right) ────────────────────────────────────────── */
+
+.thread-col-label {
+  font-size: 0.72rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.thread-group {
+  margin-bottom: 1.75rem;
+}
+.thread-group:last-child { margin-bottom: 0; }
+
+.thread-group-name {
+  font-size: 0.72rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.thread-posts {
+  position: relative;
+}
+.thread-posts::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: #c8d4ef;
+}
+
+.thread-post {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.2rem 0;
+}
+
+.tdot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4068B8;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  position: relative;
+  z-index: 1;
+  transition: background 0.15s, transform 0.15s;
+}
+.thread-post:hover .tdot {
+  background: #2a4a8a;
+  transform: scale(1.25);
+}
+
+.tdot-current {
+  background: #fff;
+  border: 2px solid #4068B8;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  margin-top: 0.2rem;
+  margin-left: -1px;
+}
+
+.thread-post a {
+  font-size: 0.8rem;
+  color: #4068B8;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.thread-post a:hover { color: #2a4a8a; }
+
+/* ── Right column sidebar sections ───────────────────────────────── */
+
+.sidebar-section {
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e8e8e4;
+}
+
+.sidebar-label {
+  font-size: 0.7rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-list li {
+  padding: 0.1rem 0;
+}
+.sidebar-list a {
+  font-size: 0.8rem;
+  color: #4068B8;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  transition: color 0.15s;
+}
+.sidebar-list a:hover { color: #2a4a8a; }
+
+.group-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.75rem;
+}
+.group-list a {
+  font-size: 0.78rem;
+  color: #4068B8;
+  text-decoration: none;
+}
+.group-list a:hover { color: #2a4a8a; }
+
+/* ── Homepage footer strip ────────────────────────────────────────── */
+
+.home-footer {
+  background: #f4f4f4;
+  border-top: 1px solid #e8e8e4;
+  padding: 1.5rem 0;
+  clear: both;
+}
+.home-footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+  padding: 0 1.25rem;
+}
+.foot-label {
+  font-size: 0.7rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+.foot-list { list-style: none; padding: 0; margin: 0; }
+.foot-list li { padding: 0.1rem 0; }
+.foot-list a { font-size: 0.8rem; color: #4068B8; text-decoration: none; }
+.foot-list a:hover { color: #2a4a8a; }
+.blogroll { columns: 3; gap: 0.5rem; }
+.blogroll a {
+  display: block;
+  font-size: 0.78rem;
+  color: #4068B8;
+  text-decoration: none;
+  padding: 0.1rem 0;
+  break-inside: avoid;
+}
+.blogroll a:hover { color: #2a4a8a; }
+
+/* ── In-post thread strip ─────────────────────────────────────────── */
+
+.thread-strip {
+  margin: 2.5rem auto 0;
+  padding: 1.25rem 1.5rem 1.5rem;
+  max-width: 400px;
+  border: 1px solid #e8e8e4;
+  border-radius: 4px;
+}
+
+.thread-eyebrow {
+  font-size: 0.72rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.thread-eyebrow a {
+  color: #4068B8;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.thread-eyebrow a:hover { color: #2a4a8a; }
+
+.thread-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.thread-track::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: #c8d4ef;
+}
+
+.thread-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.3rem 0;
+  text-decoration: none;
+}
+
+.thread-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4068B8;
+  flex-shrink: 0;
+  margin-top: 0.22rem;
+  position: relative;
+  z-index: 1;
+  transition: background 0.15s, transform 0.15s;
+}
+.thread-step.current .thread-dot {
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid #4068B8;
+  box-shadow: 0 0 0 3px rgba(64,104,184,0.12);
+  margin-top: 0.15rem;
+  margin-left: -1px;
+}
+
+.thread-step-title {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #4068B8;
+  transition: color 0.15s;
+}
+.thread-step.current .thread-step-title {
+  color: #1a1a1a;
+  font-style: italic;
+}
+
+.thread-step:hover:not(.current) .thread-dot {
+  background: #2a4a8a;
+  transform: scale(1.25);
+}
+.thread-step:hover:not(.current) .thread-step-title {
+  color: #2a4a8a;
+}
+
+/* ── Thread pages ─────────────────────────────────────────────────── */
+
+.thread-back {
+  font-size: 0.78rem;
+  color: #aaa;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.thread-back:hover { color: #4068B8; }
+
+/* Larger text for the full-page thread detail list */
+.thread-detail .thread-post a,
+.thread-detail .thread-post span {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.thread-detail-body {
+  flex: 1;
+}
+
+.thread-detail-title {
+  display: block;
+  color: #4068B8;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.thread-detail-title:hover { color: #2a4a8a; }
+
+/* Thread index items */
+.thread-index-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e4;
+}
+.thread-index-item:last-child { border-bottom: none; }
+
+.thread-index-name {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 0 0.15rem;
+}
+.thread-index-name a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.thread-index-name a:hover { color: #4068B8; }
+
+.thread-index-meta {
+  font-size: 0.72rem;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+}
+
+.thread-index-preview.thread-posts::before {
+  top: 5px;
+  bottom: 5px;
+}
+
+.thread-index-more-row {
+  gap: 0;
+}
+.thread-index-more {
+  font-size: 0.8rem;
+  color: #4068B8;
+  text-decoration: none;
+  padding-left: 1.65rem;
+}
+.thread-index-more:hover { color: #2a4a8a; }
+
+/* Match tags font to the rest of the sidebar */
+.side-bar .tags a.tag {
+  font-size: 0.8rem;
+  color: #4068B8;
+  text-decoration: none;
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────── */
+
+@media only screen and (max-width: 700px) {
+  /* Undo the nav override so mobile.css takes back control */
+  .nav {
+    max-width: none;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stream-col {
+    padding: 1rem 0rem;
+  }
+
+  .side-col {
+    padding: 1.25rem 1rem 1.5rem;
+    border-top: 1px solid #e8e8e4;
+  }
+
+  .stream-feature-title {
+    font-size: 1.6rem;
+  }
+
+  .stream-feature-img {
+    float: none;
+    width: 100%;
+    height: 180px;
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .sidebar-list a {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .home-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .blogroll {
+    columns: 2;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .stream-feature-title {
+    font-size: 1.4rem;
+  }
+  .stream-feature, .stream-post {
+    padding: 0;
+  }
+  .stream-thread-dot {
+    display: none;
+  }
+  .blogroll {
+    columns: 1;
+  }
 }

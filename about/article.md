@@ -24,7 +24,7 @@ I built this site in 2012 to teach myself programming and I've been blogging her
 
 ## Contact Me
 
-Shoot me an email at [brian@brianschrader.com][email], but I might take a while to respond. You can ping me on [Mastodon][mast], though [Twitter][tw] works too. You can also send [WebMentions][webm] to any of my blog posts if that's more your thing.
+Shoot me an email at [brian@brianschrader.com][email], but I might take a while to respond. You can ping me on [Mastodon][mast]. You can also send [WebMentions][webm] to any of my blog posts if that's more your thing.
 
 [email]: mailto:brian@brianschrader.com
 [tw]: http://twitter.com/sonicrocketman

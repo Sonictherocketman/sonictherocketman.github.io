@@ -1,11 +1,12 @@
 slug: the-mysterious-potential-of-the-plane
 published: Fri, 13 Dec 2024 at 02:46 AM
-updated: Fri, 06 Feb 2026 00:29:28 
+updated: Thu, 05 Mar 2026 19:45:32 
 title: The Mysterious Potential of the Plane
 author: Brian Schrader
 tags:mathematics, math, essay
 status: publish
 hero: /images/blog/grid-quadratic.png
+thread: math-and-physics
 
 In recent years I've embarked on a sort of journey of rediscovery with respect to mathematics. As a kid I was *somewhat* good at math and I spent my college years doing lots of it&mdash;to the point where I grew to really dislike it. But even in those times, mathematics&mdash;while becoming increasingly difficult&mdash;always seemed like it was trying to tell me something. These days, it fascinates me.
 

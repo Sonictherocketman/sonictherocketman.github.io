@@ -1,6 +1,6 @@
 slug: python-like-context-managers-in-swift
 published: Wed, 25 May 2016 at 03:25 PM
-updated: Fri, 06 Feb 2026 00:29:28 
+updated: Thu, 05 Mar 2026 19:45:32 
 title: Python-like Context Managers in Swift
 author: Brian Schrader
 status: publish

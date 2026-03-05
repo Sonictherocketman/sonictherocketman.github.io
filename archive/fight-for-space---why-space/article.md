@@ -1,6 +1,6 @@
 slug: fight-for-space---why-space
 published: Thu, 15 Jan 2015 at 05:53 AM
-updated: Fri, 06 Feb 2026 00:29:27 
+updated: Thu, 05 Mar 2026 19:45:32 
 title: Fight for Space - Why Space? 
 author: Brian Schrader
 tags: fight for space, spaceup

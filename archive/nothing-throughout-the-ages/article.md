@@ -1,11 +1,12 @@
 slug: nothing-throughout-the-ages
 published: Wed, 13 Nov 2024 at 04:23 AM
-updated: Thu, 24 Jul 2025 22:06:42
+updated: Thu, 05 Mar 2026 19:45:31 
 title: Nothing Throughout the Ages
 author: Brian Schrader
 tags:history,knowledge,essay
 status: publish
 hero: /images/blog/corpuscle.jpg
+thread: history-of-science
 
 I'm fascinated by the systems by which we, as humans, make and communicate knowledge. From the very beginning of our species we've done our best to devise ways to understand the natural world and our place in it, and we've used a huge number of different systems of thought to organize, piece together, and build a more complete picture of the world for ourselves.
 
@@ -51,6 +52,7 @@ Today the concept of Nothing underpins our entire understanding of numbers. Inde
 
 Nothing, it turns out, is Everything.
 
+{% raw %}
 <div style="border:1px solid #ccc; border-radius: 3px; padding: 0.5rem;">
 <pre><code>Consider constructing ℕ using the Empty Set
 (i.e. a set containing nothing):
@@ -59,6 +61,7 @@ Nothing, it turns out, is Everything.
   2 = {{{}}}
   ...
 </code></pre></div>
+{% endraw %}
 
 
 ### Religious Nothing

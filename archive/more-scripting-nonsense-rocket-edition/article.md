@@ -1,10 +1,11 @@
 slug: more-scripting-nonsense-rocket-edition
 published: Fri, 17 Mar 2023 at 11:15 PM
-updated: Fri, 06 Feb 2026 00:29:28 
+updated: Thu, 05 Mar 2026 19:45:33 
 title: More Scripting Nonsense: Rocket Edition
 author: Brian Schrader
 tags: programming,fun
 status: publish
+thread: math-and-physics
 
 I was browsing [my Github Gists][1] the other day, as you do, and I came across my first one published back in 2015: [Rocket.py][2]. This script was one part of a rocket trajectory simulator I built for a class in college. Now I don't remember much about that project, but I do remember that the simulation never actually worked&mdash;or rather that it never worked *properly*.
 

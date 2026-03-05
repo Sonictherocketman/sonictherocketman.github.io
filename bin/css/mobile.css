@@ -18,6 +18,14 @@
     text-align:left;
   }
 
+  .stream-col {
+    width: unset;
+  }
+
+  .side-col {
+    width: unset;
+  }
+
   .article-content p, .article-content ul {
     font-size: 15pt;
     line-height: 1.65;

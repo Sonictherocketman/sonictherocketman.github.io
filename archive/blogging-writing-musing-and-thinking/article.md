@@ -1,12 +1,13 @@
 slug: blogging-writing-musing-and-thinking
 published: Wed, 14 Jan 2026 at 06:08 PM
-updated: Fri, 06 Feb 2026 00:29:27 
+updated: Thu, 05 Mar 2026 19:45:32 
 title: Blogging, Writing, Musing, and Thinking
 author: Brian Schrader
 tags:blogging,personal,writing,thought technology
 status: publish
 hero: /images/blog/notes.jpg
 re: https://www.joanwestenberg.com/the-case-for-blogging-in-the-ruins/
+thread: handwriting
 
 Yesterday I stumbled on this quote from a blog post by [JA Westenberg][joan]:
 

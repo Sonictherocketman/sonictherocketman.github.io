@@ -1,6 +1,6 @@
 slug: words-are-a-leaky-abstraction
 published: Mon, 16 Feb 2026 at 10:15 PM
-updated: Mon, 16 Feb 2026 22:15:43 
+updated: Thu, 05 Mar 2026 19:45:31 
 title: Words are a Leaky Abstraction
 author: Brian Schrader
 tags:philosophy,science,programming,essay

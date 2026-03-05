@@ -1,12 +1,13 @@
 slug: an-age-of-promethean-ambitions
 published: Tue, 03 Mar 2026 at 05:49 PM
-updated: Tue, 03 Mar 2026 17:49:22 
+updated: Thu, 05 Mar 2026 19:45:31 
 title: An Age of Promethean Ambitions
 author: Brian Schrader
 tags: history, essay, alchemy, science
 status: publish
 re: /archive/the-long-view-of-history/
 hero: /images/blog/gilgamesh.jpg
+thread: history-of-science
 
 In a [recent post][2], I wrote the following:
 

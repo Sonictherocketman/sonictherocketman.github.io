@@ -1,11 +1,12 @@
 slug: chemical-telescopes-and-the-process-of-science
 published: Wed, 15 Oct 2025 at 05:04 PM
-updated: Fri, 06 Feb 2026 00:29:29 
+updated: Thu, 05 Mar 2026 19:45:33 
 title: Chemical Telescopes and the Process of Science
 author: Brian Schrader
 tags:science,history,technology,essay
 status: publish
 hero: /images/blog/sennert-proceduere-desk.jpg
+thread: history-of-science
 
 In 1619, Daniel Sennert crouched over a low furnace in his cloistered laboratory at the University of Wittenberg. The air was still and stifling. Though the room was packed, no one said a word. Instead, the several dozen learned men who had crammed themselves into the small space stared at a little white crucible as Sennert removed it from the flames. He tipped out the contents and a delicate stream of molten silver ran from the crucible to collect in an earthenware bowl.
 

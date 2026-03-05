@@ -1,6 +1,6 @@
 slug: the-strangely-anthropic-form-of-natural-laws
 published: Wed, 10 Sep 2025 at 01:34 AM
-updated: Fri, 06 Feb 2026 00:29:29 
+updated: Thu, 05 Mar 2026 19:45:33 
 title: The Strangely Anthropic Form of Natural Laws
 author: Brian Schrader
 tags:philosophy

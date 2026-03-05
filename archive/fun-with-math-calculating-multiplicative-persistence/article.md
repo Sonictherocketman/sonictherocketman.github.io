@@ -1,10 +1,11 @@
 slug: fun-with-math-calculating-multiplicative-persistence
 published: Sun, 28 Aug 2022 at 11:27 PM
-updated: Fri, 06 Feb 2026 00:29:28 
+updated: Thu, 05 Mar 2026 19:45:33 
 title: Fun with Math: Calculating Multiplicative Persistence
 author: Brian Schrader
 tags: programming, tools, python, software
 status: publish
+thread: math-and-physics
 
 I mentioned recently that one of my Raspberry Pis is mounted under my desk [and tracking the weather][1], and I've written other times about the [other tasks][4] this helpful little assistant handles for me. Today I'd like to discuss yet *another* thing that little RPi does all day &mdash; something I've been pretty excited about for some time.
 
