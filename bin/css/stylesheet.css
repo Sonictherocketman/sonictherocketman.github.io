@@ -1120,6 +1120,10 @@ ol.pagefind-ui__results {
     padding: 1rem 0rem;
   }
 
+  .stream-thread-dot {
+    display: none !important;
+  }
+
   .side-col {
     padding: 1.25rem 1rem 1.5rem;
     border-top: 1px solid #e8e8e4;
