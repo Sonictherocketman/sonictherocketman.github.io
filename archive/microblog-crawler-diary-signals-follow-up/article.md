@@ -1,6 +1,6 @@
 slug: microblog-crawler-diary-signals-follow-up
 published: Tue, 31 Mar 2015 at 10:09 PM
-updated: Thu, 05 Mar 2026 20:10:08 
+updated: Thu, 05 Mar 2026 20:11:58 
 title: Microblog Crawler Diary: Signals Follow Up
 author: Brian Schrader
 tags: microblog crawler

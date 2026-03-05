@@ -1,6 +1,6 @@
 slug: swift-dynamism
 published: Mon, 30 May 2016 at 08:53 PM
-updated: Thu, 05 Mar 2026 20:10:07 
+updated: Thu, 05 Mar 2026 20:11:57 
 title: Swift Dynamism
 author: Brian Schrader
 tags: swift, programming

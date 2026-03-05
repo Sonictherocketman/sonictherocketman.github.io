@@ -1,6 +1,6 @@
 slug: the-internet-wont-forget-climate-change
 published: Sat, 28 Jan 2017 at 05:09 PM
-updated: Thu, 05 Mar 2026 20:10:07 
+updated: Thu, 05 Mar 2026 20:11:58 
 title: The Internet Won't Forget Climate Change
 author: Brian Schrader
 tags: politics, trump, open data, climate change

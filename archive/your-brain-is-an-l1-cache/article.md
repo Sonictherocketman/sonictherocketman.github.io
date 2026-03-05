@@ -1,6 +1,6 @@
 slug: your-brain-is-an-l1-cache
 published: Fri, 05 Sep 2025 at 04:30 PM
-updated: Thu, 05 Mar 2026 20:10:09 
+updated: Thu, 05 Mar 2026 20:11:59 
 title: Your Brain is an L1 Cache
 author: Brian Schrader
 tags:philosophy

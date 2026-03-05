@@ -1,6 +1,6 @@
 slug: automate-the-boring-stuff-with-chatgpt
 published: Thu, 16 Feb 2023 at 10:49 PM
-updated: Thu, 05 Mar 2026 20:10:09 
+updated: Thu, 05 Mar 2026 20:12:00 
 title: Automate the Boring Stuff with ChatGPT
 author: Brian Schrader
 tags: programming,software
