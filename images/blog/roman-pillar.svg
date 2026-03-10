@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 180 360" width="180" height="360">
+  <defs>
+
+    <!-- Side-lighting on shaft: darker at edges, lighter in center -->
+    <linearGradient id="shaft-light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#0f3460" stop-opacity="0.92"/>
+      <stop offset="38%"  stop-color="#1a4a8a" stop-opacity="0.40"/>
+      <stop offset="62%"  stop-color="#1a4a8a" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#0f3460" stop-opacity="0.92"/>
+    </linearGradient>
+
+    <!-- Slightly different fill for capital / base blocks -->
+    <linearGradient id="block-light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#0f3460" stop-opacity="0.95"/>
+      <stop offset="50%"  stop-color="#163e70" stop-opacity="0.70"/>
+      <stop offset="100%" stop-color="#0f3460" stop-opacity="0.95"/>
+    </linearGradient>
+
+  </defs>
+
+
+  <!-- ════════════════════════════════════
+       CAPITAL (Doric order)
+       ════════════════════════════════════ -->
+
+  <!-- Abacus — flat square slab at very top -->
+  <rect x="22" y="14" width="136" height="16"
+        fill="url(#block-light)" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Echinus — bell-shaped, widens from shaft to abacus -->
+  <path d="M 30,30 L 48,58 L 132,58 L 150,30 Z"
+        fill="url(#block-light)" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- ════════════════════════════════════
+       SHAFT (with entasis — gentle outward bulge)
+       Top:    x 48–132  (width 84)  y=59
+       Bottom: x 36–144  (width 108) y=298
+       ════════════════════════════════════ -->
+
+  <!-- Shaft body -->
+  <path d="M 48,59
+           C 45,150 36,230 36,298
+           L 144,298
+           C 144,230 135,150 132,59
+           Z"
+        fill="url(#shaft-light)" stroke="#e0e0e0" stroke-width="1.25"/>
+
+  <!-- Fluting — 7 vertical channels, converging toward top -->
+  <line x1="56"  y1="60" x2="46"  y2="296" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="66"  y1="60" x2="58"  y2="296" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="76"  y1="60" x2="70"  y2="296" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="90"  y1="59" x2="90"  y2="296" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="104" y1="60" x2="110" y2="296" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="114" y1="60" x2="122" y2="296" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.22"/>
+  <line x1="124" y1="60" x2="134" y2="296" stroke="#e0e0e0" stroke-width="0.6" stroke-opacity="0.22"/>
+
+
+  <!-- ════════════════════════════════════
+       BASE (Attic base: two torus + scotia)
+       ════════════════════════════════════ -->
+
+  <!-- Upper torus — convex band, slightly wider than shaft -->
+  <path d="M 36,298 L 26,314 L 154,314 L 144,298 Z"
+        fill="url(#block-light)" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Scotia — concave recess between tori -->
+  <path d="M 26,314 C 22,314 20,320 20,323 L 160,323 C 160,320 158,314 154,314 Z"
+        fill="#0a1e3a" stroke="#e0e0e0" stroke-width="0.75"/>
+  <!-- Shadow line in the hollow of the scotia -->
+  <path d="M 24,317 C 22,318 21,321 21,323"
+        fill="none" stroke="#e0e0e0" stroke-width="0.4" stroke-opacity="0.3"/>
+
+  <!-- Lower torus — slightly wider convex band -->
+  <path d="M 20,323 L 14,332 L 166,332 L 160,323 Z"
+        fill="url(#block-light)" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Plinth — wide flat base block -->
+  <rect x="10" y="332" width="160" height="18"
+        fill="url(#block-light)" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- Plinth bottom shadow line -->
+  <line x1="10" y1="350" x2="170" y2="350"
+        stroke="#e0e0e0" stroke-width="0.5" stroke-opacity="0.4"/>
+
+
+  <!-- ════════════════════════════════════
+       CRACKS
+       ════════════════════════════════════ -->
+
+  <!-- Major diagonal crack — upper-left quadrant of shaft -->
+  <path d="M 68,108 L 75,121 L 65,132 L 77,146 L 71,160 L 78,170"
+        fill="none" stroke="#222" stroke-width="1.75"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Branch off major crack -->
+  <path d="M 75,121 L 91,129 L 98,124"
+        fill="none" stroke="#222" stroke-width="1.1"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Hairline split from branch tip -->
+  <path d="M 91,129 L 95,136"
+        fill="none" stroke="#222" stroke-width="0.6"
+        stroke-linecap="round" stroke-opacity="0.65"/>
+
+  <!-- Horizontal crack — lower third of shaft -->
+  <path d="M 50,245 L 62,242 L 76,247 L 90,243 L 104,247 L 116,244 L 127,247"
+        fill="none" stroke="#222" stroke-width="1.4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Short vertical branch from horizontal crack -->
+  <path d="M 76,247 L 79,260 L 74,270"
+        fill="none" stroke="#222" stroke-width="0.9"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Small chip crack — upper-right of shaft -->
+  <path d="M 112,88 L 119,97 L 111,105 L 120,112"
+        fill="none" stroke="#222" stroke-width="1.0"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Hairline crack — on the upper torus base -->
+  <path d="M 48,304 L 56,302 L 63,306 L 70,303"
+        fill="none" stroke="#222" stroke-width="0.8"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Plinth crack -->
+  <path d="M 38,338 L 50,335 L 62,340"
+        fill="none" stroke="#222" stroke-width="0.75"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>
