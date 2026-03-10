@@ -1,5 +1,125 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Thu, 05 Mar 2026 21:26:48 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/an-age-of-promethean-ambitions</guid><pubDate>Tue, 03 Mar 2026 17:49:00 -0800</pubDate><category>history</category><category>essay</category><category>alchemy</category><category>science</category><title>An Age of Promethean Ambitions</title><link>https://brianschrader.com/archive/an-age-of-promethean-ambitions/</link><description><![CDATA[<p>In a <a href="/archive/the-long-view-of-history/">recent post</a>, I wrote the following:</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Tue, 10 Mar 2026 13:40:48 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/load-bearing-walls</guid><pubDate>Tue, 10 Mar 2026 13:40:00 -0800</pubDate><category>essay</category><category>programming</category><category>politics</category><category>software</category><category>ai</category><category>cautionary-tale</category><title>Load-Bearing Walls</title><link>https://brianschrader.com/archive/load-bearing-walls/</link><description><![CDATA[<p>We like to believe that we can predict the future. We believe it because it's true, at least in part. Physical systems obey known physical laws and so even fairly complex systems can be understood and predicted with stunning accuracy. Every branch of science makes predictions. Planes fly, servers compute, and dams generate power all through the strength we have to predict the future, if only in the short term. In our human world, we see pollsters predict elections with better-than-random odds, doctors performing research and intervention at global scales, and even disease propagating at predictable rates.</p>
+<p>It's stunning just how good we are at this in the modern world. We're <em>so good</em> at predicting the future that <a href="https://www.youtube.com/watch?v=A5w-dEgIU1M">much of the financial world</a> relies on it as a hedge against the unforeseen. Short term catastrophe is easier to bear when you can predict that good times can and will return.</p>
+<p>Yet there is, of course, much we cannot predict and two main reasons why.</p>
+<h2>The Chaos Limit</h2>
+<script>
+window.CONFIG = {
+  width: 260,
+  height: 340,
+  bobRadius: 4,
+  g: 9.81 / 2,
+  l1: 3,    // arm 1 length  (sim units)
+  l2: 2.0,    // arm 2 length  (sim units)
+  theta1: Math.PI * 0.2,   // initial angle of arm 1 (radians from vertical)
+  theta2: -Math.PI * 0.1,   // initial angle of arm 2
+}
+</script>
+<p><div
+  id="double-pendulum-container"
+  style="text-align:center; width: 260px;"
+  class="image-right"
+>
+  <canvas id="double-pendulum-canvas"></canvas>
+  <noscript>
+    <img src="/images/blog/double-pendulum.jpg">
+  </noscript>
+</div>
+</p>
+<p>Even the simplest systems can become unpredictable with time because, while the past may indeed predict the future, the <em>approximate</em> past does not. This is chaos. Measurements with real instruments in the real world are always imprecise and so lead to unremovable error. These errors stack up over time and eventually reduce the usefulness of our models.</p>
+<p>Famously, the <a href="https://www.youtube.com/watch?v=fDek6cYijxI">double pendulum</a> illustrates this phenomenon well. A simple pendulum is completely understood, yet a double pendulum is a chaotic system where even with knowledge of its starting position to <em>ten decimal places</em>, the best models will fail in the end.</p>
+<p>Still, while chaos may ultimately limit our ability to predict the future in the long term, it leaves quite a lot of wiggle room.<sup>1</sup> No, there's another, much deeper, issue we need to understand.</p>
+<p>{% include 'newsletter-callout.html' %}</p>
+<h2>A Connected World</h2>
+<p>Consider a mass on a spring.<sup>2</sup> There are known equations for predicting the behavior of a mass (like a smooth block) sliding on a table. Such systems are well studied and the resulting equations of motion depend on only a few variables: the slope of the table, its roughness, the spring constant, etc..</p>
+<div class="image-right" style="width: 300px;">
+  <img src="/images/blog/Horizontal-mass-on-spring.svg">
+</div>
+
+<p>However, this mathematical model cannot tell us what will <em>actually</em> happen to a mass on a spring like this because it has no way to account for what happens when the grad student knocks it over!<sup>3</sup> Such a variable isn't "in the model" as a Physicist might say.</p>
+<p>Of course, one can rightfully scoff at this example, but if, when we say we want to predict the future, we mean <em>fully</em> predict it, then our models leave a lot to be desired. Indeed, while chaos does limit our ability to model dynamical systems perfectly, systems often degrade due to external factors long before chaos sets in. Something outside the model fails first.</p>
+<h2>Bearing the Load of Life</h2>
+<p>A load-bearing wall is one that, if removed, will result in structural damage. Some walls are decorative and can be knocked down at will. Others cannot be easily removed because, aside from being a wall, they are helping to hold the roof up.</p>
+<p>It's important, when you're doing construction, to know which walls are load-bearing so that you don't accidentally knock your house down while trying to remodel a bathroom.</p>
+<p>There are lots of structures in the human world, some are decorative and others are structural. The color you paint your fence is unlikely to matter beyond aesthetics, but your family income is quite a powerful force in your life and your ability to get a new car is highly dependent on keeping a stable, well-paying job.</p>
+<p>As another example: let's say your friends decide to start a monthly board game night. The exact game you choose to play probably doesn't matter for your long-term friendship, however <em>the fact that you're playing a game together regularly</em> certainly does. Consider that for some people the game night might be a much needed break from family trouble or the stresses of work.  What's more, friendships decay without active maintenance. For the group as a whole, it might be the only thread holding you all together.</p>
+<p>In that way, <strong>the game night is load-bearing</strong> for the friendship.</p>
+<p>Immediately, we can see the truth that the game night isn't <em>just</em> a game night. It's a social outlet, a stress valve, a tether to the present and the past and deciding to skip, postpone, or cancel it has outsized consequences: abandoning a common circle, being left out of in-jokes, drifting apart.</p>
+<h2>The Hunt for Hidden Walls</h2>
+<p>It's not impossible to replace a load-bearing wall. It just takes effort. It takes <em>intent</em>. You have to brace the wall, cut out the old beam, and replace it with something just as strong.</p>
+<p>Everything must end, including game nights, but it's important to recognize what things in life may be load-bearing and what the load is that they might bear. Knowing that, you can be proactive&mdash;set up new things, new rituals and traditions&mdash;to bear the load that still very much exists even after game night is long gone.<sup>4</sup></p>
+<p>The trouble is of course, that we often don't notice load-bearing walls until they've already collapsed. Years after game night ends, we look back on it with longing, from a distance finally seeing clearly what we really had.</p>
+<p>What's more, unlike with house construction, a wall in life might have been built to be decorative and only become load-bearing over time. Perhaps you threw a party on a whim and then did so again the following year. Soon enough, it's a tradition. Friends look forward to it every year. You do too. However, as more and more people lean on that wall, it will either strengthen to bear the load or it will collapse. Eventually, our lives are constructed entirely of walls which were never built to carry the loads they have upon them, and it's when these walls collapse that their consequences reverberate farther than we might imagine.</p>
+<h2>Isolation and Community</h2>
+<p>I've been playing D&amp;D for over a decade and largely with the same group of friends. We'd been playing weekly for years in a sort of 3-on-1-off schedule. But years back some of our players got into 3D printing and that unleashed a lot of cool new options for our games. 3D figures need to be painted, and so a few of us started using that week off to get together, chat, and paint figures for a few hours. On one such night, the conversation turned to current events and to the increased isolation many of us feel in this modern digital world. Eventually one of us made a keen observation:</p>
+<blockquote>
+<p>What we're doing right now, it's basically a weekly church group.</p>
+</blockquote>
+<p>In that moment our shared and hidden load-bearing wall was clearly seen. This group wasn't for D&amp;D. Maybe it never really was.</p>
+<p><img class="image-center" src="/images/blog/dnd-fight.jpeg"></p>
+<center><small>Who could've suspected that <i>this</i> was load-bearing? Photo: mine</small></center>
+
+<p>What was clear was that D&amp;D was a place for us all to be, to relax, to maintain relationships. Even when we weren't even playing D&amp;D anymore, we were still getting together. It really never mattered why. A group of friends hanging out, spending time, and working toward a common goal were what <em>actually</em> mattered.</p>
+<h2>Society's Load-Bearing Walls</h2>
+<p>Aside from the specific religious tenets, a church group is a type of social gathering. It's a form of community, a place where people meet regularly for a common purpose: to break bread, talk, and help each other through the morass of daily life.</p>
+<p>Groups like our little D&amp;D group (or a real church group) take many forms: bowling leagues, swimming clubs, choirs, baseball teams. All of these are institutions built for a specific purpose but that are the backbone of collective civil society and it's these precise institutions that are, at a societal level in the modern world, going through a steep decline. It's not uncommon to see individuals today with few, if any, group ties beyond their own family and especially to a collective group effort.</p>
+<blockquote>
+<p>Something’s changed in the past few decades&hellip; In the 1990s, the sociologist Robert Putnam recognized that America’s social metabolism was slowing down. In the book Bowling Alone, he gathered reams of statistical evidence to prove that America’s penchant for starting and joining associations appeared to be in free fall. Book clubs and bowling leagues were going bust.<br />
+- Derek Thompson, <em><a href="https://www.theatlantic.com/ideas/archive/2024/02/america-decline-hanging-out/677451/">Why Americans Suddenly Stopped Hanging Out</a></em></p>
+</blockquote>
+<p>You might ask: why is it that a baseball club matters for society? And in some respects you're right to question. A baseball club doesn't matter in the grand scheme, but the baseball wasn't the actual purpose of the club. That was its stated goal, its intended purpose, but that club, that wall, it was load-bearing.</p>
+<p>Groups of families watched the games, intermingled with their neighbors, met new people, and organized events. Of course <em>something</em> could take its place (there's nothing special about baseball stands, after-mass doughnuts, or a D&amp;D group as forums for community cohesion) but without it, the whole system may begin to fall apart.</p>
+<script>
+window.P_CONFIG = {
+  W: 328,
+  H: 260,
+}
+</script>
+<p><div
+  id="proj-canvas-container"
+  style="text-align:center; width: 328px;"
+  class="image-right"
+>
+  <canvas id="proj-canvas"></canvas>
+  <center><small>There are so many dimensions to a problem that we try to ignore, but they're always there.</small><center>
+</div>
+</p>
+<p>So much of our society relies on assumptions we make about the world. These assumptions are what enable us to predict the future. We assume that, <a href="/archive/empirical-partial-derivatives/">given no change in extraneous events</a>, X cause will indeed lead to Y result, but this is never the case long-term.</p>
+<p>Examples of this abound: laws written for one context are applied to others even if they're a bad fit, institutions which spring up and thrive in one era calcify and die in a later one, entire governments arise, prosper, and fall when the underlying technologies they depend on change or evolve. These are the hidden assumptions that power our world and they're the ones we ignore in order to build simple models of the future.</p>
+<p>A mass on a spring slides back and forth on a smooth table according to our models because we exist in a world wherein it could be so. Tables have to be made by a company whose existence is protected by a stable government. They have to be smoothed, finished, and shipped to a lab wherein they can be connected to a well-manufactured, uniform spring and mass under the watchful eye of an educated scientist and their well-fed, attentive graduate student.</p>
+<p>The simplest experiments have hundreds of hidden variables, none of which are in the eventual model&mdash;and for good reason&mdash;but our extraordinary ability to predict the behavior of the world depends on hidden, load-bearing walls and it's when those walls, those assumptions, begin to fail and break down that our models and <a href="https://www.gutenberg.org/files/46333/46333-h/46333-h.htm#:~:text=Along%20with%20these%20three%20kinds%20of%20law%20goes%20a%20fourth,form%20in%20the%20end%20its%20immovable%20keystone">our societies go with them</a>.</p>
+<h2>The Current Dilemma(s)</h2>
+<p><img src="/images/blog/roman-pillar.svg" class="image-right" style="width: 150px;"></p>
+<p>When systems degrade it's often not because of their easily quantifiable benefits, but because of the weakening of their underlying load-bearing walls.</p>
+<blockquote>
+<p>“The current nation-state could not possibly exist in a world without the printing press,” Ball told me. “It couldn’t exist without the current telecommunications infrastructure. The nation-state is built dependent upon the macro-inventions of the era in which it was assembled. A.I. changes all of this in ways that are hard to describe and kind of abstract.”<br >
+I suspect they won’t remain abstract for long.<br />
+- Ezra Klein, <em><a href="https://www.nytimes.com/2026/03/08/opinion/ai-anthropic-claude-pentagon-hegseth-amodei.html">The Future We Feared Is Already Here</a></em></p>
+</blockquote>
+<p>The ongoing devolution and polarization of American Democracy has left our institutions fragile and crumbling, and the decline of American hegemony, upon which rests the foundation of the <a href="/archive/the-long-view-of-history/">post-war order</a>, means that the rest of the world feels the strain along with us.<sup>5</sup> Americans, broadly speaking, are divided and bitter and so far nothing seems to be able to pull us back from the brink.</p>
+<p>What's more the A.I. revolution is ongoing and it's upending our social fabric by further loosening the trust we have in the words and images we see online. As with any technological revolution, it has many upsides (otherwise we wouldn't be doing it) but it comes with downsides that are less easily quantifiable and certainly more foundational.</p>
+<p>As Ball notes, the printing press arguably enabled democratic experimentation in the early-modern period. Linda Colley expands on this topic <a href="https://history.princeton.edu/about/publications/gun-ship-and-pen-warfare-constitutions-and-making-modern-world">in her book</a>, <em>The Gun, the Ship, and the Pen</em> where she argues that writing and especially written constitutions (born in a new age of literacy and the Enlightenment) were critical technologies that allowed for the creation of modern <a href="https://www.hup.harvard.edu/books/9780674237681">liberal democracy</a>.<sup>6</sup></p>
+<p>Writing, literacy, truth, and trust in a shared reality are the hidden, and very much load-bearing, walls of the western democratic world order, and without them those institutions will struggle to bear the weight of this century's challenges.</p>
+<p><img src="/images/blog/gsp.jpg" class="image-right" style="width: 200px;"></p>
+<p>Though it's important to remember that not all load-bearing walls are good.</p>
+<p>Historians debate whether the existence of a rivalry between the ancient Romans and the Carthaginians was in some way load-bearing for the stability of the former's republican system. The defeat of Carthage at the end of the Punic Wars left Rome without a clear enemy abroad and so they found one at home. Systemic oppression has also historically been load-bearing for many societies. This, of course, does not mean that these walls should not be broken down, but it does mean that we need to explicitly identify and replace the good parts while purging the bad.</p>
+<p>What's more the feedback loops present in the real world sometimes mean that the roof collapses <a href="https://en.wikipedia.org/wiki/Comprehensive_Immigration_Reform_Act_of_2007">years after the fact</a>. By the time it does, the walls are long gone and it's too late to replace them. All we can do is live with the consequences while we work to dig ourselves out. Julius Caesar crossed the Rubicon in 49 B.C.E., nearly a century after the Punic Wars had ended.</p>
+<p>We'd do well to identify and fix what we can <em>before</em> the roof falls in. But to do that we need to know which walls are load-bearing and understand the loads they bear.</p>
+<h2>Remodeling is Hard</h2>
+<p>Anyone who's gone through an extensive remodel knows that the process, while it may be worth it in the end, is incredibly frustrating and <em>always</em> takes longer than you think. Replacing a load-bearing wall is an act that must be undertaken with intent.</p>
+<p>There is much in the world, and in ourselves, that relies on the foundational bulwark of these load-bearing walls and so we should work to be aware when we are working to tear them down and we should put in the work to build sturdy replacements.</p>
+<p>Personally, that might involve introspection about yourself, your motivations, and the foundational institutions we share as human beings in community with each other. As a society it might mean building up shared systems of trust and mutual accomplishment, systems where we can build toward something positive, together, and give us the opportunity to find a shared future in this world. It might also mean taking the time to appreciate a simple game night with friends for as long as it may last.</p>
+<div class="footnote">
+<sup>1</sup> For certain definitions of "long term".<br/>
+<sup>2</sup> As every physics professor ever has always suggested.<br />
+<sup>3</sup> To see how this happened to Robert Boyle during a 20 year long experiment(!) see <a href="https://archive.org/details/foundationsofnew0000dobb">The Foundations of Newton's Alchemy</a> (p 86).<br />
+<sup>4</sup> Traditions, no matter how silly, are usually load-bearing. Maybe those ways are trivial, but likely not.<br />
+<sup>5</sup> For all its many failings, the Post-War Order™ has been remarkably good at its original goal of preventing Great Powers from engaging in nuclear war. I do not want to be around when this load-bearing wall finally gives way.<br />
+<sup>6</sup> Liberal as in classical liberal (i.e. freedom, liberty). Not "left".
+</div>
+
+<script src="/other-projects/double-pendulum/pendulum.js"></script>
+<script src="/other-projects/proj-canvas/proj-canvas.js"></script>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/an-age-of-promethean-ambitions</guid><pubDate>Tue, 03 Mar 2026 17:49:00 -0800</pubDate><category>history</category><category>essay</category><category>alchemy</category><category>science</category><title>An Age of Promethean Ambitions</title><link>https://brianschrader.com/archive/an-age-of-promethean-ambitions/</link><description><![CDATA[<p>In a <a href="/archive/the-long-view-of-history/">recent post</a>, I wrote the following:</p>
 <blockquote>
 <p>[Without] the context of history, we're blind to the reality that we live in a world&hellip; deeply connected and familiar to the worlds of the past.</p>
 </blockquote>
@@ -329,11 +449,4 @@ of the current scholastic theories of mixture while also providing a convincing 
 <p>Pine.blog was developed in 2017 as a side project and continued to receive regular updates and even a native app (with a planned macOS app) in 2019. However, over time the situation with Pine.blog never improved to the point of achieving profitability or sustainability with its increasingly complex development. As well, over time my desire to build/maintain and the outlook for social media apps in general diminished and I didn't feel the fire burning in my heart to work on it any longer.</p>
 <p>The app had at one point a decent userbase, and one that, if the fire still burned bright, perhaps I would have continued to develop for, however that was not the case.</p>
 <p>I met a number of amazing people building this app and learned a ton about how the open web works both technically and socially.</p>
-<p>So long Pine.blog, it was fun while it lasted.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/spoken-audio-from-automator--netnewswire</guid><pubDate>Sat, 13 Sep 2025 01:33:00 -0800</pubDate><category>programming</category><category>fun</category><title>Spoken Audio from Automator &amp; NetNewsWire</title><link>https://brianschrader.com/archive/spoken-audio-from-automator--netnewswire/</link><description><![CDATA[<p>For those of you out there who still use RSS, and in particular NetNewsWire, I've put together a workflow in Automator that can take the currently selected article and generate an audio file of the spoken text.</p>
-<p>I never will wrap my head around AppleScript's peculiar syntax, but regardless I've made the workflow file available for download below.</p>
-<p><img alt="A screenshot of the service in use" src="/images/blog/nnw-automator.png" /></p>
-<p>I typically use this with <a href="https://overcast.fm">Overcast</a> which allows me to upload files to listen on the go.</p>
-<p>Like most people, I want to read more articles than I actually do and this is little script will hopefully help with that.</p>
-<p>It might take a while to complete, based on the length of the article, and it saves the final audio file to your desktop.</p>
-<p>(warning you do need FFMpeg installed)</p>
-<p><a href="/dropzone/Audio from Article.zip">⬇️ Download Here</a></p>]]></description></item></channel></rss>
+<p>So long Pine.blog, it was fun while it lasted.</p>]]></description></item></channel></rss>
