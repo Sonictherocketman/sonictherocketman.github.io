@@ -1,5 +1,5 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Tue, 10 Mar 2026 13:41:07 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/load-bearing-walls</guid><pubDate>Tue, 10 Mar 2026 13:40:00 -0800</pubDate><category>essay</category><category>programming</category><category>politics</category><category>software</category><category>ai</category><category>cautionary-tale</category><title>Load-Bearing Walls</title><link>https://brianschrader.com/archive/load-bearing-walls/</link><description><![CDATA[<p>We like to believe that we can predict the future. We believe it because it's true, at least in part. Physical systems obey known physical laws and so even fairly complex systems can be understood and predicted with stunning accuracy. Every branch of science makes predictions. Planes fly, servers compute, and dams generate power all through the strength we have to predict the future, if only in the short term. In our human world, we see pollsters predict elections with better-than-random odds, doctors performing research and intervention at global scales, and even disease propagating at predictable rates.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Tue, 10 Mar 2026 15:51:20 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/load-bearing-walls</guid><pubDate>Tue, 10 Mar 2026 13:40:00 -0800</pubDate><category>essay</category><category>programming</category><category>politics</category><category>software</category><category>ai</category><category>cautionary-tale</category><title>Load-Bearing Walls</title><link>https://brianschrader.com/archive/load-bearing-walls/</link><description><![CDATA[<p>We like to believe that we can predict the future. We believe it because it's true, at least in part. Physical systems obey known physical laws and so even fairly complex systems can be understood and predicted with stunning accuracy. Every branch of science makes predictions. Planes fly, servers compute, and dams generate power all through the strength we have to predict the future, if only in the short term. In our human world, we see pollsters predict elections with better-than-random odds, doctors performing research and intervention at global scales, and even disease propagating at predictable rates.</p>
 <p>It's stunning just how good we are at this in the modern world. We're <em>so good</em> at predicting the future that <a href="https://www.youtube.com/watch?v=A5w-dEgIU1M">much of the financial world</a> relies on it as a hedge against the unforeseen. Short term catastrophe is easier to bear when you can predict that good times can and will return.</p>
 <p>Yet there is, of course, much we cannot predict and two main reasons why.</p>
 <h2>The Chaos Limit</h2>
@@ -29,7 +29,21 @@ window.CONFIG = {
 <p>Even the simplest systems can become unpredictable with time because, while the past may indeed predict the future, the <em>approximate</em> past does not. This is chaos. Measurements with real instruments in the real world are always imprecise and so lead to unremovable error. These errors stack up over time and eventually reduce the usefulness of our models.</p>
 <p>Famously, the <a href="https://www.youtube.com/watch?v=fDek6cYijxI">double pendulum</a> illustrates this phenomenon well. A simple pendulum is completely understood, yet a double pendulum is a chaotic system where even with knowledge of its starting position to <em>ten decimal places</em>, the best models will fail in the end.</p>
 <p>Still, while chaos may ultimately limit our ability to predict the future in the long term, it leaves quite a lot of wiggle room.<sup>1</sup> No, there's another, much deeper, issue we need to understand.</p>
-<p>{% include 'newsletter-callout.html' %}</p>
+<p><div class="midroll newsletter-callout">
+  <div class="callout text-center">
+    <div>
+      Never miss a post!
+    </div>
+    <a
+      href="https://sendfox.com/brianschrader/"
+      title="Subscribe to the newsletter"
+      class="subscribe"
+      target="_blank"
+    >
+      ✉️&nbsp;Subscribe to the Newsletter!
+    </a>
+  </div>
+</div></p>
 <h2>A Connected World</h2>
 <p>Consider a mass on a spring.<sup>2</sup> There are known equations for predicting the behavior of a mass (like a smooth block) sliding on a table. Such systems are well studied and the resulting equations of motion depend on only a few variables: the slope of the table, its roughness, the spring constant, etc..</p>
 <div class="image-right" style="width: 300px;">
