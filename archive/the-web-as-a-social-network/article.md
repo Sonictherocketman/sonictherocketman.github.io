@@ -1,6 +1,6 @@
 slug: the-web-as-a-social-network
 published: Fri, 02 Feb 2018 at 12:12 PM
-updated: Thu, 05 Mar 2026 21:24:10 
+updated: Wed, 11 Mar 2026 21:40:58 
 title: The Web as a Social Network
 author: Brian Schrader
 tags: open web, social networking

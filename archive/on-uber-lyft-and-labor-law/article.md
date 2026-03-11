@@ -1,6 +1,6 @@
 slug: on-uber-lyft-and-labor-law
 published: Thu, 20 Aug 2020 at 06:34 PM
-updated: Thu, 05 Mar 2026 21:24:10 
+updated: Wed, 11 Mar 2026 21:40:59 
 title: On Uber, Lyft, and Labor Law
 author: Brian Schrader
 tags: uber, lyft, ab5, labor law, politics, essay

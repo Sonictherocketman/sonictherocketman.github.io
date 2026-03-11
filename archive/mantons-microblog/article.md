@@ -1,6 +1,6 @@
 slug: mantons-microblog
 published: Mon, 09 Jan 2017 at 04:57 PM
-updated: Thu, 05 Mar 2026 21:24:10 
+updated: Wed, 11 Mar 2026 21:40:59 
 title: Manton's Micro.blog
 author: Brian Schrader
 status: publish
