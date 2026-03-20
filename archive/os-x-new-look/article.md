@@ -1,6 +1,6 @@
 slug: os-x-new-look
 published: Mon, 21 Apr 2014 at 09:23 PM
-updated: Wed, 11 Mar 2026 21:40:56 
+updated: Fri, 20 Mar 2026 22:03:27 
 title: OS X's New Look
 author: Brian Schrader	
 tags: mavericks, OS X, iOS 7

@@ -1,6 +1,6 @@
 slug: empirical-partial-derivatives
 published: Thu, 23 Oct 2025 at 05:51 PM
-updated: Wed, 11 Mar 2026 21:40:57 
+updated: Fri, 20 Mar 2026 22:03:27 
 title: Empirical Partial Derivatives
 author: Brian Schrader
 tags: mathematics, science, philosophy, essay

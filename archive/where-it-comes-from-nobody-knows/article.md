@@ -1,6 +1,6 @@
 slug: where-it-comes-from-nobody-knows
 published: Wed, 08 Apr 2020 at 02:18 AM
-updated: Wed, 11 Mar 2026 21:40:58 
+updated: Fri, 20 Mar 2026 22:03:29 
 title: Where it Comes From, Nobody Knows
 author: Brian Schrader
 tags: software, london, time immemorial, ancient, software development, history

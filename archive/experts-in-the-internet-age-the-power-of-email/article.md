@@ -1,6 +1,6 @@
 slug: experts-in-the-internet-age-the-power-of-email
 published: Fri, 06 Jun 2025 at 08:48 PM
-updated: Wed, 11 Mar 2026 21:40:57 
+updated: Fri, 20 Mar 2026 22:03:28 
 title: Experts in the Internet Age: the Power of Email
 author: Brian Schrader
 tags:music,history, essay

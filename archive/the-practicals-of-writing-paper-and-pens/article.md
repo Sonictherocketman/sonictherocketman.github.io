@@ -1,6 +1,6 @@
 slug: the-practicals-of-writing-paper-and-pens
 published: Thu, 31 Jul 2025 at 07:07 PM
-updated: Wed, 11 Mar 2026 21:40:57 
+updated: Fri, 20 Mar 2026 22:03:28 
 title: The Practicals of Writing: Paper and Pens
 author: Brian Schrader
 tags: writing,personal

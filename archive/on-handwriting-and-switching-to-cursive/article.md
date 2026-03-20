@@ -1,6 +1,6 @@
 slug: on-handwriting-and-switching-to-cursive
 published: Sun, 25 Feb 2024 at 07:25 AM
-updated: Wed, 11 Mar 2026 21:40:56 
+updated: Fri, 20 Mar 2026 22:03:27 
 title: On Handwriting and Switching to Cursive
 author: Brian Schrader
 tags:writing,personal, essay

@@ -1,6 +1,6 @@
 slug: load-bearing-walls
 published: Tue, 10 Mar 2026 at 01:40 PM
-updated: Wed, 11 Mar 2026 21:40:56 
+updated: Fri, 20 Mar 2026 22:03:27 
 title: Load-Bearing Walls
 status: publish
 tags: essay, programming, politics, software, ai, cautionary-tale

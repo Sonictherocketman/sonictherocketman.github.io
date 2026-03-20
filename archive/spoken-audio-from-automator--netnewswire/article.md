@@ -1,6 +1,6 @@
 slug: spoken-audio-from-automator--netnewswire
 published: Sat, 13 Sep 2025 at 01:33 AM
-updated: Wed, 11 Mar 2026 21:40:59 
+updated: Fri, 20 Mar 2026 22:03:30 
 title: Spoken Audio from Automator & NetNewsWire
 author: Brian Schrader
 tags:programming,fun
