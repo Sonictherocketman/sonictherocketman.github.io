@@ -1144,6 +1144,11 @@ ol.pagefind-ui__results {
     display: none !important;
   }
 
+  .stream-post.thread-continues::after,
+  .stream-feature.thread-continues::after {
+    display: none;
+  }
+
   .side-col {
     padding: 1.25rem 1rem 1.5rem;
     border-top: 1px solid #e8e8e4;
@@ -1186,6 +1191,12 @@ ol.pagefind-ui__results {
   .stream-thread-dot {
     display: none !important;
   }
+
+  .stream-post.thread-continues::after,
+  .stream-feature.thread-continues::after {
+    display: none;
+  }
+
   .blogroll {
     columns: 1;
   }
