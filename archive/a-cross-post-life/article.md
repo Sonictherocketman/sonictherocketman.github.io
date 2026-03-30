@@ -1,6 +1,6 @@
 slug: a-cross-post-life
 published: Fri, 10 Mar 2023 at 03:47 AM
-updated: Fri, 20 Mar 2026 22:03:26 
+updated: Mon, 30 Mar 2026 16:19:40 
 title: A Cross Post Life
 author: Brian Schrader
 tags:software,programming

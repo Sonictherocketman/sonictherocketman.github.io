@@ -1,6 +1,6 @@
 slug: building-bots-for-fun-and8230
 published: Sat, 05 Aug 2023 at 09:41 PM
-updated: Fri, 20 Mar 2026 22:03:27 
+updated: Mon, 30 Mar 2026 16:19:40 
 title: Building Bots for Fun and&#8230;
 author: Brian Schrader
 tags: mastodon,programming,fun

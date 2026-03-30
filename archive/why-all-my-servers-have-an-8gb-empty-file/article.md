@@ -1,6 +1,6 @@
 slug: why-all-my-servers-have-an-8gb-empty-file
 published: Thu, 25 Mar 2021 at 06:39 PM
-updated: Fri, 20 Mar 2026 22:03:28 
+updated: Mon, 30 Mar 2026 16:19:42 
 title: Why All My Servers Have an 8GB Empty File
 author: Brian Schrader
 tags: marco, software development, web dev

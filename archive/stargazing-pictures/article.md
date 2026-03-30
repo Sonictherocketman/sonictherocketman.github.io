@@ -1,6 +1,6 @@
 slug: stargazing-pictures
 published: Sun, 04 Sep 2022 at 05:21 PM
-updated: Fri, 20 Mar 2026 22:03:28 
+updated: Mon, 30 Mar 2026 16:19:42 
 title: Stargazing Pictures
 author: Brian Schrader
 tags: photography,space

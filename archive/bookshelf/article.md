@@ -1,6 +1,6 @@
 slug: bookshelf
 published: Fri, 10 Jul 2020 at 07:37 PM
-updated: Fri, 20 Mar 2026 22:03:28 
+updated: Mon, 30 Mar 2026 16:19:41 
 title: Book Recommendations
 author: Brian Schrader
 tags: book recommendations, recommendations, knowledge

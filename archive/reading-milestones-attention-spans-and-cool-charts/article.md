@@ -1,6 +1,6 @@
 slug: reading-milestones-attention-spans-and-cool-charts
 published: Mon, 24 Oct 2022 at 03:46 AM
-updated: Fri, 20 Mar 2026 22:03:28 
+updated: Mon, 30 Mar 2026 16:19:41 
 title: Reading Milestones, Attention Spans, and Cool Charts
 author: Brian Schrader
 tags: productivity,apps

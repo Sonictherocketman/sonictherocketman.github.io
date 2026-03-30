@@ -1,6 +1,6 @@
 slug: backblaze-hard-drive-reliability-report
 published: Thu, 02 Oct 2014 at 02:41 AM
-updated: Fri, 20 Mar 2026 22:03:29 
+updated: Mon, 30 Mar 2026 16:19:43 
 title: Backblaze Hard Drive Reliability Report
 author: Brian Schrader
 tags: backblaze

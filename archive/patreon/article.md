@@ -1,6 +1,6 @@
 slug: patreon
 published: Tue, 31 Mar 2015 at 10:31 PM
-updated: Fri, 20 Mar 2026 22:03:29 
+updated: Mon, 30 Mar 2026 16:19:42 
 title: Patreon
 author: Brian Schrader
 tags: patreon

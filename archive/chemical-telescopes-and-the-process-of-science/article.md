@@ -1,6 +1,6 @@
 slug: chemical-telescopes-and-the-process-of-science
 published: Wed, 15 Oct 2025 at 05:04 PM
-updated: Fri, 20 Mar 2026 22:03:30 
+updated: Mon, 30 Mar 2026 16:19:43 
 title: Chemical Telescopes and the Process of Science
 author: Brian Schrader
 tags:science,history,technology,essay

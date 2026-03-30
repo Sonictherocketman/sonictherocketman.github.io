@@ -1,6 +1,6 @@
 slug: dont-ban-infinite-scrolling-license-engineers-instead
 published: Wed, 31 Jul 2019 at 05:46 PM
-updated: Fri, 20 Mar 2026 22:03:30 
+updated: Mon, 30 Mar 2026 16:19:44 
 title: Don't Ban Infinite Scrolling, License Engineers Instead
 author: Brian Schrader
 tags: software engineering, ethics, legal, essay

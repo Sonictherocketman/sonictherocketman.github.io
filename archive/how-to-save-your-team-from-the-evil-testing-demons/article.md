@@ -1,6 +1,6 @@
 slug: how-to-save-your-team-from-the-evil-testing-demons
 published: Thu, 24 Sep 2015 at 09:54 AM
-updated: Fri, 20 Mar 2026 22:03:29 
+updated: Mon, 30 Mar 2026 16:19:43 
 title: How to save your team from the evil testing demons
 author: Brian Schrader
 tags: code, testing

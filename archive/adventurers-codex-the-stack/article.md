@@ -1,6 +1,6 @@
 slug: adventurers-codex-the-stack
 published: Thu, 06 Jul 2017 at 05:28 PM
-updated: Fri, 20 Mar 2026 22:03:29 
+updated: Mon, 30 Mar 2026 16:19:43 
 title: Adventurer's Codex: The Stack
 status: publish
 author: Brian Schrader

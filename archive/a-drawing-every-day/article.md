@@ -1,6 +1,6 @@
 slug: a-drawing-every-day
 published: Sat, 19 Nov 2022 at 09:17 PM
-updated: Fri, 20 Mar 2026 22:03:29 
+updated: Mon, 30 Mar 2026 16:19:42 
 title: A Drawing Every Day!
 author: Brian Schrader
 tags: fun,programming

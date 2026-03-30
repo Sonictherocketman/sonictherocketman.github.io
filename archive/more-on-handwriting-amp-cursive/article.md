@@ -1,6 +1,6 @@
 slug: more-on-handwriting-amp-cursive
 published: Thu, 07 Mar 2024 at 08:51 PM
-updated: Fri, 20 Mar 2026 22:03:30 
+updated: Mon, 30 Mar 2026 16:19:43 
 title: More on Handwriting &amp; Cursive
 author: Brian Schrader
 tags: writing, personal

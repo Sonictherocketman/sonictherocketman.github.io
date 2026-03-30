@@ -1,6 +1,6 @@
 slug: recommendations-echo-chambers-and-pineblog
 published: Sun, 04 Nov 2018 at 06:16 PM
-updated: Fri, 20 Mar 2026 22:03:29 
+updated: Mon, 30 Mar 2026 16:19:42 
 title: Recommendations, Echo Chambers, and Pine.blog
 author: Brian Schrader
 tags: pine.blog, blogging, problems with blogging

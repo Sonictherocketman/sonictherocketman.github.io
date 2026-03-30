@@ -1,6 +1,6 @@
 slug: california-bills-to-safeguard-privacy-from-the-federal-government-advance
 published: Thu, 02 Feb 2017 at 02:07 PM
-updated: Fri, 20 Mar 2026 22:03:27 
+updated: Mon, 30 Mar 2026 16:19:41 
 title: California Bills to Safeguard Privacy from the Federal Government Advance
 author: Brian Schrader
 tags: eff, trump, digital rights, nobannowall

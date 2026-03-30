@@ -1,6 +1,6 @@
 slug: site-transferred-email-is-next
 published: Tue, 14 Oct 2014 at 06:37 AM
-updated: Fri, 20 Mar 2026 22:03:27 
+updated: Mon, 30 Mar 2026 16:19:41 
 title: Site transferred. Email is next
 author: Brian Schrader
 status: publish
