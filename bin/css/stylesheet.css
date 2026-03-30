@@ -772,6 +772,17 @@ ol.pagefind-ui__results {
   background: #c8d4ef;
 }
 
+/* Same line when the feature post (item 1) continues into item 2 */
+.stream-feature.thread-continues::after {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  top: calc(0.72rem + 10px);
+  bottom: -2.4rem;
+  width: 1.5px;
+  background: #c8d4ef;
+}
+
 /* ── Stream footer ────────────────────────────────────────────────── */
 
 .stream-footer {
