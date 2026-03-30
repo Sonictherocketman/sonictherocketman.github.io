@@ -1,5 +1,5 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 30 Mar 2026 16:21:06 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/take-better-notes-by-hand</guid><pubDate>Mon, 30 Mar 2026 16:18:00 -0800</pubDate><category>personal</category><category>writing</category><title>Take Better Notes, By Hand</title><link>https://brianschrader.com/archive/take-better-notes-by-hand/</link><description><![CDATA[<p>Researching a topic is hard, because not only are you trying to puzzle together the causes and effects of a given problem or historical series of events, you're also looking out carefully for leads and new threads to pull. Falling down rabbit holes is common&mdash;and encouraged&mdash;but eventually you need to pull yourself back out and collect your thoughts. What's more, if you're reading books you don't own, you'll need some way to record the interesting bits to recall later.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 30 Mar 2026 18:04:56 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/take-better-notes-by-hand</guid><pubDate>Mon, 30 Mar 2026 16:18:00 -0800</pubDate><category>personal</category><category>writing</category><title>Take Better Notes, By Hand</title><link>https://brianschrader.com/archive/take-better-notes-by-hand/</link><description><![CDATA[<p>Researching a topic is hard, because not only are you trying to puzzle together the causes and effects of a given problem or historical series of events, you're also looking out carefully for leads and new threads to pull. Falling down rabbit holes is common&mdash;and encouraged&mdash;but eventually you need to pull yourself back out and collect your thoughts. What's more, if you're reading books you don't own, you'll need some way to record the interesting bits to recall later.</p>
 <p>Of course, there are a lot of different ways to take notes and organize your thoughts. I've settled on this four-part system, here organized <strong>from least important to most important</strong>:</p>
 <ol>
 <li><strong>Pinboard</strong>: for links to PDFs &amp; webpages + full-text search.</li>
@@ -17,6 +17,21 @@
 
 <p>While the first three options in that list might seem obvious or even a bit boring (and I'll admit that is partly by design) the last one is the one I use the most extensively and is by far the most useful. There is something about writing stuff by hand that not only helps me remember and recall the information, but that helps me better engage with the topic at hand. Writing in paper notebooks is less distracting than using digital tools, it can be done basically anywhere there's ambient light, and it comes along with a real-life progress bar that physically takes up space on a shelf.</p>
 <p>Of course, paper notebooks as a knowledge base, have significant problems too. We did have a computer revolution for a reason, but there are several ways to mitigate and remove those downsides with good, old-fashioned note-taking techniques.</p>
+<p><div class="midroll newsletter-callout">
+  <div class="callout text-center">
+    <div>
+      Never miss a post!
+    </div>
+    <a
+      href="https://sendfox.com/brianschrader/"
+      title="Subscribe to the newsletter"
+      class="subscribe"
+      target="_blank"
+    >
+      ✉️&nbsp;Subscribe to the Newsletter!
+    </a>
+  </div>
+</div></p>
 <h2>How to take Notes</h2>
 <div class="image-right" style="width:300px;">
   <img src="/images/blog/index-notes.jpg" alt="a picture of my notebooks and of the listed index at the front" style="max-width: 100%;">

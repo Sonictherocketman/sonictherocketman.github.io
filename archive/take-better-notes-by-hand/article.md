@@ -1,6 +1,6 @@
 slug: take-better-notes-by-hand
 published: Mon, 30 Mar 2026 at 04:18 PM
-updated: Mon, 30 Mar 2026 16:19:41 
+updated: Mon, 30 Mar 2026 18:04:35 
 title: Take Better Notes, By Hand
 author: Brian Schrader
 tags: personal, writing
@@ -30,6 +30,8 @@ Of course, there are a lot of different ways to take notes and organize your tho
 While the first three options in that list might seem obvious or even a bit boring (and I'll admit that is partly by design) the last one is the one I use the most extensively and is by far the most useful. There is something about writing stuff by hand that not only helps me remember and recall the information, but that helps me better engage with the topic at hand. Writing in paper notebooks is less distracting than using digital tools, it can be done basically anywhere there's ambient light, and it comes along with a real-life progress bar that physically takes up space on a shelf.
 
 Of course, paper notebooks as a knowledge base, have significant problems too. We did have a computer revolution for a reason, but there are several ways to mitigate and remove those downsides with good, old-fashioned note-taking techniques.
+
+{% include 'newsletter-callout.html' %}
 
 ## How to take Notes
 
