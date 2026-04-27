@@ -1,5 +1,72 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 13 Apr 2026 16:09:51 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/mailing-things-is-fun</guid><pubDate>Mon, 13 Apr 2026 16:06:00 -0800</pubDate><category>personal</category><category>essay</category><category>writing</category><title>Mailing things is Fun</title><link>https://brianschrader.com/archive/mailing-things-is-fun/</link><description><![CDATA[<p>Sometimes I can't tell if I'm discovering a cool new hobby, or just getting old. Regardless, today I come to you with a tale of a little endeavor of mine.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 27 Apr 2026 16:37:49 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/why-you-cant-write-that-book</guid><pubDate>Mon, 27 Apr 2026 16:37:00 -0800</pubDate><category>essay</category><title>Why You Can't Write That Book</title><link>https://brianschrader.com/archive/why-you-cant-write-that-book/</link><description><![CDATA[<blockquote>
+<p>I could do that, I just need more time.</p>
+</blockquote>
+<p>In life we are constantly wishing we had more of something: time, money, friends, energy, etc., and we develop plans to try and meet these goals. We alter our diets, our schedules, we start exercising or reading more. Often times these changes result in significant improvements to our lives. Yet, we never have the energy, the time, or the money that we want. Even when we do succeed in making changes, something else comes up and blocks further progress.</p>
+<div class="image-right" style="width: 300px;">
+  <img src="/images/blog/book-blink.gif" style="max-width: 100%;">
+  <center><small>The eternal curse.</small></center>
+</div>
+
+<p>Let's say you want to write a book. You change your schedule to allow for dedicated writing time. However during that time, you're unmotivated. You diet and exercise and read interesting books, trying to kindle the enthusiasm you know you have, but now you have no energy left to write. You have the time, but only to spend staring at a blank page.</p>
+<p>Life is a constant balance of particular factors and it takes considerable skill to strike any balance at all for any length of time.</p>
+<p>Permit me, if you will, to remind you of your high-school Chemistry class. You probably learned about the concept of a limiting reagent.</p>
+<blockquote>
+<p>The limiting reagent (or limiting reactant or limiting agent) in a chemical reaction is a reactant that is totally consumed when the chemical reaction is completed.<br >
+- <a href="https://en.wikipedia.org/wiki/Limiting_reagent">Wikipedia</a></p>
+</blockquote>
+<p>Let's say you have a reaction between two compounds (for simplicity let's call them A and B). It takes 2 units of A + 3 units of B to make 1 unit of C.</p>
+<center>2A + 3B = 1C</center>
+
+<p>Now let's say you have 10lbs. of A and 12lbs. of B. How much C can you make and what ingredient will you run out of first? That ingredient is your limiting reagent (answer: it's B).</p>
+<p>However, this formulation assumes that the amounts of A and B are constant over time. For example, let's say that we know that we need more of B and want to increase the amount of it we have. We go to the store and get 20lbs. of it! However we now find that, flush with one ingredient, we quickly run out of another. We get less of C than we planned.</p>
+<p>Perhaps a cooking example would have been better here (cups of flour vs number of eggs), but I digress.</p>
+<p><div class="midroll newsletter-callout">
+  <div class="callout text-center">
+    <div id="prompt">
+      <noscript>
+        Enjoying this post?
+      </noscript>
+    </div>
+    <a
+      href="https://sendfox.com/brianschrader/"
+      title="Subscribe to the newsletter"
+      class="subscribe"
+      target="_blank"
+    >
+      ✉️&nbsp;Subscribe to the Newsletter!
+    </a>
+  </div>
+</div>
+<script>
+const prompts = [
+  'Enjoying this post?',
+  'Like what you see?',
+  'Cough cough...',
+  'Posts like this, in your inbox!',
+  'Consider subscribing!',
+  'Support this blog!',
+  'Really appreciate it if you...'
+];
+const el = document.getElementById('prompt');
+el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+</script></p>
+<h2>Limits Abound</h2>
+<p>We see examples of this phenomenon everywhere in our society and lives. For a completely different example, consider the current phenomenon of AI coding agents on the productivity of software companies. Writing code used to be slow, now it is significantly faster. However, humans still need to understand, design, and approve that code. A 10x speed-up in the writing of code has not translated to a 10x speed-up in productivity overall because something else in the pipeline is too slow to keep up with this new glut of AI-generated code. We've found a limiting reagent: system design and code approval.</p>
+<p>The Economist <a href="https://en.wikiquote.org/wiki/John_Maynard_Keynes#:~:text=Anything%20we%20can%20actually%20do%20we%20can%20afford.">John Maynard-Keynes once said</a>, "We can afford whatever we can do." By this he meant that if we want to fund the building of more schools we can, assuming we have enough construction workers, lumber, etc. I've often heard of this quote being used to critique plans for single-payer healthcare in America. We can certainly afford to offer healthcare to all Americans. Most American's have health insurance already, just through a private carrier. However, there is considerable pressure on people not to use their healthcare because it's expensive.</p>
+<script src="/other-projects/plotFns.js"></script>
+<div class="image-right" style="width: 300px;">
+  <canvas id="plots"></canvas>
+  <center><small>A marked phase-change, where the limiting reagent changes.</small></center>
+</div>
+<script>
+  plotFns({ showIntersections: true , labels: ['Insured Patients', 'Doctors Available'], xMin: 0, xMax: 5, yMin: 0, yMax: 5, H: 300, W: 300, plotLabels: false, showPlayButton: false}, 'plots', (x, t) => 2*x-2, (x, t) => 0.25*x+2);
+</script>
+
+<p>If we make it cheaper (by subsidizing care) then we will run into another problem. We physically don't have enough doctors to see all those people. We cannot simply pay doctors more because, no matter how many times you double a person's salary, they cannot double their patient count. We've found another limiting reagent.</p>
+<p>The lesson in all this is that no matter how much you push on one factor, work to increase its capacity, there are hidden walls, hidden assumptions, that will become relevant only once the limit in your current focus is removed. This is  the curse of supposed panacea. A thing which looks to solve a problem "for good" does indeed remove one particular problem, only to reveal that it was concealing other problems in its shadow. I've heard people use the refrain that "success hides problems", but problems also hide problems.</p>
+<p>We can make progress, of course, and we often do. But the universe has a cruel sense of humor. Sometimes our solutions can summon problems of their own. Geopolitics is full of such scenarios. Countries look to electrify, to move away from the dangerous and fragile world of fossil fuels, only to become reliant on a <em>cartel nuovo</em> of battery manufacturers.</p>
+<p>As humans, we struggle to see beyond the first derivative. We can predict the response to our actions, but not the response to that response. As such, there will always be limiting reagents, always another reason why you're too tired to write that novel of yours.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/mailing-things-is-fun</guid><pubDate>Mon, 13 Apr 2026 16:06:00 -0800</pubDate><category>personal</category><category>essay</category><category>writing</category><title>Mailing things is Fun</title><link>https://brianschrader.com/archive/mailing-things-is-fun/</link><description><![CDATA[<p>Sometimes I can't tell if I'm discovering a cool new hobby, or just getting old. Regardless, today I come to you with a tale of a little endeavor of mine.</p>
 <p>In early 2020, a family member took a job far from home and, because of the nature of the work, would therefore be out of cell service for large swaths of time. As a gag, we decided to communicate via long-form letters over email as well as the occasional postcard. Later that year, in the grips of a pandemic, my D&amp;D group went virtual, but that came with several drawbacks&mdash;including the sudden lack of the ability to pawn chewing gum off of me during games.<sup>1</sup> So, before our first virtual game, I mailed every one a pack of gum, to be opened on the call.</p>
 <p>It was fun, a cheap little laugh. However in the time since, my occasional appreciation for the mail has become nothing short of a deep and profound predilection.</p>
 <h2>You Can Just Mail Things</h2>
@@ -497,37 +564,4 @@ but very easy to lose. Trust must be handled as a very precious good.</p>
 <p>If you come back to old code and see nothing wrong with it, then you haven't learned anything since.</p>
 </blockquote>
 <p>You are not a finished product, you're a process&mdash;always in motion&mdash;that evolves and changes over time. Your thinking can improve with practice as much as it can atrophy from inattention.</p>
-<p>Think about thinking, write those thoughts down, then perhaps publish a few on a blog that you own. It's fun, and it can do wonders for the mind.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/maintaining-a-music-library-ten-years-on</guid><pubDate>Wed, 29 Oct 2025 21:11:00 -0800</pubDate><category>music</category><category>software</category><title>Maintaining a Music Library, Ten Years On</title><link>https://brianschrader.com/archive/maintaining-a-music-library-ten-years-on/</link><description><![CDATA[<p>It took me by surprise to learn that <a href="/archive/why-im-switching-back-to-itunes/">this post</a> was now a decade old:</p>
-<blockquote>
-<p>Last week I decided to leave Spotify. I've been using the service for almost 2 years now, and overall I've really liked it... It's hard to explain why [I'm leaving], but I guess I feel apprehensive about Spotify being in control of how and where I listen to music in ways I haven't been before.</p>
-</blockquote>
-<p>I remember the inciting incident so viscerally. I wanted to AirPlay a song to my TV, but that device wasn't "approved by Spotify". It's an MP3 and I couldn't jam out to it because of the policies of some company. I was so angry, so I left. Without a viable alternative, I started buying albums in the iTunes Store like it was 2007 all over again.</p>
-<p>It's been ten years now, and I do not regret that choice for a minute.</p>
-<h2>Buying Music in 2025</h2>
-<p>There is a distinct freedom that comes with owning your own music library. The knowledge that your music isn't going to go away on you someday when you stop paying for access is nice, but even better is the feeling that you're free from the capricious whims of any corporate policy change. If Apple, or whomever, decides to be a jerk, you can take your ball and go home. Your library is yours and can be ported easily to any other app or service you want.</p>
-<div class="image-center"><img src="/images/blog/music-2025.webp" alt="A screenshot of my music library as of three months ago." style="max-width: 100%;"><small><center>So much good music. So many local bands.</center></small></div>
-
-<p>Of course there's the rather sizable downside to all of this, which is that music today is largely dominated by platforms like Spotify, etc.. When you buy music in 2025, you're going against the grain. Apple Music has seemingly forgot that people have personal libraries and links exclusively to Apple Music when it is searching for tracks and the iTunes Store is getting quite long in the teeth. Recently, albums have started appearing twice in my library at purchase-time and that mess has to be manually cleaned up.</p>
-<p>Still, <a href="https://support.apple.com/en-us/108935">iTunes Match</a> continues on and so my laptop and my phone continue to be in sync for only $24/yr. If this ever went away, I could always sync manually&mdash;but in reality I'd probably just switch to using Plex for music.</p>
-<p>Buying your music is certainly a dying art in 2025, but for now at least, the apps and stores still exist and, largely, work just fine.</p>
-<p>Oh, and nobody tell Apple that iTunes Match hasn't been adjusted for inflation, like ever.</p>
-<h2>Unspoken Advantages (and a few Disadvantages)</h2>
-<p>When I started curating my music again in 2015, I had a few random singles (from those old Starbucks song cards) and a few random anime soundtrack albums I'd gotten from <em>somewhere</em>, back in the day. But, since my musical tastes had changed drastically, I was basically starting from scratch. For the same price as Spotify, I was able to get one album per month until I built up a sizable library&mdash;then my investment started to pay off. I'd go months without buying an album, and I had the freedom to play them anywhere. It was glorious.</p>
-<div class="image-center" style="width: 100%; padding: 0; border: 0;"><img src="/images/blog/header.webp" alt="A picture of my record player and my record collection." style="max-width: 100%; padding: 0; border: 0;"></div>
-
-<p>It was around 2017 that I started getting into listening to albums as standalone works, rather than listening to custom playlists of singles. From there it was a straight shot into the world of collecting vinyl records, a hobby I've really grown to love. Buying and listening to whole albums also really put me in tune with the entire feeling of a band. Sure, not all of the songs on an album are bangers, but as <a href="https://colinmeloy.substack.com/p/kill-your-shuffle-button">Colin Meloy of the Decemberists put it</a>:</p>
-<blockquote>
-<p>[For me, an] album was not just an analog to a short story collection, it was sometimes a novel — each song a different chapter, a different panel in the quilt.</p>
-<p>I took artists at their word; the order of an album was as intentional as the lyrics inside the songs. A thread was there to follow; clues to unlock. Even if there was no literal connection between the songs, there was a pattern and a rhythm to the thing.</p>
-</blockquote>
-<p>It's one, long song. That realization changed how I conceive of recorded music.</p>
-<p>The main advantages, beyond the freedom I've already mentioned are primarily for people who are really into music and the music ecosystem. Buying music continues to be the best way for artists to make money off of their art. Artists continue to receive 70% of an album's sale price on iTunes compared with the $0.005/stream rate that Spotify charges. As well, maintaining your own music library is the easiest way (even today) to follow indie or local bands who may not have fronted the costs to put themselves on the big platforms.</p>
-<p>Buy music on Bandcamp or download it from Soundcloud, stick it in the Music app, and you're off! No switching between a hundred apps, no platform lock in. Just music. It also helps immensely when you're recording your own music (as I do, frequently <a href="https://thefourthsection.com">for my band</a>).</p>
-<p>That said, there are some distinct disadvantages to buying music. You miss out on the recommendation features and smart playlists (Genius does still exist but it does and has always sucked). Also, it's basically impossible to share playlists with others or import them for your own use.</p>
-<p>You can still burn a CD though, if that's your thing.</p>
-<h2>Some Other Musical Thoughts</h2>
-<div class="image-container" style="padding-right:0;"><img class="image-right" src="/images/blog/triode.webp" alt="" style="width: 325px; padding:0; margin:0;"></div>
-
-<p>Recently I've gotten back into listening to internet radio. I go in an out with this particular interest, but one thing that's made this particular venture back into the depths much more enjoyable is the app <a href="https://blog.iconfactory.com/2023/09/triode-2-improvements-everywhere/">Triode by Iconfactory</a>. Music.app retains its predecessor iTunes' ability to stream internet radio (as well as burn the aforementioned CDs) but the integration was always half-assed. Triode is just so much better.</p>
-<p>Even now, in 2025, I can't see myself switching away from this world any time soon. Buying music is a pain and it's a fading feature, but it's still the best way to actually own and control the music you listen to, and it's the best way to support the artists you love.</p>
-<p>Like so many technologies of the early web that we've now nearly lost or forgotten, it's flaws are real. Like RSS and Podcasting, it takes a long time to curate and gather the blogs, shows, and music you want to enjoy and there's a lot of dependence on informal recommendation networks like those from friends or word-of-mouth via the messy world of meatspace (remember that term?). It's a very human, not algorithmic world, and I love it.</p>]]></description></item></channel></rss>
+<p>Think about thinking, write those thoughts down, then perhaps publish a few on a blog that you own. It's fun, and it can do wonders for the mind.</p>]]></description></item></channel></rss>
