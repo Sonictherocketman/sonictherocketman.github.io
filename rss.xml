@@ -1,5 +1,71 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 27 Apr 2026 16:37:49 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/why-you-cant-write-that-book</guid><pubDate>Mon, 27 Apr 2026 16:37:00 -0800</pubDate><category>essay</category><title>Why You Can't Write That Book</title><link>https://brianschrader.com/archive/why-you-cant-write-that-book/</link><description><![CDATA[<blockquote>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 11 May 2026 16:24:31 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/a-field-guide-to-learning</guid><pubDate>Mon, 11 May 2026 16:22:00 -0800</pubDate><category>research</category><category>writing</category><category>essay</category><title>A Field Guide to Learning</title><link>https://brianschrader.com/archive/a-field-guide-to-learning/</link><description><![CDATA[<p>Let's say you're someone who wants to learn about an academic discipline. Perhaps advanced Physics, Sociology, Early-Modern History, or Cognition Science. Of course, there's YouTube pop-sci videos (which I love) and no shortage of products and services that purport to teach you the basics. But what do you do when you want to go beyond those basics?</p>
+<p>I'm not an expert, but I have been on a few of these journeys myself and so I want to lay out the paths I've taken and offer some advice to those who, like me starting out, had a very hazy view of the terrain and no idea who to trust with your education.</p>
+<h2>Starting Simple</h2>
+<div class="image-right" style="width: 300px;">
+  <img src="/images/blog/short-intro.jpg" style="max-width: 100%;">
+  <center><small>As you can see, I like this series quite a bit</small></center>
+</div>
+
+<p>For anything vaguely academic in nature, I highly recommend trying out one of the books in the <em><a href="https://www.amazon.com/very-short-introductions/s?k=very+short+introductions">Very Short Introduction</a></em> series.</p>
+<p>The books are, as expected, very short (~100 pages) and cover a quick survey of the topic at hand and its various sub-disciplines. They're approachable, quick to read, and the chapters are organized by discipline. At the end, there's not only a bibliography of sources, but a section dedicated to <em>Further Reading</em>.</p>
+<div class="image-right" style="width: 250px;">
+  <img src="/images/blog/further-reading.jpg" style="max-width: 100%;">
+  <center><small>Search out directional guidance</small></center>
+</div>
+
+<p>That section is a gold mine. One of the biggest issues with independent learning is the lack of guidance. It's hard to know whether you're on the typical track or venturing off into treacherous woods. These books are written by long-time field experts, and in my experience have been invaluable for getting the basic lay of the land.</p>
+<p>Journey into the depths of those recommendations, then if you're ready dive into actual courseware.</p>
+<h2>Open Courseware</h2>
+<p>Universities are still the gatekeepers of advanced knowledge, and they've graciously published a wide swath of <a href="https://www.youtube.com/watch?v=7G4SqIboeig&amp;list=PLFeEvEPtX_0S6vxxiiNPrJbLu9aK1UVC_">excellent course materials</a>. Universities like Stanford and MIT have made entire <a href="https://www.youtube.com/watch?v=SwhOffh0kEE&amp;list=PLpGHT1n4-mAvcXwzOIz3dHnGZaQP1LEib">major tracks</a> available to anyone with an internet connection. If you can find the syllabus: grab it. Buy (or <a href="/archive/you-have-access-to-almost-any-book/">rent</a>) the books, read them, and <a href="/archive/take-better-notes-by-hand/">take notes</a>. These topics are difficult, and they take time to learn.</p>
+<details open>
+  <summary>💡 Tips for Finding Books &amp; Course Materials</summary>
+  <div>
+    <ul>
+      <li>Try to find the course syllabus</li>
+      <li>Like a specific professor? Check out their books</li>
+      <li>Some of those books are freely available</li>
+      <li>For Math &amp; Science: check out Dover series books</li>
+      <li>When in doubt, follow the footnotes</li>
+    </ul>
+  </div>
+</details>
+
+<p>For me, the first major challenge here is to find a professor who speaks your language. There are several methods and interpretations of the mathematics of something like General Relativity and there are a dozen different angles from which one could tackle the problem. Do you want "Physics for Engineers" or "Physics for Mathematicians"? Perhaps you need to start earlier with, "Introduction to Kinematics". Watch the first lecture on a topic you think you know. Does the professor explain it well? The first lectures are usually review and ground-laying. If you're lost at the start, it won't bode well.</p>
+<h2>Passive Learning</h2>
+<p><em>Crash Course</em>, <em>PBS SpaceTime</em>, <em>3Blue1Brown</em>, <em>Numberphile</em>, and <em>Veritasium</em> are some of the best question-prompting educational resources ever developed. Even comedic series like <em>MapMen</em> and <em>Half as Interesting</em> have their place in this new world of distributed learning.</p>
+<p>Learning is about prompting the viewer, the reader, (you) to ask questions. To do that, you need to not only be familiar with the material, but you need to approach if from multiple angles, to identify gaps, and to ponder the implications. Speaking for myself, funny and wondrous videos help me do that.</p>
+<p>They're also a form of entertaining, passive learning retention. Repetition helps cement knowledge. Watching college lectures is difficult. It's time-consuming and it's taxing. If a pop-sci or pop-history video helps you retain the material, then it's helping.</p>
+<h2>The Literature</h2>
+<p>Once you've garnered enough knowledge to be dangerous, it's time to dive into The Literature: the published research books and white-papers from academic institutions and experts.</p>
+<p>This is perhaps the most challenging part. I recommend you get yourself a notebook, some highlighters, and a printer. I prefer to scribble notes on the paper, and to read away from screens.</p>
+<div class="image-right" style="width: 300px;">
+  <img src="/images/blog/research-papers.jpg" style="max-width: 100%;">
+  <center><small>The forest of all knowledge</small></center>
+</div>
+
+<p>Whatever you do, do not just go to Google Scholar and start searching. You'll be completely overwhelmed (or maybe that was just me). To effectively use the literature you need two things:</p>
+<ol>
+<li>The Canonical Terminology</li>
+<li>A Picture of the Current State of Research</li>
+</ol>
+<p>The biggest issue with traditional web search is that you need to know the right words to use if you want your search to be effective. LLMs like Claude are very useful here. However the most useful tool is going to be a kind of paper called a Review or Survey paper. Here's <a href="https://link.springer.com/article/10.12942/lrr-2014-4">an example</a>.</p>
+<p>These papers try to give an updated picture of the field and its current dilemmas, questions, and methods. The good news is that review papers are often Open Access and so are available for free to the general public. This means that they can give you answers to both questions (1) and (2). Armed with that knowledge, you'll be more suited to searching through the random papers and books you find in the footnotes and Google Scholar searches.</p>
+<p>When it comes to the literature however, there are a few very important caveats to keep in mind: pre-prints (like those on arXiv.org) are not peer-reviewed and are for Advanced Researchers only. To read those you need to be able to sus out what's signal from noise. The same goes for really any paper outside of the reviews mentioned above. Individual papers are the results of one experiment (or one meta-study). They're less likely to be readable by anyone outside of the particular niche of study and, depending on the journal, can be of dubious quality. Finally, AI-written garbage papers (from so called Paper Mills) are flooding the literature at present). Remember, you're in the woods now. Tread carefully.</p>
+<h2>Personalized Critique</h2>
+<div class="image-right" style="width: 350px;">
+  <img src="/images/blog/claude-critique.png" style="max-width: 100%;">
+  <center><small>The quality of output depends on the quality of the input</small></center>
+</div>
+
+<p>I think a lot these days about the old C.G.P. Grey video: <a href="https://www.cgpgrey.com/blog/digital-aristotle-thoughts-on-the-future-of-education.html">Digital Aristotle</a>.</p>
+<p>I've found great success in having AI grade my homework and help explain the solutions to specific problems because it's there that I've been able to constrain my questions and their likely solutions in ways that I can more often tell when it's misleading me.</p>
+<p>This is helped by my asking it to <em>critique</em> my ideas, not simply tell me what's true. Critique flips the script and forces me to confront the ideas head on. I think a lot in analogies and having the ability to "gut check" those analogies has been hugely helpful, even when the technicalities of the comparison are slightly off.</p>
+<p>The framing of critique helps avoid the implicit confirmation of your bad ideas. It also helps to avoid a key subtlety of AI tools: a machine designed to always provide a plausible-sounding answer has the side-effect of inadvertently supporting the impression that we know more about the world than we actually do.</p>
+<h2>Learning is about Trust</h2>
+<p>As a newcomer to a field, you have very little intuition about what is the "correct" course of action or whether the thing you're reading is correct. Learning requires trust in the teacher. Part of self-directed learning is deciding who and what sources to trust with your education. Not doing so, trusting blindly, will veer you into incorrect or fringe ideas very quickly and you won't even know it's happening. Aside from the technical details of a given subject, you need to learn how to be a good judge of your sources and to extend trust only to sources that deserve it.</p>
+<p>All of this stuff takes time and significant effort.</p>
+<p>Don't be discouraged by the difficulty or time-commitment. A major track at a college takes years of full-time study. It's ok if it takes you a long time to make progress, learning is hard.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/why-you-cant-write-that-book</guid><pubDate>Mon, 27 Apr 2026 16:37:00 -0800</pubDate><category>essay</category><title>Why You Can't Write That Book</title><link>https://brianschrader.com/archive/why-you-cant-write-that-book/</link><description><![CDATA[<blockquote>
 <p>I could do that, I just need more time.</p>
 </blockquote>
 <p>In life we are constantly wishing we had more of something: time, money, friends, energy, etc., and we develop plans to try and meet these goals. We alter our diets, our schedules, we start exercising or reading more. Often times these changes result in significant improvements to our lives. Yet, we never have the energy, the time, or the money that we want. Even when we do succeed in making changes, something else comes up and blocks further progress.</p>
@@ -39,17 +105,19 @@
   </div>
 </div>
 <script>
-const prompts = [
-  'Enjoying this post?',
-  'Like what you see?',
-  'Cough cough...',
-  'Posts like this, in your inbox!',
-  'Consider subscribing!',
-  'Support this blog!',
-  'Really appreciate it if you...'
-];
-const el = document.getElementById('prompt');
-el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+(() => {
+  const prompts = [
+    'Enjoying this post?',
+    'Like what you see?',
+    'Cough cough...',
+    'Posts like this, in your inbox!',
+    'Consider subscribing!',
+    'Support this blog!',
+    'Really appreciate it if you...'
+  ];
+  const el = document.getElementById('prompt');
+  el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+})();
 </script></p>
 <h2>Limits Abound</h2>
 <p>We see examples of this phenomenon everywhere in our society and lives. For a completely different example, consider the current phenomenon of AI coding agents on the productivity of software companies. Writing code used to be slow, now it is significantly faster. However, humans still need to understand, design, and approve that code. A 10x speed-up in the writing of code has not translated to a 10x speed-up in productivity overall because something else in the pipeline is too slow to keep up with this new glut of AI-generated code. We've found a limiting reagent: system design and code approval.</p>
@@ -125,17 +193,19 @@ el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
   </div>
 </div>
 <script>
-const prompts = [
-  'Enjoying this post?',
-  'Like what you see?',
-  'Cough cough...',
-  'Posts like this, in your inbox!',
-  'Consider subscribing!',
-  'Support this blog!',
-  'Really appreciate it if you...'
-];
-const el = document.getElementById('prompt');
-el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+(() => {
+  const prompts = [
+    'Enjoying this post?',
+    'Like what you see?',
+    'Cough cough...',
+    'Posts like this, in your inbox!',
+    'Consider subscribing!',
+    'Support this blog!',
+    'Really appreciate it if you...'
+  ];
+  const el = document.getElementById('prompt');
+  el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+})();
 </script></p>
 <h2>How to take Notes</h2>
 <div class="image-right" style="width:300px;">
@@ -237,17 +307,19 @@ window.CONFIG = {
   </div>
 </div>
 <script>
-const prompts = [
-  'Enjoying this post?',
-  'Like what you see?',
-  'Cough cough...',
-  'Posts like this, in your inbox!',
-  'Consider subscribing!',
-  'Support this blog!',
-  'Really appreciate it if you...'
-];
-const el = document.getElementById('prompt');
-el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+(() => {
+  const prompts = [
+    'Enjoying this post?',
+    'Like what you see?',
+    'Cough cough...',
+    'Posts like this, in your inbox!',
+    'Consider subscribing!',
+    'Support this blog!',
+    'Really appreciate it if you...'
+  ];
+  const el = document.getElementById('prompt');
+  el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+})();
 </script></p>
 <h2>A Connected World</h2>
 <p>Consider a mass on a spring.<sup>2</sup> There are known equations for predicting the behavior of a mass (like a smooth block) sliding on a table. Such systems are well studied and the resulting equations of motion depend on only a few variables: the slope of the table, its roughness, the spring constant, etc..</p>
@@ -503,65 +575,4 @@ but very easy to lose. Trust must be handled as a very precious good.</p>
 
 <p>In a couple <a href="/archive/blogging-writing-musing-and-thinking/">recent</a> <a href="/archive/your-brain-is-an-l1-cache/">posts</a>, I describe how I try to use writing by hand as a way to increase my understanding of myself and my own memory. This is a form of personal history, and I find it difficult to express how much doing so has helped me better understand myself and my own thoughts.</p>
 <p>This is analogous to our collective history. Though it's important to remember that history is not the act of writing, but the act of looking back and <em>analyzing</em> what was written. We write so that we can remember. We cannot learn from our mistakes if we refuse to write them down, or worse, if we refuse to look back.</p>
-<p>The context of history is terrible and it is beautiful. It is the greatest story ever told with myriad heroes and villans, tragedy and triumph, love and grief all endlessly shifting in and out of view. And it was made (and is <em>being made</em>) by people no different than ourselves. Most of them didn't have the luxury to place themselves within the broader historical narrative. We do. Let's not ignore so precious a gift.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/blogging-writing-musing-and-thinking</guid><pubDate>Wed, 14 Jan 2026 18:08:00 -0800</pubDate><category>blogging</category><category>personal</category><category>writing</category><category>thought technology</category><title>Blogging, Writing, Musing, and Thinking</title><link>https://brianschrader.com/archive/blogging-writing-musing-and-thinking/</link><description><![CDATA[<p>Yesterday I stumbled on this quote from a blog post by <a href="https://www.joanwestenberg.com/the-case-for-blogging-in-the-ruins/">JA Westenberg</a>:</p>
-<blockquote>
-<p>Michel de Montaigne arguably invented the essay in the 1570s, sitting in a tower in his French château, writing about whatever interested him: cannibals, thumbs, the education of children, how to talk to people who are dying. He called these writings essais, meaning "attempts" or "tries." The form was explicitly provisional. Montaigne was trying out ideas, seeing where they led, acknowledging uncertainty as a fundamental feature rather than a bug to be eliminated.</p>
-</blockquote>
-<p>It's hard to convey the sense of both profound agreement and giddy joy I had reading that because, not only is the wider post about something I love (i.e. blogging), or because I learned something new about the history of writing (which is always fun), but because that quote describes something that I've been doing myself for the past two years and wanted an excuse to talk about!</p>
-<h2>What Writing Is</h2>
-<p>There's an old adage that says, "Writing is Thinking" and I've usually interpreted those words to mean that "writing helps you think", which is undoubtably true. However in recent years I've discovered an entirely new form of writing that I've taken to calling: musing, that I think takes this idea a step further, and it's precisely what Westenberg describes Montaigne doing in the 16<sup>th</sup> century.</p>
-<div class="image-right" style="width: 330px; padding-right: 0; ">
-<img alt="A collection of my notebooks" src="/images/blog/musingbooks.jpg" style="max-width: 100%; padding-right: 0;"/>
-<center><small>An example of the notebooks I use.</small></center>
-</div>
-
-<p>We have a lot of thoughts throughout the day, and yet we spend so little time indulging these idle curiosities. Writing, especially by hand, can be a great way to explore these ideas and to practice thinking. It's also really fun to do! Over time I started collecting these ideas into notebooks (one of which I almost always carry with me) in order to better organize these inherently random topics into a searchable system. Originally I scribbled on loose leaf pages or random legal pads (as I've mentioned before) and that became unruly very quickly.</p>
-<p>Some of these musings are personal topics, most are not. Often they're just the exploration of a question I have. Here's an example:</p>
-<blockquote>
-<p>Businesses keep offices cold because there's research saying that cooler temperatures help people think and stay focused. Given that's true, could the <a href="https://en.wikipedia.org/wiki/Little_Ice_Age">Little Ice Age</a> have helped improve human cognition during the 17<sup>th</sup> and 18<sup>th</sup> centuries? If so, what does that mean?</p>
-</blockquote>
-<p>I'm not sure, but it was something I thought about for a while and so I wrote it down. The entire musing, or essay as I guess it should be called, is less than a page, but was engaging and very fun to do. I've written short essays about dozens of topics over the years (including several that have been eventually <a href="/archive/narrative-structure-and-the-principle-of-least-action/">published</a> to <a href="/archive/the-mysterious-potential-of-the-plane/">this</a> <a href="/archive/empirical-partial-derivatives/">blog</a>). It's a fun practice, and I encourage you to try it.</p>
-<details>
-  <summary>More Musing Ideas</summary>
-  <ul>
-    <li>Why am I feeling sad lately?</li>
-    <li>Why do we see sunsets as beautiful?</li>
-    <li>Second-guessing [prior topic]</li>
-    <li>What function does the press fulfill in society?
-        <ul>
-            <li>Why is that valuable?</li>
-            <li>How could that value be measured?</li>
-        </ul>
-    </li>
-    <li>What is the single, smallest change I could make to the U.S. constitution to have the biggest impact on the problems I see?</li>
-    <li>
-        Do stories follow mathematical laws?
-        <ul>
-            <li>What would that mean for us?</li>
-            <li>How could such a thing be measured?</li>
-            <li>How come we seem to intuit these laws?</li>
-        </ul>
-    </li>
-    <li>What is math?</li>
-    <li>Is [current stress point] a long-term problem or a temporary one?</li>
-    <li>What is the cognitive purpose of stereotypes?</li>
-    <li>What would it feel like to live 10,000 years ago?</li>
-    <li>Let's try to comprehend the fullness of human history!</li>
-    <li>I had an idea for a cool&mdash;but probably useless&mdash;invention!</li>
-  </ul>
-</details>
-
-<p>Explore your ideas honestly. Don't fear where your mind goes or the questions it will ask. These are personal, honest thoughts not social media posts. Writing like this is inherently introspective, it's a way to give your mind the space to awe and wonder</p>
-<h2>What Thinking Is</h2>
-<p>We often believe that thinking is a process which takes place entirely in the mind, but it's a process that is heavily influenced by the particulars of the body. Try thinking through a problem in a hot and smelly room or on a walk with a rock in your shoe.</p>
-<p><img class="image-right" alt="One of my notebooks" src="/images/blog/notes.jpg" style="width: 330px; padding-right: 0;"/></p>
-<p>However, the body can do more than hinder the thought process, it can catalyze it! This is what writing can be, a way to think through problems using your entire body.</p>
-<p>Occasionally, I've sat down to write but without any particular topic in mind. So, I open my notebook and just start writing. Tons of my essays begin with something like, "I'm not sure what I'm thinking right now and I don't know what to write." From there, I let my thoughts move and course as they will and I just write down what comes to mind, stopping and starting as my thoughts shift and change and eventually I will find that something has come out of it. I might work through a tension or stress point, I could come to realize or discover something about a problem, or I could just get a few lackluster thoughts on a page. Not all thinking is productive but the mind is a muscle and it needs to be exercised to function properly. Sometimes just doing the workout is enough.</p>
-<h2>Thinking as a Skill</h2>
-<p>We usually think of cleverness or intelligence as an innate trait people have, and while that is certainly true in some regards, intelligence and wisdom are just as much a function of practice as of talent. To get good at solving puzzles, you have to practice solving puzzles. The mind is no different than a muscle in that regard. Thinking aloud on the page is one way to record and analyze your thought process and to practice the art of thinking itself.</p>
-<p>As another example, I often revisit my prior writings and find many to be overly simplistic, uninspired, or just plain wrong. But that's good! It means I've learned something in the intervening time! In software there's an addage:</p>
-<blockquote>
-<p>If you come back to old code and see nothing wrong with it, then you haven't learned anything since.</p>
-</blockquote>
-<p>You are not a finished product, you're a process&mdash;always in motion&mdash;that evolves and changes over time. Your thinking can improve with practice as much as it can atrophy from inattention.</p>
-<p>Think about thinking, write those thoughts down, then perhaps publish a few on a blog that you own. It's fun, and it can do wonders for the mind.</p>]]></description></item></channel></rss>
+<p>The context of history is terrible and it is beautiful. It is the greatest story ever told with myriad heroes and villans, tragedy and triumph, love and grief all endlessly shifting in and out of view. And it was made (and is <em>being made</em>) by people no different than ourselves. Most of them didn't have the luxury to place themselves within the broader historical narrative. We do. Let's not ignore so precious a gift.</p>]]></description></item></channel></rss>
