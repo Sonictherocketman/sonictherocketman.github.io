@@ -1,6 +1,6 @@
 slug: more-secure-pastures
 published: Wed, 27 Jan 2016 at 09:13 PM
-updated: Mon, 30 Mar 2026 16:19:42 
+updated: Fri, 03 Jul 2026 08:56:44 
 title: More Secure Pastures
 author: Brian Schrader
 tags: encryption, https

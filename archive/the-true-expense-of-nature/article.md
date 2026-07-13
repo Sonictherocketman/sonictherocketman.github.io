@@ -1,6 +1,6 @@
 slug: the-true-expense-of-nature
 published: Mon, 01 Jun 2026 at 04:36 PM
-updated: Mon, 01 Jun 2026 16:36:51 
+updated: Fri, 03 Jul 2026 08:56:43 
 title: The True Expense of Nature
 status: publish
 author: Brian Schrader

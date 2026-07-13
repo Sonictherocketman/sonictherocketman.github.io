@@ -1,6 +1,6 @@
 slug: take-better-notes-by-hand
 published: Mon, 30 Mar 2026 at 04:18 PM
-updated: Mon, 30 Mar 2026 18:04:35 
+updated: Fri, 03 Jul 2026 08:56:43 
 title: Take Better Notes, By Hand
 author: Brian Schrader
 tags: personal, writing

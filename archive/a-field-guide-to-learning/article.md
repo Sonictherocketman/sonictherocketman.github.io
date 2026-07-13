@@ -1,6 +1,6 @@
 slug: a-field-guide-to-learning
 published: Mon, 11 May 2026 at 04:22 PM
-updated: Mon, 11 May 2026 16:23:57 
+updated: Fri, 03 Jul 2026 08:56:42 
 title: A Field Guide to Learning
 author: Brian Schrader
 tags: research, writing, essay

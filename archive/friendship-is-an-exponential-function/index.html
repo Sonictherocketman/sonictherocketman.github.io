@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Friendship is an Exponential Function - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fediverse:creator" content="@sonicrocketman@mastodon.social">
+    <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
+    <link rel="preload" href="/bin/Newsreader/Newsreader-VariableFont_opsz,wght.ttf" as="font" />
+
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=3.0">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=3.0">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+  <meta property="og:title" content="Friendship is an Exponential Function" />
+  
+  <meta property="og:description" content="The best friendships are the ones that happen, not because of scheduled time, but in spite of it." />
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://brianschrader.com/archive/friendship-is-an-exponential-function/" />
+  
+  <meta property="og:image" content="/images/blog/shared-coffee.jpg" />
+  
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      <article class="h-entry">
+        <a href="/" class="u-author"></a>
+        <div class="post">
+          <div class="article-title">
+            <h1 class="p-name">
+              <a href="/archive/friendship-is-an-exponential-function/" title="Friendship is an Exponential Function">
+                
+                Friendship Is An Exponential Function
+                
+              </a>
+            </h1>
+            <small>
+              <time class="dt-published" datetime="2026-07-13T16:02:00">
+                July 13, 2026
+              </time>
+            </small>
+          </div>
+
+          <div class="article-content e-content">
+            <script src="/other-projects/plotFns.js"></script>
+
+<p>What allows you to make friends and to keep them? Being a social person helps with making friends, surely. As does putting in the effort to be a good friend. But I'm sure we've all had the experience of wanting to become friends with someone, but yet it never really happens. Maybe there's never the time. Maybe you're too far apart, and I mean that literally.</p>
+<p>This is something I've observed over time, as friends move around and as people's lives grow, evolve, and change: the total friendship between two people evolves as a function of distance.</p>
+<div id="friend2-container" class="image-right" style="width: 300px;">
+  <canvas id="friend2-canvas"></canvas>
+  <small><center>
+    I think this is how we <i>want</i> or expect friendship to behave.
+  </center></small>
+</div>
+<script>plotFns({W: 300, H: 250, labels: ['Imagined'], xMin: 0, xMax: 2, yMin: 0, yMax: 1, showPlayButton: false}, 'friend2-canvas', (x, t) => 1-x/2);</script>
+
+<p>This means that two people, given the inclination to become friends, will see their friendship improve and decay based on their physical distance from each other&mdash;how far they live from each other. I think this makes intuitive sense. Two people who live together obviously see each other more than two people who live a continent apart. Yet what is surprising is that this function is not linear.</p>
+<p>Friendships, in my experience, are strengthened not by planned time together, but by <em>accidental</em> happenstance and the unplanned ability to simply spend time in the same place. If you live next door to a friend, spending time together is easy. Outside of your home, that friend is your <em>easiest</em> option for social interaction. You can share meals, woes, gossip, and even just yell over the fence to each other. That closeness is not a function of your effort to connect, but precisely because of the lack of effort you both needed to expend!</p>
+<p>Given suitable places to go, a coffee, dinner, or beer with friends nearby becomes a text message away.</p>
+<blockquote>
+<p>Beer at Ould Sod?</p>
+</blockquote>
+<div id="friend-container" class="image-right" style="width: 300px;">
+  <canvas id="friend-canvas"></canvas>
+  <small><center>
+    Friendship falls off quickly with distance, then that descent slows down.
+  </center></small>
+</div>
+<script>plotFns({W: 300, H: 250, labels: ['Friendship'], xMin: 0, xMax: 5, yMin: 0, yMax: 1, showPlayButton: false}, 'friend-canvas', (x, t) => Math.exp(-x));</script>
+
+<p>In business-speak: there is very little friction here. Again think of a friendship within a household. You don't schedule wine with dinner. You just see if your friend or partner wants some, then open the bottle. The need to schedule, especially with a calendar, is the sign of a friendship's formality. It's the sign that physical distance has intruded on your shared lives.</p>
+<p>Yet, I assume none of this is surprising. The important thing I've discovered is that this function of distance is <em>not linear</em> as I said. We expect that moving a <em>little</em> further away would have a proportional effect on the friendship.
+In practice though, it's exponential.</p>
+<p>This means that friendship, given no additional effort, will decay much faster than you think. Moving a block away is worse than being next door by a surprising amount. Moving across town marks the end of an era. Sure, given time and deliberate effort (and lots of calendars) you can overcome the barrier of distance. The internet has helped here too, but scheduled time and video calls are no basis for the same friendships that occur naturally in backyards, on doorsteps, or at nearby restaurants, coffeeshops, and bar counters.</p>
+<p>There's an <a href="https://www.reddit.com/r/Urbanism/comments/mbl0es/half_the_reason_folks_romanticize_college_is/">old meme</a>:</p>
+<div class="image-right" style="width: 240px;">
+  <img src="/images/blog/shared-coffee.jpg" style="max-width: 100%;">
+  <small><center>Photo: mine</center></small>
+</div>
+
+<blockquote>
+<p>Half the reason folks romanticize college is because it's the last time most folks lived in dense, walkable neighborhoods focused on providing community during plentiful off-hours.</p>
+</blockquote>
+<p>I've been lucky enough to be able to live in a vibrant, walkable, and <a href="https://en.wikipedia.org/wiki/Third_place">third-place abundant</a> neighborhood for over a decade. What's more I've been luckier still in that many of my friends live within walking distance. I grew up in a small neighborhood with several kids down the street to play with. In a way I still have that, for now.</p>
+<p>What it means though is that to be nearby is to be part of a group of friends who are just simply closer than my other friends, even if we weren't all that close to begin with. It's just easier to hang out, easier to spend time, and friendship, if anything, is a function of time spent together. That time is a function of effort, of shared interest, and importantly the exponential of distance.</p>
+          </div>
+
+          <hr />
+
+          <div style="display: flex; justify-content: space-between;">
+            <div>
+              
+              
+              <small>
+                Filed under:
+                <span class="tags article-content">
+                  
+                    <a href="/tags.html#tag-essay" title="essay" class="tag">essay</a>,
+                  
+                    <a href="/tags.html#tag-personal" title="personal" class="tag">personal</a>
+                  
+                </span>
+              </small><br />
+              
+            </div>
+          </div>
+
+          
+            <br>
+            <div class="midroll newsletter-callout">
+  <div class="callout text-center">
+    <div id="prompt">
+      <noscript>
+        Enjoying this post?
+      </noscript>
+    </div>
+    <a
+      href="https://sendfox.com/brianschrader/"
+      title="Subscribe to the newsletter"
+      class="subscribe"
+      target="_blank"
+    >
+      ✉️&nbsp;Subscribe to the Newsletter!
+    </a>
+  </div>
+</div>
+<script>
+(() => {
+  const prompts = [
+    'Enjoying this post?',
+    'Like what you see?',
+    'Cough cough...',
+    'Posts like this, in your inbox!',
+    'Consider subscribing!',
+    'Support this blog!',
+    'Really appreciate it if you...'
+  ];
+  const el = document.getElementById('prompt');
+  el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+})();
+</script>
+          
+
+          
+          
+        </div>
+      </article>
+    </div>
+    <div class="side-bar">
+      
+<div class="promotion">
+  
+  <script src="https://shoutouts.page/embed/sRGtA2wwnhW-dAPFXEBy.js" defer></script>
+  
+</div>
+
+
+<div id="search"></div>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "/archive" });
+  });
+</script>
+
+<div class="newsletter-callout">
+  <a
+    href="https://sendfox.com/brianschrader/"
+    title="Subscribe to the newsletter"
+    class="subscribe text-center"
+    target="_blank"
+  >
+    ✉️ Newsletter
+  </a>
+</div>
+
+
+
+
+<div class="sidebar-section">
+<div class="sidebar-label">Featured</div>
+<ul class="sidebar-list">
+  
+  <li><a href="/archive/would-you-believe-that-this-is-it/" title="Would You Believe that This is It?" rel="nofollow">Would You Believe that This is It?</a></li>
+  
+  <li><a href="/archive/load-bearing-walls/" title="Load-Bearing Walls" rel="nofollow">Load-Bearing Walls</a></li>
+  
+  <li><a href="/archive/on-the-lies-depression-tells/" title="On the Lies Depression Tells" rel="nofollow">On the Lies Depression Tells</a></li>
+  
+  <li><a href="/archive/narrative-structure-and-the-principle-of-least-action/" title="Narrative Structure and the Principle of Least Action" rel="nofollow">Narrative Structure and the Principle of Least Action</a></li>
+  
+  <li><a href="/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">Science, Models, and Squeaking Lead</a></li>
+  
+  <li><a href="/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">On Handwriting and Switching to Cursive</a></li>
+  
+  <li><a href="/archive/on-the-web-the-best-outcome-is-email/" title="On the Web, the Best Outcome is Email" rel="nofollow">On the Web, the Best Outcome is Email</a></li>
+  
+  <li><a href="/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">The Web as a Social Network</a></li>
+  
+</ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Recent</div>
+  <ul class="sidebar-list">
+    
+    <li><a href="/archive/because-it-speaks-in-words/" title="Because it Speaks in Words" rel="nofollow">Because it Speaks in Words</a></li>
+    
+    <li><a href="/archive/would-you-believe-that-this-is-it/" title="Would You Believe that This is It?" rel="nofollow">Would You Believe that This is It?</a></li>
+    
+    <li><a href="/archive/the-true-expense-of-nature/" title="The True Expense of Nature" rel="nofollow">The True Expense of Nature</a></li>
+    
+    <li><a href="/archive/a-field-guide-to-learning/" title="A Field Guide to Learning" rel="nofollow">A Field Guide to Learning</a></li>
+    
+    <li><a href="/archive/why-you-cant-write-that-book/" title="Why You Can&#39;t Write That Book" rel="nofollow">Why You Can&#39;t Write That Book</a></li>
+    
+    <li><a href="/archive/mailing-things-is-fun/" title="Mailing things is Fun" rel="nofollow">Mailing things is Fun</a></li>
+    
+    <li><a href="/archive/take-better-notes-by-hand/" title="Take Better Notes, By Hand" rel="nofollow">Take Better Notes, By Hand</a></li>
+    
+    <li><a href="/archive/you-have-access-to-almost-any-book/" title="You have access to almost any book" rel="nofollow">You have access to almost any book</a></li>
+    
+    <li><a href="/archive/load-bearing-walls/" title="Load-Bearing Walls" rel="nofollow">Load-Bearing Walls</a></li>
+    
+    <li><a href="/archive/an-age-of-promethean-ambitions/" title="An Age of Promethean Ambitions" rel="nofollow">An Age of Promethean Ambitions</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Also me</div>
+  <ul class="group-list">
+    <li><a href="https://mastodon.social/@sonicrocketman" title="Mastodon" rel="nofollow me">Mastodon</a></li>
+    <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">GitHub</a></li>
+    <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">Gravatar</a></li>
+    <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">Bandcamp</a></li>
+    <li><a href="https://scholar.google.com/citations?user=tQi0VJ0AAAAJ" title="Google Scholar" rel="nofollow me">Google Scholar</a></li>
+    <li><a href="https://www.linkedin.com/in/sonicrocketman/" title="LinkedIn" rel="nofollow me">LinkedIn</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Resources</div>
+  <ul class="sidebar-list">
+    <li><a href="/archive/bibliography" title="Bibliography">Bibliography</a></li>
+    <li><a href="/archive/bookshelf" title="Book Recommendations">Book Recommendations</a></li>
+    <li><a href="/archive/recipes/" title="Food and Drink Recipes">Food &amp; Drink Recipes</a></li>
+    <li><a href="/archive/reading-report/" title="Reading Report">Books &amp; Reading Statistics</a></li>
+    <li><a href="/archive/drawing-of-the-day/" title="Drawing of the Day">Drawing of the Day</a></li>
+    <li><a href="/archive/daily-step-count--walking-statistics/" title="Daily Step Count &amp; Walking Statistics">Daily Step Count &amp; Walking Statistics</a></li>
+    <li><a href="/tags.html" title="Posts by Tag">Tags</a></li>
+    <li><a href="/threads.html" title="Posts by Tag">Threads</a></li>
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Tags</div>
+  <ul class="group-list">
+    
+      <li><a href="/tags.html#tag-programming" title="programming" class="tag">programming</a></li>
+    
+      <li><a href="/tags.html#tag-essay" title="essay" class="tag">essay</a></li>
+    
+      <li><a href="/tags.html#tag-software" title="software" class="tag">software</a></li>
+    
+      <li><a href="/tags.html#tag-software development" title="software development" class="tag">software development</a></li>
+    
+      <li><a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a></li>
+    
+      <li><a href="/tags.html#tag-history" title="history" class="tag">history</a></li>
+    
+      <li><a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a></li>
+    
+      <li><a href="/tags.html#tag-open web" title="open web" class="tag">open web</a></li>
+    
+      <li><a href="/tags.html#tag-writing" title="writing" class="tag">writing</a></li>
+    
+      <li><a href="/tags.html#tag-politics" title="politics" class="tag">politics</a></li>
+    
+  </div>
+</div>
+</div>
+    </div>
+  </div>
+
+  <div class="home-footer">
+  <div class="home-footer-inner">
+    <div>
+      <div class="foot-label">Feeds</div>
+      <ul class="foot-list">
+        <li><a rel="alternate" href="/rss.xml">RSS</a></li>
+        <li><a rel="alternate" href="/feed.json">JSON Feed</a></li>
+        <li><a rel="status"
+               href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+               target="_blank">Status</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-label">Blogroll</div>
+      <div class="blogroll">
+        <a href="https://www.manton.org" rel="nofollow">Manton Reece</a>
+        <a href="https://acoup.blog" rel="nofollow">A Collection of Unmitigated Pedantry</a>
+        <a href="https://aaronparecki.com/" rel="nofollow">Aaron Parecki</a>
+        <a href="https://www.slowboring.com" rel="nofollow">Slow Boring</a>
+        <a href="https://treyhunner.com" rel="nofollow">Trey Hunner</a>
+        <a href="https://www.mnot.net/blog/" rel="nofollow">mark nottingham</a>
+        <a href="http://globalspin.com" rel="nofollow">Global Spin</a>
+        <a href="https://iifrp.org" rel="nofollow">IIFRP.org</a>
+        <a href="http://mattgemmell.com/" rel="nofollow">Matt Gemmell</a>
+        <a href="http://jvns.ca/" rel="nofollow">Julia Evans</a>
+        <a href="https://www.youtube.com/@SabineHossenfelder" rel="nofollow">Sabine Hossenfelder</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Federation -->
+  <a href="https://fed.brid.gy/"></a>
+
+    </div>
+  </body>
+  <script src="/pagefind/pagefind-ui.js"></script>
+</html>

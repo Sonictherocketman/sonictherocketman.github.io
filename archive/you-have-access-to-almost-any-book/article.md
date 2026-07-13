@@ -1,6 +1,6 @@
 slug: you-have-access-to-almost-any-book
 published: Fri, 20 Mar 2026 at 04:19 PM
-updated: Mon, 30 Mar 2026 16:19:43 
+updated: Fri, 03 Jul 2026 08:56:45 
 title: You have access to almost any book
 author: Brian Schrader
 tags: research, reading

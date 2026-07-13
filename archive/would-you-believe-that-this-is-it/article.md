@@ -1,6 +1,6 @@
 slug: would-you-believe-that-this-is-it
 published: Mon, 15 Jun 2026 at 04:07 PM
-updated: Mon, 15 Jun 2026 16:07:55 
+updated: Fri, 03 Jul 2026 08:56:42 
 title: Would You Believe that This is It?
 author: Brian Schrader
 tags: history, politics, essay
@@ -8,6 +8,7 @@ status: publish
 summary: A band and their song, making decisions, and the nature of Liberal Democracy.
 hero: /images/blog/Emancipation-Hall_1.jpg
 showfootercallout: true
+featured: true
 
 Last year I heard this song from a band called Loser Demon. The song is called [Holding Ground](https://loserdemon.bandcamp.com/track/holding-ground) and here's the chorus that has been stuck in my soul ever since (added words, mine):
 
