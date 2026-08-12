@@ -1,6 +1,6 @@
 slug: the-simple-joy-of-learning-to-play-piano
 published: Thu, 05 May 2022 at 01:41 AM
-updated: Fri, 03 Jul 2026 08:56:42 
+updated: Wed, 12 Aug 2026 00:20:16 
 title: The Simple Joy of Learning to Play Piano
 author: Brian Schrader
 tags: music

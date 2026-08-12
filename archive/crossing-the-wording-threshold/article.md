@@ -1,6 +1,6 @@
 slug: crossing-the-wording-threshold
 published: Wed, 27 Apr 2022 at 03:07 AM
-updated: Fri, 03 Jul 2026 08:56:42 
+updated: Wed, 12 Aug 2026 00:20:16 
 title: Crossing the Wording Threshold
 author: Brian Schrader
 tags: meta, blogging, stats

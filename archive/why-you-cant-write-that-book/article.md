@@ -1,6 +1,6 @@
 slug: why-you-cant-write-that-book
 published: Mon, 27 Apr 2026 at 04:37 PM
-updated: Fri, 03 Jul 2026 08:56:42 
+updated: Wed, 12 Aug 2026 00:20:16 
 title: Why You Can't Write That Book
 author: Brian Schrader
 tags: essay

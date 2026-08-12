@@ -1,6 +1,6 @@
 slug: nothing-throughout-the-ages
 published: Wed, 13 Nov 2024 at 04:23 AM
-updated: Fri, 03 Jul 2026 08:56:42 
+updated: Wed, 12 Aug 2026 00:20:16 
 title: Nothing Throughout the Ages
 author: Brian Schrader
 tags:history,knowledge,essay

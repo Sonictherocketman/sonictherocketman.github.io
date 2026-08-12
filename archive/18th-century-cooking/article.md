@@ -1,6 +1,6 @@
 slug: 18th-century-cooking
 published: Fri, 22 Jul 2016 at 09:31 PM
-updated: Fri, 03 Jul 2026 08:56:42 
+updated: Wed, 12 Aug 2026 00:20:16 
 title: 18th Century Cooking
 author: Brian Schrader
 status: publish

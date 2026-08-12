@@ -1,6 +1,6 @@
 slug: some-advice-on-programming
 published: Sun, 12 Oct 2014 at 09:32 PM
-updated: Fri, 03 Jul 2026 08:56:46 
+updated: Wed, 12 Aug 2026 00:20:19 
 title: Some advice on programming
 author: Brian Schrader
 status: publish

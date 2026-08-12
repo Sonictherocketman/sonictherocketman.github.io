@@ -1,6 +1,6 @@
 slug: would-you-believe-that-this-is-it
 published: Mon, 15 Jun 2026 at 04:07 PM
-updated: Fri, 03 Jul 2026 08:56:42 
+updated: Wed, 12 Aug 2026 00:20:16 
 title: Would You Believe that This is It?
 author: Brian Schrader
 tags: history, politics, essay
