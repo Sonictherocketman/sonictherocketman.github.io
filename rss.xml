@@ -1,5 +1,69 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Wed, 12 Aug 2026 00:20:39 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/with-flying-pen-when-mortals-sleep</guid><pubDate>Mon, 10 Aug 2026 16:45:00 -0800</pubDate><category>history</category><category>alchemy</category><category>essay</category><title>With Flying Pen, When Mortals Sleep</title><link>https://brianschrader.com/archive/with-flying-pen-when-mortals-sleep/</link><description><![CDATA[<p>It was a sweltering August day. I made my way across the promenade, and through the bustling crowd, to a small line forming outside the Timkin Art Museum. Inside, I stumbled on <a href="https://en.wikipedia.org/wiki/Parable_of_the_Sower_(Bruegel)">Pieter Bruegel</a> the Elder's <em>Parable of the Sower</em>, painted in 1557, nearly five centuries ago.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 24 Aug 2026 16:11:03 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/gatekeepers-are-dead-long-live-the-gatekeepers</guid><pubDate>Mon, 24 Aug 2026 16:09:00 -0800</pubDate><category>essay</category><category>internet</category><category>ai</category><category>social media</category><title>Gatekeepers are Dead, Long Live the Gatekeepers</title><link>https://brianschrader.com/archive/gatekeepers-are-dead-long-live-the-gatekeepers/</link><description><![CDATA[<p>Before the Internet things were different; this was the First Age.</p>
+<p>If you wanted to get your message out there you needed either a lot of money, fame, or power. Usually you needed some combination of all three. Barring that you needed to find someone with money, fame, or power (or some combination) who was also willing to help you. These people were often elites of some kind. They could be professionals with an industry journal, the editor of a local magazine, a rich patron with connections, or even political party officials. These were the people who held the keys needed to pass into the public sphere: gatekeepers. Their job was to search out people of interest, people with something interesting to say, and promote them. Musicians needed talent scouts, authors needed agents, writers needed editors.</p>
+<div class="image-right" style="width: 350px;">
+  <a href="https://archive.org/details/sim_saturday-magazine_1836-03_8_240/mode/2up">
+    <img style="max-width: 100%;" src="/images/blog/some-account-of-bridges.jpg">
+  </a>
+  <center><small style="display: block;">
+    Guarding the entrance to the bridge.<br>
+    The Saturday Magazine, 1836&ndash;03: Vol 8 Iss 240
+  </small></center>
+</div>
+
+<p>Attention was infinite and quality content was scarce. Gatekeepers filtered through the trash and surfaced the gems. The public paid attention because that was all that could be done.</p>
+<p>The Internet broke this system; we entered the Second Age.</p>
+<p>Self-published books made it so anyone can get their book out there. Self-service distributors allow anyone to publish music, YouTubers to self manage, and blogs (and more importantly social media) give anyone a platform to speak. This system didn't replace the gatekeepers (traditional publishing and record labels still exist) but it broke open the floodgates. A lot of this new content was bad but some of it was amazing.</p>
+<p>Attention became the currency of the land, a finite resource sure but one similar to oil: plentiful enough to build entire industries on. Tools existed to help filter it all. They became our gatekeepers: the feeds, then the algorithms. At first it was easy to find good, new content. Over time that got harder, but the system seemed to be stabilizing.</p>
+<p><div class="midroll newsletter-callout">
+  <div class="callout text-center">
+    <div id="prompt">
+      <noscript>
+        Enjoying this post?
+      </noscript>
+    </div>
+    <a
+      href="https://sendfox.com/brianschrader/"
+      title="Subscribe to the newsletter"
+      class="subscribe"
+      target="_blank"
+    >
+      ✉️&nbsp;Subscribe to the Newsletter!
+    </a>
+  </div>
+</div>
+<script>
+(() => {
+  const prompts = [
+    'Enjoying this post?',
+    'Like what you see?',
+    'Cough cough...',
+    'Posts like this, in your inbox!',
+    'Consider subscribing!',
+    'Support this blog!',
+    'Really appreciate it if you...'
+  ];
+  const el = document.getElementById('prompt');
+  el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+})();
+</script></p>
+<p>Large Language Models broke this system; we are now in the Third Age.</p>
+<p>Now the Web is flooded with text, images, video, and audio not made by any human. <a href="https://travel.yahoo.com/guides/italy/articles/italy-travel-guide-arrives-infuriating-123029797.html">Books exist</a> now which no human (including its supposed author) has ever read. We have reached a breaking point. Where before there was always at least one person who'd seen every piece of content, now it seems likely most content will never be read except by the unsuspecting fool who mistakes it for real work.</p>
+<div class="image-right" style="width: 330px;">
+  <a href="https://archive.org/details/sim_saturday-magazine_1834-08-23_5_137/mode/2up">
+    <img style="max-width: 100%;" src="/images/blog/castles.jpg">
+  </a>
+  <center><small style="display: block;">
+    Will we build castles to save us?<br>
+    The Saturday Magazine, 1834&ndash;08-23: Vol 5 Iss 137
+  </small></center>
+</div>
+
+<p>Yet in this new age, where attention is a scarce resource compared with the glut of content to consume it, we have found ourselves bereft of those who can wade through the cruft and the noise and surface real wisdom. The legacy gatekeepers exist still, but they guard their own hoards. The feeds exist but few resort to them. Algorithms are still king, but will they be able to keep up with this barrage of meaninglessness?</p>
+<p>We humans want to be distracted, to be entertained. That is what modern social media does for us. Yet people seek meaning too, and wisdom. In the prior age (and still somewhat today) that wisdom lies hidden in the muck, surfaced by legacy gatekeepers and by algorithmic feeds. I only wonder if this dam will hold.</p>
+<p>For centuries, the Romans kept their enemies at bay. Cities that once needed walls abandoned them. The inner lands were safe. Then the institutions failed. Enemy armies roamed the heartland and nowhere was safe. The walls returned.</p>
+<p>Speaking for myself these days I seek brand name goods on Amazon where I can. I find myself scrutinizing labels and FCC approval stickers. I buy what WireCutter recommends because at least I know that the product actually exists and has seen human hands. I prefer books published by Penguin/Random House or others of the Old Guard. I discover YouTubers via recommendation from those I already trust and treat algorithmic recommendations as inherently suspect. In short: I seek gatekeepers, not to surface diamonds in the rough, but to hold back the oncoming tide.</p>
+<p>Am I alone in this?</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/with-flying-pen-when-mortals-sleep</guid><pubDate>Mon, 10 Aug 2026 16:45:00 -0800</pubDate><category>history</category><category>alchemy</category><category>essay</category><title>With Flying Pen, When Mortals Sleep</title><link>https://brianschrader.com/archive/with-flying-pen-when-mortals-sleep/</link><description><![CDATA[<p>It was a sweltering August day. I made my way across the promenade, and through the bustling crowd, to a small line forming outside the Timkin Art Museum. Inside, I stumbled on <a href="https://en.wikipedia.org/wiki/Parable_of_the_Sower_(Bruegel)">Pieter Bruegel</a> the Elder's <em>Parable of the Sower</em>, painted in 1557, nearly five centuries ago.</p>
 <div class="image-right" style="width: 350px;">
   <img src="/images/blog/Pieter_Bruegel_Parable-of-the-Sower.webp" style="max-width: 100%;">
   <center><small style="line-height: 1.2; margin-top: 4px; display: block;">Photo: The Yorck Project (2002) <br>10.000 Meisterwerke der Malerei </small></center>
@@ -812,79 +876,4 @@ doesn't surprise me and i hope that it never would<br>
 <p>It's an antiquarian practice, yes. It's slow and difficult and time-consuming. But it's also a lot of fun to give and to receive.</p>
 <div class="footnote">
 <sup>1</sup> I am notorious for having a pack of gum on me.<br>
-</div>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/take-better-notes-by-hand</guid><pubDate>Mon, 30 Mar 2026 16:18:00 -0800</pubDate><category>personal</category><category>writing</category><title>Take Better Notes, By Hand</title><link>https://brianschrader.com/archive/take-better-notes-by-hand/</link><description><![CDATA[<p>Researching a topic is hard, because not only are you trying to puzzle together the causes and effects of a given problem or historical series of events, you're also looking out carefully for leads and new threads to pull. Falling down rabbit holes is common&mdash;and encouraged&mdash;but eventually you need to pull yourself back out and collect your thoughts. What's more, if you're reading books you don't own, you'll need some way to record the interesting bits to recall later.</p>
-<p>Of course, there are a lot of different ways to take notes and organize your thoughts. I've settled on this four-part system, here organized <strong>from least important to most important</strong>:</p>
-<ol>
-<li><strong>Pinboard</strong>: for links to PDFs &amp; webpages + full-text search.</li>
-<li><strong>Books.app</strong>: the iOS/macOS app for importing PDFs &amp; organizing them into Collections.</li>
-<li><strong>Book Tracker</strong>: <a href="https://booktrack.app">an app</a> that's great for saving long quotes via OCR.</li>
-<li>Good, old-fashioned <strong>paper notebooks</strong>.</li>
-</ol>
-<div class="image-right" style="width:300px;">
-  <img src="/images/blog/galileo-note-bookstrack.jpg" alt="a screenshot of the Book Tracker App on a quote captured via OCR" style="max-width: 100%;">
-  <center><small style="display: block; line-height: 1.3;">
-    Quote captured via OCR via Book Tracker<br/>
-    Photo: mine
-  </small></center>
-</div>
-
-<p>While the first three options in that list might seem obvious or even a bit boring (and I'll admit that is partly by design) the last one is the one I use the most extensively and is by far the most useful. There is something about writing stuff by hand that not only helps me remember and recall the information, but that helps me better engage with the topic at hand. Writing in paper notebooks is less distracting than using digital tools, it can be done basically anywhere there's ambient light, and it comes along with a real-life progress bar that physically takes up space on a shelf.</p>
-<p>Of course, paper notebooks as a knowledge base, have significant problems too. We did have a computer revolution for a reason, but there are several ways to mitigate and remove those downsides with good, old-fashioned note-taking techniques.</p>
-<p><div class="midroll newsletter-callout">
-  <div class="callout text-center">
-    <div id="prompt">
-      <noscript>
-        Enjoying this post?
-      </noscript>
-    </div>
-    <a
-      href="https://sendfox.com/brianschrader/"
-      title="Subscribe to the newsletter"
-      class="subscribe"
-      target="_blank"
-    >
-      ✉️&nbsp;Subscribe to the Newsletter!
-    </a>
-  </div>
-</div>
-<script>
-(() => {
-  const prompts = [
-    'Enjoying this post?',
-    'Like what you see?',
-    'Cough cough...',
-    'Posts like this, in your inbox!',
-    'Consider subscribing!',
-    'Support this blog!',
-    'Really appreciate it if you...'
-  ];
-  const el = document.getElementById('prompt');
-  el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
-})();
-</script></p>
-<h2>How to take Notes</h2>
-<div class="image-right" style="width:300px;">
-  <img src="/images/blog/index-notes.jpg" alt="a picture of my notebooks and of the listed index at the front" style="max-width: 100%;">
-  <center><small style="display: block; line-height: 1.3;">
-    Page numbered index at the front<br/>
-    Photo: mine
-  </small></center>
-</div>
-
-<p>All through school I was a terrible note-taker. I basically just wrote down whatever the teacher/professor did on the board and then failed to ever go back and read them. So when I decided to start taking physical notes again to collect my thoughts while reading, I knew I needed to have a better method to my madness.</p>
-<p>The simplest thing you can do to help yourself better decipher a physical notebook is this: date every page, every entry. Do this to basically everything you write, not just notes. It's silly, but it works.</p>
-<p>Next up: page numbers, and indicies.</p>
-<p>If the notebook doesn't have page numbers, add them. I usually only do the odd numbers, starting on the right side. It cuts the task down by half. Leave a few pages at the front or the back and use them to slowly build out an index of the topics you're covering. Reading a new book? Note that in the index. Topic change? It goes in the index. Interesting quote? Add it to the index. Date the entries. This all makes it super easy to find stuff later.</p>
-<p>Obviously, take notes and highlight parts you find useful.</p>
-<p>However, one of the biggest downsides to paper notebooks is that the space isn't infinite. If you come back to a topic at a later date after researching another idea, you necessarily have notes spread all throughout the book. What's more, you might have additional thoughts or ideas that you'd like to jot down mid-session and those can sometimes get lost in the flow of quotes and chapter summaries.</p>
-<div class="image-center" style="width: 100%;">
-  <img src="/images/blog/notes-page-layout.jpg" alt="a picture of my notebooks with the left-page-right-page dynamic" style="max-width: 100%;">
-  <center><small style="display: block; line-height: 1.3;">
-    Notes on the right, follow-up thoughts on the left<br/>
-    Photo: mine
-  </small></center>
-</div>
-
-<p>That's why, when I take notes, I only write on the right-most page. I write in pen, recording all sorts of quotes, observations, and mid-stream thoughts. However, if I need to puzzle out an idea or go back and point to a newer or relevant page, I can scrawl it, in pencil, either in the margin or on the left page! This is also useful in the index because, since the right pages are always odd-numbered, an even number in the index automatically conveys something "out of band" about the entry.</p>
-<p>It's not a formal system, but it's worked really well for me. I have tons of different notebooks each designated for different purposes: notes on books I'm reading, my random thoughts, writing ideas, specific research projects, and many more. That leads to a lot of time spent trying to find and recall quotes, notes, and ideas, but with the system I laid out here, it's really no trouble at all.</p>
-<p>I've increased the space of my own mind and, at least anecdotally, the results are promising.</p>]]></description></item></channel></rss>
+</div>]]></description></item></channel></rss>
