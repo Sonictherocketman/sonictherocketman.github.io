@@ -1,6 +1,6 @@
 slug: take-a-break-script-something
 published: Mon, 03 Jan 2022 at 04:58 AM
-updated: Wed, 12 Aug 2026 00:20:19 
+updated: Fri, 11 Sep 2026 22:30:29 
 title: Take a Break, Script Something
 author: Brian Schrader
 tags: software development, programming

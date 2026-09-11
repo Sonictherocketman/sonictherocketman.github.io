@@ -1,6 +1,6 @@
 slug: can-we-save-the-open-web
 published: Sat, 19 Mar 2016 at 02:26 PM
-updated: Wed, 12 Aug 2026 00:20:17 
+updated: Fri, 11 Sep 2026 22:30:28 
 title: Can we save the open web?
 author: Brian Schrader
 tags: open web

@@ -1,6 +1,6 @@
 slug: re-permanence
 published: Tue, 15 Jul 2014 at 06:19 AM
-updated: Wed, 12 Aug 2026 00:20:15 
+updated: Fri, 11 Sep 2026 22:30:25 
 title: Re: Permanence
 author: Brian Schrader
 status: publish

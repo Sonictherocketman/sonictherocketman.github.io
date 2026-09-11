@@ -1,6 +1,6 @@
 slug: reading-report
 published: Sat, 05 Nov 2022 at 04:52 AM
-updated: Wed, 12 Aug 2026 00:20:16 
+updated: Fri, 11 Sep 2026 22:30:27 
 title: Books & Reading Statistics
 author: Brian Schrader
 status: publish

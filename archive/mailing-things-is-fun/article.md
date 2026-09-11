@@ -1,6 +1,6 @@
 slug: mailing-things-is-fun
 published: Mon, 13 Apr 2026 at 04:06 PM
-updated: Wed, 12 Aug 2026 00:20:16 
+updated: Fri, 11 Sep 2026 22:30:26 
 title: Mailing things is Fun
 author: Brian Schrader
 tags: personal, essay, writing

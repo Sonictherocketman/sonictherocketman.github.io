@@ -1,6 +1,6 @@
 slug: the-road-to-glass--stone
 published: Tue, 07 Dec 2021 at 09:11 PM
-updated: Wed, 12 Aug 2026 00:20:18 
+updated: Fri, 11 Sep 2026 22:30:29 
 title: The Road to Glass & Stone
 author: Brian Schrader
 tags: music

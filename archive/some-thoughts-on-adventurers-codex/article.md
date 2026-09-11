@@ -1,6 +1,6 @@
 slug: some-thoughts-on-adventurers-codex
 published: Sun, 30 Apr 2023 at 12:39 AM
-updated: Wed, 12 Aug 2026 00:20:17 
+updated: Fri, 11 Sep 2026 22:30:27 
 title: Some Thoughts on Adventurer's Codex
 author: Brian Schrader
 tags:programming,software development,adventurerscodex
