@@ -1,5 +1,78 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>BiteofanApple</title><link>http://brianschrader.com</link><description>Thoughts, and ramblings about technology, programming, history,
- and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Fri, 11 Sep 2026 22:30:02 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/gatekeepers-are-dead-long-live-the-gatekeepers</guid><pubDate>Mon, 24 Aug 2026 16:09:00 -0800</pubDate><category>essay</category><category>internet</category><category>ai</category><category>social media</category><title>Gatekeepers are Dead, Long Live the Gatekeepers</title><link>https://brianschrader.com/archive/gatekeepers-are-dead-long-live-the-gatekeepers/</link><description><![CDATA[<p>Before the Internet things were different; this was the First Age.</p>
+ and whatever else I'm interested in.</description><language>en-US</language><image><url>https://www.gravatar.com/avatar/11b074a636e00292c98e3e60f7e16595</url><title>Brian Schrader</title><link>http://brianschrader.com</link></image><lastBuildDate>Mon, 14 Sep 2026 16:09:40 +0000</lastBuildDate><generator>sonicrocketman-feed-generator/v2.0</generator><atom:link href="https://brianschrader.com/rss.xml" rel="self" type="application/rss+xml"/><category>programming</category><category>history</category><category>science</category><category>personal</category><category>technology</category><item><guid isPermaLink="true">http://brianschrader.com/archive/the-medieval-origin-of-the-phd-dissertation</guid><pubDate>Mon, 14 Sep 2026 16:08:00 -0800</pubDate><category>history</category><category>academia</category><category>essay</category><category>dead end</category><title>The Medieval Origin of the Ph.D. Dissertation</title><link>https://brianschrader.com/archive/the-medieval-origin-of-the-phd-dissertation/</link><description><![CDATA[<p>Radical change can seem small when seen up close. I was deep in the weeds, reading again about <a href="/archive/with-flying-pen-when-mortals-sleep/">Mr. George Starkey</a>, a doctor and alchemist living in London in the 1650s. Starkey's life has been a subject of some study by historians of science precisely because a lot of his work survives. We have his numerous published works, those of his contemporaries, and his especially valuable private work diaries.</p>
+<p>It was in the passages of one of these diaries that <a href="https://books.google.com/books?id=qecTvTXXLPIC">Dr. Lawrence Principe and Dr. William Newman</a> puzzled through precisely how Starkey and his collaborators (Newton, Boyle, and Van Helmont) formulated and practiced what would become the modern scientific method. Starkey, for example, records his experiments in a traditional Scholastic style. In those days schools taught using a method derived originally from Roman jurisprudence later adopted for use in theology: the disputation. There were multiple kinds of disputation, but in each two people debated the merits of a question or <em>quaestio</em>. The important change: Starkey's opponent is Nature herself. He worked with his alchemical furnace to burn, boil, and distill the essence of matter. Hence where Starkey's experiments fail he writes that his question has been <em>refuted by the fire</em>.</p>
+<blockquote>
+<p>[Starkey] actually carried his Scholastic education into the laboratory and used it there. At the same time he augmented the standard divisions of argument with new categories more appropriate to his practical experimentation, such as his "Observations,"
+"Conjectural Conclusions," "Notables," and "Hands-On Trials."</p>
+<p><a href="https://books.google.com/books?id=qecTvTXXLPIC">Newman &amp; Principe</a>, pg 171.</p>
+</blockquote>
+<p><div class="midroll newsletter-callout">
+  <div class="callout text-center">
+    <div id="prompt">
+      <noscript>
+        Enjoying this post?
+      </noscript>
+    </div>
+    <a
+      href="https://sendfox.com/brianschrader/"
+      title="Subscribe to the newsletter"
+      class="subscribe"
+      target="_blank"
+    >
+      ✉️&nbsp;Subscribe to the Newsletter!
+    </a>
+  </div>
+</div>
+<script>
+(() => {
+  const prompts = [
+    'Enjoying this post?',
+    'Like what you see?',
+    'Cough cough...',
+    'Posts like this, in your inbox!',
+    'Consider subscribing!',
+    'Support this blog!',
+    'Really appreciate it if you...'
+  ];
+  const el = document.getElementById('prompt');
+  el.textContent = prompts[Math.floor(Math.random(0) * prompts.length)];
+})();
+</script></p>
+<div class="image-right" style="width: 300px;">
+  <a href="https://books.google.com/books?id=qecTvTXXLPIC&printsec=frontcover#v=onepage&q&f=false"><img style="max-width: 100%;" src="/images/blog/starkey-dichotomy.jpg"></a>
+  <center><small style="display: block;">
+    <i>Alchemy Tried in the Fire: Starkey, Boyle, and the Fate of Helmontian Chymistry</i><br> by William R. Newman, Lawrence M. Principe
+  </small></center>
+</div>
+
+<p>This divergence into Starkey's methods led me straight to the form and function of medieval Scholastic learning which was heavily theological, legal, and philosophical. The Scholastics held firm to the philosopher's maxim: <q>When in doubt, draw a distinction,</q> and we see Starkey do precisely this on several occasions.</p>
+<p>This left me with a <em>questio</em> of my own: when did the disputation die off? Was that somehow tied up with the methods of science Starkey and others were developing?</p>
+<p>This is the usual form of my research, and the dual blessing and curse of reading non-fiction. It raises questions, then provides footnotes as enticing breadcrumbs to follow to the answer.</p>
+<p>That lead me to Brian Lawn's work on <a href="https://books.google.com/books?id=NF6EZFkfo9QC">The Rise and Decline of the Scholastic Quaestio Disputata</a>, a dense if interesting read on how precisely the disputation arose in post-Roman Europe as the pinnacle of scholarship, thrived in the middle ages, and died out in the early nineteenth century. In it, Lawn also digs into the work of William of Occam, including his famous <a href="https://en.wikipedia.org/wiki/Occam's_razor">razor</a> and includes a fascinating discussion of <a href="https://en.wikipedia.org/wiki/Nicole_Oresme">Nicole Oresme</a> who was one of the first scholars to attempt to quantify motion (more on that another time). Over time the disputation became increasingly formalized, written down, and became a requirement for those seeking the degree of Master at university. Our old friend Starkey did one at Harvard (now lost).</p>
+<p>A new question arose:</p>
+<blockquote>
+<p>Masters don't do disputations anymore; they write theses. When did that change? And what about Ph.Ds? They write <em>dissertations</em>. Are they related to <em>disputations</em>? Both sometimes involve an oral thesis defence. Is that a clue?</p>
+</blockquote>
+<p>A cursory investigation told me that the modern Ph.D. arose in the mid-nineteenth century. That timing is a bit suspicious, isn't it?</p>
+<p>Unfortunately here is where the footnote trail starts to run thin. In 1981, Thomas Malone published his <a href="https://www.proquest.com/docview/303183103/abstract/EA4729DD3E4E40E2PQ/1">doctoral thesis</a> which seemed to be my best lead. Thankfully, you can get <a href="/archive/you-have-access-to-almost-any-book/">almost any book</a> you want if you really try.</p>
+<p>Malone's work is interesting and covers the history of how American Universities at the dawn of the twentieth century were modernized and new schools were formed following the model of German research universities like Göettingen. Relying heavily on the work of <a href="https://www.cambridge.org/us/universitypress/subjects/history/european-history-after-1450/state-society-and-university-germany-17001914">Charles McClelland</a>, Malone describes how these schools emerged from the reforms of the late eighteenth century which transformed the role of the schools and their professor-class into the teaching-research hybrid we see today. Before that time, universities and professors were repositories and collectors of knowledge, not the elicitors of new knowledge.</p>
+<div class="image-center" style="">
+  <img style="max-width: 100%;" src="/images/blog/Göttingen_asv2022-06_img42_Uni_Aula_Wilhelmsplatz.jpg">
+  <center><small style="display: block;">
+    A building at the University of Göettingen<br>
+    A.Savin, FAL, via Wikimedia Commons
+  </small></center>
+</div>
+
+<p>If German universities were the source of this change, then it'd be there where I would find the answers to my questions. Unfortunately McClelland's work is too broadly scoped to answer my specific question and Malone's work is scoped to the impact of the Ph.D. in the United States. However there was one clue hidden in the conclusion of Malone's work.</p>
+<blockquote>
+<p>A study of the history of the Ph.D. degree in Germany and the accompanying [dissertation] would provide more background for the Ph.D. dissertation in the United States. Such a study would necessitate visits to the German universities such as Göttingen and Halle. Supposedly the libraries and archives of German universities would yield an accurate account of the development of the Ph.D. dissertation in Germany. Such a study would be significant because the Ph.D. degree and the [dissertation] are, to a large extent, taken from the German university.</p>
+<p><a href="https://www.proquest.com/docview/303183103/abstract/EA4729DD3E4E40E2PQ/1">Thomas Malone</a>, pg 153.</p>
+</blockquote>
+<p>A part of me wants this connection to be true, in part because I like traditions. I like to know that our present is connected to the past and while it seems that the modern dissertation is indeed related to the medieval disputation in that it arose while the other died out, the precise nature of that connection is still unclear to me. We know that the Ph.D. dissertation (and the master's thesis to a similar extent) was formulated right as the disputation died away. Universities across the western world phased out the latter right as the former came into being in the time between 1820 and 1860. From there the trail goes cold. I tried to dig in further, following footnotes as I am wont to do, but McClelland's sources are all in German. I'm not above learning a little of a language for this work (I did learn a bit of Latin a few years ago), nor am I above screenshotting a dozen pages to throw into Google Translate, but this task is simply too big for me to tackle.</p>
+<p>Little research has been done in this area since 1981, much to my surprise, and so it seems that we simply do not know how and where the disputation died and was replaced by the dissertation. We do not know if the modern thesis defence is a medieval tradition carried into the modern day. I suspect as much, but cannot say. We simply will not know until someone goes to Göttingen to find out.</p>
+<hr />
+<p><strong>Errata:</strong> Along with this post, I am debuting an <a href="/archive/ai-usage-policy">AI usage policy</a> for this blog. It's in the sidebar for future reference.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/gatekeepers-are-dead-long-live-the-gatekeepers</guid><pubDate>Mon, 24 Aug 2026 16:09:00 -0800</pubDate><category>essay</category><category>internet</category><category>ai</category><category>social media</category><title>Gatekeepers are Dead, Long Live the Gatekeepers</title><link>https://brianschrader.com/archive/gatekeepers-are-dead-long-live-the-gatekeepers/</link><description><![CDATA[<p>Before the Internet things were different; this was the First Age.</p>
 <p>If you wanted to get your message out there you needed either a lot of money, fame, or power. Usually you needed some combination of all three. Barring that you needed to find someone with money, fame, or power (or some combination) who was also willing to help you. These people were often elites of some kind. They could be professionals with an industry journal, the editor of a local magazine, a rich patron with connections, or even political party officials. These were the people who held the keys needed to pass into the public sphere: gatekeepers. Their job was to search out people of interest, people with something interesting to say, and promote them. Musicians needed talent scouts, authors needed agents, writers needed editors.</p>
 <div class="image-right" style="width: 350px;">
   <a href="https://archive.org/details/sim_saturday-magazine_1836-03_8_240/mode/2up">
@@ -853,27 +926,4 @@ doesn't surprise me and i hope that it never would<br>
 <p>If we make it cheaper (by subsidizing care) then we will run into another problem. We physically don't have enough doctors to see all those people. We cannot simply pay doctors more because, no matter how many times you double a person's salary, they cannot double their patient count. We've found another limiting reagent.</p>
 <p>The lesson in all this is that no matter how much you push on one factor, work to increase its capacity, there are hidden walls, hidden assumptions, that will become relevant only once the limit in your current focus is removed. This is  the curse of supposed panacea. A thing which looks to solve a problem "for good" does indeed remove one particular problem, only to reveal that it was concealing other problems in its shadow. I've heard people use the refrain that "success hides problems", but problems also hide problems.</p>
 <p>We can make progress, of course, and we often do. But the universe has a cruel sense of humor. Sometimes our solutions can summon problems of their own. Geopolitics is full of such scenarios. Countries look to electrify, to move away from the dangerous and fragile world of fossil fuels, only to become reliant on a <em>cartel nuovo</em> of battery manufacturers.</p>
-<p>As humans, we struggle to see beyond the first derivative. We can predict the response to our actions, but not the response to that response. As such, there will always be limiting reagents, always another reason why you're too tired to write that novel of yours.</p>]]></description></item><item><guid isPermaLink="true">http://brianschrader.com/archive/mailing-things-is-fun</guid><pubDate>Mon, 13 Apr 2026 16:06:00 -0800</pubDate><category>personal</category><category>essay</category><category>writing</category><title>Mailing things is Fun</title><link>https://brianschrader.com/archive/mailing-things-is-fun/</link><description><![CDATA[<p>Sometimes I can't tell if I'm discovering a cool new hobby, or just getting old. Regardless, today I come to you with a tale of a little endeavor of mine.</p>
-<p>In early 2020, a family member took a job far from home and, because of the nature of the work, would therefore be out of cell service for large swaths of time. As a gag, we decided to communicate via long-form letters over email as well as the occasional postcard. Later that year, in the grips of a pandemic, my D&amp;D group went virtual, but that came with several drawbacks&mdash;including the sudden lack of the ability to pawn chewing gum off of me during games.<sup>1</sup> So, before our first virtual game, I mailed every one a pack of gum, to be opened on the call.</p>
-<p>It was fun, a cheap little laugh. However in the time since, my occasional appreciation for the mail has become nothing short of a deep and profound predilection.</p>
-<h2>You Can Just Mail Things</h2>
-<p>Receiving postcards is fun. Mailing them is even more so.</p>
-<p>I figure most people out there have sent a postcard to a friend or family member when they're on vacation (or at least the occasional holiday card). But remember, you need no special occasion to use the mail. <em>You can just mail things</em>. Go somewhere fun, like maybe an art museum? You know, they have postcards there. Does a work of art remind you of an inside joke with an old friend? Send them the postcard of it. It's $1 (+stamps). In a world of free and ubiquitous instant messenger apps, a card in the mail has a truly special significance.</p>
-<div class="image-center">
-  <img src="/images/blog/desk-cards.jpeg" style="max-width: 100%;">
-  <center><small>A few of the cards and letters I've received (or have still waiting in my stockpile) along with a notecard of how much postage is for domestic and international letters.</small></center>
-</div>
-
-<p>Personally, I like to collect postcards from cool places and send them out to friends I haven't seen in a while, or who live far away. I could text them, and I often do, but it's never as special. What's more, if you receive a postcard from a friend, mail one to them in return! They'll smile just as much as you did.</p>
-<p>If you get hooked, don't worry. There's a plenty-deep-enough rabbit hole to fall down. In that case, grab a pen and some nice paper. Write a letter. It's hard work, and will make you appreciate the ease and rapidity of text messaging. But a letter is more than a way to communicate. It's an art form.</p>
-<div class="image-right" style="width: 300px;">
-  <img src="/images/blog/template-letter.jpeg" style="max-width: 100%;">
-  <center><small>I <i>love</i> writing letters.</small></center>
-</div>
-
-<p>Read any old letters. <a href="https://news.lettersofnote.com/p/i-loathe-i-abhor-the-sea-and-all">Try Charles Darwin's</a>. They're a mix of both personal correspondence and artful prose. A letter isn't a text; it isn't mechanical like that. Today we talk so much, yet we convey so little about ourselves with those words.</p>
-<p>My advice to folks out there is this: write, <a href="/archive/blogging-writing-musing-and-thinking/">to yourself</a> or in letters to others. When you do so, try to be eloquent. Writing helps you practice thinking and doing so in lofty prose improves your vocabulary and your eloquence. Make a pen-pal. Write to them genuinely, honestly. Work to shed the carapace of cynicism and irony that encases each of us these days.</p>
-<p>It's an antiquarian practice, yes. It's slow and difficult and time-consuming. But it's also a lot of fun to give and to receive.</p>
-<div class="footnote">
-<sup>1</sup> I am notorious for having a pack of gum on me.<br>
-</div>]]></description></item></channel></rss>
+<p>As humans, we struggle to see beyond the first derivative. We can predict the response to our actions, but not the response to that response. As such, there will always be limiting reagents, always another reason why you're too tired to write that novel of yours.</p>]]></description></item></channel></rss>
