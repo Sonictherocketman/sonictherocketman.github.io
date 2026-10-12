@@ -1,10 +1,11 @@
 slug: because-it-speaks-in-words
 published: Mon, 29 Jun 2026 at 04:01 PM
-updated: Fri, 11 Sep 2026 22:30:28 
+updated: Fri, 11 Sep 2026 22:30:28
 title: Because it Speaks in Words
 author: Brian Schrader
 tags: essay, technology
 status: publish
+thread: ai-philosophy
 hero: /images/blog/moon-venus-jupiter.jpeg
 summary: Grappling with the true power of words.
 

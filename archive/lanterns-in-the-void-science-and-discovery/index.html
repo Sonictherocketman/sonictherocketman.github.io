@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lanterns in the Void: Science and Discovery - BiteofanApple</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fediverse:creator" content="@sonicrocketman@mastodon.social">
+    <link rel="icon" type="image/png" href="/images/misc/logo-sm.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/misc/favicon.png">
+    <link rel="preload" href="/bin/Newsreader/Newsreader-VariableFont_opsz,wght.ttf" as="font" />
+
+    <link rel="stylesheet" type="text/css" href="/bin/css/stylesheet.css?v=3.0">
+    <link rel="stylesheet" type="text/css" href="/bin/css/mobile.css?v=3.0">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"/>
+    <link rel="alternate" type="application/json" title="JSON Feed" href="/feed.json"/>
+    
+  <meta property="og:title" content="Lanterns in the Void: Science and Discovery" />
+  
+  <meta property="og:description" content="Knowledge is a lantern in the void if ignorance. Let&#39;s take that analogy a little too seriously." />
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://brianschrader.com/archive/lanterns-in-the-void-science-and-discovery/" />
+  
+  <meta property="og:image" content="/images/blog/tunnel.600.jpg" />
+  
+
+  </head>
+  <body>
+    <div id="content">
+      <div class="nav-container">
+  <nav class="nav">
+    <div class="nav-item nav-brand">
+      <a href="/" class="site-title">
+        BiteofanApple
+      </a>
+      <span
+        class="author-tag hide-on-mobile"
+      >
+        by <a href="/about/">Brian Schrader</a>
+      </span>
+    </div>
+    
+    <div class="nav-item"><a href="/archive/">Archive</a></div>
+    <div class="nav-item"><a href="/about/">About</a></div>
+    <div class="nav-item"><a href="https://skyrocket.software">Apps</a></div>
+    
+  </nav>
+</div>
+      
+  <div class="bars">
+    <div class="main-bar">
+      <article class="h-entry">
+        <a href="/" class="u-author"></a>
+        <div class="post">
+          <div class="article-title">
+            <h1 class="p-name">
+              <a href="/archive/lanterns-in-the-void-science-and-discovery/" title="Lanterns in the Void: Science and Discovery">
+                
+                Lanterns In The Void: Science And Discovery
+                
+              </a>
+            </h1>
+            <small>
+              <time class="dt-published" datetime="2026-10-12T16:57:00">
+                October 12, 2026
+              </time>
+            </small>
+          </div>
+
+          <div class="article-content e-content">
+            <script src="/other-projects/curve-fill/curve-fill.js"></script>
+
+<p>One of the fascinating things about new technologies or scientific discoveries is how they expose the cracks in our understanding of the world. New distinctions present themselves as evidence emerges to challenge the categories we previously constructed.</p>
+<p>There are tons of examples of this, but one that I particularly like is a historical example. Aristotle devised a method of categorizing living creatures and after his death until the fifteenth-century, that system worked pretty well for European and Middle-Eastern scholars. Animals and plants fit into neat and tidy categories and their commonalities were explained by the relations of those categories. It wasn't until the return of settlers from the New World, who brought back new kinds of animals, did this paradigm shift.</p>
+<p>If your system decrees that birds and mammals are different because one lays eggs and has a beak, then your system works mostly fine right up until the discovery of the platypus. Previously a distinction that seemed so complete, so useful, is gone and you're forced to redefine what you mean by <q>mammal</q>.</p>
+<div class="image-right" style="width:310px;">
+  <img src="/images/blog/tunnel.600.jpg" alt="" style="max-width: 100%;">
+  <small><center><a href="https://commons.wikimedia.org/wiki/File:Lost_Tunnel_-_In_Darkness_(15745509560).jpg">Kecko from Northeast corner of, Switzerland</a> <a href="https://creativecommons.org/licenses/by/2.0"><br>CC BY 2.0</a>, via Wikimedia Commons</center></small>
+</div>
+
+<p>Scientific discovery and technological innovation, at their best, are like this. They seek out new forms of distinction between things and challenge our ideas about how the world works. <a href="https://www.goodreads.com/quotes/52212-all-knowledge-is-one-when-a-light-brightens-and-illuminates">It's often said</a> that science is a lantern that illuminates a portion of the dark void of ignorance. The more lanterns we hang the more of the void we can traverse and understand.</p>
+<p>In this analogy, the goal is implicitly to hang more and more lanterns, to explore more and more of the terrain. the void is not a hallway with rigid walls, it's a vast expanse of unknown hills and utter blackness. If we imagine that one such explorer hangs lights at regular intervals then, over the course of their work, they forge a trail through the void of ignorance that others can follow. Their work can be forgotten over time, the lanterns may dim with age, but so long as others follow along, the light of knowledge is maintained.</p>
+<p>Again, the goal is to explore the terrain, to illuminate it fully. If we assume the boundaries are fixed, we can visualize this process. To maximise the number of lanterns, it then makes sense to maximize the number of explorers searching this wilderness.</p>
+<p><div
+  id="single-explorer-container"
+  class="image-right" style="text-align:center; width: 320px;"
+>
+  <canvas id="single-explorer-canvas"></canvas>
+  <noscript>
+    <img src="/images/blog/explorer.jpg">
+  </noscript>
+  <small>An explorer in the wilderness.</small>
+</div></p>
+<script>
+    CurveFill('#single-explorer-canvas', {
+        W: 300, H: 250,
+        splitTimes: [],
+        showPlots: false,
+        showBreakout: false,
+        explodeTime: Infinity,
+    });
+</script>
+
+<p>To do this you could train more and more explorers as a percentage of the population, or you could take for granted that <a href="https://ncses.nsf.gov/pubs/nsb20245/u-s-stem-workforce-size-growth-and-employment">24% of (American) workers</a> do <em>something</em> vaguely scientific or technological, then simply increasing the overall population would, on net, result in more technological exploration and innovation. This has been a <a href="https://www.penguinrandomhouse.com/books/636499/one-billion-americans-by-matthew-yglesias/">political talking point for years</a>.</p>
+<p>I do not wish to indulge in politics for the moment. It will suffice to say that the above are some of the common techniques proposed to increase the number of people searching the vast wilderness of potential knowledge.</p>
+<p>It's important to pause here and to remind ourselves why it is we want to explore this terrain in the first place. Scientific discoveries and technological innovations come in all shapes and sizes, and with all manner of consequences. As much as we all wish that science could <em>just</em> make positive discoveries, not everything discovered will be the polio vaccine. Some things will be useless, others detrimental. Computers have given us the great and the terrible, Wikipedia and Instagram. Chemistry has given us Tylenol and mustard gas.</p>
+<p>However today we're seeing a different kind of revolution, one that is far from beloved and far from understood. For millenia we've compiled knowledge, so much that it's impossible for anyone, or any thing to parse or understand. Yet over time we've developed techniques to better retain our past discoveries and to uncover connections hidden in what we already know. Web search is like this. Where before one had to search out books either by recommendation or the footnote trail, one can now trawl through an entire web of content made, updated, and shared by all of humanity. Human researchers then connect the dots and illuminate the gaps in what we know.</p>
+<p>Things are possible today that would have been unthinkable before the invention of the Internet, not because the pieces of knowledge didn't exist but because the connections between each piece were too difficult to find.</p>
+<p>Think of the squiggling line in the plot above, the trails in the void. Sometimes gaps emerge, even between trails very close together, but no one has ventured yet between them. The gaps are manageable, even reasonable, but no one has bothered with them yet. Progress in science is driven primarily by two factors:</p>
+<ul>
+<li>Is there money in it?</li>
+<li>Is some researcher interested in it?</li>
+</ul>
+<p>Without at least one (and often both) of these two factors, the gaps in our knowledge will remain no matter how manageable they are to close. Even with a million mathematicians working 24/7, some problems will remain open simply because no one finds them engaging to work on.</p>
+<p><div
+  id="many-explorer-container"
+  class="image-center"
+  style="text-align:center; width: 620px;"
+>
+  <canvas id="many-explorer-canvas"></canvas>
+  <noscript>
+    <img src="/images/blog/explosion.jpg">
+  </noscript>
+  <small>An explosion of explorers.</small>
+</div></p>
+<script>
+    CurveFill('#many-explorer-canvas', {
+        W: 600, H: 250,
+        splitTimes: [2, 4, 6, 8, 10, 12],
+        explodeTime: 12,
+        maxRuntime: 16,
+        showBreakout: false,
+    });
+</script>
+
+<p>That changes if you're able to, in part, divorce scientific exploration from being directly related to the number of human scientists there are. In this case, suddenly the kinds of problems tackled can be whatever's left unsolved. This kind of exploration still costs money to perform, but it's an amount perhaps more commensurate with the value of the problem. Cheap problems get cheap solutions.</p>
+<p>New discoveries can be made precisely because there are simply more and faster wanderers in the void.</p>
+<p>In part this is what I think we're seeing regarding the effects of Large Language Models in modern mathematics and, to some extent, in software. These fields are easily testable and verifiable and so their work is more easily confirmed by human scientists. The techniques for solving the given problem exist, the knowledge to find a solution or build a piece of software is out there. The missing piece was the effort by a willing human (or company) to solve or build it.</p>
+<p>However, let's not despair for the death of modern science and technology. Machine learning techniques of all kinds have <a href="https://en.wikipedia.org/wiki/Bitter_lesson">a fundamental flaw</a>: they rely on human knowledge. Older forms of machine learning require expert algorithms or special tuning by humans. LLMs have general algorithms but rely on human works for their training data.</p>
+<p>These tools are therefore <em>inherently backward looking</em>. They see what has been made by humans in the past and are trained to imitate it. Doing so they can identify gaps in our understanding, even these days infer novel connections between pieces of data! Yet they cannot replace who we are, not yet anyway, because they can only look to the past, <em>our</em> past.</p>
+<p>This <a href="https://www.nature.com/articles/d41586-026-02804-x">article in Nature</a> the other day intrigued me. Could an LLM, trained on scientific literature published before 1915 come up with Einstein's theory of General Relativity? Putting aside the many technical issues with this kind of work, the answer was clear: no. Yet that isn't surprising, at least to me. There was lots to learn in the pre-Einsteinian literature. Radio and television, of which the latter was still decades away, were all baked in to the physics of Maxwell's Equations and materials science. Nothing about the solar system or much of cosmology, requires Einstein's Great Work to understand.</p>
+<p>Yet the work these machines can't do is precisely the kind we value the most. It's the kind of knowledge that pushes us forward not in incremental steps but in foundational, paradigm-shifting ways. No amount of <q>filling in the gaps</q> will substitute for this work. Aristotle could have collected every leaf, bird, and squirrel in Europe and he still would never have predicted the platypus. Only <a href="/archive/chemical-telescopes-and-the-process-of-science/">new evidence</a>, and new modes of thought can do that.</p>
+<p><div
+  class="image-center"
+  style="text-align:center; width: 600px;"
+>
+  <img src="/images/blog/breakout.jpg" style="max-width: 100%;">
+  <small><center>We need to focus on breaking out of our boxes.</small></small>
+</div>
+</p>
+<p>When we defined the analogy above, we made an important assumption: that the space was finite. We did this because otherwise we can't plot the picture; you can't draw infinite space, but this assumption is false. In order to do science, we must draw boundaries, set limits on the acceptable forms and topics of discussion. This is akin to drawing the box in the visuals above. The void of our ignorance grows faster than the light of our knowledge and so there is always more to know, always further questions we can ask. This isn't constrained to science and technology either. These latest advancements are pushing us to further discern what <a href="https://www.noemamag.com/a-new-kind-of-creative-poverty/">is it we do here</a>. An algorithm trained on data established within a bounding box of constraints cannot venture beyond those constraints.</p>
+<p>Perhaps with this latest intelligence explosion we can refocus ourselves, not on filling in the gaps, but on breaking out of the boxes we have constructed.</p>
+          </div>
+
+          <hr />
+
+          <div style="display: flex; justify-content: space-between;">
+            <div>
+              
+              
+              <small>
+                Filed under:
+                <span class="tags article-content">
+                  
+                    <a href="/tags.html#tag-essay" title="essay" class="tag">essay</a>,
+                  
+                    <a href="/tags.html#tag-science" title="science" class="tag">science</a>,
+                  
+                    <a href="/tags.html#tag-ai" title="ai" class="tag">ai</a>
+                  
+                </span>
+              </small><br />
+              
+              <small style="display: block;" class="u-in-reply-to h-cite article-content">
+                Have thoughts?
+                <a href="/about/#:~:text=Contact%20Me-,Shoot%20me%20an%20email,-at">
+                Shoot me an email</a>.
+              </small>
+            </div>
+          </div>
+
+          
+
+          
+          
+          <div class="thread-strip">
+            <div class="thread-eyebrow">
+              Part of &middot; <a href="/threads.html#thread-ai-philosophy/">A.I. &amp; The Philosophy of Science</a>
+            </div>
+            <div class="thread-track">
+              
+                
+                <span class="thread-step current">
+                  <div class="thread-dot"></div>
+                  <span class="thread-step-title">Lanterns in the Void: Science and Discovery</span>
+                </span>
+                
+              
+                
+                <a class="thread-step" href="/archive/because-it-speaks-in-words/">
+                  <div class="thread-dot"></div>
+                  <span class="thread-step-title">Because it Speaks in Words</span>
+                </a>
+                
+              
+                
+                <a class="thread-step" href="/archive/words-are-a-leaky-abstraction/">
+                  <div class="thread-dot"></div>
+                  <span class="thread-step-title">Words are a Leaky Abstraction</span>
+                </a>
+                
+              
+              
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    </div>
+    <div class="side-bar">
+      
+<div class="promotion">
+  
+  <script src="https://shoutouts.page/embed/sRGtA2wwnhW-dAPFXEBy.js" defer></script>
+  
+</div>
+
+
+<div id="search"></div>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "/archive" });
+  });
+</script>
+
+<div class="newsletter-callout">
+  <a
+    href="https://sendfox.com/brianschrader/"
+    title="Subscribe to the newsletter"
+    class="subscribe text-center"
+    target="_blank"
+  >
+    ✉️ Newsletter
+  </a>
+</div>
+
+
+
+<div class="sidebar-section hide-on-mobile" style="border-top: none;">
+  <div class="sidebar-label">
+    <a href="/threads.html#thread-ai-philosophy/" style="color: #666; text-decoration: none;">A.I. &amp; The Philosophy of Science</a>
+  </div>
+  <div class="thread-posts">
+    
+    <div class="thread-post">
+      <span class="tdot tdot-current"></span>
+      
+        <span style="font-size:0.8rem; color:#1a1a1a; font-style:italic; line-height:1.4;">
+          Lanterns In The Void: Science And Discovery
+        </span>
+      
+    </div>
+    
+    <div class="thread-post">
+      <span class="tdot"></span>
+      
+        <a href="/archive/because-it-speaks-in-words/">
+          Because It Speaks In Words
+        </a>
+      
+    </div>
+    
+    <div class="thread-post">
+      <span class="tdot"></span>
+      
+        <a href="/archive/words-are-a-leaky-abstraction/">
+          Words Are A Leaky Abstraction
+        </a>
+      
+    </div>
+    
+    
+  </div>
+</div>
+
+
+<div class="sidebar-section">
+<div class="sidebar-label">Featured</div>
+<ul class="sidebar-list">
+  
+  <li><a href="/archive/with-flying-pen-when-mortals-sleep/" title="With Flying Pen, When Mortals Sleep" rel="nofollow">With Flying Pen, When Mortals Sleep</a></li>
+  
+  <li><a href="/archive/would-you-believe-that-this-is-it/" title="Would You Believe that This is It?" rel="nofollow">Would You Believe that This is It?</a></li>
+  
+  <li><a href="/archive/load-bearing-walls/" title="Load-Bearing Walls" rel="nofollow">Load-Bearing Walls</a></li>
+  
+  <li><a href="/archive/on-the-lies-depression-tells/" title="On the Lies Depression Tells" rel="nofollow">On the Lies Depression Tells</a></li>
+  
+  <li><a href="/archive/narrative-structure-and-the-principle-of-least-action/" title="Narrative Structure and the Principle of Least Action" rel="nofollow">Narrative Structure and the Principle of Least Action</a></li>
+  
+  <li><a href="/archive/science-models-and-squeaking-lead/" title="Science, Models, and Squeaking Lead" rel="nofollow">Science, Models, and Squeaking Lead</a></li>
+  
+  <li><a href="/archive/on-handwriting-and-switching-to-cursive/" title="On Handwriting and Switching to Cursive" rel="nofollow">On Handwriting and Switching to Cursive</a></li>
+  
+  <li><a href="/archive/on-the-web-the-best-outcome-is-email/" title="On the Web, the Best Outcome is Email" rel="nofollow">On the Web, the Best Outcome is Email</a></li>
+  
+  <li><a href="/archive/the-web-as-a-social-network/" title="The Web as a Social Network" rel="nofollow">The Web as a Social Network</a></li>
+  
+</ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Recent</div>
+  <ul class="sidebar-list">
+    
+    <li><a href="/archive/that-first-and-last-question/" title="That First and Last Question" rel="nofollow">That First and Last Question</a></li>
+    
+    <li><a href="/archive/the-medieval-origin-of-the-phd-dissertation/" title="The Medieval Origin of the Ph.D. Dissertation" rel="nofollow">The Medieval Origin of the Ph.D. Dissertation</a></li>
+    
+    <li><a href="/archive/gatekeepers-are-dead-long-live-the-gatekeepers/" title="Gatekeepers are Dead, Long Live the Gatekeepers" rel="nofollow">Gatekeepers are Dead, Long Live the Gatekeepers</a></li>
+    
+    <li><a href="/archive/with-flying-pen-when-mortals-sleep/" title="With Flying Pen, When Mortals Sleep" rel="nofollow">With Flying Pen, When Mortals Sleep</a></li>
+    
+    <li><a href="/archive/what-is-potential-energy-really/" title="What is Potential Energy, Really?" rel="nofollow">What is Potential Energy, Really?</a></li>
+    
+    <li><a href="/archive/friendship-is-an-exponential-function/" title="Friendship is an Exponential Function" rel="nofollow">Friendship is an Exponential Function</a></li>
+    
+    <li><a href="/archive/because-it-speaks-in-words/" title="Because it Speaks in Words" rel="nofollow">Because it Speaks in Words</a></li>
+    
+    <li><a href="/archive/would-you-believe-that-this-is-it/" title="Would You Believe that This is It?" rel="nofollow">Would You Believe that This is It?</a></li>
+    
+    <li><a href="/archive/the-true-expense-of-nature/" title="The True Expense of Nature" rel="nofollow">The True Expense of Nature</a></li>
+    
+    <li><a href="/archive/a-field-guide-to-learning/" title="A Field Guide to Learning" rel="nofollow">A Field Guide to Learning</a></li>
+    
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Also me</div>
+  <ul class="group-list">
+    <li><a href="https://mastodon.social/@sonicrocketman" title="Mastodon" rel="nofollow me">Mastodon</a></li>
+    <li><a href="https://github.com/sonictherocketman/" title="GitHub" rel="nofollow me">GitHub</a></li>
+    <li><a href="https://en.gravatar.com/sonicrocketman" title="Gravatar" rel="nofollow me">Gravatar</a></li>
+    <li><a href="https://sonicrocketman.bandcamp.com" title="Bandcamp" rel="nofollow me">Bandcamp</a></li>
+    <li><a href="https://scholar.google.com/citations?user=tQi0VJ0AAAAJ" title="Google Scholar" rel="nofollow me">Google Scholar</a></li>
+    <li><a href="https://www.linkedin.com/in/sonicrocketman/" title="LinkedIn" rel="nofollow me">LinkedIn</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Resources</div>
+  <ul class="sidebar-list">
+    <li><a href="/archive/bibliography" title="Bibliography">Bibliography</a></li>
+    <li><a href="/archive/bookshelf" title="Book Recommendations">Book Recommendations</a></li>
+    <li><a href="/archive/recipes/" title="Food and Drink Recipes">Food &amp; Drink Recipes</a></li>
+    <li><a href="/archive/reading-report/" title="Reading Report">Books &amp; Reading Statistics</a></li>
+    <li><a href="/archive/drawing-of-the-day/" title="Drawing of the Day">Drawing of the Day</a></li>
+    <li><a href="/archive/daily-step-count--walking-statistics/" title="Daily Step Count &amp; Walking Statistics">Daily Step Count &amp; Walking Statistics</a></li>
+    <li><a href="/archive/ai-usage-policy/" title="AI Usage Policy">AI Usage Policy</a></li>
+    <li><a href="/threads.html" title="Posts by Tag">Threads</a></li>
+    <li><a href="/tags.html" title="Posts by Tag">Tags</a></li>
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <div class="sidebar-label">Tags</div>
+  <ul class="group-list">
+    
+      <li><a href="/tags.html#tag-programming" title="programming" class="tag">programming</a></li>
+    
+      <li><a href="/tags.html#tag-essay" title="essay" class="tag">essay</a></li>
+    
+      <li><a href="/tags.html#tag-software" title="software" class="tag">software</a></li>
+    
+      <li><a href="/tags.html#tag-software development" title="software development" class="tag">software development</a></li>
+    
+      <li><a href="/tags.html#tag-history" title="history" class="tag">history</a></li>
+    
+      <li><a href="/tags.html#tag-blogging" title="blogging" class="tag">blogging</a></li>
+    
+      <li><a href="/tags.html#tag-pine.blog" title="pine.blog" class="tag">pine.blog</a></li>
+    
+      <li><a href="/tags.html#tag-open web" title="open web" class="tag">open web</a></li>
+    
+      <li><a href="/tags.html#tag-writing" title="writing" class="tag">writing</a></li>
+    
+      <li><a href="/tags.html#tag-personal" title="personal" class="tag">personal</a></li>
+    
+  </div>
+</div>
+</div>
+    </div>
+  </div>
+
+  <div class="home-footer">
+  <div class="home-footer-inner">
+    <div>
+      <div class="foot-label">Feeds</div>
+      <ul class="foot-list">
+        <li><a rel="alternate" href="/rss.xml">RSS</a></li>
+        <li><a rel="alternate" href="/feed.json">JSON Feed</a></li>
+        <li><a rel="status"
+               href="https://nine9s.cloud/s/e/74b2b428-f6b8-4c3f-bf9f-4d4b21404578"
+               target="_blank">Status</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-label">Blogroll</div>
+      <div class="blogroll">
+        <a href="https://www.manton.org" rel="nofollow">Manton Reece</a>
+        <a href="https://acoup.blog" rel="nofollow">A Collection of Unmitigated Pedantry</a>
+        <a href="https://aaronparecki.com/" rel="nofollow">Aaron Parecki</a>
+        <a href="https://www.slowboring.com" rel="nofollow">Slow Boring</a>
+        <a href="https://treyhunner.com" rel="nofollow">Trey Hunner</a>
+        <a href="https://www.mnot.net/blog/" rel="nofollow">mark nottingham</a>
+        <a href="http://globalspin.com" rel="nofollow">Global Spin</a>
+        <a href="https://iifrp.org" rel="nofollow">IIFRP.org</a>
+        <a href="http://mattgemmell.com/" rel="nofollow">Matt Gemmell</a>
+        <a href="http://jvns.ca/" rel="nofollow">Julia Evans</a>
+        <a href="https://www.youtube.com/@SabineHossenfelder" rel="nofollow">Sabine Hossenfelder</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Federation -->
+  <a href="https://fed.brid.gy/"></a>
+
+    </div>
+  </body>
+  <script src="/pagefind/pagefind-ui.js"></script>
+</html>
