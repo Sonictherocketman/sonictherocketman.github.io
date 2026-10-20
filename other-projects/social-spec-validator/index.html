@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SocialSpec Validator</title>
-  <meta name="description" content="Check whether a website supports the SocialSpec protocol (following.opml, about.md, contact.vcf) by validating its /.well-known files live in the browser.">
+  <meta name="description" content="Check whether a website publishes the SocialSpec files (following.opml, about.md, contact.vcf) and whether each follows its format, live in the browser.">
   <link rel="preload" href="/bin/Newsreader/Newsreader-VariableFont_opsz,wght.ttf" as="font" type="font/variable-font" crossorigin>
   <style>
     @font-face {
@@ -177,32 +177,6 @@
     .file .hint { margin: .7rem 0 0; color: var(--muted); font-size: .82rem; }
     .file .hint a { border-bottom: 1px solid var(--border); text-decoration: none; }
 
-    .embed {
-      display: none;
-      margin-top: 2rem;
-      border-top: 1px solid var(--border);
-      padding-top: 1.4rem;
-      font-size: .9rem;
-    }
-    .embed h2 {
-      font-family: 'Newsreader', ui-serif, serif;
-      font-weight: 400;
-      font-size: 1.2rem;
-      margin: 0 0 .5em;
-    }
-    .embed p { color: var(--muted); line-height: 1.6; }
-    .embed pre {
-      background: var(--panel-alt);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: .9rem;
-      overflow-x: auto;
-      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-      font-size: .82rem;
-      line-height: 1.6;
-      white-space: pre-wrap;
-      word-break: break-all;
-    }
     .foot { margin-top: 3rem; font-size: .8rem; color: var(--muted); text-align: left; line-height: 1.7; }
     .foot a { color: var(--accent); text-decoration: none; }
     .foot code { background: var(--code); padding: .05em .35em; border-radius: 3px; }
@@ -253,22 +227,6 @@
     </div>
 
     <div id="files" class="files"></div>
-
-    <div id="embed" class="embed">
-      <h2>Embed a badge</h2>
-      <p>
-        If your site passed, add this to your page or markdown. It links back
-        to this validator with your domain pre-filled, so anyone can re-check it.
-      </p>
-      <div>
-        <strong>HTML</strong>
-        <pre id="embed-html"></pre>
-      </div>
-      <div style="margin-top:.8rem;">
-        <strong>Markdown</strong>
-        <pre id="embed-md"></pre>
-      </div>
-    </div>
 
     <div class="foot">
       SocialSpec is a set of drafts:<br>

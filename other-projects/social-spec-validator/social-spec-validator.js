@@ -41,9 +41,6 @@
   const btn = document.getElementById('check-btn');
   const summaryEl = document.getElementById('summary');
   const filesEl = document.getElementById('files');
-  const embedEl = document.getElementById('embed');
-  const embedHtml = document.getElementById('embed-html');
-  const embedMd = document.getElementById('embed-md');
   const shareEl = document.getElementById('share');
   const shareUrlEl = document.getElementById('share-url');
   const shareCopyBtn = document.getElementById('share-copy');
@@ -189,11 +186,14 @@
   }
 
   const PILL = {
-    pass: { cls: 'pass', label: 'supports' },
-    warn: { cls: 'warn', label: 'partial' },
-    fail: { cls: 'fail', label: 'missing' },
+    pass: { cls: 'pass', label: 'pass' },
+    warn: { cls: 'warn', label: 'issues' },
+    fail: { cls: 'fail', label: 'fail' },
     wait: { cls: 'wait', label: 'checking' },
   };
+
+  // One-word status, used in the summary breakdown line.
+  const STATUS_WORD = { pass: 'pass', warn: 'issues', fail: 'fail' };
 
   // ── Rendering ──────────────────────────────────────────────────────────────
   function renderFile(fkey, res, checks, status) {
@@ -225,34 +225,49 @@
   }
 
   function renderSummary(statuses, host) {
-    const pass = statuses.filter(s => s === 'pass').length;
-    const warn = statuses.filter(s => s === 'warn').length;
-    const label = host + '';
-    let score, cls, msg;
-    if (pass === 3) {
-      score = 3; cls = 'pass';
-      msg = 'Fully supports SocialSpec — all three files present and valid.';
-    } else if (pass + warn > 0) {
-      score = pass; cls = 'partial';
-      msg = 'Partially supports SocialSpec (' + pass + ' of 3 fully valid' + (warn ? ', ' + warn + ' present with issues' : '') + ').';
+    // Overall verdict: worst file status wins.
+    let cls, verdict;
+    if (statuses.every(s => s.status === 'pass')) {
+      cls = 'pass'; verdict = 'pass';
+    } else if (statuses.some(s => s.status === 'pass')) {
+      cls = 'partial'; verdict = 'issues';
     } else {
-      score = 0; cls = 'fail';
-      msg = 'No valid SocialSpec files found' + (statuses.every(s => s === 'fail') ? ' — files may be missing, or not served with CORS.' : '.');
+      cls = 'fail'; verdict = 'fail';
     }
+
+    // Breakdown line so the total is always traceable to the cards below.
+    const breakdown = statuses.map(function (s) {
+      return s.label + ': ' + STATUS_WORD[s.status];
+    }).join('  ·  ');
+
+    let msg;
+    if (cls === 'pass') {
+      msg = 'All three SocialSpec files are present and well-formed.';
+    } else if (statuses.every(s => s.status === 'fail')) {
+      msg = 'No SocialSpec files could be read — they may not exist, or the site may not send CORS headers.';
+    } else {
+      msg = 'Some SocialSpec files passed, but others need fixes (details below).';
+    }
+
     summaryEl.innerHTML =
       '<div style="display:flex;align-items:baseline;gap:.6rem;">' +
-        '<span class="score ' + cls + '">' + score + '/3</span>' +
-        '<span>' + escapeHtml(msg) + '</span>' +
+        '<span class="score ' + cls + '">' + verdict + '</span>' +
+        '<span style="color:var(--muted);font-size:.85rem;">' + escapeHtml(msg) + '</span>' +
+      '</div>' +
+      '<div style="margin-top:.35rem;color:var(--muted);font-size:.82rem;">' +
+        breakdown +
       '</div>';
     summaryEl.style.display = 'block';
-
-    if (pass === 3) renderEmbed(host);
-    else embedEl.style.display = 'none';
 
     showShare(host);
   }
 
   function showShare(host) {
+    // Only offer a share link for a site actually entered in the box.
+    if (!(input.value || '').trim()) {
+      shareEl.style.display = 'none';
+      return;
+    }
     const url = validatorSelfUrl(host);
     shareUrlEl.textContent = url;
     shareUrlEl.dataset.url = url;
@@ -264,26 +279,18 @@
     return location.origin + location.pathname + '?domain=' + encodeURIComponent(host);
   }
 
-  function renderEmbed(host) {
-    const url = validatorSelfUrl(host);
-    embedHtml.textContent =
-      '<a href="' + url + '" rel="noopener">SOCIAL&nbsp;SPEC ✓</a>';
-    embedMd.textContent =
-      '[SOCIAL SPEC ✓](' + url + ')';
-    embedEl.style.display = 'block';
-  }
-
   // ── Run a full check ───────────────────────────────────────────────────────
   async function check(rawSite) {
     const site = normalizeSite(rawSite);
     if (!site) {
+      shareEl.style.display = 'none';
       summaryEl.style.display = 'block';
       summaryEl.innerHTML = '<span class="score fail">?</span> <span>Could not parse that as a domain. Try <code>example.com</code>.</span>';
       filesEl.innerHTML = '';
       return;
     }
 
-    embedEl.style.display = 'none';
+    shareEl.style.display = 'none';
     btn.disabled = true;
     btn.textContent = 'Checking…';
     summaryEl.style.display = 'none';
@@ -301,11 +308,11 @@
       const checks = CHECKERS[f.key](res);
       const status = statusFor(res, checks);
       const node = renderFile(f.key, res, checks, status);
-      return { key: f.key, status: status, html: node.html };
+      return { key: f.key, label: f.label, status: status, html: node.html };
     });
 
     filesEl.innerHTML = statuses.map(function (s) { return s.html; }).join('');
-    renderSummary(statuses.map(function (s) { return s.status; }), site.host);
+    renderSummary(statuses, site.host);
 
     btn.disabled = false;
     btn.textContent = 'Check';
