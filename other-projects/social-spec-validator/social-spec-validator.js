@@ -236,8 +236,10 @@
     }
 
     // Breakdown line so the total is always traceable to the cards below.
+    // Each status word is colored to match its per-file card.
     const breakdown = statuses.map(function (s) {
-      return s.label + ': ' + STATUS_WORD[s.status];
+      return s.label + ': <span class="brk brk-' + s.status + '">' +
+        STATUS_WORD[s.status] + '</span>';
     }).join('  ·  ');
 
     let msg;
