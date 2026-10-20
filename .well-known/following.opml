@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="2.0">
+  <head>
+    <title>Brian Schrader's followed feeds</title>
+  </head>
+  <body>
+    <outline text="Manton Reece" xmlUrl="https://www.manton.org/feed.xml" />
+    <outline text="A Collection of Unmitigated Pedantry" xmlUrl="https://acoup.blog/feed/" />
+    <outline text="Aaron Parecki" xmlUrl="https://aaronparecki.com/feed.xml" />
+    <outline text="Slow Boring" xmlUrl="https://www.slowboring.com/feed" />
+    <outline text="Trey Hunner" xmlUrl="https://treyhunner.com/atom.xml" />
+    <outline text="mark nottingham" xmlUrl="https://www.mnot.net/blog/index.atom" />
+    <outline text="Global Spin" xmlUrl="http://globalspin.com/feed" />
+    <outline text="IIFRP.org" xmlUrl="https://iifrp.org/feed.xml" />
+    <outline text="Matt Gemmell" xmlUrl="https://mattgemmell.scot/atom.xml" />
+    <outline text="Julia Evans" xmlUrl="https://jvns.ca/atom.xml" />
+    <outline text="Sabine Hossenfelder" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC1yNl2E66ZzKApQdRuTQ4tw" />
+  </body>
+</opml>
