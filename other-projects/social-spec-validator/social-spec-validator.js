@@ -74,7 +74,7 @@
   // A thrown fetch (TypeError) means the browser blocked it cross-origin
   // (no permissive CORS), the host was unreachable, or the request failed.
   async function fetchFile(base, path) {
-    const res = { ok: false, status: 0, contentType: '', cors: false, body: '', fetchError: false };
+    const res = { ok: false, path: path, status: 0, contentType: '', cors: false, body: '', fetchError: false };
     try {
       const r = await fetch(fileUrl(base, path), { method: 'GET', redirect: 'follow' });
       res.status = r.status;
