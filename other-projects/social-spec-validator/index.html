@@ -96,6 +96,82 @@
     .summary span.brk-warn { color: var(--warn); }
     .summary span.brk-fail { color: var(--fail); }
 
+    /* Profile preview card — assembled from whatever the three files expose;
+       each section degrades away as its source data is missing. */
+    .profile { display: none; margin-bottom: 1.5rem; }
+    .profile-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+    .profile-head { display: flex; align-items: center; gap: .8rem; }
+    .profile-ava {
+      width: 48px; height: 48px; flex: none;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+    }
+    .profile-id { min-width: 0; }
+    .profile-name {
+      font-family: 'Newsreader', ui-serif, serif;
+      font-size: 1.2rem; font-weight: 600;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .profile-handle { color: var(--muted); font-size: .85rem; }
+    .profile-bio {
+      margin: .8rem 0 0;
+      font-family: 'Newsreader', -apple-system-ui-serif, ui-serif, serif;
+      font-size: .98rem; line-height: 1.6;
+      color: var(--ink);
+    }
+    .profile-links { margin: .7rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem .9rem; font-size: .88rem; }
+    .profile-links a { color: var(--accent); text-decoration: none; }
+    .profile-links a:hover { text-decoration: underline; }
+
+    .ptabbar {
+      display: flex; gap: .2rem; margin-top: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .ptab {
+      appearance: none; background: none; border: none; cursor: pointer;
+      font-family: 'Avenir', 'Helvetica', 'Average', serif;
+      font-size: .85rem; color: var(--muted);
+      padding: .4rem .7rem; border-radius: 6px 6px 0 0;
+      border-bottom: 2px solid transparent; margin-bottom: -1px;
+    }
+    .ptab:hover { color: var(--muted); background: var(--panel-alt); }
+    .ptab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .ptab-panel { padding-top: .9rem; }
+    .profile-about {
+      font-family: 'Newsreader', -apple-system-ui-serif, ui-serif, serif;
+      font-size: .98rem; line-height: 1.6; color: var(--ink);
+    }
+    .profile-about p { margin: 0 0 .9rem; }
+    .profile-about p:last-child { margin-bottom: 0; }
+    .profile-about a { color: var(--accent); word-break: break-word; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .chip {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: .82rem;
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .18rem .18rem .18rem .18rem;
+    }
+    .chip a { color: var(--ink); text-decoration: none; }
+    .chip a:hover { color: var(--accent); }
+    .chip img { width: 16px; height: 16px; border-radius: 3px; flex: none; }
+    .profile-divider {
+      margin: 1.6rem 0 1.4rem;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
     .share {
       display: none;
       align-items: center;
@@ -105,6 +181,8 @@
     }
     .share .linkbox {
       display: inline-flex;
+      flex: 1;
+      justify-content: space-between;
       align-items: center;
       gap: .5rem;
       background: var(--panel);
@@ -229,6 +307,8 @@
       </span>
     </div>
 
+    <div id="profile" class="profile" aria-live="polite"></div>
+
     <div id="files" class="files"></div>
 
     <div class="foot">
@@ -245,6 +325,9 @@
       <span>Powered by <a href="https://brianschrader.com">BiteofanApple</a></span>
     </div>
   </div>
+  <!-- markdown + a sanitizer so third-party about.md renders fully and safely -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
   <script src="social-spec-validator.js"></script>
 </body>
 </html>
