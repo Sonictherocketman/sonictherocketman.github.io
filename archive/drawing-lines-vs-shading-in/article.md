@@ -1,7 +1,7 @@
 slug: drawing-lines-vs-shading-in
 published: Mon, 26 Oct 2026 at 04:15 PM
-updated: Mon, 26 Oct 2026 16:15:55 
-title: Drawing Lines vs. Shading In
+updated: Mon, 26 Oct 2026 16:22:47 
+title: Drawing Boxes vs. Shading Them In
 notitlecaps: true
 author: Brian Schrader
 status: publish
@@ -28,6 +28,8 @@ In this way people like Euler, Lagrange, and Maxwell built on Newton's ideas, ex
 In this formulation, Newton didn't simply take another step along the road. He defined the very foundation of a new discipline. After that countless physicists and engineers <q>filled in the gaps</q> by plugging holes in the theory and applying its principles to the real world. This is where the real advancement happens.
 
 Obviously though, this change didn't happen immediately. This is because shading in takes time. It's limited by the knowledge of people in a given place and their ability to find occasion to use a new piece of tech. Of course, as all software devs learn, the actual process of building takes time too.
+
+{% include 'newsletter-callout.html' %}
 
 In this way, we can see that *innovation* broadly defined propagates as a wave from some source. The speed of that wave depends on three factors:
 
