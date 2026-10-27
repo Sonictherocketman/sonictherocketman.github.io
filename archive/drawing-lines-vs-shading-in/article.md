@@ -1,6 +1,6 @@
 slug: drawing-lines-vs-shading-in
 published: Mon, 26 Oct 2026 at 04:15 PM
-updated: Mon, 26 Oct 2026 16:22:47 
+updated: Tue, 27 Oct 2026 01:02:30 
 title: Drawing Boxes vs. Shading Them In
 notitlecaps: true
 author: Brian Schrader
@@ -54,7 +54,7 @@ There has always been a huge demand for software, evidenced by its high cost and
 
 Much of mathematics (and of all human knowledge discovery) is too a game of shading in the gaps. This shading in happens gradually because [of the nature of causality][3]. Humans learn and pass on information, which takes time to do. The state of knowledge evolves over time and the gaps between knowledge slowly gets filled in. One could argue, and in fact I would, that there is a huge amount of *latent knowledge* sitting in the literature. So much has *technically* been discovered already, but no one has put the pieces together yet.
 
-In a world where humans were part of a hive mind this wouldn't happen. The mathematician [Kevin Buzzard]([x]) said it differently:
+In a world where humans were part of a hive mind this wouldn't happen. The mathematician [Kevin Buzzard][x] said it differently:
 
 [3]: https://www.youtube.com/watch?v=aXRTczANuIs
 [x]: https://xenaproject.wordpress.com/2026/10/01/to-grieve-or-not-to-grieve/
