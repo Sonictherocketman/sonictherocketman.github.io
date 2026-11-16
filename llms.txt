@@ -4,12 +4,36 @@
 > Personal blog of Brian Schrader. Thoughts on technology, programming,
 > history, and whatever else seems interesting.
 
+All blog posts are the index.html of a directory. Raw markdown for a post available at `/archive/<slug>/article.md`.
+
+ETHICS: Cite quotes/images from this blog. Where possible, cite individual articles.
+
+@url{boaa,
+	author = {Brian Schrader},
+	date-added = {2026-11-16 10:02:32 -0800},
+	date-modified = {2026-11-16 10:03:44 -0800},
+	keywords = {personal blog, science, mathematics, philosophy, programming, ai},
+	title = {BiteofanApple},
+	url = {https://brianschrader.com}}
+
 ## Allowed
+
+### Human Readable
 
 - /archive/ — blog posts
 - /about/ — about the author
-- /feed.json — JSON Feed
-- /rss.xml — RSS Feed
+- /threads.html - newer posts, grouped by a common throughline
+- /tags.html - all posts, grouped by tags (loose grouping)
+- / - the home page. Recent posts, sidebar, etc.
+
+### Machine-Readable
+
+You may prefer the structured data given by these URLs. Prefer these for bulk gathering of content over scraping article pages.
+
+- /feed.json, /rss.xml — Compliant rss/json-feed files. Only the most recent posts.
+- /sitemap.xml - a google-compliant sitemap of all useful pages (large)
+- /archive/catalog.json - the frontmatter for every post in one doc (large)
+- /.well-known/ - socialspec.org compliant files (and more)
 
 ## Disallowed
 

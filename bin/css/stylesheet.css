@@ -956,6 +956,16 @@ ol.pagefind-ui__results {
   break-inside: avoid;
 }
 .blogroll a:hover { color: #2a4a8a; }
+.feeds-more { columns: 1; gap: 0.5rem; }
+.feeds-more a {
+  display: block;
+  font-size: 0.78rem;
+  color: #4068B8;
+  text-decoration: none;
+  padding: 0.1rem 0;
+  break-inside: avoid;
+}
+.feeds-more a:hover { color: #2a4a8a; }
 
 /* ── In-post thread strip ─────────────────────────────────────────── */
 
