@@ -1,6 +1,6 @@
 slug: how-i-use-docker-for-now
 published: Fri, 30 Apr 2021 at 01:05 AM
-updated: Fri, 11 Sep 2026 22:30:26 
+updated: Mon, 16 Nov 2026 18:37:08 
 title: How I Use Docker (for Now)
 author: Brian Schrader
 tags: software development

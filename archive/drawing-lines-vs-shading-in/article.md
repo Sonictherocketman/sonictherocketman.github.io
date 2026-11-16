@@ -1,6 +1,6 @@
 slug: drawing-lines-vs-shading-in
 published: Mon, 26 Oct 2026 at 04:15 PM
-updated: Tue, 27 Oct 2026 01:02:30 
+updated: Mon, 16 Nov 2026 18:37:09 
 title: Drawing Boxes vs. Shading Them In
 notitlecaps: true
 author: Brian Schrader

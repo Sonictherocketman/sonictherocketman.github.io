@@ -1,6 +1,6 @@
 slug: from-chicago-with-love
 published: Wed, 21 Oct 2026 at 07:41 PM
-updated: Wed, 21 Oct 2026 19:43:55 
+updated: Mon, 16 Nov 2026 18:37:11 
 title: From Chicago with Love
 author: Brian Schrader
 status: publish

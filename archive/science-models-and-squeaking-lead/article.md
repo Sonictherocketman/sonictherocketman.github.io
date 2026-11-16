@@ -1,6 +1,6 @@
 slug: science-models-and-squeaking-lead
 published: Wed, 18 Dec 2024 at 07:54 AM
-updated: Fri, 11 Sep 2026 22:30:29 
+updated: Mon, 16 Nov 2026 18:37:11 
 title: Science, Models, and Squeaking Lead
 status: publish
 author: Brian Schrader

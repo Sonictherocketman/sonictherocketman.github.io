@@ -1,6 +1,6 @@
 slug: with-flying-pen-when-mortals-sleep
 published: Mon, 10 Aug 2026 at 04:45 PM
-updated: Fri, 11 Sep 2026 22:30:28 
+updated: Mon, 16 Nov 2026 18:37:10 
 title: With Flying Pen, When Mortals Sleep
 author: Brian Schrader
 tags: history, alchemy, essay

@@ -1,6 +1,6 @@
 slug: at-vs-on-a-story-of-semantic-data-modeling
 published: Mon, 21 Feb 2022 at 10:50 PM
-updated: Fri, 11 Sep 2026 22:30:28 
+updated: Mon, 16 Nov 2026 18:37:10 
 title: At vs. On: a Story of Semantic Data Modeling
 author: Brian Schrader
 tags: programming, software development

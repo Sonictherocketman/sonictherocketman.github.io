@@ -1,6 +1,6 @@
 slug: that-first-and-last-question
 published: Mon, 28 Sep 2026 at 04:17 PM
-updated: Mon, 28 Sep 2026 16:17:57 
+updated: Mon, 16 Nov 2026 18:37:10 
 title: That First and Last Question
 author: Brian Schrader
 status: publish

@@ -1,6 +1,6 @@
 slug: using-pushover-for-super-simple-sysadmin-alerts
 published: Wed, 27 Apr 2022 at 11:36 PM
-updated: Fri, 11 Sep 2026 22:30:26 
+updated: Mon, 16 Nov 2026 18:37:08 
 title: Using Pushover for Super Simple SysAdmin Alerts
 author: Brian Schrader
 tags: programming,software development

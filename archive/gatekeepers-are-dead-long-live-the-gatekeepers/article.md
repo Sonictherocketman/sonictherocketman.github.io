@@ -1,6 +1,6 @@
 slug: gatekeepers-are-dead-long-live-the-gatekeepers
 published: Mon, 24 Aug 2026 at 04:09 PM
-updated: Fri, 11 Sep 2026 22:30:27 
+updated: Mon, 16 Nov 2026 18:37:09 
 title: Gatekeepers are Dead, Long Live the Gatekeepers
 author: Brian Schrader
 tags: essay, internet, ai, social media

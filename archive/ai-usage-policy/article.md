@@ -1,6 +1,6 @@
 slug: ai-usage-policy
 published: Fri, 11 Sep 2026 at 10:27 PM
-updated: Fri, 11 Sep 2026 22:30:29 
+updated: Mon, 16 Nov 2026 18:37:11 
 title: A.I. Usage Policy
 status: publish
 notitlecaps: true

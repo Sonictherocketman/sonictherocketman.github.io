@@ -1,6 +1,6 @@
 slug: updates-on-using-nsoperation
 published: Sat, 29 Jun 2019 at 07:31 PM
-updated: Fri, 11 Sep 2026 22:30:26 
+updated: Mon, 16 Nov 2026 18:37:08 
 title: Updates on using NSOperation
 author: Brian Schrader
 tags: development, nsoperation

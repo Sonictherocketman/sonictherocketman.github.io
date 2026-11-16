@@ -1,6 +1,6 @@
 slug: what-is-potential-energy-really
 published: Mon, 27 Jul 2026 at 04:23 PM
-updated: Fri, 11 Sep 2026 22:30:27 
+updated: Mon, 16 Nov 2026 18:37:09 
 title: What is Potential Energy, Really?
 status: publish
 author: Brian Schrader

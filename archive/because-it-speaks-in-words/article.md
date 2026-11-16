@@ -1,6 +1,6 @@
 slug: because-it-speaks-in-words
 published: Mon, 29 Jun 2026 at 04:01 PM
-updated: Fri, 11 Sep 2026 22:30:28
+updated: Mon, 16 Nov 2026 18:37:10 
 title: Because it Speaks in Words
 author: Brian Schrader
 tags: essay, technology

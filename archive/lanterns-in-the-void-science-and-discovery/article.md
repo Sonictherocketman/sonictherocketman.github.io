@@ -1,6 +1,6 @@
 slug: lanterns-in-the-void-science-and-discovery
 published: Mon, 12 Oct 2026 at 04:57 PM
-updated: Mon, 12 Oct 2026 16:57:34 
+updated: Mon, 16 Nov 2026 18:37:11 
 title: Lanterns in the Void: Science and Discovery
 author: Brian Schrader
 tags: essay, science, ai

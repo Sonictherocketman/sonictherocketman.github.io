@@ -1,6 +1,6 @@
 slug: friendship-is-an-exponential-function
 published: Mon, 13 Jul 2026 at 04:02 PM
-updated: Fri, 11 Sep 2026 22:30:27 
+updated: Mon, 16 Nov 2026 18:37:09 
 title: Friendship is an Exponential Function
 status: publish
 author: Brian Schrader

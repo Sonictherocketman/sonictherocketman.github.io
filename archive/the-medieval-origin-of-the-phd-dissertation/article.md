@@ -1,6 +1,6 @@
 slug: the-medieval-origin-of-the-phd-dissertation
 published: Mon, 14 Sep 2026 at 04:08 PM
-updated: Mon, 14 Sep 2026 16:08:57 
+updated: Mon, 16 Nov 2026 18:37:10 
 title: The Medieval Origin of the Ph.D. Dissertation
 notitlecaps: yes
 author: Brian Schrader
